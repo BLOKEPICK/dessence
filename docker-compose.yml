@@ -1,0 +1,6 @@
+services:
+  D-Essence Wellness:
+    build: .
+    container_name: D-Essence Wellness
+    ports:
+      - 8080:8080

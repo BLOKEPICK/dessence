@@ -1,0 +1,19 @@
+
+---
+import Base from "../layouts/BaseLayout.astro";
+---
+<Base title="Contact | D-Essence Wellness" description="Book a consultation or ask a question.">
+  <section class="container py-12">
+    <h1 class="text-3xl md:text-4xl font-bold">Contact</h1>
+    <p class="text-gray-600 mt-3 max-w-2xl">Tell us about your goals—our team will follow up to schedule your visit.</p>
+    <form name="contact" method="POST" netlify data-netlify="true" class="mt-8 grid gap-4 max-w-xl">
+      <input type="hidden" name="form-name" value="contact" />
+      <input class="border border-gray-300 rounded-xl px-4 py-3" name="name" placeholder="Full name" required />
+      <input class="border border-gray-300 rounded-xl px-4 py-3" name="email" type="email" placeholder="Email" required />
+      <input class="border border-gray-300 rounded-xl px-4 py-3" name="phone" placeholder="Phone (optional)" />
+      <textarea class="border border-gray-300 rounded-xl px-4 py-3" name="message" rows="5" placeholder="Tell us about your goals"></textarea>
+      <button class="btn btn-primary w-full md:w-auto">Send</button>
+    </form>
+    <p class="text-xs text-gray-500 mt-4">By submitting, you agree to be contacted about appointments and services.</p>
+  </section>
+</Base>

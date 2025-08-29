@@ -1,3 +1,4 @@
+
 ---
 const { title = "D-Essence Wellness", description = "Personalized beauty & wellness powered by advanced tech and a passion for natural results.", canonical } = Astro.props;
 ---
@@ -11,12 +12,7 @@ const { title = "D-Essence Wellness", description = "Personalized beauty & welln
     <title>{title}</title>
     <meta name="description" content={description} />
     {canonical && <link rel="canonical" href={canonical} />}
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-      /* Prefer system font stack; fast & clean */
-    </style>
-    <link rel="stylesheet" href="/fonts.css" />
-    <link rel="stylesheet" href="/globals.css" />
+    <link rel="stylesheet" href="/styles/globals.css" />
     <script type="application/ld+json">
       {JSON.stringify({
         "@context":"https://schema.org",
@@ -24,21 +20,7 @@ const { title = "D-Essence Wellness", description = "Personalized beauty & welln
         "name":"D-Essence Wellness",
         "url":"https://d-essencewellness.com",
         "logo":"https://d-essencewellness.com/logo.svg",
-        "sameAs":[],
-        "description":"Personalized beauty & wellness powered by advanced tech and a passion for natural results.",
-        "address": {
-          "@type":"PostalAddress",
-          "addressLocality":"",
-          "addressRegion":"",
-          "postalCode":"",
-          "streetAddress":""
-        },
-        "openingHoursSpecification":[{
-          "@type":"OpeningHoursSpecification",
-          "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],
-          "opens":"10:00",
-          "closes":"18:00"
-        }]
+        "description":"Personalized beauty & wellness powered by advanced tech and a passion for natural results."
       })}
     </script>
   </head>
@@ -94,7 +76,7 @@ const { title = "D-Essence Wellness", description = "Personalized beauty & welln
       <div class="border-t border-gray-200/80">
         <div class="container py-5 text-xs text-gray-500 flex items-center justify-between">
           <div>© {new Date().getFullYear()} D-Essence Wellness. All rights reserved.</div>
-          <div>Design by D‑Essence — built with Astro.</div>
+          <div>Design by D-Essence — built with Astro.</div>
         </div>
       </div>
     </footer>
