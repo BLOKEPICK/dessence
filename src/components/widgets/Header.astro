@@ -44,7 +44,8 @@ const {
   position = 'center',
 } = Astro.props;
 
-const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
+let currentPath = '/';
+try { currentPath = `/${trimSlash((Astro?.url && Astro.url.pathname) ? Astro.url.pathname : '/')}`; } catch { currentPath = '/'; }
 ---
 
 <header
