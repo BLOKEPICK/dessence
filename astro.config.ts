@@ -11,7 +11,7 @@ import icon from 'astro-icon';
 import compress from 'astro-compress';
 import type { AstroIntegration } from 'astro';
 
-import D-Essence Wellness from './vendor/integration';
+import AstroWind from './vendor/integration';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 
@@ -25,7 +25,7 @@ export default defineConfig({
   site: 'https://d-essencewellness.com',
   output: 'static',
 
-  integrations: [
+  integrations: [AstroWind(), 
     tailwind({
       applyBaseStyles: false,
     }),
@@ -67,7 +67,7 @@ export default defineConfig({
       Logger: 1,
     }),
 
-    D-Essence Wellness({
+    AstroWind({
       config: './src/config.yaml',
     }),
   ],
