@@ -8,7 +8,7 @@ import loadConfig from './utils/loadConfig';
 export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegration => {
   let cfg: AstroConfig;
   return {
-    name: 'D-Essence Wellness-integration',
+    name: 'astrowind-integration',
 
     hooks: {
       'astro:config:setup': async ({
@@ -22,7 +22,7 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
       }) => {
         const buildLogger = logger.fork('D-Essence Wellness');
 
-        const virtualModuleId = 'D-Essence Wellness:config';
+        const virtualModuleId = 'astrowind:config';
         const resolvedVirtualModuleId = '\0' + virtualModuleId;
 
         const rawJsonConfig = (await loadConfig(_themeConfig)) as Config;
@@ -37,7 +37,7 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
           vite: {
             plugins: [
               {
-                name: 'vite-plugin-D-Essence Wellness-config',
+                name: 'vite-plugin-astrowind-config',
                 resolveId(id) {
                   if (id === virtualModuleId) {
                     return resolvedVirtualModuleId;
