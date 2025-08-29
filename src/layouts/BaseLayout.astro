@@ -1,0 +1,102 @@
+---
+const { title = "D-Essence Wellness", description = "Personalized beauty & wellness powered by advanced tech and a passion for natural results.", canonical } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="theme-color" content="#0B0B0B" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+      /* Prefer system font stack; fast & clean */
+    </style>
+    <link rel="stylesheet" href="/fonts.css" />
+    <link rel="stylesheet" href="/globals.css" />
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context":"https://schema.org",
+        "@type":"MedicalSpa",
+        "name":"D-Essence Wellness",
+        "url":"https://d-essencewellness.com",
+        "logo":"https://d-essencewellness.com/logo.svg",
+        "sameAs":[],
+        "description":"Personalized beauty & wellness powered by advanced tech and a passion for natural results.",
+        "address": {
+          "@type":"PostalAddress",
+          "addressLocality":"",
+          "addressRegion":"",
+          "postalCode":"",
+          "streetAddress":""
+        },
+        "openingHoursSpecification":[{
+          "@type":"OpeningHoursSpecification",
+          "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens":"10:00",
+          "closes":"18:00"
+        }]
+      })}
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <header class="border-b border-gray-200/80 bg-white sticky top-0 z-50">
+      <div class="container flex items-center justify-between py-4">
+        <a href="/" class="flex items-center gap-3 font-semibold">
+          <img src="/logo.svg" alt="D-Essence Wellness" class="h-8 w-8" />
+          <span class="tracking-tight">D-Essence Wellness</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="/services" class="hover:opacity-70">Services</a>
+          <a href="/memberships" class="hover:opacity-70">Memberships</a>
+          <a href="/aerolase" class="hover:opacity-70">Aerolase</a>
+          <a href="/microneedling" class="hover:opacity-70">Microneedling</a>
+          <a href="/neurotoxins" class="hover:opacity-70">Neurotoxins</a>
+          <a href="/contact" class="hover:opacity-70">Contact</a>
+        </nav>
+        <a href="/contact" class="btn btn-primary md:ml-6">Book Now</a>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-gray-200/80 bg-white">
+      <div class="container py-10 grid gap-8 md:grid-cols-3">
+        <div>
+          <div class="flex items-center gap-3 mb-3">
+            <img src="/logo.svg" class="h-7 w-7" alt="Logo" />
+            <span class="font-semibold">D-Essence Wellness</span>
+          </div>
+          <p class="text-sm text-gray-600">At D-Essence Wellness, our mission is to help you attain your beauty and wellness goals through personalized and expert treatments.</p>
+        </div>
+        <div>
+          <div class="font-semibold mb-3">Quick Links</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/services" class="hover:opacity-70">All Services</a></li>
+            <li><a href="/memberships" class="hover:opacity-70">Memberships</a></li>
+            <li><a href="/about" class="hover:opacity-70">About</a></li>
+            <li><a href="/contact" class="hover:opacity-70">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold mb-3">Policies</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/terms" class="hover:opacity-70">Terms of Service</a></li>
+            <li><a href="/privacy" class="hover:opacity-70">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-200/80">
+        <div class="container py-5 text-xs text-gray-500 flex items-center justify-between">
+          <div>© {new Date().getFullYear()} D-Essence Wellness. All rights reserved.</div>
+          <div>Design by D‑Essence — built with Astro.</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
