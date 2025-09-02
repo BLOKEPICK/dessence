@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: 'D-Essence Wellness'
+  site: 'https://dessencewellness.com'
   base: '/'
   trailingSlash: false
 
@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: "D-Essence Wellness"
-    template: "%s — D-Essence Wellness"
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: 'D-Essence Wellness'
+    template: '%s — D-Essence Wellness'
+  description: 'Advanced aesthetics & wellness services in a modern med spa.'
   robots:
     index: true
     follow: true
@@ -33,7 +33,7 @@ i18n:
 
 apps:
   blog:
-    isEnabled: true
+    isEnabled: false
     postsPerPage: 6
 
     post:
@@ -75,4 +75,4 @@ title: "D-Essence Wellness"
 
 tagline: "Advanced Aesthetics & Wellness"
 
-description: "Advanced aesthetic and wellness services: Specialty Treatments, Waxing, Facials, Spider Vein Treatment, Vitamin Injections, Platelet-Rich Plasma (PRP), Nefertiti Neck, Neurotoxins, Skinvive, Skincare, Teeth Whitening, Filler Dissolving, Juvederm Fillers, Smooth PDO Threads, Microneedling, Aerolase, and Chemical Peels."
+description: "A modern medical spa offering aesthetics and wellness services."

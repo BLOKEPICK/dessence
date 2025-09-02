@@ -1,39 +1,16 @@
 ---
-import LandingLayout from '~/layouts/LandingLayout.astro';
+import PageLayout from '~/layouts/PageLayout.astro';
 export const metadata = {
-  title: "D-Essence Wellness — Advanced Aesthetics & Wellness",
-  description: "Personalized aesthetic & wellness treatments. Book a complimentary consultation."
+  title: "Services — D-Essence Wellness",
+  description: "Explore all aesthetic and wellness services."
 };
 ---
 
-<LandingLayout metadata={metadata}>
-  <Fragment slot="announcement">
-    <div class="w-full bg-black text-white text-sm py-2">
-      <div class="max-w-screen-xl mx-auto px-6 flex items-center justify-between gap-4">
-        <span>Now booking — Complimentary consultation</span>
-        <a href="/contact" class="underline underline-offset-4">Book now</a>
-      </div>
-    </div>
-  </Fragment>
-
-  <section class="max-w-screen-xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-    <div>
-      <p class="text-muted text-sm tracking-wide uppercase">Aesthetics • Wellness • Laser</p>
-      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mt-2">Advanced Aesthetics & Wellness</h1>
-      <p class="mt-4 text-lg text-muted">Specialty Treatments, Waxing, Facials, Spider Vein Treatment, Vitamin Injections, PRP, Nefertiti Neck, Neurotoxins, Skinvive, Skincare, Teeth Whitening, Filler Dissolving, Juvederm Fillers, Smooth PDO Threads, Microneedling, Aerolase & Chemical Peels.</p>
-      <div class="mt-6 flex gap-3 flex-wrap">
-        <a href="/contact" class="inline-flex items-center px-5 py-3 rounded-full bg-black text-white font-semibold">Book Consultation</a>
-        <a href="/services" class="inline-flex items-center px-5 py-3 rounded-full border border-black text-black">Explore Services</a>
-      </div>
-    </div>
-    <div class="relative">
-      <img src="/assets/images/placeholder/medspa-hero.jpg" alt="D‑Essence Wellness" class="w-full rounded-3xl border border-default shadow-sm object-cover" loading="eager" />
-    </div>
-  </section>
-
-  <section id="services" class="max-w-screen-xl mx-auto px-6 pb-8">
-    <h2 class="text-2xl font-bold">Our Services</h2>
-    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+<PageLayout metadata={metadata}>
+  <section class="max-w-screen-xl mx-auto px-6 py-14">
+    <h1 class="text-3xl font-extrabold tracking-tight">Our Services</h1>
+    <p class="text-muted mt-2">Personalized plans focused on natural-looking results and long-term skin health.</p>
+    <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       
       <a href="/services/specialty-treatments" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition">
         <h3 class="font-semibold">Specialty Treatments</h3>
@@ -138,4 +115,4 @@ export const metadata = {
       </a>
     </div>
   </section>
-</LandingLayout>
+</PageLayout>

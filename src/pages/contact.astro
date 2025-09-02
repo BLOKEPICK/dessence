@@ -1,79 +1,42 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-
-const metadata = {
-  title: 'Contact',
+import PageLayout from '~/layouts/PageLayout.astro';
+export const metadata = {
+  title: "Contact — D-Essence Wellness",
+  description: "Book your consultation or ask a question."
 };
 ---
 
-<Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
-
-  <HeroText tagline="Contact" title="Let's Connect!" />
-
-  <ContactUs
-    id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="We are here to help!"
-    items={[
-      {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
-      },
-    ]}
-  />
-</Layout>
+<PageLayout metadata={metadata}>
+  <section class="max-w-screen-xl mx-auto px-6 py-14 grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <div>
+      <h1 class="text-3xl font-extrabold tracking-tight">Contact</h1>
+      <p class="text-muted mt-2">Book an appointment or send us a message. We’ll get back to you shortly.</p>
+      <div class="mt-6 rounded-2xl border border-default bg-card p-5">
+        <div class="text-sm"><strong>Email:</strong> info@dessencewellness.com</div>
+        <div class="text-sm mt-1"><strong>Phone:</strong> (000) 000‑0000</div>
+        <div class="text-sm mt-1"><strong>Address:</strong> 123 Wellness Ave, Suite 100</div>
+      </div>
+    </div>
+    <div>
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="grid gap-3">
+        <input class="rounded-xl border border-default p-3" type="text" name="name" placeholder="Name" required />
+        <input class="rounded-xl border border-default p-3" type="email" name="email" placeholder="Email" required />
+        <input class="rounded-xl border border-default p-3" type="tel" name="phone" placeholder="Phone" />
+        <textarea class="rounded-xl border border-default p-3 min-h-[140px]" name="message" placeholder="How can we help?" required></textarea>
+        <button class="inline-flex items-center justify-center px-5 py-3 rounded-full bg-black text-white font-semibold" type="submit">Send</button>
+        <input type="hidden" name="_subject" value="New inquiry — D-Essence Wellness" />
+      </form>
+      <div class="text-xs text-muted mt-2">* You can replace Formspree with your preferred form handler.</div>
+    </div>
+  
+    <div class="mt-10">
+      <h2 class="text-xl font-semibold">Schedule online</h2>
+      <p class="text-muted text-sm mt-1">Pick a time that works for you. If you prefer, send the form and we’ll coordinate.</p>
+      <div class="rounded-2xl border border-default bg-card p-4 mt-3">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly/consultation" style="min-width:320px;height:680px;"></div>
+      </div>
+      <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+    
+</section>
+</PageLayout>

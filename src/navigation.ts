@@ -115,7 +115,7 @@ export const headerData = {
       href: '#',
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
+  actions: [ { href: '/contact', label: 'Book', rel: undefined } ],
 };
 
 export const footerData = {

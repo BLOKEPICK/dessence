@@ -1,0 +1,148 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+export const metadata = {{
+  title: "Waxing — D-Essence Wellness",
+  description: "Gentle, precise hair removal for smooth, confident skin across face and body."
+}};
+---
+
+<PageLayout metadata={{metadata}}>
+  <!-- HERO -->
+  <section class="max-w-screen-xl mx-auto px-6 pt-10 pb-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <div>
+      <p class="text-muted text-sm tracking-wide uppercase">Service</p>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-2">Waxing</h1>
+      <p class="mt-4 text-lg text-muted">Gentle, precise hair removal for smooth, confident skin across face and body.</p>
+      <div class="mt-6 flex gap-3 flex-wrap">
+        <a href="/contact" class="inline-flex items-center px-5 py-3 rounded-full bg-black text-white font-semibold">Book Consultation</a>
+        <a href="#faq" class="inline-flex items-center px-5 py-3 rounded-full border border-black text-black">FAQs</a>
+      </div>
+      <ul class="mt-8 grid gap-2">
+        <li class="text-sm text-muted">• Personalized protocols based on your goals</li>
+        <li class="text-sm text-muted">• Typically minimal discomfort and downtime</li>
+        <li class="text-sm text-muted">• Focus on natural-looking outcomes</li>
+      </ul>
+    </div>
+    <div class="relative">
+      <img src="/assets/images/services/waxing.jpg" alt="Waxing" class="w-full rounded-3xl border border-default shadow-sm object-cover" loading="eager" />
+    </div>
+  </section>
+
+  <!-- INDICATIONS / HOW IT WORKS -->
+  <section class="max-w-screen-xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="lg:col-span-2 rounded-2xl border border-default bg-card p-6">
+      <h2 class="text-xl font-semibold">Indications</h2>
+      <div class="mt-3 grid sm:grid-cols-2 gap-3 text-sm text-muted">
+        <div>
+          <ul class="grid gap-1">
+            <li>• Face and body hair removal</li>
+            <li>• Sensitive-skin protocols</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="grid gap-1">
+            <li>• Pre-event grooming</li>
+            <li>• Maintenance plans</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-xl font-semibold mt-8">How it works</h2>
+      <p class="text-muted mt-2">__HOW__</p>
+
+      <div class="mt-6 grid sm:grid-cols-2 gap-3">
+        <div class="rounded-2xl border border-default bg-card p-4">
+          <div class="text-xs uppercase text-muted">Treatment Time</div>
+          <div class="font-semibold mt-1">15–45 minutes</div>
+        </div>
+        <div class="rounded-2xl border border-default bg-card p-4">
+          <div class="text-xs uppercase text-muted">Sessions</div>
+          <div class="font-semibold mt-1">Every 3–6 weeks</div>
+        </div>
+        <div class="rounded-2xl border border-default bg-card p-4">
+          <div class="text-xs uppercase text-muted">Downtime</div>
+          <div class="font-semibold mt-1">Minimal</div>
+        </div>
+        <div class="rounded-2xl border border-default bg-card p-4">
+          <div class="text-xs uppercase text-muted">Results</div>
+          <div class="font-semibold mt-1">Immediate smoothness</div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="rounded-2xl border border-default bg-card p-6 h-fit">
+      <h3 class="font-semibold">Candidates & Safety</h3>
+      <ul class="mt-3 grid gap-2 text-sm text-muted">
+        <li>• Clinical evaluation required</li>
+        <li>• Review of medical history and medications</li>
+        <li>• Informed consent</li>
+      </ul>
+
+      <h3 class="font-semibold mt-6">Pre-care</h3>
+      <ul class="mt-2 grid gap-2 text-sm text-muted">
+        <li>• Hair length ~1/4 inch</li>
+        <li>• Avoid retinoids on area 5–7 days prior</li>
+        <li>• No tanning 48 hours prior</li>
+      </ul>
+
+      <h3 class="font-semibold mt-6">Aftercare</h3>
+      <ul class="mt-2 grid gap-2 text-sm text-muted">
+        <li>• Avoid hot showers/sauna 24 hours</li>
+        <li>• Hydrate and soothe the area</li>
+        <li>• SPF on exposed areas</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- RESULTS / BEFORE-AFTER -->
+  <section class="max-w-screen-xl mx-auto px-6 py-8">
+    <h2 class="text-xl font-semibold">Expected results</h2>
+    <p class="text-muted mt-2">Progressive improvements over the course of sessions. Outcomes vary by indication and consistency with the plan.</p>
+    <div class="mt-6 grid sm:grid-cols-2 gap-4">
+      <figure class="rounded-2xl border border-default bg-card p-3">
+        <img src="/assets/images/services/waxing-before.jpg" alt="Before — Waxing" class="w-full rounded-xl object-cover" loading="lazy" />
+        <figcaption class="text-xs text-muted mt-2">Before</figcaption>
+      </figure>
+      <figure class="rounded-2xl border border-default bg-card p-3">
+        <img src="/assets/images/services/waxing-after.jpg" alt="After — Waxing" class="w-full rounded-xl object-cover" loading="lazy" />
+        <figcaption class="text-xs text-muted mt-2">After</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="max-w-screen-xl mx-auto px-6 pb-28">
+    <h2 class="text-xl font-semibold">Frequently asked questions</h2>
+    <details class="rounded-2xl border border-default bg-card p-4 group mt-2">
+      <summary class="cursor-pointer font-medium">Does it hurt?</summary>
+      <div class="text-sm text-muted mt-2">Brief discomfort that subsides quickly.</div>
+    </details>
+    <details class="rounded-2xl border border-default bg-card p-4 group mt-2">
+      <summary class="cursor-pointer font-medium">Can I wax while using retinoids?</summary>
+      <div class="text-sm text-muted mt-2">Pause retinoids on the area for several days before.</div>
+    </details>
+  </section>
+
+  <!-- Sticky CTA -->
+  <div class="fixed inset-x-0 bottom-4 z-40 px-6">
+    <div class="max-w-screen-xl mx-auto">
+      <div class="rounded-2xl border border-default bg-card px-4 py-3 shadow-sm flex items-center justify-between gap-3">
+        <div class="text-sm text-muted">Ready for a personalized evaluation?</div>
+        <a href="/contact" class="inline-flex items-center px-5 py-2.5 rounded-full bg-black text-white font-semibold">Book Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-xs text-muted max-w-screen-xl mx-auto px-6 pb-10">
+    * Educational content only. Not medical advice. We’ll assess your case in consultation.
+  </div>
+
+  <script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "MedicalProcedure",
+  "name": "Waxing",
+  "url": "https://dessencewellness.com/services/waxing"
+}}
+  </script>
+</PageLayout>
