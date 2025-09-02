@@ -5,21 +5,26 @@ import ServiceCard from '@/components/ServiceCard.astro';
 import { getCollection } from 'astro:content';
 const entries = await getCollection('services');
 const seo = {
-  title: 'Aesthetic & Wellness Treatments | D-Essence Wellness',
+  title: 'Aesthetic & Wellness Treatments | D‑Essence Wellness',
   description: 'Neurotoxins, Juvederm, PRP, Skinvive, PDO Threads, Microneedling, Aerolase, Chemical Peels, Facials, Waxing, and more.',
   canonical: '/services',
   type: 'website',
-  jsonLd: [{
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[ {"@type":"ListItem","position":1,"name":"Services","item":"/services"} ]
-  }]
+  jsonLd: []
 };
 ---
 <BaseLayout seo={seo}>
-  <Section title="Services" subtitle="A structured approach to skin health and refined aesthetics.">
-    <div class="grid-cards">
-      {entries.map(e => <ServiceCard href={`/services/${e.slug}`} title={e.data.title} summary={e.data.summary} />)}
+  <section class="section">
+    <div class="container">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight">Services</h1>
+          <p class="text-muted mt-2 max-w-2xl">A structured approach to skin health and refined aesthetics.</p>
+        </div>
+        <a href="/appointment" class="btn btn-primary">Book</a>
+      </div>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {entries.map(e => <ServiceCard href={`/services/${e.slug}`} title={e.data.title} summary={e.data.summary} />)}
+      </div>
     </div>
-  </Section>
+  </section>
 </BaseLayout>

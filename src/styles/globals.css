@@ -1,15 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root { --bg:#ffffff; --ink:#111111; --muted:#6b7280; --line:#e5e7eb; }
-html, body { background: var(--bg); color: var(--ink); }
+
+:root { --bg:#fff; --ink:#0A0A0A; --muted:#6b7280; --line:#e5e7eb; }
+html, body { background: var(--bg); color: var(--ink); font-synthesis-weight: none; text-rendering: optimizeLegibility; }
+
 a { @apply underline-offset-2; }
-.container { @apply max-w-6xl mx-auto px-4; }
-.btn { @apply inline-flex items-center justify-center px-5 py-3 rounded-2xl border border-ink/10 shadow-sm hover:shadow transition; }
-.btn-primary { @apply bg-black text-white hover:bg-neutral-800; }
-.btn-ghost { @apply bg-white text-black; border: 1px solid #e5e7eb; }
-.card { @apply rounded-2xl border border-line p-6 bg-white shadow-sm; }
-.grid-cards { @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6; }
-.section { @apply py-14 sm:py-20; }
-.prose h1, .prose h2, .prose h3 { @apply font-display; }
+.container { @apply max-w-7xl mx-auto px-4; }
+
+.btn { @apply inline-flex items-center justify-center h-11 px-5 rounded-full border border-black/10 shadow-sm hover:shadow transition; }
+.btn-primary { @apply bg-black text-white hover:bg-neutral-900; }
+.btn-ghost { @apply bg-white text-black border border-line; }
+.btn-outline { @apply bg-transparent border-black/10 hover:border-black/20; }
+
+.card { @apply rounded-3xl border border-line/80 bg-white shadow-soft; }
+
+.section { @apply py-16 sm:py-24; }
+
+/* Minimal monochrome background grid */
+.bg-grid {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(0,0,0,.08) 1px, transparent 0),
+    radial-gradient(circle at 1px 1px, rgba(0,0,0,.06) 1px, transparent 0);
+  background-size: 24px 24px, 48px 48px;
+}
+
+/* Subtle gradient vignette */
+.vignette {
+  background: radial-gradient(1200px 600px at 50% -10%, rgba(0,0,0,.06), transparent 60%);
+}
+
+/* Nice typography for long-form */
+.prose { @apply prose-neutral; }
+.prose :where(h1,h2,h3,h4){ @apply font-semibold tracking-tight; }
+.prose :where(p,li){ @apply leading-7; }
+
+/* Lift on hover */
+.lift { @apply transition-transform duration-300; }
+.lift:hover { transform: translateY(-3px); }

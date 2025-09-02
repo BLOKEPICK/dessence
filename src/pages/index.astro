@@ -4,59 +4,85 @@ import Section from '@/components/Section.astro';
 import ServiceCard from '@/components/ServiceCard.astro';
 import CTA from '@/components/CTA.astro';
 import { getCollection } from 'astro:content';
+
 const services = await getCollection('services');
+
 const seo = {
-  title: 'D-Essence Wellness | Elevated Aesthetics, Evidence-Based Care',
-  description: 'Skin health, neurotoxins, fillers, microneedling, Aerolase, and more—delivered with medical-grade standards in New Windsor, NY.',
+  title: 'D‑Essence Wellness | Modern Aesthetics, Evidence‑Based Care',
+  description: 'Skin health, neurotoxins, fillers, microneedling, Aerolase, and more—delivered with medical‑grade standards in New Windsor, NY.',
   canonical: '/',
   type: 'website',
-  jsonLd: [
-    {"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "name": "D-Essence Wellness", "image": "https://example.com/og-default.jpg", "telephone": "+1-716-303-8963", "address": {"@type": "PostalAddress", "streetAddress": "871 Blooming Grove Turnpike Suite 102", "addressLocality": "New Windsor", "addressRegion": "NY", "postalCode": "12553", "addressCountry": "US"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "10:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "09:00", "closes": "18:00"}], "potentialAction": {"@type": "ReserveAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://example.com/appointment", "inLanguage": "en"}, "result": {"@type": "Reservation", "name": "Consultation Request"}}},
-    {"@context":"https://schema.org","@type":"WebSite","name":"D-Essence Wellness","url":"https://example.com","potentialAction":{"@type":"SearchAction","target":"https://example.com/?q={search_term_string}","query-input":"required name=search_term_string"}}
-  ]
+  jsonLd: []
 };
 ---
 <BaseLayout seo={seo}>
-  <section class="pt-16 pb-12 bg-white">
-    <div class="container">
-      <div class="grid lg:grid-cols-2 gap-10 items-center">
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-grid vignette">
+    <div class="container pt-24 pb-12">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <h1 class="text-4xl sm:text-5xl font-display leading-tight">
-            Elevated Aesthetics.<br/>Evidence‑Based Care.
+          <div class="inline-flex items-center gap-2 text-[12px] rounded-full border border-line/80 px-3 py-1 mb-4 bg-white">Clinical • Subtle • Ethical</div>
+          <h1 class="text-4xl sm:text-5xl font-semibold leading-[1.1] tracking-tight">
+            Modern Aesthetics.<br/>Medical‑grade Standards.
           </h1>
           <p class="mt-4 text-muted max-w-xl">
-            Skin health, subtle enhancements, and confidence—delivered with medical‑grade standards.
+            Personalized treatment plans that enhance—not replace—your natural expression.
           </p>
-          <div class="mt-6 flex gap-3">
+          <div class="mt-6 flex flex-wrap gap-3">
             <a href="/appointment" class="btn btn-primary">Book Consultation</a>
-            <a href="/services" class="btn btn-ghost">Explore Services</a>
+            <a href="/services" class="btn btn-outline">Explore Services</a>
+          </div>
+          <div class="mt-8 grid grid-cols-3 sm:max-w-md text-sm">
+            <div><div class="text-[28px] font-semibold leading-none">15+</div><div class="text-muted mt-1">Modalities</div></div>
+            <div><div class="text-[28px] font-semibold leading-none">Low</div><div class="text-muted mt-1">Downtime</div></div>
+            <div><div class="text-[28px] font-semibold leading-none">100%</div><div class="text-muted mt-1">Personalized</div></div>
           </div>
         </div>
-        <div class="card">
-          <ul class="space-y-2 text-sm">
-            <li>• Clinical-grade protocols</li>
-            <li>• Personalized treatment plans</li>
-            <li>• Minimal downtime options</li>
-            <li>• Transparent pricing & aftercare</li>
-          </ul>
+        <div class="relative">
+          <div class="card p-6 md:p-8">
+            <ul class="space-y-3 text-sm">
+              <li>• Neurotoxins & Juvederm fillers</li>
+              <li>• PRP, Microneedling & Skinvive</li>
+              <li>• Aerolase laser & Chemical peels</li>
+              <li>• Facials, Waxing & Skincare guidance</li>
+            </ul>
+            <div class="mt-6 flex gap-3">
+              <a href="/appointment" class="btn btn-primary">Start now</a>
+              <a href="/faq" class="btn btn-ghost">FAQ</a>
+            </div>
+          </div>
+          <div class="absolute -z-10 top-[-20%] right-[-10%] w-60 h-60 rounded-full bg-black/5 blur-3xl"></div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Featured Services -->
   <Section title="Featured Services" subtitle="Explore our most requested treatments.">
-    <div class="grid-cards">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {services.slice(0,6).map(s => <ServiceCard href={`/services/${s.slug}`} title={s.data.title} summary={s.data.summary} />)}
     </div>
   </Section>
 
-  <Section title="About D‑Essence Wellness" subtitle="We blend medical rigor with refined aesthetics to create results that look like you—on your best day.">
-    <div class="card">
-      <p class="text-sm text-muted">
-        Located in New Windsor, NY. Mon–Thu 10am–7pm · Fri–Sat 9am–6pm · Sun Closed.
-      </p>
+  <!-- Ethos -->
+  <section class="section">
+    <div class="container">
+      <div class="card p-8 md:p-10 grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="text-lg font-semibold">Clinical Rigor</div>
+          <p class="text-sm text-muted mt-2">Evidence‑based protocols with clear expectations and aftercare.</p>
+        </div>
+        <div>
+          <div class="text-lg font-semibold">Subtle Artistry</div>
+          <p class="text-sm text-muted mt-2">Enhancements that look like you—on your best day.</p>
+        </div>
+        <div>
+          <div class="text-lg font-semibold">Ethical Care</div>
+          <p class="text-sm text-muted mt-2">Transparent recommendations aligned with your goals and timeline.</p>
+        </div>
+      </div>
     </div>
-  </Section>
+  </section>
 
   <CTA />
 </BaseLayout>
