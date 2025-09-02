@@ -1,6 +1,5 @@
 ---
 title: "Filler Dissolving"
-slug: "filler-dissolving"
 metaTitle: "Filler Dissolving | D-Essence Wellness"
 metaDescription: "Correct or refine previous filler with targeted hyaluronidase."
 summary: "Correct or refine previous filler with targeted hyaluronidase."

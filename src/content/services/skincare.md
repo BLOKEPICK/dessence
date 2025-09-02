@@ -1,6 +1,5 @@
 ---
 title: "Skincare"
-slug: "skincare"
 metaTitle: "Skincare | D-Essence Wellness"
 metaDescription: "Curated routines and medical-grade products for daily skin health."
 summary: "Curated routines and medical-grade products for daily skin health."

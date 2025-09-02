@@ -1,6 +1,5 @@
 ---
 title: "Juvederm Fillers"
-slug: "juvederm-fillers"
 metaTitle: "Juvederm Fillers | D-Essence Wellness"
 metaDescription: "HA fillers to restore volume and contour lips, cheeks, and jawline."
 summary: "HA fillers to restore volume and contour lips, cheeks, and jawline."

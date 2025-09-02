@@ -1,6 +1,5 @@
 ---
 title: "Chemical Peels"
-slug: "chemical-peels"
 metaTitle: "Chemical Peels | D-Essence Wellness"
 metaDescription: "From light refresh to medium-depth resurfacing for clarity and smoothness."
 summary: "From light refresh to medium-depth resurfacing for clarity and smoothness."

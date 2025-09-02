@@ -1,6 +1,5 @@
 ---
 title: "Teeth Whitening"
-slug: "teeth-whitening"
 metaTitle: "Teeth Whitening | D-Essence Wellness"
 metaDescription: "Professional whitening for a brighter, confident smile."
 summary: "Professional whitening for a brighter, confident smile."

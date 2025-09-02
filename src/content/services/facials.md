@@ -1,6 +1,5 @@
 ---
 title: "Facials"
-slug: "facials"
 metaTitle: "Facials | D-Essence Wellness"
 metaDescription: "Medical-grade facials that refine texture, clarity, and hydration."
 summary: "Medical-grade facials that refine texture, clarity, and hydration."

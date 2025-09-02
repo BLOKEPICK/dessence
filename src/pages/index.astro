@@ -12,13 +12,7 @@ const seo = {
   type: 'website',
   jsonLd: [
     {"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "name": "D-Essence Wellness", "image": "https://example.com/og-default.jpg", "telephone": "+1-716-303-8963", "address": {"@type": "PostalAddress", "streetAddress": "871 Blooming Grove Turnpike Suite 102", "addressLocality": "New Windsor", "addressRegion": "NY", "postalCode": "12553", "addressCountry": "US"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "10:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "09:00", "closes": "18:00"}], "potentialAction": {"@type": "ReserveAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://example.com/appointment", "inLanguage": "en"}, "result": {"@type": "Reservation", "name": "Consultation Request"}}},
-    {
-      "@context":"https://schema.org",
-      "@type":"WebSite",
-      "name":"D-Essence Wellness",
-      "url":"https://example.com",
-      "potentialAction":{"@type":"SearchAction","target":"https://example.com/?q={search_term_string}","query-input":"required name=search_term_string"}
-    }
+    {"@context":"https://schema.org","@type":"WebSite","name":"D-Essence Wellness","url":"https://example.com","potentialAction":{"@type":"SearchAction","target":"https://example.com/?q={search_term_string}","query-input":"required name=search_term_string"}}
   ]
 };
 ---
@@ -52,7 +46,7 @@ const seo = {
 
   <Section title="Featured Services" subtitle="Explore our most requested treatments.">
     <div class="grid-cards">
-      {services.slice(0,6).map(s => <ServiceCard href={`/services/${s.data.slug}`} title={s.data.title} summary={s.data.summary} />)}
+      {services.slice(0,6).map(s => <ServiceCard href={`/services/${s.slug}`} title={s.data.title} summary={s.data.summary} />)}
     </div>
   </Section>
 

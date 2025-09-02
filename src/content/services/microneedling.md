@@ -1,6 +1,5 @@
 ---
 title: "Microneedling"
-slug: "microneedling"
 metaTitle: "Microneedling | D-Essence Wellness"
 metaDescription: "Collagen induction therapy for texture, pores, and scars."
 summary: "Collagen induction therapy for texture, pores, and scars."

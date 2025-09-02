@@ -2,11 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 const services = await getCollection('services');
-const seo = {
-  title: 'HTML Sitemap | D‑Essence Wellness',
-  description: 'Browse the site structure.',
-  canonical: '/sitemap'
-};
+const seo = { title: 'HTML Sitemap | D‑Essence Wellness', description: 'Browse the site structure.', canonical: '/sitemap' };
 ---
 <BaseLayout seo={seo}>
   <section class="section">
@@ -19,7 +15,7 @@ const seo = {
         <li><a href="/appointment">Appointment</a></li>
         <li><a href="/services">Services</a></li>
         <ul class="ml-4 mt-2 space-y-1">
-          {services.map(s => <li><a href={`/services/${s.data.slug}`}>{s.data.title}</a></li>)}
+          {services.map(s => <li><a href={`/services/${s.slug}`}>{s.data.title}</a></li>)}
         </ul>
       </ul>
     </div>

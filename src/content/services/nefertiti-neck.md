@@ -1,6 +1,5 @@
 ---
 title: "Nefertiti Neck"
-slug: "nefertiti-neck"
 metaTitle: "Nefertiti Neck | D-Essence Wellness"
 metaDescription: "Refine jawline and soften neck bands with precise neuromodulator mapping."
 summary: "Refine jawline and soften neck bands with precise neuromodulator mapping."

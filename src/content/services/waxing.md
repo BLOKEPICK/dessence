@@ -1,6 +1,5 @@
 ---
 title: "Waxing"
-slug: "waxing"
 metaTitle: "Waxing | D-Essence Wellness"
 metaDescription: "Smooth, clean results with professional technique and hygienic standards."
 summary: "Smooth, clean results with professional technique and hygienic standards."

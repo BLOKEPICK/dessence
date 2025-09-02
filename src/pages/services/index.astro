@@ -19,7 +19,7 @@ const seo = {
 <BaseLayout seo={seo}>
   <Section title="Services" subtitle="A structured approach to skin health and refined aesthetics.">
     <div class="grid-cards">
-      {entries.map(e => <ServiceCard href={`/services/${e.data.slug}`} title={e.data.title} summary={e.data.summary} />)}
+      {entries.map(e => <ServiceCard href={`/services/${e.slug}`} title={e.data.title} summary={e.data.summary} />)}
     </div>
   </Section>
 </BaseLayout>

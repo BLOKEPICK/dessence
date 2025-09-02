@@ -1,6 +1,5 @@
 ---
 title: "Platelet Rich Plasma (PRP)"
-slug: "platelet-rich-plasma-prp"
 metaTitle: "Platelet Rich Plasma (PRP) | D-Essence Wellness"
 metaDescription: "Use your own platelets to stimulate collagen and skin quality."
 summary: "Use your own platelets to stimulate collagen and skin quality."

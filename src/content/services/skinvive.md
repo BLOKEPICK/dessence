@@ -1,6 +1,5 @@
 ---
 title: "Skinvive"
-slug: "skinvive"
 metaTitle: "Skinvive | D-Essence Wellness"
 metaDescription: "Micro-droplet HA that hydrates from within for a lasting glow."
 summary: "Micro-droplet HA that hydrates from within for a lasting glow."
