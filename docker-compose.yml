@@ -1,6 +1,6 @@
 services:
-  D-Essence Wellness:
+  astrowind:
     build: .
-    container_name: D-Essence Wellness
+    container_name: astrowind
     ports:
       - 8080:8080

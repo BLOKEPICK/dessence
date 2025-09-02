@@ -1,33 +1,38 @@
-
 ---
-import Base from "../layouts/BaseLayout.astro";
-import Hero from "../components/Hero.astro";
-import ServiceCard from "../components/ServiceCard.astro";
-import CTA from "../components/CTA.astro";
+import Layout from '~/layouts/PageLayout.astro';
 
-const mission = "At D-Essence Wellness, our mission is to help you attain your beauty and wellness goals through personalized and expert treatments. We leverage state-of-the-art technology combined with a genuine passion for enhancing your natural beauty, ensuring that you leave our care feeling confident, rejuvenated, and transformed.";
-const featured = [
-  { title: "Aerolase", href: "/aerolase", description: "Advanced laser therapy for clearer, brighter, healthier-looking skin—minimal downtime."},
-  { title: "Microneedling", href: "/microneedling", description: "Stimulate collagen, refine texture, and soften fine lines for a rejuvenated glow."},
-  { title: "Neurotoxins", href: "/neurotoxins", description: "Smooth dynamic lines with precision for natural, refreshed expressions."},
-];
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  ignoreTitleTemplate: true,
+};
 ---
-<Base title="D-Essence Wellness | Personalized Beauty & Wellness" description="Beauty & wellness powered by advanced technology. Aerolase, Microneedling, Neurotoxins, and more in a clean, modern studio.">
-  <Hero title="Personalized beauty, modern technology, timeless results."
-        subtitle={mission}
-        chips={["Aerolase","Microneedling","Neurotoxins"]} />
-  <section class="container py-10 md:py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">Signature Treatments</h2>
-    <div class="grid gap-6 md:grid-cols-3 mt-6">
-      {featured.map(f => <ServiceCard {...f} />)}
-    </div>
-  </section>
-  <section class="container py-10 md:py-14">
-    <h2 class="text-2xl md:text-3xl font-bold">Memberships</h2>
-    <p class="text-gray-600 mt-2 max-w-2xl">Unlock consistent care with exclusive perks, preferred pricing, and priority access—designed for your long-term glow.</p>
-    <div class="mt-6">
-      <a class="btn btn-secondary" href="/memberships">See membership tiers</a>
-    </div>
-  </section>
-  <CTA />
-</Base>
+
+<Layout metadata={metadata}>
+<section class="max-w-screen-xl mx-auto px-6 py-20">
+  <span class="inline-block text-sm border border-white/10 text-white/70 rounded-full px-3 py-1 mb-4">Aesthetics • Wellness • Laser</span>
+  <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">D-Essence Wellness</h1>
+  <p class="mt-4 text-white/70">Advanced Aesthetics & Wellness — Advanced aesthetic and wellness services: Specialty Treatments, Waxing, Facials, Spider Vein Treatment, Vitamin Injections, PRP, Nefertiti Neck, Neurotoxins, Skinvive, Skincare, Teeth Whitening, Filler Dissolving, Juvederm Fillers, Smooth PDO Threads, Microneedling, Aerolase, Chemical Peels.</p>
+  <div class="mt-6 flex gap-3 flex-wrap">
+    <a href="#contact" class="inline-flex items-center px-5 py-3 rounded-full bg-blue-400 text-black font-semibold">Book Appointment</a>
+    <a href="#services" class="inline-flex items-center px-5 py-3 rounded-full border border-blue-400 text-white">Explore Services</a>
+  </div>
+</section>
+<section id="services" class="max-w-screen-xl mx-auto px-6 py-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Specialty Treatments</h3><p class="text-white/70 text-sm mt-1">Tailored protocols to your goals and skin profile.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Waxing</h3><p class="text-white/70 text-sm mt-1">Gentle, precise hair removal for smooth skin.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Facials</h3><p class="text-white/70 text-sm mt-1">Cleansing, nourishing, and glow-restoring facials.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Spider Vein Treatment</h3><p class="text-white/70 text-sm mt-1">Options to fade visible veins.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Vitamin Injections</h3><p class="text-white/70 text-sm mt-1">Targeted vitamins to boost energy and recovery.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">PRP (Platelet Rich Plasma)</h3><p class="text-white/70 text-sm mt-1">Regenerative therapy using your own platelets.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Nefertiti Neck</h3><p class="text-white/70 text-sm mt-1">Refine jawline and neck contours.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Neurotoxins</h3><p class="text-white/70 text-sm mt-1">Soften expression lines, natural finish.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Skinvive</h3><p class="text-white/70 text-sm mt-1">Micro-injections for lasting hydration and smoothness.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Skincare</h3><p class="text-white/70 text-sm mt-1">Medical-grade routines to maintain results.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Teeth Whitening</h3><p class="text-white/70 text-sm mt-1">Brighter smiles, safely.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Filler Dissolving</h3><p class="text-white/70 text-sm mt-1">Refine or correct prior filler with hyaluronidase.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Juvederm Fillers</h3><p class="text-white/70 text-sm mt-1">Restore volume and definition.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Smooth PDO Threads</h3><p class="text-white/70 text-sm mt-1">Stimulate collagen with minimally invasive threads.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Microneedling</h3><p class="text-white/70 text-sm mt-1">Improve texture, pores, and scars.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Aerolase</h3><p class="text-white/70 text-sm mt-1">Gentle laser for acne, pigment, redness, rejuvenation.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div><div class="rounded-2xl border border-white/10 bg-white/5 p-5"><h3 class="font-semibold">Chemical Peels</h3><p class="text-white/70 text-sm mt-1">Even tone and refine texture.</p><a class="mt-3 inline-block text-sm underline underline-offset-4" href="#contact">Book</a></div>
+</section>
+<section id="contact" class="max-w-screen-xl mx-auto px-6 py-16">
+  <h2 class="text-2xl font-bold">Contact</h2>
+  <p class="text-white/70 mt-2">Email: info@dessencewellness.com • Phone: (000) 000-0000</p>
+</section>
+</Layout>
