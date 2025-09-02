@@ -11,7 +11,7 @@ import icon from 'astro-icon';
 import compress from 'astro-compress';
 import type { AstroIntegration } from 'astro';
 
-import AstroWind from './vendor/integration';
+import astrowind from './vendor/integration';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 
@@ -22,10 +22,9 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  site: 'https://d-essencewellness.com',
   output: 'static',
 
-  integrations: [AstroWind(), 
+  integrations: [
     tailwind({
       applyBaseStyles: false,
     }),
@@ -67,7 +66,7 @@ export default defineConfig({
       Logger: 1,
     }),
 
-    AstroWind({
+    astrowind({
       config: './src/config.yaml',
     }),
   ],

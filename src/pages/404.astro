@@ -1,14 +1,24 @@
 ---
-import Base from "../layouts/BaseLayout.astro";
+import Layout from '~/layouts/Layout.astro';
+import { getHomePermalink } from '~/utils/permalinks';
+
+const title = `Error 404`;
 ---
-<Base title="Page Not Found | D-Essence Wellness" description="The page you are looking for doesn’t exist.">
-  <section class="container py-24 text-center">
-    <div class="mx-auto max-w-2xl">
-      <h1 class="text-5xl font-extrabold tracking-tight">404</h1>
-      <p class="mt-4 text-gray-600">Lo sentimos, esta página no existe o fue movida.</p>
-      <div class="mt-8">
-        <a href="/" class="btn btn-primary">Volver al inicio</a>
+
+<Layout metadata={{ title }}>
+  <section class="flex items-center h-full p-16">
+    <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+      <div class="max-w-md text-center">
+        <h2 class="mb-8 font-bold text-9xl">
+          <span class="sr-only">Error</span>
+          <span class="text-primary">404</span>
+        </h2>
+        <p class="text-3xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
+        <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
+          But dont worry, you can find plenty of other things on our homepage.
+        </p>
+        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">Back to homepage</a>
       </div>
     </div>
   </section>
-</Base>
+</Layout>

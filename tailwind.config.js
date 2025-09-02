@@ -5,25 +5,14 @@ import typographyPlugin from '@tailwindcss/typography';
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,json,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
-
-      extend: {
-        colors: {
-          brand: {
-            black: "#0B0B0B",
-            white: "#FFFFFF",
-            gray: "#F3F4F6",
-            darkgray: "#1F2937"
-          }
-        },
-        fontFamily: {
-          sans: ['ui-sans-serif','system-ui','-apple-system','Segoe UI','Roboto','Inter','Helvetica Neue','Arial','Noto Sans','sans-serif']
-        },
-        boxShadow: {
-          soft: "0 10px 30px rgba(0,0,0,0.06)"
-        }
-      }
-
-},
+    extend: {
+      colors: {
+        primary: 'var(--aw-color-primary)',
+        secondary: 'var(--aw-color-secondary)',
+        accent: 'var(--aw-color-accent)',
+        default: 'var(--aw-color-text-default)',
+        muted: 'var(--aw-color-text-muted)',
+      },
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
         serif: ['var(--aw-font-serif, ui-serif)', ...defaultTheme.fontFamily.serif],

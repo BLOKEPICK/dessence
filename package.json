@@ -1,7 +1,7 @@
 {
-  "name": "d-essence-wellness",
+  "name": "@onwidget/astrowind",
   "version": "1.0.0-beta.52",
-  "description": "D-Essence Wellness \u2014 personalized beauty & wellness powered by advanced tech.",
+  "description": "AstroWind: A free template using Astro 5.0 and Tailwind CSS. Astro starter theme.",
   "type": "module",
   "private": true,
   "engines": {

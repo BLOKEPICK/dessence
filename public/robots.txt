@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://d-essencewellness.com/sitemap-index.xml
+Disallow:
