@@ -9,8 +9,8 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
+    default: "D-Essence Wellness"
+    template: "%s — D-Essence Wellness"
   description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
   robots:
     index: true
@@ -70,3 +70,9 @@ analytics:
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+
+title: "D-Essence Wellness"
+
+tagline: "Advanced Aesthetics & Wellness"
+
+description: "Advanced aesthetic and wellness services: Specialty Treatments, Waxing, Facials, Spider Vein Treatment, Vitamin Injections, Platelet-Rich Plasma (PRP), Nefertiti Neck, Neurotoxins, Skinvive, Skincare, Teeth Whitening, Filler Dissolving, Juvederm Fillers, Smooth PDO Threads, Microneedling, Aerolase, and Chemical Peels."
