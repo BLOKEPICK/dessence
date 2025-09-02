@@ -3,12 +3,19 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Section from '@/components/Section.astro';
 import { getCollection } from 'astro:content';
 
-const { slug } = Astro.params;
-const entries = await getCollection('services');
-const entry = entries.find(e => e.slug === slug);
-if (!entry) throw new Error('Service not found');
+export async function getStaticPaths() {
+  const entries = await getCollection('services');
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry, entries }
+  }));
+}
 
-const related = entries.filter(e => e.slug !== slug).slice(0,4);
+// Props from getStaticPaths
+const { entry, entries } = Astro.props;
+
+const related = entries.filter((e) => e.slug !== entry.slug).slice(0, 4);
+
 const seo = {
   title: entry.data.metaTitle ?? `${entry.data.title} | D-Essence Wellness`,
   description: entry.data.metaDescription ?? entry.data.summary,
