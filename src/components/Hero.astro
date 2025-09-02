@@ -1,0 +1,20 @@
+
+---
+const { title, subtitle, ctaHref="/contact", chips=[] } = Astro.props;
+---
+<section class="relative bg-white">
+  <div class="container py-16 md:py-24 grid gap-12 md:grid-cols-2 items-center">
+    <div>
+      <div class="flex gap-2 mb-4 flex-wrap">
+        {chips.map((c) => <span class="chip">{c}</span>)}
+      </div>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">{title}</h1>
+      <p class="mt-4 text-lg text-gray-600">{subtitle}</p>
+      <div class="mt-8 flex gap-3">
+        <a class="btn btn-primary" href={ctaHref}>Book Now</a>
+        <a class="btn btn-secondary" href="/services">Explore Services</a>
+      </div>
+    </div>
+    <div class="aspect-[4/3] md:aspect-[5/4] rounded-3xl bg-brand-gray"></div>
+  </div>
+</section>

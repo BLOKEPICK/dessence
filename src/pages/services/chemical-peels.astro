@@ -1,0 +1,36 @@
+---
+import Base from "../../layouts/BaseLayout.astro";
+const name = "Chemical Peels";
+const summary = "Resurface and renew with tailored chemical solutions.";
+---
+<Base title={`Chemical Peels | D-Essence Wellness`} description={`Chemical Peels at D-Essence Wellness.`}>
+  <section class="container py-12">
+    <h1 class="text-3xl md:text-4xl font-bold">{name}</h1>
+    <p class="text-gray-600 mt-3 max-w-2xl">{summary}</p>
+    <div class="mt-8 grid gap-6 md:grid-cols-3">
+      <div class="rounded-2xl bg-white border border-gray-200 p-6">
+        <div class="font-semibold">Benefits</div>
+        <ul class="list-disc pl-5 text-sm text-gray-700 mt-3">
+          <li>Personalized by a licensed professional</li>
+          <li>Modern, clean studio with advanced technology</li>
+          <li>Minimal downtime in most cases</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl bg-white border border-gray-200 p-6">
+        <div class="font-semibold">Ideal for</div>
+        <ul class="list-disc pl-5 text-sm text-gray-700 mt-3">
+          <li>Those seeking effective, natural-looking results</li>
+          <li>Maintenance within a Membership plan</li>
+          <li>Combining with a home skincare routine</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl bg-white border border-gray-200 p-6">
+        <div class="font-semibold">Aftercare</div>
+        <p class="text-sm text-gray-700 mt-3">Follow your provider’s post-care guide. Avoid sun exposure, harsh actives, and always use SPF.</p>
+      </div>
+    </div>
+    <div class="mt-10">
+      <a href="/contact" class="btn btn-primary">Book Now</a>
+    </div>
+  </section>
+</Base>
