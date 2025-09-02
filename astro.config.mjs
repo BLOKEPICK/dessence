@@ -7,9 +7,7 @@ const SITE_URL = 'https://example.com';
 
 export default defineConfig({
   site: SITE_URL,
-  integrations: [
-    tailwind({ applyBaseStyles: false }),
-    sitemap()
-  ],
+  integrations: [tailwind({ applyBaseStyles: false }), sitemap()],
+  output: 'static',
   prefetch: true
 });

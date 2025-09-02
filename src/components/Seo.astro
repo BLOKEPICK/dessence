@@ -7,7 +7,6 @@ const {
   ogImage = '/og-default.jpg',
   jsonLd = []
 } = Astro.props;
-
 const site = Astro.site?.origin ?? 'https://example.com';
 const url = (canonical?.startsWith('http') ? canonical : site + canonical);
 const ld = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
