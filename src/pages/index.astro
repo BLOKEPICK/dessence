@@ -1,45 +1,71 @@
 ---
-import LandingLayout from '~/layouts/LandingLayout.astro';
-export const metadata = {
-  title: "D-Essence Wellness — Advanced Aesthetics & Wellness",
-  description: "Personalized aesthetic & wellness treatments. Book a complimentary consultation."
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Section from '@/components/Section.astro';
+import ServiceCard from '@/components/ServiceCard.astro';
+import CTA from '@/components/CTA.astro';
+import { getCollection } from 'astro:content';
+const services = await getCollection('services');
+const seo = {
+  title: 'D-Essence Wellness | Elevated Aesthetics, Evidence-Based Care',
+  description: 'Skin health, neurotoxins, fillers, microneedling, Aerolase, and more—delivered with medical-grade standards in New Windsor, NY.',
+  canonical: '/',
+  type: 'website',
+  jsonLd: [{"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "name": "D-Essence Wellness", "image": "https://example.com/og-default.jpg", "telephone": "+1-716-303-8963", "address": {"@type": "PostalAddress", "streetAddress": "871 Blooming Grove Turnpike Suite 102", "addressLocality": "New Windsor", "addressRegion": "NY", "postalCode": "12553", "addressCountry": "US"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "10:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "09:00", "closes": "18:00"}], "potentialAction": {"@type": "ReserveAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://example.com/appointment", "inLanguage": "en"}, "result": {"@type": "Reservation", "name": "Consultation Request"}}},
+    {
+      "@context":"https://schema.org",
+      "@type":"WebSite",
+      "name":"D-Essence Wellness",
+      "url":"https://example.com",
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":"https://example.com/?q={search_term_string}",
+        "query-input":"required name=search_term_string"
+      }
+    }
+  ]
 };
 ---
-
-<LandingLayout metadata={metadata}>
-  <Fragment slot="announcement">
-    <div class="w-full bg-black text-white text-sm py-2">
-      <div class="max-w-screen-xl mx-auto px-6 flex items-center justify-between gap-4">
-        <span>Now booking — Complimentary consultation</span>
-        <a href="/contact" class="underline underline-offset-4">Book now</a>
+<BaseLayout seo={seo}>
+  <section class="pt-16 pb-12 bg-white">
+    <div class="container">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-display leading-tight">
+            Elevated Aesthetics.<br/>Evidence‑Based Care.
+          </h1>
+          <p class="mt-4 text-muted max-w-xl">
+            Skin health, subtle enhancements, and confidence—delivered with medical‑grade standards.
+          </p>
+          <div class="mt-6 flex gap-3">
+            <a href="/appointment" class="btn btn-primary">Book Consultation</a>
+            <a href="/services" class="btn btn-ghost">Explore Services</a>
+          </div>
+        </div>
+        <div class="card">
+          <ul class="space-y-2 text-sm">
+            <li>• Clinical-grade protocols</li>
+            <li>• Personalized treatment plans</li>
+            <li>• Minimal downtime options</li>
+            <li>• Transparent pricing & aftercare</li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </Fragment>
-
-  <section class="max-w-screen-xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-    <div>
-      <p class="text-muted text-sm tracking-wide uppercase">Aesthetics • Wellness • Laser</p>
-      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mt-2">Advanced Aesthetics & Wellness</h1>
-      <p class="mt-4 text-lg text-muted">Specialty Treatments, Waxing, Facials, Spider Vein Treatment, Vitamin Injections, PRP, Nefertiti Neck, Neurotoxins, Skinvive, Skincare, Teeth Whitening, Filler Dissolving, Juvederm Fillers, Smooth PDO Threads, Microneedling, Aerolase & Chemical Peels.</p>
-      <div class="mt-6 flex gap-3 flex-wrap">
-        <a href="/contact" class="inline-flex items-center px-5 py-3 rounded-full bg-black text-white font-semibold">Book Consultation</a>
-        <a href="/services" class="inline-flex items-center px-5 py-3 rounded-full border border-black text-black">Explore Services</a>
-      </div>
-    </div>
-    <div class="relative">
-      <img src="/assets/images/placeholder/medspa-hero.jpg" alt="D‑Essence Wellness" class="w-full rounded-3xl border border-default shadow-sm object-cover" loading="eager" />
     </div>
   </section>
 
-  <section id="services" class="max-w-screen-xl mx-auto px-6 pb-8">
-    <h2 class="text-2xl font-bold">Our Services</h2>
-    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <a href="/services/aerolase" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Aerolase</h3><p class="text-muted text-sm mt-1">Gentle laser for acne, pigment, redness.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-      <a href="/services/microneedling" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Microneedling</h3><p class="text-muted text-sm mt-1">Improve texture, pores, scars.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-      <a href="/services/prp-platelet-rich-plasma" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">PRP</h3><p class="text-muted text-sm mt-1">Regenerative therapy using your platelets.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-      <a href="/services/neurotoxins" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Neurotoxins</h3><p class="text-muted text-sm mt-1">Soften expression lines.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-      <a href="/services/chemical-peels" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Chemical Peels</h3><p class="text-muted text-sm mt-1">Even tone and refine texture.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-      <a href="/services/juvederm-fillers" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Juvederm Fillers</h3><p class="text-muted text-sm mt-1">Restore volume and definition.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
+  <Section title="Featured Services" subtitle="Explore our most requested treatments.">
+    <div class="grid-cards">
+      {services.slice(0,6).map(s => <ServiceCard href={`/services/${s.data.slug}`} title={s.data.title} summary={s.data.summary} />)}
     </div>
-  </section>
-</LandingLayout>
+  </Section>
+
+  <Section title="About D‑Essence Wellness" subtitle="We blend medical rigor with refined aesthetics to create results that look like you—on your best day.">
+    <div class="card">
+      <p class="text-sm text-muted">
+        Located in New Windsor, NY. Mon–Thu 10am–7pm · Fri–Sat 9am–6pm · Sun Closed.
+      </p>
+    </div>
+  </Section>
+
+  <CTA />
+</BaseLayout>

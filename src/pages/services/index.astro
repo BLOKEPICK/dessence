@@ -1,33 +1,25 @@
 ---
-import PageLayout from '~/layouts/PageLayout.astro';
-export const metadata = {
-  title: "Services — D-Essence Wellness",
-  description: "Explore aesthetic and wellness services designed for natural-looking results."
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Section from '@/components/Section.astro';
+import ServiceCard from '@/components/ServiceCard.astro';
+import { getCollection } from 'astro:content';
+const entries = await getCollection('services');
+const seo = {
+  title: 'Aesthetic & Wellness Treatments | D-Essence Wellness',
+  description: 'Neurotoxins, Juvederm, PRP, Skinvive, PDO Threads, Microneedling, Aerolase, Chemical Peels, Facials, Waxing, and more.',
+  canonical: '/services',
+  type: 'website',
+  jsonLd: [{
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[ {"@type":"ListItem","position":1,"name":"Services","item":"/services"} ]
+  }]
 };
 ---
-
-<PageLayout metadata={metadata}>
-  <section class="max-w-screen-xl mx-auto px-6 py-14">
-    <h1 class="text-3xl font-extrabold tracking-tight">Our Services</h1>
-    <p class="text-muted mt-2">Personalized plans focused on natural-looking results and long-term skin health.</p>
-    <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <a href="/services/specialty-treatments" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Specialty Treatments</h3><p class="text-muted text-sm mt-1">Tailored protocols aligned to your goals and skin profile.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/waxing" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Waxing</h3><p class="text-muted text-sm mt-1">Gentle, precise hair removal for smooth skin.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/facials" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Facials</h3><p class="text-muted text-sm mt-1">Cleansing, nourishing, and glow-restoring facials.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/spider-vein-treatment" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Spider Vein Treatment</h3><p class="text-muted text-sm mt-1">Reduce visibility of fine vessels and redness.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/vitamin-injections" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Vitamin Injections</h3><p class="text-muted text-sm mt-1">Targeted vitamins for energy, metabolism, and recovery.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/prp-platelet-rich-plasma" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">PRP (Platelet Rich Plasma)</h3><p class="text-muted text-sm mt-1">Regenerative therapy using your own platelets.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/nefertiti-neck" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Nefertiti Neck</h3><p class="text-muted text-sm mt-1">Refine jawline and neck contours.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/neurotoxins" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Neurotoxins</h3><p class="text-muted text-sm mt-1">Soften expression lines for a refreshed look.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/skinvive" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Skinvive</h3><p class="text-muted text-sm mt-1">Microinjections for hydration and smoothness.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/skincare" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Skincare</h3><p class="text-muted text-sm mt-1">Medical-grade routines to maintain results.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/teeth-whitening" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Teeth Whitening</h3><p class="text-muted text-sm mt-1">Brighter smiles, safely.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/filler-dissolving" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Filler Dissolving</h3><p class="text-muted text-sm mt-1">Hyaluronidase to refine or correct previous filler.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/juvederm-fillers" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Juvederm Fillers</h3><p class="text-muted text-sm mt-1">Restore volume and definition.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/smooth-pdo-threads" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Smooth PDO Threads</h3><p class="text-muted text-sm mt-1">Stimulate collagen with smooth threads.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/microneedling" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Microneedling</h3><p class="text-muted text-sm mt-1">Improve texture, pores, and scars.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/aerolase" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Aerolase</h3><p class="text-muted text-sm mt-1">Gentle laser for acne, pigment, redness, rejuvenation.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
-<a href="/services/chemical-peels" class="rounded-2xl border border-default bg-card p-5 hover:shadow-sm transition"><h3 class="font-semibold">Chemical Peels</h3><p class="text-muted text-sm mt-1">Even tone and refine texture.</p><span class="mt-3 inline-block text-sm underline underline-offset-4">Learn more</span></a>
+<BaseLayout seo={seo}>
+  <Section title="Services" subtitle="A structured approach to skin health and refined aesthetics.">
+    <div class="grid-cards">
+      {entries.map(e => <ServiceCard href={`/services/${e.data.slug}`} title={e.data.title} summary={e.data.summary} />)}
     </div>
-  </section>
-</PageLayout>
+  </Section>
+</BaseLayout>

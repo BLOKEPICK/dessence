@@ -1,0 +1,31 @@
+---
+const {
+  title = 'D-Essence Wellness',
+  description = 'Medical-grade aesthetics and wellness.',
+  canonical = '/',
+  type = 'website',
+  ogImage = '/og-default.jpg',
+  jsonLd = []
+} = Astro.props;
+
+const site = Astro.site?.origin ?? 'https://example.com';
+const url = (canonical?.startsWith('http') ? canonical : site + canonical);
+const ld = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
+---
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={url} />
+  <meta property="og:type" content={type} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:url" content={url} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+  {ld.length > 0 && ld.map((obj) => <script type="application/ld+json">{JSON.stringify(obj)}</script>)}
+</head>

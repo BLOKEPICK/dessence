@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+const services = await getCollection('services');
+const seo = {
+  title: 'HTML Sitemap | D‑Essence Wellness',
+  description: 'Browse the site structure.',
+  canonical: '/sitemap'
+};
+---
+<BaseLayout seo={seo}>
+  <section class="section">
+    <div class="container">
+      <h1 class="text-3xl font-display">HTML Sitemap</h1>
+      <ul class="mt-6 space-y-2 underline">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/appointment">Appointment</a></li>
+        <li><a href="/services">Services</a></li>
+        <ul class="ml-4 mt-2 space-y-1">
+          {services.map(s => <li><a href={`/services/${s.data.slug}`}>{s.data.title}</a></li>)}
+        </ul>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
