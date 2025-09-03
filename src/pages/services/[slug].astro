@@ -14,9 +14,27 @@ export async function getStaticPaths() {
 
 const { entry, entries } = Astro.props;
 const related = entries.filter((e) => e.slug !== entry.slug).slice(0, 4);
+
 const icons = {
-  'neurotoxins':'syringe','juvederm-fillers':'drop','platelet-rich-plasma-prp':'vial','microneedling':'roller','aerolase':'laser','chemical-peels':'flask','filler-dissolving':'eraser','skinvive':'glow','smooth-pdo-threads':'thread','teeth-whitening':'smile','skincare':'leaf','facials':'mask','waxing':'wax','spider-vein-treatment':'vein','vitamin-injections':'vial','nefertiti-neck':'neck','specialty-treatments':'star'
+  'neurotoxins':'syringe',
+  'juvederm-fillers':'lips',
+  'platelet-rich-plasma-prp':'test-tube',
+  'microneedling':'dermapen',
+  'aerolase':'laser-beam',
+  'chemical-peels':'peel',
+  'filler-dissolving':'dissolve',
+  'skinvive':'glow-drop',
+  'smooth-pdo-threads':'pdo',
+  'teeth-whitening':'tooth',
+  'skincare':'bottle',
+  'facials':'mask',
+  'waxing':'wax-pot',
+  'spider-vein-treatment':'leg-vein',
+  'vitamin-injections':'vial-plus',
+  'nefertiti-neck':'jawline',
+  'specialty-treatments':'med-star'
 };
+
 
 const seo = {
   title: entry.data.metaTitle ?? `${entry.data.title} | D‑Essence Wellness`,

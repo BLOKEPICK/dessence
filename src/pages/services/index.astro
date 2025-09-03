@@ -4,25 +4,27 @@ import Section from '@/components/Section.astro';
 import ServiceCard from '@/components/ServiceCard.astro';
 import { getCollection } from 'astro:content';
 const entries = await getCollection('services');
+
 const icons = {
   'neurotoxins':'syringe',
-  'juvederm-fillers':'drop',
-  'platelet-rich-plasma-prp':'vial',
-  'microneedling':'roller',
-  'aerolase':'laser',
-  'chemical-peels':'flask',
-  'filler-dissolving':'eraser',
-  'skinvive':'glow',
-  'smooth-pdo-threads':'thread',
-  'teeth-whitening':'smile',
-  'skincare':'leaf',
+  'juvederm-fillers':'lips',
+  'platelet-rich-plasma-prp':'test-tube',
+  'microneedling':'dermapen',
+  'aerolase':'laser-beam',
+  'chemical-peels':'peel',
+  'filler-dissolving':'dissolve',
+  'skinvive':'glow-drop',
+  'smooth-pdo-threads':'pdo',
+  'teeth-whitening':'tooth',
+  'skincare':'bottle',
   'facials':'mask',
-  'waxing':'wax',
-  'spider-vein-treatment':'vein',
-  'vitamin-injections':'vial',
-  'nefertiti-neck':'neck',
-  'specialty-treatments':'star'
+  'waxing':'wax-pot',
+  'spider-vein-treatment':'leg-vein',
+  'vitamin-injections':'vial-plus',
+  'nefertiti-neck':'jawline',
+  'specialty-treatments':'med-star'
 };
+
 const seo = {
   title: 'Aesthetic & Wellness Treatments | D‑Essence Wellness',
   description: 'Neurotoxins, Juvederm, PRP, Skinvive, PDO Threads, Microneedling, Aerolase, Chemical Peels, Facials, Waxing, and more.',
