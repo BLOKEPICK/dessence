@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Section from '@/components/Section.astro';
 import ServiceCard from '@/components/ServiceCard.astro';
+import Subnav from '@/components/Subnav.astro';
 import { getCollection } from 'astro:content';
 
 const services = await getCollection('services');
@@ -73,12 +74,192 @@ const seo = {
     </div>
   </section>
 
+  <Subnav />
+
   <!-- Featured Services with unique icons and distinct background -->
-  <Section class="section-alt" title="Featured Services" subtitle="Explore our most requested treatments.">
+  <Section id="services" class="section-alt" title="Featured Services" subtitle="Explore our most requested treatments.">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {services.slice(0,6).map(s => <ServiceCard href={`/services/${s.slug}`} title={s.data.title} summary={s.data.summary} icon={icons[s.slug] ?? 'star'} />)}
     </div>
   </Section>
+
+  <!-- Approach -->
+  <section id="approach" class="section section-muted">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div class="card p-8">
+          <h3 class="text-2xl font-semibold tracking-tight">Our Approach</h3>
+          <p class="text-muted mt-2">We start with your goals and timeline, then build a plan that balances efficacy, downtime, and budget.</p>
+          <ul class="mt-6 space-y-3 text-sm">
+            <li>• Conservative, natural‑first philosophy</li>
+            <li>• Evidence‑based combinations and staged plans</li>
+            <li>• Clear aftercare and maintenance schedule</li>
+          </ul>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="card p-6">
+            <div class="text-[28px] font-semibold leading-none">1:1</div>
+            <p class="text-sm text-muted mt-1">Personalized consultations</p>
+          </div>
+          <div class="card p-6">
+            <div class="text-[28px] font-semibold leading-none">Low</div>
+            <p class="text-sm text-muted mt-1">Downtime options</p>
+          </div>
+          <div class="card p-6">
+            <div class="text-[28px] font-semibold leading-none">15+</div>
+            <p class="text-sm text-muted mt-1">Modalities</p>
+          </div>
+          <div class="card p-6">
+            <div class="text-[28px] font-semibold leading-none">100%</div>
+            <p class="text-sm text-muted mt-1">Tailored plans</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results (Before/After placeholders) -->
+  <section id="results" class="section section-dark">
+    <div class="container">
+      <h3 class="text-3xl sm:text-4xl font-semibold tracking-tight">Refined, natural‑looking outcomes</h3>
+      <p class="text-muted mt-2 max-w-2xl">Representative results—not retouched. Individual outcomes vary. (Placeholders shown.)</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-2 gap-2">
+          <div class="ba-tile"></div>
+          <div class="ba-tile after"></div>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div class="ba-tile"></div>
+          <div class="ba-tile after"></div>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div class="ba-tile"></div>
+          <div class="ba-tile after"></div>
+        </div>
+      </div>
+      <div class="mt-8">
+        <a href="/appointment" class="btn btn-primary">Start your plan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="section">
+    <div class="container">
+      <h3 class="text-3xl font-semibold tracking-tight">How it works</h3>
+      <div class="mt-6 grid md:grid-cols-4 gap-6">
+        <div class="card p-6">
+          <div class="text-xs uppercase tracking-wider text-muted">Step 1</div>
+          <div class="mt-1 font-semibold">Consultation</div>
+          <p class="text-sm text-muted mt-2">Assess goals, history, and timelines.</p>
+        </div>
+        <div class="card p-6">
+          <div class="text-xs uppercase tracking-wider text-muted">Step 2</div>
+          <div class="mt-1 font-semibold">Plan</div>
+          <p class="text-sm text-muted mt-2">Design a staged, evidence‑based protocol.</p>
+        </div>
+        <div class="card p-6">
+          <div class="text-xs uppercase tracking-wider text-muted">Step 3</div>
+          <div class="mt-1 font-semibold">Treatment</div>
+          <p class="text-sm text-muted mt-2">Execute with precision and safety.</p>
+        </div>
+        <div class="card p-6">
+          <div class="text-xs uppercase tracking-wider text-muted">Step 4</div>
+          <div class="mt-1 font-semibold">Review</div>
+          <p class="text-sm text-muted mt-2">Track outcomes and refine maintenance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section section-muted">
+    <div class="container">
+      <h3 class="text-3xl font-semibold tracking-tight">What clients say</h3>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <figure class="card p-6">
+          <blockquote class="text-sm">“Subtle, natural results. The consultation felt collaborative and honest.”</blockquote>
+          <figcaption class="text-xs text-muted mt-3">— A.M.</figcaption>
+        </figure>
+        <figure class="card p-6">
+          <blockquote class="text-sm">“Clear expectations and aftercare. I appreciated the conservative approach.”</blockquote>
+          <figcaption class="text-xs text-muted mt-3">— J.R.</figcaption>
+        </figure>
+        <figure class="card p-6">
+          <blockquote class="text-sm">“Professional, clean, and personable. My skin has never looked better.”</blockquote>
+          <figcaption class="text-xs text-muted mt-3">— K.S.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Hours -->
+  <section id="location" class="section">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-6 items-stretch">
+        <div class="card overflow-hidden">
+          <iframe
+            title="Map — D‑Essence Wellness"
+            width="100%"
+            height="320"
+            style="border:0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=871%20Blooming%20Grove%20Turnpike%20Suite%20102%2C%20New%20Windsor%2C%20NY%2012553&output=embed">
+          </iframe>
+        </div>
+        <div class="card p-6">
+          <h4 class="font-semibold">Visit us</h4>
+          <p class="text-sm text-muted mt-2">871 Blooming Grove Turnpike Suite 102, New Windsor, NY 12553</p>
+          <ul class="text-sm mt-4 space-y-1">
+            <li><b>Mon–Thu:</b> 10am–7pm</li>
+            <li><b>Fri–Sat:</b> 9am–6pm</li>
+            <li><b>Sun:</b> Closed</li>
+          </ul>
+          <a href="tel:+17163038963" class="btn btn-primary mt-6">Call (716) 303‑8963</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ teaser -->
+  <section id="faq" class="section section-muted">
+    <div class="container max-w-4xl">
+      <h3 class="text-3xl font-semibold tracking-tight">Quick answers</h3>
+      <div class="mt-6 grid md:grid-cols-2 gap-4">
+        <details class="card p-4">
+          <summary class="font-semibold cursor-pointer">Is there downtime?</summary>
+          <p class="text-sm text-muted mt-2">Usually minimal; we’ll tailor guidance to your plan.</p>
+        </details>
+        <details class="card p-4">
+          <summary class="font-semibold cursor-pointer">How soon will I see results?</summary>
+          <p class="text-sm text-muted mt-2">Ranges by service; we set expectations upfront.</p>
+        </details>
+        <details class="card p-4">
+          <summary class="font-semibold cursor-pointer">Do you treat all skin types?</summary>
+          <p class="text-sm text-muted mt-2">Yes—modalities and settings are chosen accordingly.</p>
+        </details>
+        <details class="card p-4">
+          <summary class="font-semibold cursor-pointer">How do I start?</summary>
+          <p class="text-sm text-muted mt-2">Book a consultation and we’ll craft your plan.</p>
+        </details>
+      </div>
+      <div class="mt-6"><a href="/faq" class="btn btn-outline">See full FAQ</a></div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>
+          <h3 class="text-2xl font-semibold tracking-tight">Ready to begin?</h3>
+          <p class="text-muted">Book a consultation—no pressure, just clarity.</p>
+        </div>
+        <a href="/appointment" class="btn btn-primary">Book Consultation</a>
+      </div>
+    </div>
+  </section>
 
   <!-- Ethos / Value props -->
   <section class="section">
