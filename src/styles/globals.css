@@ -63,3 +63,9 @@ a { @apply underline-offset-2; }
 
 /* Simple divider */
 .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(0,0,0,.08), transparent); }
+
+
+/* Footer background to separate from page content */
+.footer-bg {
+  background: linear-gradient(180deg, #f3f4f6 0%, #ffffff 100%);
+}
