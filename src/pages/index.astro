@@ -41,7 +41,7 @@ const seo = {
   <!-- Hero (New Split) -->
   <section class="hero-split">
     <div class="container pt-24 pb-16">
-      <div class="grid lg:grid-cols-12 gap-10 items-center">
+      <div class="grid lg:grid-cols-12 gap-10 items-center text-center">
         <!-- Left copy -->
         <div class="lg:col-span-7">
           <div class="text-[12px] inline-flex items-center gap-2 px-3 py-1 border border-white/15 rounded-full mb-4">
@@ -97,52 +97,32 @@ const seo = {
 
 
   <!-- Featured Services with unique icons and distinct background -->
-  <Section id="services" class="section-alt" title="Featured Services" subtitle="Explore our most requested treatments.">
+  <Section id="services" class="section-alt text-center" title="Featured Services" subtitle="Explore our most requested treatments.">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {services.slice(0,6).map(s => <ServiceCard href={`/services/${s.slug}`} title={s.data.title} summary={s.data.summary} icon={icons[s.slug] ?? 'star'} />)}
     </div>
   </Section>
 
-  <!-- Approach -->
+  
+  <!-- Approach (centered) -->
   <section id="approach" class="section section-muted">
-    <div class="container">
-      <div class="grid md:grid-cols-2 gap-8 items-start">
-        <div class="card p-8">
-          <h3 class="text-2xl font-semibold tracking-tight">Our Approach</h3>
-          <p class="text-muted mt-2">We start with your goals and timeline, then build a plan that balances efficacy, downtime, and budget.</p>
-          <ul class="mt-6 space-y-3 text-sm">
-            <li>• Conservative, natural‑first philosophy</li>
-            <li>• Evidence‑based combinations and staged plans</li>
-            <li>• Clear aftercare and maintenance schedule</li>
-          </ul>
-        </div>
-        <div class="kpis">
-  <div class="kpi"><div class="v" aria-label="5 out of 5 stars" role="img">★★★★★</div><div class="l">Client feedback</div></div>
-  <div class="kpi"><div class="v">Evidence‑led</div><div class="l">Protocols</div></div>
-  <div class="kpi"><div class="v">Subtle</div><div class="l">Results</div></div>
-</div>
-            <p class="text-sm text-muted mt-1">Personalized consultations</p>
-          </div>
-          <div class="card p-6">
-            <div class="text-[28px] font-semibold leading-none">Low</div>
-            <p class="text-sm text-muted mt-1">Downtime options</p>
-          </div>
-          <div class="card p-6">
-            <div class="text-[28px] font-semibold leading-none">15+</div>
-            <p class="text-sm text-muted mt-1">Modalities</p>
-          </div>
-          <div class="card p-6">
-            <div class="text-[28px] font-semibold leading-none">100%</div>
-            <p class="text-sm text-muted mt-1">Tailored plans</p>
-          </div>
+    <div class="container text-center max-w-3xl">
+      <div class="card p-8">
+        <h3 class="text-2xl font-semibold tracking-tight">Our Approach</h3>
+        <p class="text-muted mt-2">We start with your goals and timeline, then build a plan that balances efficacy, downtime, and budget.</p>
+        <div class="kpis mt-6">
+          <div class="kpi"><div class="v" aria-label="5 out of 5 stars" role="img">★★★★★</div><div class="l">Client feedback</div></div>
+          <div class="kpi"><div class="v">Evidence‑led</div><div class="l">Protocols</div></div>
+          <div class="kpi"><div class="v">Subtle</div><div class="l">Results</div></div>
         </div>
       </div>
     </div>
   </section>
 
+
   <!-- Results (Before/After placeholders) -->
   <section id="results" class="section section-dark">
-    <div class="container">
+    <div class="container text-center">
       <h3 class="text-3xl sm:text-4xl font-semibold tracking-tight">Refined, natural‑looking outcomes</h3>
       <p class="text-muted mt-2 max-w-2xl">Representative results—not retouched. Individual outcomes vary. (Placeholders shown.)</p>
       <div class="mt-8 grid md:grid-cols-3 gap-6">
@@ -167,7 +147,7 @@ const seo = {
 
   <!-- Process (Stepper) -->
   <section id="process" class="section">
-    <div class="container">
+    <div class="container text-center">
       <h3 class="text-3xl font-semibold tracking-tight">How it works</h3>
 
       <!-- Desktop horizontal stepper -->
