@@ -174,3 +174,7 @@ a { @apply underline-offset-2; }
 .hero-split .kpi, .section-dark .kpi { border-color: rgba(255,255,255,.12); background: transparent; }
 .hero-split .kpi .v, .section-dark .kpi .v { color: #fff; }
 .hero-split .kpi .l, .section-dark .kpi .l { color: #cbd5e1; }
+
+
+/* Separator for light backgrounds (black tint) */
+.sep-x-dark { height: 1px; background: linear-gradient(90deg, transparent, rgba(0,0,0,.14), transparent); }
