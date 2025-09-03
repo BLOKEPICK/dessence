@@ -35,71 +35,86 @@ const seo = {
 ---
 <BaseLayout seo={seo}>
   
-  <!-- Hero (Spotlight) -->
-  <section class="relative overflow-hidden hero-spotlight">
-    <div class="container pt-24 pb-12">
+  
+  <!-- Hero (New Split) -->
+  <section class="hero-split">
+    <div class="container pt-24 pb-16">
       <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <!-- Left copy -->
         <div class="lg:col-span-7">
-          <div class="inline-flex items-center gap-2 text-[12px] rounded-full border border-line/80 px-3 py-1 mb-4 bg-white">New Windsor, NY • Aesthetic Medicine</div>
-          <h1 class="text-4xl sm:text-5xl font-semibold leading-[1.1] tracking-tight">
-            Refined results.<br class="hidden sm:block"/> No overdone look.
+          <div class="text-[12px] inline-flex items-center gap-2 px-3 py-1 border border-white/15 rounded-full mb-4">
+            <span>Medical Aesthetics</span><span class="opacity-60">•</span><span>New Windsor, NY</span>
+          </div>
+          <h1 class="text-white text-4xl sm:text-6xl font-semibold leading-[1.05] tracking-tight">
+            Understated beauty,<br class="hidden sm:block"/> clinical precision.
           </h1>
-          <p class="mt-4 text-muted max-w-xl">Evidence‑based treatments that respect facial harmony—subtle, modern, and personal.</p>
+          <p class="muted mt-4 max-w-xl">
+            Tailored treatments that honor your features. Subtle, modern, and guided by evidence.
+          </p>
           <div class="mt-6 flex flex-wrap gap-3">
             <a href="/appointment" class="btn btn-primary">Book Consultation</a>
-            <a href="/services" class="btn btn-outline">Explore Services</a>
+            <a href="/services" class="btn btn-ghost">See all services</a>
           </div>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span class="chip">Neurotoxins</span>
-            <span class="chip">Juvederm</span>
-            <span class="chip">PRP</span>
-            <span class="chip">Microneedling</span>
-            <span class="chip">Aerolase</span>
-            <span class="chip">Chemical Peels</span>
+          <div class="hero-kpis">
+            <div class="kpi"><div class="v">Low</div><div class="l">Downtime</div></div>
+            <div class="kpi"><div class="v">15+</div><div class="l">Modalities</div></div>
+            <div class="kpi"><div class="v">100%</div><div class="l">Personalized</div></div>
           </div>
         </div>
+
+        <!-- Right bento tiles with icons -->
         <div class="lg:col-span-5">
-          <div class="card p-6 md:p-8">
-            <ul class="space-y-3 text-sm">
-              <li>• Conservative, natural‑first philosophy</li>
-              <li>• Clear staging, expectations, and aftercare</li>
-              <li>• Modalities chosen for your skin and goals</li>
-            </ul>
-            <div class="mt-6 grid grid-cols-3 gap-4 text-center">
-              <div><div class="text-2xl font-semibold leading-none">Low</div><div class="text-xs text-muted">Downtime</div></div>
-              <div><div class="text-2xl font-semibold leading-none">15+</div><div class="text-xs text-muted">Modalities</div></div>
-              <div><div class="text-2xl font-semibold leading-none">100%</div><div class="text-xs text-muted">Personalized</div></div>
+          ---
+          import IconService from '@/components/icons/IconService.astro';
+          ---
+          <div class="hero-bento">
+            <div class="tile">
+              <div class="label">Neurotoxins</div>
+              <div class="mt-2 flex items-center gap-2 text-white">
+                <span class="inline-flex w-9 h-9 rounded-xl bg-white/10 border border-white/15 items-center justify-center">
+                  <IconService name="syringe" class="text-white" />
+                </span>
+                Smooth dynamic lines while keeping expression.
+              </div>
+            </div>
+            <div class="tile">
+              <div class="label">Juvederm Fillers</div>
+              <div class="mt-2 flex items-center gap-2 text-white">
+                <span class="inline-flex w-9 h-9 rounded-xl bg-white/10 border border-white/15 items-center justify-center">
+                  <IconService name="drop" class="text-white" />
+                </span>
+                Restore volume & contour with restraint.
+              </div>
+            </div>
+            <div class="tile">
+              <div class="label">Microneedling</div>
+              <div class="mt-2 flex items-center gap-2 text-white">
+                <span class="inline-flex w-9 h-9 rounded-xl bg-white/10 border border-white/15 items-center justify-center">
+                  <IconService name="roller" class="text-white" />
+                </span>
+                Texture, pores, scars—collagen induction.
+              </div>
+            </div>
+            <div class="tile">
+              <div class="label">Aerolase</div>
+              <div class="mt-2 flex items-center gap-2 text-white">
+                <span class="inline-flex w-9 h-9 rounded-xl bg-white/10 border border-white/15 items-center justify-center">
+                  <IconService name="laser" class="text-white" />
+                </span>
+                Gentle laser for tone, redness & glow.
+              </div>
             </div>
           </div>
+          <div class="mt-4 sep-x"></div>
+          <div class="mt-4 grid grid-cols-2 gap-3 text-xs">
+            <div class="text-white/80">By appointment only</div>
+            <div class="text-right"><a href="tel:+17163038963" class="underline">Call (716) 303‑8963</a></div>
+          </div>
         </div>
-      </div>
-    </div>
-
-    <!-- marquee -->
-    <div class="marquee border-t border-line/80 py-3 mt-6">
-      <div class="marquee-track">
-        <span class="chip chip-outline">Skinvive</span>
-        <span class="chip chip-outline">PDO Threads</span>
-        <span class="chip chip-outline">Teeth Whitening</span>
-        <span class="chip chip-outline">Skincare</span>
-        <span class="chip chip-outline">Facials</span>
-        <span class="chip chip-outline">Waxing</span>
-        <span class="chip chip-outline">Spider Vein</span>
-        <span class="chip chip-outline">Filler Dissolving</span>
-        <span class="chip chip-outline">Vitamin Injections</span>
-        <!-- repeat for seamless loop -->
-        <span class="chip chip-outline">Skinvive</span>
-        <span class="chip chip-outline">PDO Threads</span>
-        <span class="chip chip-outline">Teeth Whitening</span>
-        <span class="chip chip-outline">Skincare</span>
-        <span class="chip chip-outline">Facials</span>
-        <span class="chip chip-outline">Waxing</span>
-        <span class="chip chip-outline">Spider Vein</span>
-        <span class="chip chip-outline">Filler Dissolving</span>
-        <span class="chip chip-outline">Vitamin Injections</span>
       </div>
     </div>
   </section>
+
 
 
   <!-- Featured Services with unique icons and distinct background -->

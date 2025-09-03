@@ -88,3 +88,29 @@ a { @apply underline-offset-2; }
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+
+/* === New Hero: full-bleed dark split === */
+.hero-split {
+  position: relative;
+  color: #fff;
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(255,255,255,.06), transparent 55%),
+              radial-gradient(900px 500px at 90% 120%, rgba(255,255,255,.08), transparent 60%),
+              linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+}
+.hero-split .muted { color: #d1d5db; }
+
+.hero-bento {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+}
+.hero-bento .tile { border-radius: 1.25rem; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.04); padding: 1rem; }
+.hero-bento .tile .label { font-size: .75rem; color: #cbd5e1; }
+.hero-kpis { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .75rem; margin-top: .75rem; }
+.hero-kpis .kpi { border-radius: 9999px; border: 1px solid rgba(255,255,255,.12); padding: .5rem .75rem; text-align: center; backdrop-filter: blur(4px); }
+.hero-kpis .kpi .v { font-weight: 600; font-size: 1rem; }
+.hero-kpis .kpi .l { font-size: .7rem; color: #cbd5e1; }
+
+/* subtle separator lines */
+.sep-x { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent); }
