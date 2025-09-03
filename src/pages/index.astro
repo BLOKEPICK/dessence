@@ -34,44 +34,73 @@ const seo = {
 };
 ---
 <BaseLayout seo={seo}>
-  <!-- Hero -->
-  <section class="relative overflow-hidden bg-grid vignette">
+  
+  <!-- Hero (Spotlight) -->
+  <section class="relative overflow-hidden hero-spotlight">
     <div class="container pt-24 pb-12">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <div class="inline-flex items-center gap-2 text-[12px] rounded-full border border-line/80 px-3 py-1 mb-4 bg-white">Clinical • Subtle • Ethical</div>
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 text-[12px] rounded-full border border-line/80 px-3 py-1 mb-4 bg-white">New Windsor, NY • Aesthetic Medicine</div>
           <h1 class="text-4xl sm:text-5xl font-semibold leading-[1.1] tracking-tight">
-            Modern Aesthetics.<br/>Medical‑grade Standards.
+            Refined results.<br class="hidden sm:block"/> No overdone look.
           </h1>
-          <p class="mt-4 text-muted max-w-xl">Personalized treatment plans that enhance—not replace—your natural expression.</p>
+          <p class="mt-4 text-muted max-w-xl">Evidence‑based treatments that respect facial harmony—subtle, modern, and personal.</p>
           <div class="mt-6 flex flex-wrap gap-3">
             <a href="/appointment" class="btn btn-primary">Book Consultation</a>
             <a href="/services" class="btn btn-outline">Explore Services</a>
           </div>
-          <div class="mt-8 grid grid-cols-3 sm:max-w-md text-sm">
-            <div><div class="text-[28px] font-semibold leading-none">15+</div><div class="text-muted mt-1">Modalities</div></div>
-            <div><div class="text-[28px] font-semibold leading-none">Low</div><div class="text-muted mt-1">Downtime</div></div>
-            <div><div class="text-[28px] font-semibold leading-none">100%</div><div class="text-muted mt-1">Personalized</div></div>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="chip">Neurotoxins</span>
+            <span class="chip">Juvederm</span>
+            <span class="chip">PRP</span>
+            <span class="chip">Microneedling</span>
+            <span class="chip">Aerolase</span>
+            <span class="chip">Chemical Peels</span>
           </div>
         </div>
-        <div class="relative">
+        <div class="lg:col-span-5">
           <div class="card p-6 md:p-8">
             <ul class="space-y-3 text-sm">
-              <li>• Neurotoxins & Juvederm fillers</li>
-              <li>• PRP, Microneedling & Skinvive</li>
-              <li>• Aerolase laser & Chemical peels</li>
-              <li>• Facials, Waxing & Skincare guidance</li>
+              <li>• Conservative, natural‑first philosophy</li>
+              <li>• Clear staging, expectations, and aftercare</li>
+              <li>• Modalities chosen for your skin and goals</li>
             </ul>
-            <div class="mt-6 flex gap-3">
-              <a href="/appointment" class="btn btn-primary">Start now</a>
-              <a href="/faq" class="btn btn-ghost">FAQ</a>
+            <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+              <div><div class="text-2xl font-semibold leading-none">Low</div><div class="text-xs text-muted">Downtime</div></div>
+              <div><div class="text-2xl font-semibold leading-none">15+</div><div class="text-xs text-muted">Modalities</div></div>
+              <div><div class="text-2xl font-semibold leading-none">100%</div><div class="text-xs text-muted">Personalized</div></div>
             </div>
           </div>
-          <div class="absolute -z-10 top-[-20%] right-[-10%] w-60 h-60 rounded-full bg-black/5 blur-3xl"></div>
         </div>
       </div>
     </div>
+
+    <!-- marquee -->
+    <div class="marquee border-t border-line/80 py-3 mt-6">
+      <div class="marquee-track">
+        <span class="chip chip-outline">Skinvive</span>
+        <span class="chip chip-outline">PDO Threads</span>
+        <span class="chip chip-outline">Teeth Whitening</span>
+        <span class="chip chip-outline">Skincare</span>
+        <span class="chip chip-outline">Facials</span>
+        <span class="chip chip-outline">Waxing</span>
+        <span class="chip chip-outline">Spider Vein</span>
+        <span class="chip chip-outline">Filler Dissolving</span>
+        <span class="chip chip-outline">Vitamin Injections</span>
+        <!-- repeat for seamless loop -->
+        <span class="chip chip-outline">Skinvive</span>
+        <span class="chip chip-outline">PDO Threads</span>
+        <span class="chip chip-outline">Teeth Whitening</span>
+        <span class="chip chip-outline">Skincare</span>
+        <span class="chip chip-outline">Facials</span>
+        <span class="chip chip-outline">Waxing</span>
+        <span class="chip chip-outline">Spider Vein</span>
+        <span class="chip chip-outline">Filler Dissolving</span>
+        <span class="chip chip-outline">Vitamin Injections</span>
+      </div>
+    </div>
   </section>
+
 
   <!-- Featured Services with unique icons and distinct background -->
   <Section id="services" class="section-alt" title="Featured Services" subtitle="Explore our most requested treatments.">
