@@ -163,3 +163,14 @@ a { @apply underline-offset-2; }
 .btn-wire:focus-visible { outline: 2px solid rgba(255,255,255,.5); outline-offset: 2px; }
 
 .badge-dot { display:inline-block; width:.5rem; height:.5rem; border-radius:9999px; background:#d1d5db; }
+
+
+/* Generic KPI chips (light/dark aware) */
+.kpis { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .75rem; margin-top: .75rem; }
+.kpi { border-radius: 9999px; border: 1px solid rgba(0,0,0,.14); padding: .5rem .75rem; text-align: center; background: #fff; }
+.kpi .v { font-weight: 600; font-size: 1rem; }
+.kpi .l { font-size: .7rem; color: #6b7280; }
+/* On dark sections (hero-split or .section-dark), invert */
+.hero-split .kpi, .section-dark .kpi { border-color: rgba(255,255,255,.12); background: transparent; }
+.hero-split .kpi .v, .section-dark .kpi .v { color: #fff; }
+.hero-split .kpi .l, .section-dark .kpi .l { color: #cbd5e1; }
