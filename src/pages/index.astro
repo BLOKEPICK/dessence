@@ -2,7 +2,6 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Section from '@/components/Section.astro';
 import ServiceCard from '@/components/ServiceCard.astro';
-import IconService from '@/components/icons/IconService.astro';
 import { getCollection } from 'astro:content';
 
 const services = await getCollection('services');
@@ -55,8 +54,8 @@ const seo = {
             Tailored treatments that honor your features. Subtle, modern, and guided by evidence.
           </p>
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="/appointment" class="btn btn-primary">Book Consultation</a>
-            <a href="/services" class="btn btn-ghost">See all services</a>
+            <a href="/appointment" class="btn-neo">Book Consultation</a>
+            <a href="/services" class="btn-wire">See all services</a>
           </div>
           <div class="hero-kpis">
             <div class="kpi"><div class="v">Low</div><div class="l">Downtime</div></div>
@@ -70,39 +69,19 @@ const seo = {
           <div class="hero-bento">
             <div class="tile">
               <div class="label">Neurotoxins</div>
-              <div class="mt-2 flex items-center gap-2 text-white">
-                <span class="inline-flex w-9 h-9 rounded-xl bg-white/10 border border-white/15 items-center justify-center">
-                  <IconService name="syringe" class="text-white" />
-                </span>
-                Smooth dynamic lines while keeping expression.
-              </div>
+              <p class="mt-2 text-white/90">Smooth dynamic lines while keeping expression.</p>
             </div>
             <div class="tile">
               <div class="label">Juvederm Fillers</div>
-              <div class="mt-2 flex items-center gap-2 text-white">
-                <span class="inline-flex w-9 h-9 rounded-xl bg-white/10 border border-white/15 items-center justify-center">
-                  <IconService name="lips" class="text-white" />
-                </span>
-                Restore volume & contour with restraint.
-              </div>
+              <p class="mt-2 text-white/90">Restore volume & contour with restraint.</p>
             </div>
             <div class="tile">
               <div class="label">Microneedling</div>
-              <div class="mt-2 flex items-center gap-2 text-white">
-                <span class="inline-flex w-9 h-9 rounded-xl bg-white/10 border border-white/15 items-center justify-center">
-                  <IconService name="dermapen" class="text-white" />
-                </span>
-                Texture, pores, scars—collagen induction.
-              </div>
+              <p class="mt-2 text-white/90">Texture, pores, scars—collagen induction.</p>
             </div>
             <div class="tile">
               <div class="label">Aerolase</div>
-              <div class="mt-2 flex items-center gap-2 text-white">
-                <span class="inline-flex w-9 h-9 rounded-xl bg-white/10 border border-white/15 items-center justify-center">
-                  <IconService name="laser-beam" class="text-white" />
-                </span>
-                Gentle laser for tone, redness & glow.
-              </div>
+              <p class="mt-2 text-white/90">Gentle laser for tone, redness & glow.</p>
             </div>
           </div>
           <div class="mt-4 sep-x"></div>
@@ -279,7 +258,7 @@ const seo = {
           <h3 class="text-2xl font-semibold tracking-tight">Ready to begin?</h3>
           <p class="text-muted">Book a consultation—no pressure, just clarity.</p>
         </div>
-        <a href="/appointment" class="btn btn-primary">Book Consultation</a>
+        <a href="/appointment" class="btn-neo">Book Consultation</a>
       </div>
     </div>
   </section>

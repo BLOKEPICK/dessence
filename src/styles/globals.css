@@ -114,3 +114,52 @@ a { @apply underline-offset-2; }
 
 /* subtle separator lines */
 .sep-x { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent); }
+
+
+/* Modern CTA styles */
+.btn-neo {
+  @apply inline-flex items-center justify-center h-11 px-6 rounded-full;
+  color: #fff;
+  background: linear-gradient(180deg, #1a1a1a, #0f0f0f);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.05),
+    0 10px 24px -12px rgba(0,0,0,.6),
+    0 2px 8px -6px rgba(0,0,0,.5);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn-neo:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 16px 36px -16px rgba(0,0,0,.7),
+    0 6px 14px -8px rgba(0,0,0,.6);
+}
+.btn-neo:focus-visible { outline: 2px solid rgba(255,255,255,.5); outline-offset: 2px; }
+
+.btn-wire {
+  @apply inline-flex items-center justify-center h-11 px-6 rounded-full border;
+  color: #fff;
+  border-color: rgba(255,255,255,.4);
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: color .2s ease, border-color .2s ease, transform .2s ease;
+}
+.btn-wire::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: #fff;
+  transform: translateY(100%);
+  transition: transform .25s ease;
+  z-index: -1;
+}
+.btn-wire:hover {
+  color: #000;
+  border-color: #fff;
+  transform: translateY(-1px);
+}
+.btn-wire:hover::after { transform: translateY(0); }
+.btn-wire:focus-visible { outline: 2px solid rgba(255,255,255,.5); outline-offset: 2px; }
+
+.badge-dot { display:inline-block; width:.5rem; height:.5rem; border-radius:9999px; background:#d1d5db; }
