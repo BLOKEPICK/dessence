@@ -1,6 +1,6 @@
 ---
 title: "Specialty Treatments"
-metaTitle: "Specialty Treatments | D-Essence Wellness"
+metaTitle: "Specialty Treatments | D‑Essence Wellness"
 metaDescription: "Tailored, clinician-led protocols designed for specific concerns and results."
 summary: "Tailored, clinician-led protocols designed for specific concerns and results."
 idealFor: ["Personalized plans"]

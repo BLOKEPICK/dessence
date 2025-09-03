@@ -1,6 +1,6 @@
 ---
 title: "Vitamin Injections"
-metaTitle: "Vitamin Injections | D-Essence Wellness"
+metaTitle: "Vitamin Injections | D‑Essence Wellness"
 metaDescription: "Targeted nutrients that support energy and wellness goals."
 summary: "Targeted nutrients that support energy and wellness goals."
 idealFor: ["Personalized plans"]

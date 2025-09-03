@@ -4,6 +4,25 @@ import Section from '@/components/Section.astro';
 import ServiceCard from '@/components/ServiceCard.astro';
 import { getCollection } from 'astro:content';
 const entries = await getCollection('services');
+const icons = {
+  'neurotoxins':'syringe',
+  'juvederm-fillers':'drop',
+  'platelet-rich-plasma-prp':'vial',
+  'microneedling':'roller',
+  'aerolase':'laser',
+  'chemical-peels':'flask',
+  'filler-dissolving':'eraser',
+  'skinvive':'glow',
+  'smooth-pdo-threads':'thread',
+  'teeth-whitening':'smile',
+  'skincare':'leaf',
+  'facials':'mask',
+  'waxing':'wax',
+  'spider-vein-treatment':'vein',
+  'vitamin-injections':'vial',
+  'nefertiti-neck':'neck',
+  'specialty-treatments':'star'
+};
 const seo = {
   title: 'Aesthetic & Wellness Treatments | D‑Essence Wellness',
   description: 'Neurotoxins, Juvederm, PRP, Skinvive, PDO Threads, Microneedling, Aerolase, Chemical Peels, Facials, Waxing, and more.',
@@ -23,7 +42,7 @@ const seo = {
         <a href="/appointment" class="btn btn-primary">Book</a>
       </div>
       <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {entries.map(e => <ServiceCard href={`/services/${e.slug}`} title={e.data.title} summary={e.data.summary} />)}
+        {entries.map(e => <ServiceCard href={`/services/${e.slug}`} title={e.data.title} summary={e.data.summary} icon={icons[e.slug] ?? 'star'} />)}
       </div>
     </div>
   </section>

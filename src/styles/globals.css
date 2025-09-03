@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root { --bg:#fff; --ink:#0A0A0A; --muted:#6b7280; --line:#e5e7eb; }
-html, body { background: var(--bg); color: var(--ink); font-synthesis-weight: none; text-rendering: optimizeLegibility; }
+html, body { background: var(--bg); color: var(--ink); font-family: Sora, ui-sans-serif, system-ui; }
 
 a { @apply underline-offset-2; }
 .container { @apply max-w-7xl mx-auto px-4; }
@@ -15,27 +15,29 @@ a { @apply underline-offset-2; }
 .btn-outline { @apply bg-transparent border-black/10 hover:border-black/20; }
 
 .card { @apply rounded-3xl border border-line/80 bg-white shadow-soft; }
-
 .section { @apply py-16 sm:py-24; }
 
-/* Minimal monochrome background grid */
+/* Background patterns */
 .bg-grid {
   background-image:
     radial-gradient(circle at 1px 1px, rgba(0,0,0,.08) 1px, transparent 0),
     radial-gradient(circle at 1px 1px, rgba(0,0,0,.06) 1px, transparent 0);
   background-size: 24px 24px, 48px 48px;
 }
+.vignette { background: radial-gradient(1200px 600px at 50% -10%, rgba(0,0,0,.06), transparent 60%); }
 
-/* Subtle gradient vignette */
-.vignette {
-  background: radial-gradient(1200px 600px at 50% -10%, rgba(0,0,0,.06), transparent 60%);
+/* Distinct section style for services on homepage */
+.section-alt {
+  background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+  border-top: 1px solid rgba(0,0,0,.06);
+  border-bottom: 1px solid rgba(0,0,0,.06);
 }
 
-/* Nice typography for long-form */
+/* Typography */
 .prose { @apply prose-neutral; }
 .prose :where(h1,h2,h3,h4){ @apply font-semibold tracking-tight; }
 .prose :where(p,li){ @apply leading-7; }
 
-/* Lift on hover */
+/* Hover lift */
 .lift { @apply transition-transform duration-300; }
 .lift:hover { transform: translateY(-3px); }

@@ -1,6 +1,6 @@
 ---
 title: "Aerolase"
-metaTitle: "Aerolase | D-Essence Wellness"
+metaTitle: "Aerolase | D‑Essence Wellness"
 metaDescription: "Gentle laser addresses redness, pigmentation, and tone with minimal downtime."
 summary: "Gentle laser addresses redness, pigmentation, and tone with minimal downtime."
 idealFor: ["Personalized plans"]

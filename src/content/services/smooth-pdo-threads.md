@@ -1,6 +1,6 @@
 ---
 title: "Smooth PDO Threads"
-metaTitle: "Smooth PDO Threads | D-Essence Wellness"
+metaTitle: "Smooth PDO Threads | D‑Essence Wellness"
 metaDescription: "Collagen-stimulating threads ideal for subtle line refinement."
 summary: "Collagen-stimulating threads ideal for subtle line refinement."
 idealFor: ["Personalized plans"]

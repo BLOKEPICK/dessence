@@ -1,7 +1,7 @@
 ---
-const { title='D-Essence Wellness', description='Medical-grade aesthetics and wellness.', canonical='/', type='website', ogImage='/og-default.jpg', jsonLd = [] } = Astro.props;
+const { title='D‑Essence Wellness', description='Medical-grade aesthetics and wellness.', canonical='/', type='website', ogImage='/og-default.jpg', jsonLd=[] } = Astro.props;
 const site = Astro.site?.origin ?? 'https://example.com';
-const url = (canonical?.startsWith('http') ? canonical : site + canonical);
+const url = canonical?.startsWith('http') ? canonical : site + canonical;
 const ld = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
 ---
 <head>

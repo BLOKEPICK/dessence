@@ -1,6 +1,6 @@
 ---
 title: "Neurotoxins"
-metaTitle: "Neurotoxins | D-Essence Wellness"
+metaTitle: "Neurotoxins | D‑Essence Wellness"
 metaDescription: "Soften dynamic lines while preserving natural expression."
 summary: "Soften dynamic lines while preserving natural expression."
 idealFor: ["Personalized plans"]

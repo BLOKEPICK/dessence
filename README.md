@@ -1,10 +1,19 @@
-# D‑Essence Wellness (Astro + Tailwind) — Fix v2
+# D‑Essence Wellness (Astro + Tailwind) — Pro v1
 
-- Removed `slug` from content schema and frontmatter (Astro reserves it).
-- Updated code to use `entry.slug` instead of `entry.data.slug`.
-- No React imports. No MDX.
+- Build **estático** (Vercel-ready), sin React ni MDX.
+- **getStaticPaths** para `/services/[slug]`.
+- Diseño moderno (Sora, cards 3xl, grid/vignette, sección de Services con fondo distinto).
+- **SVG únicos por servicio** (monocromo).
+- SEO base + JSON-LD (Home/FAQ), sitemap y robots.
 
-Deploy tips:
-1) Replace `site` in `astro.config.mjs` with your real domain.
-2) Add `PUBLIC_FORMSPREE_ID` in env if using Formspree.
-3) `npm i && npm run build` should pass locally and on Vercel.
+## Quick start
+npm i
+npm run dev
+
+## Build
+npm run build && npm run preview
+
+## Vercel
+- Node 18
+- Variables (opcional): `PUBLIC_FORMSPREE_ID`
+- Cambia `site` en `astro.config.mjs` por tu dominio real.

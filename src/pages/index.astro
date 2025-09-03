@@ -2,17 +2,35 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Section from '@/components/Section.astro';
 import ServiceCard from '@/components/ServiceCard.astro';
-import CTA from '@/components/CTA.astro';
 import { getCollection } from 'astro:content';
 
 const services = await getCollection('services');
+const icons = {
+  'neurotoxins':'syringe',
+  'juvederm-fillers':'drop',
+  'platelet-rich-plasma-prp':'vial',
+  'microneedling':'roller',
+  'aerolase':'laser',
+  'chemical-peels':'flask',
+  'filler-dissolving':'eraser',
+  'skinvive':'glow',
+  'smooth-pdo-threads':'thread',
+  'teeth-whitening':'smile',
+  'skincare':'leaf',
+  'facials':'mask',
+  'waxing':'wax',
+  'spider-vein-treatment':'vein',
+  'vitamin-injections':'vial',
+  'nefertiti-neck':'neck',
+  'specialty-treatments':'star'
+};
 
 const seo = {
   title: 'D‑Essence Wellness | Modern Aesthetics, Evidence‑Based Care',
   description: 'Skin health, neurotoxins, fillers, microneedling, Aerolase, and more—delivered with medical‑grade standards in New Windsor, NY.',
   canonical: '/',
   type: 'website',
-  jsonLd: []
+  jsonLd: [{"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "name": "D\u2011Essence Wellness", "image": "https://example.com/og-default.jpg", "telephone": "+1-716-303-8963", "address": {"@type": "PostalAddress", "streetAddress": "871 Blooming Grove Turnpike Suite 102", "addressLocality": "New Windsor", "addressRegion": "NY", "postalCode": "12553", "addressCountry": "US"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "10:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "09:00", "closes": "18:00"}], "potentialAction": {"@type": "ReserveAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://example.com/appointment", "inLanguage": "en"}, "result": {"@type": "Reservation", "name": "Consultation Request"}}}]
 };
 ---
 <BaseLayout seo={seo}>
@@ -25,9 +43,7 @@ const seo = {
           <h1 class="text-4xl sm:text-5xl font-semibold leading-[1.1] tracking-tight">
             Modern Aesthetics.<br/>Medical‑grade Standards.
           </h1>
-          <p class="mt-4 text-muted max-w-xl">
-            Personalized treatment plans that enhance—not replace—your natural expression.
-          </p>
+          <p class="mt-4 text-muted max-w-xl">Personalized treatment plans that enhance—not replace—your natural expression.</p>
           <div class="mt-6 flex flex-wrap gap-3">
             <a href="/appointment" class="btn btn-primary">Book Consultation</a>
             <a href="/services" class="btn btn-outline">Explore Services</a>
@@ -57,14 +73,14 @@ const seo = {
     </div>
   </section>
 
-  <!-- Featured Services -->
-  <Section title="Featured Services" subtitle="Explore our most requested treatments.">
+  <!-- Featured Services with unique icons and distinct background -->
+  <Section class="section-alt" title="Featured Services" subtitle="Explore our most requested treatments.">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {services.slice(0,6).map(s => <ServiceCard href={`/services/${s.slug}`} title={s.data.title} summary={s.data.summary} />)}
+      {services.slice(0,6).map(s => <ServiceCard href={`/services/${s.slug}`} title={s.data.title} summary={s.data.summary} icon={icons[s.slug] ?? 'star'} />)}
     </div>
   </Section>
 
-  <!-- Ethos -->
+  <!-- Ethos / Value props -->
   <section class="section">
     <div class="container">
       <div class="card p-8 md:p-10 grid md:grid-cols-3 gap-8">
@@ -83,6 +99,4 @@ const seo = {
       </div>
     </div>
   </section>
-
-  <CTA />
 </BaseLayout>

@@ -1,6 +1,6 @@
 ---
 title: "Skincare"
-metaTitle: "Skincare | D-Essence Wellness"
+metaTitle: "Skincare | D‑Essence Wellness"
 metaDescription: "Curated routines and medical-grade products for daily skin health."
 summary: "Curated routines and medical-grade products for daily skin health."
 idealFor: ["Personalized plans"]

@@ -1,6 +1,6 @@
 ---
 title: "Spider Vein Treatment"
-metaTitle: "Spider Vein Treatment | D-Essence Wellness"
+metaTitle: "Spider Vein Treatment | D‑Essence Wellness"
 metaDescription: "Non-surgical options to reduce the appearance of superficial leg veins."
 summary: "Non-surgical options to reduce the appearance of superficial leg veins."
 idealFor: ["Personalized plans"]
