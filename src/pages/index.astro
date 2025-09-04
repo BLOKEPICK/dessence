@@ -97,11 +97,15 @@ const seo = {
 
 
   <!-- Featured Services with unique icons and distinct background -->
-  <Section id="services" class="section-alt text-center" title="Featured Services" subtitle="Explore our most requested treatments.">
+  <Section id="services" class="section-alt text-center" title="Featured Services">
+    <p class="text-muted max-w-2xl mx-auto mt-2 text-center">Explore our most requested treatments.</p>
+
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {services.slice(0,6).map(s => <ServiceCard href={`/services/${s.slug}`} title={s.data.title} summary={s.data.summary} icon={icons[s.slug] ?? 'star'} />)}
     </div>
-  </Section>
+  
+    <div class="mt-8 text-center"><a href="/services" class="btn-neo" aria-label="View all services">View all services</a></div>
+</Section>
 
   
   <!-- Approach (centered) -->
