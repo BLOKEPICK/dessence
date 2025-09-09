@@ -17,7 +17,7 @@ a { @apply underline-offset-2; }
 .card { @apply rounded-3xl border border-line/80 bg-white shadow-soft; }
 .section { @apply py-16 sm:py-24; }
 
-
+/* Background patterns */
 .bg-grid {
   background-image:
     radial-gradient(circle at 1px 1px, rgba(0,0,0,.08) 1px, transparent 0),
@@ -26,24 +26,24 @@ a { @apply underline-offset-2; }
 }
 .vignette { background: radial-gradient(1200px 600px at 50% -10%, rgba(0,0,0,.06), transparent 60%); }
 
-
+/* Distinct section style for services on homepage */
 .section-alt {
   background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
   border-top: 1px solid rgba(0,0,0,.06);
   border-bottom: 1px solid rgba(0,0,0,.06);
 }
 
-
+/* Typography */
 .prose { @apply prose-neutral; }
 .prose :where(h1,h2,h3,h4){ @apply font-semibold tracking-tight; }
 .prose :where(p,li){ @apply leading-7; }
 
-
+/* Hover lift */
 .lift { @apply transition-transform duration-300; }
 .lift:hover { transform: translateY(-3px); }
 
 
-
+/* Additional section treatments */
 .section-muted { background: #f7f7f7; border-top: 1px solid rgba(0,0,0,.06); border-bottom: 1px solid rgba(0,0,0,.06); }
 .section-dark { background: #0a0a0a; color: #fff; }
 .section-dark .text-muted { color: #d1d5db; }
@@ -51,29 +51,27 @@ a { @apply underline-offset-2; }
 
 .container-wide { max-width: 110rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
 
-
-
-.ba-tile > img, 
-}
+/* Before/After placeholder tiles */
+@media(min-width:1024px){}
 .ba-tile::after { content: "Before"; position: absolute; top: .5rem; left: .75rem; font-size: .75rem; color: #374151; }
 .ba-tile.after::after { content: "After"; }
 
-
+/* Sticky subnav */
 .subnav { position: sticky; top: 64px; z-index: 40; background: rgba(255,255,255,.75); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(0,0,0,.06); }
 .subnav a { padding-left: 1rem; padding-right: 1rem; height: 2.5rem; border-radius: 9999px; display: flex; align-items: center; font-size: .875rem; white-space: nowrap; }
 .subnav .rail { max-width: 80rem; margin: 0 auto; padding: .5rem 1rem; display: flex; gap: .5rem; overflow-x: auto; }
 
-
+/* Simple divider */
 .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(0,0,0,.08), transparent); }
 
 
-
+/* Footer background to separate from page content */
 .footer-bg {
   background: linear-gradient(180deg, #f3f4f6 0%, #ffffff 100%);
 }
 
 
-
+/* HERO spotlight + chips + marquee */
 .hero-spotlight {
   background:
     radial-gradient(900px 600px at 80% -20%, rgba(0,0,0,.08), transparent 60%),
@@ -92,7 +90,7 @@ a { @apply underline-offset-2; }
 }
 
 
-
+/* === New Hero: full-bleed dark split === */
 .hero-split {
   position: relative;
   color: #fff;
@@ -114,11 +112,11 @@ a { @apply underline-offset-2; }
 .hero-kpis .kpi .v { font-weight: 600; font-size: 1rem; }
 .hero-kpis .kpi .l { font-size: .7rem; color: #cbd5e1; }
 
-
+/* subtle separator lines */
 .sep-x { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent); }
 
 
-
+/* Modern CTA styles */
 .btn-neo {
   @apply inline-flex items-center justify-center h-11 px-6 rounded-full;
   color: #fff;
@@ -167,21 +165,21 @@ a { @apply underline-offset-2; }
 .badge-dot { display:inline-block; width:.5rem; height:.5rem; border-radius:9999px; background:#d1d5db; }
 
 
-
+/* Generic KPI chips (light/dark aware) */
 .kpis { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .75rem; margin-top: .75rem; }
 .kpi { border-radius: 9999px; border: 1px solid rgba(0,0,0,.14); padding: .5rem .75rem; text-align: center; background: #fff; }
 .kpi .v { font-weight: 600; font-size: 1rem; }
 .kpi .l { font-size: .7rem; color: #6b7280; }
-
+/* On dark sections (hero-split or .section-dark), invert */
 .hero-split .kpi, .section-dark .kpi { border-color: rgba(255,255,255,.12); background: transparent; }
 .hero-split .kpi .v, .section-dark .kpi .v { color: #fff; }
 .hero-split .kpi .l, .section-dark .kpi .l { color: #cbd5e1; }
 
 
-
+/* Separator for light backgrounds (black tint) */
 .sep-x-dark { height: 1px; background: linear-gradient(90deg, transparent, rgba(0,0,0,.14), transparent); }
 
-
+/* Utility for yellow stars */
 .stars{color:#FFD700 !important;letter-spacing:2px}
 
 .service-pill{position:absolute;top:.75rem;left:.75rem;background:rgba(0,0,0,.8);backdrop-filter:saturate(120%) blur(4px);color:#fff;padding:.25rem .6rem;border-radius:9999px;font-size:.75rem;font-weight:500}
@@ -227,15 +225,21 @@ dialog[data-results]::backdrop{background:rgba(0,0,0,.6)}
   border-radius: 9999px;
 }
 
+/* Before & After tiles — square large */
 .ba-tile {
+  position: relative;
   background: #111;
   border-radius: 1rem;
   width: 100%;
   aspect-ratio: 1 / 1;   /* square */
-  max-width: 500px;      /* large but contained */
-  margin: 0 auto;        /* center horizontally */
+  max-width: 600px;      /* big on desktop */
+  margin: 0 auto;        /* center each tile */
 }
-.ba-tile > img, .ba-tile > picture > img {
+@media (min-width: 1280px) {
+  .ba-tile { max-width: 700px; }  /* even larger on very wide screens */
+}
+.ba-tile > img,
+.ba-tile > picture > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
