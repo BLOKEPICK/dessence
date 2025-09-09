@@ -52,7 +52,7 @@ a { @apply underline-offset-2; }
 .container-wide { max-width: 110rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
 
 /* Before/After placeholder tiles */
-
+.ba-tile{background:#111;border-radius:.75rem;height:320px}@media(min-width:1024px){.ba-tile{height:420px}}
 .ba-tile::after { content: "Before"; position: absolute; top: .5rem; left: .75rem; font-size: .75rem; color: #374151; }
 .ba-tile.after::after { content: "After"; }
 
@@ -224,33 +224,3 @@ dialog[data-results]::backdrop{background:rgba(0,0,0,.6)}
   background: #ffffff;
   border-radius: 9999px;
 }
-
-.ba-tile{
-  background:#111;
-  border-radius:1rem;
-  width:100%;
-  min-height:280px; /* mobile baseline */
-}
-@media(min-width:1024px){
-  .ba-tile{
-    min-height:480px;           /* larger on desktop */
-    aspect-ratio:4/5;           /* vertical post feel */
-  }
-}
-.ba-tile.after{background:#1a1a1a}
-@media(min-width:1024px){
-  .ba-tile{
-  background:#111;
-  border-radius:1rem;
-  width:100%;
-  min-height:280px; /* mobile baseline */
-}
-@media(min-width:1024px){
-  .ba-tile{
-    min-height:480px;           /* larger on desktop */
-    aspect-ratio:4/5;           /* vertical post feel */
-  }
-}
-}
-.section-tight{padding-top:3rem}
-
