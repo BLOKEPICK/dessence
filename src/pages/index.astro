@@ -3,10 +3,8 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Section from '@/components/Section.astro';
 import ServiceCard from '@/components/ServiceCard.astro';
 import { getCollection } from 'astro:content';
-import ResultsGrid from '@/components/ResultsGrid.astro';
 
 const services = await getCollection('services');
-const results = (await getCollection('results')).filter(r => r.data.featured).map(r => ({title:r.data.title, service:r.data.serviceSlug, before:r.data.imageBefore, after:r.data.imageAfter}));
 
 const icons = {
   'neurotoxins':'syringe',
@@ -111,7 +109,6 @@ const seo = {
 
   
   
-<ResultsGrid items={results} title="Refined, natural‑looking outcomes" subtitle="Real patients. Real results. Each tagged by service." id="outcomes" />
 <!-- Approach (centered) -->
   <section id="approach" class="section section-muted">
     <div class="container text-center max-w-3xl">
