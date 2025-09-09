@@ -206,12 +206,12 @@ dialog[data-results]::backdrop{background:rgba(0,0,0,.6)}
   margin-top: 0.75rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #374151;
+  color: #ffffff;
 }
 .ba-midlabel::before,
 .ba-midlabel::after {
   content: "";
   flex: 1;
-  border-bottom: 1px solid #d1d5db;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
   margin: 0 0.75rem;
 }
