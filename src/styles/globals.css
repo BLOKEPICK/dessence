@@ -198,3 +198,5 @@ dialog[data-results]::backdrop{background:rgba(0,0,0,.6)}
 .ba-chip{display:inline-block;text-align:center;padding:.6rem 1rem;border:1px solid rgba(0,0,0,.12);border-radius:9999px;background:#fff}
 
 .u-underline{text-decoration:underline;text-underline-offset:4px}
+
+.ba-midlabel{font-size:.8rem;font-weight:600;color:#6b7280;padding:0 .5rem;}
