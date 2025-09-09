@@ -1,10 +1,13 @@
 ---
 import ResultCard from '@/components/ResultCard.astro';
+
 export interface Item {
   title: string;
   service: string;
   before: string;
   after: string;
+  date?: string;
+  caption?: string;
 }
 
 export interface Props {
@@ -17,12 +20,15 @@ export interface Props {
   ctaLabel?: string;
 }
 
-  items: Item[];
-  title?: string;
-  subtitle?: string;
-  id?: string;
-}
-const { items = [], title = 'Refined, natural‑looking outcomes', subtitle = '', id = 'results', limit = 6, ctaHref = '/services', ctaLabel = 'Explore services' } = Astro.props as Props;
+const {
+  items = [],
+  title = 'Refined, natural‑looking outcomes',
+  subtitle = '',
+  id = 'results',
+  limit = 6,
+  ctaHref = '/services',
+  ctaLabel = 'Explore services'
+} = Astro.props as Props;
 ---
 <section id={id} class="section">
   <div class="container">
@@ -34,13 +40,11 @@ const { items = [], title = 'Refined, natural‑looking outcomes', subtitle = ''
       <div class="text-center text-neutral-500">Results coming soon.</div>
     ) : (
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {items.slice(0, limit).map((it) => <ResultCard title={it.title} service={it.service} before={it.before} after={it.after} />)}
+        {items.slice(0, limit).map((it) => <ResultCard title={it.title} service={it.service} before={it.before} after={it.after} date={it.date} caption={it.caption} />)}
       </div>
     )}
-  </div>
-
-                    <div class="text-center mt-8">
-                      <a href={ctaHref} class="btn-neo">{ctaLabel}</a>
-                    </div>
+    <div class="text-center mt-8">
+      <a href={ctaHref} class="btn-neo">{ctaLabel}</a>
+    </div>
   </div>
 </section>
