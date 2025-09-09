@@ -199,4 +199,4 @@ dialog[data-results]::backdrop{background:rgba(0,0,0,.6)}
 
 .u-underline{text-decoration:underline;text-underline-offset:4px}
 
-.ba-midlabel{font-size:.8rem;font-weight:600;color:#6b7280;padding:0 .5rem;}
+.ba-midlabel{display:block;text-align:center;margin-top:.5rem;font-size:.8rem;font-weight:600;color:#6b7280;padding:0 .5rem;}
