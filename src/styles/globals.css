@@ -178,3 +178,6 @@ a { @apply underline-offset-2; }
 
 /* Separator for light backgrounds (black tint) */
 .sep-x-dark { height: 1px; background: linear-gradient(90deg, transparent, rgba(0,0,0,.14), transparent); }
+
+/* Utility for yellow stars */
+.stars{color:#FFD700;letter-spacing:2px}
