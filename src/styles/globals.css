@@ -228,14 +228,29 @@ dialog[data-results]::backdrop{background:rgba(0,0,0,.6)}
 .ba-tile{
   background:#111;
   border-radius:1rem;
-  aspect-ratio:1/1;
   width:100%;
-  height:auto;
-  box-shadow:0 6px 20px rgba(0,0,0,.15);
+  min-height:280px; /* mobile baseline */
+}
+@media(min-width:1024px){
+  .ba-tile{
+    min-height:480px;           /* larger on desktop */
+    aspect-ratio:4/5;           /* vertical post feel */
+  }
 }
 .ba-tile.after{background:#1a1a1a}
 @media(min-width:1024px){
-  .ba-tile{aspect-ratio:1/1}
+  .ba-tile{
+  background:#111;
+  border-radius:1rem;
+  width:100%;
+  min-height:280px; /* mobile baseline */
+}
+@media(min-width:1024px){
+  .ba-tile{
+    min-height:480px;           /* larger on desktop */
+    aspect-ratio:4/5;           /* vertical post feel */
+  }
+}
 }
 .section-tight{padding-top:3rem}
 
