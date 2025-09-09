@@ -4,8 +4,6 @@ import ResultsGrid from '@/components/ResultsGrid.astro';
 import { getCollection } from 'astro:content';
 import Section from '@/components/Section.astro';
 import IconService from '@/components/icons/IconService.astro';
-import { getCollection } from 'astro:content';
-
 export async function getStaticPaths() {
   const entries = await getCollection('services');
   return entries.map((entry) => ({
@@ -13,10 +11,8 @@ export async function getStaticPaths() {
     props: { entry, entries }
   }));
 }
-
 const { entry, entries } = Astro.props;
 const related = entries.filter((e) => e.slug !== entry.slug).slice(0, 4);
-
 const icons = {
   'neurotoxins':'syringe',
   'juvederm-fillers':'lips',
@@ -36,8 +32,6 @@ const icons = {
   'nefertiti-neck':'jawline',
   'specialty-treatments':'med-star'
 };
-
-
 const seo = {
   title: entry.data.metaTitle ?? `${entry.data.title} | D‑Essence Wellness`,
   description: entry.data.metaDescription ?? entry.data.summary,
@@ -45,16 +39,12 @@ const seo = {
   type: 'article',
   jsonLd: []
 };
----
-
----
 const slug = Astro.params.slug;
 const allResults = await getCollection('results');
 const serviceResults = allResults.filter(r => r.data.serviceSlug === slug).map(r => ({
   title:r.data.title, service:r.data.serviceSlug, before:r.data.imageBefore, after:r.data.imageAfter
 }));
 ---
-
 <BaseLayout seo={seo}>
   <section class="section">
     <div class="container max-w-3xl">
