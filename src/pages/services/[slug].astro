@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import ResultsGrid from '@/components/ResultsGrid.astro';
+import { getCollection } from 'astro:content';
 import Section from '@/components/Section.astro';
 import IconService from '@/components/icons/IconService.astro';
 import { getCollection } from 'astro:content';
@@ -44,6 +46,15 @@ const seo = {
   jsonLd: []
 };
 ---
+
+---
+const slug = Astro.params.slug;
+const allResults = await getCollection('results');
+const serviceResults = allResults.filter(r => r.data.serviceSlug === slug).map(r => ({
+  title:r.data.title, service:r.data.serviceSlug, before:r.data.imageBefore, after:r.data.imageAfter
+}));
+---
+
 <BaseLayout seo={seo}>
   <section class="section">
     <div class="container max-w-3xl">
@@ -67,4 +78,6 @@ const seo = {
       </ul>
     </div>
   </section>
+
+<ResultsGrid items={serviceResults} title="Results" subtitle="Before & After — filtered by this service." id="service-results" />
 </BaseLayout>

@@ -1,0 +1,46 @@
+---
+import ResultCard from '@/components/ResultCard.astro';
+export interface Item {
+  title: string;
+  service: string;
+  before: string;
+  after: string;
+}
+
+export interface Props {
+  items: Item[];
+  title?: string;
+  subtitle?: string;
+  id?: string;
+  limit?: number;
+  ctaHref?: string;
+  ctaLabel?: string;
+}
+
+  items: Item[];
+  title?: string;
+  subtitle?: string;
+  id?: string;
+}
+const { items = [], title = 'Refined, natural‑looking outcomes', subtitle = '', id = 'results', limit = 6, ctaHref = '/services', ctaLabel = 'Explore services' } = Astro.props as Props;
+---
+<section id={id} class="section">
+  <div class="container">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <h2 class="text-3xl font-semibold tracking-tight">{title}</h2>
+      {subtitle && <p class="text-muted mt-2">{subtitle}</p>}
+    </div>
+    {(items?.length ?? 0) === 0 ? (
+      <div class="text-center text-neutral-500">Results coming soon.</div>
+    ) : (
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {items.slice(0, limit).map((it) => <ResultCard title={it.title} service={it.service} before={it.before} after={it.after} />)}
+      </div>
+    )}
+  </div>
+
+                    <div class="text-center mt-8">
+                      <a href={ctaHref} class="btn-neo">{ctaLabel}</a>
+                    </div>
+  </div>
+</section>

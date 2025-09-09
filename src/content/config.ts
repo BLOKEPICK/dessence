@@ -16,3 +16,21 @@ export const collections = {
     })
   })
 };
+
+const results = defineCollection({
+  type: 'data',
+  schema: z.object({
+    serviceSlug: z.string(),
+    title: z.string(),
+    date: z.string().optional(),
+    imageBefore: z.string(),
+    imageAfter: z.string(),
+    featured: z.boolean().optional().default(false),
+    consent: z.boolean().optional().default(true),
+    notes: z.string().optional()
+  })
+});
+export const collections = {
+  ...(typeof collections !== 'undefined' ? collections : {}),
+  results,
+};

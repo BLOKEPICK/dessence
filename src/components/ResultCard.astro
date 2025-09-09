@@ -1,0 +1,56 @@
+---
+export interface Props {
+  title: string;
+  service: string;
+  before: string;
+  after: string;
+  date?: string;
+  caption?: string;
+}
+const { title, service, before, after, date = '', caption = '' } = Astro.props as Props;
+const id = `result-${title.replace(/\s+/g,'-').toLowerCase()}`;
+---
+<figure class="result-card group overflow-hidden rounded-2xl shadow-sm bg-white">
+  <div class="relative">
+    <button class="absolute right-3 top-3 z-10 btn-chip" data-open={id} aria-label={`Open before & after for ${service}`}>View</button>
+    <div class="grid grid-cols-2">
+      <div class="relative">
+        <img src={before} alt={`Before — ${service}`} loading="lazy" decoding="async" class="w-full h-full object-cover" />
+        <span class="ba-tag" aria-hidden="true">Before</span>
+      </div>
+      <div class="relative">
+        <img src={after} alt={`After — ${service}`} loading="lazy" decoding="async" class="w-full h-full object-cover" />
+        <span class="ba-tag" aria-hidden="true">After</span>
+      </div>
+    </div>
+    <span class="service-pill" aria-label={`Service: ${service}`}>{service}</span>
+  </div>
+  <figcaption class="px-4 py-3 text-sm text-neutral-700">
+    <div class="font-medium">{title}</div>
+    {date && <div class="text-xs text-neutral-500 mt-0.5">{date}</div>}
+    {caption && <div class="text-xs text-neutral-600 mt-1">{caption}</div>}
+  </figcaption>
+
+  <dialog id={id} data-results>
+    <div class="modal-card">
+      <div class="modal-head">
+        <div class="modal-title">{service}: {title}</div>
+        <button class="modal-close" data-close aria-label="Close dialog">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <figure>
+            <img src={before} alt={`Before — ${service}`} class="w-full h-auto object-cover" />
+            <figcaption class="text-xs text-neutral-600 mt-2">Before</figcaption>
+          </figure>
+          <figure>
+            <img src={after} alt={`After — ${service}`} class="w-full h-auto object-cover" />
+            <figcaption class="text-xs text-neutral-600 mt-2">After</figcaption>
+          </figure>
+        </div>
+        {caption && <p class="text-sm text-neutral-700 mt-4">{caption}</p>}
+      </div>
+    </div>
+  </dialog>
+  <script src="@/components/results-lightbox.client.js" type="module" />
+</figure>
