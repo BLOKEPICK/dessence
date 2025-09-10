@@ -58,7 +58,7 @@ const seo = {
             <a href="/services" class="btn-wire">See all services</a>
           </div>
           <div class="kpis">
-            <div class="kpi"><div class="v stars" aria-label="5 out of 5 stars" role="img" class="stars">★★★★★</div><div class="l">Client feedback</div></div>
+            <div class="kpi"><div class="v" aria-label="5 out of 5 stars" role="img">★★★★★</div><div class="l">Client feedback</div></div>
             <div class="kpi"><div class="v">Evidence‑led</div><div class="l">Protocols</div></div>
             <div class="kpi"><div class="v">Subtle</div><div class="l">Results</div></div>
           </div>
@@ -85,7 +85,7 @@ const seo = {
             </div>
           </div>
           <div class="mt-4 sep-x"></div>
-          <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="mt-4 grid grid-cols-2 gap-3 text-xs">
             <div class="text-white/80">By appointment only</div>
             <div class="text-right"><a href="tel:+17163038963" class="underline">Call (716) 303‑8963</a></div>
           </div>
@@ -96,8 +96,8 @@ const seo = {
 
 
 
-    <Section id="services" class="section-alt text-center" title="Featured Services">
-    <div class="sep-x-dark"></div>
+  <!-- Featured Services with unique icons and distinct background -->
+  <Section id="services" class="section-alt text-center" title="Featured Services">
     <p class="text-muted max-w-2xl mx-auto mt-2 text-center">Explore our most requested treatments.</p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -108,14 +108,14 @@ const seo = {
 </Section>
 
   
-  
-<!-- Approach (centered) -->
+  <!-- Approach (centered) -->
   <section id="approach" class="section section-muted">
-    <div class="container text-center max-w-6xl      <div class="card p-8">
+    <div class="container text-center max-w-3xl">
+      <div class="card p-8">
         <h3 class="text-2xl font-semibold tracking-tight">Our Approach</h3>
         <p class="text-muted mt-2">We start with your goals and timeline, then build a plan that balances efficacy, downtime, and budget.</p>
         <div class="kpis mt-6">
-          <div class="kpi"><div class="v stars" aria-label="5 out of 5 stars" role="img" class="stars">★★★★★</div><div class="l">Client feedback</div></div>
+          <div class="kpi"><div class="v" aria-label="5 out of 5 stars" role="img">★★★★★</div><div class="l">Client feedback</div></div>
           <div class="kpi"><div class="v">Evidence‑led</div><div class="l">Protocols</div></div>
           <div class="kpi"><div class="v">Subtle</div><div class="l">Results</div></div>
         </div>
@@ -127,33 +127,24 @@ const seo = {
   <!-- Results (Before/After placeholders) -->
   <section id="results" class="section section-dark">
     <div class="container text-center">
-      <h3 class="text-3xl sm:text-4xl font-semibold tracking-tight">Before & After</h3>
-      <p class="text-muted text-center mt-2 max-w-2xl mx-auto">Representative results — unretouched. Individual outcomes may vary.</p>
+      <h3 class="text-3xl sm:text-4xl font-semibold tracking-tight">Refined, natural‑looking outcomes</h3>
+      <p class="text-muted mt-2 max-w-2xl">Representative results—not retouched. Individual outcomes vary. (Placeholders shown.)</p>
       <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="space-y-2">
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-    <div class="ba-tile"></div>
-    <div class="ba-tile after"></div>
-  </div>
-  <div class="ba-midlabel">Before / After</div>
-</div>
-        <div class="space-y-2">
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-    <div class="ba-tile"></div>
-    <div class="ba-tile after"></div>
-  </div>
-  <div class="ba-midlabel">Before / After</div>
-</div>
-        <div class="space-y-2">
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-    <div class="ba-tile"></div>
-    <div class="ba-tile after"></div>
-  </div>
-  <div class="ba-midlabel">Before / After</div>
-</div>
+        <div class="grid grid-cols-2 gap-2">
+          <div class="ba-tile"></div>
+          <div class="ba-tile after"></div>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div class="ba-tile"></div>
+          <div class="ba-tile after"></div>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div class="ba-tile"></div>
+          <div class="ba-tile after"></div>
+        </div>
       </div>
       <div class="mt-8">
-        <button class="btn btn-primary" type="button">+ Before & After</button>
+        <a href="/appointment" class="btn btn-primary">Start your plan</a>
       </div>
     </div>
   </section>
