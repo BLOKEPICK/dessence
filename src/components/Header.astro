@@ -15,6 +15,37 @@ const nav = [
     <nav class="hidden md:flex items-center gap-2 bg-black/[.04] rounded-full p-1">
       {nav.map((n) => <a href={n.href} class="px-4 h-9 rounded-full flex items-center text-sm hover:bg-white transition">{n.label}</a>)}
     </nav>
-    <a href="/appointment" class="btn btn-primary text-sm">Book</a>
-  </div>
+    <div class="md:hidden">
+  <button data-hamburger aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"
+          class="inline-flex flex-col gap-1.5 p-2 rounded-lg border border-black/10 text-black">
+    <span class="block w-6 h-[2px] bg-current"></span>
+    <span class="block w-6 h-[2px] bg-current"></span>
+    <span class="block w-6 h-[2px] bg-current"></span>
+  </button>
+</div>
+</div>
+<nav id="site-nav" class="md:hidden hidden">
+    <div class="container py-2">
+      <div class="flex flex-col gap-1 bg-black/[.04] rounded-xl p-2">
+        {nav.map((n) => (
+          <a href={n.href} class="px-4 h-11 rounded-lg inline-flex items-center text-sm hover:bg-white/10 transition">{n.label}</a>
+        ))}
+      </div>
+    </div>
+  </nav>
+  <script is:inline>
+    (() => {
+      function init(){
+        const btn = document.querySelector('[data-hamburger]');
+        const panel = document.getElementById('site-nav');
+        if(!btn || !panel) return;
+        btn.addEventListener('click', () => {
+          const willOpen = panel.classList.contains('hidden');
+          btn.setAttribute('aria-expanded', String(willOpen));
+          panel.classList.toggle('hidden');
+        });
+      }
+      if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+    })();
+  </script>
 </header>
