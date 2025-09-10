@@ -179,16 +179,16 @@ a { @apply underline-offset-2; }
 /* Separator for light backgrounds (black tint) */
 .sep-x-dark { height: 1px; background: linear-gradient(90deg, transparent, rgba(0,0,0,.14), transparent); }
 
-/* Mobile hamburger (keeps original aesthetics) */
+/* Hamburger + mobile panel (inline-fix) */
+/* Hamburger + mobile panel (inline-fix) */
 .hamburger{display:inline-flex;flex-direction:column;gap:5px;padding:.5rem;border:1px solid rgba(0,0,0,.06);border-radius:.75rem;background:transparent;cursor:pointer}
 .hamburger-line{width:22px;height:2px;background:#111;display:block;transition:transform .2s ease,opacity .2s ease}
 html.nav-open .hamburger .hamburger-line:nth-child(1){transform:translateY(7px) rotate(45deg)}
 html.nav-open .hamburger .hamburger-line:nth-child(2){opacity:0}
 html.nav-open .hamburger .hamburger-line:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-/* Mobile nav panel (collapsible) */
 .mobile-nav{transition:max-height .25s ease,opacity .2s ease,visibility .2s ease;overflow:hidden;max-height:0;opacity:0;visibility:hidden}
-.mobile-nav.open{max-height:520px;opacity:1;visibility:visible}
+.mobile-nav.open{max-height:480px;opacity:1;visibility:visible}
 @media(min-width:768px){
   .hamburger{display:none}
   .mobile-nav{max-height:none;opacity:1;visibility:visible;overflow:visible;display:none}
