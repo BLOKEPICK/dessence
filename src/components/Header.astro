@@ -14,38 +14,5 @@ const nav = [
     </a>
     <nav class="hidden md:flex items-center gap-2 bg-black/[.04] rounded-full p-1">
       {nav.map((n) => <a href={n.href} class="px-4 h-9 rounded-full flex items-center text-sm hover:bg-white transition">{n.label}</a>)}
-    </nav>
-    <a href="/appointment" class="btn btn-primary text-sm">Book</a>
-  </div>
-<div class="md:hidden">
-  <button data-hamburger aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"
-          class="inline-flex flex-col gap-1.5 p-2 rounded-lg border border-black/10 text-black">
-    <span class="hamburger-line"></span>
-    <span class="hamburger-line"></span>
-    <span class="hamburger-line"></span>
-  </button>
-</div>
-<script is:inline>
-(() => {
-  function init(){
-    const btn = document.querySelector('[data-hamburger]');
-    const panel = document.getElementById('site-nav');
-    if(!btn || !panel) return;
-    const toggle = () => {
-      const willOpen = panel.classList.contains('hidden');
-      btn.setAttribute('aria-expanded', String(willOpen));
-      btn.classList.toggle('is-open', willOpen);
-      panel.classList.toggle('hidden');
-    };
-    btn.addEventListener('click', toggle);
-  }
-  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
-})();
-</script>
-<style>
-  .hamburger-line{width:24px;height:2px;background:currentColor;display:block;transition:transform .2s ease, opacity .2s ease}
-  .hamburger.is-open .hamburger-line:nth-child(1){transform:translateY(6px) rotate(45deg)}
-  .hamburger.is-open .hamburger-line:nth-child(2){opacity:0}
-  .hamburger.is-open .hamburger-line:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
-</style>
+    </nav> </div>
 </header>
