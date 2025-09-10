@@ -6,15 +6,22 @@ const nav = [
   { href: '/about', label: 'About' },
 ];
 ---
-<header class="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-black/[.06]">
+\1
+<div class="nav-wrap">
+  <button class="hamburger" data-hamburger aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+</div>
+<script src="@/components/nav-hamburger.client.js" type="module"></script>
+
   <div class="container h-16 flex items-center justify-between">
     <a href="/" class="flex items-center gap-2 font-semibold tracking-tight">
       <img src="/favicon.svg" alt="D‑Essence Wellness" class="w-8 h-8 rounded-xl" />
       <span class="text-[15px]">D‑Essence Wellness</span>
     </a>
-    <nav class="hidden md:flex items-center gap-2 bg-black/[.04] rounded-full p-1">
+    <nav id="site-nav" class="hidden md:flex items-center gap-2 bg-black/[.04] rounded-full p-1">
       {nav.map((n) => <a href={n.href} class="px-4 h-9 rounded-full flex items-center text-sm hover:bg-white transition">{n.label}</a>)}
-    </nav>
-    <a href="/appointment" class="btn btn-primary text-sm">Book</a>
-  </div>
+    </nav> </div>
 </header>
