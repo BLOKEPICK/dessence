@@ -52,7 +52,7 @@ a { @apply underline-offset-2; }
 .container-wide { max-width: 110rem; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
 
 /* Before/After placeholder tiles */
-.ba-tile { border-radius: 1.5rem; border: 1px solid rgba(0,0,0,.12); overflow: hidden; background-image: linear-gradient(135deg,#e5e7eb,#f3f4f6); aspect-ratio: 4/3; position: relative; }
+@media(min-width:1024px){}
 .ba-tile::after { content: "Before"; position: absolute; top: .5rem; left: .75rem; font-size: .75rem; color: #374151; }
 .ba-tile.after::after { content: "After"; }
 
@@ -178,3 +178,71 @@ a { @apply underline-offset-2; }
 
 /* Separator for light backgrounds (black tint) */
 .sep-x-dark { height: 1px; background: linear-gradient(90deg, transparent, rgba(0,0,0,.14), transparent); }
+
+/* Utility for yellow stars */
+.stars{color:#FFD700 !important;letter-spacing:2px}
+
+.service-pill{position:absolute;top:.75rem;left:.75rem;background:rgba(0,0,0,.8);backdrop-filter:saturate(120%) blur(4px);color:#fff;padding:.25rem .6rem;border-radius:9999px;font-size:.75rem;font-weight:500}
+
+.ba-tag{position:absolute;bottom:.5rem;left:.5rem;background:rgba(255,255,255,.92);color:#111;padding:.15rem .45rem;border-radius:.5rem;font-size:.7rem;font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+
+.result-card{transition:transform .2s ease,box-shadow .2s ease}.result-card:hover{transform:translateY(-4px);box-shadow:0 6px 12px rgba(0,0,0,.15)}
+
+.modal-card{max-width:min(960px,95vw);padding:1rem 1rem 1.25rem;border:0;border-radius:1rem;background:#fff;color:#111}
+dialog[data-results]::backdrop{background:rgba(0,0,0,.6)}
+.modal-head{display:flex;align-items:center;justify-content:space-between;gap:.75rem;margin-bottom:.75rem}
+.modal-title{font-weight:600}
+.modal-close{background:#111;color:#fff;border:0;border-radius:.5rem;padding:.25rem .5rem;cursor:pointer}
+.btn-chip{background:rgba(17,17,17,.85);color:#fff;border:1px solid rgba(255,255,255,.15);border-radius:9999px;padding:.25rem .6rem;font-size:.75rem}
+
+.ba-chip{display:inline-block;text-align:center;padding:.6rem 1rem;border:1px solid rgba(0,0,0,.12);border-radius:9999px;background:#fff}
+
+.u-underline{text-decoration:underline;text-underline-offset:4px}
+
+.ba-midlabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+.ba-midlabel::before,
+.ba-midlabel::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  margin: 0 0.75rem;
+}
+
+
+.section-line {
+  width: 3rem;
+  height: 3px;
+  margin: 0.75rem auto 0;
+  background: #ffffff;
+  border-radius: 9999px;
+}
+
+/* Before & After tiles — square large */
+.ba-tile {
+  position: relative;
+  background: #111;
+  border-radius: 1rem;
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* square */
+  max-width: 600px;      /* big on desktop */
+  margin: 0 auto;        /* center each tile */
+}
+@media (min-width: 1280px) {
+  .ba-tile { max-width: 700px; }  /* even larger on very wide screens */
+}
+.ba-tile > img,
+.ba-tile > picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
