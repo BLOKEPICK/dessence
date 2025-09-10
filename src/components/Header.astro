@@ -15,18 +15,17 @@ const nav = [
     <nav class="hidden md:flex items-center gap-2 bg-black/[.04] rounded-full p-1">
       {nav.map((n) => <a href={n.href} class="px-4 h-9 rounded-full flex items-center text-sm hover:bg-white transition">{n.label}</a>)}
     </nav>
-    <div class="md:hidden">
-      <button data-hamburger aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"
-              class="inline-flex flex-col gap-1.5 p-2 rounded-lg border border-black/10 text-black">
-        <span class="block w-6 h-[2px] bg-current"></span>
-        <span class="block w-6 h-[2px] bg-current"></span>
-        <span class="block w-6 h-[2px] bg-current"></span>
+    <div class="sm:hidden flex justify-end">
+      <button data-hamburger class="hamburger z-50 text-white p-2 rounded-lg border border-white/10" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
       </button>
-    </div></div>
-<nav id="site-nav" class="md:hidden hidden">
+    </div> </div>
+<nav id="site-nav" class="hidden sm:hidden">
           <div class="container py-2">
             <div class="flex flex-col gap-1 bg-black/[.04] rounded-xl p-2">
-              {nav.map((n) => <a href={n.href} class="px-4 h-11 rounded-lg inline-flex items-center text-sm hover:bg-black/5 transition">{n.label}</a>)}
+              {nav.map((n) => <a href={n.href} class="px-4 h-11 rounded-lg inline-flex items-center text-sm hover:bg-white/10 transition">{n.label}</a>)}
             </div>
           </div>
         </nav>
@@ -37,9 +36,9 @@ const nav = [
     const panel = document.getElementById('site-nav');
     if(!btn || !panel) return;
     const toggle = () => {
-      const willOpen = panel.classList.contains('hidden');
-      btn.setAttribute('aria-expanded', String(willOpen));
-      btn.classList.toggle('is-open', willOpen);
+      const isHidden = panel.classList.contains('hidden');
+      btn.setAttribute('aria-expanded', String(isHidden));
+      btn.classList.toggle('is-open', isHidden);
       panel.classList.toggle('hidden');
     };
     btn.addEventListener('click', toggle);
@@ -48,9 +47,10 @@ const nav = [
 })();
 </script>
 <style>
-  .hamburger-line{width:24px;height:2px;background:currentColor;display:block;transition:transform .2s ease, opacity .2s ease}
-  .hamburger.is-open .hamburger-line:nth-child(1){transform:translateY(6px) rotate(45deg)}
-  .hamburger.is-open .hamburger-line:nth-child(2){opacity:0}
-  .hamburger.is-open .hamburger-line:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  .hamburger { display:inline-flex; flex-direction:column; gap:6px; padding:.5rem; }
+  .hamburger-line { width:24px; height:2px; background: currentColor; display:block; transition: transform .2s ease, opacity .2s ease; }
+  .hamburger.is-open .hamburger-line:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .hamburger.is-open .hamburger-line:nth-child(2) { opacity: 0; }
+  .hamburger.is-open .hamburger-line:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 </style>
 </header>
