@@ -14,16 +14,25 @@ const nav = [
     </a>
     <nav class="hidden md:flex items-center gap-2 bg-black/[.04] rounded-full p-1">
       {nav.map((n) => <a href={n.href} class="px-4 h-9 rounded-full flex items-center text-sm hover:bg-white transition">{n.label}</a>)}
-    </nav> </div>
-<nav id="site-nav" class="hidden sm:hidden fixed inset-x-0 top-16 z-[60] bg-neutral-900/95 text-white backdrop-blur border-t border-white/10">
+    </nav>
+    <button data-hamburger aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"
+            class="md:hidden inline-flex flex-col gap-1.5 p-2 rounded-lg border border-black/10 text-black">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button></div>
+</header>
+
+<nav id="site-nav" class="hidden md:hidden fixed inset-x-0 top-16 z-[60] bg-white/95 text-black backdrop-blur border-t border-black/10 shadow-lg">
   <div class="container py-3">
     <div class="flex flex-col gap-1">
       {nav.map((n) => (
-        <a href={n.href} class="px-4 h-12 rounded-lg inline-flex items-center text-white hover:bg-white/10 transition">{n.label}</a>
+        <a href={n.href} class="px-4 h-12 rounded-lg inline-flex items-center text-black hover:bg-black/5 transition">{n.label}</a>
       ))}
     </div>
   </div>
 </nav>
+
 <script is:inline>
 (() => {
   function init(){
@@ -37,15 +46,23 @@ const nav = [
       panel.classList.toggle('hidden');
     };
     btn.addEventListener('click', toggle);
+    // Close on link click
+    panel.addEventListener('click', (e) => {
+      const a = e.target.closest('a');
+      if (a) {
+        panel.classList.add('hidden');
+        btn.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 </script>
+
 <style>
-  .hamburger { display:inline-flex; flex-direction:column; gap:6px; padding:.5rem; }
-  .hamburger-line { width:24px; height:2px; background: currentColor; display:block; transition: transform .2s ease, opacity .2s ease; }
-  .hamburger.is-open .hamburger-line:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-  .hamburger.is-open .hamburger-line:nth-child(2) { opacity: 0; }
-  .hamburger.is-open .hamburger-line:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  .hamburger-line{width:24px;height:2px;background: currentColor;display:block;transition: transform .2s ease, opacity .2s ease;}
+  .hamburger.is-open .hamburger-line:nth-child(1){transform: translateY(8px) rotate(45deg);}
+  .hamburger.is-open .hamburger-line:nth-child(2){opacity: 0;}
+  .hamburger.is-open .hamburger-line:nth-child(3){transform: translateY(-8px) rotate(-45deg);}
 </style>
-</header>
