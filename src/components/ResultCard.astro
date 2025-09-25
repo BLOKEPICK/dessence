@@ -1,5 +1,6 @@
 ---
 export interface Props {
+  id?: string;
   title: string;
   service: string;
   before: string;
@@ -7,12 +8,22 @@ export interface Props {
   date?: string;
   caption?: string;
 }
-const { title, service, before, after, date = '', caption = '' } = Astro.props as Props;
-const id = `result-${title.replace(/\s+/g,'-').toLowerCase()}`;
+
+const { id, title, service, before, after, date = '', caption = '' } = Astro.props as Props;
+
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+    .trim();
+
+const dialogId = `result-${slugify(id ?? title) || 'item'}`;
 ---
 <figure class="result-card group overflow-hidden rounded-2xl shadow-sm bg-white">
   <div class="relative">
-    <button class="absolute right-3 top-3 z-10 btn-chip" data-open={id} aria-label={`Open before & after for ${service}`}>View</button>
+    <button class="absolute right-3 top-3 z-10 btn-chip" data-open={dialogId} aria-label={`Open before & after for ${service}`}>View</button>
     <div class="grid grid-cols-2">
       <div class="relative">
         <img src={before} alt={`Before — ${service}`} loading="lazy" decoding="async" class="w-full h-full object-cover" />
@@ -31,7 +42,7 @@ const id = `result-${title.replace(/\s+/g,'-').toLowerCase()}`;
     {caption && <div class="text-xs text-neutral-600 mt-1">{caption}</div>}
   </figcaption>
 
-  <dialog id={id} data-results>
+  <dialog id={dialogId} data-results>
     <div class="modal-card">
       <div class="modal-head">
         <div class="modal-title">{service}: {title}</div>

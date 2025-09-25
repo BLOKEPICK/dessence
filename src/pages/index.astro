@@ -29,13 +29,24 @@ const icons = {
 };
 
 const serviceMap = Object.fromEntries(services.map((s) => [s.slug, s.data.title]));
+
+const parseDate = (value?: string) => {
+  if (!value) return 0;
+  const timestamp = Date.parse(value);
+  return Number.isNaN(timestamp) ? 0 : timestamp;
+};
+
 const featuredResults = results
-  .filter((r) => r.data.featured)
+  .filter((r) => r.data.featured && r.data.consent !== false)
+  .sort((a, b) => parseDate(b.data.date) - parseDate(a.data.date))
   .map((r) => ({
+    id: r.id,
     title: r.data.title,
     service: serviceMap[r.data.serviceSlug] ?? 'Featured result',
     before: r.data.imageBefore,
     after: r.data.imageAfter,
+    date: r.data.date,
+    caption: r.data.notes,
   }));
 
 
