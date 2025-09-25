@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import Section from '@/components/Section.astro';
 import ServiceCard from '@/components/ServiceCard.astro';
 import { getCollection } from 'astro:content';
 const entries = await getCollection('services');
@@ -13,21 +12,16 @@ const icons = {
   'aerolase':'laser-beam',
   'chemical-peels':'peel',
   'filler-dissolving':'dissolve',
-  'skinvive':'glow-drop',
-  'smooth-pdo-threads':'pdo',
-  'teeth-whitening':'tooth',
-  'skincare':'bottle',
+  'vitamin-injections':'vial',
+  'teeth-whitening':'sparkle',
   'facials':'mask',
-  'waxing':'wax-pot',
-  'spider-vein-treatment':'leg-vein',
-  'vitamin-injections':'vial-plus',
-  'nefertiti-neck':'jawline',
-  'specialty-treatments':'med-star'
+  'waxing':'drop',
+  'specialty-treatments':'star'
 };
 
 const seo = {
-  title: 'Aesthetic & Wellness Treatments | D‑Essence Wellness',
-  description: 'Neurotoxins, Juvederm, PRP, Skinvive, PDO Threads, Microneedling, Aerolase, Chemical Peels, Facials, Waxing, and more.',
+  title: 'Services | D‑Essence Wellness',
+  description: 'A structured approach to skin health and refined aesthetics. Explore our core services.',
   canonical: '/services',
   type: 'website',
   jsonLd: []
@@ -43,8 +37,19 @@ const seo = {
         </div>
         <a href="/appointment" class="btn btn-primary">Book</a>
       </div>
+
       <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {entries.map((entry) => ((e => <ServiceCard href={`/services/${e.slug}`} title={e.data.title} summary={e.data.summary} icon={icons[e.slug] ?? 'star'} />)}
+        {entries
+          .sort((a,b) => a.data.title.localeCompare(b.data.title))
+          .map((e) => (
+            <ServiceCard
+              href={`/services/${e.slug}`}
+              title={e.data.title}
+              summary={e.data.summary}
+              icon={icons[e.slug] ?? 'star'}
+              img={e.data.ogImage}
+            />
+          ))}
       </div>
     </div>
   </section>
