@@ -44,7 +44,7 @@ const seo = {
         <a href="/appointment" class="btn btn-primary">Book</a>
       </div>
       <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {entries.map(e => <ServiceCard href={`/services/${e.slug}`} title={e.data.title} summary={e.data.summary} icon={icons[e.slug] ?? 'star'} />)}
+        {entries.map((entry) => ((e => <ServiceCard href={`/services/${e.slug}`} title={e.data.title} summary={e.data.summary} icon={icons[e.slug] ?? 'star'} />)}
       </div>
     </div>
   </section>
