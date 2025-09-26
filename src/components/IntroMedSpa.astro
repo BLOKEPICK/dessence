@@ -1,0 +1,45 @@
+---
+const imageSrc = "/studio.webp"; // placed in /public
+---
+<section class="section">
+  <div class="container grid md:grid-cols-2 gap-8 items-center">
+    <div class="order-first">
+      <img src={imageSrc} alt="D‑Essence Wellness treatment room" width="1024" height="576"
+           class="rounded-3xl shadow-xl" loading="lazy" decoding="async" />
+    </div>
+    <div class="order-last">
+      <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">Med Spa in New Windsor, NY</h2>
+      <h3 class="mt-2 text-lg sm:text-xl text-black/70">Reflect Your Best Self with Exceptional Medical Aesthetics</h3>
+      <p class="mt-4 text-black/70 leading-relaxed">
+        At D‑Essence Wellness, we believe true beauty begins with confidence. Our medical aesthetic center at
+        <strong>871 Blooming Grove Turnpike Suite 102, New Windsor, NY 12553</strong> offers a welcoming and
+        professional environment designed to enhance your natural features and care for your skin with the highest standards.
+      </p>
+      <p class="mt-3 text-black/70 leading-relaxed">
+        Our non‑surgical, minimally invasive treatments combine advanced technology and personalized protocols to deliver safe, natural results.
+        From aesthetic injectables and full‑face rejuvenation to peels, regenerative therapies, and advanced skin care, we focus on your overall well‑being and transformative experiences.
+      </p>
+      <ul class="mt-5 grid sm:grid-cols-2 gap-2 text-sm">
+        <li class="flex items-start gap-2 p-3 rounded-xl bg-black/[.03]">
+          <span class="mt-1 inline-block w-2 h-2 rounded-full bg-black/60"></span>
+          <span>Advanced injectables and aesthetic treatments</span>
+        </li>
+        <li class="flex items-start gap-2 p-3 rounded-xl bg-black/[.03]">
+          <span class="mt-1 inline-block w-2 h-2 rounded-full bg-black/60"></span>
+          <span>Full‑face rejuvenation and regenerative medicine</span>
+        </li>
+        <li class="flex items-start gap-2 p-3 rounded-xl bg-black/[.03]">
+          <span class="mt-1 inline-block w-2 h-2 rounded-full bg-black/60"></span>
+          <span>Laser and innovative skin‑care technologies</span>
+        </li>
+        <li class="flex items-start gap-2 p-3 rounded-xl bg-black/[.03]">
+          <span class="mt-1 inline-block w-2 h-2 rounded-full bg-black/60"></span>
+          <span>Personalized experiences with certified professionals</span>
+        </li>
+      </ul>
+      <div class="mt-6">
+        <a href="/appointment" class="btn btn-primary">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>

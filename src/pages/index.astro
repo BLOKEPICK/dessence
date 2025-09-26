@@ -1,4 +1,5 @@
----
+---import IntroMedSpa from '@/components/IntroMedSpa.astro';
+
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Section from '@/components/Section.astro';
 import ServiceCard from '@/components/ServiceCard.astro';
@@ -39,73 +40,7 @@ const seo = {
   
   
   <!-- Hero (New Split) -->
-  <section class="hero-split">
-    <div class="container pt-24 pb-16">
-      <div class="grid lg:grid-cols-12 gap-10 items-center">
-        <!-- Left copy -->
-        <div class="lg:col-span-7">
-          <div class="text-[12px] inline-flex items-center gap-2 px-3 py-1 border border-white/15 rounded-full mb-4">
-            <span>Medical Aesthetics</span><span class="opacity-60">•</span><span>New Windsor, NY</span>
-          </div>
-          <h1 class="text-white text-4xl sm:text-6xl font-semibold leading-[1.05] tracking-tight">
-            Understated beauty,<br class="hidden sm:block"/> clinical precision.
-          </h1>
-          <p class="muted mt-4 max-w-xl">
-            Tailored treatments that honor your features. Subtle, modern, and guided by evidence.
-          </p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="/appointment" class="btn-neo">Book Consultation</a>
-            <a href="/services" class="btn-wire">See all services</a>
-          </div>
-          <div class="kpis">
-            <div class="kpi"><div class="v stars" aria-label="5 out of 5 stars" role="img" class="stars">★★★★★</div><div class="l">Client feedback</div></div>
-            <div class="kpi"><div class="v">Evidence‑led</div><div class="l">Protocols</div></div>
-            <div class="kpi"><div class="v">Subtle</div><div class="l">Results</div></div>
-          </div>
-        </div>
-
-        <!-- Right bento tiles with icons -->
-        <div class="lg:col-span-5">
-          <div class="hero-bento">
-            <div class="tile">
-              <div class="label">Neurotoxins</div>
-              <p class="mt-2 text-white/90">Smooth dynamic lines while keeping expression.</p>
-            </div>
-            <div class="tile">
-              <div class="label">Juvederm Fillers</div>
-              <p class="mt-2 text-white/90">Restore volume & contour with restraint.</p>
-            </div>
-            <div class="tile">
-              <div class="label">Microneedling</div>
-              <p class="mt-2 text-white/90">Texture, pores, scars—collagen induction.</p>
-            </div>
-            <div class="tile">
-              <div class="label">Aerolase</div>
-              <p class="mt-2 text-white/90">Gentle laser for tone, redness & glow.</p>
-            </div>
-          </div>
-          <div class="mt-4 sep-x"></div>
-          <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-            <div class="text-white/80">By appointment only</div>
-            <div class="text-right"><a href="tel:+17163038963" class="underline">Call (716) 303‑8963</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-    <Section id="services" class="section-alt text-center" title="Featured Services">
-    <div class="sep-x-dark"></div>
-    <p class="text-muted max-w-2xl mx-auto mt-2 text-center">Explore our most requested treatments.</p>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {services.slice(0,6).map(s => <ServiceCard href={`/services/${s.slug}`} title={s.data.title} summary={s.data.summary} icon={icons[s.slug] ?? 'star'} />)}
-    </div>
-  
-    <div class="mt-8 text-center"><a href="/services" class="btn-neo" aria-label="View all services">View all services</a></div>
-</Section>
+  <IntroMedSpa />
 
   
   
