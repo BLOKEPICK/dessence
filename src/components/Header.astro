@@ -8,21 +8,18 @@ const nav = [
 ---
 <header class="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-black/[.06]">
   <div class="container h-16 grid grid-cols-3 items-center">
-    <div class="justify-self-start col-start-1">
-<a href="/" class="flex items-center" aria-label="D‑Essence Wellness — Home">
+    <a href="/" class="flex items-center" aria-label="D‑Essence Wellness — Home">
       <img src="/logo.webp" alt="D‑Essence Wellness Logo" class="h-10 w-auto" loading="eager" decoding="async" />
     </a>
-    </div>
     <nav class="hidden md:flex items-center gap-2 bg-black/[.04] rounded-full p-1 justify-self-center col-start-2">
       <a href="/" class="px-4 h-9 rounded-full flex items-center text-sm hover:bg-black/10 transition">Home</a>
-
       <div class="relative group">
         <a href="/services" class="px-4 h-9 rounded-full flex items-center text-sm hover:bg-black/10 transition">
           Services
         </a>
-        <!-- Mega menu -->
         <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition
-                    absolute left-1/2 -translate-x-1/2 top-full  mt-0  w-[640px]  bg-white border border-black/10 rounded-2xl shadow-xl p-4 pointer-events-none group-hover:pointer-events-auto  before:content-[\'\'] before:absolute before:left-0 before:right-0 before:-top-3 before:h-3 ">
+                    absolute left-1/2 -translate-x-1/2 top-full mt-0 w-[640px] bg-white border border-black/10 rounded-2xl shadow-xl p-4
+                    pointer-events-none group-hover:pointer-events-auto before:content-[''] before:absolute before:left-0 before:right-0 before:-top-3 before:h-3">
           <div class="grid grid-cols-2 gap-2">
             <a href="/services/facials" class="flex items-start gap-3 p-3 rounded-xl hover:bg-black/10 hover:ring-2 hover:ring-black/10 transition">
               <div class="w-9 h-9 rounded-xl bg-black text-white flex items-center justify-center text-xs">A</div>
@@ -59,7 +56,6 @@ const nav = [
           </div>
         </div>
       </div>
-
       <a href="/faq" class="px-4 h-9 rounded-full flex items-center text-sm hover:bg-black/10 transition">FAQ</a>
       <a href="/about" class="px-4 h-9 rounded-full flex items-center text-sm hover:bg-black/10 transition">About</a>
     </nav>
