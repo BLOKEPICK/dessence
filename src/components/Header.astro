@@ -14,48 +14,49 @@ const nav = [
     <nav class="hidden md:flex items-center gap-2 justify-self-center col-start-2">
   <a href="/" class="px-4 h-9 rounded-full flex items-center text-sm hover:bg-black/10 transition">Home</a>
 
-  <div class="relative group">
-    <a href="/services" class="px-4 h-9 rounded-full flex items-center text-sm hover:bg-black/10 transition">Services</a>
-    <!-- Dropdown -->
-    <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition
-                absolute left-1/2 -translate-x-1/2 top-full mt-0 w-[680px] bg-white border border-black/10 rounded-2xl shadow-2xl p-4
-                pointer-events-none group-hover:pointer-events-auto
-                before:content-[''] before:absolute before:left-0 before:right-0 before:-top-3 before:h-3">
-      <div class="grid grid-cols-2 gap-2">
-        <a href="/services/facials" class="flex items-start gap-3 p-3 rounded-xl hover:bg-black/10 hover:ring-2 hover:ring-black/10 transition">
-          <div class="w-9 h-9 rounded-xl bg-black text-white flex items-center justify-center text-xs">A</div>
-          <div>
-            <div class="text-sm font-semibold leading-tight">Facials</div>
-            <div class="text-xs text-black/60">Deep cleansing & hydration</div>
+  
+        <div class="relative group">
+          <a href="/services" class="px-4 h-9 rounded-full flex items-center text-sm hover:bg-black/10 transition">Services</a>
+          <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition
+                      absolute left-1/2 -translate-x-1/2 top-full mt-0 w-[680px] bg-white border border-black/10 rounded-2xl shadow-2xl p-4
+                      pointer-events-none group-hover:pointer-events-auto before:content-[''] before:absolute before:left-0 before:right-0 before:-top-3 before:h-3">
+            <div class="grid grid-cols-2 gap-2">
+              <a href="/services/neurotoxins" class="flex items-start gap-3 p-3 rounded-xl hover:bg-black/10 hover:ring-2 hover:ring-black/10 transition">
+                <div class="w-9 h-9 rounded-xl bg-neutral-900 text-white flex items-center justify-center text-[11px]">NTX</div>
+                <div>
+                  <div class="text-sm font-semibold leading-tight">Neurotoxins</div>
+                  <div class="text-xs text-black/60">Botox / Dysport</div>
+                </div>
+              </a>
+              <a href="/services/juvederm-fillers" class="flex items-start gap-3 p-3 rounded-xl hover:bg-black/10 hover:ring-2 hover:ring-black/10 transition">
+                <div class="w-9 h-9 rounded-xl bg-neutral-900 text-white flex items-center justify-center text-[11px]">JUV</div>
+                <div>
+                  <div class="text-sm font-semibold leading-tight">Juvederm Fillers</div>
+                  <div class="text-xs text-black/60">HA fillers & contour</div>
+                </div>
+              </a>
+              <a href="/services/chemical-peels" class="flex items-start gap-3 p-3 rounded-xl hover:bg-black/10 hover:ring-2 hover:ring-black/10 transition">
+                <div class="w-9 h-9 rounded-xl bg-neutral-900 text-white flex items-center justify-center text-[11px]">PEEL</div>
+                <div>
+                  <div class="text-sm font-semibold leading-tight">Chemical Peels</div>
+                  <div class="text-xs text-black/60">Clarity & texture</div>
+                </div>
+              </a>
+              <a href="/services/microneedling" class="flex items-start gap-3 p-3 rounded-xl hover:bg-black/10 hover:ring-2 hover:ring-black/10 transition">
+                <div class="w-9 h-9 rounded-xl bg-neutral-900 text-white flex items-center justify-center text-[11px]">MICRO</div>
+                <div>
+                  <div class="text-sm font-semibold leading-tight">Microneedling</div>
+                  <div class="text-xs text-black/60">Collagen & smoothness</div>
+                </div>
+              </a>
+            </div>
+            <div class="mt-3 flex items-center justify-between px-1">
+              <div class="text-xs text-black/50">Most‑requested treatments right now.</div>
+              <a href="/services" class="text-xs font-medium underline hover:opacity-80">View all services →</a>
+            </div>
           </div>
-        </a>
-        <a href="/services/laser-hair-removal" class="flex items-start gap-3 p-3 rounded-xl hover:bg-black/10 hover:ring-2 hover:ring-black/10 transition">
-          <div class="w-9 h-9 rounded-xl bg-black text-white flex items-center justify-center text-xs">B</div>
-          <div>
-            <div class="text-sm font-semibold leading-tight">Laser Hair Removal</div>
-            <div class="text-xs text-black/60">Long‑term hair reduction</div>
-          </div>
-        </a>
-        <a href="/services/botox" class="flex items-start gap-3 p-3 rounded-xl hover:bg-black/10 hover:ring-2 hover:ring-black/10 transition">
-          <div class="w-9 h-9 rounded-xl bg-black text-white flex items-center justify-center text-xs">C</div>
-          <div>
-            <div class="text-sm font-semibold leading-tight">Botox</div>
-            <div class="text-xs text-black/60">Smooth fine lines</div>
-          </div>
-        </a>
-        <a href="/services/iv-therapy" class="flex items-start gap-3 p-3 rounded-xl hover:bg-black/10 hover:ring-2 hover:ring-black/10 transition">
-          <div class="w-9 h-9 rounded-xl bg-black text-white flex items-center justify-center text-xs">D</div>
-          <div>
-            <div class="text-sm font-semibold leading-tight">IV Therapy</div>
-            <div class="text-xs text-black/60">Hydration & wellness boost</div>
-          </div>
-        </a>
-      </div>
-      <div class="mt-3 flex items-center justify-between px-1">
-        <div class="text-xs text-black/50">Explore our medical‑grade treatments.</div>
-        <a href="/services" class="text-xs font-medium underline hover:opacity-80">View all services →</a>
-      </div>
-    </div>
+        </div>
+    
   </div>
 
   <a href="/faq" class="px-4 h-9 rounded-full flex items-center text-sm hover:bg-black/10 transition">FAQ</a>

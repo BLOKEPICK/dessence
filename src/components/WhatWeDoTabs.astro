@@ -1,50 +1,9 @@
 ---
 const items = [
-  {
-    id: "injectables",
-    label: "Injectables",
-    title: "Injectables & Contouring",
-    kicker: "Refined balance. Subtle enhancements.",
-    img: "/tab-injectables-720.webp",
-    desc: "Natural-looking results with conservative dosing and harmony-first planning. Ideal for softening lines while preserving expression.",
-    href: "/services/injectables"
-  },
-  {
-    id: "skin",
-    label: "Skin",
-    title: "Skin Health & Facials",
-    kicker: "Clinical facials. Lasting glow.",
-    img: "/tab-skin-720.webp",
-    desc: "Personalized protocols for hydration, tone, and comfort using evidence‑based techniques and pro‑grade skincare.",
-    href: "/services/skin"
-  },
-  {
-    id: "laser",
-    label: "Laser",
-    title: "Laser & Light Therapies",
-    kicker: "Texture, tone & hair‑reduction.",
-    img: "/tab-laser-720.webp",
-    desc: "Device‑assisted treatments to refine texture and even tone, with options for long‑term hair reduction.",
-    href: "/services/laser"
-  },
-  {
-    id: "resurfacing",
-    label: "Resurfacing",
-    title: "Peels & Resurfacing",
-    kicker: "Clarity and smoothness.",
-    img: "/tab-resurfacing-720.webp",
-    desc: "Chemical peels and resurfacing plans to renew dullness and improve clarity with controlled downtime.",
-    href: "/services/resurfacing"
-  },
-  {
-    id: "regenerative",
-    label: "Regenerative",
-    title: "Regenerative & Wellness",
-    kicker: "Quality, recovery, vitality.",
-    img: "/tab-regenerative-720.webp",
-    desc: "Support collagen, recovery, and overall skin quality with regenerative approaches and wellness support.",
-    href: "/services/regenerative"
-  }
+  { id: "neurotoxins", label: "Neurotoxins", title: "Neurotoxins (Botox/Dysport)", kicker: "Soften dynamic lines with minimal downtime.", img: "/tab-neurotoxins-720.webp", desc: "Natural-looking refinement using precise, conservative dosing for forehead lines, frown lines, and crow’s feet.", href: "/services/neurotoxins" },
+  { id: "juvederm", label: "Juvederm", title: "Juvederm Fillers", kicker: "Balance, contour, and hydration.", img: "/tab-juvederm-720.webp", desc: "Hyaluronic acid fillers to restore volume and contour with a harmony‑first approach that looks like you.", href: "/services/juvederm-fillers" },
+  { id: "peels", label: "Chemical Peels", title: "Chemical Peels", kicker: "Clarity and smoothness.", img: "/tab-peels-720.webp", desc: "Medical‑grade peels to refine texture, reduce dullness, and support even tone—with tailored downtime.", href: "/services/chemical-peels" },
+  { id: "microneedling", label: "Microneedling", title: "Microneedling", kicker: "Collagen support for texture and firmness.", img: "/tab-microneedling-720.webp", desc: "Collagen‑stimulating treatment for smoother texture and better tone; pairs well with targeted skincare.", href: "/services/microneedling" },
 ];
 ---
 <section class="relative py-20 overflow-hidden" style="background: radial-gradient(1100px 500px at 8% -12%, #F3F5F8 0%, transparent 60%), linear-gradient(180deg, #FFFFFF 0%, #F8FAFB 100%);">
@@ -109,7 +68,6 @@ const items = [
   <script>
     const tabs = Array.from(document.querySelectorAll('.tab[data-id]'));
     const panels = Array.from(document.querySelectorAll('.panel[id^="panel-"]'));
-
     function activate(id) {
       tabs.forEach(t => {
         const sel = t.getAttribute('data-id') === id;
@@ -120,7 +78,6 @@ const items = [
         p.classList.toggle('hidden', p.id !== 'panel-' + id);
       });
     }
-
     tabs.forEach(t => {
       t.addEventListener('click', () => activate(t.getAttribute('data-id')));
       t.addEventListener('mouseenter', () => {
