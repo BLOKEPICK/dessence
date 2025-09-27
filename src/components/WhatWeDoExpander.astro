@@ -13,24 +13,24 @@
 
     <!-- Horizontal Expander (desktop), stacked (mobile) -->
     <div class="mt-10">
-      <div class="expander hidden lg:flex gap-3 rounded-2xl bg-white ring-1 ring-black/10 p-3 overflow-hidden">
+      <div id="wwd-desktop" class="expander hidden lg:flex gap-3 rounded-2xl bg-white ring-1 ring-black/10 p-3 overflow-hidden">
 <a data-panel href="/services/injectables" class="group relative rounded-xl ring-1 ring-black/10 overflow-hidden flex items-end min-h-[18rem] bg-neutral-50">
   <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-  <div class="grid w-full gap-4 p-5 lg:grid-cols-2 items-end">
+  <div class="grid w-full gap-4 p-5 lg:grid-cols-2 items-start">
     <!-- LEFT: image above title -->
     <div>
-      <div class="overflow-hidden rounded-lg ring-1 ring-black/10 bg-neutral-100 h-28">
+      <div class="overflow-hidden rounded-lg ring-1 ring-black/10 bg-neutral-100 h-28 w-44 mx-auto">
         <picture>
           <source type="image/webp" srcset="/svc-injectables-320.webp 320w" sizes="320px" />
           <img src="/svc-injectables-320.webp" alt="Injectables preview" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" />
         </picture>
       </div>
-      <div class="mt-3 text-sm font-semibold text-neutral-900">Injectables & Contouring</div>
-      <div class="text-xs text-neutral-600 mt-1">Refined balance. Subtle enhancements.</div>
+      <div class="mt-3 text-sm font-semibold text-neutral-900 text-center whitespace-nowrap">Injectables & Contouring</div>
+      <div class="text-xs text-neutral-600 mt-1 text-center">Refined balance. Subtle enhancements.</div>
     </div>
     <!-- RIGHT: shows on hover (desktop) -->
-    <div class="hidden lg:block opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition">
-      <p class="text-xs text-neutral-700 leading-6">Natural-looking results with conservative dosing and harmony-first planning. Ideal for softening lines while preserving expression.</p>
+    <div class="hidden lg:flex opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition items-start justify-center">
+      <p class="text-xs text-neutral-700 leading-6 text-center max-w-[26ch]">Natural-looking results with conservative dosing and harmony-first planning. Ideal for softening lines while preserving expression.</p>
     </div>
   </div>
   <div class="absolute right-3 top-3 text-xs px-2 py-1 rounded-full bg-black/5 text-neutral-700">INJ</div>
@@ -38,21 +38,21 @@
 
 <a data-panel href="/services/skin" class="group relative rounded-xl ring-1 ring-black/10 overflow-hidden flex items-end min-h-[18rem] bg-neutral-50">
   <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-  <div class="grid w-full gap-4 p-5 lg:grid-cols-2 items-end">
+  <div class="grid w-full gap-4 p-5 lg:grid-cols-2 items-start">
     <!-- LEFT: image above title -->
     <div>
-      <div class="overflow-hidden rounded-lg ring-1 ring-black/10 bg-neutral-100 h-28">
+      <div class="overflow-hidden rounded-lg ring-1 ring-black/10 bg-neutral-100 h-28 w-44 mx-auto">
         <picture>
           <source type="image/webp" srcset="/svc-skin-320.webp 320w" sizes="320px" />
           <img src="/svc-skin-320.webp" alt="Skin health preview" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" />
         </picture>
       </div>
-      <div class="mt-3 text-sm font-semibold text-neutral-900">Skin Health & Facials</div>
-      <div class="text-xs text-neutral-600 mt-1">Clinical facials. Lasting glow.</div>
+      <div class="mt-3 text-sm font-semibold text-neutral-900 text-center whitespace-nowrap">Skin Health & Facials</div>
+      <div class="text-xs text-neutral-600 mt-1 text-center">Clinical facials. Lasting glow.</div>
     </div>
     <!-- RIGHT: shows on hover (desktop) -->
-    <div class="hidden lg:block opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition">
-      <p class="text-xs text-neutral-700 leading-6">Personalized protocols for hydration, tone, and comfort using evidence-based techniques and pro-grade skincare.</p>
+    <div class="hidden lg:flex opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition items-start justify-center">
+      <p class="text-xs text-neutral-700 leading-6 text-center max-w-[26ch]">Personalized protocols for hydration, tone, and comfort using evidence-based techniques and pro-grade skincare.</p>
     </div>
   </div>
   <div class="absolute right-3 top-3 text-xs px-2 py-1 rounded-full bg-black/5 text-neutral-700">SKN</div>
@@ -60,21 +60,21 @@
 
 <a data-panel href="/services/laser" class="group relative rounded-xl ring-1 ring-black/10 overflow-hidden flex items-end min-h-[18rem] bg-neutral-50">
   <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-  <div class="grid w-full gap-4 p-5 lg:grid-cols-2 items-end">
+  <div class="grid w-full gap-4 p-5 lg:grid-cols-2 items-start">
     <!-- LEFT: image above title -->
     <div>
-      <div class="overflow-hidden rounded-lg ring-1 ring-black/10 bg-neutral-100 h-28">
+      <div class="overflow-hidden rounded-lg ring-1 ring-black/10 bg-neutral-100 h-28 w-44 mx-auto">
         <picture>
           <source type="image/webp" srcset="/svc-laser-320.webp 320w" sizes="320px" />
           <img src="/svc-laser-320.webp" alt="Laser preview" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" />
         </picture>
       </div>
-      <div class="mt-3 text-sm font-semibold text-neutral-900">Laser & Light Therapies</div>
-      <div class="text-xs text-neutral-600 mt-1">Texture, tone & hair‑reduction.</div>
+      <div class="mt-3 text-sm font-semibold text-neutral-900 text-center whitespace-nowrap">Laser & Light Therapies</div>
+      <div class="text-xs text-neutral-600 mt-1 text-center">Texture, tone & hair‑reduction.</div>
     </div>
     <!-- RIGHT: shows on hover (desktop) -->
-    <div class="hidden lg:block opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition">
-      <p class="text-xs text-neutral-700 leading-6">Device-assisted treatments to refine texture and even tone, with options for long-term hair reduction.</p>
+    <div class="hidden lg:flex opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition items-start justify-center">
+      <p class="text-xs text-neutral-700 leading-6 text-center max-w-[26ch]">Device-assisted treatments to refine texture and even tone, with options for long-term hair reduction.</p>
     </div>
   </div>
   <div class="absolute right-3 top-3 text-xs px-2 py-1 rounded-full bg-black/5 text-neutral-700">LSR</div>
@@ -82,21 +82,21 @@
 
 <a data-panel href="/services/resurfacing" class="group relative rounded-xl ring-1 ring-black/10 overflow-hidden flex items-end min-h-[18rem] bg-neutral-50">
   <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-  <div class="grid w-full gap-4 p-5 lg:grid-cols-2 items-end">
+  <div class="grid w-full gap-4 p-5 lg:grid-cols-2 items-start">
     <!-- LEFT: image above title -->
     <div>
-      <div class="overflow-hidden rounded-lg ring-1 ring-black/10 bg-neutral-100 h-28">
+      <div class="overflow-hidden rounded-lg ring-1 ring-black/10 bg-neutral-100 h-28 w-44 mx-auto">
         <picture>
           <source type="image/webp" srcset="/svc-resurfacing-320.webp 320w" sizes="320px" />
           <img src="/svc-resurfacing-320.webp" alt="Resurfacing preview" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" />
         </picture>
       </div>
-      <div class="mt-3 text-sm font-semibold text-neutral-900">Peels & Resurfacing</div>
-      <div class="text-xs text-neutral-600 mt-1">Clarity and smoothness.</div>
+      <div class="mt-3 text-sm font-semibold text-neutral-900 text-center whitespace-nowrap">Peels & Resurfacing</div>
+      <div class="text-xs text-neutral-600 mt-1 text-center">Clarity and smoothness.</div>
     </div>
     <!-- RIGHT: shows on hover (desktop) -->
-    <div class="hidden lg:block opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition">
-      <p class="text-xs text-neutral-700 leading-6">Chemical peels and resurfacing plans to renew dullness and improve clarity with controlled downtime.</p>
+    <div class="hidden lg:flex opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition items-start justify-center">
+      <p class="text-xs text-neutral-700 leading-6 text-center max-w-[26ch]">Chemical peels and resurfacing plans to renew dullness and improve clarity with controlled downtime.</p>
     </div>
   </div>
   <div class="absolute right-3 top-3 text-xs px-2 py-1 rounded-full bg-black/5 text-neutral-700">RSF</div>
@@ -104,21 +104,21 @@
 
 <a data-panel href="/services/regenerative" class="group relative rounded-xl ring-1 ring-black/10 overflow-hidden flex items-end min-h-[18rem] bg-neutral-50">
   <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-  <div class="grid w-full gap-4 p-5 lg:grid-cols-2 items-end">
+  <div class="grid w-full gap-4 p-5 lg:grid-cols-2 items-start">
     <!-- LEFT: image above title -->
     <div>
-      <div class="overflow-hidden rounded-lg ring-1 ring-black/10 bg-neutral-100 h-28">
+      <div class="overflow-hidden rounded-lg ring-1 ring-black/10 bg-neutral-100 h-28 w-44 mx-auto">
         <picture>
           <source type="image/webp" srcset="/svc-regenerative-320.webp 320w" sizes="320px" />
           <img src="/svc-regenerative-320.webp" alt="Regenerative preview" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" />
         </picture>
       </div>
-      <div class="mt-3 text-sm font-semibold text-neutral-900">Regenerative & Wellness</div>
-      <div class="text-xs text-neutral-600 mt-1">Quality, recovery, vitality.</div>
+      <div class="mt-3 text-sm font-semibold text-neutral-900 text-center whitespace-nowrap">Regenerative & Wellness</div>
+      <div class="text-xs text-neutral-600 mt-1 text-center">Quality, recovery, vitality.</div>
     </div>
     <!-- RIGHT: shows on hover (desktop) -->
-    <div class="hidden lg:block opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition">
-      <p class="text-xs text-neutral-700 leading-6">Support collagen, recovery, and overall skin quality with regenerative approaches and wellness support.</p>
+    <div class="hidden lg:flex opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition items-start justify-center">
+      <p class="text-xs text-neutral-700 leading-6 text-center max-w-[26ch]">Support collagen, recovery, and overall skin quality with regenerative approaches and wellness support.</p>
     </div>
   </div>
   <div class="absolute right-3 top-3 text-xs px-2 py-1 rounded-full bg-black/5 text-neutral-700">RGN</div>
@@ -126,7 +126,7 @@
 </div>
           <div class="p-5">
             <div class="text-sm font-semibold text-neutral-900">Injectables & Contouring</div>
-            <div class="text-xs text-neutral-600 mt-1">Refined balance. Subtle enhancements.</div>
+            <div class="text-xs text-neutral-600 mt-1 text-center">Refined balance. Subtle enhancements.</div>
           </div>
           <div class="absolute right-3 top-3 text-xs px-2 py-1 rounded-full bg-black/5 text-neutral-700">INJ</div>
         </a>
@@ -135,7 +135,7 @@
           <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
           <div class="p-5">
             <div class="text-sm font-semibold text-neutral-900">Skin Health & Facials</div>
-            <div class="text-xs text-neutral-600 mt-1">Clinical facials. Lasting glow.</div>
+            <div class="text-xs text-neutral-600 mt-1 text-center">Clinical facials. Lasting glow.</div>
           </div>
           <div class="absolute right-3 top-3 text-xs px-2 py-1 rounded-full bg-black/5 text-neutral-700">SKN</div>
         </a>
@@ -144,7 +144,7 @@
           <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
           <div class="p-5">
             <div class="text-sm font-semibold text-neutral-900">Laser & Light Therapies</div>
-            <div class="text-xs text-neutral-600 mt-1">Texture, tone & hair‑reduction.</div>
+            <div class="text-xs text-neutral-600 mt-1 text-center">Texture, tone & hair‑reduction.</div>
           </div>
           <div class="absolute right-3 top-3 text-xs px-2 py-1 rounded-full bg-black/5 text-neutral-700">LSR</div>
         </a>
@@ -153,7 +153,7 @@
           <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
           <div class="p-5">
             <div class="text-sm font-semibold text-neutral-900">Peels & Resurfacing</div>
-            <div class="text-xs text-neutral-600 mt-1">Clarity and smoothness.</div>
+            <div class="text-xs text-neutral-600 mt-1 text-center">Clarity and smoothness.</div>
           </div>
           <div class="absolute right-3 top-3 text-xs px-2 py-1 rounded-full bg-black/5 text-neutral-700">RSF</div>
         </a>
@@ -162,20 +162,20 @@
           <div class="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
           <div class="p-5">
             <div class="text-sm font-semibold text-neutral-900">Regenerative & Wellness</div>
-            <div class="text-xs text-neutral-600 mt-1">Quality, recovery, vitality.</div>
+            <div class="text-xs text-neutral-600 mt-1 text-center">Quality, recovery, vitality.</div>
           </div>
           <div class="absolute right-3 top-3 text-xs px-2 py-1 rounded-full bg-black/5 text-neutral-700">RGN</div>
         </a>
       </div>
 
       <!-- Mobile: simple stacked cards -->
-      <div class="lg:hidden grid gap-3">
+      <div id="wwd-mobile" class="lg:hidden grid gap-3">
         <a href="/services/injectables" class="rounded-xl border border-black/10 bg-white p-5">
           <div class="flex items-start gap-3">
             <div class="h-9 w-9 rounded-lg bg-neutral-900 text-white flex items-center justify-center text-xs">INJ</div>
             <div class="min-w-0">
               <div class="text-sm font-semibold">Injectables & Contouring</div>
-              <div class="text-xs text-neutral-600 mt-1">Refined balance. Subtle enhancements.</div>
+              <div class="text-xs text-neutral-600 mt-1 text-center">Refined balance. Subtle enhancements.</div>
             </div>
           </div>
         </a>
@@ -184,7 +184,7 @@
             <div class="h-9 w-9 rounded-lg bg-neutral-900 text-white flex items-center justify-center text-xs">SKN</div>
             <div class="min-w-0">
               <div class="text-sm font-semibold">Skin Health & Facials</div>
-              <div class="text-xs text-neutral-600 mt-1">Clinical facials. Lasting glow.</div>
+              <div class="text-xs text-neutral-600 mt-1 text-center">Clinical facials. Lasting glow.</div>
             </div>
           </div>
         </a>
@@ -193,7 +193,7 @@
             <div class="h-9 w-9 rounded-lg bg-neutral-900 text-white flex items-center justify-center text-xs">LSR</div>
             <div class="min-w-0">
               <div class="text-sm font-semibold">Laser & Light Therapies</div>
-              <div class="text-xs text-neutral-600 mt-1">Texture, tone & hair‑reduction.</div>
+              <div class="text-xs text-neutral-600 mt-1 text-center">Texture, tone & hair‑reduction.</div>
             </div>
           </div>
         </a>
@@ -202,7 +202,7 @@
             <div class="h-9 w-9 rounded-lg bg-neutral-900 text-white flex items-center justify-center text-xs">RSF</div>
             <div class="min-w-0">
               <div class="text-sm font-semibold">Peels & Resurfacing</div>
-              <div class="text-xs text-neutral-600 mt-1">Clarity and smoothness.</div>
+              <div class="text-xs text-neutral-600 mt-1 text-center">Clarity and smoothness.</div>
             </div>
           </div>
         </a>
@@ -211,7 +211,7 @@
             <div class="h-9 w-9 rounded-lg bg-neutral-900 text-white flex items-center justify-center text-xs">RGN</div>
             <div class="min-w-0">
               <div class="text-sm font-semibold">Regenerative & Wellness</div>
-              <div class="text-xs text-neutral-600 mt-1">Quality, recovery, vitality.</div>
+              <div class="text-xs text-neutral-600 mt-1 text-center">Quality, recovery, vitality.</div>
             </div>
           </div>
         </a>
@@ -228,4 +228,17 @@
       .expander [data-panel]:hover { flex: 4 1 0%; }
     }
   </style>
+
+  <style>
+    /* Force exclusive layouts (avoid both showing on desktop) */
+    @media (max-width: 1023.98px) { #wwd-desktop { display: none !important; } }
+    @media (min-width: 1024px) { #wwd-mobile { display: none !important; } }
+    @media (min-width: 1024px) {
+      .expander { display:flex; }
+      .expander [data-panel] { flex: 1 1 0%; transition: flex 300ms ease; }
+      .expander:hover [data-panel] { flex: 1 1 0%; }
+      .expander [data-panel]:hover { flex: 4 1 0%; }
+    }
+  </style>
+
 </section>
