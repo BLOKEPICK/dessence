@@ -1,0 +1,169 @@
+---
+const items = [
+  {
+    id: "neurotoxins",
+    label: "Neurotoxins",
+    title: "Neurotoxins (Botox/Dysport)",
+    kicker: "Smooth dynamic lines. Keep your expression.",
+    desc: "Precise, conservative dosing to soften forehead lines, frown lines, and crow’s feet—prioritizing natural movement and balance.",
+    img: "/wwd-neurotoxins-960.webp",
+    href: "/services/neurotoxins",
+    bullets: [
+      "Minimal downtime; quick visits",
+      "Forehead, glabella, crow’s feet",
+      "Subtle, harmony‑first outcomes"
+    ]
+  },
+  {
+    id: "juvederm",
+    label: "Juvederm",
+    title: "Juvederm Fillers",
+    kicker: "Lift, contour, and hydrate—beautifully balanced.",
+    desc: "Hyaluronic acid fillers to refine contour and restore volume with soft, believable results tailored to your profile.",
+    img: "/wwd-juvederm-960.webp",
+    href: "/services/juvederm-fillers",
+    bullets: [
+      "Cheeks, lips, chin, jawline",
+      "Harmony‑driven facial balancing",
+      "Reversible HA formulations"
+    ]
+  },
+  {
+    id: "peels",
+    label: "Chemical Peels",
+    title: "Chemical Peels",
+    kicker: "Clarity and glow with guided downtime.",
+    desc: "Medical‑grade peels to smooth texture and even tone. We calibrate strength and frequency to match your schedule and goals.",
+    img: "/wwd-peels-960.webp",
+    href: "/services/chemical-peels",
+    bullets: [
+      "Texture, tone, and radiance",
+      "Tailored strengths & cycles",
+      "Pairs with microneedling/skincare"
+    ]
+  },
+  {
+    id: "microneedling",
+    label: "Microneedling",
+    title: "Microneedling",
+    kicker: "Support collagen for smoother texture.",
+    desc: "Controlled micro‑channels stimulate renewal for improved firmness and tone. Complements pro‑grade skincare for durable results.",
+    img: "/wwd-micro-960.webp",
+    href: "/services/microneedling",
+    bullets: [
+      "Texture and fine lines",
+      "Visible refinement over series",
+      "Comfort‑focused protocols"
+    ]
+  }
+];
+---
+<section class="relative py-20 overflow-hidden" style="background: radial-gradient(1200px 520px at 10% -12%, #F2F5F9 0%, transparent 60%), linear-gradient(180deg, #FFFFFF 0%, #F8FAFB 100%);">
+  <div class="container">
+    <header class="max-w-3xl">
+      <div class="text-xs font-medium tracking-[0.25em] text-neutral-600">WHAT WE DO</div>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-semibold tracking-tight">Services tailored to you — with safety, comfort, and natural results.</h2>
+      <p class="mt-4 text-[15px] leading-7 text-neutral-700">
+        Evidence‑based treatments designed around your goals and timeline. Explore our core categories below.
+      </p>
+    </header>
+
+    <div class="mt-10 grid md:grid-cols-5 gap-6">
+      <!-- Left rail: vertical tabs on md+, horizontal scroll on mobile -->
+      <div class="md:col-span-2">
+        <div class="flex md:block gap-2 overflow-x-auto no-scrollbar" role="tablist" aria-label="What we do">
+          {items.map((it, idx) => (
+            <button
+              id={`tab-${it.id}`}
+              data-id={it.id}
+              role="tab"
+              aria-selected={idx === 0 ? 'true' : 'false'}
+              aria-controls={`panel-${it.id}`}
+              class={`w-auto md:w-full shrink-0 text-left px-4 py-3 rounded-xl border border-black/10 bg-white text-sm font-medium
+                      hover:bg-black/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20 md:mb-2
+                      data-[active=true]:bg-black/5 data-[active=true]:border-black/20`}
+            >
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-neutral-900 text-white flex items-center justify-center text-[11px]">
+                  {it.label.slice(0,3).toUpperCase()}
+                </div>
+                <span>{it.label}</span>
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right: detail panel -->
+      <div class="md:col-span-3">
+        <div class="rounded-2xl border border-black/10 bg-white shadow-sm">
+          {items.map((it, idx) => (
+            <div
+              id={`panel-${it.id}`}
+              role="tabpanel"
+              aria-labelledby={`tab-${it.id}`}
+              class={`${idx === 0 ? '' : 'hidden'}`}
+            >
+              <div class="grid gap-6 md:grid-cols-5 p-6 md:p-8 items-start">
+                <div class="md:col-span-3">
+                  <picture>
+                    <source type="image/webp" srcset={`${it.img} 960w`} sizes="(min-width: 768px) 48rem, 100vw" />
+                    <img src={it.img} alt={it.title} class="w-full h-auto rounded-xl ring-1 ring-black/10 bg-neutral-100 object-cover" loading="lazy" decoding="async" />
+                  </picture>
+                </div>
+                <div class="md:col-span-2">
+                  <div class="text-[12px] uppercase tracking-widest text-neutral-500">Category highlight</div>
+                  <h3 class="mt-2 text-2xl md:text-3xl font-semibold tracking-tight">{it.title}</h3>
+                  <p class="mt-2 text-[15px] text-neutral-700">{it.kicker}</p>
+                  <p class="mt-4 text-[15px] leading-7 text-neutral-800">{it.desc}</p>
+                  <ul class="mt-4 space-y-2 text-[14px] text-neutral-800">
+                    {it.bullets.map(b => <li class="pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-neutral-500">{b}</li>)}
+                  </ul>
+                  <div class="mt-6 flex gap-6">
+                    <a href={it.href} class="text-sm font-medium underline underline-offset-4">View details</a>
+                    <a href="/appointment" class="text-sm font-medium"><span class="pb-1 border-b border-black">Book a consultation</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .no-scrollbar::-webkit-scrollbar{ display:none; }
+    .no-scrollbar{ -ms-overflow-style:none; scrollbar-width:none; }
+  </style>
+
+  <script>
+    const tabs = Array.from(document.querySelectorAll('[role="tab"][data-id]'));
+    const panels = new Map(Array.from(document.querySelectorAll('[role="tabpanel"][id^="panel-"]')).map(p => [p.id.replace('panel-',''), p]));
+
+    function activate(id) {
+      tabs.forEach(t => t.setAttribute('aria-selected', t.getAttribute('data-id') === id ? 'true' : 'false'));
+      tabs.forEach(t => t.setAttribute('data-active', t.getAttribute('data-id') === id));
+      panels.forEach((node, key) => node.classList.toggle('hidden', key !== id));
+    }
+
+    tabs.forEach(t => {
+      const id = t.getAttribute('data-id');
+      t.addEventListener('click', () => activate(id));
+      t.addEventListener('mouseenter', () => {
+        if (window.matchMedia('(hover: hover)').matches) activate(id);
+      });
+      t.addEventListener('keydown', (e) => {
+        const i = tabs.indexOf(t);
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+          e.preventDefault();
+          tabs[(i + 1) % tabs.length].focus();
+        }
+        if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          tabs[(i - 1 + tabs.length) % tabs.length].focus();
+        }
+      });
+    });
+  </script>
+</section>
