@@ -1,5 +1,4 @@
----import ClinicIntroOriginal from '@/components/ClinicIntroOriginal.astro';
-import ClinicSplitEditorialForce from '@/components/ClinicSplitEditorialForce.astro';
+---import WhatWeDo from '@/components/WhatWeDo.astro';
 
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Section from '@/components/Section.astro';
@@ -98,12 +97,32 @@ const seo = {
 
 
 
-    <ClinicIntroOriginal />
+    <Section id="services" class="section-alt text-center" title="Featured Services">
+    <div class="sep-x-dark"></div>
+    <p class="text-muted max-w-2xl mx-auto mt-2 text-center">Explore our most requested treatments.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.slice(0,6).map(s => <ServiceCard href={`/services/${s.slug}`} title={s.data.title} summary={s.data.summary} icon={icons[s.slug] ?? 'star'} />)}
+    </div>
+  
+    <div class="mt-8 text-center"><a href="/services" class="btn-neo" aria-label="View all services">View all services</a></div>
+</Section>
 
   
   
 <!-- Approach (centered) -->
-  
+  <section id="approach" class="section section-muted">
+    <div class="container text-center max-w-6xl      <div class="card p-8">
+        <h3 class="text-2xl font-semibold tracking-tight">Our Approach</h3>
+        <p class="text-muted mt-2">We start with your goals and timeline, then build a plan that balances efficacy, downtime, and budget.</p>
+        <div class="kpis mt-6">
+          <div class="kpi"><div class="v stars" aria-label="5 out of 5 stars" role="img" class="stars">★★★★★</div><div class="l">Client feedback</div></div>
+          <div class="kpi"><div class="v">Evidence‑led</div><div class="l">Protocols</div></div>
+          <div class="kpi"><div class="v">Subtle</div><div class="l">Results</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   <!-- Results (Before/After placeholders) -->
@@ -240,3 +259,4 @@ const seo = {
     </div>
   </section>
 </BaseLayout>
+<WhatWeDo />
