@@ -1,0 +1,50 @@
+---
+const sizes = "(min-width: 1024px) 28rem, 22rem"; // lg:w-112, base:w-88
+---
+<section
+  class="relative py-20 overflow-hidden"
+  style="background: linear-gradient(90deg, #111111 0%, #111111 40%, #FBF7F4 40%, #FBF7F4 100%);"
+>
+  <!-- Pattern overlay on the right side -->
+  <div class="pointer-events-none absolute inset-y-0 right-0 w-3/5" style="background-image: radial-gradient(rgba(0,0,0,0.06) 1px, transparent 1.5px); background-size: 22px 22px;"></div>
+
+  <div class="container relative grid md:grid-cols-12 gap-12 items-center">
+    <!-- Left image with stacked frames -->
+    <div class="md:col-span-5 relative">
+      <!-- back dark block -->
+      <div class="absolute -left-8 -top-10 w-80 h-96 bg-neutral-900 rounded-xl -z-10"></div>
+      <!-- gold frame -->
+      <div class="absolute -left-2 top-8 w-72 h-80 rounded-lg border border-amber-500 -z-10"></div>
+
+      <div class="relative inline-block">
+        <picture>
+          <source type="image/webp" srcset="/clinic-force-640.webp 640w, /clinic-force-960.webp 960w, /clinic-force-1200.webp 1200w" sizes={sizes} />
+          <img
+            src="/clinic-force-960.jpg"
+            alt="D‑Essence Wellness treatment room"
+            class="block w-88 lg:w-112 h-auto rounded-md shadow-xl ring-1 ring-black/10 object-cover object-center"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+      </div>
+    </div>
+
+    <!-- Right copy (approved) -->
+    <div class="md:col-span-7">
+      <div class="max-w-2xl">
+        <div class="text-xs font-medium tracking-widest text-neutral-600">MED SPA IN NEW WINDSOR, NY</div>
+        <h2 class="mt-3 text-4xl font-semibold tracking-tight">Reflect Your Best Self<br/>With Exceptional Medical Aesthetics</h2>
+        <p class="mt-6 text-[15px] leading-7 text-neutral-800">
+          At D‑Essence Wellness, we believe true beauty begins with confidence. Our medical aesthetic center at
+          <strong>871 Blooming Grove Turnpike Suite 102, New Windsor, NY 12553</strong> offers a welcoming and
+          professional environment designed to enhance your natural features and care for your skin with the highest standards.
+        </p>
+        <p class="mt-4 text-[15px] leading-7 text-neutral-800">
+          Our non‑surgical, minimally invasive treatments combine advanced technology and personalized protocols to deliver safe, natural results.
+          From aesthetic injectables and full‑face rejuvenation to peels, regenerative therapies, and advanced skin care, we focus on your overall well‑being and transformative experiences.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
