@@ -1,8 +1,10 @@
----
+---import BaseLayout from '@/layouts/BaseLayout.astro';
+
 import { getEntryBySlug } from 'astro:content';
 export async function getStaticPaths() {
-  // Allow SSG of all service slugs available at build time
-  return [];
+  const { getCollection } = await import('astro:content');
+  const all = await getCollection('services');
+  return all.map(e => ({ params: { slug: e.slug } }));
 }
 const { slug } = Astro.params;
 const entry = await getEntryBySlug('services', slug);
@@ -11,6 +13,8 @@ if (!entry) {
 }
 const { Content, data } = await entry.render();
 ---
+<BaseLayout title={`${data.title} | D‑Essence Wellness`}>
+
 <section class="relative py-16 overflow-hidden" style="background: radial-gradient(1100px 520px at 8% -12%, #F3F5F8 0%, transparent 60%), linear-gradient(180deg, #FFFFFF 0%, #F8FAFB 100%);">
   <div class="container">
     <header class="max-w-3xl">
@@ -28,3 +32,5 @@ const { Content, data } = await entry.render();
     </article>
   </div>
 </section>
+
+</BaseLayout>

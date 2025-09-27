@@ -1,4 +1,5 @@
----
+---import BaseLayout from '@/layouts/BaseLayout.astro';
+
 import { getCollection } from 'astro:content';
 const all = await getCollection('services');
 
@@ -15,6 +16,8 @@ function urlFor(entry) {
   return `/services/${entry.slug}`;
 }
 ---
+<BaseLayout title="Services | D‑Essence Wellness">
+
 <section class="relative py-16 overflow-hidden" style="background: radial-gradient(1100px 520px at 8% -12%, #F3F5F8 0%, transparent 60%), linear-gradient(180deg, #FFFFFF 0%, #F8FAFB 100%);">
   <div class="container">
     <header class="max-w-3xl">
@@ -129,3 +132,5 @@ function urlFor(entry) {
     });
   </script>
 </section>
+
+</BaseLayout>
