@@ -1,6 +1,6 @@
 ---
 // Glass "pill" header — fixed above hero, centered, dark translucent.
-// Removes the Book button, keeps logo on the left inside the pill.
+// Wordmark logo (typography) "D‑Essence Wellness" instead of an image.
 // Replace your existing src/components/Header.astro with this file.
 ---
 <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-screen-xl pointer-events-none">
@@ -8,13 +8,15 @@
   <div class="hidden md:flex items-center justify-center">
     <div
       class="relative flex items-center gap-1 rounded-full border border-white/10 bg-neutral-900/70 text-white
-             backdrop-blur-md shadow-lg px-2 py-2 pointer-events-auto"
+             backdrop-blur-md shadow-lg px-3 py-2 pointer-events-auto"
       role="navigation" aria-label="Primary"
     >
-      <!-- Logo (inside the pill, aligned left) -->
-      <a href="/" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/5 transition" aria-label="Home">
-        <img src="/LOGO.webp" alt="D‑Essence Wellness" class="h-5 w-auto" onerror="this.style.display='none'">
-        <span class="sr-only">D‑Essence Wellness</span>
+      <!-- Wordmark (logo as typography) -->
+      <a href="/" class="flex items-center px-3 h-10 rounded-full hover:bg-white/5 transition" aria-label="Home">
+        <span class="inline-flex items-baseline gap-1.5">
+          <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D‑Essence</span>
+          <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
+        </span>
       </a>
 
       <!-- Links -->
@@ -77,9 +79,11 @@
       class="flex items-center justify-between w-[min(92vw,640px)] rounded-full border border-white/10 bg-neutral-900/70 text-white
              backdrop-blur-md shadow-lg px-3 py-2 pointer-events-auto"
     >
-      <a href="/" class="flex items-center gap-2" aria-label="Home">
-        <img src="/LOGO.webp" alt="D‑Essence Wellness" class="h-5 w-auto" onerror="this.style.display='none'">
-        <span class="sr-only">D‑Essence Wellness</span>
+      <a href="/" class="flex items-center px-2 h-10 rounded-full hover:bg-white/10 transition" aria-label="Home">
+        <span class="inline-flex items-baseline gap-1.5">
+          <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D‑Essence</span>
+          <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
+        </span>
       </a>
 
       <button id="nav-toggle"
