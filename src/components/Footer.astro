@@ -3,7 +3,24 @@ const year = 2025;
 const address = "871 Blooming Grove Turnpike Suite 102, New Windsor, NY 12553";
 ---
 <footer class="relative mt-24 border-t border-black/10 bg-neutral-950 text-white">
-  <div class="container py-16">
+  <!-- CTA inside footer -->
+  <section class="container py-12">
+    <div class="mx-auto max-w-2xl text-center">
+      <h3 class="text-2xl sm:text-3xl font-semibold tracking-tight">Let’s plan your treatment</h3>
+      <p class="mt-3 text-[15px] leading-7 text-white/75">
+        Book a 20‑minute consultation—clear options, zero pressure, and a plan that fits you.
+      </p>
+      <div class="mt-6">
+        <a href="/appointment"
+           class="inline-flex items-center justify-center h-11 px-6 rounded-full bg-white text-neutral-900 text-sm font-medium shadow-sm
+                  hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40">
+          Book a Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container pt-6 pb-16">
     <div class="grid gap-12 md:grid-cols-12">
       <!-- Brand / mission -->
       <div class="md:col-span-5">
@@ -12,7 +29,7 @@ const address = "871 Blooming Grove Turnpike Suite 102, New Windsor, NY 12553";
           <span class="text-white/70 font-medium tracking-wide text-[15px]">Wellness</span>
         </a>
         <p class="mt-4 max-w-sm text-sm leading-6 text-white/70">
-          Natural-looking medical aesthetics with a calm, clinical approach.
+          Natural‑looking medical aesthetics with a calm, clinical approach.
           Subtle balance, comfort, and evidence‑based care—so you look like you, on your best day.
         </p>
 
