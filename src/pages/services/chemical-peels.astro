@@ -1,12 +1,48 @@
 ---
-import ServicePage from "@/components/service/ServicePage.astro";
-const title = "Chemical Peels";
-const subtitle = "Clarity, tone, and refinement.";
-const intro = "Resurface and brighten for a clearer, more even complexion by encouraging controlled exfoliation and renewal.";
-const highlights = ["Targets dullness, congestion, uneven tone", "Customizable depth and downtime", "Pairs well with skincare"];
-const idealFor = ["Photoaging, texture, pores, pigmentation"];
-const notFor = ["Active infections, recent sunburn, certain medications"];
-const sections = [{"heading": "How it works", "body": "Professional assessment and a customized plan ensure the treatment aligns with your goals, timeline, and medical history."}, {"heading": "What to expect", "body": "Comfort\u2011minded protocols, clear aftercare, and realistic timelines so you know exactly how the process works."}];
-const faqs = [{"q": "When will I see results?", "a": "Timelines vary by treatment. We\u2019ll set expectations during your consultation."}, {"q": "Is there downtime?", "a": "Most services involve minimal downtime; we\u2019ll tailor recommendations to your schedule."}];
+import SiteLayout from '../../layouts/SiteLayout.astro';
+const pageTitle = "Peelings químicos";
 ---
-<ServicePage {title} {subtitle} {intro} highlights={highlights} idealFor={idealFor} notFor={notFor} sections={sections} faqs={faqs} />
+<SiteLayout title={pageTitle}>
+
+<nav aria-label="breadcrumbs" class="text-sm opacity-80 mb-4">
+  <a href="/">Inicio</a> / <a href="/services">Servicios</a> / <span>Peelings químicos</span>
+</nav>
+
+<section class="py-10 ">
+  <h1 class="text-3xl md:text-4xl font-semibold">Peelings químicos</h1>
+  <p class="mt-4 leading-relaxed">Renovación controlada de la piel para mejorar manchas, textura y líneas finas.</p>
+  <a href="/appointment" class="inline-block mt-6 px-5 py-3 rounded-2xl shadow hover:shadow-lg transition">Agenda tu cita</a>
+</section>
+
+<section class="py-10 ">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div>
+      <h2 class="text-2xl font-semibold mt-8">Beneficios</h2>
+      <ul class="list-disc pl-5 mt-3">
+        <li>Protocolos graduales</li>
+<li>Mejora de tono y textura</li>
+<li>Personalizable</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="text-2xl font-semibold mt-8">¿Para quién es?</h2>
+      <p class="mt-4 leading-relaxed">Ideal para personas que buscan resultados visibles con mínima inactividad. Durante tu consulta evaluamos tu historial, expectativas y plan personalizado.</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-10 ">
+  <h2 class="text-2xl font-semibold mt-8">Preguntas frecuentes</h2>
+  <details class='mt-4'><summary class='font-medium'>¿Se pela la piel?</summary><p class='mt-4 leading-relaxed'>Puede presentarse descamación leve a moderada.</p></details>
+<details class='mt-4'><summary class='font-medium'>¿Cuándo veo resultados?</summary><p class='mt-4 leading-relaxed'>En días a semanas, según el tipo de peeling.</p></details>
+</section>
+
+<section class="py-10 ">
+  <div class="rounded-2xl p-6 border">
+    <h2 class="text-2xl font-semibold mt-8">Siguiente paso</h2>
+    <p class="mt-4 leading-relaxed">¿Listo(a) para comenzar? Agenda una valoración para confirmar si este tratamiento es el indicado para ti.</p>
+    <a href="/appointment" class="inline-block mt-6 px-5 py-3 rounded-2xl shadow hover:shadow-lg transition">Reservar valoración</a>
+  </div>
+</section>
+</SiteLayout>
+
