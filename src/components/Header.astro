@@ -1,15 +1,9 @@
 ---
-// Header.astro — Featured nav: Injectables, Skin & Laser, Smile & Wellness
-// Dark glass pill, solid dropdowns, no "Home/Services/FAQ/About"
 ---
 <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-screen-xl pointer-events-none">
   <!-- Desktop -->
   <div class="hidden md:flex items-center justify-center">
-    <div
-      class="relative flex items-center gap-1 rounded-full border border-white/10 bg-neutral-900/70 text-white
-             backdrop-blur-md shadow-lg px-3 py-2 pointer-events-auto"
-      role="navigation" aria-label="Primary"
-    >
+    <nav class="relative flex items-center gap-1 rounded-full border border-white/10 bg-neutral-900/70 text-white backdrop-blur-md shadow-lg px-3 py-2 pointer-events-auto" aria-label="Primary">
       <!-- Wordmark -->
       <a href="/" class="flex items-center px-3 h-10 rounded-full hover:bg-white/5 transition" aria-label="Home">
         <span class="inline-flex items-baseline gap-1.5">
@@ -18,211 +12,191 @@
         </span>
       </a>
 
-      <nav class="flex items-center gap-1">
-        <!-- Injectables -->
-        <div class="relative group">
-          <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition">
-            Injectables
-          </button>
-          <div class="fixed inset-0 -z-10 bg-black/30 backdrop-blur-[1px] opacity-0 invisible
-                      group-hover:visible group-hover:opacity-100 transition pointer-events-none"></div>
-
-          <div
-            class="invisible opacity-0 group-hover:visible group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition
-                   absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[760px] rounded-2xl border border-white/12
-                   bg-neutral-950 text-white shadow-2xl p-5 pointer-events-none group-hover:pointer-events-auto
-                   before:content-[''] before:absolute before:left-0 before:right-0 before:-top-3 before:h-3"
-          >
-            <div class="mb-3 flex items-center justify-between px-1">
-              <div class="text-xs uppercase tracking-wide text-white/65">Popular</div>
-              <a href="/services" class="text-xs font-medium text-white/90 hover:text-white underline decoration-white/40 hover:decoration-white">
-                View all services →
-              </a>
-            </div>
-            <div class="grid grid-cols-2 gap-2">
-              <a href="/services/neurotoxins" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
-                <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 3l3 3"/><path d="M2 19l6-6"/><path d="M11 10l6 6"/><path d="M15 6l3 3"/></svg>
-                </span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-semibold leading-tight">Neurotoxins</span>
-                  <span class="block text-xs text-white/75 truncate">Smooth dynamic lines</span>
-                </span>
-              </a>
-              <a href="/services/juvederm-fillers" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
-                <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3s-5 5.5-5 9a5 5 0 1 0 10 0c0-3.5-5-9-5-9z"/><path d="M18.5 7.5v3m-1.5-1.5h3" stroke-linecap="round"/></svg>
-                </span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-semibold leading-tight">Juvederm Fillers</span>
-                  <span class="block text-xs text-white/75 truncate">Contour &amp; volume</span>
-                </span>
-              </a>
-              <a href="/services/skinvive" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
-                <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3c2.5 2.6 4 5 4 7a4 4 0 1 1-8 0c0-2 1.5-4.4 4-7z"/></svg>
-                </span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-semibold leading-tight">Skinvive</span>
-                  <span class="block text-xs text-white/75 truncate">Cheek skin smoothness</span>
-                </span>
-              </a>
-              <a href="/services/nefertiti-neck" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
-                <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 21h8"/><path d="M12 3c3 0 5 2 5 5 0 2-1 3-2 4-1 1-3 3-3 6"/></svg>
-                </span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-semibold leading-tight">Nefertiti Neck</span>
-                  <span class="block text-xs text-white/75 truncate">Lower-face refinement</span>
-                </span>
-              </a>
-            </div>
+      <!-- Featured: Injectables -->
+      <div class="relative group">
+        <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition">Injectables</button>
+        <div class="fixed inset-0 -z-10 bg-black/30 backdrop-blur-[1px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition pointer-events-none"></div>
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[760px] rounded-2xl border border-white/12 bg-neutral-950 text-white shadow-2xl p-5 pointer-events-none group-hover:pointer-events-auto before:content-[''] before:absolute before:left-0 before:right-0 before:-top-3 before:h-3">
+          <div class="mb-3 flex items-center justify-between px-1">
+            <div class="text-xs uppercase tracking-wide text-white/65">Popular</div>
+            <a href="/services" class="text-xs font-medium text-white/90 hover:text-white underline decoration-white/40 hover:decoration-white">View all services →</a>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <a href="/services/neurotoxins" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+              <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 3l3 3"/><path d="M2 19l6-6"/><path d="M11 10l6 6"/></svg>
+              </span>
+              <span class="min-w-0"><span class="block text-sm font-semibold leading-tight">Neurotoxins</span><span class="block text-xs text-white/75 truncate">Smooth dynamic lines</span></span>
+            </a>
+            <a href="/services/juvederm-fillers" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+              <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3s-5 5.5-5 9a5 5 0 1 0 10 0c0-3.5-5-9-5-9z"/><path d="M18.5 7.5v3m-1.5-1.5h3" stroke-linecap="round"/></svg>
+              </span>
+              <span class="min-w-0"><span class="block text-sm font-semibold leading-tight">Juvederm Fillers</span><span class="block text-xs text-white/75 truncate">Contour &amp; volume</span></span>
+            </a>
+            <a href="/services/skinvive" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+              <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3c2.5 2.6 4 5 4 7a4 4 0 1 1-8 0c0-2 1.5-4.4 4-7z"/></svg>
+              </span>
+              <span class="min-w-0"><span class="block text-sm font-semibold leading-tight">Skinvive</span><span class="block text-xs text-white/75 truncate">Cheek skin smoothness</span></span>
+            </a>
+            <a href="/services/nefertiti-neck" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+              <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 21h8"/><path d="M12 3c3 0 5 2 5 5 0 2-1 3-2 4-1 1-3 3-3 6"/></svg>
+              </span>
+              <span class="min-w-0"><span class="block text-sm font-semibold leading-tight">Nefertiti Neck</span><span class="block text-xs text-white/75 truncate">Lower-face refinement</span></span>
+            </a>
           </div>
         </div>
+      </div>
 
-        <!-- Skin & Laser -->
-        <div class="relative group">
-          <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition">
-            Skin &amp; Laser
-          </button>
-          <div class="fixed inset-0 -z-10 bg-black/30 backdrop-blur-[1px] opacity-0 invisible
-                      group-hover:visible group-hover:opacity-100 transition pointer-events-none"></div>
-          <div
-            class="invisible opacity-0 group-hover:visible group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition
-                   absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[760px] rounded-2xl border border-white/12
-                   bg-neutral-950 text-white shadow-2xl p-5 pointer-events-none group-hover:pointer-events-auto
-                   before:content-[''] before:absolute before:left-0 before:right-0 before:-top-3 before:h-3"
-          >
-            <div class="mb-3 flex items-center justify-between px-1">
-              <div class="text-xs uppercase tracking-wide text-white/65">Popular</div>
-              <a href="/services" class="text-xs font-medium text-white/90 hover:text-white underline decoration-white/40 hover:decoration-white">
-                View all services →
-              </a>
-            </div>
-            <div class="grid grid-cols-2 gap-2">
-              <a href="/services/aerolase" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
-                <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12h18M12 3v18"/></svg>
-                </span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-semibold leading-tight">Aerolase</span>
-                  <span class="block text-xs text-white/75 truncate">Clarity &amp; redness</span>
-                </span>
-              </a>
-              <a href="/services/chemical-peels" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
-                <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M21 12l-9 5-9-5"/></svg>
-                </span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-semibold leading-tight">Chemical Peels</span>
-                  <span class="block text-xs text-white/75 truncate">Tone &amp; texture</span>
-                </span>
-              </a>
-              <a href="/services/microneedling" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
-                <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <circle cx="7" cy="7" r="1.2"/><circle cx="12" cy="7" r="1.2"/><circle cx="17" cy="7" r="1.2"/>
-                    <circle cx="7" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="17" cy="12" r="1.2"/>
-                    <circle cx="7" cy="17" r="1.2"/><circle cx="12" cy="17" r="1.2"/><circle cx="17" cy="17" r="1.2"/>
-                  </svg>
-                </span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-semibold leading-tight">Microneedling</span>
-                  <span class="block text-xs text-white/75 truncate">Collagen support</span>
-                </span>
-              </a>
-              <a href="/services/facials" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
-                <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 12c0-5 4-9 8-9s8 4 8 9"/></svg>
-                </span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-semibold leading-tight">Facials</span>
-                  <span class="block text-xs text-white/75 truncate">Reset &amp; glow</span>
-                </span>
-              </a>
-            </div>
+      <!-- Featured: Skin & Laser -->
+      <div class="relative group">
+        <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition">Skin &amp; Laser</button>
+        <div class="fixed inset-0 -z-10 bg-black/30 backdrop-blur-[1px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition pointer-events-none"></div>
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[760px] rounded-2xl border border-white/12 bg-neutral-950 text-white shadow-2xl p-5 pointer-events-none group-hover:pointer-events-auto before:content-[''] before:absolute before:left-0 before:right-0 before:-top-3 before:h-3">
+          <div class="mb-3 flex items-center justify-between px-1">
+            <div class="text-xs uppercase tracking-wide text-white/65">Popular</div>
+            <a href="/services" class="text-xs font-medium text-white/90 hover:text-white underline decoration-white/40 hover:decoration-white">View all services →</a>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <a href="/services/aerolase" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+              <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 12h18M12 3v18"/></svg>
+              </span>
+              <span class="min-w-0"><span class="block text-sm font-semibold leading-tight">Aerolase</span><span class="block text-xs text-white/75 truncate">Clarity &amp; redness</span></span>
+            </a>
+            <a href="/services/chemical-peels" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+              <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M21 12l-9 5-9-5"/></svg>
+              </span>
+              <span class="min-w-0"><span class="block text-sm font-semibold leading-tight">Chemical Peels</span><span class="block text-xs text-white/75 truncate">Tone &amp; texture</span></span>
+            </a>
+            <a href="/services/microneedling" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+              <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <circle cx="7" cy="7" r="1.2"/><circle cx="12" cy="7" r="1.2"/><circle cx="17" cy="7" r="1.2"/>
+                  <circle cx="7" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="17" cy="12" r="1.2"/>
+                  <circle cx="7" cy="17" r="1.2"/><circle cx="12" cy="17" r="1.2"/><circle cx="17" cy="17" r="1.2"/>
+                </svg>
+              </span>
+              <span class="min-w-0"><span class="block text-sm font-semibold leading-tight">Microneedling</span><span class="block text-xs text-white/75 truncate">Collagen support</span></span>
+            </a>
+            <a href="/services/facials" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+              <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 12c0-5 4-9 8-9s8 4 8 9"/></svg>
+              </span>
+              <span class="min-w-0"><span class="block text-sm font-semibold leading-tight">Facials</span><span class="block text-xs text-white/75 truncate">Reset &amp; glow</span></span>
+            </a>
           </div>
         </div>
+      </div>
 
-        <!-- Smile & Wellness -->
-        <div class="relative group">
-          <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition">
-            Smile &amp; Wellness
-          </button>
-          <div class="fixed inset-0 -z-10 bg-black/30 backdrop-blur-[1px] opacity-0 invisible
-                      group-hover:visible group-hover:opacity-100 transition pointer-events-none"></div>
-          <div
-            class="invisible opacity-0 group-hover:visible group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition
-                   absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[760px] rounded-2xl border border-white/12
-                   bg-neutral-950 text-white shadow-2xl p-5 pointer-events-none group-hover:pointer-events-auto
-                   before:content-[''] before:absolute before:left-0 before:right-0 before:-top-3 before:h-3"
-          >
-            <div class="mb-3 flex items-center justify-between px-1">
-              <div class="text-xs uppercase tracking-wide text-white/65">Popular</div>
-              <a href="/services" class="text-xs font-medium text-white/90 hover:text-white underline decoration-white/40 hover:decoration-white">
-                View all services →
-              </a>
-            </div>
-            <div class="grid grid-cols-2 gap-2">
-              <a href="/services/vitamin-injections" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
-                <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="9" y="3" width="6" height="10" rx="2"/><path d="M12 13v8"/></svg>
-                </span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-semibold leading-tight">Vitamin Injections</span>
-                  <span class="block text-xs text-white/75 truncate">Targeted support</span>
-                </span>
-              </a>
-              <a href="/services/teeth-whitening" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
-                <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12c0-4 3-7 7-7s7 3 7 7"/><path d="M9 14l2 2 4-4"/></svg>
-                </span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-semibold leading-tight">Teeth Whitening</span>
-                  <span class="block text-xs text-white/75 truncate">Brighter smile</span>
-                </span>
-              </a>
-              <a href="/services/skincare" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
-                <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 12h12"/><path d="M12 6v12"/></svg>
-                </span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-semibold leading-tight">Skincare Consults</span>
-                  <span class="block text-xs text-white/75 truncate">Streamlined routines</span>
-                </span>
-              </a>
-              <a href="/services/waxing" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
-                <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 16h16"/><path d="M7 12h10"/></svg>
-                </span>
-                <span class="min-w-0">
-                  <span class="block text-sm font-semibold leading-tight">Waxing</span>
-                  <span class="block text-xs text-white/75 truncate">Smooth results</span>
-                </span>
-              </a>
-            </div>
+      <!-- Featured: Smile & Wellness -->
+      <div class="relative group">
+        <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition">Smile &amp; Wellness</button>
+        <div class="fixed inset-0 -z-10 bg-black/30 backdrop-blur-[1px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition pointer-events-none"></div>
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[760px] rounded-2xl border border-white/12 bg-neutral-950 text-white shadow-2xl p-5 pointer-events-none group-hover:pointer-events-auto before:content-[''] before:absolute before:left-0 before:right-0 before:-top-3 before:h-3">
+          <div class="mb-3 flex items-center justify-between px-1">
+            <div class="text-xs uppercase tracking-wide text-white/65">Popular</div>
+            <a href="/services" class="text-xs font-medium text-white/90 hover:text-white underline decoration-white/40 hover:decoration-white">View all services →</a>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <a href="/services/vitamin-injections" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+              <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="9" y="3" width="6" height="10" rx="2"/><path d="M12 13v8"/></svg>
+              </span>
+              <span class="min-w-0"><span class="block text-sm font-semibold leading-tight">Vitamin Injections</span><span class="block text-xs text-white/75 truncate">Targeted support</span></span>
+            </a>
+            <a href="/services/teeth-whitening" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+              <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12c0-4 3-7 7-7s7 3 7 7"/><path d="M9 14l2 2 4-4"/></svg>
+              </span>
+              <span class="min-w-0"><span class="block text-sm font-semibold leading-tight">Teeth Whitening</span><span class="block text-xs text-white/75 truncate">Brighter smile</span></span>
+            </a>
+            <a href="/services/skincare" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+              <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 12h12"/><path d="M12 6v12"/></svg>
+              </span>
+              <span class="min-w-0"><span class="block text-sm font-semibold leading-tight">Skincare Consults</span><span class="block text-xs text-white/75 truncate">Streamlined routines</span></span>
+            </a>
+            <a href="/services/waxing" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">
+              <span class="w-8 h-8 rounded-full bg-white/5 ring-1 ring-white/15 inline-flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 16h16"/><path d="M7 12h10"/></svg>
+              </span>
+              <span class="min-w-0"><span class="block text-sm font-semibold leading-tight">Waxing</span><span class="block text-xs text-white/75 truncate">Smooth results</span></span>
+            </a>
           </div>
         </div>
-      </nav>
-    </div>
+      </div>
+
+      <!-- Concerns -->
+      <div class="relative group">
+        <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition">Concerns</button>
+        <div class="fixed inset-0 -z-10 bg-black/30 backdrop-blur-[1px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition pointer-events-none"></div>
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[760px] rounded-2xl border border-white/12 bg-neutral-950 text-white shadow-2xl p-5 pointer-events-none group-hover:pointer-events-auto before:content-[''] before:absolute before:left-0 before:right-0 before:-top-3 before:h-3">
+          <div class="grid grid-cols-2 gap-2">
+            <a href="/concerns/fine-lines-wrinkles" class="p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">Fine lines &amp; wrinkles</a>
+            <a href="/concerns/volume-loss" class="p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">Volume loss</a>
+            <a href="/concerns/texture-pores" class="p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">Texture &amp; pores</a>
+            <a href="/concerns/hyperpigmentation" class="p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">Hyperpigmentation</a>
+            <a href="/concerns/acne" class="p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">Acne</a>
+            <a href="/concerns/neck-jawline" class="p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">Neck &amp; jawline</a>
+          </div>
+          <div class="mt-3 text-right">
+            <a href="/concerns" class="text-xs font-medium text-white/90 hover:text-white underline decoration-white/40 hover:decoration-white">Explore all concerns →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <a href="/results" class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition">Results</a>
+
+      <!-- New Patients -->
+      <div class="relative group">
+        <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition">New Patients</button>
+        <div class="fixed inset-0 -z-10 bg-black/30 backdrop-blur-[1px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition pointer-events-none"></div>
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[620px] rounded-2xl border border-white/12 bg-neutral-950 text-white shadow-2xl p-5 pointer-events-none group-hover:pointer-events-auto before:content-[''] before:absolute before:left-0 before:right-0 before:-top-3 before:h-3">
+          <div class="grid grid-cols-2 gap-2">
+            <a href="/new-patients/what-to-expect" class="p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">What to expect</a>
+            <a href="/new-patients/forms-policies" class="p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">Forms &amp; policies</a>
+            <a href="/new-patients/pre-visit-prep" class="p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">Pre-visit prep</a>
+            <a href="/new-patients/aftercare-library" class="p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">Aftercare library</a>
+          </div>
+          <div class="mt-3 text-right">
+            <a href="/new-patients" class="text-xs font-medium text-white/90 hover:text-white underline decoration-white/40 hover:decoration-white">New patient hub →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="relative group">
+        <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition">About</button>
+        <div class="fixed inset-0 -z-10 bg-black/30 backdrop-blur-[1px] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition pointer-events-none"></div>
+        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[560px] rounded-2xl border border-white/12 bg-neutral-950 text-white shadow-2xl p-5 pointer-events-none group-hover:pointer-events-auto before:content-[''] before:absolute before:left-0 before:right-0 before:-top-3 before:h-3">
+          <div class="grid grid-cols-2 gap-2">
+            <a href="/about/our-approach" class="p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">Our approach</a>
+            <a href="/about/meet-the-provider" class="p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">Meet the provider</a>
+            <a href="/about/location-hours" class="p-3 rounded-xl bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/10 hover:ring-white/20 transition">Location &amp; hours</a>
+          </div>
+          <div class="mt-3 text-right">
+            <a href="/about" class="text-xs font-medium text-white/90 hover:text-white underline decoration-white/40 hover:decoration-white">About overview →</a>
+          </div>
+        </div>
+      </div>
+    </nav>
   </div>
 
   <!-- Mobile -->
   <div class="md:hidden flex items-center justify-center">
-    <div
-      class="flex items-center justify-between w-[min(92vw,640px)] rounded-full border border-white/10 bg-neutral-900/70 text-white
-             backdrop-blur-md shadow-lg px-3 py-2 pointer-events-auto"
-    >
+    <div class="flex items-center justify-between w-[min(92vw,640px)] rounded-full border border-white/10 bg-neutral-900/70 text-white backdrop-blur-md shadow-lg px-3 py-2 pointer-events-auto">
       <a href="/" class="flex items-center px-2 h-10 rounded-full hover:bg-white/10 transition" aria-label="Home">
         <span class="inline-flex items-baseline gap-1.5">
           <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D‑Essence</span>
           <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
         </span>
       </a>
-      <button id="nav-toggle"
-        class="h-10 w-10 inline-flex items-center justify-center rounded-full hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
-        aria-expanded="false" aria-controls="mobile-nav"
-      >
+      <button id="nav-toggle" class="h-10 w-10 inline-flex items-center justify-center rounded-full hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30" aria-expanded="false" aria-controls="mobile-nav">
         <span class="sr-only">Menu</span>
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="opacity-90">
           <path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/>
@@ -255,11 +229,40 @@
         <a href="/services/skincare" class="block px-3 py-2 rounded-lg hover:bg-black/5">Skincare Consults</a>
         <a href="/services/waxing" class="block px-3 py-2 rounded-lg hover:bg-black/5">Waxing</a>
       </div>
+
+      <div class="mt-3">
+        <div class="px-3 py-2 text-xs uppercase tracking-wide text-neutral-500">Concerns</div>
+        <a href="/concerns/fine-lines-wrinkles" class="block px-3 py-2 rounded-lg hover:bg-black/5">Fine lines &amp; wrinkles</a>
+        <a href="/concerns/volume-loss" class="block px-3 py-2 rounded-lg hover:bg-black/5">Volume loss</a>
+        <a href="/concerns/texture-pores" class="block px-3 py-2 rounded-lg hover:bg-black/5">Texture &amp; pores</a>
+        <a href="/concerns/hyperpigmentation" class="block px-3 py-2 rounded-lg hover:bg-black/5">Hyperpigmentation</a>
+        <a href="/concerns/acne" class="block px-3 py-2 rounded-lg hover:bg-black/5">Acne</a>
+        <a href="/concerns/neck-jawline" class="block px-3 py-2 rounded-lg hover:bg-black/5">Neck &amp; jawline</a>
+        <a href="/concerns" class="block px-3 py-2 rounded-lg bg-neutral-900 text-white text-center hover:opacity-90 mt-1">Explore all concerns</a>
+      </div>
+
+      <a href="/results" class="mt-3 block mx-2 px-3 py-3 rounded-lg bg-black/90 text-white text-center">Results (Before &amp; After)</a>
+
+      <div class="mt-3">
+        <div class="px-3 py-2 text-xs uppercase tracking-wide text-neutral-500">New Patients</div>
+        <a href="/new-patients/what-to-expect" class="block px-3 py-2 rounded-lg hover:bg-black/5">What to expect</a>
+        <a href="/new-patients/forms-policies" class="block px-3 py-2 rounded-lg hover:bg-black/5">Forms &amp; policies</a>
+        <a href="/new-patients/pre-visit-prep" class="block px-3 py-2 rounded-lg hover:bg-black/5">Pre-visit prep</a>
+        <a href="/new-patients/aftercare-library" class="block px-3 py-2 rounded-lg hover:bg-black/5">Aftercare library</a>
+        <a href="/new-patients" class="block px-3 py-2 rounded-lg bg-neutral-900 text-white text-center hover:opacity-90 mt-1">New patient hub</a>
+      </div>
+
+      <div class="mt-3">
+        <div class="px-3 py-2 text-xs uppercase tracking-wide text-neutral-500">About</div>
+        <a href="/about/our-approach" class="block px-3 py-2 rounded-lg hover:bg-black/5">Our approach</a>
+        <a href="/about/meet-the-provider" class="block px-3 py-2 rounded-lg hover:bg-black/5">Meet the provider</a>
+        <a href="/about/location-hours" class="block px-3 py-2 rounded-lg hover:bg-black/5">Location &amp; hours</a>
+        <a href="/about" class="block px-3 py-2 rounded-lg bg-neutral-900 text-white text-center hover:opacity-90 mt-1">About overview</a>
+      </div>
     </nav>
   </div>
 
   <script>
-    // Mobile nav toggle
     const btn = document.getElementById('nav-toggle');
     const panel = document.getElementById('mobile-nav');
     if (btn && panel) {
