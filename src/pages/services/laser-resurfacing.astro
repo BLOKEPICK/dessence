@@ -1,159 +1,100 @@
 ---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-const pageTitle = "Resurfacing láser";
-const jsonLd = {"@context":"https://schema.org","@type":"Service","name":"Resurfacing láser","provider":{"@type":"Organization","name":"D‑Essence Wellness"}};
+import BaseLayout from '@/layouts/BaseLayout.astro';
+const seo = {"title": "Laser Resurfacing | D‑Essence Wellness", "description": "Fractional laser resurfacing to refine texture and tone with tailored intensity and careful aftercare.", "canonical": "/services/laser-resurfacing", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Laser Resurfacing", "description": "Fractional laser resurfacing to refine texture and tone with tailored intensity and careful aftercare.", "areaServed": "Local", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/laser-resurfacing"}};
 ---
-
-<script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
-
-<nav aria-label="breadcrumbs" class="ds-breadcrumbs ds-container ds-section" style="padding-bottom:0">
-  <a href="/">Inicio</a> / <a href="/services">Servicios</a> / <span>Resurfacing láser</span>
-</nav>
-
-<section class="ds-hero ds-section">
-  <div class="ds-container ds-grid ds-grid-2">
-    <div>
-      <h1 class="ds-h1">Resurfacing láser</h1>
-      <p class="ds-lead">Láser fraccionado para mejorar arrugas finas, manchas y textura con resultados notorios.</p>
-      <a href="/appointment" class="ds-btn">Agendar valoración</a>
+<BaseLayout seo={seo}>
+  <section class="hero-split">
+    <div class="container py-16 md:py-24">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-7">
+          <p class="chip-outline inline-flex items-center px-3 py-1 rounded-full text-xs tracking-wide uppercase">Treatment</p>
+          <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mt-3">Laser Resurfacing</h1>
+          <p class="muted mt-3 text-lg">Fractional laser renews the skin to improve fine lines, discoloration, and texture with precision.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="/appointment" class="btn btn-primary">Book consultation</a>
+            <a href="tel:+17163038963" class="btn btn-outline">Call clinic</a>
+          </div>
+        </div>
+        <div class="md:col-span-5">
+          <div class="card bg-white/5 text-white/90 border border-white/10 rounded-2xl p-6">
+            <h2 class="text-xl font-semibold">Key points</h2>
+            <ul class="mt-3 space-y-2"><li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Noticeable improvement</span></li>
+<li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Customizable intensity</span></li>
+<li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Plan per zones and downtime</span></li></ul>
+            <p class="text-sm mt-4 opacity-80">* Response and longevity vary by individual.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="ds-card ds-keypoints">
-      <h2>Puntos clave</h2>
-      <ul class="ds-list-check">
-        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Resultados visibles</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Inactividad variable</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Plan por zonas</span></li><li>Consulta y fotografías clínicas.</li><li>Diseño de plan y consentimiento informado.</li><li>Procedimiento con medidas de confort.</li>
-      </ul>
-      <p class="ds-lead" style="opacity:.7;margin-top:10px">*La respuesta y duración pueden variar según el caso.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="ds-section">
-  <div class="ds-container ds-grid-2">
-    <div class="ds-panel">
-      <h2>Cómo funciona</h2>
-      <p class="ds-text">Este tratamiento actúa mediante mecanismos basados en evidencia clínica para lograr resultados naturales y consistentes. Antes de iniciar confirmamos indicación, revisamos tu historial y acordamos objetivos realistas.</p>
-      <p class="ds-text">Nuestro enfoque prioriza armonía y salud cutánea. Evitamos resultados exagerados y proponemos planes graduales cuando corresponde.</p>
+  <section class="py-14">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">How it works</h2>
+        <p class="text-neutral-700 mt-3">Fractional laser resurfacing to refine texture and tone with tailored intensity and careful aftercare.</p>
+      </div>
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">Step‑by‑step process</h2>
+        <ol class="list-decimal pl-5 mt-3 space-y-2"><li>Evaluation and pre‑care plan</li>
+<li>Topical anesthesia</li>
+<li>Fractional passes adapted to goals</li>
+<li>Cooling, barrier repair, and review</li></ol>
+      </div>
     </div>
-    <div class="ds-panel">
-      <h2>Proceso — paso a paso</h2>
-      <ol class="ds-list">
-        <li>Consulta y evaluación diagnóstica.</li>
-        <li>Diseño de plan y consentimiento informado.</li>
-        <li>Procedimiento con medidas de confort.</li>
-        <li>Cuidados posteriores y recomendaciones.</li>
-        <li>Control de seguimiento para evaluar avances.</li>
-      </ol>
-      <a class="ds-cta" href="/appointment">Agenda tu cita</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="ds-section">
-  <div class="ds-container ds-grid-3">
-    <div class="ds-panel">
-      <h2>Candidatos ideales</h2>
-      <ul class="ds-list">
-        <li>Expectativas realistas y compromiso con el plan.</li>
-        <li>Salud general apta confirmada en consulta.</li>
-        <li>Disposición a seguir cuidados y mantenimiento.</li>
-      </ul>
+  <section class="py-14 section-muted">
+    <div class="container grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card p-6 rounded-2xl border bg-white">
+        <h3 class="text-xl font-semibold">Ideal candidates</h3>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Texture and pigment concerns</li>
+<li>Fine lines or sun damage</li>
+<li>Prepared for variable downtime</li></ul>
+      </div>
+      <div class="card p-6 rounded-2xl border bg-white">
+        <h3 class="text-xl font-semibold">Contraindications</h3>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Recent isotretinoin—timing assessment</li>
+<li>Active infection</li>
+<li>Keloid tendency—case dependent</li></ul>
+      </div>
+      <div class="card p-6 rounded-2xl border bg-white">
+        <h3 class="text-xl font-semibold">Risks & side effects</h3>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Redness, swelling, crusting depending on intensity</li>
+<li>PIH risk—strict SPF essential</li>
+<li>Rare prolonged erythema</li></ul>
+      </div>
     </div>
-    <div class="ds-panel">
-      <h2>Contraindicaciones</h2>
-      <ul class="ds-list">
-        <li>Embarazo/lactancia (según el tratamiento).</li>
-        <li>Infecciones activas en la zona.</li>
-        <li>Alergias conocidas a componentes (cuando aplique).</li>
-      </ul>
+  </section>
+
+  <section class="py-14">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">Aftercare</h2>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Vinegar soaks/cleanses if directed</li>
+<li>Emollient barrier and gentle care</li>
+<li>Sun avoidance until healed</li></ul>
+      </div>
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">Results & maintenance</h2>
+        <p class="text-neutral-700 mt-3">Smoother texture and more even tone after healing; stronger settings achieve greater change with more downtime.</p>
+      </div>
     </div>
-    <div class="ds-panel">
-      <h2>Riesgos y efectos</h2>
-      <p class="ds-text">Todo procedimiento médico‑estético puede implicar efectos temporales como enrojecimiento, inflamación o sensibilidad. Los riesgos significativos son poco frecuentes y se discuten previamente.</p>
+  </section>
+
+  <section class="py-14 section-dark">
+    <div class="container">
+      <h2 class="text-2xl font-semibold">Before & After</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <figure class="rounded-2xl overflow-hidden border border-white/10">
+          <img src="/og-default.jpg" alt="Laser Resurfacing before and after (placeholder)" loading="lazy" class="w-full h-auto" />
+          <figcaption class="text-sm muted p-3">Example result. Individual outcomes vary.</figcaption>
+        </figure>
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <p class="muted">Explore real patient transformations and set realistic expectations for your own journey.</p>
+          <a class="btn btn-ghost mt-4" href="/gallery?tag=laser-resurfacing">Before &amp; After Gallery</a>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
-
-<section class="ds-section">
-  <div class="ds-container ds-grid-2">
-    <div class="ds-panel">
-      <h2>Cuidados posteriores</h2>
-      <ul class="ds-list">
-        <li>Evitar calor intenso/sol el primer día.</li>
-        <li>No manipular la zona tratada.</li>
-        <li>Hidratación y fotoprotección diaria.</li>
-      </ul>
-    </div>
-    <div class="ds-panel">
-      <h2>Resultados y mantenimiento</h2>
-      <p class="ds-text">Los resultados aparecen de forma inmediata o progresiva según el tratamiento. Para sostenerlos recomendamos controles y sesiones de mantenimiento personalizados.</p>
-      <a class="ds-cta" href="/appointment">Reservar valoración</a>
-    </div>
-  </div>
-</section>
-
-<section class="ds-section">
-  <div class="ds-container">
-    <div class="ds-panel">
-      <h2>Preguntas frecuentes</h2>
-      <details><summary>¿Tiempo de recuperación?</summary><p>De días a semanas según la intensidad.</p></details>
-<details><summary>¿Cuántas sesiones?</summary><p>A veces una intensa; otras, varias suaves.</p></details>
-<details><summary>¿Cuánto tardo en recuperarme?</summary><p>Desde días a semanas, según la intensidad del protocolo.</p></details>
-    </div>
-  </div>
-</section>
-
-<section class="ds-section">
-  <div class="ds-container">
-    <h2 style="margin-bottom:12px">Tratamientos relacionados</h2>
-    <div class="ds-grid-3 ds-related">
-      <a href="/services/facials" class="ds-panel"><h3>Faciales personalizados</h3><p class="ds-text">Ver detalles</p></a>
-      <a href="/services/chemical-peels" class="ds-panel"><h3>Peelings químicos</h3><p class="ds-text">Ver detalles</p></a>
-      <a href="/services/prp-prf" class="ds-panel"><h3>PRP / PRF</h3><p class="ds-text">Ver detalles</p></a>
-    </div>
-  </div>
-</section>
-
-
-<style>
-:root{
-  --bg: #0b0c0f;
-  --panel: #111317;
-  --panel-2: #161a20;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --accent: #14b8a6;
-  --border: #23262d;
-  --shadow: 0 10px 30px rgba(0,0,0,.35);
-}
-.ds-container{max-width:1100px;margin:0 auto;padding:0 20px;}
-.ds-section{padding:56px 0;}
-.ds-hero{background: radial-gradient(1200px 600px at 10% -10%, #1c2430 0%, #0b0c0f 60%), linear-gradient(180deg,#0b0c0f, #0b0c0f); color:var(--text);}
-.ds-hero .ds-grid{display:grid;grid-template-columns:1fr;gap:24px}
-@media(min-width:900px){.ds-hero .ds-grid{grid-template-columns:1.2fr .8fr}}
-.ds-h1{font-size: clamp(32px, 5vw, 46px); line-height:1.1; margin:0 0 10px 0; font-weight:700;}
-.ds-lead{font-size: clamp(16px, 2.5vw, 18px); color:var(--muted); margin-top:8px}
-.ds-btn{display:inline-block;margin-top:20px;padding:14px 20px;border-radius:14px;background:#111; color:#fff; text-decoration:none; box-shadow: var(--shadow);}
-.ds-card{background:var(--panel); border:1px solid var(--border); border-radius:18px; padding:22px; box-shadow: var(--shadow); color:var(--text)}
-.ds-keypoints h2{font-size:18px;margin:0 0 12px 0}
-.ds-list-check{list-style:none;padding:0;margin:0}
-.ds-list-check li{display:flex;align-items:flex-start;gap:10px;margin:10px 0}
-.ds-list-check li::before{content:"✓"; flex:0 0 auto; margin-top:1px; color:var(--accent); font-weight:700}
-.ds-grid-2{display:grid;grid-template-columns:1fr;gap:24px}
-@media(min-width:900px){.ds-grid-2{grid-template-columns:1fr 1fr}}
-.ds-grid-3{display:grid;grid-template-columns:1fr;gap:24px}
-@media(min-width:900px){.ds-grid-3{grid-template-columns:1fr 1fr 1fr}}
-.ds-panel{background:#fff; color:#0b0c0f; border:1px solid #e5e7eb; border-radius:18px; padding:24px; box-shadow: 0 6px 18px rgba(0,0,0,.06)}
-.ds-panel h2{font-size:22px;margin:0 0 8px 0}
-.ds-text{color:#374151; line-height:1.75; margin-top:10px}
-.ds-list{padding-left:18px;margin:8px 0;color:#374151}
-.ds-cta{display:inline-block;margin-top:14px;padding:12px 18px;border-radius:12px;background:#111;color:#fff;text-decoration:none}
-details{border:1px solid #e5e7eb;border-radius:12px;padding:12px 16px;background:#fff}
-details+details{margin-top:10px}
-summary{cursor:pointer;font-weight:600}
-.ds-breadcrumbs{font-size:14px;color:#94a3b8;margin-bottom:10px}
-.ds-related a{display:block;text-decoration:none;color:inherit}
-.ds-related .ds-panel:hover{transform:translateY(-2px);transition:transform .2s}
-</style>
-
-</SiteLayout>
-
+  </section>
+</BaseLayout>
