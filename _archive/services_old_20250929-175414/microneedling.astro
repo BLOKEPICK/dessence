@@ -1,0 +1,100 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+const seo = {"title": "Microneedling | D‑Essence Wellness", "description": "Microneedling for collagen stimulation and smoother texture, with minimal downtime and progressive results.", "canonical": "/services/microneedling", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Microneedling", "description": "Microneedling for collagen stimulation and smoother texture, with minimal downtime and progressive results.", "areaServed": "Local", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/microneedling"}};
+---
+<BaseLayout seo={seo}>
+  <section class="hero-split">
+    <div class="container py-16 md:py-24">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-7">
+          <p class="chip-outline inline-flex items-center px-3 py-1 rounded-full text-xs tracking-wide uppercase">Treatment</p>
+          <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mt-3">Microneedling</h1>
+          <p class="muted mt-3 text-lg">Controlled micro‑channels stimulate collagen for smoother texture, refined pores, and improved tone.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="/appointment" class="btn btn-primary">Book consultation</a>
+            <a href="tel:+17163038963" class="btn btn-outline">Call clinic</a>
+          </div>
+        </div>
+        <div class="md:col-span-5">
+          <div class="card bg-white/5 text-white/90 border border-white/10 rounded-2xl p-6">
+            <h2 class="text-xl font-semibold">Key points</h2>
+            <ul class="mt-3 space-y-2"><li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Cumulative collagen stimulation</span></li>
+<li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Minimal downtime</span></li>
+<li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Pairs well with PRP/actives</span></li></ul>
+            <p class="text-sm mt-4 opacity-80">* Response and longevity vary by individual.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">How it works</h2>
+        <p class="text-neutral-700 mt-3">Microneedling for collagen stimulation and smoother texture, with minimal downtime and progressive results.</p>
+      </div>
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">Step‑by‑step process</h2>
+        <ol class="list-decimal pl-5 mt-3 space-y-2"><li>Assessment and topical anesthetic</li>
+<li>Depth selection per area and concern</li>
+<li>Systematic passes with sterile device</li>
+<li>Soothing finish and post‑care</li></ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 section-muted">
+    <div class="container grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card p-6 rounded-2xl border bg-white">
+        <h3 class="text-xl font-semibold">Ideal candidates</h3>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Texture irregularities, fine lines, pores</li>
+<li>Acne scarring (mild to moderate)</li>
+<li>Preference for gradual, natural renewal</li></ul>
+      </div>
+      <div class="card p-6 rounded-2xl border bg-white">
+        <h3 class="text-xl font-semibold">Contraindications</h3>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Active acne flares or infection</li>
+<li>Keloid tendency—case‑by‑case</li>
+<li>Pregnancy—defer</li></ul>
+      </div>
+      <div class="card p-6 rounded-2xl border bg-white">
+        <h3 class="text-xl font-semibold">Risks & side effects</h3>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Redness for 24–48h</li>
+<li>Dryness or flaking</li>
+<li>Rare pinpoint bleeding or bruising</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">Aftercare</h2>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Avoid makeup 24h</li>
+<li>Gentle hydration and barrier support</li>
+<li>SPF and avoid hot environments same day</li></ul>
+      </div>
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">Results & maintenance</h2>
+        <p class="text-neutral-700 mt-3">Texture and tone steadily improve over a series (typically 3–6 sessions) with lasting benefits.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 section-dark">
+    <div class="container">
+      <h2 class="text-2xl font-semibold">Before & After</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <figure class="rounded-2xl overflow-hidden border border-white/10">
+          <img src="/wwd-micro-960.webp" alt="Microneedling before and after (placeholder)" loading="lazy" class="w-full h-auto" />
+          <figcaption class="text-sm muted p-3">Example result. Individual outcomes vary.</figcaption>
+        </figure>
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <p class="muted">Explore real patient transformations and set realistic expectations for your own journey.</p>
+          <a class="btn btn-ghost mt-4" href="/gallery?tag=microneedling">Before &amp; After Gallery</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

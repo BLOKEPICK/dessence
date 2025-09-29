@@ -1,0 +1,100 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+const seo = {"title": "Laser Resurfacing | D‑Essence Wellness", "description": "Fractional laser resurfacing to refine texture and tone with tailored intensity and careful aftercare.", "canonical": "/services/laser-resurfacing", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Laser Resurfacing", "description": "Fractional laser resurfacing to refine texture and tone with tailored intensity and careful aftercare.", "areaServed": "Local", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/laser-resurfacing"}};
+---
+<BaseLayout seo={seo}>
+  <section class="hero-split">
+    <div class="container py-16 md:py-24">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-7">
+          <p class="chip-outline inline-flex items-center px-3 py-1 rounded-full text-xs tracking-wide uppercase">Treatment</p>
+          <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mt-3">Laser Resurfacing</h1>
+          <p class="muted mt-3 text-lg">Fractional laser renews the skin to improve fine lines, discoloration, and texture with precision.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="/appointment" class="btn btn-primary">Book consultation</a>
+            <a href="tel:+17163038963" class="btn btn-outline">Call clinic</a>
+          </div>
+        </div>
+        <div class="md:col-span-5">
+          <div class="card bg-white/5 text-white/90 border border-white/10 rounded-2xl p-6">
+            <h2 class="text-xl font-semibold">Key points</h2>
+            <ul class="mt-3 space-y-2"><li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Noticeable improvement</span></li>
+<li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Customizable intensity</span></li>
+<li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Plan per zones and downtime</span></li></ul>
+            <p class="text-sm mt-4 opacity-80">* Response and longevity vary by individual.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">How it works</h2>
+        <p class="text-neutral-700 mt-3">Fractional laser resurfacing to refine texture and tone with tailored intensity and careful aftercare.</p>
+      </div>
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">Step‑by‑step process</h2>
+        <ol class="list-decimal pl-5 mt-3 space-y-2"><li>Evaluation and pre‑care plan</li>
+<li>Topical anesthesia</li>
+<li>Fractional passes adapted to goals</li>
+<li>Cooling, barrier repair, and review</li></ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 section-muted">
+    <div class="container grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card p-6 rounded-2xl border bg-white">
+        <h3 class="text-xl font-semibold">Ideal candidates</h3>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Texture and pigment concerns</li>
+<li>Fine lines or sun damage</li>
+<li>Prepared for variable downtime</li></ul>
+      </div>
+      <div class="card p-6 rounded-2xl border bg-white">
+        <h3 class="text-xl font-semibold">Contraindications</h3>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Recent isotretinoin—timing assessment</li>
+<li>Active infection</li>
+<li>Keloid tendency—case dependent</li></ul>
+      </div>
+      <div class="card p-6 rounded-2xl border bg-white">
+        <h3 class="text-xl font-semibold">Risks & side effects</h3>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Redness, swelling, crusting depending on intensity</li>
+<li>PIH risk—strict SPF essential</li>
+<li>Rare prolonged erythema</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">Aftercare</h2>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Vinegar soaks/cleanses if directed</li>
+<li>Emollient barrier and gentle care</li>
+<li>Sun avoidance until healed</li></ul>
+      </div>
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">Results & maintenance</h2>
+        <p class="text-neutral-700 mt-3">Smoother texture and more even tone after healing; stronger settings achieve greater change with more downtime.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 section-dark">
+    <div class="container">
+      <h2 class="text-2xl font-semibold">Before & After</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <figure class="rounded-2xl overflow-hidden border border-white/10">
+          <img src="/og-default.jpg" alt="Laser Resurfacing before and after (placeholder)" loading="lazy" class="w-full h-auto" />
+          <figcaption class="text-sm muted p-3">Example result. Individual outcomes vary.</figcaption>
+        </figure>
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <p class="muted">Explore real patient transformations and set realistic expectations for your own journey.</p>
+          <a class="btn btn-ghost mt-4" href="/gallery?tag=laser-resurfacing">Before &amp; After Gallery</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,9 +1,8 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-const seo = {"title": "Dermal Fillers | D‑Essence Wellness", "description": "Balanced filler artistry for lips and facial contours. Immediate, natural‑looking lift with tailored techniques.", "canonical": "/services/dermal-fillers", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Dermal Fillers", "description": "Balanced filler artistry for lips and facial contours. Immediate, natural‑looking lift with tailored techniques.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/dermal-fillers"}};
+const seo = {"title": "Dermal Fillers | D‑Essence Wellness", "description": "Subtle sculpting that respects your facial proportions. HA fillers are reversible for added peace of mind.", "canonical": "/services/dermal-fillers", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Dermal Fillers", "description": "Subtle sculpting that respects your facial proportions. HA fillers are reversible for added peace of mind.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/dermal-fillers"}};
 ---
 <BaseLayout seo={seo}>
-  <!-- Umbrel-inspired hero -->
   <section class="relative overflow-hidden bg-neutral-950 text-white">
     <div class="absolute inset-0 -z-10">
       <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,.55),transparent_60%)]"></div>
@@ -13,7 +12,7 @@ const seo = {"title": "Dermal Fillers | D‑Essence Wellness", "description": "B
       <div class="max-w-3xl">
         <span class="inline-flex items-center gap-2 rounded-full bg-white/5 ring-1 ring-white/10 px-3 py-1 text-xs tracking-wide uppercase">Treatment</span>
         <h1 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tight">Dermal Fillers</h1>
-        <p class="mt-4 text-lg text-neutral-300">Restore volume and refine contours (lips, cheeks, chin, jawline) for balanced, modern enhancement.</p>
+        <p class="mt-4 text-lg text-neutral-300">Restore volume and refine contours (lips, cheeks, chin) with balanced, modern enhancement.</p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="/appointment" class="btn btn-primary">Book consultation</a>
           <a href="tel:+17163038963" class="btn btn-outline">Call clinic</a>
@@ -22,14 +21,13 @@ const seo = {"title": "Dermal Fillers | D‑Essence Wellness", "description": "B
     </div>
   </section>
 
-  <!-- Feature band (key points) -->
   <section class="bg-neutral-950 text-white">
     <div class="container pb-12 md:pb-16 -mt-12 md:-mt-16">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
         <div class="md:col-span-7">
           <div class="rounded-3xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur">
             <h2 class="text-xl font-semibold">Why patients choose this</h2>
-            <p class="mt-2 text-neutral-300">Balanced filler artistry for lips and facial contours. Immediate, natural‑looking lift with tailored techniques.</p>
+            <p class="mt-2 text-neutral-300">Subtle sculpting that respects your facial proportions. HA fillers are reversible for added peace of mind.</p>
           </div>
         </div>
         <div class="md:col-span-5">
@@ -37,8 +35,8 @@ const seo = {"title": "Dermal Fillers | D‑Essence Wellness", "description": "B
             <h3 class="text-lg font-semibold">Key points</h3>
             <ul class="mt-3 space-y-2 [counter-reset:step]">
               <li class='flex gap-3'><span class='i'>✓</span><span>Immediate, visible lift</span></li>
-<li class='flex gap-3'><span class='i'>✓</span><span>HA fillers are reversible</span></li>
-<li class='flex gap-3'><span class='i'>✓</span><span>Cannula/needle technique tailored per area</span></li>
+<li class='flex gap-3'><span class='i'>✓</span><span>Reversible if HA-based</span></li>
+<li class='flex gap-3'><span class='i'>✓</span><span>Cannula/needle technique tailored by area</span></li>
             </ul>
           </div>
         </div>
@@ -46,7 +44,6 @@ const seo = {"title": "Dermal Fillers | D‑Essence Wellness", "description": "B
     </div>
   </section>
 
-  <!-- Process (numbered) -->
   <section class="py-16">
     <div class="container">
       <div class="rounded-3xl border p-8 bg-white">
@@ -55,37 +52,35 @@ const seo = {"title": "Dermal Fillers | D‑Essence Wellness", "description": "B
           <li><span class='n'></span>Proportion analysis and animation review</li>
 <li><span class='n'></span>Product & technique selection</li>
 <li><span class='n'></span>Comfort measures; meticulous placement</li>
-<li><span class='n'></span>Minor touch‑ups after swelling settles</li>
+<li><span class='n'></span>Follow‑up after swelling settles</li>
         </ol>
       </div>
     </div>
   </section>
 
-  <!-- Candidate / Contra / Risks -->
   <section class="py-16">
     <div class="container grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Ideal candidates</h3>
         <ul class="mt-3 list-disc pl-5 space-y-1"><li>Volume loss or contour goals</li>
-<li>Subtle, harmonious results preferred</li>
-<li>Commitment to aftercare guidance</li></ul>
+<li>Desire for subtle, harmonious enhancement</li>
+<li>Commitment to aftercare</li></ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Contraindications</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Active cold sores/infection</li>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Active infection/cold sores</li>
 <li>Autoimmune flares—case‑by‑case</li>
-<li>Allergy to filler components</li></ul>
+<li>Allergy to components</li></ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Risks & side effects</h3>
         <ul class="mt-3 list-disc pl-5 space-y-1"><li>Temporary swelling/bruising</li>
 <li>Tenderness 24–72h</li>
-<li>Rare vascular events—minimized with expertise</li></ul>
+<li>Rare vascular events—minimized with expert technique</li></ul>
       </div>
     </div>
   </section>
 
-  <!-- Aftercare / Results -->
   <section class="py-16">
     <div class="container grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="rounded-3xl border p-6 bg-white">
@@ -96,12 +91,11 @@ const seo = {"title": "Dermal Fillers | D‑Essence Wellness", "description": "B
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Results & maintenance</h3>
-        <p class="mt-3 text-neutral-700">Most fillers last 6–18 months depending on product, area, and metabolism. We prioritize subtle refinement.</p>
+        <p class="mt-3 text-neutral-700">Most fillers last 6–18 months depending on product, area, and metabolism.</p>
       </div>
     </div>
   </section>
 
-  <!-- Before & After -->
   <section class="py-20 bg-neutral-950 text-white">
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
@@ -118,7 +112,7 @@ const seo = {"title": "Dermal Fillers | D‑Essence Wellness", "description": "B
   </section>
 
   <style>
-    /* Small helpers for numbered list like Umbrel */
+    /* Helpers for numbered list + check icons (works without extra deps) */
     ol [class~="n"]::before, ol li::marker { content: none; }
     ol li { counter-increment: step; position: relative; padding-left: 2.5rem; }
     ol li .n { position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:9999px;

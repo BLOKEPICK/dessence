@@ -1,17 +1,37 @@
 ---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-const pageTitle = "Servicios — Regenerative";
+import BaseLayout from '@/layouts/BaseLayout.astro';
+const seo = {"title": "Regenerative — Services | D‑Essence Wellness", "description": "Explore regenerative treatments at D‑Essence Wellness.", "canonical": "/services/regenerative", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Regenerative — Services", "about": "regenerative"}};
 ---
-<SiteLayout title={pageTitle}>
+<BaseLayout seo={seo}>
+  <section class="relative overflow-hidden bg-neutral-950 text-white">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,.55),transparent_60%)]"></div>
+      <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(236,72,153,.45),transparent_60%)]"></div>
+    </div>
+    <div class="container py-20 md:py-28">
+      <h1 class="text-4xl md:text-6xl font-semibold tracking-tight">Regenerative — Services</h1>
+      <p class="mt-4 text-lg text-neutral-300">A curated set of regenerative treatments designed for natural, modern outcomes.</p>
+    </div>
+  </section>
 
-<section aria-labelledby="category-title" class="py-10">
-  <h1 id="category-title" class="text-3xl font-semibold mb-6">Servicios — Regenerative</h1>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">PRP / PRF</h3>\n    <a href="/services/prp-prf" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Exosomes</h3>\n    <a href="/services/exosomes" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Vitamin Injections</h3>\n    <a href="/services/vitamin-injections" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Hair Restoration</h3>\n    <a href="/services/hair-restoration" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  </div>
-</section>
-</SiteLayout>
-
+  <section class="py-14">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-6">
+      <a href="/services/prp-prf" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">PRP / PRF</h3>
+  <p class="text-neutral-700 mt-2">Autologous growth factors support regeneration in skin or scalp for healthier tissue.</p>
+</a>
+<a href="/services/exosomes" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Exosome Therapy</h3>
+  <p class="text-neutral-700 mt-2">Advanced regenerative support to boost recovery and skin quality—often paired with needling or lasers.</p>
+</a>
+<a href="/services/vitamin-injections" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Vitamin Injections</h3>
+  <p class="text-neutral-700 mt-2">Targeted vitamin support for energy, skin vitality, and overall wellness—personalized to your goals.</p>
+</a>
+<a href="/services/hair-restoration" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Hair Restoration</h3>
+  <p class="text-neutral-700 mt-2">Combined strategies (PRP, exosomes, mesotherapy) to reduce shedding and improve density over time.</p>
+</a>
+    </div>
+  </section>
+</BaseLayout>

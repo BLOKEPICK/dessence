@@ -1,100 +1,124 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-const seo = {"title": "Dermaplaning | D‑Essence Wellness", "description": "Dermaplaning for a smooth, luminous finish with no downtime and enhanced product absorption.", "canonical": "/services/dermaplaning", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Dermaplaning", "description": "Dermaplaning for a smooth, luminous finish with no downtime and enhanced product absorption.", "areaServed": "Local", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/dermaplaning"}};
+const seo = {"title": "Dermaplaning | D‑Essence Wellness", "description": "Immediate ‘polished’ finish and better absorption of actives—zero downtime.", "canonical": "/services/dermaplaning", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Dermaplaning", "description": "Immediate ‘polished’ finish and better absorption of actives—zero downtime.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/dermaplaning"}};
 ---
 <BaseLayout seo={seo}>
-  <section class="hero-split">
-    <div class="container py-16 md:py-24">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+  <section class="relative overflow-hidden bg-neutral-950 text-white">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,.55),transparent_60%)]"></div>
+      <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(236,72,153,.45),transparent_60%)]"></div>
+    </div>
+    <div class="container py-20 md:py-28">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 rounded-full bg-white/5 ring-1 ring-white/10 px-3 py-1 text-xs tracking-wide uppercase">Treatment</span>
+        <h1 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tight">Dermaplaning</h1>
+        <p class="mt-4 text-lg text-neutral-300">Gentle physical exfoliation leaves skin smoother, brighter, and makeup‑ready.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/appointment" class="btn btn-primary">Book consultation</a>
+          <a href="tel:+17163038963" class="btn btn-outline">Call clinic</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-neutral-950 text-white">
+    <div class="container pb-12 md:pb-16 -mt-12 md:-mt-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
         <div class="md:col-span-7">
-          <p class="chip-outline inline-flex items-center px-3 py-1 rounded-full text-xs tracking-wide uppercase">Treatment</p>
-          <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mt-3">Dermaplaning</h1>
-          <p class="muted mt-3 text-lg">Gentle physical exfoliation leaves skin smoother, brighter, and makeup‑ready.</p>
-          <div class="flex gap-3 mt-6">
-            <a href="/appointment" class="btn btn-primary">Book consultation</a>
-            <a href="tel:+17163038963" class="btn btn-outline">Call clinic</a>
+          <div class="rounded-3xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur">
+            <h2 class="text-xl font-semibold">Why patients choose this</h2>
+            <p class="mt-2 text-neutral-300">Immediate ‘polished’ finish and better absorption of actives—zero downtime.</p>
           </div>
         </div>
         <div class="md:col-span-5">
-          <div class="card bg-white/5 text-white/90 border border-white/10 rounded-2xl p-6">
-            <h2 class="text-xl font-semibold">Key points</h2>
-            <ul class="mt-3 space-y-2"><li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Zero downtime</span></li>
-<li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Soft, polished finish</span></li>
-<li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Improves absorption of actives</span></li></ul>
-            <p class="text-sm mt-4 opacity-80">* Response and longevity vary by individual.</p>
+          <div class="rounded-3xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur">
+            <h3 class="text-lg font-semibold">Key points</h3>
+            <ul class="mt-3 space-y-2 [counter-reset:step]">
+              <li class='flex gap-3'><span class='i'>✓</span><span>No downtime</span></li>
+<li class='flex gap-3'><span class='i'>✓</span><span>Soft, polished finish</span></li>
+<li class='flex gap-3'><span class='i'>✓</span><span>Improves absorption of actives</span></li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-14">
-    <div class="container grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="card p-6 rounded-2xl border">
-        <h2 class="text-2xl font-semibold">How it works</h2>
-        <p class="text-neutral-700 mt-3">Dermaplaning for a smooth, luminous finish with no downtime and enhanced product absorption.</p>
-      </div>
-      <div class="card p-6 rounded-2xl border">
+  <section class="py-16">
+    <div class="container">
+      <div class="rounded-3xl border p-8 bg-white">
         <h2 class="text-2xl font-semibold">Step‑by‑step process</h2>
-        <ol class="list-decimal pl-5 mt-3 space-y-2"><li>Skin prep and oil control</li>
-<li>Feather‑light passes with sterile blade</li>
-<li>Hydration and SPF to finish</li>
-<li>Home routine guidance</li></ol>
+        <ol class="mt-4 grid gap-4 md:grid-cols-2 [counter-reset:step]">
+          <li><span class='n'></span>Skin prep and oil control</li>
+<li><span class='n'></span>Feather‑light passes with sterile blade</li>
+<li><span class='n'></span>Hydration and SPF to finish</li>
+<li><span class='n'></span>Home routine guidance</li>
+        </ol>
       </div>
     </div>
   </section>
 
-  <section class="py-14 section-muted">
-    <div class="container grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="card p-6 rounded-2xl border bg-white">
+  <section class="py-16">
+    <div class="container grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Ideal candidates</h3>
-        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Dullness and fine vellus hair</li>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Dullness and fine vellus hair</li>
 <li>Texture refinement without acids</li>
 <li>Event prep for smooth makeup</li></ul>
       </div>
-      <div class="card p-6 rounded-2xl border bg-white">
+      <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Contraindications</h3>
-        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Active acne or open lesions</li>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Active acne or open lesions</li>
 <li>Bleeding disorders—medical guidance</li>
 <li>Severe sensitivity—case‑by‑case</li></ul>
       </div>
-      <div class="card p-6 rounded-2xl border bg-white">
+      <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Risks & side effects</h3>
-        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Temporary pinkness</li>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Temporary pinkness</li>
 <li>Minor nicks—rare with proper technique</li>
 <li>No thickening of hair (myth)</li></ul>
       </div>
     </div>
   </section>
 
-  <section class="py-14">
-    <div class="container grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="card p-6 rounded-2xl border">
-        <h2 class="text-2xl font-semibold">Aftercare</h2>
-        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Hydrate and protect with SPF</li>
+  <section class="py-16">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="rounded-3xl border p-6 bg-white">
+        <h3 class="text-xl font-semibold">Aftercare</h3>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Hydrate and protect with SPF</li>
 <li>Delay strong actives 24–48h</li>
 <li>Gentle cleansing</li></ul>
       </div>
-      <div class="card p-6 rounded-2xl border">
-        <h2 class="text-2xl font-semibold">Results & maintenance</h2>
-        <p class="text-neutral-700 mt-3">Instantly smoother look and feel; repeat every 4–6 weeks to maintain results.</p>
+      <div class="rounded-3xl border p-6 bg-white">
+        <h3 class="text-xl font-semibold">Results & maintenance</h3>
+        <p class="mt-3 text-neutral-700">Instantly smoother look and feel; repeat every 4–6 weeks.</p>
       </div>
     </div>
   </section>
 
-  <section class="py-14 section-dark">
+  <section class="py-20 bg-neutral-950 text-white">
     <div class="container">
-      <h2 class="text-2xl font-semibold">Before & After</h2>
-      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <figure class="rounded-2xl overflow-hidden border border-white/10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <figure class="rounded-3xl overflow-hidden ring-1 ring-white/10">
           <img src="/og-default.jpg" alt="Dermaplaning before and after (placeholder)" loading="lazy" class="w-full h-auto" />
-          <figcaption class="text-sm muted p-3">Example result. Individual outcomes vary.</figcaption>
         </figure>
-        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
-          <p class="muted">Explore real patient transformations and set realistic expectations for your own journey.</p>
-          <a class="btn btn-ghost mt-4" href="/gallery?tag=dermaplaning">Before &amp; After Gallery</a>
+        <div>
+          <h2 class="text-2xl font-semibold">Before & After</h2>
+          <p class="mt-2 text-neutral-300">Explore real patient transformations to set realistic expectations for outcomes and timelines.</p>
+          <a class="btn btn-ghost mt-6" href="/gallery?tag=dermaplaning">Before &amp; After Gallery</a>
         </div>
       </div>
     </div>
   </section>
+
+  <style>
+    /* Helpers for numbered list + check icons (works without extra deps) */
+    ol [class~="n"]::before, ol li::marker { content: none; }
+    ol li { counter-increment: step; position: relative; padding-left: 2.5rem; }
+    ol li .n { position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:9999px;
+                background: radial-gradient(120% 120% at 30% 20%, rgba(59,130,246,.9), rgba(236,72,153,.85));
+                box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+    ul li .i { display:inline-flex; width:1.1rem; height:1.1rem; align-items:center; justify-content:center;
+                border-radius:9999px; background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); }
+  </style>
 </BaseLayout>

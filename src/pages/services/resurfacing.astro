@@ -1,17 +1,37 @@
 ---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-const pageTitle = "Servicios — Resurfacing";
+import BaseLayout from '@/layouts/BaseLayout.astro';
+const seo = {"title": "Resurfacing — Services | D‑Essence Wellness", "description": "Explore resurfacing treatments at D‑Essence Wellness.", "canonical": "/services/resurfacing", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Resurfacing — Services", "about": "resurfacing"}};
 ---
-<SiteLayout title={pageTitle}>
+<BaseLayout seo={seo}>
+  <section class="relative overflow-hidden bg-neutral-950 text-white">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,.55),transparent_60%)]"></div>
+      <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(236,72,153,.45),transparent_60%)]"></div>
+    </div>
+    <div class="container py-20 md:py-28">
+      <h1 class="text-4xl md:text-6xl font-semibold tracking-tight">Resurfacing — Services</h1>
+      <p class="mt-4 text-lg text-neutral-300">A curated set of resurfacing treatments designed for natural, modern outcomes.</p>
+    </div>
+  </section>
 
-<section aria-labelledby="category-title" class="py-10">
-  <h1 id="category-title" class="text-3xl font-semibold mb-6">Servicios — Resurfacing</h1>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Microneedling</h3>\n    <a href="/services/microneedling" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">RF Microneedling</h3>\n    <a href="/services/rf-microneedling" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Laser Resurfacing</h3>\n    <a href="/services/laser-resurfacing" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Dermaplaning</h3>\n    <a href="/services/dermaplaning" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  </div>
-</section>
-</SiteLayout>
-
+  <section class="py-14">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-6">
+      <a href="/services/microneedling" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Microneedling</h3>
+  <p class="text-neutral-700 mt-2">Controlled micro‑channels stimulate collagen for smoother texture, refined pores, and improved tone.</p>
+</a>
+<a href="/services/rf-microneedling" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">RF Microneedling</h3>
+  <p class="text-neutral-700 mt-2">Combines RF energy and microneedling for firmer skin and improved texture/scarring.</p>
+</a>
+<a href="/services/laser-resurfacing" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Laser Resurfacing</h3>
+  <p class="text-neutral-700 mt-2">Fractional laser renews skin to improve fine lines, discoloration, and texture with precision.</p>
+</a>
+<a href="/services/dermaplaning" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Dermaplaning</h3>
+  <p class="text-neutral-700 mt-2">Gentle physical exfoliation leaves skin smoother, brighter, and makeup‑ready.</p>
+</a>
+    </div>
+  </section>
+</BaseLayout>

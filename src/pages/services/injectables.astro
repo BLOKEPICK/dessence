@@ -1,17 +1,37 @@
 ---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-const pageTitle = "Servicios — Injectables";
+import BaseLayout from '@/layouts/BaseLayout.astro';
+const seo = {"title": "Injectables — Services | D‑Essence Wellness", "description": "Explore injectables treatments at D‑Essence Wellness.", "canonical": "/services/injectables", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Injectables — Services", "about": "injectables"}};
 ---
-<SiteLayout title={pageTitle}>
+<BaseLayout seo={seo}>
+  <section class="relative overflow-hidden bg-neutral-950 text-white">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,.55),transparent_60%)]"></div>
+      <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(236,72,153,.45),transparent_60%)]"></div>
+    </div>
+    <div class="container py-20 md:py-28">
+      <h1 class="text-4xl md:text-6xl font-semibold tracking-tight">Injectables — Services</h1>
+      <p class="mt-4 text-lg text-neutral-300">A curated set of injectables treatments designed for natural, modern outcomes.</p>
+    </div>
+  </section>
 
-<section aria-labelledby="category-title" class="py-10">
-  <h1 id="category-title" class="text-3xl font-semibold mb-6">Servicios — Injectables</h1>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Botox / Neurotoxins</h3>\n    <a href="/services/botox" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Dermal Fillers</h3>\n    <a href="/services/dermal-fillers" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Kybella</h3>\n    <a href="/services/kybella" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Sculptra</h3>\n    <a href="/services/sculptra" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  </div>
-</section>
-</SiteLayout>
-
+  <section class="py-14">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-6">
+      <a href="/services/botox" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Botox® / Neurotoxins</h3>
+  <p class="text-neutral-700 mt-2">Soften expression lines (forehead, frown, crow’s feet) with natural‑looking results and minimal downtime.</p>
+</a>
+<a href="/services/dermal-fillers" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Dermal Fillers</h3>
+  <p class="text-neutral-700 mt-2">Restore volume and refine contours (lips, cheeks, chin) with balanced, modern enhancement.</p>
+</a>
+<a href="/services/kybella" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Kybella® (Submental Fat)</h3>
+  <p class="text-neutral-700 mt-2">Non‑surgical injectable to reduce submental fullness (double chin) with gradual, lasting improvement.</p>
+</a>
+<a href="/services/sculptra" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Sculptra® (Collagen Stimulator)</h3>
+  <p class="text-neutral-700 mt-2">Biostimulatory treatment that gradually restores collagen for improved firmness and skin quality.</p>
+</a>
+    </div>
+  </section>
+</BaseLayout>

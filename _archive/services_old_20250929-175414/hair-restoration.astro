@@ -1,0 +1,100 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+const seo = {"title": "Hair Restoration | D‑Essence Wellness", "description": "Comprehensive hair restoration strategies that align with natural growth cycles for healthier density.", "canonical": "/services/hair-restoration", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Hair Restoration", "description": "Comprehensive hair restoration strategies that align with natural growth cycles for healthier density.", "areaServed": "Local", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/hair-restoration"}};
+---
+<BaseLayout seo={seo}>
+  <section class="hero-split">
+    <div class="container py-16 md:py-24">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-7">
+          <p class="chip-outline inline-flex items-center px-3 py-1 rounded-full text-xs tracking-wide uppercase">Treatment</p>
+          <h1 class="text-4xl md:text-5xl font-semibold tracking-tight mt-3">Hair Restoration</h1>
+          <p class="muted mt-3 text-lg">Combined strategies (PRP, exosomes, mesotherapy) to reduce shedding and improve density over time.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="/appointment" class="btn btn-primary">Book consultation</a>
+            <a href="tel:+17163038963" class="btn btn-outline">Call clinic</a>
+          </div>
+        </div>
+        <div class="md:col-span-5">
+          <div class="card bg-white/5 text-white/90 border border-white/10 rounded-2xl p-6">
+            <h2 class="text-xl font-semibold">Key points</h2>
+            <ul class="mt-3 space-y-2"><li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Multimodal plans</span></li>
+<li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Gradual, visible improvements</span></li>
+<li class='flex gap-2 items-start'><span class='mt-1'>✓</span><span>Maintenance to sustain gains</span></li></ul>
+            <p class="text-sm mt-4 opacity-80">* Response and longevity vary by individual.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">How it works</h2>
+        <p class="text-neutral-700 mt-3">Comprehensive hair restoration strategies that align with natural growth cycles for healthier density.</p>
+      </div>
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">Step‑by‑step process</h2>
+        <ol class="list-decimal pl-5 mt-3 space-y-2"><li>Scalp assessment and photography</li>
+<li>Protocol selection and series plan</li>
+<li>Adjunct home therapy guidance</li>
+<li>Periodic reviews to track progress</li></ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 section-muted">
+    <div class="container grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card p-6 rounded-2xl border bg-white">
+        <h3 class="text-xl font-semibold">Ideal candidates</h3>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Early thinning or shedding</li>
+<li>Realistic timeline for growth cycles</li>
+<li>Commitment to maintenance</li></ul>
+      </div>
+      <div class="card p-6 rounded-2xl border bg-white">
+        <h3 class="text-xl font-semibold">Contraindications</h3>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Active scalp infections</li>
+<li>Uncontrolled medical conditions</li>
+<li>Allergy to components (if injectables)</li></ul>
+      </div>
+      <div class="card p-6 rounded-2xl border bg-white">
+        <h3 class="text-xl font-semibold">Risks & side effects</h3>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Tenderness after sessions</li>
+<li>Temporary shedding shift (telogen effluvium)</li>
+<li>Rare bruising</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">Aftercare</h2>
+        <ul class="list-disc pl-5 mt-3 space-y-2"><li>Gentle cleansing; avoid harsh treatments 24–48h</li>
+<li>Nutrition and stress management</li>
+<li>Follow series cadence</li></ul>
+      </div>
+      <div class="card p-6 rounded-2xl border">
+        <h2 class="text-2xl font-semibold">Results & maintenance</h2>
+        <p class="text-neutral-700 mt-3">Noticeable thickening typically from 8–12 weeks onward; continued maintenance helps preserve gains.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 section-dark">
+    <div class="container">
+      <h2 class="text-2xl font-semibold">Before & After</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <figure class="rounded-2xl overflow-hidden border border-white/10">
+          <img src="/og-default.jpg" alt="Hair Restoration before and after (placeholder)" loading="lazy" class="w-full h-auto" />
+          <figcaption class="text-sm muted p-3">Example result. Individual outcomes vary.</figcaption>
+        </figure>
+        <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+          <p class="muted">Explore real patient transformations and set realistic expectations for your own journey.</p>
+          <a class="btn btn-ghost mt-4" href="/gallery?tag=hair-restoration">Before &amp; After Gallery</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

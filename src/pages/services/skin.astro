@@ -1,17 +1,41 @@
 ---
-import SiteLayout from '../../layouts/SiteLayout.astro';
-const pageTitle = "Servicios — Skin";
+import BaseLayout from '@/layouts/BaseLayout.astro';
+const seo = {"title": "Skin — Services | D‑Essence Wellness", "description": "Explore skin treatments at D‑Essence Wellness.", "canonical": "/services/skin", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "CollectionPage", "name": "Skin — Services", "about": "skin"}};
 ---
-<SiteLayout title={pageTitle}>
+<BaseLayout seo={seo}>
+  <section class="relative overflow-hidden bg-neutral-950 text-white">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,.55),transparent_60%)]"></div>
+      <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(236,72,153,.45),transparent_60%)]"></div>
+    </div>
+    <div class="container py-20 md:py-28">
+      <h1 class="text-4xl md:text-6xl font-semibold tracking-tight">Skin — Services</h1>
+      <p class="mt-4 text-lg text-neutral-300">A curated set of skin treatments designed for natural, modern outcomes.</p>
+    </div>
+  </section>
 
-<section aria-labelledby="category-title" class="py-10">
-  <h1 id="category-title" class="text-3xl font-semibold mb-6">Servicios — Skin</h1>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Custom Facials</h3>\n    <a href="/services/facials" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Acne Treatment</h3>\n    <a href="/services/acne" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Hydrafacial / Deep Cleanse</h3>\n    <a href="/services/hydrafacial" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Chemical Peels</h3>\n    <a href="/services/chemical-peels" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
-  </div>
-</section>
-</SiteLayout>
-
+  <section class="py-14">
+    <div class="container grid grid-cols-1 md:grid-cols-2 gap-6">
+      <a href="/services/facials" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Custom Facials</h3>
+  <p class="text-neutral-700 mt-2">Targeted cleansing, exfoliation, and hydration tailored to your skin type and goals.</p>
+</a>
+<a href="/services/acne" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Acne Treatment Plan</h3>
+  <p class="text-neutral-700 mt-2">Evidence‑based protocols to reduce breakouts, calm inflammation, and prevent post‑acne marks.</p>
+</a>
+<a href="/services/hydrafacial" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Hydrafacial® / Deep Cleanse</h3>
+  <p class="text-neutral-700 mt-2">Cleansing, extraction, and intensive hydration for an instant, camera‑ready glow.</p>
+</a>
+<a href="/services/chemical-peels" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Chemical Peels</h3>
+  <p class="text-neutral-700 mt-2">Controlled renewal to improve discoloration, texture, and fine lines using tailored peel strengths.</p>
+</a>
+<a href="/services/rosacea" class="rounded-3xl border p-6 bg-white lift">
+  <h3 class="text-lg font-semibold">Rosacea Care</h3>
+  <p class="text-neutral-700 mt-2">Gentle protocols to reduce redness, calm sensitivity, and lessen flare‑ups with trigger education.</p>
+</a>
+    </div>
+  </section>
+</BaseLayout>

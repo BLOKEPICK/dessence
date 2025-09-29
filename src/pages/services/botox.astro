@@ -1,9 +1,8 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-const seo = {"title": "Botox® / Neurotoxins | D‑Essence Wellness", "description": "Botox and neurotoxins to soften lines with natural results and minimal downtime. Personalized dosing and follow‑up for precise refinement.", "canonical": "/services/botox", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Botox® / Neurotoxins", "description": "Botox and neurotoxins to soften lines with natural results and minimal downtime. Personalized dosing and follow‑up for precise refinement.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/botox"}};
+const seo = {"title": "Botox® / Neurotoxins | D‑Essence Wellness", "description": "Personalized dosing for smooth, natural movement—never overdone. Quick visits and predictable timelines.", "canonical": "/services/botox", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Botox® / Neurotoxins", "description": "Personalized dosing for smooth, natural movement—never overdone. Quick visits and predictable timelines.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/botox"}};
 ---
 <BaseLayout seo={seo}>
-  <!-- Umbrel-inspired hero -->
   <section class="relative overflow-hidden bg-neutral-950 text-white">
     <div class="absolute inset-0 -z-10">
       <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,.55),transparent_60%)]"></div>
@@ -22,14 +21,13 @@ const seo = {"title": "Botox® / Neurotoxins | D‑Essence Wellness", "descripti
     </div>
   </section>
 
-  <!-- Feature band (key points) -->
   <section class="bg-neutral-950 text-white">
     <div class="container pb-12 md:pb-16 -mt-12 md:-mt-16">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
         <div class="md:col-span-7">
           <div class="rounded-3xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur">
             <h2 class="text-xl font-semibold">Why patients choose this</h2>
-            <p class="mt-2 text-neutral-300">Botox and neurotoxins to soften lines with natural results and minimal downtime. Personalized dosing and follow‑up for precise refinement.</p>
+            <p class="mt-2 text-neutral-300">Personalized dosing for smooth, natural movement—never overdone. Quick visits and predictable timelines.</p>
           </div>
         </div>
         <div class="md:col-span-5">
@@ -46,62 +44,58 @@ const seo = {"title": "Botox® / Neurotoxins | D‑Essence Wellness", "descripti
     </div>
   </section>
 
-  <!-- Process (numbered) -->
   <section class="py-16">
     <div class="container">
       <div class="rounded-3xl border p-8 bg-white">
         <h2 class="text-2xl font-semibold">Step‑by‑step process</h2>
         <ol class="mt-4 grid gap-4 md:grid-cols-2 [counter-reset:step]">
           <li><span class='n'></span>Consultation, photos, and muscle mapping</li>
-<li><span class='n'></span>Personalized dosing for natural movement</li>
-<li><span class='n'></span>Micro‑injections with comfort measures</li>
+<li><span class='n'></span>Personalized dosing for natural expression</li>
+<li><span class='n'></span>Precise micro‑injections with comfort measures</li>
 <li><span class='n'></span>2‑week review to fine‑tune if needed</li>
         </ol>
       </div>
     </div>
   </section>
 
-  <!-- Candidate / Contra / Risks -->
   <section class="py-16">
     <div class="container grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Ideal candidates</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Dynamic wrinkles from expressions</li>
-<li>Good general health</li>
-<li>Looking refreshed—not overdone</li></ul>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Dynamic wrinkles from expression</li>
+<li>Good general health and realistic expectations</li>
+<li>Prefer refined—not drastic—changes</li></ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Contraindications</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Pregnancy or breastfeeding</li>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Pregnancy/breastfeeding</li>
 <li>Active skin infection</li>
 <li>Allergy to components</li></ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Risks & side effects</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Temporary redness/swelling</li>
-<li>Mild headache or heaviness</li>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Temporary redness or swelling</li>
+<li>Mild headache/heaviness for 24–48h</li>
 <li>Rare asymmetry—usually correctable</li></ul>
       </div>
     </div>
   </section>
 
-  <!-- Aftercare / Results -->
   <section class="py-16">
     <div class="container grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Aftercare</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Stay upright 4h; avoid rubbing</li>
-<li>Skip vigorous exercise same day</li>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Stay upright for 4 hours; avoid rubbing area</li>
+<li>Skip intense exercise/sauna same day</li>
 <li>Daily SPF; gentle skincare</li></ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Results & maintenance</h3>
-        <p class="mt-3 text-neutral-700">Results start ~day 3, peak by day 7–14. Typical maintenance every 3–4 months depending on muscle activity.</p>
+        <p class="mt-3 text-neutral-700">Results build by day 7–14; typical maintenance every 3–4 months depending on muscle activity.</p>
       </div>
     </div>
   </section>
 
-  <!-- Before & After -->
   <section class="py-20 bg-neutral-950 text-white">
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
@@ -118,7 +112,7 @@ const seo = {"title": "Botox® / Neurotoxins | D‑Essence Wellness", "descripti
   </section>
 
   <style>
-    /* Small helpers for numbered list like Umbrel */
+    /* Helpers for numbered list + check icons (works without extra deps) */
     ol [class~="n"]::before, ol li::marker { content: none; }
     ol li { counter-increment: step; position: relative; padding-left: 2.5rem; }
     ol li .n { position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:9999px;
