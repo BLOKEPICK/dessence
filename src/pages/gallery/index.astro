@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+export const prerender = true;
 const NAV = [{"slug": "aerolase", "title": "Aerolase® Laser"}, {"slug": "waxing", "title": "Waxing"}, {"slug": "botox", "title": "Botox® / Neurotoxins"}, {"slug": "hydrafacial", "title": "Hydrafacial®"}, {"slug": "chemical-peels", "title": "Chemical Peels"}, {"slug": "microneedling", "title": "Microneedling"}];
 const seo = {
   title: "Before & After Gallery | D‑Essence Wellness",
@@ -45,15 +46,15 @@ const seo = {
   </script>
 
   <style>
-    .bagrid {{ display:grid; grid-template-columns: 1fr; gap: 1rem; }}
-    @media (min-width: 768px) {{ .bagrid {{ grid-template-columns: 1fr 1fr; }} }}
-    .pair {{ border-radius: 1.25rem; overflow:hidden; border:1px solid rgba(0,0,0,.08); background: #fff; }}
-    .pair .meta {{ display:flex; justify-content:space-between; padding:.5rem .75rem; font-size:.8rem; opacity:.8; }}
-    .badge {{ display:inline-flex; align-items:center; gap:.5rem; padding:.35rem .6rem; border-radius:9999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); font-size:.75rem; }}
-    .chip {{ display:inline-flex; align-items:center; gap:.5rem; padding:.35rem .6rem; border-radius:9999px; background:rgba(0,0,0,.06); border:1px solid rgba(0,0,0,.08); font-size:.75rem; }}
-    .catnav a {{ text-decoration:none; }}
-    .catnav .active {{ background: rgba(59,130,246,.12); border-color: rgba(59,130,246,.35); }}
-    .lift {{ transition: transform .2s ease, box-shadow .2s ease; }}
-    .lift:hover {{ transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,.06); }}
+    .bagrid { display:grid; grid-template-columns: 1fr; gap: 1rem; }
+    @media (min-width: 768px) { .bagrid { grid-template-columns: 1fr 1fr; } }
+    .pair { border-radius: 1.25rem; overflow:hidden; border:1px solid rgba(0,0,0,.08); background: #fff; }
+    .pair .meta { display:flex; justify-content:space-between; padding:.5rem .75rem; font-size:.8rem; opacity:.8; }
+    .badge { display:inline-flex; align-items:center; gap:.5rem; padding:.35rem .6rem; border-radius:9999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); font-size:.75rem; }
+    .chip { display:inline-flex; align-items:center; gap:.5rem; padding:.35rem .6rem; border-radius:9999px; background:rgba(0,0,0,.06); border:1px solid rgba(0,0,0,.08); font-size:.75rem; }
+    .catnav a { text-decoration:none; }
+    .catnav .active { background: rgba(59,130,246,.12); border-color: rgba(59,130,246,.35); }
+    .lift { transition: transform .2s ease, box-shadow .2s ease; }
+    .lift:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,.06); }
   </style>
 </BaseLayout>
