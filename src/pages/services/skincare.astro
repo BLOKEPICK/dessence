@@ -1,12 +1,116 @@
 ---
-import ServicePage from "@/components/service/ServicePage.astro";
-const title = "Skincare Consults";
-const subtitle = "Streamlined routines that work.";
-const intro = "Evidence\u2011based product recommendations and routines designed to work with your in\u2011clinic treatments.";
-const highlights = ["Protocol design for your goals", "Pairs with in\u2011clinic care", "Seasonal adjustments"];
-const idealFor = ["Concerns across tone, texture, clarity"];
-const notFor = ["Allergies to certain actives"];
-const sections = [{"heading": "How it works", "body": "Professional assessment and a customized plan ensure the treatment aligns with your goals, timeline, and medical history."}, {"heading": "What to expect", "body": "Comfort\u2011minded protocols, clear aftercare, and realistic timelines so you know exactly how the process works."}];
-const faqs = [{"q": "When will I see results?", "a": "Timelines vary by treatment. We\u2019ll set expectations during your consultation."}, {"q": "Is there downtime?", "a": "Most services involve minimal downtime; we\u2019ll tailor recommendations to your schedule."}];
+import SiteLayout from '../../layouts/SiteLayout.astro';
+const pageTitle = "Tratamiento";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Tratamiento",
+  "provider": {"@type": "Organization", "name": "D‑Essence Wellness"},
+  "areaServed": "Local",
+  "serviceType": "Estética / Médico-Estético"
+};
 ---
-<ServicePage {title} {subtitle} {intro} highlights={highlights} idealFor={idealFor} notFor={notFor} sections={sections} faqs={faqs} />
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
+
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <div class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white rounded-2xl p-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">Tratamiento</h1>
+        <p class="mt-4 text-lg opacity-90"></p>
+        <div class="mt-6">
+          <a href="/appointment" class="inline-block mt-6 px-6 py-3 rounded-2xl shadow hover:shadow-lg transition bg-black text-white">Agendar valoración</a>
+        </div>
+      </div>
+      <div class="rounded-2xl border p-6 bg-white bg-white/5 text-white/90">
+        <h2 class="text-xl font-semibold">Puntos clave</h2>
+        <ul class="mt-4 space-y-3">
+          
+        </ul>
+        <p class="text-sm mt-4 opacity-80">* La respuesta y duración pueden variar según el caso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="rounded-2xl border p-6 bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold">Cómo funciona</h2>
+      <p class="mt-4 leading-relaxed text-gray-700">Este tratamiento actúa mediante mecanismos basados en evidencia para alcanzar resultados visibles y naturales. Previo a la sesión realizamos una evaluación clínica para confirmar indicación, parámetros y expectativas realistas.</p>
+      <p class="mt-4 leading-relaxed text-gray-700">Nuestro enfoque prioriza armonía facial y salud de la piel; evitamos resultados exagerados y proponemos planes graduales cuando corresponde.</p>
+    </div>
+    <div class="rounded-2xl border p-6 bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold">Proceso — paso a paso</h2>
+      <ol class="list-decimal pl-5 mt-4 leading-relaxed text-gray-700">
+        <li>Consulta y fotografías clínicas.</li>
+        <li>Diseño de plan y consentimiento informado.</li>
+        <li>Procedimiento con medidas de confort.</li>
+        <li>Indicaciones de cuidado post‑tratamiento.</li>
+        <li>Control de seguimiento para evaluar evolución.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="rounded-2xl border p-6 bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold">Candidatos ideales</h2>
+      <ul class="list-disc pl-5 mt-4 leading-relaxed text-gray-700">
+        <li>Expectativas realistas y compromiso con el plan.</li>
+        <li>Condiciones de salud aptas confirmadas en consulta.</li>
+        <li>Disposición a seguir cuidados y mantenimiento.</li>
+      </ul>
+    </div>
+    <div class="rounded-2xl border p-6 bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold">Contraindicaciones</h2>
+      <ul class="list-disc pl-5 mt-4 leading-relaxed text-gray-700">
+        <li>Embarazo/lactancia (según el tratamiento).</li>
+        <li>Infecciones activas en la zona.</li>
+        <li>Alergias conocidas a componentes (cuando aplique).</li>
+      </ul>
+    </div>
+    <div class="rounded-2xl border p-6 bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold">Riesgos y efectos</h2>
+      <p class="mt-4 leading-relaxed text-gray-700">Todo procedimiento médico-estético puede implicar efectos temporales como enrojecimiento, inflamación o sensibilidad. Los riesgos significativos son poco frecuentes y se discuten previamente.</p>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="rounded-2xl border p-6 bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold">Cuidados posteriores</h2>
+      <ul class="list-disc pl-5 mt-4 leading-relaxed text-gray-700">
+        <li>Evitar calor intenso/sol el primer día.</li>
+        <li>No manipular la zona tratada.</li>
+        <li>Hidratación y fotoprotección diaria.</li>
+      </ul>
+    </div>
+    <div class="rounded-2xl border p-6 bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold">Resultados y mantenimiento</h2>
+      <p class="mt-4 leading-relaxed text-gray-700">Los resultados aparecen de forma inmediata o progresiva según el tratamiento. Para sostenerlos recomendamos controles y sesiones de mantenimiento personalizados.</p>
+      <a class="inline-block mt-6 px-6 py-3 rounded-2xl shadow hover:shadow-lg transition bg-black text-white" href="/appointment">Agenda tu cita</a>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <div class="rounded-2xl border p-6 bg-white">
+    <h2 class="text-2xl md:text-3xl font-semibold">Preguntas frecuentes</h2>
+    
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <h2 class="text-2xl md:text-3xl font-semibold mb-4">Tratamientos relacionados</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <a class="block rounded-2xl border p-6 bg-white hover:shadow-md transition" href="/services/facials"><h3 class="text-lg font-medium">Faciales personalizados</h3><p class="mt-4 leading-relaxed text-gray-700">Ver detalles</p></a>
+<a class="block rounded-2xl border p-6 bg-white hover:shadow-md transition" href="/services/chemical-peels"><h3 class="text-lg font-medium">Peelings químicos</h3><p class="mt-4 leading-relaxed text-gray-700">Ver detalles</p></a>
+  </div>
+</section>
+
+</SiteLayout>
+

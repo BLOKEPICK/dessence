@@ -1,48 +1,120 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 const pageTitle = "IPL Photofacial";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "IPL Photofacial",
+  "provider": {"@type": "Organization", "name": "D‑Essence Wellness"},
+  "areaServed": "Local",
+  "serviceType": "Estética / Médico-Estético"
+};
 ---
-<SiteLayout title={pageTitle}>
 
-<nav aria-label="breadcrumbs" class="text-sm opacity-80 mb-4">
-  <a href="/">Inicio</a> / <a href="/services">Servicios</a> / <span>IPL Photofacial</span>
-</nav>
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
 
-<section class="py-10 ">
-  <h1 class="text-3xl md:text-4xl font-semibold">IPL Photofacial</h1>
-  <p class="mt-4 leading-relaxed">Luz pulsada intensa para manchas, enrojecimiento y mejora global de tono.</p>
-  <a href="/appointment" class="inline-block mt-6 px-5 py-3 rounded-2xl shadow hover:shadow-lg transition">Agenda tu cita</a>
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <div class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white rounded-2xl p-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">IPL Photofacial</h1>
+        <p class="mt-4 text-lg opacity-90">Luz pulsada intensa para unificar tono, tratar manchas y reducir enrojecimiento.</p>
+        <div class="mt-6">
+          <a href="/appointment" class="inline-block mt-6 px-6 py-3 rounded-2xl shadow hover:shadow-lg transition bg-black text-white">Agendar valoración</a>
+        </div>
+      </div>
+      <div class="rounded-2xl border p-6 bg-white bg-white/5 text-white/90">
+        <h2 class="text-xl font-semibold">Puntos clave</h2>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-center gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Unifica tono</span></li>
+<li class="flex items-center gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Mínima inactividad</span></li>
+<li class="flex items-center gap-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Resultados en pocas sesiones</span></li>
+        </ul>
+        <p class="text-sm mt-4 opacity-80">* La respuesta y duración pueden variar según el caso.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="py-10 ">
+<section class="max-w-6xl mx-auto px-4 py-12">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <div>
-      <h2 class="text-2xl font-semibold mt-8">Beneficios</h2>
-      <ul class="list-disc pl-5 mt-3">
-        <li>Unifica el tono</li>
-<li>Mínima inactividad</li>
-<li>Tratamiento versátil</li>
+    <div class="rounded-2xl border p-6 bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold">Cómo funciona</h2>
+      <p class="mt-4 leading-relaxed text-gray-700">Este tratamiento actúa mediante mecanismos basados en evidencia para alcanzar resultados visibles y naturales. Previo a la sesión realizamos una evaluación clínica para confirmar indicación, parámetros y expectativas realistas.</p>
+      <p class="mt-4 leading-relaxed text-gray-700">Nuestro enfoque prioriza armonía facial y salud de la piel; evitamos resultados exagerados y proponemos planes graduales cuando corresponde.</p>
+    </div>
+    <div class="rounded-2xl border p-6 bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold">Proceso — paso a paso</h2>
+      <ol class="list-decimal pl-5 mt-4 leading-relaxed text-gray-700">
+        <li>Consulta y fotografías clínicas.</li>
+        <li>Diseño de plan y consentimiento informado.</li>
+        <li>Procedimiento con medidas de confort.</li>
+        <li>Indicaciones de cuidado post‑tratamiento.</li>
+        <li>Control de seguimiento para evaluar evolución.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="rounded-2xl border p-6 bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold">Candidatos ideales</h2>
+      <ul class="list-disc pl-5 mt-4 leading-relaxed text-gray-700">
+        <li>Expectativas realistas y compromiso con el plan.</li>
+        <li>Condiciones de salud aptas confirmadas en consulta.</li>
+        <li>Disposición a seguir cuidados y mantenimiento.</li>
       </ul>
     </div>
-    <div>
-      <h2 class="text-2xl font-semibold mt-8">¿Para quién es?</h2>
-      <p class="mt-4 leading-relaxed">Ideal para personas que buscan resultados visibles con mínima inactividad. Durante tu consulta evaluamos tu historial, expectativas y plan personalizado.</p>
+    <div class="rounded-2xl border p-6 bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold">Contraindicaciones</h2>
+      <ul class="list-disc pl-5 mt-4 leading-relaxed text-gray-700">
+        <li>Embarazo/lactancia (según el tratamiento).</li>
+        <li>Infecciones activas en la zona.</li>
+        <li>Alergias conocidas a componentes (cuando aplique).</li>
+      </ul>
+    </div>
+    <div class="rounded-2xl border p-6 bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold">Riesgos y efectos</h2>
+      <p class="mt-4 leading-relaxed text-gray-700">Todo procedimiento médico-estético puede implicar efectos temporales como enrojecimiento, inflamación o sensibilidad. Los riesgos significativos son poco frecuentes y se discuten previamente.</p>
     </div>
   </div>
 </section>
 
-<section class="py-10 ">
-  <h2 class="text-2xl font-semibold mt-8">Preguntas frecuentes</h2>
-  <details class='mt-4'><summary class='font-medium'>¿Sirve para rosácea?</summary><p class='mt-4 leading-relaxed'>Puede ayudar a enrojecimiento; evaluamos cada caso.</p></details>
-<details class='mt-4'><summary class='font-medium'>¿Resultados?</summary><p class='mt-4 leading-relaxed'>Mejoras visibles en pocas sesiones.</p></details>
-</section>
-
-<section class="py-10 ">
-  <div class="rounded-2xl p-6 border">
-    <h2 class="text-2xl font-semibold mt-8">Siguiente paso</h2>
-    <p class="mt-4 leading-relaxed">¿Listo(a) para comenzar? Agenda una valoración para confirmar si este tratamiento es el indicado para ti.</p>
-    <a href="/appointment" class="inline-block mt-6 px-5 py-3 rounded-2xl shadow hover:shadow-lg transition">Reservar valoración</a>
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="rounded-2xl border p-6 bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold">Cuidados posteriores</h2>
+      <ul class="list-disc pl-5 mt-4 leading-relaxed text-gray-700">
+        <li>Evitar calor intenso/sol el primer día.</li>
+        <li>No manipular la zona tratada.</li>
+        <li>Hidratación y fotoprotección diaria.</li>
+      </ul>
+    </div>
+    <div class="rounded-2xl border p-6 bg-white">
+      <h2 class="text-2xl md:text-3xl font-semibold">Resultados y mantenimiento</h2>
+      <p class="mt-4 leading-relaxed text-gray-700">Los resultados aparecen de forma inmediata o progresiva según el tratamiento. Para sostenerlos recomendamos controles y sesiones de mantenimiento personalizados.</p>
+      <a class="inline-block mt-6 px-6 py-3 rounded-2xl shadow hover:shadow-lg transition bg-black text-white" href="/appointment">Agenda tu cita</a>
+    </div>
   </div>
 </section>
+
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <div class="rounded-2xl border p-6 bg-white">
+    <h2 class="text-2xl md:text-3xl font-semibold">Preguntas frecuentes</h2>
+    <details class='mt-4'><summary class='font-medium'>¿Sirve para rosácea?</summary><p class='mt-4 leading-relaxed text-gray-700'>Puede ayudar a enrojecimiento; evaluamos cada caso.</p></details>
+<details class='mt-4'><summary class='font-medium'>¿Resultados?</summary><p class='mt-4 leading-relaxed text-gray-700'>Mejoras visibles en pocas sesiones.</p></details>
+<details class='mt-4'><summary class='font-medium'>¿Sirve para rosácea?</summary><p class='mt-4 leading-relaxed text-gray-700'>Puede ayudar a disminuir enrojecimiento y telangiectasias.</p></details>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-4 py-12">
+  <h2 class="text-2xl md:text-3xl font-semibold mb-4">Tratamientos relacionados</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <a class="block rounded-2xl border p-6 bg-white hover:shadow-md transition" href="/services/facials"><h3 class="text-lg font-medium">Faciales personalizados</h3><p class="mt-4 leading-relaxed text-gray-700">Ver detalles</p></a>
+<a class="block rounded-2xl border p-6 bg-white hover:shadow-md transition" href="/services/chemical-peels"><h3 class="text-lg font-medium">Peelings químicos</h3><p class="mt-4 leading-relaxed text-gray-700">Ver detalles</p></a>
+  </div>
+</section>
+
 </SiteLayout>
 
