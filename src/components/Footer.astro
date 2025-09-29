@@ -1,99 +1,102 @@
 ---
-const year = 2025;
-const address = "871 Blooming Grove Turnpike Suite 102, New Windsor, NY 12553";
 ---
-<footer class="relative mt-24 border-t border-black/10 bg-neutral-950 text-white">
-  <!-- CTA inside footer -->
-  <section class="container py-12">
-    <div class="mx-auto max-w-2xl text-center">
-      <h3 class="text-2xl sm:text-3xl font-semibold tracking-tight">Let’s plan your treatment</h3>
-      <p class="mt-3 text-[15px] leading-7 text-white/75">
-        Book a 20‑minute consultation—clear options, zero pressure, and a plan that fits you.
-      </p>
-      <div class="mt-6">
-        <a href="/appointment"
-           class="inline-flex items-center justify-center h-11 px-6 rounded-full bg-white text-neutral-900 text-sm font-medium shadow-sm
-                  hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40">
-          Book a Consultation
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <div class="container pt-6 pb-16">
-    <div class="grid gap-12 md:grid-cols-12">
-      <!-- Brand / mission -->
-      <div class="md:col-span-5">
-        <a href="/" class="inline-flex items-baseline gap-1.5">
-          <span class="text-white/95 font-semibold tracking-[0.06em] text-[18px]">D‑Essence</span>
-          <span class="text-white/70 font-medium tracking-wide text-[15px]">Wellness</span>
-        </a>
-        <p class="mt-4 max-w-sm text-sm leading-6 text-white/70">
-          Natural‑looking medical aesthetics with a calm, clinical approach.
-          Subtle balance, comfort, and evidence‑based care—so you look like you, on your best day.
-        </p>
-
-        <!-- Socials -->
-        <div class="mt-5 flex gap-3">
-          <a href="#" aria-label="Instagram" class="h-9 w-9 rounded-lg bg-white/10 hover:bg-white/20 transition flex items-center justify-center">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="opacity-90">
-              <rect x="3" y="3" width="18" height="18" rx="5" stroke-width="1.5"/>
-              <circle cx="12" cy="12" r="4" stroke-width="1.5"/>
-              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" />
-            </svg>
-          </a>
-          <a href="#" aria-label="Facebook" class="h-9 w-9 rounded-lg bg-white/10 hover:bg-white/20 transition flex items-center justify-center">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="opacity-90">
-              <path d="M13 10h2.5l.5-3H13V5.5C13 4.7 13.3 4 14.6 4H16V1.2C15.1 1.1 14.2 1 13.3 1 10.9 1 9.3 2.5 9.3 5.1V7H7v3h2.3v9h3.7v-9Z"/>
-            </svg>
-          </a>
-          <a href="#" aria-label="TikTok" class="h-9 w-9 rounded-lg bg-white/10 hover:bg-white/20 transition flex items-center justify-center">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="opacity-90">
-              <path d="M18 7.2a6.7 6.7 0 0 1-3.4-1.8V16a4.9 4.9 0 1 1-3.8-4.8V14a2.1 2.1 0 1 0 1.6 2V2h3a6.6 6.6 0 0 0 5.6 5.2V10a9 9 0 0 1-3-.8Z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Columns -->
-      <div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-10">
+<footer class="mt-24 border-t border-neutral-200/70 bg-neutral-50 text-neutral-900">
+  <!-- CTA band inside footer -->
+  <div class="bg-neutral-900 text-white">
+    <div class="mx-auto max-w-screen-xl px-4 py-10 md:py-12">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div>
-          <h4 class="text-sm font-semibold tracking-wide">Clinic</h4>
-          <ul class="mt-3 space-y-2 text-sm text-white/75">
-            <li class="leading-6">{address}</li>
-            <li><a class="hover:underline" href="/about">About</a></li>
-            <li><a class="hover:underline" href="/faq">FAQ</a></li>
-            <li><a class="hover:underline" href="/appointment">Book online</a></li>
-          </ul>
+          <p class="text-sm uppercase tracking-wide text-white/70">Start with clarity</p>
+          <h2 class="mt-1 text-2xl md:text-3xl font-semibold tracking-tight">Ready to feel more like you?</h2>
+          <p class="mt-2 text-white/80 max-w-2xl">Book a no‑pressure consultation. We’ll review your goals and outline a plan that fits your timeline and lifestyle.</p>
         </div>
-
-        <div>
-          <h4 class="text-sm font-semibold tracking-wide">Services</h4>
-          <ul class="mt-3 space-y-2 text-sm text-white/75">
-            <li><a class="hover:underline" href="/services/neurotoxins">Neurotoxins</a></li>
-            <li><a class="hover:underline" href="/services/juvederm-fillers">Juvederm Fillers</a></li>
-            <li><a class="hover:underline" href="/services/chemical-peels">Chemical Peels</a></li>
-            <li><a class="hover:underline" href="/services/microneedling">Microneedling</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-sm font-semibold tracking-wide">Resources</h4>
-          <ul class="mt-3 space-y-2 text-sm text-white/75">
-            <li><a class="hover:underline" href="/sitemap">Sitemap</a></li>
-            <li><a class="hover:underline" href="/privacy">Privacy policy</a></li>
-            <li><a class="hover:underline" href="/terms">Terms of service</a></li>
-            <li><a class="hover:underline" href="/contact">Contact</a></li>
-          </ul>
+        <div class="shrink-0">
+          <a href="/appointment" class="inline-flex items-center justify-center rounded-full bg-white text-neutral-900 px-6 py-3 font-medium hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 transition">
+            Book a Consultation
+          </a>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="border-t border-white/10">
-    <div class="container py-6 flex flex-col sm:flex-row items-center justify-between text-xs text-white/60">
-      <p>© {year} D‑Essence Wellness. All rights reserved.</p>
-      <p>Made with care in New Windsor, NY.</p>
+  <!-- Link columns -->
+  <div class="mx-auto max-w-screen-xl px-4 py-12 md:py-14">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <!-- Brand & location -->
+      <div>
+        <a href="/" class="inline-flex items-baseline gap-1.5">
+          <span class="text-neutral-900 font-semibold tracking-[0.06em] text-[15px]">D‑Essence</span>
+          <span class="text-neutral-600 font-medium tracking-wide text-[13px]">Wellness</span>
+        </a>
+        <p class="mt-4 text-sm leading-6 text-neutral-600">871 Blooming Grove Turnpike Suite 102<br/>New Windsor, NY 12553</p>
+        <div class="mt-4 flex items-center gap-4">
+          <a href="/results" class="text-sm font-medium text-neutral-900 hover:underline">Results</a>
+          <a href="/new-patients" class="text-sm font-medium text-neutral-900 hover:underline">New Patients</a>
+        </div>
+      </div>
+
+      <!-- Featured services -->
+      <nav aria-label="Featured" class="grid grid-cols-2 gap-6 sm:col-span-1">
+        <div>
+          <h3 class="text-sm font-semibold text-neutral-900">Injectables</h3>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a class="hover:underline" href="/services/neurotoxins">Neurotoxins</a></li>
+            <li><a class="hover:underline" href="/services/juvederm-fillers">Juvederm Fillers</a></li>
+            <li><a class="hover:underline" href="/services/skinvive">Skinvive</a></li>
+            <li><a class="hover:underline" href="/services/nefertiti-neck">Nefertiti Neck</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-neutral-900">Skin &amp; Laser</h3>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a class="hover:underline" href="/services/aerolase">Aerolase</a></li>
+            <li><a class="hover:underline" href="/services/chemical-peels">Chemical Peels</a></li>
+            <li><a class="hover:underline" href="/services/microneedling">Microneedling</a></li>
+            <li><a class="hover:underline" href="/services/facials">Facials</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Concerns -->
+      <nav aria-label="Concerns" class="">
+        <h3 class="text-sm font-semibold text-neutral-900">Concerns</h3>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:underline" href="/concerns/fine-lines-wrinkles">Fine lines &amp; wrinkles</a></li>
+          <li><a class="hover:underline" href="/concerns/volume-loss">Volume loss</a></li>
+          <li><a class="hover:underline" href="/concerns/texture-pores">Texture &amp; pores</a></li>
+          <li><a class="hover:underline" href="/concerns/hyperpigmentation">Hyperpigmentation</a></li>
+          <li><a class="hover:underline" href="/concerns/acne">Acne</a></li>
+          <li><a class="hover:underline" href="/concerns/neck-jawline">Neck &amp; jawline</a></li>
+          <li class="pt-1"><a class="inline-flex items-center gap-1 hover:underline font-medium" href="/concerns">Explore all →</a></li>
+        </ul>
+      </nav>
+
+      <!-- New Patients & About -->
+      <nav aria-label="Info">
+        <h3 class="text-sm font-semibold text-neutral-900">New Patients</h3>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:underline" href="/new-patients/what-to-expect">What to expect</a></li>
+          <li><a class="hover:underline" href="/new-patients/forms-policies">Forms &amp; policies</a></li>
+          <li><a class="hover:underline" href="/new-patients/pre-visit-prep">Pre-visit prep</a></li>
+          <li><a class="hover:underline" href="/new-patients/aftercare-library">Aftercare library</a></li>
+        </ul>
+
+        <h3 class="mt-6 text-sm font-semibold text-neutral-900">About</h3>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="hover:underline" href="/about/our-approach">Our approach</a></li>
+          <li><a class="hover:underline" href="/about/meet-the-provider">Meet the provider</a></li>
+          <li><a class="hover:underline" href="/about/location-hours">Location &amp; hours</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="mt-10 border-t border-neutral-200/70 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <p class="text-sm text-neutral-600">&copy; {new Date().getFullYear()} D‑Essence Wellness. All rights reserved.</p>
+      <div class="flex items-center gap-5 text-sm">
+        <a class="hover:underline text-neutral-700" href="/sitemap">Sitemap</a>
+        <a class="hover:underline text-neutral-700" href="/privacy">Privacy</a>
+        <a class="hover:underline text-neutral-700" href="/terms">Terms</a>
+      </div>
     </div>
   </div>
 </footer>
