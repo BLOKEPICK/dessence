@@ -1,0 +1,12 @@
+---
+import ServicePage from "@/components/service/ServicePage.astro";
+const title = "Vitamin Injections";
+const subtitle = "Targeted support, quick visit.";
+const intro = "Targeted vitamin support administered intramuscularly to complement wellness goals under professional guidance.";
+const highlights = ["Customized protocols", "Quick appointments", "Pairs with lifestyle changes"];
+const idealFor = ["Energy, wellness support"];
+const notFor = ["Allergies to ingredients"];
+const sections = [{"heading": "What to expect", "body": "Brief injections with minimal downtime. We\u2019ll review your history to ensure suitability."}];
+const faqs = [{"q": "Do I need labs first?", "a": "We\u2019ll discuss your history; labs may be recommended depending on your goals."}];
+---
+<ServicePage {title} {subtitle} {intro} highlights={highlights} idealFor={idealFor} notFor={notFor} sections={sections} faqs={faqs} />

@@ -1,0 +1,12 @@
+---
+import ServicePage from "@/components/service/ServicePage.astro";
+const title = "Waxing";
+const subtitle = "Smooth results with care.";
+const intro = "Professional hair removal with attention to skin comfort and hygiene.";
+const highlights = ["Efficient, precise hair removal", "Hygienic technique", "Pair with soothing aftercare"];
+const idealFor = ["Brows, lip, chin, body areas"];
+const notFor = ["Active irritation or broken skin"];
+const sections = [{"heading": "What to expect", "body": "Brief appointments. Some temporary redness is normal and fades quickly."}];
+const faqs = [{"q": "How long should hair be?", "a": "About a quarter inch is ideal for effective removal."}];
+---
+<ServicePage {title} {subtitle} {intro} highlights={highlights} idealFor={idealFor} notFor={notFor} sections={sections} faqs={faqs} />

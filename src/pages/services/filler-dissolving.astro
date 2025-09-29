@@ -1,0 +1,12 @@
+---
+import ServicePage from "@/components/service/ServicePage.astro";
+const title = "Filler Dissolving (Hyaluronidase)";
+const subtitle = "Refinement & correction.";
+const intro = "Correct or refine previous HA filler using an enzyme that dissolves hyaluronic acid safely and precisely.";
+const highlights = ["Targets lumps, migration, or overfill", "Precise dosing", "Returns to baseline quickly"];
+const idealFor = ["Unwanted HA filler results"];
+const notFor = ["Allergy to hyaluronidase"];
+const sections = [{"heading": "What to expect", "body": "Quick injections; swelling may occur temporarily as product breaks down."}];
+const faqs = [{"q": "Can I refill later?", "a": "Yes\u2014once settled, we can plan a conservative re\u2011fill if desired."}];
+---
+<ServicePage {title} {subtitle} {intro} highlights={highlights} idealFor={idealFor} notFor={notFor} sections={sections} faqs={faqs} />

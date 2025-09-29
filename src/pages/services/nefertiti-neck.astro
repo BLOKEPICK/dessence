@@ -1,0 +1,12 @@
+---
+import ServicePage from "@/components/service/ServicePage.astro";
+const title = "Nefertiti Neck (Toxin)";
+const subtitle = "Smoother neck definition.";
+const intro = "Strategic neurotoxin placement along the platysma and jawline to refine neck bands and support a more lifted lower face.";
+const highlights = ["Targets platysmal bands", "Refines jawline appearance", "Non\u2011surgical"];
+const idealFor = ["Neck banding, early jowling"];
+const notFor = ["Pregnancy/breastfeeding, neuromuscular disorders"];
+const sections = [{"heading": "How it works", "body": "Relaxing specific fibers reduces downward pull, complementing midface support."}];
+const faqs = [{"q": "Is it permanent?", "a": "No\u2014maintenance is typically every 3\u20134 months."}];
+---
+<ServicePage {title} {subtitle} {intro} highlights={highlights} idealFor={idealFor} notFor={notFor} sections={sections} faqs={faqs} />

@@ -1,0 +1,12 @@
+---
+import ServicePage from "@/components/service/ServicePage.astro";
+const title = "Skinvive\u2122 by Juv\u00e9derm";
+const subtitle = "Lit\u2011from\u2011within smoothness.";
+const intro = "Microdroplet hyaluronic acid injections to improve cheek skin smoothness and internal hydration for a subtle glow.";
+const highlights = ["Improves cheek skin quality", "Subtle, natural glow", "Minimal downtime"];
+const idealFor = ["Cheek skin smoothness and hydration"];
+const notFor = ["Pregnancy/breastfeeding, active infection"];
+const sections = [{"heading": "How it works", "body": "Microdroplets of HA are placed superficially to support skin quality without altering facial structure."}, {"heading": "What to expect", "body": "Tiny bumps are expected initially and settle within days. Glow improves over weeks."}];
+const faqs = [{"q": "How long does it last?", "a": "Typically up to 6 months; results vary."}];
+---
+<ServicePage {title} {subtitle} {intro} highlights={highlights} idealFor={idealFor} notFor={notFor} sections={sections} faqs={faqs} />

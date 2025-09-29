@@ -1,0 +1,12 @@
+---
+import ServicePage from "@/components/service/ServicePage.astro";
+const title = "Microneedling";
+const subtitle = "Collagen stimulation & refinement.";
+const intro = "Stimulate collagen with precise micro\u2011channels that promote smoother texture and refined pores.";
+const highlights = ["Improves texture and fine lines", "Minimal downtime", "Enhances topical absorption"];
+const idealFor = ["Texture, pores, scars, fine lines"];
+const notFor = ["Active acne flares, certain skin conditions"];
+const sections = [{"heading": "How it works", "body": "Controlled micro\u2011injuries trigger the skin\u2019s natural repair to support collagen and elastin."}, {"heading": "What to expect", "body": "Redness similar to a sunburn for 24\u201348 hours is common; improvements build over several weeks."}];
+const faqs = [{"q": "Is numbing used?", "a": "Topical numbing is typically applied for comfort."}];
+---
+<ServicePage {title} {subtitle} {intro} highlights={highlights} idealFor={idealFor} notFor={notFor} sections={sections} faqs={faqs} />

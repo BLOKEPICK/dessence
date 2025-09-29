@@ -1,0 +1,12 @@
+---
+import ServicePage from "@/components/service/ServicePage.astro";
+const title = "Facials";
+const subtitle = "Reset & glow.";
+const intro = "Relaxing yet effective treatments customized to your skin\u2019s current needs for clarity and comfort.";
+const highlights = ["Cleansing, exfoliation, hydration", "Customizable boosters", "Zero downtime"];
+const idealFor = ["Dehydration, congestion, dullness"];
+const notFor = ["Active infections, certain sensitivities"];
+const sections = [{"heading": "What to expect", "body": "60\u201375 minutes on average. We tailor products and steps to your skin condition and season."}];
+const faqs = [{"q": "How often should I book?", "a": "Many patients enjoy monthly or seasonal facials."}];
+---
+<ServicePage {title} {subtitle} {intro} highlights={highlights} idealFor={idealFor} notFor={notFor} sections={sections} faqs={faqs} />

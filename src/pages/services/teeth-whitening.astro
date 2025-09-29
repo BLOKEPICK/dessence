@@ -1,0 +1,12 @@
+---
+import ServicePage from "@/components/service/ServicePage.astro";
+const title = "Teeth Whitening";
+const subtitle = "Brighter smile, gentle approach.";
+const intro = "Professional whitening for a brighter smile with sensitivity\u2011minded protocols.";
+const highlights = ["Noticeable brightening", "Quick sessions", "Sensitivity\u2011aware options"];
+const idealFor = ["Surface stains, overall brightening"];
+const notFor = ["Severe enamel issues"];
+const sections = [{"heading": "What to expect", "body": "Consultation + in\u2011office session; brief sensitivity may occur and improves quickly."}];
+const faqs = [{"q": "How long do results last?", "a": "Depends on diet and habits; occasional touch\u2011ups help maintain brightness."}];
+---
+<ServicePage {title} {subtitle} {intro} highlights={highlights} idealFor={idealFor} notFor={notFor} sections={sections} faqs={faqs} />

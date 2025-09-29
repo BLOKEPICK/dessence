@@ -1,0 +1,12 @@
+---
+import ServicePage from "@/components/service/ServicePage.astro";
+const title = "Skincare Consults";
+const subtitle = "Streamlined routines that work.";
+const intro = "Evidence\u2011based product recommendations and routines designed to work with your in\u2011clinic treatments.";
+const highlights = ["Protocol design for your goals", "Pairs with in\u2011clinic care", "Seasonal adjustments"];
+const idealFor = ["Concerns across tone, texture, clarity"];
+const notFor = ["Allergies to certain actives"];
+const sections = [{"heading": "What to expect", "body": "We\u2019ll review your current routine, simplify where helpful, and recommend targeted actives."}];
+const faqs = [{"q": "Are products included?", "a": "We\u2019ll recommend options; purchases are optional."}];
+---
+<ServicePage {title} {subtitle} {intro} highlights={highlights} idealFor={idealFor} notFor={notFor} sections={sections} faqs={faqs} />

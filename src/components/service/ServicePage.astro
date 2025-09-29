@@ -1,0 +1,172 @@
+---
+/**
+ * ServicePage.astro
+ * Reusable layout for individual service pages.
+ * Props:
+ *  - title: string
+ *  - subtitle?: string
+ *  - intro: string
+ *  - highlights?: string[]
+ *  - idealFor?: string[]
+ *  - notFor?: string[]
+ *  - sections?: Array<{heading: string, body: string}>
+ *  - faqs?: Array<{q: string, a: string}>
+ *  - schemaType?: 'MedicalBusiness' | 'Service'
+ *  - ctaHref?: string
+ */
+const {
+  title,
+  subtitle = '',
+  intro,
+  highlights = [],
+  idealFor = [],
+  notFor = [],
+  sections = [],
+  faqs = [],
+  schemaType = 'Service',
+  ctaHref = '/appointment'
+} = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": schemaType === 'MedicalBusiness' ? "MedicalBusiness" : "Service",
+  "name": title,
+  "description": intro,
+  "areaServed": "New Windsor, NY",
+  "provider": {
+    "@type": "MedicalBusiness",
+    "name": "D‑Essence Wellness"
+  }
+};
+---
+<html lang="en">
+  <head>
+    <title>{title} | D‑Essence Wellness</title>
+    <meta name="description" content={intro} />
+    <script type="application/ld+json">{JSON.stringify(schema)}</script>
+  </head>
+  <body>
+    <!-- Hero / Heading -->
+    <header class="pt-28 md:pt-36 pb-10">
+      <div class="container">
+        <div class="max-w-3xl">
+          <p class="text-sm tracking-wide uppercase text-neutral-500">Services</p>
+          <h1 class="mt-2 text-3xl md:text-4xl font-semibold tracking-tight">{title}</h1>
+          {subtitle && <p class="mt-3 text-lg text-neutral-600">{subtitle}</p>}
+        </div>
+      </div>
+    </header>
+
+    <!-- Intro & CTA -->
+    <section class="pb-10">
+      <div class="container grid md:grid-cols-12 gap-10">
+        <div class="md:col-span-7">
+          <p class="text-[17px] leading-8 text-neutral-700">{intro}</p>
+          {highlights.length > 0 && (
+            <ul class="mt-6 grid sm:grid-cols-2 gap-2 text-sm">
+              {highlights.map((h) => (
+                <li class="flex items-start gap-2 p-3 rounded-xl border border-black/10 bg-white">
+                  <span class="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-neutral-900"></span>
+                  <span class="text-neutral-800">{h}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <aside class="md:col-span-5">
+          <div class="rounded-2xl border border-black/10 bg-white p-5 shadow-sm">
+            <h3 class="text-sm font-semibold tracking-wide">At a glance</h3>
+            <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+              {idealFor.length > 0 && (
+                <div>
+                  <div class="text-xs uppercase text-neutral-500">Ideal for</div>
+                  <ul class="mt-2 space-y-1 text-neutral-800">
+                    {idealFor.map((x) => <li>• {x}</li>)}
+                  </ul>
+                </div>
+              )}
+              {notFor.length > 0 && (
+                <div>
+                  <div class="text-xs uppercase text-neutral-500">Not ideal for</div>
+                  <ul class="mt-2 space-y-1 text-neutral-800">
+                    {notFor.map((x) => <li>• {x}</li>)}
+                  </ul>
+                </div>
+              )}
+            </div>
+            <a href={ctaHref}
+              class="mt-6 inline-flex h-11 px-6 rounded-full bg-neutral-900 text-white text-sm items-center justify-center hover:opacity-90">
+              Book a Consultation
+            </a>
+            <p class="mt-3 text-xs text-neutral-500">Personalized recommendations, no pressure.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Deep content sections -->
+    {sections.length > 0 && (
+      <section class="py-10 border-t border-black/10">
+        <div class="container grid md:grid-cols-12 gap-10">
+          <div class="md:col-span-8">
+            {sections.map((s) => (
+              <article class="mb-8">
+                <h2 class="text-xl font-semibold tracking-tight">{s.heading}</h2>
+                <p class="mt-3 text[16px] leading-7 text-neutral-700">{s.body}</p>
+              </article>
+            ))}
+          </div>
+          <aside class="md:col-span-4">
+            <div class="rounded-2xl border border-black/10 bg-white p-5 shadow-sm">
+              <h3 class="text-sm font-semibold tracking-wide">Pre‑ & aftercare</h3>
+              <ul class="mt-3 space-y-2 text-sm text-neutral-800">
+                <li>• Follow your provider’s specific instructions.</li>
+                <li>• Disclose medications, allergies, and recent procedures.</li>
+                <li>• Minor swelling or redness can be normal—monitor and contact us if concerned.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+    )}
+
+    <!-- FAQs -->
+    {faqs.length > 0 && (
+      <section class="py-12 border-t border-black/10">
+        <div class="container">
+          <h2 class="text-xl font-semibold tracking-tight">FAQs</h2>
+          <div class="mt-6 divide-y divide-black/10 bg-white border border-black/10 rounded-2xl">
+            {faqs.map((f) => (
+              <details class="p-5 open:bg-neutral-50">
+                <summary class="cursor-pointer text-[15px] font-medium text-neutral-900">{f.q}</summary>
+                <p class="mt-2 text-[15px] leading-7 text-neutral-700">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Related -->
+    <section class="py-12 border-t border-black/10">
+      <div class="container">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold tracking-tight">Related services</h2>
+          <a href="/services" class="text-sm underline decoration-black/30 hover:decoration-black">View all</a>
+        </div>
+        <div class="mt-5 grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+          <a href="/services/juvederm-fillers" class="p-4 rounded-xl border border-black/10 hover:bg-neutral-50">Juvederm Fillers</a>
+          <a href="/services/microneedling" class="p-4 rounded-xl border border-black/10 hover:bg-neutral-50">Microneedling</a>
+          <a href="/services/chemical-peels" class="p-4 rounded-xl border border-black/10 hover:bg-neutral-50">Chemical Peels</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legal note -->
+    <section class="py-8 border-t border-black/10">
+      <div class="container">
+        <p class="text-xs text-neutral-500">This page provides general information and is not a substitute for medical advice. Individual results vary.</p>
+      </div>
+    </section>
+  </body>
+</html>

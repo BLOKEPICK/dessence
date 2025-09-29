@@ -1,0 +1,12 @@
+---
+import ServicePage from "@/components/service/ServicePage.astro";
+const title = "Juvederm\u00ae Fillers";
+const subtitle = "Harmonize features with subtle volume.";
+const intro = "Restore volume, refine contours, and enhance balance using hyaluronic acid fillers tailored to your facial anatomy and goals.";
+const highlights = ["Precision contouring for lips, cheeks, jawline", "Immediate results with minimal downtime", "Hyaluronic acid\u2014versatile and reversible"];
+const idealFor = ["Lips, cheeks, nasolabial folds, jawline, chin"];
+const notFor = ["Active infection, pregnancy/breastfeeding"];
+const sections = [{"heading": "How it works", "body": "Hyaluronic acid gels integrate with your tissue to add volume or definition. Product selection and placement are customized for structure, softness, or projection as needed."}, {"heading": "What to expect", "body": "Sessions typically take 30\u201345 minutes. You may notice swelling or mild bruising for a few days. Results are immediate and settle within ~2 weeks."}];
+const faqs = [{"q": "How long do fillers last?", "a": "Depending on product and area, ~6\u201318 months. We\u2019ll recommend an interval for maintenance."}, {"q": "Is it reversible?", "a": "HA fillers can be dissolved with hyaluronidase if adjustment is needed."}];
+---
+<ServicePage {title} {subtitle} {intro} highlights={highlights} idealFor={idealFor} notFor={notFor} sections={sections} faqs={faqs} />

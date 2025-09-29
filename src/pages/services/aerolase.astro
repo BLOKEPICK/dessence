@@ -1,0 +1,12 @@
+---
+import ServicePage from "@/components/service/ServicePage.astro";
+const title = "Aerolase\u00ae Laser";
+const subtitle = "Clearer, calmer skin with minimal downtime.";
+const intro = "Advanced laser technology designed to address redness, discoloration, acne, and overall clarity with minimal discomfort.";
+const highlights = ["Targets redness & pigmentation", "Well\u2011tolerated, versatile settings", "Pairs with skincare protocols"];
+const idealFor = ["Redness, pigmentation, acne, overall clarity"];
+const notFor = ["Recent sun exposure, light\u2011sensitive meds"];
+const sections = [{"heading": "How it works", "body": "Precise laser energy targets specific chromophores while prioritizing comfort and safety."}, {"heading": "What to expect", "body": "Sessions are brief. Mild redness may occur and usually subsides quickly."}];
+const faqs = [{"q": "How many treatments?", "a": "Often performed in a short series; we\u2019ll tailor frequency to your goals."}];
+---
+<ServicePage {title} {subtitle} {intro} highlights={highlights} idealFor={idealFor} notFor={notFor} sections={sections} faqs={faqs} />
