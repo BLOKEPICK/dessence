@@ -2,11 +2,11 @@
 /**
  * BeforeAfterShowcase.astro
  * Hero-style "Before & After" section for the homepage.
- * Uses a dark theme with subtle gold-accent outline to match premium aesthetic.
+ * Dark theme with subtle gold-accent outline; image is a placeholder.
  */
 export const prerender = true;
 
-// EDIT THESE TO CUSTOMIZE
+// QUICK CONFIG
 const IMAGE = "https://images.unsplash.com/photo-1544717305-996b815c338c?auto=format&fit=crop&w=1600&q=70";
 const TITLE = "BEFORE & AFTER";
 const SUB   = "Explore real, curated outcomes by treatment categories like Aerolase, Botox, and more.";
@@ -14,7 +14,7 @@ const CTA   = { label: "BEFORE & AFTER GALLERY", href: "/gallery" };
 ---
 
 <section class="relative bg-neutral-950 text-white">
-  <!-- soft radial glow accents -->
+  <!-- glow accents -->
   <div class="absolute inset-0 -z-10 pointer-events-none">
     <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,.55),transparent_60%)]"></div>
     <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(236,72,153,.45),transparent_60%)]"></div>
