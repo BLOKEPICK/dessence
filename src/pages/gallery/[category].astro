@@ -34,9 +34,7 @@ const seo = {
         </div>
         <a href="/gallery" class="hidden md:inline-flex btn btn-outline">All categories</a>
       </div>
-      <div class="mt-6 flex flex-wrap gap-2 catnav">
-        <a href="/gallery/aerolase" class="badge">{'title': 'Aerolase® Laser', 'pairs': [{'before': 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1200&q=60', 'caption': 'Tone & clarity improvement (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1544717305-996b815c338c?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=1200&q=60', 'caption': 'Redness reduction (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1512251526259-9a6dffb04e0a?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1508259035339-1f1f61817f97?auto=format&fit=crop&w=1200&q=60', 'caption': 'Texture smoothing (illustrative)'}]}</a><a href="/gallery/waxing" class="badge">{'title': 'Waxing', 'pairs': [{'before': 'https://images.unsplash.com/photo-1505575972945-2967372d5d4b?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=60', 'caption': 'Hair removal (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1512499617640-c2f999098c67?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?auto=format&fit=crop&w=1200&q=60', 'caption': 'Smooth finish (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=1200&q=60', 'caption': 'Clean contours (illustrative)'}]}</a><a href="/gallery/botox" class="badge">{'title': 'Botox® / Neurotoxins', 'pairs': [{'before': 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1200&q=60', 'caption': 'Forehead lines softening (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=60', 'caption': 'Crow’s feet refinement (illustrative)'}]}</a><a href="/gallery/hydrafacial" class="badge">{'title': 'Hydrafacial®', 'pairs': [{'before': 'https://images.unsplash.com/photo-1537151625747-768eb6cf92b6?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=60', 'caption': 'Glow & hydration (illustrative)'}]}</a><a href="/gallery/chemical-peels" class="badge">{'title': 'Chemical Peels', 'pairs': [{'before': 'https://images.unsplash.com/photo-1542596592-a61d2f3ff64c?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=60', 'caption': 'Even tone & texture (illustrative)'}]}</a><a href="/gallery/microneedling" class="badge">{'title': 'Microneedling', 'pairs': [{'before': 'https://images.unsplash.com/photo-1537151625747-768eb6cf92b6?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1200&q=60', 'caption': 'Refined pores & texture (illustrative)'}]}</a>
-      </div>
+      <div class="mt-6 flex flex-wrap gap-2 catnav" set:html={'<a href="/gallery/aerolase" class="badge">Aerolase® Laser</a><a href="/gallery/waxing" class="badge">Waxing</a><a href="/gallery/botox" class="badge">Botox® / Neurotoxins</a><a href="/gallery/hydrafacial" class="badge">Hydrafacial®</a><a href="/gallery/chemical-peels" class="badge">Chemical Peels</a><a href="/gallery/microneedling" class="badge">Microneedling</a>'}></div>
     </div>
   </section>
 
@@ -44,14 +42,14 @@ const seo = {
     <div class="container">
       <div class="bagrid">
         {data.pairs.map((p, i) => (
-          <figure class="pair" key={i}>
+          <figure class="pair">
             <div class="grid grid-cols-2">
-              <div><img src={p.before} alt="Before example" loading="lazy" class="w-full h-full object-cover"/></div>
-              <div><img src={p.after} alt="After example" loading="lazy" class="w-full h-full object-cover"/></div>
+              <div><img src={'}}p.before{{'} alt="Before example" loading="lazy" class="w-full h-full object-cover"/></div>
+              <div><img src={'}}p.after{{'} alt="After example" loading="lazy" class="w-full h-full object-cover"/></div>
             </div>
             <figcaption class="meta">
               <span class="chip">Before</span>
-              <span class="text-neutral-600">{p.caption}</span>
+              <span class="text-neutral-600">{'}}p.caption{{'}</span>
               <span class="chip">After</span>
             </figcaption>
           </figure>
@@ -70,6 +68,8 @@ const seo = {
   .chip { display:inline-flex; align-items:center; gap:.5rem; padding:.35rem .6rem; border-radius:9999px; background:rgba(0,0,0,.06); border:1px solid rgba(0,0,0,.08); font-size:.75rem; }
   .catnav a { text-decoration:none; }
   .catnav .active { background: rgba(59,130,246,.12); border-color: rgba(59,130,246,.35); }
+  .lift { transition: transform .2s ease, box-shadow .2s ease; }
+  .lift:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,.06); }
 </style>
 
 </BaseLayout>
