@@ -1,8 +1,8 @@
-<!-- BUILD: 2025-09-29 17:59:28 -->
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 const seo = {"title": "Vitamin Injections | D‑Essence Wellness", "description": "Quick visits with formulations selected to complement lifestyle and needs.", "canonical": "/services/vitamin-injections", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Vitamin Injections", "description": "Quick visits with formulations selected to complement lifestyle and needs.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/vitamin-injections"}};
 ---
+
 <BaseLayout seo={seo}>
   <section class="relative overflow-hidden bg-neutral-950 text-white">
     <div class="absolute inset-0 -z-10">
@@ -37,7 +37,7 @@ const seo = {"title": "Vitamin Injections | D‑Essence Wellness", "description"
             <ul class="mt-3 space-y-2 [counter-reset:step]">
               <li class='flex gap-3'><span class='i'>✓</span><span>Quick appointments</span></li>
 <li class='flex gap-3'><span class='i'>✓</span><span>Personalized formulations</span></li>
-<li class='flex gap-3'><span class='i'>✓</span><span>Adjunct to healthy habits</span></li>
+<li class='flex gap-3'><span class='i'>✓</span><span>Adjunct to healthy lifestyle</span></li>
             </ul>
           </div>
         </div>
@@ -113,7 +113,6 @@ const seo = {"title": "Vitamin Injections | D‑Essence Wellness", "description"
   </section>
 
   <style>
-    /* Helpers for numbered list + check icons (works without extra deps) */
     ol [class~="n"]::before, ol li::marker { content: none; }
     ol li { counter-increment: step; position: relative; padding-left: 2.5rem; }
     ol li .n { position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:9999px;

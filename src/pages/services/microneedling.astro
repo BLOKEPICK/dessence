@@ -1,8 +1,8 @@
-<!-- BUILD: 2025-09-29 17:59:28 -->
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 const seo = {"title": "Microneedling | D‑Essence Wellness", "description": "A proven way to boost collagen with minimal downtime; often paired with PRP or targeted actives.", "canonical": "/services/microneedling", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Microneedling", "description": "A proven way to boost collagen with minimal downtime; often paired with PRP or targeted actives.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/microneedling"}};
 ---
+
 <BaseLayout seo={seo}>
   <section class="relative overflow-hidden bg-neutral-950 text-white">
     <div class="absolute inset-0 -z-10">
@@ -51,7 +51,7 @@ const seo = {"title": "Microneedling | D‑Essence Wellness", "description": "A 
         <h2 class="text-2xl font-semibold">Step‑by‑step process</h2>
         <ol class="mt-4 grid gap-4 md:grid-cols-2 [counter-reset:step]">
           <li><span class='n'></span>Assessment and topical anesthetic</li>
-<li><span class='n'></span>Depth selection per area</li>
+<li><span class='n'></span>Depth selection per area and concern</li>
 <li><span class='n'></span>Systematic passes with sterile device</li>
 <li><span class='n'></span>Soothing finish and post‑care</li>
         </ol>
@@ -64,8 +64,8 @@ const seo = {"title": "Microneedling | D‑Essence Wellness", "description": "A 
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Ideal candidates</h3>
         <ul class="mt-3 list-disc pl-5 space-y-1"><li>Texture irregularities, fine lines, pores</li>
-<li>Mild acne scarring</li>
-<li>Prefer gradual, natural renewal</li></ul>
+<li>Mild to moderate acne scarring</li>
+<li>Preference for gradual, natural renewal</li></ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Contraindications</h3>
@@ -77,7 +77,7 @@ const seo = {"title": "Microneedling | D‑Essence Wellness", "description": "A 
         <h3 class="text-xl font-semibold">Risks & side effects</h3>
         <ul class="mt-3 list-disc pl-5 space-y-1"><li>Redness for 24–48h</li>
 <li>Dryness or flaking</li>
-<li>Rare pinpoint bleeding</li></ul>
+<li>Rare pinpoint bleeding or bruising</li></ul>
       </div>
     </div>
   </section>
@@ -87,12 +87,12 @@ const seo = {"title": "Microneedling | D‑Essence Wellness", "description": "A 
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Aftercare</h3>
         <ul class="mt-3 list-disc pl-5 space-y-1"><li>Avoid makeup 24h</li>
-<li>Hydration and barrier support</li>
+<li>Gentle hydration and barrier support</li>
 <li>SPF; avoid hot environments same day</li></ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Results & maintenance</h3>
-        <p class="mt-3 text-neutral-700">Texture and tone steadily improve over a series (typically 3–6 sessions).</p>
+        <p class="mt-3 text-neutral-700">Texture and tone steadily improve over a series (typically 3–6 sessions) with lasting benefits.</p>
       </div>
     </div>
   </section>
@@ -113,7 +113,6 @@ const seo = {"title": "Microneedling | D‑Essence Wellness", "description": "A 
   </section>
 
   <style>
-    /* Helpers for numbered list + check icons (works without extra deps) */
     ol [class~="n"]::before, ol li::marker { content: none; }
     ol li { counter-increment: step; position: relative; padding-left: 2.5rem; }
     ol li .n { position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:9999px;

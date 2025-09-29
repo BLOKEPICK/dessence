@@ -1,8 +1,8 @@
-<!-- BUILD: 2025-09-29 17:59:28 -->
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 const seo = {"title": "Hair Restoration | D‑Essence Wellness", "description": "Aligns with natural growth cycles for realistic, sustained gains in thickness.", "canonical": "/services/hair-restoration", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Hair Restoration", "description": "Aligns with natural growth cycles for realistic, sustained gains in thickness.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/hair-restoration"}};
 ---
+
 <BaseLayout seo={seo}>
   <section class="relative overflow-hidden bg-neutral-950 text-white">
     <div class="absolute inset-0 -z-10">
@@ -92,7 +92,7 @@ const seo = {"title": "Hair Restoration | D‑Essence Wellness", "description": 
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Results & maintenance</h3>
-        <p class="mt-3 text-neutral-700">Noticeable thickening typically from 8–12 weeks onward; maintenance helps preserve gains.</p>
+        <p class="mt-3 text-neutral-700">Noticeable thickening typically from 8–12 weeks onward; continued maintenance helps preserve gains.</p>
       </div>
     </div>
   </section>
@@ -113,7 +113,6 @@ const seo = {"title": "Hair Restoration | D‑Essence Wellness", "description": 
   </section>
 
   <style>
-    /* Helpers for numbered list + check icons (works without extra deps) */
     ol [class~="n"]::before, ol li::marker { content: none; }
     ol li { counter-increment: step; position: relative; padding-left: 2.5rem; }
     ol li .n { position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:9999px;

@@ -1,8 +1,8 @@
-<!-- BUILD: 2025-09-29 17:59:28 -->
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 const seo = {"title": "PRP / PRF | D‑Essence Wellness", "description": "Harness your body’s biology to encourage natural repair and rejuvenation.", "canonical": "/services/prp-prf", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "PRP / PRF", "description": "Harness your body’s biology to encourage natural repair and rejuvenation.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/prp-prf"}};
 ---
+
 <BaseLayout seo={seo}>
   <section class="relative overflow-hidden bg-neutral-950 text-white">
     <div class="absolute inset-0 -z-10">
@@ -50,7 +50,7 @@ const seo = {"title": "PRP / PRF | D‑Essence Wellness", "description": "Harnes
       <div class="rounded-3xl border p-8 bg-white">
         <h2 class="text-2xl font-semibold">Step‑by‑step process</h2>
         <ol class="mt-4 grid gap-4 md:grid-cols-2 [counter-reset:step]">
-          <li><span class='n'></span>Candidacy review and draw</li>
+          <li><span class='n'></span>Candidacy review and blood draw</li>
 <li><span class='n'></span>Preparation of PRP/PRF</li>
 <li><span class='n'></span>Targeted application (skin/scalp)</li>
 <li><span class='n'></span>Series plan as indicated</li>
@@ -76,8 +76,8 @@ const seo = {"title": "PRP / PRF | D‑Essence Wellness", "description": "Harnes
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Risks & side effects</h3>
         <ul class="mt-3 list-disc pl-5 space-y-1"><li>Temporary swelling/tenderness</li>
-<li>Bruising at draw sites</li>
-<li>Rare dizziness—rest and hydration</li></ul>
+<li>Bruising at draw or injection sites</li>
+<li>Rare dizziness post‑draw—rest and hydration</li></ul>
       </div>
     </div>
   </section>
@@ -113,7 +113,6 @@ const seo = {"title": "PRP / PRF | D‑Essence Wellness", "description": "Harnes
   </section>
 
   <style>
-    /* Helpers for numbered list + check icons (works without extra deps) */
     ol [class~="n"]::before, ol li::marker { content: none; }
     ol li { counter-increment: step; position: relative; padding-left: 2.5rem; }
     ol li .n { position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:9999px;

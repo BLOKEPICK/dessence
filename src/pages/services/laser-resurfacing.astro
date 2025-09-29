@@ -1,8 +1,8 @@
-<!-- BUILD: 2025-09-29 17:59:28 -->
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 const seo = {"title": "Laser Resurfacing | D‑Essence Wellness", "description": "Tailored intensity per zone and downtime tolerance; significant results with proper aftercare.", "canonical": "/services/laser-resurfacing", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Laser Resurfacing", "description": "Tailored intensity per zone and downtime tolerance; significant results with proper aftercare.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/laser-resurfacing"}};
 ---
+
 <BaseLayout seo={seo}>
   <section class="relative overflow-hidden bg-neutral-950 text-white">
     <div class="absolute inset-0 -z-10">
@@ -13,7 +13,7 @@ const seo = {"title": "Laser Resurfacing | D‑Essence Wellness", "description":
       <div class="max-w-3xl">
         <span class="inline-flex items-center gap-2 rounded-full bg-white/5 ring-1 ring-white/10 px-3 py-1 text-xs tracking-wide uppercase">Treatment</span>
         <h1 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tight">Laser Resurfacing</h1>
-        <p class="mt-4 text-lg text-neutral-300">Fractional laser renews skin to improve fine lines, discoloration, and texture with precision.</p>
+        <p class="mt-4 text-lg text-neutral-300">Fractional laser renews the skin to improve fine lines, discoloration, and texture with precision.</p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="/appointment" class="btn btn-primary">Book consultation</a>
           <a href="tel:+17163038963" class="btn btn-outline">Call clinic</a>
@@ -75,7 +75,7 @@ const seo = {"title": "Laser Resurfacing | D‑Essence Wellness", "description":
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Risks & side effects</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Redness, swelling, crusting (by intensity)</li>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Redness, swelling, crusting depending on intensity</li>
 <li>PIH risk—strict SPF essential</li>
 <li>Rare prolonged erythema</li></ul>
       </div>
@@ -86,13 +86,13 @@ const seo = {"title": "Laser Resurfacing | D‑Essence Wellness", "description":
     <div class="container grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Aftercare</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Vinegar soaks if directed</li>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Vinegar soaks/cleanses if directed</li>
 <li>Emollient barrier and gentle care</li>
 <li>Sun avoidance until healed</li></ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Results & maintenance</h3>
-        <p class="mt-3 text-neutral-700">Smoother texture and more even tone after healing; stronger settings = greater change.</p>
+        <p class="mt-3 text-neutral-700">Smoother texture and more even tone after healing; stronger settings achieve greater change with more downtime.</p>
       </div>
     </div>
   </section>
@@ -113,7 +113,6 @@ const seo = {"title": "Laser Resurfacing | D‑Essence Wellness", "description":
   </section>
 
   <style>
-    /* Helpers for numbered list + check icons (works without extra deps) */
     ol [class~="n"]::before, ol li::marker { content: none; }
     ol li { counter-increment: step; position: relative; padding-left: 2.5rem; }
     ol li .n { position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:9999px;

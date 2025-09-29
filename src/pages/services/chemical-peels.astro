@@ -1,8 +1,8 @@
-<!-- BUILD: 2025-09-29 17:59:28 -->
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 const seo = {"title": "Chemical Peels | D‑Essence Wellness", "description": "From light brightening to deeper rejuvenation, we match depth and acids to your goals and lifestyle.", "canonical": "/services/chemical-peels", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Chemical Peels", "description": "From light brightening to deeper rejuvenation, we match depth and acids to your goals and lifestyle.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/chemical-peels"}};
 ---
+
 <BaseLayout seo={seo}>
   <section class="relative overflow-hidden bg-neutral-950 text-white">
     <div class="absolute inset-0 -z-10">
@@ -50,7 +50,7 @@ const seo = {"title": "Chemical Peels | D‑Essence Wellness", "description": "F
       <div class="rounded-3xl border p-8 bg-white">
         <h2 class="text-2xl font-semibold">Step‑by‑step process</h2>
         <ol class="mt-4 grid gap-4 md:grid-cols-2 [counter-reset:step]">
-          <li><span class='n'></span>Assessment and contraindication review</li>
+          <li><span class='n'></span>Skin assessment and contraindication review</li>
 <li><span class='n'></span>Preparation and degreasing</li>
 <li><span class='n'></span>Layered application with timing control</li>
 <li><span class='n'></span>Neutralization and post‑care plan</li>
@@ -65,17 +65,17 @@ const seo = {"title": "Chemical Peels | D‑Essence Wellness", "description": "F
         <h3 class="text-xl font-semibold">Ideal candidates</h3>
         <ul class="mt-3 list-disc pl-5 space-y-1"><li>Sun spots, melasma (case‑by‑case)</li>
 <li>Acne marks and dullness</li>
-<li>Motivated for sun protection</li></ul>
+<li>Motivated for sun protection and aftercare</li></ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Contraindications</h3>
         <ul class="mt-3 list-disc pl-5 space-y-1"><li>Active infections or dermatitis</li>
-<li>Recent isotretinoin—timing</li>
+<li>Recent isotretinoin—timing assessment</li>
 <li>Pregnancy (certain acids avoided)</li></ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Risks & side effects</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Redness/flaking/peeling</li>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Redness, flaking, or peeling</li>
 <li>Temporary darkening before lightening</li>
 <li>Sun sensitivity—SPF mandatory</li></ul>
       </div>
@@ -87,12 +87,12 @@ const seo = {"title": "Chemical Peels | D‑Essence Wellness", "description": "F
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Aftercare</h3>
         <ul class="mt-3 list-disc pl-5 space-y-1"><li>No picking/peeling manually</li>
-<li>Barrier repair and moisturize</li>
+<li>Moisturize and barrier repair</li>
 <li>Strict sun protection</li></ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Results & maintenance</h3>
-        <p class="mt-3 text-neutral-700">Brighter tone and smoother texture within days to weeks; series amplify change.</p>
+        <p class="mt-3 text-neutral-700">Brighter tone and smoother texture within days to weeks; series produce more dramatic changes.</p>
       </div>
     </div>
   </section>
@@ -113,7 +113,6 @@ const seo = {"title": "Chemical Peels | D‑Essence Wellness", "description": "F
   </section>
 
   <style>
-    /* Helpers for numbered list + check icons (works without extra deps) */
     ol [class~="n"]::before, ol li::marker { content: none; }
     ol li { counter-increment: step; position: relative; padding-left: 2.5rem; }
     ol li .n { position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:9999px;

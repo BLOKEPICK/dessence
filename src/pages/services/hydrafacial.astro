@@ -1,8 +1,8 @@
-<!-- BUILD: 2025-09-29 17:59:28 -->
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 const seo = {"title": "Hydrafacial® / Deep Cleanse | D‑Essence Wellness", "description": "Vortex technology gently clears pores while infusing targeted serums for hydration and clarity.", "canonical": "/services/hydrafacial", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Hydrafacial® / Deep Cleanse", "description": "Vortex technology gently clears pores while infusing targeted serums for hydration and clarity.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/hydrafacial"}};
 ---
+
 <BaseLayout seo={seo}>
   <section class="relative overflow-hidden bg-neutral-950 text-white">
     <div class="absolute inset-0 -z-10">
@@ -50,7 +50,7 @@ const seo = {"title": "Hydrafacial® / Deep Cleanse | D‑Essence Wellness", "de
       <div class="rounded-3xl border p-8 bg-white">
         <h2 class="text-2xl font-semibold">Step‑by‑step process</h2>
         <ol class="mt-4 grid gap-4 md:grid-cols-2 [counter-reset:step]">
-          <li><span class='n'></span>Assessment and tip selection</li>
+          <li><span class='n'></span>Skin assessment and tip selection</li>
 <li><span class='n'></span>Cleansing and exfoliation</li>
 <li><span class='n'></span>Painless extraction with vortex technology</li>
 <li><span class='n'></span>Targeted serums and hydration</li>
@@ -69,9 +69,9 @@ const seo = {"title": "Hydrafacial® / Deep Cleanse | D‑Essence Wellness", "de
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Contraindications</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Open lesions or infection</li>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Open lesions or active infection</li>
 <li>Allergy to specific solutions</li>
-<li>Recent strong peels/laser</li></ul>
+<li>Recent aggressive peels/laser</li></ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Risks & side effects</h3>
@@ -92,7 +92,7 @@ const seo = {"title": "Hydrafacial® / Deep Cleanse | D‑Essence Wellness", "de
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Results & maintenance</h3>
-        <p class="mt-3 text-neutral-700">Smoother texture and refined pores immediately; maintain monthly.</p>
+        <p class="mt-3 text-neutral-700">Smoother texture and refined pores immediately after treatment; maintain monthly.</p>
       </div>
     </div>
   </section>
@@ -113,7 +113,6 @@ const seo = {"title": "Hydrafacial® / Deep Cleanse | D‑Essence Wellness", "de
   </section>
 
   <style>
-    /* Helpers for numbered list + check icons (works without extra deps) */
     ol [class~="n"]::before, ol li::marker { content: none; }
     ol li { counter-increment: step; position: relative; padding-left: 2.5rem; }
     ol li .n { position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:9999px;

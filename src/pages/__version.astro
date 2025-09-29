@@ -1,15 +1,10 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-const seo = {"title":"Build version","description":"Deployment verification"};
-const built = "2025-09-29 18:09:15";
+import BaseLayout from '../layouts/BaseLayout.astro' if True else '';
+const built = "2025-09-29 18:19:27";
 ---
-<BaseLayout seo={seo}>
-  <section class="py-16">
-    <div class="container">
-      <h1 class="text-3xl font-semibold">Current Build</h1>
-      <p class="mt-2">Built at: <strong>{built}</strong></p>
-      <p class="mt-2">Marker: <code>ROUTE-FIX-1759169355</code></p>
-      <p class="mt-6 text-neutral-700">If you can see this page at <code>/__version</code>, your deploy is using the latest code.</p>
-    </div>
-  </section>
+<BaseLayout>
+<section class="py-16"><div class="container">
+  <h1 class="text-3xl font-semibold">Current Build</h1>
+  <p class="mt-2">Unique services build at: <strong>{built}</strong></p>
+</div></section>
 </BaseLayout>

@@ -1,8 +1,8 @@
-<!-- BUILD: 2025-09-29 17:59:28 -->
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 const seo = {"title": "IPL Photofacial | D‑Essence Wellness", "description": "Targets both brown and red chromophores with minimal downtime.", "canonical": "/services/ipl-photofacial", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "IPL Photofacial", "description": "Targets both brown and red chromophores with minimal downtime.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/ipl-photofacial"}};
 ---
+
 <BaseLayout seo={seo}>
   <section class="relative overflow-hidden bg-neutral-950 text-white">
     <div class="absolute inset-0 -z-10">
@@ -63,7 +63,7 @@ const seo = {"title": "IPL Photofacial | D‑Essence Wellness", "description": "
     <div class="container grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Ideal candidates</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Sun damage, redness, visible vessels</li>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Sun damage, redness, or visible vessels</li>
 <li>Uneven tone without major downtime</li>
 <li>Realistic expectations for series</li></ul>
       </div>
@@ -71,12 +71,12 @@ const seo = {"title": "IPL Photofacial | D‑Essence Wellness", "description": "
         <h3 class="text-xl font-semibold">Contraindications</h3>
         <ul class="mt-3 list-disc pl-5 space-y-1"><li>Recent tan or self‑tanner</li>
 <li>Photosensitizing meds</li>
-<li>Active infection</li></ul>
+<li>Active infections or open wounds</li></ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Risks & side effects</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Temporary redness/warmth</li>
-<li>Darkening of spots before flaking</li>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Temporary redness and warmth</li>
+<li>Darkening of spots before flaking off</li>
 <li>Rare swelling or irritation</li></ul>
       </div>
     </div>
@@ -92,7 +92,7 @@ const seo = {"title": "IPL Photofacial | D‑Essence Wellness", "description": "
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Results & maintenance</h3>
-        <p class="mt-3 text-neutral-700">Spots typically flake within a week; redness reduces over sessions.</p>
+        <p class="mt-3 text-neutral-700">Brown spots typically flake within a week; redness diminishes over sessions for clearer complexion.</p>
       </div>
     </div>
   </section>
@@ -113,7 +113,6 @@ const seo = {"title": "IPL Photofacial | D‑Essence Wellness", "description": "
   </section>
 
   <style>
-    /* Helpers for numbered list + check icons (works without extra deps) */
     ol [class~="n"]::before, ol li::marker { content: none; }
     ol li { counter-increment: step; position: relative; padding-left: 2.5rem; }
     ol li .n { position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:9999px;

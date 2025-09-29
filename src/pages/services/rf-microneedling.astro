@@ -1,8 +1,8 @@
-<!-- BUILD: 2025-09-29 17:59:28 -->
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 const seo = {"title": "RF Microneedling | D‑Essence Wellness", "description": "Adjustable depth and energy for targeted tightening and remodeling.", "canonical": "/services/rf-microneedling", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "RF Microneedling", "description": "Adjustable depth and energy for targeted tightening and remodeling.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/rf-microneedling"}};
 ---
+
 <BaseLayout seo={seo}>
   <section class="relative overflow-hidden bg-neutral-950 text-white">
     <div class="absolute inset-0 -z-10">
@@ -13,7 +13,7 @@ const seo = {"title": "RF Microneedling | D‑Essence Wellness", "description": 
       <div class="max-w-3xl">
         <span class="inline-flex items-center gap-2 rounded-full bg-white/5 ring-1 ring-white/10 px-3 py-1 text-xs tracking-wide uppercase">Treatment</span>
         <h1 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tight">RF Microneedling</h1>
-        <p class="mt-4 text-lg text-neutral-300">Combines RF energy and microneedling for firmer skin and improved texture/scarring.</p>
+        <p class="mt-4 text-lg text-neutral-300">Combines radiofrequency energy and microneedling for firmer skin and improved texture/scarring.</p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="/appointment" class="btn btn-primary">Book consultation</a>
           <a href="tel:+17163038963" class="btn btn-outline">Call clinic</a>
@@ -75,7 +75,7 @@ const seo = {"title": "RF Microneedling | D‑Essence Wellness", "description": 
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Risks & side effects</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Redness/warmth 24–48h</li>
+        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Redness and warmth for 24–48h</li>
 <li>Transient swelling</li>
 <li>Rare PIH—managed with strict SPF</li></ul>
       </div>
@@ -88,11 +88,11 @@ const seo = {"title": "RF Microneedling | D‑Essence Wellness", "description": 
         <h3 class="text-xl font-semibold">Aftercare</h3>
         <ul class="mt-3 list-disc pl-5 space-y-1"><li>Cooling compresses</li>
 <li>Hydration and barrier repair</li>
-<li>Avoid actives 48h</li></ul>
+<li>Avoid active ingredients 48h</li></ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Results & maintenance</h3>
-        <p class="mt-3 text-neutral-700">Tightening and textural gains develop over weeks; series enhances durability.</p>
+        <p class="mt-3 text-neutral-700">Tightening and textural gains develop over weeks; series enhances and prolongs outcomes.</p>
       </div>
     </div>
   </section>
@@ -113,7 +113,6 @@ const seo = {"title": "RF Microneedling | D‑Essence Wellness", "description": 
   </section>
 
   <style>
-    /* Helpers for numbered list + check icons (works without extra deps) */
     ol [class~="n"]::before, ol li::marker { content: none; }
     ol li { counter-increment: step; position: relative; padding-left: 2.5rem; }
     ol li .n { position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:9999px;
