@@ -1,7 +1,16 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro"; /* <- If your layout file has a different name/path, adjust this import */
 export const prerender = true;
-const NAV = [{"slug": "aerolase", "title": "Aerolase® Laser"}, {"slug": "waxing", "title": "Waxing"}, {"slug": "botox", "title": "Botox® / Neurotoxins"}, {"slug": "hydrafacial", "title": "Hydrafacial®"}, {"slug": "chemical-peels", "title": "Chemical Peels"}, {"slug": "microneedling", "title": "Microneedling"}];
+
+const NAV = [
+  { slug: "aerolase",        title: "Aerolase® Laser" },
+  { slug: "waxing",          title: "Waxing" },
+  { slug: "botox",           title: "Botox® / Neurotoxins" },
+  { slug: "hydrafacial",     title: "Hydrafacial®" },
+  { slug: "chemical-peels",  title: "Chemical Peels" },
+  { slug: "microneedling",   title: "Microneedling" }
+];
+
 const seo = {
   title: "Before & After Gallery | D‑Essence Wellness",
   description: "Explore categorized before & after results across our treatments.",
@@ -31,7 +40,10 @@ const seo = {
       <h2 class="text-2xl font-semibold">Choose a category</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
         {NAV.map(n => (
-          <a class="rounded-3xl border p-6 lift" href={`/gallery/${n.slug}`}><h3 class="text-lg font-semibold">{n.title}</h3><p class="text-neutral-600 mt-1">View curated examples</p></a>
+          <a class="rounded-3xl border p-6 lift" href={`/gallery/${n.slug}`}>
+            <h3 class="text-lg font-semibold">{n.title}</h3>
+            <p class="text-neutral-600 mt-1">View curated examples</p>
+          </a>
         ))}
       </div>
     </div>
@@ -40,9 +52,7 @@ const seo = {
   <script is:inline>
     const params = new URLSearchParams(window.location.search);
     const tag = params.get('tag');
-    if (tag) {
-      window.location.replace(`/gallery/${tag}`);
-    }
+    if (tag) { window.location.replace(`/gallery/${tag}`); }
   </script>
 
   <style>
