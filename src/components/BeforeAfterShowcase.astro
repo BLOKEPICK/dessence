@@ -1,20 +1,20 @@
 ---
 /**
  * BeforeAfterShowcase.astro
- * Hero-style "Before & After" section for the homepage.
- * Dark theme with subtle gold-accent outline; image is a placeholder.
+ * Homepage "Before & After" section in site colors (dark + white + blue/pink glows).
+ * No yellow or off-brand accents.
  */
 export const prerender = true;
 
-// QUICK CONFIG
+// QUICK CONFIG (you can replace these later)
 const IMAGE = "https://images.unsplash.com/photo-1544717305-996b815c338c?auto=format&fit=crop&w=1600&q=70";
 const TITLE = "BEFORE & AFTER";
-const SUB   = "Explore real, curated outcomes by treatment categories like Aerolase, Botox, and more.";
+const SUB   = "Explore curated outcomes by treatment — organized and easy to compare.";
 const CTA   = { label: "BEFORE & AFTER GALLERY", href: "/gallery" };
 ---
 
 <section class="relative bg-neutral-950 text-white">
-  <!-- glow accents -->
+  <!-- on-brand glow accents (same scheme as index hero) -->
   <div class="absolute inset-0 -z-10 pointer-events-none">
     <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,.55),transparent_60%)]"></div>
     <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(236,72,153,.45),transparent_60%)]"></div>
@@ -22,7 +22,7 @@ const CTA   = { label: "BEFORE & AFTER GALLERY", href: "/gallery" };
 
   <div class="container py-16 md:py-24">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-stretch">
-      <!-- Left image -->
+      <!-- Left: large image -->
       <div class="md:col-span-7 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5">
         <div class="relative aspect-[3/2] md:h-full">
           <img src={IMAGE} alt="Before & After sample" loading="lazy" class="w-full h-full object-cover" />
@@ -32,13 +32,12 @@ const CTA   = { label: "BEFORE & AFTER GALLERY", href: "/gallery" };
         </div>
       </div>
 
-      <!-- Right content -->
+      <!-- Right: copy + CTA -->
       <div class="md:col-span-5 flex">
-        <div class="relative rounded-2xl p-8 md:p-10 bg-black/25 ring-1 ring-white/10 w-full flex flex-col justify-between
-                    outline outline-1 outline-[rgba(201,185,143,.35)]">
+        <div class="relative rounded-2xl p-8 md:p-10 bg-black/25 ring-1 ring-white/10 w-full flex flex-col justify-between">
           <div>
             <h2 class="text-4xl md:text-5xl font-semibold tracking-tight">{TITLE}</h2>
-            <div class="mt-5 h-px w-24 bg-[rgba(201,185,143,.6)]"></div>
+            <div class="mt-5 h-px w-24 bg-white/30"></div>
             <p class="mt-5 text-neutral-300 leading-relaxed">{SUB}</p>
           </div>
           <div class="mt-8">
@@ -46,11 +45,6 @@ const CTA   = { label: "BEFORE & AFTER GALLERY", href: "/gallery" };
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="mt-8 flex items-center justify-between text-sm text-neutral-400">
-      <a href="/gallery" class="inline-flex items-center gap-1 hover:text-white transition-colors"><span aria-hidden>←</span> Previous</a>
-      <a href="/gallery" class="inline-flex items-center gap-1 hover:text-white transition-colors">Next <span aria-hidden>→</span></a>
     </div>
   </div>
 </section>
