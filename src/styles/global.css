@@ -1,0 +1,14 @@
+/* Global Tailwind entry for Astro
+   If you already have a global stylesheet elsewhere, you can delete this file
+   and update the import path in `src/layouts/SiteLayout.astro` accordingly.
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base tweaks that match the site's aesthetic without overriding your theme */
+html { scroll-behavior: smooth; }
+body { font-feature-settings: "liga" 1, "calt" 1; }
+
+/* Optional: subtle focus outlines for accessibility (keeps the clean look) */
+:focus-visible { outline: 2px solid rgba(0,0,0,0.2); outline-offset: 2px; }
