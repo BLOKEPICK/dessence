@@ -1,0 +1,17 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+const pageTitle = "Servicios — Regenerative";
+---
+<SiteLayout title={pageTitle}>
+
+<section aria-labelledby="category-title" class="py-10">
+  <h1 id="category-title" class="text-3xl font-semibold mb-6">Servicios — Regenerative</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">PRP / PRF</h3>\n    <a href="/services#prp" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
+  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Exosomes</h3>\n    <a href="/services#exosomes" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
+  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Vitamin Injections</h3>\n    <a href="/services#vitamins" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
+  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Hair Restoration</h3>\n    <a href="/services#hair" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
+  </div>
+</section>
+</SiteLayout>
+

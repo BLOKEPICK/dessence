@@ -1,0 +1,17 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+const pageTitle = "Servicios — Laser";
+---
+<SiteLayout title={pageTitle}>
+
+<section aria-labelledby="category-title" class="py-10">
+  <h1 id="category-title" class="text-3xl font-semibold mb-6">Servicios — Laser</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Laser Hair Removal</h3>\n    <a href="/services#lhr" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
+  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">IPL Photofacial</h3>\n    <a href="/services#ipl" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
+  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Vein Treatment (Laser)</h3>\n    <a href="/services#veins" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
+  <div class="rounded-2xl shadow p-6 hover:shadow-lg transition">\n    <h3 class="text-xl font-medium">Redness / Rosacea</h3>\n    <a href="/services#rosacea" class="inline-block mt-4 underline">Ver detalles</a>\n  </div>
+  </div>
+</section>
+</SiteLayout>
+
