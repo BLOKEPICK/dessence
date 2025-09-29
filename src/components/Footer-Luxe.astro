@@ -1,4 +1,5 @@
 ---
+import FooterYear from "./FooterYear.astro";
 ---
 <footer class="mt-24 bg-neutral-950 text-white">
   <div class="mx-auto max-w-screen-xl px-4 py-10 md:py-12">
@@ -15,6 +16,7 @@
     </div>
   </div>
   <div class="border-t border-white/10"></div>
+
   <div class="mx-auto max-w-screen-xl px-4 py-12 md:py-14">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
       <!-- Brand & location -->
@@ -84,8 +86,9 @@
         </ul>
       </nav>
     </div>
+
     <div class="mt-10 border-t border-white/10 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <p class="text-sm text-white/80">&copy; {{ new Date().getFullYear() }} D‑Essence Wellness. All rights reserved.</p>
+      <p class="text-sm text-white/80"><FooterYear /> D‑Essence Wellness. All rights reserved.</p>
       <div class="flex items-center gap-5 text-sm">
         <a class="hover:underline text-white/90" href="/sitemap">Sitemap</a>
         <a class="hover:underline text-white/90" href="/privacy">Privacy</a>
