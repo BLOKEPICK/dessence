@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const seo = {
+  title: "Before & After Gallery | D‑Essence Wellness",
+  description: "Explore categorized before & after results across our treatments.",
+  canonical: "/gallery",
+  type: "website",
+  ogImage: "/og-default.jpg",
+  jsonLd: { "@context":"https://schema.org","@type":"CollectionPage","name":"Before & After Gallery" }
+};
+const params = Astro.url.searchParams;
+const tag = params.get('tag');
+if (tag) {
+  Astro.redirect(`/gallery/${tag}`);
+}
+---
+<BaseLayout seo={seo}>
+  <section class="relative overflow-hidden bg-neutral-950 text-white">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,.55),transparent_60%)]"></div>
+      <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(236,72,153,.45),transparent_60%)]"></div>
+    </div>
+    <div class="container py-20 md:py-28">
+      <h1 class="text-4xl md:text-6xl font-semibold tracking-tight">Before &amp; After Gallery</h1>
+      <p class="mt-4 text-lg text-neutral-300">Browse results by treatment category for a clean, organized experience.</p>
+      <div class="mt-8 flex flex-wrap gap-2 catnav">
+        <a href="/gallery/aerolase" class="badge">{'title': 'Aerolase® Laser', 'pairs': [{'before': 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1200&q=60', 'caption': 'Tone & clarity improvement (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1544717305-996b815c338c?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=1200&q=60', 'caption': 'Redness reduction (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1512251526259-9a6dffb04e0a?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1508259035339-1f1f61817f97?auto=format&fit=crop&w=1200&q=60', 'caption': 'Texture smoothing (illustrative)'}]}</a><a href="/gallery/waxing" class="badge">{'title': 'Waxing', 'pairs': [{'before': 'https://images.unsplash.com/photo-1505575972945-2967372d5d4b?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=60', 'caption': 'Hair removal (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1512499617640-c2f999098c67?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?auto=format&fit=crop&w=1200&q=60', 'caption': 'Smooth finish (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=1200&q=60', 'caption': 'Clean contours (illustrative)'}]}</a><a href="/gallery/botox" class="badge">{'title': 'Botox® / Neurotoxins', 'pairs': [{'before': 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1200&q=60', 'caption': 'Forehead lines softening (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=60', 'caption': 'Crow’s feet refinement (illustrative)'}]}</a><a href="/gallery/hydrafacial" class="badge">{'title': 'Hydrafacial®', 'pairs': [{'before': 'https://images.unsplash.com/photo-1537151625747-768eb6cf92b6?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=60', 'caption': 'Glow & hydration (illustrative)'}]}</a><a href="/gallery/chemical-peels" class="badge">{'title': 'Chemical Peels', 'pairs': [{'before': 'https://images.unsplash.com/photo-1542596592-a61d2f3ff64c?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=60', 'caption': 'Even tone & texture (illustrative)'}]}</a><a href="/gallery/microneedling" class="badge">{'title': 'Microneedling', 'pairs': [{'before': 'https://images.unsplash.com/photo-1537151625747-768eb6cf92b6?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1200&q=60', 'caption': 'Refined pores & texture (illustrative)'}]}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 bg-white">
+    <div class="container">
+      <h2 class="text-2xl font-semibold">Choose a category</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+        <a class="rounded-3xl border p-6 lift" href="/gallery/aerolase"><h3 class="text-lg font-semibold">{'title': 'Aerolase® Laser', 'pairs': [{'before': 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1200&q=60', 'caption': 'Tone & clarity improvement (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1544717305-996b815c338c?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=1200&q=60', 'caption': 'Redness reduction (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1512251526259-9a6dffb04e0a?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1508259035339-1f1f61817f97?auto=format&fit=crop&w=1200&q=60', 'caption': 'Texture smoothing (illustrative)'}]}</h3><p class="text-neutral-600 mt-1">View curated examples</p></a><a class="rounded-3xl border p-6 lift" href="/gallery/waxing"><h3 class="text-lg font-semibold">{'title': 'Waxing', 'pairs': [{'before': 'https://images.unsplash.com/photo-1505575972945-2967372d5d4b?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=60', 'caption': 'Hair removal (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1512499617640-c2f999098c67?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?auto=format&fit=crop&w=1200&q=60', 'caption': 'Smooth finish (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=1200&q=60', 'caption': 'Clean contours (illustrative)'}]}</h3><p class="text-neutral-600 mt-1">View curated examples</p></a><a class="rounded-3xl border p-6 lift" href="/gallery/botox"><h3 class="text-lg font-semibold">{'title': 'Botox® / Neurotoxins', 'pairs': [{'before': 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1200&q=60', 'caption': 'Forehead lines softening (illustrative)'}, {'before': 'https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=60', 'caption': 'Crow’s feet refinement (illustrative)'}]}</h3><p class="text-neutral-600 mt-1">View curated examples</p></a><a class="rounded-3xl border p-6 lift" href="/gallery/hydrafacial"><h3 class="text-lg font-semibold">{'title': 'Hydrafacial®', 'pairs': [{'before': 'https://images.unsplash.com/photo-1537151625747-768eb6cf92b6?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=60', 'caption': 'Glow & hydration (illustrative)'}]}</h3><p class="text-neutral-600 mt-1">View curated examples</p></a><a class="rounded-3xl border p-6 lift" href="/gallery/chemical-peels"><h3 class="text-lg font-semibold">{'title': 'Chemical Peels', 'pairs': [{'before': 'https://images.unsplash.com/photo-1542596592-a61d2f3ff64c?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=60', 'caption': 'Even tone & texture (illustrative)'}]}</h3><p class="text-neutral-600 mt-1">View curated examples</p></a><a class="rounded-3xl border p-6 lift" href="/gallery/microneedling"><h3 class="text-lg font-semibold">{'title': 'Microneedling', 'pairs': [{'before': 'https://images.unsplash.com/photo-1537151625747-768eb6cf92b6?auto=format&fit=crop&w=1200&q=60', 'after': 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1200&q=60', 'caption': 'Refined pores & texture (illustrative)'}]}</h3><p class="text-neutral-600 mt-1">View curated examples</p></a>
+      </div>
+    </div>
+  </section>
+  
+<style>
+  .bagrid { display:grid; grid-template-columns: 1fr; gap: 1rem; }
+  @media (min-width: 768px) { .bagrid { grid-template-columns: 1fr 1fr; } }
+  .pair { border-radius: 1.25rem; overflow:hidden; border:1px solid rgba(0,0,0,.08); background: #fff; }
+  .pair .meta { display:flex; justify-content:space-between; padding:.5rem .75rem; font-size:.8rem; opacity:.8; }
+  .badge { display:inline-flex; align-items:center; gap:.5rem; padding:.35rem .6rem; border-radius:9999px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); font-size:.75rem; }
+  .chip { display:inline-flex; align-items:center; gap:.5rem; padding:.35rem .6rem; border-radius:9999px; background:rgba(0,0,0,.06); border:1px solid rgba(0,0,0,.08); font-size:.75rem; }
+  .catnav a { text-decoration:none; }
+  .catnav .active { background: rgba(59,130,246,.12); border-color: rgba(59,130,246,.35); }
+</style>
+
+</BaseLayout>

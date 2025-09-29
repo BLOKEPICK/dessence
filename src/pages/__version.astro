@@ -1,10 +1,14 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro' if True else '';
-const built = "2025-09-29 18:19:27";
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const built = "2025-09-29 18:31:17";
 ---
 <BaseLayout>
-<section class="py-16"><div class="container">
-  <h1 class="text-3xl font-semibold">Current Build</h1>
-  <p class="mt-2">Unique services build at: <strong>{built}</strong></p>
-</div></section>
+  <section class="py-16"><div class="container">
+    <h1 class="text-3xl font-semibold">Current Build</h1>
+    <p class="mt-2">Gallery added build at: <strong>2025-09-29 18:31:17</strong></p>
+    <ul class="mt-4 text-sm text-neutral-600">
+      <li>/gallery — category index (redirects old ?tag= links)</li>
+      <li>/gallery/[category] — dynamic page (e.g., /gallery/aerolase)</li>
+    </ul>
+  </div></section>
 </BaseLayout>
