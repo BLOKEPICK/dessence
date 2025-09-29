@@ -1,21 +1,236 @@
----
-import BaseLayout from "../layouts/BaseLayout.astro";     /* Adjust this import if your layout has a different name/path */
-import BeforeAfterShowcase from "../components/BeforeAfterShowcase.astro";
-export const prerender = true;
+---import WhatWeDoNarrative from '@/components/WhatWeDoNarrative.astro';
+import ClinicIntroOriginal from '@/components/ClinicIntroOriginal.astro';
+import ClinicSplitEditorialForce from '@/components/ClinicSplitEditorialForce.astro';
+
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Section from '@/components/Section.astro';
+import ServiceCard from '@/components/ServiceCard.astro';
+import { getCollection } from 'astro:content';
+
+const services = await getCollection('services');
+
+const icons = {
+  'neurotoxins':'syringe',
+  'juvederm-fillers':'lips',
+  'platelet-rich-plasma-prp':'test-tube',
+  'microneedling':'dermapen',
+  'aerolase':'laser-beam',
+  'chemical-peels':'peel',
+  'filler-dissolving':'dissolve',
+  'skinvive':'glow-drop',
+  'smooth-pdo-threads':'pdo',
+  'teeth-whitening':'tooth',
+  'skincare':'bottle',
+  'facials':'mask',
+  'waxing':'wax-pot',
+  'spider-vein-treatment':'leg-vein',
+  'vitamin-injections':'vial-plus',
+  'nefertiti-neck':'jawline',
+  'specialty-treatments':'med-star'
+};
+
 
 const seo = {
-  title: "Home | D‑Essence Wellness",
-  description: "Premium aesthetics & wellness in Las Vegas — Botox®, lasers, facials, and more.",
-  canonical: "/",
-  type: "website",
-  ogImage: "/og-default.jpg"
+  title: 'D‑Essence Wellness | Modern Aesthetics, Evidence‑Based Care',
+  description: 'Skin health, neurotoxins, fillers, microneedling, Aerolase, and more—delivered with medical‑grade standards in New Windsor, NY.',
+  canonical: '/',
+  type: 'website',
+  jsonLd: [{"@context": "https://schema.org", "@type": "HealthAndBeautyBusiness", "name": "D\u2011Essence Wellness", "image": "https://example.com/og-default.jpg", "telephone": "+1-716-303-8963", "address": {"@type": "PostalAddress", "streetAddress": "871 Blooming Grove Turnpike Suite 102", "addressLocality": "New Windsor", "addressRegion": "NY", "postalCode": "12553", "addressCountry": "US"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "10:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "09:00", "closes": "18:00"}], "potentialAction": {"@type": "ReserveAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://example.com/appointment", "inLanguage": "en"}, "result": {"@type": "Reservation", "name": "Consultation Request"}}}]
 };
 ---
 <BaseLayout seo={seo}>
-  <!-- Keep your existing hero/menu above this if you have one -->
+  
+  
+  <!-- Hero (New Split) -->
+  <section class="hero-split">
+    <div class="container pt-24 pb-16">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <!-- Left copy -->
+        <div class="lg:col-span-7">
+          <div class="text-[12px] inline-flex items-center gap-2 px-3 py-1 border border-white/15 rounded-full mb-4">
+            <span>Medical Aesthetics</span><span class="opacity-60">•</span><span>New Windsor, NY</span>
+          </div>
+          <h1 class="text-white text-4xl sm:text-6xl font-semibold leading-[1.05] tracking-tight">
+            Understated beauty,<br class="hidden sm:block"/> clinical precision.
+          </h1>
+          <p class="muted mt-4 max-w-xl">
+            Tailored treatments that honor your features. Subtle, modern, and guided by evidence.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="/appointment" class="btn-neo">Book Consultation</a>
+            <a href="/services" class="btn-wire">See all services</a>
+          </div>
+          <div class="kpis">
+            <div class="kpi"><div class="v stars" aria-label="5 out of 5 stars" role="img" class="stars">★★★★★</div><div class="l">Client feedback</div></div>
+            <div class="kpi"><div class="v">Evidence‑led</div><div class="l">Protocols</div></div>
+            <div class="kpi"><div class="v">Subtle</div><div class="l">Results</div></div>
+          </div>
+        </div>
 
-  <!-- New BEFORE & AFTER section -->
-  <BeforeAfterShowcase />
+        <!-- Right bento tiles with icons -->
+        <div class="lg:col-span-5">
+          <div class="hero-bento">
+            <div class="tile">
+              <div class="label">Neurotoxins</div>
+              <p class="mt-2 text-white/90">Smooth dynamic lines while keeping expression.</p>
+            </div>
+            <div class="tile">
+              <div class="label">Juvederm Fillers</div>
+              <p class="mt-2 text-white/90">Restore volume & contour with restraint.</p>
+            </div>
+            <div class="tile">
+              <div class="label">Microneedling</div>
+              <p class="mt-2 text-white/90">Texture, pores, scars—collagen induction.</p>
+            </div>
+            <div class="tile">
+              <div class="label">Aerolase</div>
+              <p class="mt-2 text-white/90">Gentle laser for tone, redness & glow.</p>
+            </div>
+          </div>
+          <div class="mt-4 sep-x"></div>
+          <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="text-white/80">By appointment only</div>
+            <div class="text-right"><a href="tel:+17163038963" class="underline">Call (716) 303‑8963</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Keep the rest of your homepage sections below this comment -->
+
+
+    <ClinicIntroOriginal />
+<WhatWeDoNarrative />
+
+  
+  
+<!-- Approach (centered) -->
+  
+
+
+  <!-- Results (Before/After placeholders) -->
+  <section id="results" class="section section-dark">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-stretch">
+        <!-- Imagen grande a la izquierda -->
+        <div class="md:col-span-7 rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5">
+          <div class="relative aspect-[3/2] md:h-full">
+            <img
+              src="https://images.unsplash.com/photo-1544717305-996b815c338c?auto=format&fit=crop&w=1600&q=70"
+              alt="Before & After sample" loading="lazy"
+              class="w-full h-full object-cover" />
+            <div class="absolute left-4 bottom-4 px-3 py-1.5 rounded-full bg-black/50 backdrop-blur text-xs md:text-sm tracking-wide text-white">
+              *Illustrative placeholder
+            </div>
+          </div>
+        </div>
+
+        <!-- Texto + CTA a la derecha -->
+        <div class="md:col-span-5 flex">
+          <div class="relative rounded-2xl p-8 md:p-10 bg-black/25 ring-1 ring-white/10 w-full flex flex-col justify-between">
+            <div>
+              <h3 class="text-3xl sm:text-4xl font-semibold tracking-tight">Before &amp; After</h3>
+              <div class="mt-5 h-px w-24 bg-white/30"></div>
+              <p class="mt-5 text-neutral-300 leading-relaxed">
+                Explore curated outcomes by treatment — organized and easy to compare.
+              </p>
+            </div>
+            <div class="mt-8">
+              <a href="/gallery" class="btn btn-outline">Before &amp; After Gallery</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process (Stepper) -->
+  <section id="process" class="section">
+    <div class="container text-center">
+      <h3 class="text-3xl font-semibold tracking-tight">How it works</h3>
+
+      <!-- Desktop horizontal stepper -->
+      <div class="mt-8 hidden md:flex items-start justify-between gap-6">
+        <div class="flex-1 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-semibold">1</div>
+          <div class="mt-3 font-medium">Consultation</div>
+          <p class="text-sm text-muted mt-1 max-w-[16rem]">Assess goals, history, and timelines.</p>
+        </div>
+        <div class="flex-1 h-px bg-black/10 mt-6"></div>
+        <div class="flex-1 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-semibold">2</div>
+          <div class="mt-3 font-medium">Plan</div>
+          <p class="text-sm text-muted mt-1 max-w-[16rem]">Design a staged, evidence‑based protocol.</p>
+        </div>
+        <div class="flex-1 h-px bg-black/10 mt-6"></div>
+        <div class="flex-1 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-semibold">3</div>
+          <div class="mt-3 font-medium">Treatment</div>
+          <p class="text-sm text-muted mt-1 max-w-[16rem]">Execute with precision and safety.</p>
+        </div>
+        <div class="flex-1 h-px bg-black/10 mt-6"></div>
+        <div class="flex-1 flex flex-col items-center text-center">
+          <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center font-semibold">4</div>
+          <div class="mt-3 font-medium">Review</div>
+          <p class="text-sm text-muted mt-1 max-w-[16rem]">Track outcomes and refine maintenance.</p>
+        </div>
+      </div>
+
+      <!-- Mobile stacked cards -->
+      <div class="mt-6 grid md:hidden gap-4">
+        <div class="card p-5 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-semibold">1</div>
+          <div>
+            <div class="font-medium">Consultation</div>
+            <p class="text-sm text-muted">Assess goals, history, and timelines.</p>
+          </div>
+        </div>
+        <div class="card p-5 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-semibold">2</div>
+          <div>
+            <div class="font-medium">Plan</div>
+            <p class="text-sm text-muted">Design a staged, evidence‑based protocol.</p>
+          </div>
+        </div>
+        <div class="card p-5 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-semibold">3</div>
+          <div>
+            <div class="font-medium">Treatment</div>
+            <p class="text-sm text-muted">Execute with precision and safety.</p>
+          </div>
+        </div>
+        <div class="card p-5 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-semibold">4</div>
+          <div>
+            <div class="font-medium">Review</div>
+            <p class="text-sm text-muted">Track outcomes and refine maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section section-muted">
+    <div class="container">
+      <h3 class="text-3xl font-semibold tracking-tight">What clients say</h3>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <figure class="card p-6">
+          <blockquote class="text-sm">“Subtle, natural results. The consultation felt collaborative and honest.”</blockquote>
+          <figcaption class="text-xs text-muted mt-3">— A.M.</figcaption>
+        </figure>
+        <figure class="card p-6">
+          <blockquote class="text-sm">“Clear expectations and aftercare. I appreciated the conservative approach.”</blockquote>
+          <figcaption class="text-xs text-muted mt-3">— J.R.</figcaption>
+        </figure>
+        <figure class="card p-6">
+          <blockquote class="text-sm">“Professional, clean, and personable. My skin has never looked better.”</blockquote>
+          <figcaption class="text-xs text-muted mt-3">— K.S.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  
 </BaseLayout>
