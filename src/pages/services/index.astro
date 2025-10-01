@@ -1,50 +1,138 @@
 ---
-import Layout from "../../layouts/Base.astro";
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const seo = {
+  title: 'Treatments & Services | D‑Essence Wellness',
+  description: 'Explore injectables, laser treatments, advanced skin care, wellness injections, aesthetic services, events, and professional skincare brands at D‑Essence Wellness.',
+  type: 'website',
+  canonical: '/services',
+  name: 'D‑Essence Wellness'
+};
+const CATS = [
+  {
+    name: 'Injectables',
+    items: [
+      { title: 'Botox®', href: '/services/botox' },
+      { title: 'Xeomin®', href: '/services/xeomin' },
+      { title: 'Daxxify®', href: '/services/daxxify' },
+      { title: 'Botox® for Hyperhidrosis', href: '/services/botox-hyperhidrosis' },
+      { title: 'PRP Microneedling', href: '/services/prp-microneedling' },
+      { title: 'PRF Microneedling', href: '/services/prf-microneedling' },
+      { title: 'Dermal Fillers', href: '/services/dermal-fillers' },
+      { title: 'Juvederm® Collection', href: '/services/juvederm-fillers' },
+      { title: 'Smooth Threads', href: '/services/smooth-threads' }
+    ]
+  },
+  {
+    name: 'Laser Treatments',
+    items: [
+      { title: 'Aerolase — Acne', href: '/services/aerolase/acne' },
+      { title: 'Aerolase — Rosacea', href: '/services/aerolase/rosacea' },
+      { title: 'Aerolase — Hyperpigmentation', href: '/services/aerolase/hyperpigmentation' },
+      { title: 'Aerolase — Melasma', href: '/services/aerolase/melasma' },
+      { title: 'Aerolase — Skin Rejuvenation', href: '/services/aerolase/skin-rejuvenation' },
+      { title: 'Aerolase — Collagen Boosting', href: '/services/aerolase/collagen-boosting' },
+      { title: 'Aerolase — Psoriasis', href: '/services/aerolase/psoriasis' },
+      { title: 'Aerolase — Eczema', href: '/services/aerolase/eczema' },
+      { title: 'Aerolase — Vascular Lesions', href: '/services/aerolase/vascular-lesions' },
+      { title: 'Laser Hair Removal', href: '/services/laser-hair-removal' }
+    ]
+  },
+  {
+    name: 'Advanced Skin Care Treatments',
+    items: [
+      { title: 'Specialty Facials', href: '/services/facials' },
+      { title: 'Perfect Derma Peel', href: '/services/chemical-peels/perfect-derma-peel' },
+      { title: 'BioRePeel', href: '/services/chemical-peels/biorepeel' },
+      { title: 'Microneedling', href: '/services/microneedling' },
+      { title: 'SkinPen® Microneedling', href: '/services/microneedling/skinpen' },
+      { title: 'PRP Microneedling', href: '/services/prp-microneedling' },
+      { title: 'PRF Microneedling', href: '/services/prf-microneedling' },
+      { title: 'Acne Programs — Face Reality Boot Camp', href: '/services/acne-programs/face-reality-boot-camp' },
+      { title: 'Acne Programs — Anti‑Acne Boot Camp', href: '/services/acne-programs/anti-acne-boot-camp' },
+      { title: 'Dermaplaning', href: '/services/dermaplaning' },
+      { title: 'Enzyme Treatments', href: '/services/enzyme-treatments' }
+    ]
+  },
+  {
+    name: 'Wellness: Vitamin Injections & IV Therapy',
+    items: [
+      { title: 'B12 (Methylcobalamin)', href: '/services/vitamin-injections/b12' },
+      { title: 'L‑Carnitine', href: '/services/vitamin-injections/l-carnitine' },
+      { title: 'Amino Blend', href: '/services/vitamin-injections/amino-blend' },
+      { title: 'MICC', href: '/services/vitamin-injections/micc' },
+      { title: 'Lipo Plus', href: '/services/vitamin-injections/lipo-plus' },
+      { title: 'Glutathione', href: '/services/vitamin-injections/glutathione' },
+      { title: 'Tri‑Immune Boost', href: '/services/vitamin-injections/tri-immune-boost' },
+      { title: 'IV Infusions', href: '/services/vitamin-injections/iv-infusions' }
+    ]
+  },
+  {
+    name: 'Aesthetic Services',
+    items: [
+      { title: 'Waxing — Full Face', href: '/services/waxing/full-face' },
+      { title: 'Waxing — Brows', href: '/services/waxing/brows' },
+      { title: 'Waxing — Bikini', href: '/services/waxing/bikini' },
+      { title: 'Waxing — Body', href: '/services/waxing/body' },
+      { title: 'Teeth Whitening', href: '/services/teeth-whitening' }
+    ]
+  },
+  {
+    name: 'Events & Specialty Experiences',
+    items: [
+      { title: 'Botox® Parties', href: '/events/botox-parties' },
+      { title: 'Spa Parties', href: '/events/spa-parties' },
+      { title: 'Skincare Workshops', href: '/events/skincare-workshops' }
+    ]
+  },
+  {
+    name: 'Professional Skincare Products',
+    items: [
+      { title: 'Circadia®', href: '/services/skincare/circadia' },
+      { title: 'Face Reality®', href: '/services/skincare/face-reality' },
+      { title: 'Hydrinity®', href: '/services/skincare/hydrinity' },
+      { title: 'SkinMedica®', href: '/services/skincare/skinmedica' }
+    ]
+  }
+];
 ---
 
-<Layout title="Services — D‑Essence Wellness" description="Explore all treatments and services.">
-  <section class="mx-auto max-w-6xl px-4 py-16">
-    <header class="text-center mb-10">
-      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Our Services</h1>
-      <p class="mt-3 text-base md:text-lg text-white/70 max-w-2xl mx-auto">Explora nuestros tratamientos por categoría. Cada tarjeta te lleva a la página con detalles, beneficios y cuidados posteriores.</p>
-    </header>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-      {categories.map(({ label, href }) => (
-        <a href={href} class="group relative rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-5 hover:scale-[1.01] transition transform">
-          <div class="flex items-center justify-between">
-            <h2 class="font-medium">{label}</h2>
-            <span class="text-sm opacity-60 group-hover:opacity-100 transition">Ver más →</span>
-          </div>
-          <div class="mt-3 text-sm opacity-75">Descripción breve del servicio y resultados esperados.</div>
-        </a>
-      ))}
+<BaseLayout seo={seo}>
+  <section class="relative overflow-hidden bg-neutral-950 text-white">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-60"
+           style="background: radial-gradient(circle at center, rgba(59,130,246,.45), transparent 60%);"></div>
+      <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-60"
+           style="background: radial-gradient(circle at center, rgba(236,72,153,.35), transparent 60%);"></div>
+    </div>
+    <div class="container py-16 md:py-24">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/20 px-3 py-1 text-xs tracking-wide uppercase">Services</span>
+        <h1 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tight">Treatments we offer</h1>
+        <p class="mt-4 text-lg text-white/80">Explore our full menu of injectables, lasers, advanced skin care, wellness injections, aesthetic services, events, and professional skincare brands. Every plan is personalized around your goals.</p>
+      </div>
     </div>
   </section>
-</Layout>
 
-<script>
-  const categories = [
-    { label: "Neurotoxins (Botox/Dysport)", href: "/services/neurotoxins" },
-    { label: "Juvederm Fillers", href: "#" },
-    { label: "Skinvive", href: "/services/skinvive" },
-    { label: "Nefertiti Neck", href: "/services/nefertiti-neck" },
-    { label: "Filler Dissolving", href: "#" },
-    { label: "Microneedling", href: "/services/microneedling" },
-    { label: "Aerolase", href: "/services/aerolase" },
-    { label: "Chemical Peels", href: "/services/chemical-peels" },
-    { label: "Facials", href: "/services/facials" },
-    { label: "Skincare", href: "/services/skincare" },
-    { label: "Waxing", href: "/services/waxing" },
-    { label: "Vitamin Injections", href: "/services/vitamin-injections" },
-    { label: "Teeth Whitening", href: "/services/teeth-whitening" },
-    { label: "Acne", href: "/services/acne" },
-    { label: "Fine Lines & Wrinkles", href: "#" },
-    { label: "Hyperpigmentation", href: "#" },
-    { label: "Texture & Pores", href: "#" },
-    { label: "Neck/Jawline", href: "#" },
-    { label: "Volume Loss", href: "#" },
-    { label: "Spider Vein Treatment", href: "/services/vein-treatment" },
-    { label: "PRP", href: "/services/prp-prf" }
-  ];
-</script>
+  <section class="py-14 md:py-16">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-6">
+        {CATS.map((cat) => (
+          <div class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-3">
+              <h2 class="text-lg font-semibold text-neutral-900">{cat.name}</h2>
+              <a href={cat.items[0]?.href?.split('/').slice(0,3).join('/') || '/services'} class="text-sm text-neutral-500 hover:text-neutral-900 underline underline-offset-4 decoration-neutral-300">View</a>
+            </div>
+            <div class="grid grid-cols-1">
+              {cat.items.map((item) => (
+                <a href={item.href} class="group flex items-center justify-between px-3 py-2 rounded-lg hover:bg-neutral-50 transition">
+                  <span class="text-neutral-800">{item.title}</span>
+                  <span class="opacity-0 group-hover:opacity-100 transition text-neutral-400">→</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
