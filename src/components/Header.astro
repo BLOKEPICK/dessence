@@ -1,9 +1,10 @@
 ---
 ---
 <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-screen-xl pointer-events-none">
+  
   <!-- Desktop -->
   <div class="hidden md:flex items-center justify-center">
-    <nav class="relative flex items-center gap-1 rounded-full border border-white/10 bg-neutral-900/70 text-white backdrop-blur-lg shadow-lg px-3 py-2 pointer-events-auto" aria-label="Primary">
+    <nav id="main-nav" class="relative flex items-center gap-1 rounded-full border border-white/10 bg-black/60 backdrop-blur-md shadow-lg px-3 py-2 pointer-events-auto" aria-label="Primary">
       <!-- Wordmark -->
       <a href="/" class="flex items-center px-3 h-10 rounded-full hover:bg-white/5 transition" aria-label="Home">
         <span class="inline-flex items-baseline gap-1.5">
@@ -12,162 +13,108 @@
         </span>
       </a>
 
-      <!-- Injectables -->
-      <div class="relative group pb-2">
-        <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition text-white/90 hover:text-white">Injectables</button>
-        <div class="fixed inset-0 -z-10 bg-black/30 backdrop-blur-[1px] invisible opacity-0 group-hover:visible group-hover:opacity-100 transition pointer-events-none"></div>
-        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition pointer-events-auto absolute left-0 top-full">
-          <div class="w-[580px] rounded-2xl border border-white/10 bg-neutral-900/95 p-4 shadow-2xl">
-            <div class="grid grid-cols-2 gap-3 text-sm">
-              <div>
-                <div class="text-xs uppercase tracking-wide text-white/50 mb-2">Neuromodulators</div>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/botox">Botox®</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/xeomin">Xeomin®</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/daxxify">Daxxify®</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/botox-hyperhidrosis">Botox® for Hyperhidrosis</a>
-              </div>
-              <div>
-                <div class="text-xs uppercase tracking-wide text-white/50 mb-2">Rejuvenation & Volume</div>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/prp-microneedling">PRP Microneedling</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/prf-microneedling">PRF Microneedling</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/dermal-fillers">Dermal Fillers</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/juvederm-fillers">Juvederm® Collection</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/smooth-threads">Smooth Threads</a>
-              </div>
+      <!-- Categories (4 + More) -->
+      <ul class="flex items-center gap-1 h-10">
+        <!-- Injectables -->
+        <li class="relative" data-nav-item>
+          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-injectables">
+            Injectables
+            <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div id="panel-injectables" role="menu" class="absolute left-0 mt-2 w-[560px] max-w-[90vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-2 text-sm">
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/neurotoxins">Neurotoxins</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/fillers/juvederm">Juvéderm Fillers</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/skinvive">Skinvive</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/nefertiti-neck">Nefertiti Neck</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/filler-dissolving">Filler Dissolving</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/sculptra">Sculptra</a>
             </div>
           </div>
-        </div>
-      </div>
+        </li>
 
-      <!-- Laser Treatments -->
-      <div class="relative group pb-2">
-        <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition text-white/90 hover:text-white">Laser Treatments</button>
-        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition pointer-events-auto absolute left-0 top-full">
-          <div class="w-[640px] rounded-2xl border border-white/10 bg-neutral-900/95 p-4 shadow-2xl">
-            <div class="grid grid-cols-2 gap-3 text-sm">
-              <div>
-                <div class="text-xs uppercase tracking-wide text-white/50 mb-2">Aerolase Neo Elite</div>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/aerolase/acne">Acne</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/aerolase/rosacea">Rosacea</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/aerolase/hyperpigmentation">Hyperpigmentation</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/aerolase/melasma">Melasma</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/aerolase/skin-rejuvenation">Skin Rejuvenation</a>
-              </div>
-              <div>
-                <div class="text-xs uppercase tracking-wide text-white/50 mb-2">More Aerolase</div>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/aerolase/collagen-boosting">Collagen Boosting</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/aerolase/psoriasis">Psoriasis</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/aerolase/eczema">Eczema</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/aerolase/vascular-lesions">Vascular Lesions</a>
-                <div class="mt-2 pt-2 border-t border-white/10">
-                  <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/laser-hair-removal">Laser Hair Removal</a>
-                </div>
-              </div>
+        <!-- Skin & Laser -->
+        <li class="relative" data-nav-item>
+          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-skin">
+            Skin & Laser
+            <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div id="panel-skin" role="menu" class="absolute left-0 mt-2 w-[680px] max-w-[95vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/aerolase">Aerolase</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/rf-microneedling">RF Microneedling</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/resurfacing">Resurfacing</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/chemical-peels">Chemical Peels</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vein-treatment">Spider Vein Treatment</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/rosacea">Rosacea</a>
             </div>
           </div>
-        </div>
-      </div>
+        </li>
 
-      <!-- Advanced Skin Care -->
-      <div class="relative group pb-2">
-        <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition text-white/90 hover:text-white">Advanced Skin Care</button>
-        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition pointer-events-auto absolute left-0 top-full">
-          <div class="w-[640px] rounded-2xl border border-white/10 bg-neutral-900/95 p-4 shadow-2xl">
-            <div class="grid grid-cols-2 gap-3 text-sm">
-              <div>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/facials">Specialty Facials</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/chemical-peels/perfect-derma-peel">Perfect Derma Peel</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/chemical-peels/biorepeel">BioRePeel</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/microneedling">Microneedling</a>
-              </div>
-              <div>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/microneedling/skinpen">SkinPen® Microneedling</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/prp-microneedling">PRP Microneedling</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/prf-microneedling">PRF Microneedling</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/dermaplaning">Dermaplaning</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/enzyme-treatments">Enzyme Treatments</a>
-              </div>
+        <!-- Facials -->
+        <li class="relative" data-nav-item>
+          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-facials">
+            Facials
+            <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div id="panel-facials" role="menu" class="absolute left-0 mt-2 w-[560px] max-w-[90vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-2 text-sm">
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/facials">All Facials</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/facials/acne">Acne Facial</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/facials/anti-aging">Anti‑Aging Facial</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/facials/dermaplaning">Dermaplaning</a>
             </div>
           </div>
-        </div>
-      </div>
+        </li>
 
-      <!-- Wellness -->
-      <div class="relative group pb-2">
-        <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition text-white/90 hover:text-white">Wellness</button>
-        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition pointer-events-auto absolute left-0 top-full">
-          <div class="w-[640px] rounded-2xl border border-white/10 bg-neutral-900/95 p-4 shadow-2xl">
-            <div class="grid grid-cols-2 gap-3 text-sm">
-              <div>
-                <div class="text-xs uppercase tracking-wide text-white/50 mb-2">Vitamin Injections</div>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/b12">B12 (Methylcobalamin)</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/l-carnitine">L‑Carnitine</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/amino-blend">Amino Blend</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/micc">MICC</a>
-              </div>
-              <div>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/lipo-plus">Lipo Plus</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/glutathione">Glutathione</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/tri-immune-boost">Tri‑Immune Boost</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/iv-infusions">IV Infusions</a>
-              </div>
+        <!-- Waxing -->
+        <li class="relative" data-nav-item>
+          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-waxing">
+            Waxing
+            <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div id="panel-waxing" role="menu" class="absolute left-0 mt-2 w-[560px] max-w-[90vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-2 text-sm">
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/waxing/brows">Brows</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/waxing/bikini">Bikini</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/waxing/body">Body</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/waxing/full-face">Full Face</a>
             </div>
           </div>
-        </div>
-      </div>
+        </li>
 
-      <!-- Aesthetic Services -->
-      <div class="relative group pb-2">
-        <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition text-white/90 hover:text-white">Aesthetic Services</button>
-        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition pointer-events-auto absolute left-0 top-full">
-          <div class="w-[580px] rounded-2xl border border-white/10 bg-neutral-900/95 p-4 shadow-2xl">
-            <div class="grid grid-cols-2 gap-3 text-sm">
-              <div>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/waxing/full-face">Waxing — Full Face</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/waxing/brows">Waxing — Brows</a>
-              </div>
-              <div>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/waxing/bikini">Waxing — Bikini</a>
-                <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/waxing/body">Waxing — Body</a>
-                <div class="mt-2 pt-2 border-t border-white/10">
-                  <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/teeth-whitening">Teeth Whitening</a>
-                </div>
-              </div>
+        <!-- More Services -->
+        <li class="relative" data-nav-item>
+          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-more">
+            More Services
+            <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div id="panel-more" role="menu" class="absolute left-0 mt-2 w-[760px] max-w-[95vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/skincare">Skincare</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections">Vitamin Injections</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/teeth-whitening">Teeth Whitening</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/acne">Acne</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/fine-lines">Fine Lines & Wrinkles</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/hyperpigmentation">Hyperpigmentation</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/texture-pores">Texture & Pores</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/neck-jawline">Neck/Jawline</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/volume-loss">Volume Loss</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/prp-prf">PRP/PRF</a>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Events -->
-      <div class="relative group pb-2">
-        <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition text-white/90 hover:text-white">Events</button>
-        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition pointer-events-auto absolute left-0 top-full">
-          <div class="w-[520px] rounded-2xl border border-white/10 bg-neutral-900/95 p-4 shadow-2xl">
-            <div class="grid grid-cols-2 gap-3 text-sm">
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/events/botox-parties">Botox® Parties</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/events/spa-parties">Spa Parties</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/events/skincare-workshops">Skincare Workshops</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Skincare Products -->
-      <div class="relative group pb-2">
-        <button class="px-4 h-10 rounded-full flex items-center text-sm hover:bg-white/10 transition text-white/90 hover:text-white">Skincare Products</button>
-        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition pointer-events-auto absolute left-0 top-full">
-          <div class="w-[520px] rounded-2xl border border-white/10 bg-neutral-900/95 p-4 shadow-2xl">
-            <div class="grid grid-cols-2 gap-3 text-sm">
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/skincare/circadia">Circadia®</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/skincare/face-reality">Face Reality®</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/skincare/hydrinity">Hydrinity®</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/skincare/skinmedica">SkinMedica®</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Book button removed per request -->
+        </li>
+      </ul>
     </nav>
   </div>
 
@@ -255,3 +202,72 @@
   const nav = document.getElementById('mobile-nav');
   if (btn && nav) { btn.addEventListener('click', () => { const hidden = nav.classList.toggle('hidden'); btn.setAttribute('aria-expanded', (!hidden).toString()); }); }
 </script>
+
+<script is:inline>
+  // Desktop dropdown logic (exclusive open, delay on close, outside click, Esc to close)
+  (function() {
+    const nav = document.getElementById('main-nav');
+    if (!nav) return;
+
+    const items = Array.from(nav.querySelectorAll('[data-nav-item]'));
+    const panels = () => Array.from(nav.querySelectorAll('[data-nav-panel]'));
+
+    let closeTimer = null;
+
+    function openOnly(item) {
+      // Close all first
+      panels().forEach(p => p.classList.add('hidden'));
+      items.forEach(i => i.querySelector('[data-nav-trigger]')?.setAttribute('aria-expanded', 'false'));
+
+      // Open this one
+      const panel = item.querySelector('[data-nav-panel]');
+      const btn = item.querySelector('[data-nav-trigger]');
+      if (panel && btn) {
+        panel.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    function closeAll() {
+      panels().forEach(p => p.classList.add('hidden'));
+      items.forEach(i => i.querySelector('[data-nav-trigger]')?.setAttribute('aria-expanded', 'false'));
+    }
+
+    items.forEach(item => {
+      const btn = item.querySelector('[data-nav-trigger]');
+      const panel = item.querySelector('[data-nav-panel]');
+      if (!btn || !panel) return;
+
+      // Hover open
+      item.addEventListener('mouseenter', () => {
+        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+        openOnly(item);
+      });
+
+      // Slight delay on leaving so you can move into the panel comfortably
+      item.addEventListener('mouseleave', () => {
+        if (closeTimer) clearTimeout(closeTimer);
+        closeTimer = setTimeout(closeAll, 120);
+      });
+
+      // Keyboard: open on focus, close on blur with delay
+      btn.addEventListener('focus', () => { openOnly(item); });
+      btn.addEventListener('blur', () => { closeTimer = setTimeout(closeAll, 120); });
+      panel.addEventListener('mouseenter', () => { if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; } });
+      panel.addEventListener('mouseleave', () => { closeTimer = setTimeout(closeAll, 120); });
+      panel.addEventListener('focusin', () => { if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; } });
+      panel.addEventListener('focusout', () => { closeTimer = setTimeout(closeAll, 120); });
+    });
+
+    // Outside click closes
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target)) closeAll();
+    });
+
+    // Esc closes
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAll();
+    });
+  })();
+</script>
+
