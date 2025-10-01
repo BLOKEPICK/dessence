@@ -1,10 +1,10 @@
-    ---
-    import BaseLayout from '../../layouts/BaseLayout.astro';
-    const seo = {"title": "Waxing — Bikini | D‑Essence Wellness", "description": "Professional bikini waxing performed with gentle technique and careful skin prep.", "type": "website", "canonical": "/services/waxing/bikini", "name": "D‑Essence Wellness"};
-    ---
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const seo = {"title": "Waxing — Bikini | D‑Essence Wellness", "description": "Professional bikini waxing performed with gentle technique and careful skin prep.", "type": "website", "canonical": "/services/waxing/bikini", "name": "D‑Essence Wellness"};
+---
 
-    <BaseLayout seo={'title': 'Waxing — Bikini | D‑Essence Wellness', 'description': 'Professional bikini waxing performed with gentle technique and careful skin prep.', 'type': 'website', 'canonical': '/services/waxing/bikini', 'name': 'D‑Essence Wellness'}>
-      <section class="relative overflow-hidden bg-neutral-950 text-white">
+<BaseLayout seo={seo}>
+<section class="relative overflow-hidden bg-neutral-950 text-white">
   <div class="absolute inset-0 -z-10">
     <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-60"
          style="background: radial-gradient(circle at center, rgba(59,130,246,.45), transparent 60%);"></div>
@@ -13,7 +13,7 @@
   </div>
   <div class="container py-16 md:py-24">
     <div class="max-w-3xl">
-      <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs tracking-wide uppercase">Treatment</span>
+      <span class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/20 px-3 py-1 text-xs tracking-wide uppercase">Treatment</span>
       <h1 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tight">Waxing — Bikini</h1>
       <p class="mt-4 text-lg text-neutral-300">Professional bikini waxing performed with gentle technique and careful skin prep.</p>
       <div class="mt-6">
@@ -24,11 +24,9 @@
     </div>
   </div>
 </section>
-
-      <section class="py-16">
+<section class="py-16">
   <div class="container prose prose-neutral max-w-none">
     <slot />
   </div>
 </section>
-
-    </BaseLayout>
+</BaseLayout>
