@@ -1,0 +1,34 @@
+    ---
+    import BaseLayout from '../../layouts/BaseLayout.astro';
+    const seo = {"title": "Botox® for Hyperhidrosis | D‑Essence Wellness", "description": "Underarm sweating control using precise dosing of Botox® to reduce sweat gland activity and improve daily comfort.", "type": "website", "canonical": "/services/botox-hyperhidrosis", "name": "D‑Essence Wellness"};
+    ---
+
+    <BaseLayout seo={'title': 'Botox® for Hyperhidrosis | D‑Essence Wellness', 'description': 'Underarm sweating control using precise dosing of Botox® to reduce sweat gland activity and improve daily comfort.', 'type': 'website', 'canonical': '/services/botox-hyperhidrosis', 'name': 'D‑Essence Wellness'}>
+      <section class="relative overflow-hidden bg-neutral-950 text-white">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-60"
+         style="background: radial-gradient(circle at center, rgba(59,130,246,.45), transparent 60%);"></div>
+    <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-60"
+         style="background: radial-gradient(circle at center, rgba(236,72,153,.35), transparent 60%);"></div>
+  </div>
+  <div class="container py-16 md:py-24">
+    <div class="max-w-3xl">
+      <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs tracking-wide uppercase">Treatment</span>
+      <h1 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tight">Botox® for Hyperhidrosis</h1>
+      <p class="mt-4 text-lg text-neutral-300">Underarm sweating control using precise dosing of Botox® to reduce sweat gland activity and improve daily comfort.</p>
+      <div class="mt-6">
+        <a href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx" class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/20 px-4 py-2 text-sm hover:bg-white/15 transition">
+          <span>Book consultation</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="py-16">
+  <div class="container prose prose-neutral max-w-none">
+    <slot />
+  </div>
+</section>
+
+    </BaseLayout>

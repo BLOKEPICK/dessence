@@ -17,64 +17,77 @@ const servicesList = [
 // Fallback data to guarantee build (used if project-level `categories`/`catIcons` are missing)
 const _categoriesFallback = [
   { name: "Injectables", items: [
-    { title: "Neuromodulators (Botox® · Xeomin® · Daxxify®)", href: "/services/neurotoxins" },
-    { title: "Botox® for Hyperhidrosis (Underarm Sweating)", href: "/services/neurotoxins#hyperhidrosis" },
-    { title: "Skin Rejuvenation — PRP Microneedling", href: "/services/prp-prf" },
-    { title: "Skin Rejuvenation — PRF Microneedling", href: "/services/prp-prf#prf" },
-    { title: "Dermal Fillers", href: "/services/dermal-fillers" },
-    { title: "Juvederm® Collection (Mid‑Face & Volume)", href: "/services/juvederm-fillers" },
-    { title: "Threads — Smooth Threads (Collagen)", href: "/services/injectables#threads" }
+    { title: "Neuromodulators — Botox®", href: "/services/botox" },
+    { title: "Neuromodulators — Xeomin®", href: "/services/xeomin" },
+    { title: "Neuromodulators — Daxxify®", href: "/services/daxxify" },
+    { title: "Botox® for Hyperhidrosis", href: "/services/botox-hyperhidrosis" },
+    { title: "Skin Rejuvenation — PRP Microneedling", href: "/services/prp-microneedling" },
+    { title: "Skin Rejuvenation — PRF Microneedling", href: "/services/prf-microneedling" },
+    { title: "Dermal Fillers — Juvederm® Collection", href: "/services/juvederm-fillers" },
+    { title: "Threads — Smooth Threads", href: "/services/smooth-threads" }
   ]},
   { name: "Laser Treatments", items: [
-    { title: "Aerolase Neo Elite", href: "/services/aerolase" },
+    { title: "Aerolase — Acne", href: "/services/aerolase/acne" },
+    { title: "Aerolase — Rosacea", href: "/services/aerolase/rosacea" },
+    { title: "Aerolase — Hyperpigmentation", href: "/services/aerolase/hyperpigmentation" },
+    { title: "Aerolase — Melasma", href: "/services/aerolase/melasma" },
+    { title: "Aerolase — Skin Rejuvenation", href: "/services/aerolase/skin-rejuvenation" },
+    { title: "Aerolase — Collagen Boosting", href: "/services/aerolase/collagen-boosting" },
+    { title: "Aerolase — Psoriasis", href: "/services/aerolase/psoriasis" },
+    { title: "Aerolase — Eczema", href: "/services/aerolase/eczema" },
+    { title: "Aerolase — Vascular Lesions", href: "/services/aerolase/vascular-lesions" },
     { title: "Laser Hair Removal", href: "/services/laser-hair-removal" }
   ]},
   { name: "Advanced Skin Care Treatments", items: [
     { title: "Specialty Facials", href: "/services/facials" },
-    { title: "Chemical Peels — Perfect Derma · BioRePeel", href: "/services/chemical-peels" },
+    { title: "Chemical Peels — Perfect Derma Peel", href: "/services/chemical-peels/perfect-derma-peel" },
+    { title: "Chemical Peels — BioRePeel", href: "/services/chemical-peels/biorepeel" },
     { title: "Microneedling", href: "/services/microneedling" },
-    { title: "SkinPen® Microneedling", href: "/services/microneedling#skinpen" },
-    { title: "PRP / PRF Microneedling", href: "/services/prp-prf" },
-    { title: "Acne Programs — Face Reality", href: "/services/acne" },
-    { title: "Exfoliation — Dermaplaning / Enzymes", href: "/services/dermaplaning" }
+    { title: "Microneedling — SkinPen®", href: "/services/microneedling/skinpen" },
+    { title: "PRP Microneedling", href: "/services/prp-microneedling" },
+    { title: "PRF Microneedling", href: "/services/prf-microneedling" },
+    { title: "Acne Programs — Face Reality Boot Camp", href: "/services/acne-programs/face-reality-boot-camp" },
+    { title: "Acne Programs — Anti‑Acne Boot Camp", href: "/services/acne-programs/anti-acne-boot-camp" },
+    { title: "Exfoliation — Dermaplaning", href: "/services/dermaplaning" },
+    { title: "Exfoliation — Enzyme Treatments", href: "/services/enzyme-treatments" }
   ]},
   { name: "Wellness: Vitamin Injections & IV Therapy", items: [
-    { title: "B12 (Methylcobalamin) — Energy", href: "/services/vitamin-injections#b12" },
-    { title: "L‑Carnitine — Fat Burner", href: "/services/vitamin-injections#lcarnitine" },
-    { title: "Amino Blend — Recovery", href: "/services/vitamin-injections#amino" },
-    { title: "MICC — Fat Burn & Liver Support", href: "/services/vitamin-injections#micc" },
-    { title: "Lipo Plus — Metabolism Support", href: "/services/vitamin-injections#lipo" },
-    { title: "Glutathione — Detox / Skin Brightener", href: "/services/vitamin-injections#glutathione" },
-    { title: "Tri‑Immune Boost — Immunity Defense", href: "/services/vitamin-injections#tri-immune" },
-    { title: "IV Infusions — Energy · Immunity · Hydration", href: "/services/vitamin-injections#iv" }
+    { title: "B12 (Methylcobalamin)", href: "/services/vitamin-injections/b12" },
+    { title: "L‑Carnitine", href: "/services/vitamin-injections/l-carnitine" },
+    { title: "Amino Blend", href: "/services/vitamin-injections/amino-blend" },
+    { title: "MICC", href: "/services/vitamin-injections/micc" },
+    { title: "Lipo Plus", href: "/services/vitamin-injections/lipo-plus" },
+    { title: "Glutathione", href: "/services/vitamin-injections/glutathione" },
+    { title: "Tri‑Immune Boost", href: "/services/vitamin-injections/tri-immune-boost" },
+    { title: "IV Infusions", href: "/services/vitamin-injections/iv-infusions" }
   ]},
   { name: "Aesthetic Services", items: [
-    { title: "Waxing & Sugaring — Face · Brows · Body", href: "/services/waxing" },
+    { title: "Waxing & Sugaring — Full Face", href: "/services/waxing/full-face" },
+    { title: "Waxing & Sugaring — Brows", href: "/services/waxing/brows" },
+    { title: "Waxing & Sugaring — Bikini", href: "/services/waxing/bikini" },
+    { title: "Waxing & Sugaring — Body", href: "/services/waxing/body" },
     { title: "Teeth Whitening — Brighter Smile", href: "/services/teeth-whitening" }
   ]},
   { name: "Events & Specialty Experiences", items: [
-    { title: "Botox Parties", href: "/appointment" },
-    { title: "Spa Parties (Girls or Adults)", href: "/appointment" },
-    { title: "Skincare Workshops", href: "/appointment" }
+    { title: "Botox® Parties", href: "/events/botox-parties" },
+    { title: "Spa Parties", href: "/events/spa-parties" },
+    { title: "Skincare Workshops", href: "/events/skincare-workshops" }
   ]},
   { name: "Professional Skincare Products", items: [
-    { title: "Circadia — Science‑driven Skin Health", href: "/services/skincare" },
-    { title: "Face Reality — Proven Acne Care", href: "/services/skincare" },
-    { title: "Hydrinity — Hydration & Repair", href: "/services/skincare" },
-    { title: "SkinMedica — Physician‑Grade", href: "/services/skincare" }
+    { title: "Circadia®", href: "/services/skincare/circadia" },
+    { title: "Face Reality®", href: "/services/skincare/face-reality" },
+    { title: "Hydrinity®", href: "/services/skincare/hydrinity" },
+    { title: "SkinMedica®", href: "/services/skincare/skinmedica" }
   ]},
 ];
-
 const _catIconsFallback = {
   "Injectables": `<svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21l6-6M3 15l6 6M10 8l6 6M8 10l6 6M14 4l6 6M18 2l4 4M2 22l4-4"/><rect x="10" y="10" width="4" height="6" rx="1"/></svg>`,
-  "Laser Treatments": `<svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v6M12 16v6M2 12h6M16 12h6M5 5l4 4M15 15l4 4M5 19l4-4M15 9l4-4"/></svg>`,
-  "Advanced Skin Care Treatments": `<svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c4 0 7 3 7 7 0 5-7 11-7 11S5 15 5 10c0-4 3-7 7-7z"/><path d="M9 10h.01M15 10h.01"/></svg>`,
-  "Wellness: Vitamin Injections & IV Therapy": `<svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M6 8h12M6 16h12"/></svg>`,
-  "Aesthetic Services": `<svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 20c0-2 2-4 4-4s4 2 4 4"/><path d="M10 16C10 8 18 8 18 2"/></svg>`,
-  "Events & Specialty Experiences": `<svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg>`,
-  "Professional Skincare Products": `<svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg>`
+  "Skin & Laser": `<svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v6M12 16v6M2 12h6M16 12h6M5 5l4 4M15 15l4 4M5 19l4-4M15 9l4-4"/></svg>`,
+  "Peels & Facials": `<svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c4 0 7 3 7 7 0 5-7 11-7 11S5 15 5 10c0-4 3-7 7-7z"/><path d="M9 10h.01M15 10h.01"/></svg>`,
+  "Hair Removal": `<svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 20c0-2 2-4 4-4s4 2 4 4"/><path d="M10 16C10 8 18 8 18 2"/></svg>`,
+  "Body & Wellness": `<svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M6 8h12M6 16h12"/></svg>`,
+  "Skin Concerns": `<svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></svg>`,
 };
-
 
 ---
 <section class="relative py-20 overflow-hidden" style="background: radial-gradient(1100px 520px at 8% -12%, #F3F6FA 0%, transparent 60%), linear-gradient(180deg, #FFFFFF 0%, #F8FAFB 100%);">
