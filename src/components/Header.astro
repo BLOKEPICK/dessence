@@ -13,8 +13,9 @@
         </span>
       </a>
 
-      <!-- Categories (aligned to "Treatments we offer") -->
+      <!-- Categories (exactly as user provided) -->
       <ul class="flex items-center gap-1 h-10">
+
         <!-- Injectables -->
         <li class="relative" data-nav-item>
           <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-injectables">
@@ -23,80 +24,75 @@
               <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div id="panel-injectables" role="menu" class="absolute left-0 mt-2 w-[600px] max-w-[95vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
-            <div class="grid grid-cols-2 gap-2 text-sm">
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/neurotoxins">Neurotoxins (Botox/Dysport)</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/juvederm-fillers">Juvederm Fillers</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/skinvive">Skinvive</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/nefertiti-neck">Nefertiti Neck</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/filler-dissolving">Filler Dissolving</a>
+          <div id="panel-injectables" role="menu" class="absolute left-0 mt-2 w-[720px] max-w-[98vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/injectables/botox">Botox</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/injectables/xeomin">Xeomin</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/injectables/daxxify">Daxxify</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/injectables/botox-hyperhidrosis">Botox for Hyperhidrosis</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/microneedling/prp">PRP Microneedling</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/microneedling/prf">PRF Microneedling</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/fillers/juvederm">Dermal Fillers — Juvederm® Collection</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/threads/smooth-threads">Threads — Smooth Threads</a>
             </div>
           </div>
         </li>
 
-        <!-- Skin & Laser -->
+        <!-- Laser Treatments -->
         <li class="relative" data-nav-item>
-          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-skin">
-            Skin & Laser
+          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-laser">
+            Laser Treatments
             <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div id="panel-skin" role="menu" class="absolute left-0 mt-2 w-[680px] max-w-[95vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
-            <div class="grid grid-cols-3 gap-2 text-sm">
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/chemical-peels">Chemical Peels</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/microneedling">Microneedling</a>
+          <div id="panel-laser" role="menu" class="absolute left-0 mt-2 w-[560px] max-w-[95vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
+            <div class="grid grid-cols-2 gap-2 text-sm">
               <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/aerolase">Aerolase</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/laser-hair-removal">Laser Hair Removal</a>
             </div>
           </div>
         </li>
 
-        <!-- Facials -->
+        <!-- Aesthetic Services -->
         <li class="relative" data-nav-item>
-          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-facials">
-            Facials
+          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-aesthetic">
+            Aesthetic Services
             <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div id="panel-facials" role="menu" class="absolute left-0 mt-2 w-[560px] max-w-[95vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
+          <div id="panel-aesthetic" role="menu" class="absolute left-0 mt-2 w-[560px] max-w-[95vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
             <div class="grid grid-cols-2 gap-2 text-sm">
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/facials">All Facials</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Waxing -->
-        <li class="relative" data-nav-item>
-          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-waxing">
-            Waxing
-            <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
-            </svg>
-          </button>
-          <div id="panel-waxing" role="menu" class="absolute left-0 mt-2 w-[560px] max-w-[95vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
-            <div class="grid grid-cols-2 gap-2 text-sm">
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/waxing">All Waxing</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- More Services -->
-        <li class="relative" data-nav-item>
-          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-more">
-            More Services
-            <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
-            </svg>
-          </button>
-          <div id="panel-more" role="menu" class="absolute left-0 mt-2 w-[760px] max-w-[98vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
-            <div class="grid grid-cols-3 gap-2 text-sm">
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections">Vitamin Injections</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/skincare">Skincare</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/waxing-sugaring">Waxing &amp; Sugaring</a>
               <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/teeth-whitening">Teeth Whitening</a>
             </div>
           </div>
         </li>
+
+        <!-- Wellness -->
+        <li class="relative" data-nav-item>
+          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-wellness">
+            Wellness
+            <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div id="panel-wellness" role="menu" class="absolute left-0 mt-2 w-[800px] max-w-[98vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-5 hidden" data-nav-panel>
+            <div class="mb-3 text-sm text-white/70">Vitamin Injections &amp; IV Therapy</div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/b12">B12 (Methylcobalamin)</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/l-carnitine">L‑Carnitine</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/amino-blend">Amino Blend</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/micc">MICC</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/lipo-plus">Lipo Plus</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/glutathione">Glutathione</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/tri-immune-boost">Tri‑Immune Boost</a>
+              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/iv-infusions">IV Infusions</a>
+            </div>
+          </div>
+        </li>
+
       </ul>
     </nav>
   </div>
@@ -187,7 +183,7 @@
 </script>
 
 <script is:inline>
-  // Desktop dropdown logic: exclusive open, graceful close, outside click, ESC
+  // Desktop dropdown logic: exclusive open, smooth close, outside click, ESC
   (function() {
     const nav = document.getElementById('main-nav');
     if (!nav) return;
