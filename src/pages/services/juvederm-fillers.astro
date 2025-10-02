@@ -5,123 +5,138 @@ const seo = {"title": "Dermal Fillers — Juvederm® Collection | D‑Essence We
 
 <BaseLayout {...seo}>
 
-<section class="relative isolate bg-white text-neutral-900">
-  <div class="mx-auto max-w-3xl px-6 pt-28 md:pt-32 pb-24">
-    <!-- Breadcrumb -->
-    <nav class="text-sm text-neutral-500 mb-4">
-      <a href="/" class="hover:text-neutral-700">Home</a>
+<section class="relative isolate bg-[#FAFAF8] text-[#161615]">
+  <div class="mx-auto max-w-4xl px-6 pt-28 md:pt-32 pb-24">
+    <!-- Masthead / breadcrumb -->
+    <nav class="text-sm text-neutral-500 mb-3 tracking-wide">
+      <a href="/" class="hover:text-neutral-800">Home</a>
       <span class="mx-1">/</span>
-      <a href="/services" class="hover:text-neutral-700">Services</a>
+      <a href="/services" class="hover:text-neutral-800">Services</a>
       <span class="mx-1">/</span>
       <span class="text-neutral-800">Dermal Fillers — Juvederm® Collection</span>
     </nav>
 
-    <!-- Title + Subtitle -->
-    <header class="mb-6">
-      <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">Dermal Fillers — Juvederm® Collection</h1>
-      <p class="mt-4 text-lg text-neutral-700">Hyaluronic acid fillers for lift, contour, and refined smoothing.</p>
+    <!-- Headline -->
+    <header class="mb-8">
+      <h1 class="text-[2.5rem] md:text-6xl leading-[1.05] font-semibold tracking-tight">Dermal Fillers — Juvederm® Collection</h1>
+      <p class="mt-3 text-lg text-neutral-700 max-w-2xl">Hyaluronic acid fillers for lift, contour, and refined smoothing.</p>
+      <div class="mt-4 h-px w-full bg-neutral-200"></div>
     </header>
 
-    <hr class="my-10 border-neutral-200">
+    <!-- Body: two-column flow on desktop -->
+    <div class="prose prose-neutral max-w-none prose-p:leading-relaxed prose-h2:mt-0 prose-h2:mb-2 prose-h3:mt-6 prose-h3:mb-2">
+      <style is:global>
+        @media (min-width: 1024px) {
+          .editorial-columns {
+            column-count: 2;
+            column-gap: 3rem;
+          }
+        }
+        .dropcap:first-letter {
+          float: left;
+          font-size: 3.25rem;
+          line-height: 1;
+          padding-right: .25rem;
+          padding-top: .15rem;
+          font-weight: 600;
+        }
+        .pullquote {
+          border-left: 2px solid #0a0a0a;
+          padding-left: .85rem;
+          font-style: italic;
+          color: #404040;
+          margin: 1.25rem 0;
+        }
+      </style>
 
-    <!-- 1) Description -->
-    <section aria-label="Description" class="space-y-4">
-      <h2 class="text-xl font-semibold">Description</h2>
-      <p class="text-neutral-700">
-        This service is designed to provide refined, natural‑looking improvements with an emphasis on comfort and safety.
-        We tailor technique and approach to your goals, explain each step, and set clear expectations for outcomes and maintenance.
-      </p>
-      <p class="text-neutral-700">
-        During a brief consultation, we map your features and review your medical history to determine candidacy and customize the plan.
-        The intent is a polished, balanced result rather than an overdone look.
-      </p>
-    </section>
-
-    <hr class="my-10 border-neutral-200">
-
-    <!-- 2) Benefits -->
-    <section aria-label="Benefits" class="space-y-3">
-      <h2 class="text-xl font-semibold">Benefits</h2>
-      <p class="text-neutral-700">Key advantages may include:</p>
-      <ul class="list-disc pl-5 text-neutral-700">
-        <li>Personalized approach aligned with your anatomy and goals</li>
-        <li>Modern techniques for comfort and natural‑looking outcomes</li>
-        <li>Clear, concise aftercare to support a smooth recovery</li>
-        <li>Quality products/devices and trained providers</li>
-      </ul>
-    </section>
-
-    <hr class="my-10 border-neutral-200">
-
-    <!-- 3) How It Works -->
-    <section aria-label="How It Works" class="space-y-3">
-      <h2 class="text-xl font-semibold">How It Works</h2>
-      <p class="text-neutral-700">
-        We match technique, dosing, or device settings to the indication and area being addressed. The plan accounts for your timeline,
-        tolerance, and preferences. We also discuss what complements or alternatives might better suit adjacent concerns.
-      </p>
-    </section>
-
-    <hr class="my-10 border-neutral-200">
-
-    <!-- 4) The Process -->
-    <section aria-label="The Process" class="space-y-3">
-      <h2 class="text-xl font-semibold">The Process</h2>
-      <ol class="list-decimal pl-5 text-neutral-700 space-y-2">
-        <li><span class="font-medium text-neutral-900">Consultation</span> — goal setting, medical history, candidacy, and mapping.</li>
-        <li><span class="font-medium text-neutral-900">Treatment</span> — technique tailored to the indication and area.</li>
-        <li><span class="font-medium text-neutral-900">Review & Next Steps</span> — what to expect, check‑ins, and maintenance when helpful.</li>
-      </ol>
-    </section>
-
-    <hr class="my-10 border-neutral-200">
-
-    <!-- 5) Pre and Post-Treatment Instructions -->
-    <section aria-label="Pre and Post‑Treatment Instructions" class="space-y-4">
-      <h2 class="text-xl font-semibold">Pre and Post‑Treatment Instructions</h2>
-      <p class="text-neutral-700">
-        You’ll receive a concise handout adapted to your service. In general, arrive with clean skin, avoid irritants when advised,
-        and follow the simple do’s and don’ts provided after your session.
-      </p>
-      <div class="grid grid-cols-1 gap-6">
-        <div>
-          <h3 class="font-medium text-neutral-900">Before your visit</h3>
-          <ul class="list-disc pl-5 text-neutral-700">
-            <li>Avoid new actives or irritants as directed</li>
-            <li>Disclose medications, allergies, and procedures</li>
-            <li>Hydrate and come with clean skin</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-medium text-neutral-900">After your visit</h3>
-          <ul class="list-disc pl-5 text-neutral-700">
-            <li>Follow your specific post‑care steps</li>
-            <li>Protect the area from heat/sun and avoid harsh actives</li>
-            <li>Reach out with any unexpected reactions</li>
-          </ul>
-        </div>
+      <!-- 1) Description -->
+      <h2 id="description">Description</h2>
+      <div class="editorial-columns">
+        <p class="dropcap">
+          This service aims for refined, natural‑looking improvement while preserving character and expression.
+          We begin with a brief consultation to map goals, review medical history, and outline a plan that fits your timeline.
+        </p>
+        <p>
+          Technique, dosing, or device settings are chosen to suit the indication and area. We explain what the service can and cannot accomplish,
+          and where adjuncts or alternatives may serve you better.
+        </p>
+        <p class="pullquote">“Clarity, restraint, and precision—so results look like you, on a rested day.”</p>
       </div>
-    </section>
 
-    <hr class="my-10 border-neutral-200">
+      <hr class="my-10 border-neutral-200">
 
-    <!-- 6) Frequently Asked Questions -->
-    <section aria-label="Frequently Asked Questions" class="space-y-4">
-      <h2 class="text-xl font-semibold">Frequently Asked Questions</h2>
-      <details class="group rounded-md border border-neutral-200 bg-neutral-50 p-4">
-        <summary class="font-medium text-neutral-900 cursor-pointer">How many sessions will I need?</summary>
-        <p class="mt-2 text-neutral-700">It depends on the indication, area, and your goals. Your provider will outline a plan that covers initial and maintenance visits if appropriate.</p>
-      </details>
-      <details class="group rounded-md border border-neutral-200 bg-neutral-50 p-4">
-        <summary class="font-medium text-neutral-900 cursor-pointer">Will it look natural?</summary>
-        <p class="mt-2 text-neutral-700">Our approach emphasizes harmony, proportion, and a refined finish tailored to your features.</p>
-      </details>
-      <details class="group rounded-md border border-neutral-200 bg-neutral-50 p-4">
-        <summary class="font-medium text-neutral-900 cursor-pointer">Is there downtime?</summary>
-        <p class="mt-2 text-neutral-700">Most services have minimal downtime; we review specifics for your situation and provide easy post‑care guidelines.</p>
-      </details>
-      <p class="text-neutral-500 text-sm">*Informational content only; not medical advice. Individual results vary.</p>
-    </section>
+      <!-- 2) Benefits -->
+      <h2 id="benefits">Benefits</h2>
+      <div class="editorial-columns">
+        <p>
+          Most guests appreciate a plan that favors harmony over extremes. Benefits commonly include a more polished appearance,
+          guidance for a smooth recovery, and realistic expectations that remove guesswork.
+        </p>
+        <ul>
+          <li>Plan tailored to your anatomy and goals</li>
+          <li>Comfort‑forward techniques and pacing</li>
+          <li>Clear, concise aftercare</li>
+          <li>Quality products/devices and trained providers</li>
+        </ul>
+      </div>
+
+      <hr class="my-10 border-neutral-200">
+
+      <!-- 3) How It Works -->
+      <h2 id="how-it-works">How It Works</h2>
+      <div class="editorial-columns">
+        <p>
+          We match the modality to the mapped indication. That can mean refined dosing, device parameters, or layered approaches when appropriate.
+          We also account for your tolerance, schedule, and desired subtlety so the cadence feels sustainable.
+        </p>
+      </div>
+
+      <hr class="my-10 border-neutral-200">
+
+      <!-- 4) The Process -->
+      <h2 id="the-process">The Process</h2>
+      <div class="editorial-columns">
+        <ol>
+          <li><strong>Consultation.</strong> Goals, medical history, candidacy, and planning.</li>
+          <li><strong>Treatment.</strong> Technique tailored to indication and area.</li>
+          <li><strong>Review & Next Steps.</strong> What to expect and when maintenance might help.</li>
+        </ol>
+      </div>
+
+      <hr class="my-10 border-neutral-200">
+
+      <!-- 5) Pre and Post‑Treatment Instructions -->
+      <h2 id="pre-post">Pre and Post‑Treatment Instructions</h2>
+      <div class="editorial-columns">
+        <p>
+          You’ll receive a brief handout tailored to your service. In general, arrive with clean skin, avoid irritants when advised,
+          and follow simple do’s and don’ts after your session.
+        </p>
+        <h3>Before your visit</h3>
+        <ul>
+          <li>Avoid new actives/irritants if directed</li>
+          <li>Disclose medications, allergies, procedures</li>
+          <li>Hydrate and arrive with clean skin</li>
+        </ul>
+        <h3>After your visit</h3>
+        <ul>
+          <li>Follow your specific post‑care steps</li>
+          <li>Protect from heat/sun and skip harsh actives</li>
+          <li>Reach out with unexpected reactions</li>
+        </ul>
+      </div>
+
+      <hr class="my-10 border-neutral-200">
+
+      <!-- 6) Frequently Asked Questions -->
+      <h2 id="faqs">Frequently Asked Questions</h2>
+      <div class="editorial-columns">
+        <p><strong>How many sessions will I need?</strong> It depends on your goals and indication. We outline a plan during your consult.</p>
+        <p><strong>Will it look natural?</strong> We favor subtle, harmonious outcomes that respect your features and proportions.</p>
+        <p><strong>Is there downtime?</strong> Most services have minimal downtime; we provide specifics and simple aftercare to follow.</p>
+        <p class="text-sm text-neutral-500">*Informational content only; not medical advice. Individual results vary.</p>
+      </div>
+    </div>
   </div>
 </section>
 
