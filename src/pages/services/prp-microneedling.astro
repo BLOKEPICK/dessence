@@ -5,94 +5,94 @@ const seo = {"title": "PRP Microneedling | D‑Essence Wellness", "description":
 
 <BaseLayout {...seo}>
 
-<section class="relative isolate bg-neutral-950 text-white">
-  <!-- Split HERO -->
-  <div class="relative mx-auto max-w-6xl px-6 pt-28 md:pt-32 pb-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <div>
-        <nav class="text-sm text-white/60 mb-3">
-          <a href="/" class="hover:text-white/90">Home</a>
-          <span class="mx-1">/</span>
-          <a href="/services" class="hover:text-white/90">Services</a>
-          <span class="mx-1">/</span>
-          <span class="text-white/90">PRP Microneedling</span>
-        </nav>
-        <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">PRP Microneedling</h1>
-        <p class="mt-3 text-white/80 text-lg">Collagen induction therapy boosted with your own growth factors.</p>
-        <div class="mt-5 flex flex-wrap gap-2">
-          <span class="inline-flex items-center rounded-full border border-white/10 bg-neutral-900 px-3 py-1 text-xs text-white/80">Consultation‑first</span>
-          <span class="inline-flex items-center rounded-full border border-white/10 bg-neutral-900 px-3 py-1 text-xs text-white/80">Personalized plan</span>
-          <span class="inline-flex items-center rounded-full border border-white/10 bg-neutral-900 px-3 py-1 text-xs text-white/80">Clear aftercare</span>
-        </div>
-      </div>
-      <div class="h-44 md:h-56 rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/0"></div>
-    </div>
+<section class="relative isolate bg-neutral-950 text-white pt-28 md:pt-32">
+  <!-- HERO -->
+  <div class="mx-auto max-w-6xl px-6 pb-8">
+    <nav class="text-sm text-white/60 mb-3">
+      <a href="/" class="hover:text-white/90">Home</a>
+      <span class="mx-1">/</span>
+      <a href="/services" class="hover:text-white/90">Services</a>
+      <span class="mx-1">/</span>
+      <span class="text-white/90">PRP Microneedling</span>
+    </nav>
+    <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">PRP Microneedling</h1>
+    <p class="mt-3 text-white/80 text-lg max-w-3xl">Collagen induction therapy boosted with your own growth factors.</p>
   </div>
 
-  <!-- Tabs Content -->
-  <div class="mx-auto max-w-6xl px-6 pb-24" data-tabs-root>
-    <div class="flex flex-wrap gap-2 mb-6">
-      <button class="px-3 py-1.5 rounded-full border border-white/10 text-white/80 hover:text-white hover:bg-white/5" data-tab-btn data-for="tab-overview" aria-selected="false">Overview</button>
-      <button class="px-3 py-1.5 rounded-full border border-white/10 text-white/80 hover:text-white hover:bg-white/5" data-tab-btn data-for="tab-benefits" aria-selected="false">Benefits</button>
-      <button class="px-3 py-1.5 rounded-full border border-white/10 text-white/80 hover:text-white hover:bg-white/5" data-tab-btn data-for="tab-candidates" aria-selected="false">Candidates</button>
-      <button class="px-3 py-1.5 rounded-full border border-white/10 text-white/80 hover:text-white hover:bg-white/5" data-tab-btn data-for="tab-process" aria-selected="false">What to Expect</button>
-      <button class="px-3 py-1.5 rounded-full border border-white/10 text-white/80 hover:text-white hover:bg-white/5" data-tab-btn data-for="tab-timeline" aria-selected="false">Timeline</button>
-      <button class="px-3 py-1.5 rounded-full border border-white/10 text-white/80 hover:text-white hover:bg-white/5" data-tab-btn data-for="tab-aftercare" aria-selected="false">Aftercare</button>
-      <button class="px-3 py-1.5 rounded-full border border-white/10 text-white/80 hover:text-white hover:bg-white/5" data-tab-btn data-for="tab-faqs" aria-selected="false">FAQs</button>
-    </div>
+  <!-- MAIN -->
+  <div class="mx-auto max-w-6xl px-6 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-10">
+    <!-- Left Rail (sticky) -->
+    <aside class="lg:col-span-3">
+      <div class="sticky top-24 rounded-2xl border border-white/10 bg-neutral-900 p-5">
+        <h4 class="text-sm font-semibold">On this page</h4>
+        <ul class="mt-3 space-y-2 text-sm text-white/80">
+          <li><a href="#overview" class="hover:text-white">Overview</a></li>
+          <li><a href="#benefits" class="hover:text-white">Benefits</a></li>
+          <li><a href="#candidates" class="hover:text-white">Candidates</a></li>
+          <li><a href="#process" class="hover:text-white">What to Expect</a></li>
+          <li><a href="#timeline" class="hover:text-white">Timeline & Results</a></li>
+          <li><a href="#aftercare" class="hover:text-white">Aftercare</a></li>
+          <li><a href="#faqs" class="hover:text-white">FAQs</a></li>
+        </ul>
+      </div>
+    </aside>
 
-    <div class="space-y-6">
-      <section id="tab-overview" data-tab-panel class="rounded-2xl border border-white/10 bg-neutral-900 p-6 hidden">
+    <!-- Content -->
+    <article class="lg:col-span-9 space-y-8">
+      <section id="overview" class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
         <h2 class="text-xl font-semibold">Overview</h2>
         <p class="mt-2 text-white/80">
-          This service is designed to deliver noticeable yet natural improvements with a focus on safety, efficacy, and education.
-          We tailor a plan to your goals, explain each step, and provide guidance for before and after treatment.
+          This service delivers noticeable yet natural improvements with a focus on safety, efficacy, and education.
+          We tailor a plan to your goals, explain each step, and share what to expect before and after treatment.
         </p>
       </section>
 
-      <section id="tab-benefits" data-tab-panel class="rounded-2xl border border-white/10 bg-neutral-900 p-6 hidden">
+      <section id="benefits" class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
         <h3 class="text-lg font-semibold">Benefits</h3>
-        <ul class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 text-white/80 list-disc pl-5">
-          <li>Customized plan based on your anatomy and goals.</li>
-          <li>Modern techniques for comfort and natural‑looking results.</li>
-          <li>Guided aftercare for smooth recovery.</li>
-          <li>Quality products/devices and trained providers.</li>
-        </ul>
+        <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
+            <p class="text-white font-medium">Personalized plan</p>
+            <p class="text-white/75 text-sm mt-1">Aligned with your anatomy and goals.</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
+            <p class="text-white font-medium">Modern techniques</p>
+            <p class="text-white/75 text-sm mt-1">Comfort and natural‑looking results.</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
+            <p class="text-white font-medium">Clear aftercare</p>
+            <p class="text-white/75 text-sm mt-1">Guidance for a smooth recovery.</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
+            <p class="text-white font-medium">Quality‑driven</p>
+            <p class="text-white/75 text-sm mt-1">Trusted products/devices, trained providers.</p>
+          </div>
+        </div>
       </section>
 
-      <section id="tab-candidates" data-tab-panel class="rounded-2xl border border-white/10 bg-neutral-900 p-6 hidden">
+      <section id="candidates" class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
         <h3 class="text-lg font-semibold">Who’s a Good Candidate?</h3>
         <p class="mt-2 text-white/80">Generally healthy individuals with specific concerns and realistic expectations. Certain conditions, medications, or allergies may require modifications or make a service unsuitable. Always review your medical history with your provider.</p>
       </section>
 
-      <section id="tab-process" data-tab-panel class="rounded-2xl border border-white/10 bg-neutral-900 p-6 hidden">
+      <section id="process" class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
         <h3 class="text-lg font-semibold">What to Expect</h3>
-        <ol class="mt-3 grid gap-3 text-white/80 list-decimal pl-5">
+        <ol class="mt-3 list-decimal pl-5 space-y-2 text-white/80">
           <li>Consultation & mapping of concerns.</li>
           <li>Treatment tailored to area and indication.</li>
           <li>Aftercare guidance and next‑steps.</li>
         </ol>
       </section>
 
-      <section id="tab-timeline" data-tab-panel class="rounded-2xl border border-white/10 bg-neutral-900 p-6 hidden">
+      <section id="timeline" class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
         <h3 class="text-lg font-semibold">Timeline & Results</h3>
         <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3 text-white/80">
-          <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
-            <p class="text-white/70 text-sm">Visit length</p>
-            <p class="text-white font-medium mt-1">~30–60 minutes</p>
-          </div>
-          <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
-            <p class="text-white/70 text-sm">Downtime</p>
-            <p class="text-white font-medium mt-1">Minimal for most</p>
-          </div>
-          <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
-            <p class="text-white/70 text-sm">Maintenance</p>
-            <p class="text-white font-medium mt-1">Personalized plan</p>
-          </div>
+          <div class="rounded-xl border border-white/10 bg-neutral-800 p-4"><p class="text-white/70 text-sm">Visit length</p><p class="text-white font-medium mt-1">~30–60 minutes</p></div>
+          <div class="rounded-xl border border-white/10 bg-neutral-800 p-4"><p class="text-white/70 text-sm">Downtime</p><p class="text-white font-medium mt-1">Minimal for most</p></div>
+          <div class="rounded-xl border border-white/10 bg-neutral-800 p-4"><p class="text-white/70 text-sm">Maintenance</p><p class="text-white font-medium mt-1">Personalized plan</p></div>
         </div>
       </section>
 
-      <section id="tab-aftercare" data-tab-panel class="rounded-2xl border border-white/10 bg-neutral-900 p-6 hidden">
+      <section id="aftercare" class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
         <h3 class="text-lg font-semibold">Aftercare</h3>
         <ul class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 text-white/80 list-disc pl-5">
           <li>Follow your personalized post‑care guide.</li>
@@ -101,7 +101,7 @@ const seo = {"title": "PRP Microneedling | D‑Essence Wellness", "description":
         </ul>
       </section>
 
-      <section id="tab-faqs" data-tab-panel class="rounded-2xl border border-white/10 bg-neutral-900 p-6 hidden">
+      <section id="faqs" class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
         <h3 class="text-lg font-semibold">FAQs</h3>
         <div class="mt-3 space-y-4 text-white/80">
           <details class="group rounded-lg border border-white/10 p-4">
@@ -120,33 +120,7 @@ const seo = {"title": "PRP Microneedling | D‑Essence Wellness", "description":
       </section>
 
       <p class="text-white/60 text-sm">*Informational content only; not medical advice. Individual results vary.</p>
-    </div>
-
-<script is:inline>
-  (function(){
-    const root = document.currentScript.closest('[data-tabs-root]');
-    if (!root) return;
-    const buttons = Array.from(root.querySelectorAll('[data-tab-btn]'));
-    const panels = Array.from(root.querySelectorAll('[data-tab-panel]'));
-    function show(id){
-      buttons.forEach(b => {
-        const active = b.dataset.for === id;
-        b.classList.toggle('bg-white/10', active);
-        b.classList.toggle('text-white', active);
-        b.setAttribute('aria-selected', active ? 'true' : 'false');
-        b.tabIndex = active ? 0 : -1;
-      });
-      panels.forEach(p => {
-        p.classList.toggle('hidden', p.id !== id);
-      });
-    }
-    buttons.forEach(b => b.addEventListener('click', () => show(b.dataset.for)));
-    // default
-    const initial = buttons[0]?.dataset.for;
-    if (initial) show(initial);
-  })();
-</script>
-
+    </article>
   </div>
 </section>
 
