@@ -1,185 +1,222 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const seo = {"title": "Aerolase | D‑Essence Wellness", "description": "Gentle yet powerful laser for redness, pigment, and texture.", "canonical": "/services/aerolase", "type": "website", "ogImage": "/og-default" };
+const seo = {"title": "Aerolase | D‑Essence Wellness", "description": "Gentle yet powerful laser for redness, pigment, and texture refinement.", "canonical": "/services/aerolase", "type": "website", "ogImage": "/og-default" };
 ---
 
 <BaseLayout {...seo}>
 
-<section class="relative isolate bg-neutral-50 text-neutral-900">
-  <!-- HERO: Oversized, single column -->
-  <div class="mx-auto max-w-5xl px-6 pt-28 md:pt-32 pb-10">
-    <nav class="text-sm text-neutral-500 mb-3">
-      <a href="/" class="hover:text-neutral-800">Home</a>
+<section class="relative isolate bg-neutral-950 text-white">
+  <!-- HERO: Asymmetrical with stat cards -->
+  <div class="mx-auto max-w-7xl px-6 pt-28 md:pt-32 pb-12">
+    <nav class="text-sm text-white/60 mb-3">
+      <a href="/" class="hover:text-white">Home</a>
       <span class="mx-1">/</span>
-      <a href="/services" class="hover:text-neutral-800">Services</a>
+      <a href="/services" class="hover:text-white">Services</a>
       <span class="mx-1">/</span>
-      <span class="text-neutral-800">Aerolase</span>
+      <span class="text-white">Aerolase</span>
     </nav>
-    <h1 class="text-[2.75rem] md:text-6xl leading-tight font-semibold tracking-tight">Aerolase</h1>
-    <p class="mt-4 text-xl text-neutral-700 max-w-3xl">Gentle yet powerful laser for redness, pigment, and texture.</p>
-    <div class="mt-4 flex flex-wrap gap-2">
-      <span class="inline-flex items-center rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs text-neutral-700">Consultation‑first</span>
-      <span class="inline-flex items-center rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs text-neutral-700">Personalized plan</span>
-      <span class="inline-flex items-center rounded-full border border-neutral-300 bg-white px-3 py-1 text-xs text-neutral-700">Clear aftercare</span>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-7">
+        <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">Aerolase</h1>
+        <p class="mt-4 text-lg text-white/80 max-w-3xl">Gentle yet powerful laser for redness, pigment, and texture refinement.</p>
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="inline-flex items-center rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs text-amber-200">Consultation‑first</span>
+          <span class="inline-flex items-center rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs text-amber-200">Personalized plan</span>
+          <span class="inline-flex items-center rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs text-amber-200">Clear aftercare</span>
+        </div>
+      </div>
+      <div class="lg:col-span-5 grid grid-cols-2 gap-3">
+        <div class="rounded-2xl border border-white/10 bg-neutral-900 p-4">
+          <p class="text-white/60 text-sm">Typical visit</p>
+          <p class="text-white font-semibold mt-1">30–60 min</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-neutral-900 p-4">
+          <p class="text-white/60 text-sm">Downtime</p>
+          <p class="text-white font-semibold mt-1">Minimal</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-neutral-900 p-4">
+          <p class="text-white/60 text-sm">Discomfort</p>
+          <p class="text-white font-semibold mt-1">Mild–Moderate</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-neutral-900 p-4">
+          <p class="text-white/60 text-sm">Maintenance</p>
+          <p class="text-white font-semibold mt-1">Personalized</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- STRIPE 1: Overview -->
-  <div class="bg-white border-y border-neutral-200">
-    <div class="mx-auto max-w-5xl px-6 py-12">
-      <div class="flex items-baseline gap-4">
-        <span class="text-neutral-300 text-4xl font-semibold select-none">01</span>
-        <h2 class="text-2xl font-semibold">Overview</h2>
-      </div>
-      <p class="mt-3 text-neutral-700">
-        A refined, educational approach centered on natural‑looking results and comfort. We map your concerns,
-        select the right technique/product or device, and share clear expectations for before, during, and after.
-      </p>
-      <blockquote class="mt-6 rounded-2xl border border-neutral-200 bg-neutral-50 p-6 text-neutral-800">
-        “Subtle, harmonious changes that respect your features and goals.”
-      </blockquote>
+  <!-- PROMISE STATEMENT -->
+  <div class="mx-auto max-w-7xl px-6 pb-10">
+    <div class="rounded-2xl border border-amber-400/20 bg-gradient-to-br from-amber-400/10 to-amber-400/0 p-6">
+      <p class="text-amber-100 text-base"><span class="font-semibold">Our promise:</span> refined, natural‑looking outcomes that respect your features, timeline, and comfort. Precise technique, premium products/devices, and clear education at every step.</p>
     </div>
   </div>
 
-  <!-- STRIPE 2: What it treats (definition list) -->
-  <div class="bg-neutral-50">
-    <div class="mx-auto max-w-5xl px-6 py-12">
-      <div class="flex items-baseline gap-4">
-        <span class="text-neutral-300 text-4xl font-semibold select-none">02</span>
-        <h3 class="text-xl font-semibold">What it treats</h3>
+  <!-- INDICATIONS MATRIX -->
+  <div class="mx-auto max-w-7xl px-6 pb-16">
+    <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
+      <h2 class="text-xl font-semibold">Indications Matrix</h2>
+      <p class="mt-2 text-white/80">Your provider maps concerns to modalities and areas to build a plan that fits your goals.</p>
+      <div class="mt-4 overflow-x-auto">
+        <table class="min-w-full text-sm border border-white/10 rounded-lg overflow-hidden">
+          <thead class="bg-white/5">
+            <tr>
+              <th class="text-left font-medium text-white/80 p-3 border-b border-white/10">Concern</th>
+              <th class="text-left font-medium text-white/80 p-3 border-b border-white/10">Typical Areas</th>
+              <th class="text-left font-medium text-white/80 p-3 border-b border-white/10">Approach</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-white/10">
+              <td class="p-3 text-white/90">Mapped at consult</td>
+              <td class="p-3 text-white/70">Varies by anatomy</td>
+              <td class="p-3 text-white/70">Technique/device selection</td>
+            </tr>
+            <tr class="border-b border-white/10">
+              <td class="p-3 text-white/90">Secondary concerns</td>
+              <td class="p-3 text-white/70">Discussed individually</td>
+              <td class="p-3 text-white/70">Adjuncts as appropriate</td>
+            </tr>
+            <tr>
+              <td class="p-3 text-white/90">Maintenance</td>
+              <td class="p-3 text-white/70">Personalized cadence</td>
+              <td class="p-3 text-white/70">Home care + in‑clinic</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <dl class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="rounded-xl border border-neutral-200 bg-white p-5 shadow-sm">
-          <dt class="text-neutral-900 font-medium">Common targets</dt>
-          <dd class="text-neutral-700 mt-1">Mapped to your anatomy and concerns.</dd>
+    </section>
+  </div>
+
+  <!-- PROCEDURE TIMELINE (horizontal) -->
+  <div class="mx-auto max-w-7xl px-6 pb-16">
+    <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
+      <h3 class="text-lg font-semibold">Procedure Timeline</h3>
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
+          <p class="text-xs uppercase tracking-wide text-white/60">Before</p>
+          <p class="text-white font-medium mt-1">Consult & prep</p>
+          <p class="text-white/80 text-sm mt-1">Goals, medical history, mapping, pre‑care tips.</p>
         </div>
-        <div class="rounded-xl border border-neutral-200 bg-white p-5 shadow-sm">
-          <dt class="text-neutral-900 font-medium">Approach</dt>
-          <dd class="text-neutral-700 mt-1">Balance, proportion, and a natural finish.</dd>
+        <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
+          <p class="text-xs uppercase tracking-wide text-white/60">During</p>
+          <p class="text-white font-medium mt-1">Treatment</p>
+          <p class="text-white/80 text-sm mt-1">Technique matched to indication and area; comfort‑forward.</p>
         </div>
-        <div class="rounded-xl border border-neutral-200 bg-white p-5 shadow-sm">
-          <dt class="text-neutral-900 font-medium">Comfort</dt>
-          <dd class="text-neutral-700 mt-1">Technique and pacing to keep you at ease.</dd>
+        <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
+          <p class="text-xs uppercase tracking-wide text-white/60">After</p>
+          <p class="text-white font-medium mt-1">Aftercare</p>
+          <p class="text-white/80 text-sm mt-1">Do’s & don’ts and follow‑up when helpful.</p>
         </div>
-        <div class="rounded-xl border border-neutral-200 bg-white p-5 shadow-sm">
-          <dt class="text-neutral-900 font-medium">Expectations</dt>
-          <dd class="text-neutral-700 mt-1">Realistic timelines and maintenance as needed.</dd>
+      </div>
+    </section>
+  </div>
+
+  <!-- RESULTS & MAINTENANCE -->
+  <div class="mx-auto max-w-7xl px-6 pb-16">
+    <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
+      <h3 class="text-lg font-semibold">Results & Maintenance</h3>
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="rounded-xl border border-white/10 bg-neutral-800 p-4"><p class="text-white/70 text-sm">Onset</p><p class="text-white font-medium mt-1">Varies by modality</p></div>
+        <div class="rounded-xl border border-white/10 bg-neutral-800 p-4"><p class="text-white/70 text-sm">Peak</p><p class="text-white font-medium mt-1">Outlined at consult</p></div>
+        <div class="rounded-xl border border-white/10 bg-neutral-800 p-4"><p class="text-white/70 text-sm">Duration</p><p class="text-white font-medium mt-1">Maintenance cadence</p></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SAFETY & CONTRAINDICATIONS -->
+  <div class="mx-auto max-w-7xl px-6 pb-16">
+    <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
+      <h3 class="text-lg font-semibold">Safety & Contraindications</h3>
+      <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
+          <p class="text-white/90 font-medium">Considerations</p>
+          <ul class="mt-2 space-y-1 text-white/80 list-disc pl-5">
+            <li>Allergies, medications, and conditions</li>
+            <li>Active infections or skin irritation</li>
+            <li>Recent procedures in the area</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
+          <p class="text-white/90 font-medium">Oversight & quality</p>
+          <ul class="mt-2 space-y-1 text-white/80 list-disc pl-5">
+            <li>Trained providers and premium sourcing</li>
+            <li>Evidence‑informed protocols</li>
+            <li>Clear escalation pathways</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-3 text-white/60 text-sm">Educational only — not medical advice. Review your history with your provider.</p>
+    </section>
+  </div>
+
+  <!-- PREP & AFTERCARE -->
+  <div class="mx-auto max-w-7xl px-6 pb-16">
+    <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
+      <h3 class="text-lg font-semibold">Preparation & Aftercare</h3>
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <p class="text-white/80 font-medium">Before your visit</p>
+          <ul class="mt-2 space-y-1 text-white/80 list-disc pl-5">
+            <li>Follow any pre‑care guidelines we provide</li>
+            <li>Avoid irritants and disclose medications</li>
+            <li>Arrive hydrated and with clean skin</li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white/80 font-medium">After your visit</p>
+          <ul class="mt-2 space-y-1 text-white/80 list-disc pl-5">
+            <li>Follow specific post‑care steps for your service</li>
+            <li>Protect from sun/heat and avoid harsh actives</li>
+            <li>Reach out if questions or unexpected reactions</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FAQs (compact) -->
+  <div class="mx-auto max-w-7xl px-6 pb-16">
+    <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
+      <h3 class="text-lg font-semibold">FAQs</h3>
+      <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <details class="group rounded-lg border border-white/10 bg-neutral-800 p-4">
+          <summary class="font-medium text-white cursor-pointer">How many sessions will I need?</summary>
+          <p class="mt-2 text-white/80">It varies by concern and modality. Your provider will outline a personalized plan and maintenance if appropriate.</p>
+        </details>
+        <details class="group rounded-lg border border-white/10 bg-neutral-800 p-4">
+          <summary class="font-medium text-white cursor-pointer">Will it look natural?</summary>
+          <p class="mt-2 text-white/80">Our approach emphasizes subtle, harmonious results that respect your features.</p>
+        </details>
+        <details class="group rounded-lg border border-white/10 bg-neutral-800 p-4">
+          <summary class="font-medium text-white cursor-pointer">Is there downtime?</summary>
+          <p class="mt-2 text-white/80">Most services have minimal downtime, which we review during your visit.</p>
+        </details>
+        <details class="group rounded-lg border border-white/10 bg-neutral-800 p-4">
+          <summary class="font-medium text-white cursor-pointer">How should I prepare?</summary>
+          <p class="mt-2 text-white/80">We provide a concise pre‑care list tailored to your service and timeline.</p>
+        </details>
+      </div>
+    </section>
+  </div>
+
+  <!-- GLOSSARY -->
+  <div class="mx-auto max-w-7xl px-6 pb-24">
+    <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
+      <h3 class="text-lg font-semibold">Glossary</h3>
+      <dl class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
+          <dt class="text-white font-medium">Indication</dt>
+          <dd class="text-white/80 mt-1">The specific concern or condition a treatment targets.</dd>
+        </div>
+        <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
+          <dt class="text-white font-medium">Maintenance</dt>
+          <dd class="text-white/80 mt-1">Ongoing care or cadence to support results over time.</dd>
         </div>
       </dl>
-    </div>
-  </div>
-
-  <!-- STRIPE 3: Who it's for / Not for (vertical marker) -->
-  <div class="bg-white border-y border-neutral-200">
-    <div class="mx-auto max-w-5xl px-6 py-12">
-      <div class="flex items-baseline gap-4">
-        <span class="text-neutral-300 text-4xl font-semibold select-none">03</span>
-        <h3 class="text-xl font-semibold">Who it’s for / Who should avoid</h3>
-      </div>
-      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 relative">
-        <div class="absolute left-1/2 top-2 bottom-2 hidden md:block w-px bg-neutral-200"></div>
-        <div class="rounded-xl border border-neutral-200 bg-neutral-50 p-5">
-          <p class="text-neutral-900 font-medium">A good fit</p>
-          <ul class="mt-2 space-y-1 text-neutral-700 list-disc pl-5">
-            <li>Healthy individuals with realistic expectations</li>
-            <li>Concerns aligned with the service</li>
-            <li>Open to aftercare and maintenance</li>
-          </ul>
-        </div>
-        <div class="rounded-xl border border-neutral-200 bg-neutral-50 p-5">
-          <p class="text-neutral-900 font-medium">Consider alternatives</p>
-          <ul class="mt-2 space-y-1 text-neutral-700 list-disc pl-5">
-            <li>Certain medical conditions or medications</li>
-            <li>Active infections/irritation in the area</li>
-            <li>Unrealistic timelines or expectations</li>
-          </ul>
-        </div>
-      </div>
-      <p class="mt-3 text-sm text-neutral-500">Educational only—not medical advice. Review your history with your provider.</p>
-    </div>
-  </div>
-
-  <!-- STRIPE 4: How it works (three big steps) -->
-  <div class="bg-neutral-50">
-    <div class="mx-auto max-w-5xl px-6 py-12">
-      <div class="flex items-baseline gap-4">
-        <span class="text-neutral-300 text-4xl font-semibold select-none">04</span>
-        <h3 class="text-xl font-semibold">How it works</h3>
-      </div>
-      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-          <p class="text-xs uppercase tracking-wide text-neutral-500">Step 1</p>
-          <p class="text-neutral-900 font-medium mt-1">Consult & planning</p>
-          <p class="text-neutral-700 text-sm mt-1">Goal setting, mapping, tailored plan.</p>
-        </div>
-        <div class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-          <p class="text-xs uppercase tracking-wide text-neutral-500">Step 2</p>
-          <p class="text-neutral-900 font-medium mt-1">Treatment</p>
-          <p class="text-neutral-700 text-sm mt-1">Technique matched to indication and area.</p>
-        </div>
-        <div class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-          <p class="text-xs uppercase tracking-wide text-neutral-500">Step 3</p>
-          <p class="text-neutral-900 font-medium mt-1">Aftercare</p>
-          <p class="text-neutral-700 text-sm mt-1">Clear guidance and next steps.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- STRIPE 5: Results & Longevity (tiles) -->
-  <div class="bg-white border-y border-neutral-200">
-    <div class="mx-auto max-w-5xl px-6 py-12">
-      <div class="flex items-baseline gap-4">
-        <span class="text-neutral-300 text-4xl font-semibold select-none">05</span>
-        <h3 class="text-xl font-semibold">Results & longevity</h3>
-      </div>
-      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="rounded-xl border border-neutral-200 bg-neutral-50 p-5"><p class="text-neutral-600 text-sm">Onset</p><p class="text-neutral-900 font-medium mt-1">Varies by service</p></div>
-        <div class="rounded-xl border border-neutral-200 bg-neutral-50 p-5"><p class="text-neutral-600 text-sm">Peak</p><p class="text-neutral-900 font-medium mt-1">Discussed at consult</p></div>
-        <div class="rounded-xl border border-neutral-200 bg-neutral-50 p-5"><p class="text-neutral-600 text-sm">Duration</p><p class="text-neutral-900 font-medium mt-1">Maintenance as advised</p></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- STRIPE 6: Safety & Aftercare (checklist) -->
-  <div class="bg-neutral-50">
-    <div class="mx-auto max-w-5xl px-6 py-12">
-      <div class="flex items-baseline gap-4">
-        <span class="text-neutral-300 text-4xl font-semibold select-none">06</span>
-        <h3 class="text-xl font-semibold">Safety & aftercare</h3>
-      </div>
-      <ul class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-neutral-800 list-disc pl-5">
-        <li>Follow your personalized post‑care handout</li>
-        <li>Protect the area; avoid irritants as directed</li>
-        <li>Hydration, rest, and recommended products only</li>
-        <li>Report unexpected reactions promptly</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- STRIPE 7: FAQs (accordion) -->
-  <div class="bg-white border-t border-neutral-200">
-    <div class="mx-auto max-w-5xl px-6 py-12">
-      <div class="flex items-baseline gap-4">
-        <span class="text-neutral-300 text-4xl font-semibold select-none">07</span>
-        <h3 class="text-xl font-semibold">FAQs</h3>
-      </div>
-      <div class="mt-4 space-y-4">
-        <details class="group rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-          <summary class="font-medium text-neutral-900 cursor-pointer">How many sessions will I need?</summary>
-          <p class="mt-2 text-neutral-700">It varies by concern and modality. Your provider will outline a personalized plan and maintenance if appropriate.</p>
-        </details>
-        <details class="group rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-          <summary class="font-medium text-neutral-900 cursor-pointer">Will it look natural?</summary>
-          <p class="mt-2 text-neutral-700">Our approach focuses on subtle, harmonious changes that complement your features.</p>
-        </details>
-        <details class="group rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-          <summary class="font-medium text-neutral-900 cursor-pointer">Is there downtime?</summary>
-          <p class="mt-2 text-neutral-700">Most services have minimal downtime. Temporary redness, swelling, or sensitivity can occur and usually resolves quickly.</p>
-        </details>
-      </div>
-      <p class="mt-6 text-neutral-500 text-sm">*Informational content only; not medical advice. Individual results vary.</p>
-    </div>
+    </section>
   </div>
 </section>
 
