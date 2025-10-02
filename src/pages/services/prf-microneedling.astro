@@ -4,115 +4,141 @@ const seo = {"title": "PRF Microneedling | D‑Essence Wellness", "description":
 ---
 
 <BaseLayout {...seo}>
-<section class="relative isolate bg-neutral-950 text-white pt-28 md:pt-32">
-  <div class="mx-auto max-w-6xl px-6 pb-10">
-    <div class="max-w-3xl">
-      <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">PRF Microneedling</h1>
-      <p class="mt-3 text-white/80 text-lg">Next‑gen fibrin matrix to visibly improve tone and texture.</p>
+
+<section class="relative isolate bg-neutral-950 text-white">
+  <!-- HERO -->
+  <div class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-neutral-900 to-neutral-950"></div>
+    <div class="relative mx-auto max-w-6xl px-6 pt-28 md:pt-32 pb-12">
+      <div class="max-w-3xl">
+        <nav class="text-sm text-white/60 mb-3">
+          <a href="/" class="hover:text-white/90">Home</a>
+          <span class="mx-1">/</span>
+          <a href="/services" class="hover:text-white/90">Services</a>
+          <span class="mx-1">/</span>
+          <span class="text-white/90">PRF Microneedling</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">PRF Microneedling</h1>
+        <p class="mt-3 text-white/80 text-lg">Next‑gen fibrin matrix to visibly improve tone and texture.</p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <span class="inline-flex items-center rounded-full border border-white/10 bg-neutral-900 px-3 py-1 text-xs text-white/80">Consultation‑first</span>
+          <span class="inline-flex items-center rounded-full border border-white/10 bg-neutral-900 px-3 py-1 text-xs text-white/80">Personalized plan</span>
+          <span class="inline-flex items-center rounded-full border border-white/10 bg-neutral-900 px-3 py-1 text-xs text-white/80">Clear aftercare</span>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="mx-auto max-w-6xl px-6 pb-20 grid grid-cols-1 lg:grid-cols-3 gap-8">
-    <article class="lg:col-span-2 space-y-10">
-      <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
+  <!-- MAIN GRID -->
+  <div class="mx-auto max-w-6xl px-6 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <!-- Content -->
+    <article class="lg:col-span-8 space-y-10">
+      <section id="overview" class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
         <h2 class="text-xl font-semibold">Overview</h2>
         <p class="mt-2 text-white/80">
-          This treatment is designed to deliver noticeable yet natural improvements with a focus on safety, efficacy, and patient education.
-          During your visit we evaluate your goals, tailor a plan, and guide you through what to expect before, during, and after treatment.
+          This service is designed to deliver noticeable yet natural improvements with a focus on safety, efficacy, and education.
+          We’ll tailor a plan to your goals, explain the steps, and share what to expect before, during, and after treatment.
         </p>
       </section>
 
-      <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
+      <section id="benefits" class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
         <h3 class="text-lg font-semibold">Benefits</h3>
         <ul class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 text-white/80 list-disc pl-5">
-          <li>Personalized plan based on your unique goals and anatomy.</li>
+          <li>Customized plan based on your anatomy and goals.</li>
           <li>Modern techniques for comfort and natural‑looking results.</li>
-          <li>Clear aftercare guidance and realistic timelines.</li>
-          <li>Performed by trained professionals using quality products/devices.</li>
+          <li>Guided aftercare for smooth recovery.</li>
+          <li>Quality products/devices and trained providers.</li>
         </ul>
       </section>
 
-      <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
-        <h3 class="text-lg font-semibold">Ideal Candidates &amp; Considerations</h3>
-        <div class="mt-2 space-y-2 text-white/80">
-          <p>Good candidates are generally healthy, have specific concerns, and realistic expectations. Some conditions, medications, or allergies may require adjustments or make a treatment unsuitable.</p>
-          <p><strong>Not medical advice:</strong> Information here is educational. Always discuss your medical history and current medications with the provider.</p>
+      <section id="candidates" class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
+        <h3 class="text-lg font-semibold">Who’s a Good Candidate?</h3>
+        <p class="mt-2 text-white/80">Generally healthy individuals with specific concerns and realistic expectations. Certain conditions, medications, or allergies may require modifications or make a service unsuitable. Always review your medical history with your provider.</p>
+      </section>
+
+      <section id="process" class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
+        <h3 class="text-lg font-semibold">What to Expect</h3>
+        <ol class="mt-3 grid gap-3 text-white/80 list-decimal pl-5">
+          <li>Consultation & mapping of concerns.</li>
+          <li>Treatment with technique tailored to area and indication.</li>
+          <li>Finish with aftercare guidance and next‑steps.</li>
+        </ol>
+      </section>
+
+      <section id="timeline" class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
+        <h3 class="text-lg font-semibold">Timeline & Results</h3>
+        <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3 text-white/80">
+          <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
+            <p class="text-white/70 text-sm">Visit length</p>
+            <p class="text-white font-medium mt-1">~30–60 minutes</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
+            <p class="text-white/70 text-sm">Downtime</p>
+            <p class="text-white font-medium mt-1">Minimal for most</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-neutral-800 p-4">
+            <p class="text-white/70 text-sm">Maintenance</p>
+            <p class="text-white font-medium mt-1">Personalized plan</p>
+          </div>
         </div>
       </section>
 
-      <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
-        <h3 class="text-lg font-semibold">How It Works</h3>
-        <p class="mt-2 text-white/80">We combine assessment, technique, and product/device selection to address your concerns with precision. The approach varies by indication and area treated.</p>
-      </section>
-
-      <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
-        <h3 class="text-lg font-semibold">Treatment Areas</h3>
-        <ul class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 text-white/80 list-disc pl-5">
-          <li>Customized to your needs; common areas listed during your consultation.</li>
-          <li>We focus on balance and proportion across the face/body where applicable.</li>
-        </ul>
-      </section>
-
-      <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
-        <h3 class="text-lg font-semibold">Timeline &amp; Results</h3>
-        <ul class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 text-white/80 list-disc pl-5">
-          <li>Most visits are 30–60 minutes depending on the service.</li>
-          <li>Downtime varies; many clients resume normal routines the same day.</li>
-          <li>Results appear gradually or immediately depending on the modality.</li>
-          <li>Maintenance plans are discussed to support long‑term outcomes.</li>
-        </ul>
-      </section>
-
-      <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
+      <section id="aftercare" class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
         <h3 class="text-lg font-semibold">Aftercare</h3>
         <ul class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-3 text-white/80 list-disc pl-5">
-          <li>Follow the specific guidelines provided in‑clinic for your treatment.</li>
-          <li>Protect skin from sun exposure and follow any product/device instructions.</li>
-          <li>Contact us with any questions or unexpected concerns.</li>
+          <li>Follow your personalized post‑care guide.</li>
+          <li>Protect skin and avoid irritants as advised.</li>
+          <li>Reach out with any questions or unexpected concerns.</li>
         </ul>
       </section>
 
-      <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
+      <section id="faqs" class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
         <h3 class="text-lg font-semibold">FAQs</h3>
         <div class="mt-3 space-y-4 text-white/80">
           <details class="group rounded-lg border border-white/10 p-4">
             <summary class="font-medium text-white cursor-pointer">How many sessions will I need?</summary>
-            <p class="mt-2">It varies by concern and modality. Your provider will outline a personalized plan, including maintenance if helpful.</p>
+            <p class="mt-2">It varies by concern and modality. Your provider will outline a personalized plan and maintenance if appropriate.</p>
           </details>
           <details class="group rounded-lg border border-white/10 p-4">
             <summary class="font-medium text-white cursor-pointer">Will it look natural?</summary>
-            <p class="mt-2">Our approach prioritizes subtle, harmonious results that preserve your unique features.</p>
+            <p class="mt-2">Our approach focuses on subtle, harmonious changes that complement your features.</p>
           </details>
           <details class="group rounded-lg border border-white/10 p-4">
             <summary class="font-medium text-white cursor-pointer">Is there downtime?</summary>
-            <p class="mt-2">Most services have minimal downtime. Any temporary redness, swelling, or sensitivity is discussed in advance.</p>
+            <p class="mt-2">Most services have minimal downtime. Temporary redness, swelling, or sensitivity can occur and usually resolves quickly.</p>
           </details>
         </div>
       </section>
 
-      <p class="text-white/60 text-sm">*All services are provided under appropriate oversight. This page is informational and not a substitute for medical advice. Individual results vary.</p>
+      <p class="text-white/60 text-sm">*Informational content only; not medical advice. Individual results vary.</p>
     </article>
 
-    <aside class="space-y-6">
+    <!-- Right rail: sticky anchor nav + quick facts -->
+    <aside class="lg:col-span-4 space-y-6">
+      <nav class="rounded-2xl border border-white/10 bg-neutral-900 p-6 sticky top-24">
+        <h4 class="text-base font-semibold">On this page</h4>
+        <ul class="mt-3 space-y-2 text-white/80 text-sm">
+          <li><a href="#overview" class="hover:text-white">Overview</a></li>
+          <li><a href="#benefits" class="hover:text-white">Benefits</a></li>
+          <li><a href="#candidates" class="hover:text-white">Candidates</a></li>
+          <li><a href="#process" class="hover:text-white">What to Expect</a></li>
+          <li><a href="#timeline" class="hover:text-white">Timeline & Results</a></li>
+          <li><a href="#aftercare" class="hover:text-white">Aftercare</a></li>
+          <li><a href="#faqs" class="hover:text-white">FAQs</a></li>
+        </ul>
+      </nav>
+
       <div class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
         <h4 class="text-base font-semibold">Quick Facts</h4>
         <dl class="mt-3 grid grid-cols-1 gap-2 text-white/80">
           <div class="flex justify-between"><dt class="text-white/70">Session length</dt><dd>~30–60 minutes</dd></div>
-          <div class="flex justify-between"><dt class="text-white/70">Discomfort</dt><dd>Mild to moderate (managed)</dd></div>
-          <div class="flex justify-between"><dt class="text-white/70">Downtime</dt><dd>Minimal for most</dd></div>
+          <div class="flex justify-between"><dt class="text-white/70">Discomfort</dt><dd>Mild to moderate</dd></div>
+          <div class="flex justify-between"><dt class="text-white/70">Downtime</dt><dd>Minimal</dd></div>
           <div class="flex justify-between"><dt class="text-white/70">Maintenance</dt><dd>Personalized</dd></div>
         </dl>
-      </div>
-
-      <div class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
-        <h4 class="text-base font-semibold">Good to Know</h4>
-        <ul class="mt-2 space-y-2 text-white/80 list-disc pl-5">
-          <li>Comprehensive consultation and tailored recommendations.</li>
-          <li>Premium products/devices and evidence‑informed protocols.</li>
-          <li>Clear pre‑ and post‑care to support outcomes.</li>
-        </ul>
       </div>
     </aside>
   </div>
 </section>
+
 </BaseLayout>
