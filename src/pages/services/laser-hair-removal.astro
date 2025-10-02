@@ -14,38 +14,24 @@ const seo = {"title": "Laser Hair Removal | D‑Essence Wellness", "description"
   .paper{ background:var(--paper); color:var(--ink); }
   .rule{ border-color:var(--rule); }
   .muted{ color:var(--muted); }
-  .side-label{
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    letter-spacing:.08em;
-    font-variant-caps: all-small-caps;
-    color: var(--muted);
-    opacity:.9;
-  }
-  .sticky-top{ position: sticky; top: 6rem; }
   .measure{ max-width: 64ch; }
   .dropcap:first-letter{ float:left; font-size:3.2rem; line-height:1; padding-right:.35rem; padding-top:.2rem; font-weight:600; }
-  @media (max-width: 1023px){
-    .side-col{ display:none; }
-  }
-  a.section-anchor{ text-decoration:none; color:inherit; }
-  a.section-anchor:hover{ text-decoration: underline; }
-
-  /* Neutral icons for benefits */
-  .icon-check{ width:1.1rem; height:1.1rem; flex:0 0 auto; margin-top:.15rem;}
-  /* Timeline */
-  .timeline{ position:relative; }
-  .timeline::before{ content:""; position:absolute; left:.9rem; top:.25rem; bottom:.25rem; width:2px; background:var(--rule); }
-  .tl-step{ position:relative; padding-left:2.25rem; }
-  .tl-badge{ position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:999px; background:var(--ink); color:#fff; font-size:.9rem; display:flex; align-items:center; justify-content:center; font-weight:600; }
-  .tl-title{ font-weight:600; }
-
-  /* FAQs marker */
+  .ataglance{ display:flex; flex-wrap:wrap; gap:.75rem 1.25rem; font-size:.95rem; color:var(--muted); }
+  .ataglance span::after{ content:"·"; margin-left:1.25rem; color:var(--muted); }
+  .ataglance span:last-child::after{ content:""; margin:0; }
+  .pullquote{ border-left:2px solid var(--ink); padding-left:.85rem; font-style:italic; color:#3b3b3b; margin: 1.25rem 0; }
+  @media (max-width: 1023px){ .side-col{ display:none; } }
   details.faq summary{ list-style:none; }
   details.faq summary::-webkit-details-marker{ display:none; }
   .faq-toggle{ width:1.1rem; height:1.1rem; margin-right:.5rem; flex:0 0 auto; }
   details.faq[open] .plus{ display:none; }
   details.faq:not([open]) .minus{ display:none; }
+  .icon-check{ width:1.1rem; height:1.1rem; flex:0 0 auto; margin-top:.15rem;}
+  .timeline{ position:relative; }
+  .timeline::before{ content:""; position:absolute; left:.9rem; top:.25rem; bottom:.25rem; width:2px; background:var(--rule); }
+  .tl-step{ position:relative; padding-left:2.25rem; }
+  .tl-badge{ position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:999px; background:var(--ink); color:#fff; font-size:.9rem; display:flex; align-items:center; justify-content:center; font-weight:600; }
+  .tl-title{ font-weight:600; }
 </style>
 
   <!-- HERO (left‑aligned, no breadcrumb) -->
@@ -60,34 +46,32 @@ const seo = {"title": "Laser Hair Removal | D‑Essence Wellness", "description"
 
   <!-- BODY -->
   <div class="mx-auto max-w-6xl px-6 pb-24 grid grid-cols-12 gap-8">
-    <!-- Left gutter labels (sticky) -->
-    <aside class="side-col col-span-2 lg:col-span-1">
-      <div class="sticky-top flex flex-col items-center gap-10">
-        <a href="#description" class="side-label section-anchor">Description</a>
-        <a href="#benefits" class="side-label section-anchor">Benefits</a>
-        <a href="#process" class="side-label section-anchor">The&nbsp;Process</a>
-        <a href="#care" class="side-label section-anchor">Pre&nbsp;/&nbsp;Post</a>
-        <a href="#faqs" class="side-label section-anchor">FAQs</a>
-      </div>
-    </aside>
+
+    <!-- Removed left side labels entirely -->
 
     <!-- Main narrative -->
     <article class="col-span-12 lg:col-span-8 xl:col-span-7">
-      <!-- DESCRIPTION (restored) -->
+      <!-- DESCRIPTION (unique, professional) -->
       <section id="description" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Description</h2>
         <p class="mt-3 muted dropcap">
-          This service focuses on refined, natural‑looking improvement. We start with a concise consultation to understand your goals, map your features, and ensure safety and candidacy.
-          The plan is measured and realistic—aiming for harmony, not excess.
+          This service focuses on refined, natural‑looking improvement. We begin with a focused consultation to understand your goals and medical background, map your features, and outline a plan that fits your timeline.
         </p>
         <p class="mt-3 muted">
-          Technique, dosing, or device parameters are selected for your indication and timeline. We explain what the service can (and cannot) accomplish and when an alternative may suit better.
+          Technique, dosing, or device parameters are selected for your indication—always with clarity about what the service can and cannot accomplish, and when an alternative may be a better fit.
         </p>
+        <div class="mt-4 ataglance">
+          <span>Comfort‑forward approach</span>
+          <span>Realistic timelines</span>
+          <span>Clear post‑care</span>
+          <span>Subtle, polished results</span>
+        </div>
+        <p class="pullquote">“Less about changing your features, more about restoring ease and balance.”</p>
       </section>
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- BENEFITS — icon-led checklist, neutral icons -->
+      <!-- BENEFITS (unchanged from v2) -->
       <section id="benefits" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Benefits</h2>
         <p class="mt-3 muted">A measured, natural approach with clear guidance and realistic timelines.</p>
@@ -113,7 +97,7 @@ const seo = {"title": "Laser Hair Removal | D‑Essence Wellness", "description"
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- THE PROCESS — vertical timeline with neutral badges -->
+      <!-- THE PROCESS (unchanged from v2) -->
       <section id="process" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">The Process</h2>
         <div class="mt-4 timeline space-y-6">
@@ -129,7 +113,7 @@ const seo = {"title": "Laser Hair Removal | D‑Essence Wellness", "description"
           </div>
           <div class="tl-step">
             <div class="tl-badge">3</div>
-            <p class="tl-title">Review & Next Steps</p>
+            <p class="muted tl-title">Review & Next Steps</p>
             <p class="muted mt-1">What to expect as results evolve; maintenance when helpful.</p>
           </div>
         </div>
@@ -137,7 +121,7 @@ const seo = {"title": "Laser Hair Removal | D‑Essence Wellness", "description"
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- PRE & POST — neutral accent bars using currentColor -->
+      <!-- PRE / POST (unchanged from v2) -->
       <section id="care" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Pre and Post‑Treatment Instructions</h2>
         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -166,7 +150,7 @@ const seo = {"title": "Laser Hair Removal | D‑Essence Wellness", "description"
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- FAQs — custom details with plus/minus -->
+      <!-- FAQs (unchanged from v2) -->
       <section id="faqs" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Frequently Asked Questions</h2>
         <div class="mt-4 space-y-3">
@@ -199,7 +183,7 @@ const seo = {"title": "Laser Hair Removal | D‑Essence Wellness", "description"
       </section>
     </article>
 
-    <!-- Right margin notes (sticky cues) -->
+    <!-- Right margin notes (sticky cues) remain -->
     <aside class="side-col col-span-2 lg:col-span-3 xl:col-span-4">
       <div class="sticky-top measure">
         <p class="muted"><strong>Good to know:</strong> Technique, cadence, and aftercare are tailored to your timeline.</p>
