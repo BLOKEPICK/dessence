@@ -7,9 +7,9 @@ const { seo = {} } = Astro.props;
 ---
 <html lang="en">
   <Seo {...seo} />
-  <body>
+  <body class="bg-neutral-950">
     <Header />
-    <main><slot /></main>
+    <main class="pt-28 md:pt-32"><slot /></main>
     <Footer />
   </body>
 </html>
