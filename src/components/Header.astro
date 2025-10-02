@@ -13,7 +13,7 @@
         </span>
       </a>
 
-      <!-- Categories (exactly as user provided) -->
+      <!-- Categories -->
       <ul class="flex items-center gap-1 h-10">
 
         <!-- Injectables -->
@@ -24,16 +24,32 @@
               <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div id="panel-injectables" role="menu" class="absolute left-0 mt-2 w-[720px] max-w-[98vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/injectables/botox">Botox</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/injectables/xeomin">Xeomin</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/injectables/daxxify">Daxxify</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/injectables/botox-hyperhidrosis">Botox for Hyperhidrosis</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/microneedling/prp">PRP Microneedling</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/microneedling/prf">PRF Microneedling</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/fillers/juvederm">Dermal Fillers — Juvederm® Collection</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/threads/smooth-threads">Threads — Smooth Threads</a>
+          <div id="panel-injectables" role="menu" class="absolute left-0 mt-2 w-[760px] max-w-[98vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+              <a href="/services/injectables/botox" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">Botox</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/injectables/xeomin" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">Xeomin</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/injectables/daxxify" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">Daxxify</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/injectables/botox-hyperhidrosis" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition sm:col-span-2">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">Botox for Hyperhidrosis</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/microneedling/prp" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">PRP Microneedling</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/microneedling/prf" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">PRF Microneedling</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/fillers/juvederm" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition sm:col-span-2">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">Dermal Fillers — Juvederm® Collection</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/threads/smooth-threads" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">Threads — Smooth Threads</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
             </div>
           </div>
         </li>
@@ -47,9 +63,13 @@
             </svg>
           </button>
           <div id="panel-laser" role="menu" class="absolute left-0 mt-2 w-[560px] max-w-[95vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
-            <div class="grid grid-cols-2 gap-2 text-sm">
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/aerolase">Aerolase</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/laser-hair-removal">Laser Hair Removal</a>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <a href="/services/aerolase" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">Aerolase</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/laser-hair-removal" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">Laser Hair Removal</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
             </div>
           </div>
         </li>
@@ -63,9 +83,13 @@
             </svg>
           </button>
           <div id="panel-aesthetic" role="menu" class="absolute left-0 mt-2 w-[560px] max-w-[95vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-4 hidden" data-nav-panel>
-            <div class="grid grid-cols-2 gap-2 text-sm">
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/waxing-sugaring">Waxing &amp; Sugaring</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/teeth-whitening">Teeth Whitening</a>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <a href="/services/waxing-sugaring" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">Waxing &amp; Sugaring</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/teeth-whitening" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">Teeth Whitening</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
             </div>
           </div>
         </li>
@@ -78,17 +102,35 @@
               <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div id="panel-wellness" role="menu" class="absolute left-0 mt-2 w-[800px] max-w-[98vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-5 hidden" data-nav-panel>
-            <div class="mb-3 text-sm text-white/70">Vitamin Injections &amp; IV Therapy</div>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/b12">B12 (Methylcobalamin)</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/l-carnitine">L‑Carnitine</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/amino-blend">Amino Blend</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/micc">MICC</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/lipo-plus">Lipo Plus</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/glutathione">Glutathione</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/vitamin-injections/tri-immune-boost">Tri‑Immune Boost</a>
-              <a class="block px-3 py-2 rounded-lg hover:bg-white/5 text-white/90 hover:text-white" href="/services/iv-infusions">IV Infusions</a>
+          <div id="panel-wellness" role="menu" class="absolute left-0 mt-2 w-[840px] max-w-[98vw] rounded-2xl border border-white/10 bg-black/70 backdrop-blur-md p-5 hidden" data-nav-panel>
+            <div class="rounded-xl border border-white/10 bg-white/5 p-3 mb-3">
+              <p class="text-sm text-white/80">Vitamin Injections &amp; IV Therapy</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+              <a href="/services/vitamin-injections/b12" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">B12 (Methylcobalamin)</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/vitamin-injections/l-carnitine" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">L‑Carnitine</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/vitamin-injections/amino-blend" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">Amino Blend</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/vitamin-injections/micc" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">MICC</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/vitamin-injections/lipo-plus" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">Lipo Plus</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/vitamin-injections/glutathione" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">Glutathione</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/vitamin-injections/tri-immune-boost" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">Tri‑Immune Boost</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
+              <a href="/services/iv-infusions" class="group rounded-xl border border-white/10 bg-white/5 p-3 hover:bg-white/10 hover:border-white/20 transition">
+                <div class="flex items-center justify-between"><h4 class="text-white/90 font-medium">IV Infusions</h4><svg class="w-4 h-4 opacity-70 group-hover:translate-x-0.5 transition" viewBox="0 0 20 20" fill="currentColor"><path d="M7 5l5 5-5 5"/></svg></div>
+              </a>
             </div>
           </div>
         </li>
@@ -183,27 +225,36 @@
 </script>
 
 <script is:inline>
-  // Desktop dropdown logic: exclusive open, smooth close, outside click, ESC
+  // Dropdown UX: Hover intent + click-to-pin (exclusive open)
   (function() {
     const nav = document.getElementById('main-nav');
     if (!nav) return;
-    const items = Array.from(nav.querySelectorAll('[data-nav-item]'));
-    const panels = () => Array.from(nav.querySelectorAll('[data-nav-panel]'));
-    let closeTimer = null;
 
-    function openOnly(item) {
+    const items  = Array.from(nav.querySelectorAll('[data-nav-item]'));
+    const panels = () => Array.from(nav.querySelectorAll('[data-nav-panel]'));
+    const triggers = () => Array.from(nav.querySelectorAll('[data-nav-trigger]'));
+
+    let openTimer = null;
+    let closeTimer = null;
+    let pinnedItem = null;
+
+    const OPEN_DELAY  = 140;
+    const CLOSE_DELAY = 180;
+    const clearTimers = () => { if (openTimer) clearTimeout(openTimer); if (closeTimer) clearTimeout(closeTimer); openTimer = closeTimer = null; };
+
+    function closeAll() {
       panels().forEach(p => p.classList.add('hidden'));
-      items.forEach(i => i.querySelector('[data-nav-trigger]')?.setAttribute('aria-expanded', 'false'));
+      triggers().forEach(b => b.setAttribute('aria-expanded', 'false'));
+    }
+    function openOnly(item) {
+      if (pinnedItem && pinnedItem !== item) pinnedItem = null;
+      closeAll();
       const panel = item.querySelector('[data-nav-panel]');
-      const btn = item.querySelector('[data-nav-trigger]');
+      const btn   = item.querySelector('[data-nav-trigger]');
       if (panel && btn) {
         panel.classList.remove('hidden');
         btn.setAttribute('aria-expanded', 'true');
       }
-    }
-    function closeAll() {
-      panels().forEach(p => p.classList.add('hidden'));
-      items.forEach(i => i.querySelector('[data-nav-trigger]')?.setAttribute('aria-expanded', 'false'));
     }
 
     items.forEach(item => {
@@ -211,19 +262,38 @@
       const panel = item.querySelector('[data-nav-panel]');
       if (!btn || !panel) return;
 
-      item.addEventListener('mouseenter', () => { if (closeTimer) clearTimeout(closeTimer); openOnly(item); });
-      item.addEventListener('mouseleave', () => { closeTimer = setTimeout(closeAll, 120); });
+      item.addEventListener('mouseenter', () => {
+        if (pinnedItem && pinnedItem !== item) return;
+        clearTimers();
+        openTimer = setTimeout(() => openOnly(item), OPEN_DELAY);
+      });
+      item.addEventListener('mouseleave', () => {
+        if (pinnedItem === item) return;
+        clearTimers();
+        closeTimer = setTimeout(() => { if (!pinnedItem) closeAll(); }, CLOSE_DELAY);
+      });
 
-      btn.addEventListener('focus', () => openOnly(item));
-      btn.addEventListener('blur', () => { closeTimer = setTimeout(closeAll, 120); });
-      panel.addEventListener('mouseenter', () => { if (closeTimer) clearTimeout(closeTimer); });
-      panel.addEventListener('mouseleave', () => { closeTimer = setTimeout(closeAll, 120); });
-      panel.addEventListener('focusin', () => { if (closeTimer) clearTimeout(closeTimer); });
-      panel.addEventListener('focusout', () => { closeTimer = setTimeout(closeAll, 120); });
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        clearTimers();
+        if (pinnedItem === item) { pinnedItem = null; closeAll(); }
+        else { pinnedItem = item; openOnly(item); }
+      });
+
+      btn.addEventListener('focus', () => { if (!pinnedItem) openOnly(item); });
+      btn.addEventListener('blur',  () => { if (!pinnedItem) { clearTimers(); closeTimer = setTimeout(closeAll, CLOSE_DELAY); } });
+      panel.addEventListener('mouseenter', () => clearTimers());
+      panel.addEventListener('mouseleave', () => { if (!pinnedItem) { clearTimers(); closeTimer = setTimeout(closeAll, CLOSE_DELAY); } });
+      panel.addEventListener('focusin',  () => clearTimers());
+      panel.addEventListener('focusout', () => { if (!pinnedItem) { clearTimers(); closeTimer = setTimeout(closeAll, CLOSE_DELAY); } });
     });
 
-    document.addEventListener('click', (e) => { if (!nav.contains(e.target)) closeAll(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target)) { pinnedItem = null; closeAll(); }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { pinnedItem = null; closeAll(); }
+    });
   })();
 </script>
 
