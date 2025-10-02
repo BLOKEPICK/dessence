@@ -1,8 +1,10 @@
 ---
-layout: ../../layouts/BaseLayout.astro
-title: "Daxxify — D‑Essence Wellness"
-description: "Peptide‑enhanced neuromodulator for long‑lasting smoothness."
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const seo = { "title": 'Daxxify | D‑Essence Wellness', "description": 'Peptide‑enhanced neuromodulator for long‑lasting smoothness.', "canonical": '/services/daxxify', "type": "website", "ogImage": "/og-default" };
 ---
+
+<BaseLayout {...seo}>
+<section class='rounded-2xl border border-white/10 bg-neutral-900 p-6'><h3 class='text-lg font-semibold'>What makes Daxxify different?</h3><p class='mt-2 text-white/80'>It incorporates a peptide exchange technology; clients may experience a longer duration in some areas. Suitability varies—your provider will advise.</p></section>
 
 <section class="relative isolate bg-neutral-950 text-white">
   <div class="mx-auto max-w-6xl px-6 pt-16 pb-10">
@@ -12,15 +14,7 @@ description: "Peptide‑enhanced neuromodulator for long‑lasting smoothness."
     </div>
   </div>
 
-  <!-- Content -->
-
-      <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
-        <h3 class="text-lg font-semibold">What makes Daxxify different?</h3>
-        <p class="mt-2 text-white/80">It incorporates a peptide exchange technology; clients may experience a longer duration in some areas. Suitability varies—your provider will advise.</p>
-      </section>
-    
   <div class="mx-auto max-w-6xl px-6 pb-20 grid grid-cols-1 lg:grid-cols-3 gap-8">
-    <!-- Main -->
     <article class="lg:col-span-2 space-y-10">
       <section class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
         <h2 class="text-xl font-semibold">Overview</h2>
@@ -101,7 +95,6 @@ description: "Peptide‑enhanced neuromodulator for long‑lasting smoothness."
       <p class="text-white/60 text-sm">*All services are provided under appropriate oversight. This page is informational and not a substitute for medical advice. Individual results vary.</p>
     </article>
 
-    <!-- Aside -->
     <aside class="space-y-6">
       <div class="rounded-2xl border border-white/10 bg-neutral-900 p-6">
         <h4 class="text-base font-semibold">Quick Facts</h4>
@@ -124,3 +117,5 @@ description: "Peptide‑enhanced neuromodulator for long‑lasting smoothness."
     </aside>
   </div>
 </section>
+
+</BaseLayout>
