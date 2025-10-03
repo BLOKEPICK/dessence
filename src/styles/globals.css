@@ -246,3 +246,36 @@ dialog[data-results]::backdrop{background:rgba(0,0,0,.6)}
   border-radius: inherit;
   display: block;
 }
+
+
+/* === Professional FAQ styling (applies to all service pages) === */
+details.faq{
+  border: 1px solid var(--rule);
+  border-radius: 0.75rem;
+  background: #fff;
+  padding: 1rem 1.25rem;
+}
+details.faq + details.faq{ margin-top: 0.75rem; }
+details.faq summary{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  cursor: pointer;
+}
+details.faq summary::-webkit-details-marker{ display: none; }
+/* Caret indicator */
+details.faq summary::after{
+  content: '▸';
+  transition: transform 200ms ease;
+  opacity: 0.6;
+}
+details.faq[open] summary::after{
+  transform: rotate(90deg);
+  opacity: 0.9;
+}
+details.faq p{
+  margin-top: 0.5rem;
+  color: var(--muted);
+}
