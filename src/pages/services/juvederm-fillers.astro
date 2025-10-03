@@ -1,122 +1,89 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const seo = {"title": "Dermal Fillers | Juvederm Collection", "description": "Juvederm dermal fillers restore volume, smooth wrinkles, and enhance facial features with natural-looking results.", "canonical": "/services/juvederm-fillers", "type": "website", "ogImage": "/og-default" };
+const seo = {"title": "Dermal Fillers — Juvederm Collection | D‑Essence Wellness", "description": "Hyaluronic acid fillers to lift, smooth, and enhance facial features with natural‑looking, customizable results.", "publisher": {"@type": "Organization", "logo": "/og-default.jpg", "name": "D‑Essence Wellness"}, "url": "/services/juvederm-fillers"};
 ---
 
-
-
 <BaseLayout seo={seo}>
+  <!-- HERO -->
   <section class="relative overflow-hidden bg-neutral-950 text-white">
     <div class="absolute inset-0 -z-10">
-      <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,.55),transparent_60%)]"></div>
-      <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(236,72,153,.45),transparent_60%)]"></div>
+      <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-60"
+           style="background: radial-gradient(circle at center, rgba(59,130,246,.55), transparent 60%);"></div>
+      <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-60"
+           style="background: radial-gradient(circle at center, rgba(236,72,153,.45), transparent 60%);"></div>
     </div>
     <div class="container py-20 md:py-28">
       <div class="max-w-3xl">
-        <span class="inline-flex items-center gap-2 rounded-full bg-white/5 ring-1 ring-white/10 px-3 py-1 text-xs tracking-wide uppercase">Treatment</span>
+        <span class="inline-flex items-center gap-2 rounded-full ring-1 ring-white/10 px-3 py-1 text-xs tracking-wide uppercase">Treatment</span>
         <h1 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tight">Dermal Fillers — Juvederm Collection</h1>
-        <p class="mt-4 text-lg text-neutral-300">Hyaluronic acid (HA) fillers designed to restore volume, smooth folds, and enhance features—tailored for cheeks, lips, jawline, and more—with soft, natural movement.</p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx" class="btn btn-primary">Book consultation</a>
-          <a href="tel:+17163038963" class="btn btn-outline">Call clinic</a>
-        </div>
+        <p class="mt-4 text-lg text-neutral-300">
+          Hyaluronic acid (HA) fillers designed to restore volume, smooth folds, and enhance features—tailored for cheeks, lips, jawline, and more—with soft, natural movement.
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="bg-neutral-950 text-white">
-    <div class="container pb-12 md:pb-16 -mt-12 md:-mt-16">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-        <div class="md:col-span-7">
-          <div class="rounded-3xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur">
-            <h2 class="text-xl font-semibold">Why patients choose this</h2>
-            <p class="mt-2 text-neutral-300">Customized parameters for safe, effective reduction on face or body.</p>
-          </div>
-        </div>
-        <div class="md:col-span-5">
-          <div class="rounded-3xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur">
-            <h3 class="text-lg font-semibold">Key points</h3>
-            <ul class="mt-3 space-y-2 [counter-reset:step]">
-              <li class='flex gap-3'><span class='i'>✓</span><span>Faster sessions for large areas</span></li>
-<li class='flex gap-3'><span class='i'>✓</span><span>Progressive, long‑term reduction</span></li>
-<li class='flex gap-3'><span class='i'>✓</span><span>Customized parameters for safety</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- PROCESS -->
   <section class="py-16">
     <div class="container">
       <div class="rounded-3xl border p-8 bg-white">
         <h2 class="text-2xl font-semibold">Step‑by‑step process</h2>
         <ol class="mt-4 grid gap-4 md:grid-cols-2 [counter-reset:step]">
-          <li><span class='n'></span>Skin and hair assessment (color, density)</li>
-<li><span class='n'></span>Patch test for parameter selection</li>
-<li><span class='n'></span>Session schedule every 4–8 weeks</li>
-<li><span class='n'></span>Ongoing review and adjustments</li>
+          <li><span class='n'></span>Consultation & facial mapping</li>
+          <li><span class='n'></span>Product selection (Voluma, Volux, Volbella, Vollure, Ultra)</li>
+          <li><span class='n'></span>Comfort measures, precise micro‑injections</li>
+          <li><span class='n'></span>Finish & review; optional two‑week check‑in</li>
         </ol>
       </div>
     </div>
   </section>
 
+  <!-- INFO CARDS -->
   <section class="py-16">
     <div class="container grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Ideal candidates</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Volume loss in cheeks/temples or jawline definition</li><li>Lip enhancement or smoothing lip lines</li><li>Softening nasolabial & marionette folds</li></ul>
+        <ul class="mt-3 list-disc pl-5 space-y-1">
+          <li>Volume loss in cheeks/temples or jawline definition</li>
+          <li>Lip enhancement or smoothing lip lines</li>
+          <li>Softening nasolabial & marionette folds</li>
+        </ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
         <h3 class="text-xl font-semibold">Benefits</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Immediate, natural‑looking results</li><li>Customizable lift, structure, or softness by area</li><li>Longevity typically 6–18 months (up to ~2 years in cheeks)</li><li>Reversible with hyaluronidase if adjustments are needed</li></ul>
+        <ul class="mt-3 list-disc pl-5 space-y-1">
+          <li>Immediate, natural‑looking results</li>
+          <li>Customizable lift, structure, or softness by area</li>
+          <li>Longevity typically 6–18 months (up to ~2 years in cheeks)</li>
+          <li>Reversible with hyaluronidase if adjustments are needed</li>
+        </ul>
       </div>
       <div class="rounded-3xl border p-6 bg-white">
-        <h3 class="text-xl font-semibold">Risks & side effects</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Temporary redness or perifollicular swelling</li>
-<li>Rare: blisters or pigment change—minimized with proper settings</li>
-<li>Sun sensitivity post‑session</li></ul>
+        <h3 class="text-xl font-semibold">Pre + Post</h3>
+        <p class="mt-3 text-neutral-700"><span class="font-medium">Before:</span> avoid alcohol, NSAIDs, and high‑dose supplements 24–48h; pause strong actives 2 days; arrive with clean skin.</p>
+        <p class="mt-3 text-neutral-700"><span class="font-medium">After:</span> expect mild swelling/bruising; ice intermittently; avoid strenuous exercise/alcohol/heat 24h; no facials/dental work ~1–2 weeks.</p>
       </div>
     </div>
   </section>
 
+  <!-- WHAT TO EXPECT -->
   <section class="py-16">
-    <div class="container grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="rounded-3xl border p-6 bg-white">
-        <h3 class="text-xl font-semibold">Aftercare</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Cool compresses as needed</li>
-<li>SPF and avoid sun/heat 24–48h</li>
-<li>No waxing or plucking between sessions</li></ul>
-      </div>
-      <div class="rounded-3xl border p-6 bg-white">
-        <h3 class="text-xl font-semibold">Results & maintenance</h3>
-        <p class="mt-3 text-neutral-700">Hair reduction is progressive; density and regrowth speed decrease notably after several sessions.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20 bg-neutral-950 text-white">
     <div class="container">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-        <figure class="rounded-3xl overflow-hidden ring-1 ring-white/10">
-          <img src="/og-default.jpg" alt="Laser Hair Removal before and after (placeholder)" loading="lazy" class="w-full h-auto" />
-        </figure>
-        <div>
-          <h2 class="text-2xl font-semibold">Before & After</h2>
-          <p class="mt-2 text-neutral-300">Explore real patient transformations to set realistic expectations for outcomes and timelines.</p>
-          <a class="btn btn-ghost mt-6" href="/gallery/laser-hair-removal">Before &amp; After Gallery</a>
-        </div>
+      <div class="rounded-3xl border p-8 bg-white">
+        <h2 class="text-2xl font-semibold">What to expect</h2>
+        <p class="mt-3 text-neutral-700">
+          Most people return to routine the same day. Swelling is most noticeable in the first 24–48 hours—especially for lips—and then settles. Results are visible immediately and refine as minor swelling resolves. Touch‑ups can maintain your look over time.
+        </p>
       </div>
     </div>
   </section>
 
   <style>
+    /* numbered process pills (matches site style) */
     ol [class~="n"]::before, ol li::marker { content: none; }
     ol li { counter-increment: step; position: relative; padding-left: 2.5rem; }
     ol li .n { position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:9999px;
                 background: radial-gradient(120% 120% at 30% 20%, rgba(59,130,246,.9), rgba(236,72,153,.85));
                 box-shadow: 0 10px 30px rgba(0,0,0,.25); }
-    ul li .i { display:inline-flex; width:1.1rem; height:1.1rem; align-items:center; justify-content:center;
-                border-radius:9999px; background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); }
   </style>
 </BaseLayout>
