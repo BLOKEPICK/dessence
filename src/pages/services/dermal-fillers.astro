@@ -1,122 +1,92 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const seo = {"title": "Dermal Fillers | Juvederm Collection", "description": "Juvederm dermal fillers restore volume, smooth wrinkles, and enhance facial features with natural-looking results.", "canonical": "/services/dermal-fillers", "type": "website", "ogImage": "/og-default" };
+const seo = {"title": "Dermal Fillers | Juvederm Collection", "description": "Juvederm dermal fillers restore volume, smooth wrinkles, and enhance facial features with natural-looking results.", "canonical": "/services/dermal-fillers-juvederm", "type": "website", "ogImage": "/og-default" };
 ---
 
+<BaseLayout {...seo}>
 
-
-<BaseLayout seo={seo}>
-  <section class="relative overflow-hidden bg-neutral-950 text-white">
-    <div class="absolute inset-0 -z-10">
-      <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,.55),transparent_60%)]"></div>
-      <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(236,72,153,.45),transparent_60%)]"></div>
+<section class="relative isolate paper">
+  <div class="px-6 pt-28 md:pt-32 pb-10">
+    <div class="mx-auto max-w-4xl">
+      <p class="text-xs tracking-wider uppercase muted">Service</p>
+      <h1 class="mt-2 text-[2.75rem] md:text-6xl leading-[1.05] font-semibold tracking-tight">Dermal Fillers — Juvederm Collection</h1>
+      <p class="mt-3 text-[1.125rem] md:text-xl muted measure">Juvederm is a leading family of hyaluronic acid fillers used to restore lost volume, smooth wrinkles, and enhance facial contours for natural-looking rejuvenation.</p>
+      <div class="mt-6 h-px w-full border-t rule"></div>
     </div>
-    <div class="container py-20 md:py-28">
-      <div class="max-w-3xl">
-        <span class="inline-flex items-center gap-2 rounded-full bg-white/5 ring-1 ring-white/10 px-3 py-1 text-xs tracking-wide uppercase">Treatment</span>
-        <h1 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tight">Dermal Fillers — Juvederm Collection</h1>
-        <p class="mt-4 text-lg text-neutral-300">Hyaluronic acid (HA) fillers designed to restore volume, smooth folds, and enhance features—tailored for cheeks, lips, jawline, and more—with soft, natural movement.</p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx" class="btn btn-primary">Book consultation</a>
-          <a href="tel:+17163038963" class="btn btn-outline">Call clinic</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
 
-  <section class="bg-neutral-950 text-white">
-    <div class="container pb-12 md:pb-16 -mt-12 md:-mt-16">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-        <div class="md:col-span-7">
-          <div class="rounded-3xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur">
-            <h2 class="text-xl font-semibold">Why patients choose this</h2>
-            <p class="mt-2 text-neutral-300">Customized parameters for safe, effective reduction on face or body.</p>
+  <div class="mx-auto max-w-6xl px-6 pb-24 grid grid-cols-12 gap-8">
+    <article class="col-span-12 lg:col-span-8 xl:col-span-7">
+      <section id="description" class="measure">
+        <h2 class="text-xl font-semibold tracking-tight">Description</h2>
+        <p class="mt-3 muted dropcap">
+          Dermal fillers are injectable gels designed to restore volume, smooth lines, and enhance features without surgery. The Juvederm Collection is formulated with hyaluronic acid, a natural substance in the skin that binds water to plump and hydrate tissue. 
+        </p>
+        <p class="mt-3 muted">
+          The collection includes specialized fillers for different needs: Voluma for cheek and chin enhancement, Vollure for folds and lines, Volbella for subtle lip plumping, Ultra XC for fuller lips, and Volux for jawline definition. Each is tailored for precise, safe, and natural results.
+        </p>
+      </section>
+
+      <div class="my-10 h-px border-t rule"></div>
+
+      <section id="benefits" class="measure">
+        <h2 class="text-xl font-semibold tracking-tight">Benefits</h2>
+        <ul class="list-disc pl-5 muted mt-2 space-y-2">
+          <li>Non-surgical rejuvenation with minimal downtime.</li>
+          <li>Immediate and natural-looking results.</li>
+          <li>Longevity: 6–18 months, up to 2 years for some formulas.</li>
+          <li>Safe, FDA-approved, and biocompatible.</li>
+          <li>Versatility for cheeks, lips, jawline, folds, and more.</li>
+          <li>Reversible if needed with hyaluronidase.</li>
+        </ul>
+      </section>
+
+      <div class="my-10 h-px border-t rule"></div>
+
+      <section id="process" class="measure">
+        <h2 class="text-xl font-semibold tracking-tight">The Process</h2>
+        <ol class="list-decimal pl-5 muted mt-2 space-y-2">
+          <li><span class="font-medium">Consultation & Planning:</span> Assessment of facial anatomy and goals, selection of the appropriate Juvederm filler type(s).</li>
+          <li><span class="font-medium">Injection Procedure:</span> Cleansing, numbing, and precise placement of filler with fine needles or cannula; typically 15–30 minutes.</li>
+          <li><span class="font-medium">Aftercare & Follow-up:</span> Immediate results with mild swelling; follow-up as needed for refinement.</li>
+        </ol>
+      </section>
+
+      <div class="my-10 h-px border-t rule"></div>
+
+      <section id="care" class="measure">
+        <h2 class="text-xl font-semibold tracking-tight">Pre and Post‑Treatment Instructions</h2>
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div><p class="font-medium">Before your visit</p>
+            <ul class="list-disc pl-5 muted mt-2 space-y-2">
+              <li>Avoid aspirin, ibuprofen, vitamin E, fish oil, and alcohol for 24–48 hours.</li>
+              <li>Pause strong skincare products like retinoids 2 days prior.</li>
+              <li>Stay hydrated and arrive with a clean face.</li>
+            </ul>
           </div>
-        </div>
-        <div class="md:col-span-5">
-          <div class="rounded-3xl bg-white/5 ring-1 ring-white/10 p-6 backdrop-blur">
-            <h3 class="text-lg font-semibold">Key points</h3>
-            <ul class="mt-3 space-y-2 [counter-reset:step]">
-              <li class='flex gap-3'><span class='i'>✓</span><span>Faster sessions for large areas</span></li>
-<li class='flex gap-3'><span class='i'>✓</span><span>Progressive, long‑term reduction</span></li>
-<li class='flex gap-3'><span class='i'>✓</span><span>Customized parameters for safety</span></li>
+          <div><p class="font-medium">After your visit</p>
+            <ul class="list-disc pl-5 muted mt-2 space-y-2">
+              <li>Expect mild swelling or bruising for a few days.</li>
+              <li>Avoid strenuous exercise, alcohol, heat, or facials for 24–48 hours.</li>
+              <li>Do not massage or press treated areas unless directed.</li>
             </ul>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section class="py-16">
-    <div class="container">
-      <div class="rounded-3xl border p-8 bg-white">
-        <h2 class="text-2xl font-semibold">Step‑by‑step process</h2>
-        <ol class="mt-4 grid gap-4 md:grid-cols-2 [counter-reset:step]">
-          <li><span class='n'></span>Skin and hair assessment (color, density)</li>
-<li><span class='n'></span>Patch test for parameter selection</li>
-<li><span class='n'></span>Session schedule every 4–8 weeks</li>
-<li><span class='n'></span>Ongoing review and adjustments</li>
-        </ol>
-      </div>
-    </div>
-  </section>
+      <div class="my-10 h-px border-t rule"></div>
 
-  <section class="py-16">
-    <div class="container grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="rounded-3xl border p-6 bg-white">
-        <h3 class="text-xl font-semibold">Ideal candidates</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Volume loss in cheeks/temples or jawline definition</li><li>Lip enhancement or smoothing lip lines</li><li>Softening nasolabial & marionette folds</li></ul>
-      </div>
-      <div class="rounded-3xl border p-6 bg-white">
-        <h3 class="text-xl font-semibold">Benefits</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Immediate, natural‑looking results</li><li>Customizable lift, structure, or softness by area</li><li>Longevity typically 6–18 months (up to ~2 years in cheeks)</li><li>Reversible with hyaluronidase if adjustments are needed</li></ul>
-      </div>
-      <div class="rounded-3xl border p-6 bg-white">
-        <h3 class="text-xl font-semibold">Risks & side effects</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Temporary redness or perifollicular swelling</li>
-<li>Rare: blisters or pigment change—minimized with proper settings</li>
-<li>Sun sensitivity post‑session</li></ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-16">
-    <div class="container grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="rounded-3xl border p-6 bg-white">
-        <h3 class="text-xl font-semibold">Aftercare</h3>
-        <ul class="mt-3 list-disc pl-5 space-y-1"><li>Cool compresses as needed</li>
-<li>SPF and avoid sun/heat 24–48h</li>
-<li>No waxing or plucking between sessions</li></ul>
-      </div>
-      <div class="rounded-3xl border p-6 bg-white">
-        <h3 class="text-xl font-semibold">Results & maintenance</h3>
-        <p class="mt-3 text-neutral-700">Hair reduction is progressive; density and regrowth speed decrease notably after several sessions.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-20 bg-neutral-950 text-white">
-    <div class="container">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-        <figure class="rounded-3xl overflow-hidden ring-1 ring-white/10">
-          <img src="/og-default.jpg" alt="Laser Hair Removal before and after (placeholder)" loading="lazy" class="w-full h-auto" />
-        </figure>
-        <div>
-          <h2 class="text-2xl font-semibold">Before & After</h2>
-          <p class="mt-2 text-neutral-300">Explore real patient transformations to set realistic expectations for outcomes and timelines.</p>
-          <a class="btn btn-ghost mt-6" href="/gallery/laser-hair-removal">Before &amp; After Gallery</a>
+      <section id="faqs" class="measure">
+        <h2 class="text-xl font-semibold tracking-tight">Frequently Asked Questions</h2>
+        <div class="mt-4 space-y-3">
+          <details class="faq"><summary class="cursor-pointer"><span class="font-medium">How long do results last?</span></summary><p class="muted mt-2 ml-6">Results last 6–18 months depending on the filler type and treatment area; Voluma may last up to 2 years.</p></details>
+          <details class="faq"><summary class="cursor-pointer"><span class="font-medium">Is the procedure painful?</span></summary><p class="muted mt-2 ml-6">Discomfort is minimal, as Juvederm fillers contain lidocaine and numbing is provided before treatment.</p></details>
+          <details class="faq"><summary class="cursor-pointer"><span class="font-medium">Can fillers be reversed?</span></summary><p class="muted mt-2 ml-6">Yes, hyaluronic acid fillers can be dissolved with hyaluronidase if adjustments are needed.</p></details>
+          <details class="faq"><summary class="cursor-pointer"><span class="font-medium">Are there side effects?</span></summary><p class="muted mt-2 ml-6">Mild redness, swelling, or bruising may occur but resolve within days. Serious side effects are rare when performed by qualified professionals.</p></details>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
+    </article>
+  </div>
+</section>
 
-  <style>
-    ol [class~="n"]::before, ol li::marker { content: none; }
-    ol li { counter-increment: step; position: relative; padding-left: 2.5rem; }
-    ol li .n { position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:9999px;
-                background: radial-gradient(120% 120% at 30% 20%, rgba(59,130,246,.9), rgba(236,72,153,.85));
-                box-shadow: 0 10px 30px rgba(0,0,0,.25); }
-    ul li .i { display:inline-flex; width:1.1rem; height:1.1rem; align-items:center; justify-content:center;
-                border-radius:9999px; background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); }
-  </style>
 </BaseLayout>
