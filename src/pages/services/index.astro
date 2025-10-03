@@ -97,36 +97,36 @@ const CATS = [
 ---
 
 <BaseLayout seo={seo}>
-  <section class="relative overflow-hidden bg-neutral-950 text-white">
-    <div class="absolute inset-0 -z-10">
-      <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-60"
+  <section class="relative overflow-hidden bg-neutral-950 text-white bg-white">
+    <div class="absolute inset-0 -z-10 bg-white">
+      <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-60 bg-white"
            style="background: radial-gradient(circle at center, rgba(59,130,246,.45), transparent 60%);"></div>
-      <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-60"
+      <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-60 bg-white"
            style="background: radial-gradient(circle at center, rgba(236,72,153,.35), transparent 60%);"></div>
     </div>
-    <div class="container py-16 md:py-24">
-      <div class="max-w-3xl">
-        <span class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/20 px-3 py-1 text-xs tracking-wide uppercase">Services</span>
-        <h1 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tight">Treatments we offer</h1>
-        <p class="mt-4 text-lg text-white/80">Explore our full menu of injectables, lasers, advanced skin care, wellness injections, aesthetic services, events, and professional skincare brands. Every plan is personalized around your goals.</p>
+    <div class="container py-16 md:py-24 bg-white">
+      <div class="max-w-3xl bg-white">
+        <span class="inline-flex items-center gap-2 rounded-full bg-white ring-1 ring-white/20 px-3 py-1 text-xs tracking-wide uppercase">Services</span>
+        <h1 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tight bg-white">Treatments we offer</h1>
+        <p class="mt-4 text-lg text-white/80 bg-white">Explore our full menu of injectables, lasers, advanced skin care, wellness injections, aesthetic services, events, and professional skincare brands. Every plan is personalized around your goals.</p>
       </div>
     </div>
   </section>
 
-  <section class="py-14 md:py-16">
-    <div class="container">
-      <div class="grid md:grid-cols-2 gap-6">
+  <section class="py-14 md:py-16 bg-white">
+    <div class="container bg-white">
+      <div class="grid md:grid-cols-2 gap-6 bg-white">
         {CATS.map((cat) => (
           <div class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-            <div class="flex items-center justify-between mb-3">
-              <h2 class="text-lg font-semibold text-neutral-900">{cat.name}</h2>
-              <a href={cat.items[0]?.href?.split('/').slice(0,3).join('/') || '/services'} class="text-sm text-neutral-500 hover:text-neutral-900 underline underline-offset-4 decoration-neutral-300">View</a>
+            <div class="flex items-center justify-between mb-3 bg-white">
+              <h2 class="text-lg font-semibold text-neutral-900 bg-white">{cat.name}</h2>
+              <a href={cat.items[0]?.href?.split('/').slice(0,3).join('/') || '/services'} class="text-sm text-neutral-500 hover:text-neutral-900 underline underline-offset-4 decoration-neutral-300 bg-white">View</a>
             </div>
-            <div class="grid grid-cols-1">
+            <div class="grid grid-cols-1 bg-white">
               {cat.items.map((item) => (
-                <a href={item.href} class="group flex items-center justify-between px-3 py-2 rounded-lg hover:bg-neutral-50 transition">
-                  <span class="text-neutral-800">{item.title}</span>
-                  <span class="opacity-0 group-hover:opacity-100 transition text-neutral-400">→</span>
+                <a href={item.href} class="group flex items-center justify-between px-3 py-2 rounded-lg hover:bg-white transition bg-white">
+                  <span class="text-neutral-800 bg-white">{item.title}</span>
+                  <span class="opacity-0 group-hover:opacity-100 transition text-neutral-400 bg-white">→</span>
                 </a>
               ))}
             </div>
