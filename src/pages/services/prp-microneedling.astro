@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const seo = {"title": "PRP Microneedling | D‑Essence Wellness", "description": "Collagen induction therapy enhanced with your own growth factors.", "canonical": "/services/prp-microneedling", "type": "website", "ogImage": "/og-default" };
+const seo = {"title": "PRP Microneedling | D‑Essence Wellness", "description": "PRP Microneedling pairs micro‑channels with your own growth factors to improve texture, tone, scars, and can be adapted for scalp hair support.", "canonical": "/services/prp-microneedling", "type": "website", "ogImage": "/og-default" };
 ---
 
 <BaseLayout {...seo}>
@@ -8,9 +8,7 @@ const seo = {"title": "PRP Microneedling | D‑Essence Wellness", "description":
 <section class="relative isolate paper">
 
 <style is:global>
-  :root{
-    --paper:#F8F6F2; --ink:#141414; --muted:#5a5a5a; --rule:#E6E1D8;
-  }
+  :root{ --paper:#F8F6F2; --ink:#141414; --muted:#5a5a5a; --rule:#E6E1D8; }
   .paper{ background:var(--paper); color:var(--ink); }
   .rule{ border-color:var(--rule); }
   .muted{ color:var(--muted); }
@@ -20,177 +18,95 @@ const seo = {"title": "PRP Microneedling | D‑Essence Wellness", "description":
   .ataglance span::after{ content:"·"; margin-left:1.25rem; color:var(--muted); }
   .ataglance span:last-child::after{ content:""; margin:0; }
   .pullquote{ border-left:2px solid var(--ink); padding-left:.85rem; font-style:italic; color:#3b3b3b; margin: 1.25rem 0; }
-  @media (max-width: 1023px){ .side-col{ display:none; } }
-  details.faq summary{ list-style:none; }
-  details.faq summary::-webkit-details-marker{ display:none; }
-  .faq-toggle{ width:1.1rem; height:1.1rem; margin-right:.5rem; flex:0 0 auto; }
-  details.faq[open] .plus{ display:none; }
-  details.faq:not([open]) .minus{ display:none; }
   .icon-check{ width:1.1rem; height:1.1rem; flex:0 0 auto; margin-top:.15rem;}
   .timeline{ position:relative; }
   .timeline::before{ content:""; position:absolute; left:.9rem; top:.25rem; bottom:.25rem; width:2px; background:var(--rule); }
   .tl-step{ position:relative; padding-left:2.25rem; }
   .tl-badge{ position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:999px; background:var(--ink); color:#fff; font-size:.9rem; display:flex; align-items:center; justify-content:center; font-weight:600; }
   .tl-title{ font-weight:600; }
+  details.faq summary{ list-style:none; }
+  details.faq summary::-webkit-details-marker{ display:none; }
 </style>
 
-  <!-- HERO (left‑aligned, no breadcrumb) -->
   <div class="px-6 pt-28 md:pt-32 pb-10">
     <div class="mx-auto max-w-4xl">
       <p class="text-xs tracking-wider uppercase muted">Service</p>
       <h1 class="mt-2 text-[2.75rem] md:text-6xl leading-[1.05] font-semibold tracking-tight">PRP Microneedling</h1>
-      <p class="mt-3 text-[1.125rem] md:text-xl muted measure">Collagen induction therapy enhanced with your own growth factors.</p>
+      <p class="mt-3 text-[1.125rem] md:text-xl muted measure">Platelet‑Rich Plasma (PRP) Microneedling pairs micro‑channels with your own growth factors to improve texture, tone, scars—and can be adapted for scalp hair support.</p>
       <div class="mt-6 h-px w-full border-t rule"></div>
     </div>
   </div>
 
-  <!-- BODY -->
   <div class="mx-auto max-w-6xl px-6 pb-24 grid grid-cols-12 gap-8">
-
-    <!-- Removed left side labels entirely -->
-
-    <!-- Main narrative -->
     <article class="col-span-12 lg:col-span-8 xl:col-span-7">
-      <!-- DESCRIPTION (unique, professional) -->
       <section id="description" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Description</h2>
-        <p class="mt-3 muted dropcap">
-          This service focuses on refined, natural‑looking improvement. We begin with a focused consultation to understand your goals and medical background, map your features, and outline a plan that fits your timeline.
-        </p>
-        <p class="mt-3 muted">
-          Technique, dosing, or device parameters are selected for your indication—always with clarity about what the service can and cannot accomplish, and when an alternative may be a better fit.
-        </p>
+        <p class="mt-3 muted dropcap">PRP Microneedling—also called collagen‑induction therapy with platelet‑rich plasma—combines a medical‑grade microneedling device with your own PRP, a concentrate of platelets and growth factors isolated from a small blood draw. Microneedling creates micro‑channels that signal the skin to rebuild collagen and elastin; applying PRP over (and sometimes injecting into) those channels amplifies renewal for smoother texture, more even tone, and a healthy, natural glow.</p>
+        <p class="mt-3 muted">On the face, it helps soften fine lines, acne scars, and sun damage. Adapted for the scalp, it can support hair follicles in areas of thinning. Because PRP comes from you, the treatment is biocompatible and well‑tolerated.</p>
         <div class="mt-4 ataglance">
-          <span>Comfort‑forward approach</span>
-          <span>Realistic timelines</span>
-          <span>Clear post‑care</span>
-          <span>Subtle, polished results</span>
+          <span>Collagen support</span><span>Own‑blood PRP</span><span>Minimal downtime</span><span>Face &amp; scalp options</span>
         </div>
-        <p class="pullquote">“Less about changing your features, more about restoring ease and balance.”</p>
+        <p class="pullquote">“Your growth factors—focused where your skin needs them most.”</p>
       </section>
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- BENEFITS (unchanged from v2) -->
       <section id="benefits" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Benefits</h2>
-        <p class="mt-3 muted">A measured, natural approach with clear guidance and realistic timelines.</p>
         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3">
-          <div class="flex items-start gap-3 muted">
-            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Personalized mapping and refined technique.
-          </div>
-          <div class="flex items-start gap-3 muted">
-            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Comfort‑forward pacing and tools.
-          </div>
-          <div class="flex items-start gap-3 muted">
-            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Transparent expectations; subtle, polished results.
-          </div>
-          <div class="flex items-start gap-3 muted">
-            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Clear aftercare and maintenance planning.
-          </div>
+          <div class="flex items-start gap-3 muted"><svg class="icon-check" viewBox="0 0 24 24"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2"/></svg>Smoother texture; softens fine lines and acne scars.</div>
+          <div class="flex items-start gap-3 muted"><svg class="icon-check" viewBox="0 0 24 24"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2"/></svg>Evener tone; helps with sun damage and discoloration.</div>
+          <div class="flex items-start gap-3 muted"><svg class="icon-check" viewBox="0 0 24 24"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2"/></svg>Natural approach using your own PRP growth factors.</div>
+          <div class="flex items-start gap-3 muted"><svg class="icon-check" viewBox="0 0 24 24"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2"/></svg>Minimal downtime; typically pink for 1–3 days.</div>
         </div>
       </section>
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- THE PROCESS (unchanged from v2) -->
       <section id="process" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">The Process</h2>
         <div class="mt-4 timeline space-y-6">
-          <div class="tl-step">
-            <div class="tl-badge">1</div>
-            <p class="tl-title">Consultation</p>
-            <p class="muted mt-1">Goals, medical history, candidacy, and personalized plan.</p>
-          </div>
-          <div class="tl-step">
-            <div class="tl-badge">2</div>
-            <p class="tl-title">Treatment</p>
-            <p class="muted mt-1">Technique and settings tailored to indication and area with comfort in mind.</p>
-          </div>
-          <div class="tl-step">
-            <div class="tl-badge">3</div>
-            <p class="muted tl-title">Review & Next Steps</p>
-            <p class="muted mt-1">What to expect as results evolve; maintenance when helpful.</p>
-          </div>
+          <div class="tl-step"><div class="tl-badge">1</div><p class="tl-title">Consultation</p><p class="muted mt-1">We review goals (skin, scalp, or both), medical history, and plan a series (commonly 3–6 sessions about 4 weeks apart).</p></div>
+          <div class="tl-step"><div class="tl-badge">2</div><p class="tl-title">Treatment</p><p class="muted mt-1">A small blood draw is spun to prepare PRP. After numbing, controlled microneedling creates micro‑channels while PRP is applied (and optionally injected) to enhance penetration.</p></div>
+          <div class="tl-step"><div class="tl-badge">3</div><p class="tl-title">Follow‑Up</p><p class="muted mt-1">Expect initial glow in 1–2 weeks with continued improvement over months as collagen remodels. We assess progress and schedule next visits.</p></div>
         </div>
       </section>
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- PRE / POST (unchanged from v2) -->
       <section id="care" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Pre and Post‑Treatment Instructions</h2>
         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div>
-            <p class="font-medium">Before your visit</p>
-            <div class="mt-2 pl-3 border-l-2" style="border-color: currentColor;">
-              <ul class="list-none space-y-2 muted">
-                <li>• Avoid new actives/irritants if directed.</li>
-                <li>• Disclose medications, allergies, and recent procedures.</li>
-                <li>• Hydrate and arrive with clean skin.</li>
-              </ul>
-            </div>
+          <div><p class="font-medium">Before your visit</p>
+            <ul class="list-disc pl-5 muted mt-2 space-y-2">
+              <li>Pause retinoids, exfoliants, and strong acids for ~5–7 days.</li>
+              <li>Avoid sunburns/tanning; arrive with clean, product‑free skin (or scalp).</li>
+              <li>If prone to cold sores, ask about a prophylactic antiviral.</li>
+            </ul>
           </div>
-          <div>
-            <p class="font-medium">After your visit</p>
-            <div class="mt-2 pl-3 border-l-2" style="border-color: currentColor;">
-              <ul class="list-none space-y-2 muted">
-                <li>• Follow your specific post‑care steps.</li>
-                <li>• Protect from heat/sun and pause harsh actives.</li>
-                <li>• Contact us if unexpected reactions occur.</li>
-              </ul>
-            </div>
+          <div><p class="font-medium">After your visit</p>
+            <ul class="list-disc pl-5 muted mt-2 space-y-2">
+              <li>Keep hands off; wait 4–6 hours before gentle rinse; moisturize well.</li>
+              <li>No makeup, heavy exercise, saunas, or hot tubs for ~24 hours.</li>
+              <li>SPF 30+ daily; avoid actives (retinoids, acids, vitamin C) for ~1 week.</li>
+            </ul>
           </div>
         </div>
       </section>
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- FAQs (unchanged from v2) -->
       <section id="faqs" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Frequently Asked Questions</h2>
         <div class="mt-4 space-y-3">
-          <details class="faq">
-            <summary class="flex items-center cursor-pointer">
-              <svg class="faq-toggle plus" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <svg class="faq-toggle minus" viewBox="0 0 24 24" fill="none"><path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span class="font-medium ml-1">How many sessions will I need?</span>
-            </summary>
-            <p class="muted mt-2 ml-6">It depends on indication, area, and your goals. We outline an initial and maintenance plan during your consultation.</p>
-          </details>
-          <details class="faq">
-            <summary class="flex items-center cursor-pointer">
-              <svg class="faq-toggle plus" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <svg class="faq-toggle minus" viewBox="0 0 24 24" fill="none"><path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span class="font-medium ml-1">Will it look natural?</span>
-            </summary>
-            <p class="muted mt-2 ml-6">We favor harmony and restraint for results that feel like you on a good day.</p>
-          </details>
-          <details class="faq">
-            <summary class="flex items-center cursor-pointer">
-              <svg class="faq-toggle plus" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <svg class="faq-toggle minus" viewBox="0 0 24 24" fill="none"><path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span class="font-medium ml-1">Is there downtime?</span>
-            </summary>
-            <p class="muted mt-2 ml-6">Most services have minimal downtime; we provide specifics and simple aftercare to follow.</p>
-          </details>
-          <p class="text-sm muted">*Informational content only; not medical advice. Individual results vary.</p>
+          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">Is PRP Microneedling safe?</span></summary><p class="muted mt-2 ml-6">Yes—when performed by trained professionals. Using your own PRP minimizes allergy risk. Not suitable with certain conditions (active infection, recent isotretinoin, pregnancy/breastfeeding).</p></details>
+          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">Does it hurt?</span></summary><p class="muted mt-2 ml-6">A topical anesthetic keeps discomfort minimal; most describe a prickly sensation. Scalp injections can be numbed further if needed.</p></details>
+          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">When will I see results?</span></summary><p class="muted mt-2 ml-6">Glow and smoothness often appear in 1–2 weeks; collagen remodeling and (for scalp) hair improvements build over 2–3+ months.</p></details>
+          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">How many sessions do I need?</span></summary><p class="muted mt-2 ml-6">Commonly 3–6 sessions ~4 weeks apart, then maintenance 1–2×/year depending on goals and response.</p></details>
+          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">Downtime?</span></summary><p class="muted mt-2 ml-6">Typically pink/sensitive for 24–72 hours with light flaking around days 3–5. Most daily routines resume the next day.</p></details>
         </div>
       </section>
     </article>
-
-    <!-- Right margin notes (sticky cues) remain -->
-    <aside class="side-col col-span-2 lg:col-span-3 xl:col-span-4">
-      <div class="sticky-top measure">
-        <p class="muted"><strong>Good to know:</strong> Technique, cadence, and aftercare are tailored to your timeline.</p>
-        <p class="muted mt-4"><strong>Quality:</strong> Trained providers, premium sourcing, evidence‑informed protocols.</p>
-        <p class="muted mt-4"><strong>Expectations:</strong> Realistic timelines and clear check‑ins.</p>
-      </div>
-    </aside>
   </div>
 </section>
 
