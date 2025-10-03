@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const seo = {"title": "Botox | D‑Essence Wellness", "description": "Botox softens wrinkles and lines with a safe, quick injectable treatment for natural-looking results.", "canonical": "/services/botox", "type": "website", "ogImage": "/og-default" };
+const seo = {"title": "Botox | D‑Essence Wellness", "description": "Botox softens dynamic wrinkles with quick, precise injections for a natural, refreshed look.", "canonical": "/services/botox", "type": "website", "ogImage": "/og-default" };
 ---
 
 <BaseLayout {...seo}>
@@ -20,94 +20,120 @@ const seo = {"title": "Botox | D‑Essence Wellness", "description": "Botox soft
   .ataglance span::after{ content:"·"; margin-left:1.25rem; color:var(--muted); }
   .ataglance span:last-child::after{ content:""; margin:0; }
   .pullquote{ border-left:2px solid var(--ink); padding-left:.85rem; font-style:italic; color:#3b3b3b; margin: 1.25rem 0; }
-  details.faq summary{ list-style:none; }
-  details.faq summary::-webkit-details-marker{ display:none; }
-  .faq-toggle{ width:1.1rem; height:1.1rem; margin-right:.5rem; flex:0 0 auto; }
-  details.faq[open] .plus{ display:none; }
-  details.faq:not([open]) .minus{ display:none; }
   .icon-check{ width:1.1rem; height:1.1rem; flex:0 0 auto; margin-top:.15rem;}
   .timeline{ position:relative; }
   .timeline::before{ content:""; position:absolute; left:.9rem; top:.25rem; bottom:.25rem; width:2px; background:var(--rule); }
   .tl-step{ position:relative; padding-left:2.25rem; }
   .tl-badge{ position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:999px; background:var(--ink); color:#fff; font-size:.9rem; display:flex; align-items:center; justify-content:center; font-weight:600; }
   .tl-title{ font-weight:600; }
+  details.faq summary{ list-style:none; }
+  details.faq summary::-webkit-details-marker{ display:none; }
+  .faq-toggle{ width:1.1rem; height:1.1rem; margin-right:.5rem; flex:0 0 auto; }
+  details.faq[open] .plus{ display:none; }
+  details.faq:not([open]) .minus{ display:none; }
 </style>
 
-  <!-- HERO -->
+  <!-- HERO (unchanged v3) -->
   <div class="px-6 pt-28 md:pt-32 pb-10">
     <div class="mx-auto max-w-4xl">
       <p class="text-xs tracking-wider uppercase muted">Service</p>
       <h1 class="mt-2 text-[2.75rem] md:text-6xl leading-[1.05] font-semibold tracking-tight">Botox</h1>
-      <p class="mt-3 text-[1.125rem] md:text-xl muted measure">Botox injections temporarily relax specific facial muscles to soften wrinkles and lines, providing a refreshed and natural look.</p>
+      <p class="mt-3 text-[1.125rem] md:text-xl muted measure">Botox injections temporarily relax specific facial muscles to soften wrinkles and fine lines for a refreshed, natural look.</p>
       <div class="mt-6 h-px w-full border-t rule"></div>
     </div>
   </div>
 
+  <!-- BODY (unchanged layout) -->
   <div class="mx-auto max-w-6xl px-6 pb-24 grid grid-cols-12 gap-8">
     <article class="col-span-12 lg:col-span-8 xl:col-span-7">
 
-      <!-- DESCRIPTION -->
+      <!-- DESCRIPTION (custom style kept, content updated) -->
       <section id="description" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Description</h2>
         <p class="mt-3 muted dropcap">
-          Botox is a cosmetic injectable treatment using purified Botulinum toxin type A to temporarily relax targeted muscles. By blocking nerve signals, Botox smooths dynamic wrinkles like frown lines, forehead creases, and crow’s feet. Results appear within days and last 3–4 months on average, with regular treatments maintaining a youthful, refreshed look.
+          Botox is a minimally invasive injectable that uses a purified botulinum toxin type A to temporarily relax targeted facial muscles.
+          By reducing muscle contraction, it softens the look of dynamic lines—such as frown lines, forehead creases, and crow’s feet—while preserving your natural expression.
+          Results begin to appear within a few days and typically last about 3–4 months.
         </p>
         <p class="mt-3 muted">
-          This treatment is non-surgical, quick, and safe when performed by trained providers. Botox is designed for natural-looking results — refreshing your appearance without freezing your expression.
+          Treatments are quick and precise. When performed by trained providers, Botox has a strong safety record and is a reliable option for subtle, natural-looking rejuvenation
+          without surgery or downtime.
         </p>
         <div class="mt-4 ataglance">
-          <span>FDA-approved</span>
-          <span>3–4 months duration</span>
-          <span>Non-surgical</span>
-          <span>Natural-looking results</span>
+          <span>Non‑surgical</span><span>3–4 months</span><span>Subtle, natural finish</span><span>Minimal downtime</span>
         </div>
-        <p class="pullquote">“A refreshed look, not a frozen one.”</p>
+        <p class="pullquote">“Refresh your look—keep your expression.”</p>
       </section>
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- BENEFITS -->
+      <!-- BENEFITS (unchanged structure, content updated) -->
       <section id="benefits" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Benefits</h2>
-        <ul class="mt-3 muted list-disc pl-5 space-y-2">
-          <li>Reduces fine lines and wrinkles by relaxing muscles.</li>
-          <li>Helps prevent deeper lines from forming with repeated use.</li>
-          <li>Quick treatment with no downtime, ideal for busy schedules.</li>
-          <li>Delivers subtle, natural-looking rejuvenation.</li>
-          <li>Well-established safety record when performed by professionals.</li>
-        </ul>
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3">
+          <div class="flex items-start gap-3 muted">
+            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Softens frown lines, forehead lines, and crow’s feet.
+          </div>
+          <div class="flex items-start gap-3 muted">
+            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Prevents lines from deepening with regular maintenance.
+          </div>
+          <div class="flex items-start gap-3 muted">
+            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Quick appointment; minimal to no downtime.
+          </div>
+          <div class="flex items-start gap-3 muted">
+            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Natural-looking results when placed precisely.
+          </div>
+        </div>
       </section>
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- PROCESS -->
+      <!-- PROCESS (unchanged timeline, content updated) -->
       <section id="process" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">The Process</h2>
         <div class="mt-4 timeline space-y-6">
-          <div class="tl-step"><div class="tl-badge">1</div><p class="tl-title">Consultation</p><p class="muted mt-1">Review goals, facial movements, and medical history. Injection sites are mapped for precision.</p></div>
-          <div class="tl-step"><div class="tl-badge">2</div><p class="tl-title">Treatment</p><p class="muted mt-1">Small amounts of Botox are injected into targeted muscles with minimal discomfort.</p></div>
-          <div class="tl-step"><div class="tl-badge">3</div><p class="tl-title">Follow-Up</p><p class="muted mt-1">Results appear in 3–7 days with peak effect by 2 weeks. Touch-ups may be offered if needed.</p></div>
+          <div class="tl-step">
+            <div class="tl-badge">1</div>
+            <p class="tl-title">Consultation</p>
+            <p class="muted mt-1">We review goals, assess facial movement, and map precise injection points. Medical history and candidacy are confirmed.</p>
+          </div>
+          <div class="tl-step">
+            <div class="tl-badge">2</div>
+            <p class="tl-title">Treatment</p>
+            <p class="muted mt-1">Small, targeted injections with a fine needle. Discomfort is brief and minimal; the session typically takes minutes.</p>
+          </div>
+          <div class="tl-step">
+            <div class="tl-badge">3</div>
+            <p class="tl-title">Follow‑up</p>
+            <p class="muted mt-1">Initial results in 3–4 days; full effect at ~2 weeks. Touch‑ups may be offered to fine‑tune outcomes.</p>
+          </div>
         </div>
       </section>
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- PRE & POST -->
+      <!-- PRE & POST (unchanged split, content updated) -->
       <section id="care" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Pre and Post‑Treatment Instructions</h2>
         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div><p class="font-medium">Before your visit</p>
+          <div>
+            <p class="font-medium">Before your visit</p>
             <ul class="list-disc pl-5 muted mt-2 space-y-2">
-              <li>Avoid blood-thinning medications and alcohol for 24 hours.</li>
-              <li>Reschedule if you are ill or have an active infection.</li>
-              <li>Arrive with a clean face; avoid heavy skincare or makeup.</li>
+              <li>Avoid alcohol and non‑prescribed blood‑thinning agents for 24 hours.</li>
+              <li>Reschedule if you are unwell or have an active skin infection.</li>
+              <li>Arrive with a clean face; skip heavy skincare and makeup.</li>
             </ul>
           </div>
-          <div><p class="font-medium">After your visit</p>
+          <div>
+            <p class="font-medium">After your visit</p>
             <ul class="list-disc pl-5 muted mt-2 space-y-2">
-              <li>Do not rub or press the treated areas for 12 hours.</li>
-              <li>Stay upright for 3–4 hours after injections.</li>
-              <li>Avoid strenuous exercise and heat for 24 hours.</li>
+              <li>Do not rub or massage treated areas for 12 hours.</li>
+              <li>Remain upright for 3–4 hours after injections.</li>
+              <li>Avoid strenuous exercise and excess heat for 24 hours.</li>
             </ul>
           </div>
         </div>
@@ -115,14 +141,14 @@ const seo = {"title": "Botox | D‑Essence Wellness", "description": "Botox soft
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- FAQS -->
+      <!-- FAQS (unchanged structure, content updated) -->
       <section id="faqs" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Frequently Asked Questions</h2>
         <div class="mt-4 space-y-3">
-          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">How soon will I see results?</span></summary><p class="muted mt-2 ml-6">Most patients notice results in 3–4 days, with full effect within 10–14 days.</p></details>
-          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">How long do results last?</span></summary><p class="muted mt-2 ml-6">Results typically last 3–4 months before muscle activity gradually returns.</p></details>
-          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">Will I look frozen?</span></summary><p class="muted mt-2 ml-6">No. When done correctly, Botox smooths wrinkles while allowing natural expression.</p></details>
-          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">Are there side effects?</span></summary><p class="muted mt-2 ml-6">Side effects are uncommon and usually mild, such as slight redness, swelling, or bruising at injection sites.</p></details>
+          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">How soon will I see results?</span></summary><p class="muted mt-2 ml-6">Early changes in ~3–4 days; full results around 10–14 days.</p></details>
+          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">How long do results last?</span></summary><p class="muted mt-2 ml-6">Typically 3–4 months before movement gradually returns.</p></details>
+          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">Will I look frozen?</span></summary><p class="muted mt-2 ml-6">No—precise dosing targets specific muscles so expressions remain natural.</p></details>
+          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">Are there side effects?</span></summary><p class="muted mt-2 ml-6">Mild redness, swelling, or bruising can occur and usually resolve quickly.</p></details>
         </div>
       </section>
 
