@@ -28,7 +28,7 @@ a { @apply underline-offset-2; }
 
 /* Distinct section style for services on homepage */
 .section-alt {
-  background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+  background: #ffffff;
   border-top: 1px solid rgba(0,0,0,.06);
   border-bottom: 1px solid rgba(0,0,0,.06);
 }
