@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const seo = {"title": "Botox® / Neurotoxins | D‑Essence Wellness", "description": "Precision softening of movement lines while preserving natural expression.", "canonical": "/services/botox", "type": "website", "ogImage": "/og-default" };
+const seo = {"title": "Botox | D‑Essence Wellness", "description": "Botox softens wrinkles and lines with a safe, quick injectable treatment for natural-looking results.", "canonical": "/services/botox", "type": "website", "ogImage": "/og-default" };
 ---
 
 <BaseLayout {...seo}>
@@ -20,7 +20,6 @@ const seo = {"title": "Botox® / Neurotoxins | D‑Essence Wellness", "descripti
   .ataglance span::after{ content:"·"; margin-left:1.25rem; color:var(--muted); }
   .ataglance span:last-child::after{ content:""; margin:0; }
   .pullquote{ border-left:2px solid var(--ink); padding-left:.85rem; font-style:italic; color:#3b3b3b; margin: 1.25rem 0; }
-  @media (max-width: 1023px){ .side-col{ display:none; } }
   details.faq summary{ list-style:none; }
   details.faq summary::-webkit-details-marker{ display:none; }
   .faq-toggle{ width:1.1rem; height:1.1rem; margin-right:.5rem; flex:0 0 auto; }
@@ -34,163 +33,100 @@ const seo = {"title": "Botox® / Neurotoxins | D‑Essence Wellness", "descripti
   .tl-title{ font-weight:600; }
 </style>
 
-  <!-- HERO (left‑aligned, no breadcrumb) -->
+  <!-- HERO -->
   <div class="px-6 pt-28 md:pt-32 pb-10">
     <div class="mx-auto max-w-4xl">
       <p class="text-xs tracking-wider uppercase muted">Service</p>
-      <h1 class="mt-2 text-[2.75rem] md:text-6xl leading-[1.05] font-semibold tracking-tight">Botox® / Neurotoxins</h1>
-      <p class="mt-3 text-[1.125rem] md:text-xl muted measure">Precision softening of movement lines while preserving natural expression.</p>
+      <h1 class="mt-2 text-[2.75rem] md:text-6xl leading-[1.05] font-semibold tracking-tight">Botox</h1>
+      <p class="mt-3 text-[1.125rem] md:text-xl muted measure">Botox injections temporarily relax specific facial muscles to soften wrinkles and lines, providing a refreshed and natural look.</p>
       <div class="mt-6 h-px w-full border-t rule"></div>
     </div>
   </div>
 
-  <!-- BODY -->
   <div class="mx-auto max-w-6xl px-6 pb-24 grid grid-cols-12 gap-8">
-
-    <!-- Removed left side labels entirely -->
-
-    <!-- Main narrative -->
     <article class="col-span-12 lg:col-span-8 xl:col-span-7">
-      <!-- DESCRIPTION (unique, professional) -->
+
+      <!-- DESCRIPTION -->
       <section id="description" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Description</h2>
         <p class="mt-3 muted dropcap">
-          This service focuses on refined, natural‑looking improvement. We begin with a focused consultation to understand your goals and medical background, map your features, and outline a plan that fits your timeline.
+          Botox is a cosmetic injectable treatment using purified Botulinum toxin type A to temporarily relax targeted muscles. By blocking nerve signals, Botox smooths dynamic wrinkles like frown lines, forehead creases, and crow’s feet. Results appear within days and last 3–4 months on average, with regular treatments maintaining a youthful, refreshed look.
         </p>
         <p class="mt-3 muted">
-          Technique, dosing, or device parameters are selected for your indication—always with clarity about what the service can and cannot accomplish, and when an alternative may be a better fit.
+          This treatment is non-surgical, quick, and safe when performed by trained providers. Botox is designed for natural-looking results — refreshing your appearance without freezing your expression.
         </p>
         <div class="mt-4 ataglance">
-          <span>Comfort‑forward approach</span>
-          <span>Realistic timelines</span>
-          <span>Clear post‑care</span>
-          <span>Subtle, polished results</span>
+          <span>FDA-approved</span>
+          <span>3–4 months duration</span>
+          <span>Non-surgical</span>
+          <span>Natural-looking results</span>
         </div>
-        <p class="pullquote">“Less about changing your features, more about restoring ease and balance.”</p>
+        <p class="pullquote">“A refreshed look, not a frozen one.”</p>
       </section>
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- BENEFITS (unchanged from v2) -->
+      <!-- BENEFITS -->
       <section id="benefits" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Benefits</h2>
-        <p class="mt-3 muted">A measured, natural approach with clear guidance and realistic timelines.</p>
-        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3">
-          <div class="flex items-start gap-3 muted">
-            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Personalized mapping and refined technique.
-          </div>
-          <div class="flex items-start gap-3 muted">
-            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Comfort‑forward pacing and tools.
-          </div>
-          <div class="flex items-start gap-3 muted">
-            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Transparent expectations; subtle, polished results.
-          </div>
-          <div class="flex items-start gap-3 muted">
-            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Clear aftercare and maintenance planning.
-          </div>
-        </div>
+        <ul class="mt-3 muted list-disc pl-5 space-y-2">
+          <li>Reduces fine lines and wrinkles by relaxing muscles.</li>
+          <li>Helps prevent deeper lines from forming with repeated use.</li>
+          <li>Quick treatment with no downtime, ideal for busy schedules.</li>
+          <li>Delivers subtle, natural-looking rejuvenation.</li>
+          <li>Well-established safety record when performed by professionals.</li>
+        </ul>
       </section>
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- THE PROCESS (unchanged from v2) -->
+      <!-- PROCESS -->
       <section id="process" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">The Process</h2>
         <div class="mt-4 timeline space-y-6">
-          <div class="tl-step">
-            <div class="tl-badge">1</div>
-            <p class="tl-title">Consultation</p>
-            <p class="muted mt-1">Goals, medical history, candidacy, and personalized plan.</p>
-          </div>
-          <div class="tl-step">
-            <div class="tl-badge">2</div>
-            <p class="tl-title">Treatment</p>
-            <p class="muted mt-1">Technique and settings tailored to indication and area with comfort in mind.</p>
-          </div>
-          <div class="tl-step">
-            <div class="tl-badge">3</div>
-            <p class="muted tl-title">Review & Next Steps</p>
-            <p class="muted mt-1">What to expect as results evolve; maintenance when helpful.</p>
-          </div>
+          <div class="tl-step"><div class="tl-badge">1</div><p class="tl-title">Consultation</p><p class="muted mt-1">Review goals, facial movements, and medical history. Injection sites are mapped for precision.</p></div>
+          <div class="tl-step"><div class="tl-badge">2</div><p class="tl-title">Treatment</p><p class="muted mt-1">Small amounts of Botox are injected into targeted muscles with minimal discomfort.</p></div>
+          <div class="tl-step"><div class="tl-badge">3</div><p class="tl-title">Follow-Up</p><p class="muted mt-1">Results appear in 3–7 days with peak effect by 2 weeks. Touch-ups may be offered if needed.</p></div>
         </div>
       </section>
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- PRE / POST (unchanged from v2) -->
+      <!-- PRE & POST -->
       <section id="care" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Pre and Post‑Treatment Instructions</h2>
         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div>
-            <p class="font-medium">Before your visit</p>
-            <div class="mt-2 pl-3 border-l-2" style="border-color: currentColor;">
-              <ul class="list-none space-y-2 muted">
-                <li>• Avoid new actives/irritants if directed.</li>
-                <li>• Disclose medications, allergies, and recent procedures.</li>
-                <li>• Hydrate and arrive with clean skin.</li>
-              </ul>
-            </div>
+          <div><p class="font-medium">Before your visit</p>
+            <ul class="list-disc pl-5 muted mt-2 space-y-2">
+              <li>Avoid blood-thinning medications and alcohol for 24 hours.</li>
+              <li>Reschedule if you are ill or have an active infection.</li>
+              <li>Arrive with a clean face; avoid heavy skincare or makeup.</li>
+            </ul>
           </div>
-          <div>
-            <p class="font-medium">After your visit</p>
-            <div class="mt-2 pl-3 border-l-2" style="border-color: currentColor;">
-              <ul class="list-none space-y-2 muted">
-                <li>• Follow your specific post‑care steps.</li>
-                <li>• Protect from heat/sun and pause harsh actives.</li>
-                <li>• Contact us if unexpected reactions occur.</li>
-              </ul>
-            </div>
+          <div><p class="font-medium">After your visit</p>
+            <ul class="list-disc pl-5 muted mt-2 space-y-2">
+              <li>Do not rub or press the treated areas for 12 hours.</li>
+              <li>Stay upright for 3–4 hours after injections.</li>
+              <li>Avoid strenuous exercise and heat for 24 hours.</li>
+            </ul>
           </div>
         </div>
       </section>
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- FAQs (unchanged from v2) -->
+      <!-- FAQS -->
       <section id="faqs" class="measure">
         <h2 class="text-xl font-semibold tracking-tight">Frequently Asked Questions</h2>
         <div class="mt-4 space-y-3">
-          <details class="faq">
-            <summary class="flex items-center cursor-pointer">
-              <svg class="faq-toggle plus" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <svg class="faq-toggle minus" viewBox="0 0 24 24" fill="none"><path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span class="font-medium ml-1">How many sessions will I need?</span>
-            </summary>
-            <p class="muted mt-2 ml-6">It depends on indication, area, and your goals. We outline an initial and maintenance plan during your consultation.</p>
-          </details>
-          <details class="faq">
-            <summary class="flex items-center cursor-pointer">
-              <svg class="faq-toggle plus" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <svg class="faq-toggle minus" viewBox="0 0 24 24" fill="none"><path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span class="font-medium ml-1">Will it look natural?</span>
-            </summary>
-            <p class="muted mt-2 ml-6">We favor harmony and restraint for results that feel like you on a good day.</p>
-          </details>
-          <details class="faq">
-            <summary class="flex items-center cursor-pointer">
-              <svg class="faq-toggle plus" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <svg class="faq-toggle minus" viewBox="0 0 24 24" fill="none"><path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              <span class="font-medium ml-1">Is there downtime?</span>
-            </summary>
-            <p class="muted mt-2 ml-6">Most services have minimal downtime; we provide specifics and simple aftercare to follow.</p>
-          </details>
-          <p class="text-sm muted">*Informational content only; not medical advice. Individual results vary.</p>
+          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">How soon will I see results?</span></summary><p class="muted mt-2 ml-6">Most patients notice results in 3–4 days, with full effect within 10–14 days.</p></details>
+          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">How long do results last?</span></summary><p class="muted mt-2 ml-6">Results typically last 3–4 months before muscle activity gradually returns.</p></details>
+          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">Will I look frozen?</span></summary><p class="muted mt-2 ml-6">No. When done correctly, Botox smooths wrinkles while allowing natural expression.</p></details>
+          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">Are there side effects?</span></summary><p class="muted mt-2 ml-6">Side effects are uncommon and usually mild, such as slight redness, swelling, or bruising at injection sites.</p></details>
         </div>
       </section>
-    </article>
 
-    <!-- Right margin notes (sticky cues) remain -->
-    <aside class="side-col col-span-2 lg:col-span-3 xl:col-span-4">
-      <div class="sticky-top measure">
-        <p class="muted"><strong>Good to know:</strong> Technique, cadence, and aftercare are tailored to your timeline.</p>
-        <p class="muted mt-4"><strong>Quality:</strong> Trained providers, premium sourcing, evidence‑informed protocols.</p>
-        <p class="muted mt-4"><strong>Expectations:</strong> Realistic timelines and clear check‑ins.</p>
-      </div>
-    </aside>
+    </article>
   </div>
 </section>
 
