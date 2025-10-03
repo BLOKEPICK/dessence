@@ -1,113 +1,32 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const seo = {"title": "PRP Microneedling | D‑Essence Wellness", "description": "PRP Microneedling pairs micro‑channels with your own growth factors to improve texture, tone, scars, and can be adapted for scalp hair support.", "canonical": "/services/prp-microneedling", "type": "website", "ogImage": "/og-default" };
+const seo = {"title": "PRP Microneedling | D‑Essence Wellness", "description": "Collagen induction therapy enhanced with platelet‑rich plasma to accelerate healing, improve tone, and refine texture.", "type": "website", "canonical": "/services/prp-microneedling", "name": "D‑Essence Wellness"};
 ---
 
-<BaseLayout {...seo}>
-
-<section class="relative isolate paper">
-
-<style is:global>
-  :root{ --paper:#F8F6F2; --ink:#141414; --muted:#5a5a5a; --rule:#E6E1D8; }
-  .paper{ background:var(--paper); color:var(--ink); }
-  .rule{ border-color:var(--rule); }
-  .muted{ color:var(--muted); }
-  .measure{ max-width: 64ch; }
-  .dropcap:first-letter{ float:left; font-size:3.2rem; line-height:1; padding-right:.35rem; padding-top:.2rem; font-weight:600; }
-  .ataglance{ display:flex; flex-wrap:wrap; gap:.75rem 1.25rem; font-size:.95rem; color:var(--muted); }
-  .ataglance span::after{ content:"·"; margin-left:1.25rem; color:var(--muted); }
-  .ataglance span:last-child::after{ content:""; margin:0; }
-  .pullquote{ border-left:2px solid var(--ink); padding-left:.85rem; font-style:italic; color:#3b3b3b; margin: 1.25rem 0; }
-  .icon-check{ width:1.1rem; height:1.1rem; flex:0 0 auto; margin-top:.15rem;}
-  .timeline{ position:relative; }
-  .timeline::before{ content:""; position:absolute; left:.9rem; top:.25rem; bottom:.25rem; width:2px; background:var(--rule); }
-  .tl-step{ position:relative; padding-left:2.25rem; }
-  .tl-badge{ position:absolute; left:0; top:.1rem; width:1.8rem; height:1.8rem; border-radius:999px; background:var(--ink); color:#fff; font-size:.9rem; display:flex; align-items:center; justify-content:center; font-weight:600; }
-  .tl-title{ font-weight:600; }
-  details.faq summary{ list-style:none; }
-  details.faq summary::-webkit-details-marker{ display:none; }
-</style>
-
-  <div class="px-6 pt-28 md:pt-32 pb-10">
-    <div class="mx-auto max-w-4xl">
-      <p class="text-xs tracking-wider uppercase muted">Service</p>
-      <h1 class="mt-2 text-[2.75rem] md:text-6xl leading-[1.05] font-semibold tracking-tight">PRP Microneedling</h1>
-      <p class="mt-3 text-[1.125rem] md:text-xl muted measure">Platelet‑Rich Plasma (PRP) Microneedling pairs micro‑channels with your own growth factors to improve texture, tone, scars—and can be adapted for scalp hair support.</p>
-      <div class="mt-6 h-px w-full border-t rule"></div>
+<BaseLayout seo={seo}>
+<section class="relative overflow-hidden bg-neutral-950 text-white">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-60"
+         style="background: radial-gradient(circle at center, rgba(59,130,246,.45), transparent 60%);"></div>
+    <div class="absolute -bottom-40 -right-20 h-[520px] w-[520px] rounded-full blur-3xl opacity-60"
+         style="background: radial-gradient(circle at center, rgba(236,72,153,.35), transparent 60%);"></div>
+  </div>
+  <div class="container py-16 md:py-24">
+    <div class="max-w-3xl">
+      <span class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/20 px-3 py-1 text-xs tracking-wide uppercase">Treatment</span>
+      <h1 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tight">PRP Microneedling</h1>
+      <p class="mt-4 text-lg text-neutral-300">Collagen induction therapy enhanced with platelet‑rich plasma to accelerate healing, improve tone, and refine texture.</p>
+      <div class="mt-6">
+        <a href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx" class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/20 px-4 py-2 text-sm hover:bg-white/15 transition">
+          <span>Book consultation</span>
+        </a>
+      </div>
     </div>
   </div>
-
-  <div class="mx-auto max-w-6xl px-6 pb-24 grid grid-cols-12 gap-8">
-    <article class="col-span-12 lg:col-span-8 xl:col-span-7">
-      <section id="description" class="measure">
-        <h2 class="text-xl font-semibold tracking-tight">Description</h2>
-        <p class="mt-3 muted dropcap">PRP Microneedling—also called collagen‑induction therapy with platelet‑rich plasma—combines a medical‑grade microneedling device with your own PRP, a concentrate of platelets and growth factors isolated from a small blood draw. Microneedling creates micro‑channels that signal the skin to rebuild collagen and elastin; applying PRP over (and sometimes injecting into) those channels amplifies renewal for smoother texture, more even tone, and a healthy, natural glow.</p>
-        <p class="mt-3 muted">On the face, it helps soften fine lines, acne scars, and sun damage. Adapted for the scalp, it can support hair follicles in areas of thinning. Because PRP comes from you, the treatment is biocompatible and well‑tolerated.</p>
-        <div class="mt-4 ataglance">
-          <span>Collagen support</span><span>Own‑blood PRP</span><span>Minimal downtime</span><span>Face &amp; scalp options</span>
-        </div>
-        <p class="pullquote">“Your growth factors—focused where your skin needs them most.”</p>
-      </section>
-
-      <div class="my-10 h-px border-t rule"></div>
-
-      <section id="benefits" class="measure">
-        <h2 class="text-xl font-semibold tracking-tight">Benefits</h2>
-        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3">
-          <div class="flex items-start gap-3 muted"><svg class="icon-check" viewBox="0 0 24 24"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2"/></svg>Smoother texture; softens fine lines and acne scars.</div>
-          <div class="flex items-start gap-3 muted"><svg class="icon-check" viewBox="0 0 24 24"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2"/></svg>Evener tone; helps with sun damage and discoloration.</div>
-          <div class="flex items-start gap-3 muted"><svg class="icon-check" viewBox="0 0 24 24"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2"/></svg>Natural approach using your own PRP growth factors.</div>
-          <div class="flex items-start gap-3 muted"><svg class="icon-check" viewBox="0 0 24 24"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2"/></svg>Minimal downtime; typically pink for 1–3 days.</div>
-        </div>
-      </section>
-
-      <div class="my-10 h-px border-t rule"></div>
-
-      <section id="process" class="measure">
-        <h2 class="text-xl font-semibold tracking-tight">The Process</h2>
-        <div class="mt-4 timeline space-y-6">
-          <div class="tl-step"><div class="tl-badge">1</div><p class="tl-title">Consultation</p><p class="muted mt-1">We review goals (skin, scalp, or both), medical history, and plan a series (commonly 3–6 sessions about 4 weeks apart).</p></div>
-          <div class="tl-step"><div class="tl-badge">2</div><p class="tl-title">Treatment</p><p class="muted mt-1">A small blood draw is spun to prepare PRP. After numbing, controlled microneedling creates micro‑channels while PRP is applied (and optionally injected) to enhance penetration.</p></div>
-          <div class="tl-step"><div class="tl-badge">3</div><p class="tl-title">Follow‑Up</p><p class="muted mt-1">Expect initial glow in 1–2 weeks with continued improvement over months as collagen remodels. We assess progress and schedule next visits.</p></div>
-        </div>
-      </section>
-
-      <div class="my-10 h-px border-t rule"></div>
-
-      <section id="care" class="measure">
-        <h2 class="text-xl font-semibold tracking-tight">Pre and Post‑Treatment Instructions</h2>
-        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div><p class="font-medium">Before your visit</p>
-            <ul class="list-disc pl-5 muted mt-2 space-y-2">
-              <li>Pause retinoids, exfoliants, and strong acids for ~5–7 days.</li>
-              <li>Avoid sunburns/tanning; arrive with clean, product‑free skin (or scalp).</li>
-              <li>If prone to cold sores, ask about a prophylactic antiviral.</li>
-            </ul>
-          </div>
-          <div><p class="font-medium">After your visit</p>
-            <ul class="list-disc pl-5 muted mt-2 space-y-2">
-              <li>Keep hands off; wait 4–6 hours before gentle rinse; moisturize well.</li>
-              <li>No makeup, heavy exercise, saunas, or hot tubs for ~24 hours.</li>
-              <li>SPF 30+ daily; avoid actives (retinoids, acids, vitamin C) for ~1 week.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <div class="my-10 h-px border-t rule"></div>
-
-      <section id="faqs" class="measure">
-        <h2 class="text-xl font-semibold tracking-tight">Frequently Asked Questions</h2>
-        <div class="mt-4 space-y-3">
-          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">Is PRP Microneedling safe?</span></summary><p class="muted mt-2 ml-6">Yes—when performed by trained professionals. Using your own PRP minimizes allergy risk. Not suitable with certain conditions (active infection, recent isotretinoin, pregnancy/breastfeeding).</p></details>
-          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">Does it hurt?</span></summary><p class="muted mt-2 ml-6">A topical anesthetic keeps discomfort minimal; most describe a prickly sensation. Scalp injections can be numbed further if needed.</p></details>
-          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">When will I see results?</span></summary><p class="muted mt-2 ml-6">Glow and smoothness often appear in 1–2 weeks; collagen remodeling and (for scalp) hair improvements build over 2–3+ months.</p></details>
-          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">How many sessions do I need?</span></summary><p class="muted mt-2 ml-6">Commonly 3–6 sessions ~4 weeks apart, then maintenance 1–2×/year depending on goals and response.</p></details>
-          <details class="faq"><summary class="flex items-center cursor-pointer"><span class="font-medium ml-1">Downtime?</span></summary><p class="muted mt-2 ml-6">Typically pink/sensitive for 24–72 hours with light flaking around days 3–5. Most daily routines resume the next day.</p></details>
-        </div>
-      </section>
-    </article>
+</section>
+<section class="py-16">
+  <div class="container prose prose-neutral max-w-none">
+    <slot />
   </div>
 </section>
-
 </BaseLayout>
