@@ -1,96 +1,92 @@
 ---
 ---
 <header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-screen-xl pointer-events-none">
-  
   <!-- Desktop -->
   <div class="hidden md:flex items-center justify-center">
-    <nav id="main-nav" class="relative flex items-center gap-1 rounded-full border border-white/10 bg-black/80 shadow-lg px-3 py-2 pointer-events-auto" aria-label="Primary">
+    <nav id="main-nav" class="relative flex items-center gap-1 rounded-full border border-white/10 bg-black/80 shadow-lg px-3 py-2 pointer-events-auto leading-none" aria-label="Primary">
       <!-- Wordmark -->
       <a href="/" class="flex items-center px-3 h-10 rounded-full hover:bg-white/5 transition" aria-label="Home">
-        <span class="inline-flex items-baseline gap-1.5">
-          <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D‑Essence</span>
-          <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
+        <span class="inline-flex items-center h-full">
+          <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px] leading-none">D-Essence</span>
+          <span class="ml-1.5 text-white/70 font-medium tracking-wide text-[12.5px] leading-none">Wellness</span>
         </span>
       </a>
 
-      <!-- Categories (Style B: Minimal List + Dividers; solid panels, responsive & scrollable) -->
+      <!-- Categorías -->
       <ul class="flex items-center gap-1 h-10">
 
         <!-- Injectables -->
         <li class="relative" data-nav-item>
-          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-injectables">
+          <button class="relative px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white
+                         after:content-[''] after:absolute after:inset-x-0 after:top-full after:h-2 after:pointer-events-auto"
+                  data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-injectables">
             Injectables
             <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div id="panel-injectables" role="menu" class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[520px] rounded-2xl border border-white/10 bg-neutral-950 z-50 shadow-2xl p-1 max-h-[70vh] overflow-auto overscroll-contain hidden" data-nav-panel>
+          <div id="panel-injectables" class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[520px] rounded-2xl border border-white/10 bg-neutral-950 z-50 shadow-2xl shadow-black/40 p-1 max-h-[70vh] overflow-auto overscroll-contain hidden" data-nav-panel>
             <ul class="divide-y divide-white/10">
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Botox<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Xeomin<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Daxxify<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Botox for Hyperhidrosis<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">PRP Microneedling<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">PRF Microneedling<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Dermal Fillers — Juvederm® Collection<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Threads — Smooth Threads<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/botox" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Botox<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/xeomin" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Xeomin<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/daxxify" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Daxxify<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/botox-for-hyperhidrosis" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Botox for Hyperhidrosis<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/prp-microneedling" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">PRP Microneedling<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/prf-microneedling" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">PRF Microneedling<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/juvederm-fillers" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Dermal Fillers — Juvederm Collection<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/smooth-threads" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Threads — Smooth Threads<span class="opacity-60">→</span></a></li>
             </ul>
           </div>
         </li>
 
         <!-- Laser Treatments -->
         <li class="relative" data-nav-item>
-          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-laser">
+          <button class="relative px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white
+                         after:content-[''] after:absolute after:inset-x-0 after:top-full after:h-2 after:pointer-events-auto"
+                  data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-laser">
             Laser Treatments
             <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div id="panel-laser" role="menu" class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[360px] rounded-2xl border border-white/10 bg-neutral-950 z-50 shadow-2xl p-1 max-h-[70vh] overflow-auto overscroll-contain hidden" data-nav-panel>
+          <div id="panel-laser" class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[360px] rounded-2xl border border-white/10 bg-neutral-950 z-50 shadow-2xl shadow-black/40 p-1 max-h-[70vh] overflow-auto overscroll-contain hidden" data-nav-panel>
             <ul class="divide-y divide-white/10">
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Aerolase<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Laser Hair Removal<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/aerolase" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Aerolase<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/laser-hair-removal" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Laser Hair Removal<span class="opacity-60">→</span></a></li>
             </ul>
           </div>
         </li>
 
         <!-- Aesthetic Services -->
         <li class="relative" data-nav-item>
-          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-aesthetic">
+          <button class="relative px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white
+                         after:content-[''] after:absolute after:inset-x-0 after:top-full after:h-2 after:pointer-events-auto"
+                  data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-aesthetic">
             Aesthetic Services
             <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
             </svg>
           </button>
-          <div id="panel-aesthetic" role="menu" class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[420px] rounded-2xl border border-white/10 bg-neutral-950 z-50 shadow-2xl p-1 max-h-[70vh] overflow-auto overscroll-contain hidden" data-nav-panel>
+          <div id="panel-aesthetic" class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[420px] rounded-2xl border border-white/10 bg-neutral-950 z-50 shadow-2xl shadow-black/40 p-1 max-h-[70vh] overflow-auto overscroll-contain hidden" data-nav-panel>
             <ul class="divide-y divide-white/10">
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Waxing &amp; Sugaring<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Teeth Whitening<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/waxing-sugaring" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Waxing &amp; Sugaring<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/teeth-whitening" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Teeth Whitening<span class="opacity-60">→</span></a></li>
             </ul>
           </div>
         </li>
 
-        <!-- Wellness -->
-        <li class="relative" data-nav-item>
-          <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white" data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-wellness">
-            Wellness
-            <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
-            </svg>
-          </button>
-          <div id="panel-wellness" role="menu" class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[560px] rounded-2xl border border-white/10 bg-neutral-950 z-50 shadow-2xl p-1 max-h-[70vh] overflow-auto overscroll-contain hidden" data-nav-panel>
-            <div class="px-4 py-2.5 text-white/90 text-sm font-medium border-b border-white/10">Vitamin Injections &amp; IV Therapy</div>
-            <ul class="divide-y divide-white/10">
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">B12 (Methylcobalamin)<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">L‑Carnitine<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Amino Blend<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">MICC<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Lipo Plus<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Glutathione<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Tri‑Immune Boost<span class="opacity-60">→</span></a></li>
-              <li><a href="#" aria-disabled="true" on:click={(e) => e.preventDefault()} class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">IV Infusions<span class="opacity-60">→</span></a></li>
-            </ul>
-          </div>
+        <!-- About Us (nuevo, sin panel) -->
+        <li class="relative">
+          <a href="/about-us" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white">
+            About Us
+          </a>
+        </li>
+
+        <!-- Contact Us (nuevo, sin panel) -->
+        <li class="relative">
+          <a href="/contact-us" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white">
+            Contact Us
+          </a>
         </li>
 
       </ul>
@@ -102,103 +98,215 @@
     <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-neutral-900/75 text-white backdrop-blur-lg shadow-lg px-3 py-2">
       <a href="/" class="py-2" aria-label="Home">
         <span class="inline-flex items-baseline gap-1.5">
-          <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D‑Essence</span>
+          <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D-Essence</span>
           <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
         </span>
       </a>
-      <button id="mobile-toggle" class="px-3 py-2 rounded-lg hover:bg-white/10" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+
+      <!-- Botón hamburguesa -->
+      <button id="mobile-toggle" class="p-2 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+        <svg id="icon-open" class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg id="icon-close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
-    <div id="mobile-nav" class="hidden mt-2 rounded-2xl border border-white/10 bg-neutral-900/95 text-white shadow-xl">
-      <div class="p-3 text-sm">
-        <div class="px-3 py-2 text-xs uppercase tracking-wide text-white/50">Injectables</div>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Botox®</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Xeomin®</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Daxxify®</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Botox® for Hyperhidrosis</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>PRP Microneedling</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>PRF Microneedling</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Dermal Fillers</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Juvederm® Collection</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Smooth Threads</a>
 
-        <div class="px-3 pt-3 pb-2 text-xs uppercase tracking-wide text-white/50">Laser Treatments</div>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Aerolase — Acne</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Aerolase — Rosacea</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Aerolase — Hyperpigmentation</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Aerolase — Melasma</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Aerolase — Skin Rejuvenation</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Aerolase — Collagen Boosting</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Aerolase — Psoriasis</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Aerolase — Eczema</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Aerolase — Vascular Lesions</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Laser Hair Removal</a>
+    <!-- Drawer móvil con acordeones -->
+    <div id="mobile-drawer" class="fixed inset-0 hidden z-[60]" aria-hidden="true">
+      <!-- Backdrop -->
+      <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
 
-        <div class="px-3 pt-3 pb-2 text-xs uppercase tracking-wide text-white/50">Advanced Skin Care</div>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Specialty Facials</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Perfect Derma Peel</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>BioRePeel</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Microneedling</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>SkinPen® Microneedling</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>PRP Microneedling</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>PRF Microneedling</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Dermaplaning</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Enzyme Treatments</a>
+      <!-- Panel -->
+      <div class="absolute right-0 top-0 h-full w-[92%] max-w-sm bg-neutral-900/95 text-white border-l border-white/10 shadow-2xl">
+        <div class="p-4">
+          <div class="text-xs uppercase tracking-wide text-white/50 px-1">Navigation</div>
 
-        <div class="px-3 pt-3 pb-2 text-xs uppercase tracking-wide text-white/50">Wellness</div>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>B12</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>L‑Carnitine</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Amino Blend</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>MICC</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Lipo Plus</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Glutathione</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Tri‑Immune Boost</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>IV Infusions</a>
+          <!-- Grupo: Injectables -->
+          <div class="mt-2 border border-white/10 rounded-xl overflow-hidden">
+            <button class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-white/5" data-acc-btn aria-expanded="false" aria-controls="acc-injectables">
+              <span class="font-medium">Injectables</span>
+              <svg class="w-5 h-5 rotate-0 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </button>
+            <div id="acc-injectables" class="hidden border-t border-white/10">
+              <nav class="py-1">
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/botox">Botox</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/xeomin">Xeomin</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/daxxify">Daxxify</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/botox-for-hyperhidrosis">Botox for Hyperhidrosis</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/prp-microneedling">PRP Microneedling</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/prf-microneedling">PRF Microneedling</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/juvederm-fillers">Dermal Fillers — Juvederm Collection</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/smooth-threads">Threads — Smooth Threads</a>
+              </nav>
+            </div>
+          </div>
 
-        <div class="px-3 pt-3 pb-2 text-xs uppercase tracking-wide text-white/50">Aesthetic Services</div>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Waxing — Full Face</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Waxing — Brows</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Waxing — Bikini</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Waxing — Body</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Teeth Whitening</a>
+          <!-- Grupo: Laser Treatments -->
+          <div class="mt-3 border border-white/10 rounded-xl overflow-hidden">
+            <button class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-white/5" data-acc-btn aria-expanded="false" aria-controls="acc-laser">
+              <span class="font-medium">Laser Treatments</span>
+              <svg class="w-5 h-5 rotate-0 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </button>
+            <div id="acc-laser" class="hidden border-t border-white/10">
+              <nav class="py-1">
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/aerolase">Aerolase</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/laser-hair-removal">Laser Hair Removal</a>
+              </nav>
+            </div>
+          </div>
 
-        <div class="px-3 pt-3 pb-2 text-xs uppercase tracking-wide text-white/50">Events</div>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="/events/botox-parties">Botox® Parties</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="/events/spa-parties">Spa Parties</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="/events/skincare-workshops">Skincare Workshops</a>
+          <!-- Grupo: Aesthetic Services -->
+          <div class="mt-3 border border-white/10 rounded-xl overflow-hidden">
+            <button class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-white/5" data-acc-btn aria-expanded="false" aria-controls="acc-aesthetic">
+              <span class="font-medium">Aesthetic Services</span>
+              <svg class="w-5 h-5 rotate-0 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </button>
+            <div id="acc-aesthetic" class="hidden border-t border-white/10">
+              <nav class="py-1">
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/waxing-sugaring">Waxing &amp; Sugaring</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/teeth-whitening">Teeth Whitening</a>
+              </nav>
+            </div>
+          </div>
 
-        <div class="px-3 pt-3 pb-2 text-xs uppercase tracking-wide text-white/50">Skincare Products</div>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Circadia®</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Face Reality®</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>Hydrinity®</a>
-        <a class="block px-3 py-2 rounded-lg hover:bg-white/5" href="#" aria-disabled="true" on:click={(e) => e.preventDefault()}>SkinMedica®</a>
+          <!-- Links simples -->
+          <div class="mt-6 space-y-2">
+            <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5" href="/about-us">About Us</a>
+            <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5" href="/contact-us">Contact Us</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </header>
 
-<script is:inline>
-  const btn = document.getElementById('mobile-toggle');
-  const nav = document.getElementById('mobile-nav');
-  if (btn && nav) { btn.addEventListener('click', () => { const hidden = nav.classList.toggle('hidden'); btn.setAttribute('aria-expanded', (!hidden).toString()); }); }
-</script>
-
+<!-- Mobile toggle + drawer + bloqueo de scroll -->
 <script is:inline>
   (function(){
-    const nav=document.getElementById('main-nav'); if(!nav) return;
-    const items=[...nav.querySelectorAll('[data-nav-item]')];
-    const panels=()=>[...nav.querySelectorAll('[data-nav-panel]')];
-    let t=null;
-    function openOnly(item){ panels().forEach(p=>p.classList.add('hidden')); items.forEach(i=>i.querySelector('[data-nav-trigger]')?.setAttribute('aria-expanded','false')); const p=item.querySelector('[data-nav-panel]'); const b=item.querySelector('[data-nav-trigger]'); if(p&&b){p.classList.remove('hidden'); b.setAttribute('aria-expanded','true');}}
-    function closeAll(){ panels().forEach(p=>p.classList.add('hidden')); items.forEach(i=>i.querySelector('[data-nav-trigger]')?.setAttribute('aria-expanded','false')); }
-    items.forEach(item=>{ const btn=item.querySelector('[data-nav-trigger]'); const panel=item.querySelector('[data-nav-panel]'); if(!btn||!panel) return;
-      item.addEventListener('mouseenter',()=>{ if(t) clearTimeout(t); openOnly(item); });
-      item.addEventListener('mouseleave',()=>{ t=setTimeout(closeAll,120); });
-      btn.addEventListener('focus',()=>openOnly(item));
-      btn.addEventListener('blur',()=>{ t=setTimeout(closeAll,120); });
-      panel.addEventListener('mouseenter',()=>{ if(t) clearTimeout(t); });
-      panel.addEventListener('mouseleave',()=>{ t=setTimeout(closeAll,120); });
+    const toggle = document.getElementById('mobile-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    function openDrawer(){
+      drawer.classList.remove('hidden');
+      document.documentElement.classList.add('overflow-hidden');
+      toggle.setAttribute('aria-expanded','true');
+      iconOpen.classList.add('hidden'); iconClose.classList.remove('hidden');
+      // foco inicial
+      const firstBtn = drawer.querySelector('[data-acc-btn]'); if(firstBtn) firstBtn.focus();
+    }
+    function closeDrawer(){
+      drawer.classList.add('hidden');
+      document.documentElement.classList.remove('overflow-hidden');
+      toggle.setAttribute('aria-expanded','false');
+      iconClose.classList.add('hidden'); iconOpen.classList.remove('hidden');
+      toggle.focus();
+    }
+
+    if(toggle && drawer){
+      toggle.addEventListener('click', ()=>{
+        const isHidden = drawer.classList.contains('hidden');
+        isHidden ? openDrawer() : closeDrawer();
+      });
+      drawer.addEventListener('click', (e)=>{
+        // cerrar al click fuera del panel
+        const panel = drawer.querySelector('div.absolute.right-0.top-0');
+        if(panel && !panel.contains(e.target)) closeDrawer();
+      });
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && !drawer.classList.contains('hidden')) closeDrawer(); });
+    }
+
+    // Acordeones móviles
+    const accBtns = [...document.querySelectorAll('[data-acc-btn]')];
+    accBtns.forEach(btn=>{
+      const panelId = btn.getAttribute('aria-controls');
+      const panel = document.getElementById(panelId);
+      const chevron = btn.querySelector('svg');
+      if(!panel) return;
+      btn.addEventListener('click', ()=>{
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        // cerrar otros para mantener limpio
+        accBtns.forEach(b=>{
+          const id = b.getAttribute('aria-controls');
+          const p = document.getElementById(id);
+          const ch = b.querySelector('svg');
+          if(id!==panelId){ b.setAttribute('aria-expanded','false'); p?.classList.add('hidden'); ch?.classList.remove('rotate-180'); }
+        });
+        btn.setAttribute('aria-expanded', (!expanded).toString());
+        panel.classList.toggle('hidden', expanded);
+        if(chevron) chevron.classList.toggle('rotate-180', !expanded);
+      });
     });
-    document.addEventListener('click',e=>{ if(!nav.contains(e.target)) closeAll(); });
-    document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeAll(); });
   })();
+</script>
+
+<!-- Desktop hover, anti-gap, anti-desborde y foco Tab -->
+<script is:inline>
+(function(){
+  const HOVER_DELAY = 220;
+  const nav = document.getElementById('main-nav'); if(!nav) return;
+  const items = [...nav.querySelectorAll('[data-nav-item]')];
+  const panels = () => [...nav.querySelectorAll('[data-nav-panel]')];
+  let t = null;
+
+  function openOnly(item){
+    panels().forEach(p=>p.classList.add('hidden'));
+    items.forEach(i=>i.querySelector('[data-nav-trigger]')?.setAttribute('aria-expanded','false'));
+    const p = item.querySelector('[data-nav-panel]');
+    const b = item.querySelector('[data-nav-trigger]');
+    if(p && b){
+      p.classList.remove('hidden');
+      b.setAttribute('aria-expanded','true');
+      constrainPanel(p);
+    }
+  }
+  function closeAll(){
+    panels().forEach(p=>p.classList.add('hidden'));
+    items.forEach(i=>i.querySelector('[data-nav-trigger]')?.setAttribute('aria-expanded','false'));
+  }
+  function constrainPanel(panel){
+    panel.style.transform = 'translateX(-50%)';
+    const rect = panel.getBoundingClientRect();
+    const vw = window.innerWidth;
+    const PAD = 8;
+    let dx = 0;
+    if(rect.left < PAD) dx = PAD - rect.left;
+    else if(rect.right > vw - PAD) dx = (vw - PAD) - rect.right;
+    if(dx !== 0){
+      panel.style.transform = `translateX(calc(-50% + ${dx}px))`;
+    }
+  }
+
+  items.forEach(item=>{
+    const btn = item.querySelector('[data-nav-trigger]');
+    const panel = item.querySelector('[data-nav-panel]');
+    if(!btn || !panel) return;
+
+    item.addEventListener('mouseenter', ()=>{ if(t) clearTimeout(t); openOnly(item); });
+    item.addEventListener('mouseleave', ()=>{ t = setTimeout(closeAll, HOVER_DELAY); });
+
+    btn.addEventListener('focus', ()=> openOnly(item));
+    btn.addEventListener('blur', ()=>{ t = setTimeout(closeAll, HOVER_DELAY); });
+
+    panel.addEventListener('mouseenter', ()=>{ if(t) clearTimeout(t); });
+    panel.addEventListener('mouseleave', ()=>{ t = setTimeout(closeAll, HOVER_DELAY); });
+
+    window.addEventListener('resize', ()=>{ if(!panel.classList.contains('hidden')) constrainPanel(panel); });
+  });
+
+  document.addEventListener('click', e=>{ if(!nav.contains(e.target)) closeAll(); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeAll(); });
+
+  // Tab trapping mínimo dentro del panel abierto
+  nav.addEventListener('keydown', (e)=>{
+    if(e.key!=='Tab') return;
+    const openPanel = nav.querySelector('[data-nav-panel]:not(.hidden)');
+    if(!openPanel) return;
+    const focusables = [...openPanel.querySelectorAll('a,button')].filter(el=>!el.hasAttribute('disabled'));
+    if(focusables.length===0) return;
+    const first = focusables[0], last = focusables[focusables.length-1];
+    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  });
+})();
 </script>
