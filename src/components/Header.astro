@@ -110,8 +110,8 @@
       </button>
     </div>
 
-    <!-- Drawer móvil con overlay sólido + transiciones -->
-    <div id="mobile-drawer" class="fixed inset-0 hidden z-[999] pointer-events-auto" aria-hidden="true">
+    <!-- Drawer móvil (se “portaliza” al <body> vía JS) -->
+    <div id="mobile-drawer" class="fixed inset-0 hidden z-[9999] pointer-events-auto" aria-hidden="true">
       <!-- Backdrop -->
       <div id="mobile-backdrop" class="absolute inset-0 opacity-0 bg-black/80 supports-[backdrop-filter]:backdrop-blur-sm transition-opacity duration-200"></div>
 
@@ -179,15 +179,20 @@
   </div>
 </header>
 
-<!-- Mobile toggle + drawer + lock de scroll robusto -->
+<!-- Mobile toggle + drawer + lock de scroll robusto (con PORTAL al <body>) -->
 <script is:inline>
 (function(){
-  const toggle = document.getElementById('mobile-toggle');
+  // --- PORTAL: mover el drawer al <body> para romper el stacking context del header ---
   const drawer = document.getElementById('mobile-drawer');
-  const panel  = document.getElementById('mobile-panel');
+  if (drawer && drawer.parentElement && drawer.parentElement.tagName.toLowerCase() === 'header') {
+    document.body.appendChild(drawer);
+  }
+
+  const toggle   = document.getElementById('mobile-toggle');
+  const panel    = document.getElementById('mobile-panel');
   const backdrop = document.getElementById('mobile-backdrop');
   const iconOpen = document.getElementById('icon-open');
-  const iconClose = document.getElementById('icon-close');
+  const iconClose= document.getElementById('icon-close');
 
   let locked = false, scrollY = 0, touchHandler = null;
 
@@ -243,9 +248,7 @@
   }
 
   if(toggle && drawer && panel && backdrop){
-    toggle.addEventListener('click', ()=>{
-      drawer.classList.contains('hidden') ? openDrawer() : closeDrawer();
-    });
+    toggle.addEventListener('click', ()=>{ drawer.classList.contains('hidden') ? openDrawer() : closeDrawer(); });
     // cerrar tocando fuera del panel
     drawer.addEventListener('click', (e)=>{ if(!panel.contains(e.target)) closeDrawer(); });
     document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && !drawer.classList.contains('hidden')) closeDrawer(); });
