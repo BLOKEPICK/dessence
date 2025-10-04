@@ -14,7 +14,6 @@
 
       <!-- Categorías -->
       <ul class="flex items-center gap-1 h-10">
-
         <!-- Injectables -->
         <li class="relative" data-nav-item>
           <button class="relative px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white
@@ -88,7 +87,6 @@
             Contact Us
           </a>
         </li>
-
       </ul>
     </nav>
   </div>
@@ -111,12 +109,12 @@
     </div>
 
     <!-- Drawer móvil (se “portaliza” al <body> vía JS) -->
-    <div id="mobile-drawer" class="fixed inset-0 hidden z-[9999] pointer-events-auto" aria-hidden="true">
+    <div id="mobile-drawer" class="fixed inset-0 hidden z-[99999] pointer-events-auto" aria-hidden="true">
       <!-- Backdrop -->
-      <div id="mobile-backdrop" class="absolute inset-0 opacity-0 bg-black/80 supports-[backdrop-filter]:backdrop-blur-sm transition-opacity duration-200"></div>
+      <div id="mobile-backdrop" class="absolute inset-0 z-[99999] opacity-0 bg-black/80 supports-[backdrop-filter]:backdrop-blur-sm transition-opacity duration-200"></div>
 
       <!-- Panel -->
-      <aside id="mobile-panel" class="absolute right-0 top-0 h-full w-[92%] max-w-sm bg-neutral-900 text-white border-l border-white/10 shadow-2xl translate-x-full transition-transform duration-200 will-change-transform">
+      <aside id="mobile-panel" class="absolute right-0 top-0 h-full w-[92%] max-w-sm bg-neutral-900 text-white border-l border-white/10 shadow-2xl z-[100000] translate-x-full transition-transform duration-200 will-change-transform">
         <div class="p-4">
           <div class="text-xs uppercase tracking-wide text-white/50 px-1">Navigation</div>
 
