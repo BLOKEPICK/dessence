@@ -75,14 +75,14 @@
           </div>
         </li>
 
-        <!-- About Us (nuevo, sin panel) -->
+        <!-- About Us -->
         <li class="relative">
           <a href="/about-us" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white">
             About Us
           </a>
         </li>
 
-        <!-- Contact Us (nuevo, sin panel) -->
+        <!-- Contact Us -->
         <li class="relative">
           <a href="/contact-us" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white">
             Contact Us
@@ -110,13 +110,13 @@
       </button>
     </div>
 
-    <!-- Drawer móvil con acordeones -->
-    <div id="mobile-drawer" class="fixed inset-0 hidden z-[60]" aria-hidden="true">
+    <!-- Drawer móvil con overlay sólido + transiciones -->
+    <div id="mobile-drawer" class="fixed inset-0 hidden z-[999] pointer-events-auto" aria-hidden="true">
       <!-- Backdrop -->
-      <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+      <div id="mobile-backdrop" class="absolute inset-0 opacity-0 bg-black/80 supports-[backdrop-filter]:backdrop-blur-sm transition-opacity duration-200"></div>
 
       <!-- Panel -->
-      <div class="absolute right-0 top-0 h-full w-[92%] max-w-sm bg-neutral-900/95 text-white border-l border-white/10 shadow-2xl">
+      <aside id="mobile-panel" class="absolute right-0 top-0 h-full w-[92%] max-w-sm bg-neutral-900 text-white border-l border-white/10 shadow-2xl translate-x-full transition-transform duration-200 will-change-transform">
         <div class="p-4">
           <div class="text-xs uppercase tracking-wide text-white/50 px-1">Navigation</div>
 
@@ -174,70 +174,104 @@
             <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5" href="/contact-us">Contact Us</a>
           </div>
         </div>
-      </div>
+      </aside>
     </div>
   </div>
 </header>
 
-<!-- Mobile toggle + drawer + bloqueo de scroll -->
+<!-- Mobile toggle + drawer + lock de scroll robusto -->
 <script is:inline>
-  (function(){
-    const toggle = document.getElementById('mobile-toggle');
-    const drawer = document.getElementById('mobile-drawer');
-    const iconOpen = document.getElementById('icon-open');
-    const iconClose = document.getElementById('icon-close');
+(function(){
+  const toggle = document.getElementById('mobile-toggle');
+  const drawer = document.getElementById('mobile-drawer');
+  const panel  = document.getElementById('mobile-panel');
+  const backdrop = document.getElementById('mobile-backdrop');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
 
-    function openDrawer(){
-      drawer.classList.remove('hidden');
-      document.documentElement.classList.add('overflow-hidden');
-      toggle.setAttribute('aria-expanded','true');
-      iconOpen.classList.add('hidden'); iconClose.classList.remove('hidden');
-      // foco inicial
-      const firstBtn = drawer.querySelector('[data-acc-btn]'); if(firstBtn) firstBtn.focus();
-    }
-    function closeDrawer(){
-      drawer.classList.add('hidden');
-      document.documentElement.classList.remove('overflow-hidden');
-      toggle.setAttribute('aria-expanded','false');
-      iconClose.classList.add('hidden'); iconOpen.classList.remove('hidden');
-      toggle.focus();
-    }
+  let locked = false, scrollY = 0, touchHandler = null;
 
-    if(toggle && drawer){
-      toggle.addEventListener('click', ()=>{
-        const isHidden = drawer.classList.contains('hidden');
-        isHidden ? openDrawer() : closeDrawer();
-      });
-      drawer.addEventListener('click', (e)=>{
-        // cerrar al click fuera del panel
-        const panel = drawer.querySelector('div.absolute.right-0.top-0');
-        if(panel && !panel.contains(e.target)) closeDrawer();
-      });
-      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && !drawer.classList.contains('hidden')) closeDrawer(); });
-    }
+  function lockScroll(){
+    if(locked) return;
+    scrollY = window.scrollY || window.pageYOffset;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
+    document.documentElement.classList.add('overflow-hidden');
+    // iOS/touch: bloquear scroll fuera del panel
+    touchHandler = (e)=>{ if(panel && !panel.contains(e.target)) e.preventDefault(); };
+    document.addEventListener('touchmove', touchHandler, { passive: false });
+    locked = true;
+  }
+  function unlockScroll(){
+    if(!locked) return;
+    const y = -parseInt(document.body.style.top || '0', 10);
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    document.documentElement.classList.remove('overflow-hidden');
+    document.removeEventListener('touchmove', touchHandler || (()=>{}));
+    window.scrollTo(0, y);
+    locked = false;
+  }
 
-    // Acordeones móviles
-    const accBtns = [...document.querySelectorAll('[data-acc-btn]')];
-    accBtns.forEach(btn=>{
-      const panelId = btn.getAttribute('aria-controls');
-      const panel = document.getElementById(panelId);
-      const chevron = btn.querySelector('svg');
-      if(!panel) return;
-      btn.addEventListener('click', ()=>{
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        // cerrar otros para mantener limpio
-        accBtns.forEach(b=>{
-          const id = b.getAttribute('aria-controls');
-          const p = document.getElementById(id);
-          const ch = b.querySelector('svg');
-          if(id!==panelId){ b.setAttribute('aria-expanded','false'); p?.classList.add('hidden'); ch?.classList.remove('rotate-180'); }
-        });
-        btn.setAttribute('aria-expanded', (!expanded).toString());
-        panel.classList.toggle('hidden', expanded);
-        if(chevron) chevron.classList.toggle('rotate-180', !expanded);
-      });
+  function openDrawer(){
+    drawer.classList.remove('hidden');
+    requestAnimationFrame(()=>{
+      backdrop.classList.remove('opacity-0');
+      panel.classList.remove('translate-x-full');
     });
-  })();
+    toggle.setAttribute('aria-expanded','true');
+    iconOpen.classList.add('hidden'); iconClose.classList.remove('hidden');
+    lockScroll();
+    const firstBtn = panel.querySelector('[data-acc-btn]'); if(firstBtn) firstBtn.focus();
+  }
+  function closeDrawer(){
+    backdrop.classList.add('opacity-0');
+    panel.classList.add('translate-x-full');
+    toggle.setAttribute('aria-expanded','false');
+    iconClose.classList.add('hidden'); iconOpen.classList.remove('hidden');
+    setTimeout(()=>{
+      drawer.classList.add('hidden');
+      unlockScroll();
+      toggle.focus();
+    }, 220);
+  }
+
+  if(toggle && drawer && panel && backdrop){
+    toggle.addEventListener('click', ()=>{
+      drawer.classList.contains('hidden') ? openDrawer() : closeDrawer();
+    });
+    // cerrar tocando fuera del panel
+    drawer.addEventListener('click', (e)=>{ if(!panel.contains(e.target)) closeDrawer(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && !drawer.classList.contains('hidden')) closeDrawer(); });
+  }
+
+  // Acordeones (uno abierto a la vez)
+  const accBtns = [...document.querySelectorAll('[data-acc-btn]')];
+  accBtns.forEach(btn=>{
+    const id = btn.getAttribute('aria-controls');
+    const p  = document.getElementById(id);
+    const chev= btn.querySelector('svg');
+    if(!p) return;
+    btn.addEventListener('click', ()=>{
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      accBtns.forEach(b=>{
+        const _id = b.getAttribute('aria-controls');
+        const _p  = document.getElementById(_id);
+        const _c  = b.querySelector('svg');
+        if(_p && b!==btn){ b.setAttribute('aria-expanded','false'); _p.classList.add('hidden'); _c?.classList.remove('rotate-180'); }
+      });
+      btn.setAttribute('aria-expanded', (!expanded).toString());
+      p.classList.toggle('hidden', expanded);
+      chev?.classList.toggle('rotate-180', !expanded);
+    });
+  });
+})();
 </script>
 
 <!-- Desktop hover, anti-gap, anti-desborde y foco Tab -->
