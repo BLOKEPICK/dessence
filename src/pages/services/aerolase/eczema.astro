@@ -3,21 +3,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 const seo = {"title": "Aerolase — Eczema | D‑Essence Wellness", "description": "How Aerolase Neo Elite can address eczema with gentle, precise energy suitable for a wide range of skin tones.", "type": "website", "canonical": "/services/aerolase/eczema", "name": "D‑Essence Wellness"};
 ---
 
-
-
-<BaseLayout {...seo}>
-<div class="px-6 pt-28 md:pt-32 pb-10">
-    <div class="mx-auto max-w-4xl">
-      <p class="text-xs tracking-wider uppercase muted">Service</p>
-      <h1 class="font-semibold leading-[1.05] md:text-6xl mt-2 text-[2.75rem] text-center tracking-tight">Aerolase — Eczema</h1>
-<div class="mx-auto mt-8 h-px w-48 md:w-64 bg-gradient-to-r from-transparent via-black to-transparent"></div>
-
-
-
-      
-      
-    </div>
-
+<BaseLayout seo={seo}>
 <section class="relative overflow-hidden bg-neutral-950 text-white">
   <div class="absolute inset-0 -z-10">
     <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-60"
@@ -28,7 +14,7 @@ const seo = {"title": "Aerolase — Eczema | D‑Essence Wellness", "description
   <div class="container py-16 md:py-24">
     <div class="max-w-3xl">
       <span class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/20 px-3 py-1 text-xs tracking-wide uppercase">Treatment</span>
-      
+      <h1 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tight text-center">Aerolase — Eczema</h1>
       <p class="mt-4 text-lg text-neutral-300">How Aerolase Neo Elite can address eczema with gentle, precise energy suitable for a wide range of skin tones.</p>
       <div class="mt-6">
         <a href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx" class="inline-flex items-center gap-2 rounded-full bg-white/10 ring-1 ring-white/20 px-4 py-2 text-sm hover:bg-white/15 transition">
@@ -38,10 +24,9 @@ const seo = {"title": "Aerolase — Eczema | D‑Essence Wellness", "description
     </div>
   </div>
 </section>
-<section class="py-16">
+<section class="py-16 text-center">
   <div class="container prose prose-neutral max-w-none">
     <slot />
   </div>
 </section>
-
 </BaseLayout>

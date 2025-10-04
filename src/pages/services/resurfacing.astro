@@ -3,21 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const seo = {"title": "Resurfacing | D‑Essence Wellness", "description": "Resurfacing overview including candidacy, key benefits, and aftercare.", "canonical": "/services/resurfacing", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Resurfacing", "description": "Resurfacing overview including candidacy, key benefits, and aftercare.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/resurfacing"}};
 ---
 
-
-
-<BaseLayout {...seo}>
-<div class="px-6 pt-28 md:pt-32 pb-10">
-    <div class="mx-auto max-w-4xl">
-      <p class="text-xs tracking-wider uppercase muted">Service</p>
-      <h1 class="font-semibold leading-[1.05] md:text-6xl mt-2 text-[2.75rem] text-center tracking-tight">Resurfacing</h1>
-<div class="mx-auto mt-8 h-px w-48 md:w-64 bg-gradient-to-r from-transparent via-black to-transparent"></div>
-
-
-
-      
-      
-    </div>
-
+<BaseLayout seo={seo}>
   <section class="relative overflow-hidden bg-neutral-950 text-white">
     <div class="absolute inset-0 -z-10">
       <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,.55),transparent_60%)]"></div>
@@ -26,7 +12,7 @@ const seo = {"title": "Resurfacing | D‑Essence Wellness", "description": "Resu
     <div class="container py-20 md:py-28">
       <div class="max-w-3xl">
         <span class="inline-flex items-center gap-2 rounded-full bg-white/5 ring-1 ring-white/10 px-3 py-1 text-xs tracking-wide uppercase">Treatment</span>
-        
+        <h1 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tight text-center">Resurfacing</h1>
         <p class="mt-4 text-lg text-neutral-300">Learn how Resurfacing can help you reach your goals with a clear, evidence‑based plan.</p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx" class="btn btn-primary">Book consultation</a>
@@ -36,7 +22,7 @@ const seo = {"title": "Resurfacing | D‑Essence Wellness", "description": "Resu
     </div>
   </section>
 
-  <section class="bg-neutral-950 text-white">
+  <section class="bg-neutral-950 text-white text-center">
     <div class="container pb-12 md:pb-16 -mt-12 md:-mt-16">
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
         <div class="md:col-span-7">
@@ -135,5 +121,4 @@ const seo = {"title": "Resurfacing | D‑Essence Wellness", "description": "Resu
     ul li .i { display:inline-flex; width:1.1rem; height:1.1rem; align-items:center; justify-content:center;
                 border-radius:9999px; background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); }
   </style>
-
 </BaseLayout>

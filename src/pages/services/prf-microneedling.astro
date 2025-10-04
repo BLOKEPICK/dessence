@@ -3,9 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const seo = {"title": "PRF Microneedling | D‑Essence Wellness", "description": "PRF Microneedling combines microneedling with platelet‑rich fibrin to rejuvenate skin and support natural healing.", "canonical": "/services/prf-microneedling", "type": "website", "ogImage": "/og-default" };
 ---
 
-
-
 <BaseLayout {...seo}>
+
 <section class="relative isolate paper">
 
 <style is:global>
@@ -31,11 +30,9 @@ const seo = {"title": "PRF Microneedling | D‑Essence Wellness", "description":
 
   <div class="px-6 pt-28 md:pt-32 pb-10">
     <div class="mx-auto max-w-4xl">
-      <p class="text-xs tracking-wider uppercase muted">Service</p>
-      <h1 class="font-semibold leading-[1.05] md:text-6xl mt-2 text-[2.75rem] text-center tracking-tight">PRF Microneedling</h1>
+      <p class="text-xs tracking-wider uppercase muted text-center">Service</p>
+      <h1 class="mt-2 text-[2.75rem] md:text-6xl leading-[1.05] font-semibold tracking-tight text-center">PRF Microneedling</h1>
 <div class="mx-auto mt-8 h-px w-48 md:w-64 bg-gradient-to-r from-transparent via-black to-transparent"></div>
-
-
 
       
       
@@ -44,7 +41,7 @@ const seo = {"title": "PRF Microneedling | D‑Essence Wellness", "description":
 
   <div class="mx-auto max-w-6xl px-6 pb-24 grid grid-cols-12 gap-8">
     <article class="col-span-12 lg:col-span-8 xl:col-span-7">
-      <section id="description" class="measure">
+      <section id="description" class="measure text-center">
         <p class="text-[18px] md:text-[20px] leading-[1.85] text-neutral-900 measure">
           PRF Microneedling uses Platelet‑Rich Fibrin, a concentration of platelets, white blood cells, and stem cells derived from your own blood. Unlike PRP, PRF contains no additives or anticoagulants and forms a fibrin matrix that gradually releases growth factors over 7–10 days. Combined with microneedling, this allows regenerative cells to penetrate micro‑channels in the skin and stimulate collagen and elastin production.
         </p>
@@ -56,9 +53,14 @@ const seo = {"title": "PRF Microneedling | D‑Essence Wellness", "description":
       <div class="my-10 h-px border-t rule"></div>
 
       <section id="benefits" class="measure">
-                <h2 class="text-xl font-semibold tracking-tight">Benefits</h2>
+        <h2 class="text-xl font-semibold tracking-tight">Benefits</h2>
         <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3">
-        </div></section>
+          <div class="flex items-start gap-3 muted"><svg class="icon-check" viewBox="0 0 24 24"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2"/></svg>All‑natural with no synthetic additives.</div>
+          <div class="flex items-start gap-3 muted"><svg class="icon-check" viewBox="0 0 24 24"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2"/></svg>Releases growth factors slowly for longer rejuvenation.</div>
+          <div class="flex items-start gap-3 muted"><svg class="icon-check" viewBox="0 0 24 24"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2"/></svg>Improves wrinkles, scars, tone, and texture.</div>
+          <div class="flex items-start gap-3 muted"><svg class="icon-check" viewBox="0 0 24 24"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2"/></svg>Safe and biocompatible.</div>
+        </div>
+      </section>
 
       <div class="my-10 h-px border-t rule"></div>
 
