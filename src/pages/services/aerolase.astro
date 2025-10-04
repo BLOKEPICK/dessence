@@ -78,28 +78,88 @@ const seo = {"title": "Aerolase | D-Essence Wellness", "description": "A versati
 
       <div class="my-10 h-px border-t rule"></div>
 
-      <!-- BENEFITS (4 checks / 4 categorías) -->
-      <section id="benefits" class="measure mx-auto text-left">
-        <h2 class="text-xl font-semibold tracking-tight text-center">Benefits</h2>
-        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
-          <div class="flex items-start gap-3 muted">
-            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Targets redness and rosacea-prone skin.</span>
-          </div>
-          <div class="flex items-start gap-3 muted">
-            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Improves pigmentation and dark spots.</span>
-          </div>
-          <div class="flex items-start gap-3 muted">
-            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Refines texture and enlarged pores.</span>
-          </div>
-          <div class="flex items-start gap-3 muted">
-            <svg class="icon-check" viewBox="0 0 24 24" fill="none"><path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span>Comfort-forward approach with minimal downtime.</span>
-          </div>
-        </div>
-      </section>
+      <!-- BENEFITS — diseño pro con tarjetas y halo decorativo -->
+<section id="benefits" class="measure mx-auto">
+  <h2 class="text-xl font-semibold tracking-tight text-center">Benefits</h2>
+
+  <style>
+    .benefits-wrap{ position:relative; }
+    /* halo de fondo sutil detrás de la grilla */
+    .benefits-wrap::before{
+      content:""; position:absolute; inset:auto 0 -10% 0; height:220px; 
+      background: radial-gradient(60% 60% at 50% 0%,
+        rgba(20,20,20,.06), rgba(20,20,20,0) 70%);
+      filter: blur(12px);
+      pointer-events:none;
+    }
+    .benefit-card{
+      position:relative; display:flex; align-items:flex-start; gap:.9rem;
+      padding:1rem 1.1rem; border-radius:1rem;
+      background: linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.75));
+      border:1px solid var(--rule);
+      box-shadow: 0 8px 22px rgba(20,20,20,.05);
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+    .benefit-card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(20,20,20,.08);
+      border-color:#e7e2d9;
+    }
+    .benefit-icon{
+      width:2.2rem; height:2.2rem; border-radius:999px; position:relative;
+      display:grid; place-items:center; flex:0 0 auto;
+      background: radial-gradient(circle at 35% 35%, rgba(20,20,20,.10), rgba(20,20,20,.03) 60%);
+      box-shadow: inset 0 0 0 1.5px var(--rule), 0 4px 10px rgba(20,20,20,.10);
+    }
+    .benefit-icon::after{
+      content:""; position:absolute; inset:-6px; border-radius:999px;
+      background: radial-gradient(circle at 60% 40%, rgba(20,20,20,.06), transparent 60%);
+      z-index:-1;
+    }
+    .benefit-text{ line-height:1.75; color: var(--ink); }
+    /* reutilizamos el tamaño del check del sitio pero un pelín mayor en tarjetas */
+    .benefit-icon .icon-check{ width:1.2rem; height:1.2rem; margin:0; }
+  </style>
+
+  <div class="benefits-wrap mt-5 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+    <div class="benefit-card">
+      <span class="benefit-icon">
+        <svg class="icon-check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <p class="benefit-text">Targets redness and rosacea-prone skin.</p>
+    </div>
+
+    <div class="benefit-card">
+      <span class="benefit-icon">
+        <svg class="icon-check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <p class="benefit-text">Improves pigmentation and dark spots.</p>
+    </div>
+
+    <div class="benefit-card">
+      <span class="benefit-icon">
+        <svg class="icon-check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <p class="benefit-text">Refines texture and enlarged pores.</p>
+    </div>
+
+    <div class="benefit-card">
+      <span class="benefit-icon">
+        <svg class="icon-check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 7L10 17l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <p class="benefit-text">Comfort-forward approach with minimal downtime.</p>
+    </div>
+  </div>
+</section>
+
 
       <div class="my-10 h-px border-t rule"></div>
 
