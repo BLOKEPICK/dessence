@@ -1,4 +1,11 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const seo = {"title": "Neurotoxins | D‑Essence Wellness", "description": "Neurotoxins overview including candidacy, key benefits, and aftercare.", "canonical": "/services/neurotoxins", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Neurotoxins", "description": "Neurotoxins overview including candidacy, key benefits, and aftercare.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/neurotoxins"}};
+---
 
+
+
+<BaseLayout {...seo}>
 <div class="px-6 pt-28 md:pt-32 pb-10">
     <div class="mx-auto max-w-4xl">
       <p class="text-xs tracking-wider uppercase muted">Service</p>
@@ -10,12 +17,7 @@
       
       
     </div>
----
-import BaseLayout from '../../layouts/BaseLayout.astro';
-const seo = {"title": "Neurotoxins | D‑Essence Wellness", "description": "Neurotoxins overview including candidacy, key benefits, and aftercare.", "canonical": "/services/neurotoxins", "type": "website", "ogImage": "/og-default.jpg", "jsonLd": {"@context": "https://schema.org", "@type": "Service", "name": "Neurotoxins", "description": "Neurotoxins overview including candidacy, key benefits, and aftercare.", "provider": {"@type": "Organization", "name": "D‑Essence Wellness"}, "url": "/services/neurotoxins"}};
----
 
-<BaseLayout seo={seo}>
   <section class="relative overflow-hidden bg-neutral-950 text-white">
     <div class="absolute inset-0 -z-10">
       <div class="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-3xl opacity-40 bg-[radial-gradient(circle_at_center,rgba(59,130,246,.55),transparent_60%)]"></div>
@@ -133,4 +135,5 @@ const seo = {"title": "Neurotoxins | D‑Essence Wellness", "description": "Neur
     ul li .i { display:inline-flex; width:1.1rem; height:1.1rem; align-items:center; justify-content:center;
                 border-radius:9999px; background: rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); }
   </style>
+
 </BaseLayout>
