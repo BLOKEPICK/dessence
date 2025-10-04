@@ -92,7 +92,10 @@
 
 <!-- Mobile FULLSCREEN MENU (independiente del header) -->
 <div id="mobile-menu" class="fixed inset-0 hidden" aria-hidden="true" style="z-index:2147483647;">
-  <div class="absolute inset-0 bg-neutral-950"></div>
+  <!-- Área izquierda SIN fondo (transparente) -->
+  <div class="absolute inset-0 bg-transparent"></div>
+
+  <!-- Panel derecho -->
   <nav class="absolute inset-y-0 right-0 w-full max-w-sm bg-neutral-900 text-white border-l border-white/10 shadow-2xl">
     <div class="p-4">
       <div class="flex items-center justify-between">
@@ -147,9 +150,18 @@
         <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5" href="/about-us">About Us</a>
         <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5" href="/contact-us">Contact Us</a>
       </div>
+
+      <!-- Footer con logo centrado -->
+      <div class="mt-8 border-t border-white/10 pt-4 flex justify-center">
+        <a href="/" class="inline-flex items-baseline gap-1.5 opacity-90 hover:opacity-100" aria-label="Home">
+          <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D-Essence</span>
+          <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
+        </a>
+      </div>
     </div>
   </nav>
 </div>
+
 
 <!-- JS: Desktop hovers + Mobile menu -->
 <script is:inline>
