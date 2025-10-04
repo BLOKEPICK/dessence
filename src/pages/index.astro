@@ -42,95 +42,89 @@ const seo = {
 <BaseLayout seo={seo}>
   
   
-  <!-- Hero (Pro Split) -->
-<section class="relative overflow-hidden">
-  <!-- Fondo decorativo suave -->
-  <div aria-hidden="true" class="pointer-events-none absolute inset-0">
-    <div class="absolute -top-40 -left-24 h-80 w-80 rounded-full bg-emerald-400/10 blur-3xl"></div>
-    <div class="absolute top-1/3 -right-24 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl"></div>
-    <div class="absolute inset-0 bg-gradient-to-b from-black/0 via-black/0 to-black/20"></div>
-  </div>
-
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 lg:pt-36">
+  <!-- Hero (Split — contenido pro, sin cambiar fondo) -->
+<section class="hero-split">
+  <div class="container pt-24 pb-16">
     <div class="grid lg:grid-cols-12 gap-10 items-center">
-
+      
       <!-- Left copy -->
       <div class="lg:col-span-7">
         <!-- Eyebrow -->
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/15 text-[12px] text-white/80">
+        <div class="text-[12px] inline-flex items-center gap-2 px-3 py-1 border border-white/15 rounded-full mb-4 text-white/80">
           <span>Medical Aesthetics</span><span class="opacity-60">•</span><span>New Windsor, NY</span>
         </div>
 
         <!-- Headline -->
-        <h1 class="mt-4 text-4xl sm:text-6xl font-semibold leading-[1.05] tracking-tight text-white">
-          Understated beauty,<br class="hidden sm:block"/> clinical precision.
+        <h1 class="text-white text-4xl sm:text-6xl font-semibold leading-[1.05] tracking-tight">
+          Natural results, clinical excellence.
         </h1>
 
         <!-- Subcopy -->
-        <p class="mt-4 max-w-xl text-white/80 text-base sm:text-lg">
-          Tailored treatments that honor your features—subtle, modern, and guided by evidence.
+        <p class="muted mt-4 max-w-xl">
+          Subtle enhancements guided by medical standards. We focus on balance, skin health, and outcomes that feel like you—refreshed, not overdone.
         </p>
 
-        <!-- CTAs -->
-        <div class="mt-6 flex flex-wrap items-center gap-3">
-          <a href="/appointment" class="inline-flex h-11 items-center justify-center rounded-full px-5 font-medium text-black bg-white hover:bg-white/90 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
-            Book Consultation
-          </a>
-          <a href="/services" class="inline-flex h-11 items-center justify-center rounded-full px-5 font-medium text-white/90 ring-1 ring-white/20 hover:bg-white/5 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
-            See all services
-          </a>
-          <!-- Tel/acceso rápido en móviles -->
-          <a href="tel:+17163038963" class="inline-flex h-11 items-center justify-center rounded-full px-4 font-medium text-white/90 ring-1 ring-white/20 hover:bg-white/5 transition sm:ml-2">
-            Call (716) 303-8963
-          </a>
+        <!-- Proof line -->
+        <div class="mt-4 text-sm text-white/70">
+          Nurse-led practice • Medical-grade devices • FDA-cleared treatments
         </div>
 
-        <!-- Trust/KPIs -->
+        <!-- CTAs -->
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="/appointment" class="btn-neo">Book Consultation</a>
+          <a href="/services" class="btn-wire">Explore Services</a>
+          <a href="tel:+17163038963" class="btn-wire">Call (716) 303-8963</a>
+        </div>
+
+        <!-- Trust/KPIs compactos -->
         <div class="mt-8 grid grid-cols-3 max-w-lg gap-3 text-sm">
-          <div class="rounded-xl border border-white/10 bg-white/5 px-4 py-3">
-            <div class="text-[13px] text-white/70">Client feedback</div>
+          <div class="rounded-xl border border-white/10 px-4 py-3">
+            <div class="text-[13px] text-white/60">Client Satisfaction</div>
             <div class="mt-1 flex items-center gap-2">
               <div aria-label="5 out of 5 stars" role="img" class="text-[15px] leading-none">★★★★★</div>
-              <span class="text-white/60 text-xs">5.0</span>
+              <span class="text-white/60 text-xs">5.0 avg</span>
             </div>
           </div>
-          <div class="rounded-xl border border-white/10 bg-white/5 px-4 py-3">
-            <div class="text-[13px] text-white/70">Protocols</div>
+          <div class="rounded-xl border border-white/10 px-4 py-3">
+            <div class="text-[13px] text-white/60">Approach</div>
             <div class="mt-1 text-white font-medium">Evidence-led</div>
           </div>
-          <div class="rounded-xl border border-white/10 bg-white/5 px-4 py-3">
-            <div class="text-[13px] text-white/70">Results</div>
-            <div class="mt-1 text-white font-medium">Subtle</div>
+          <div class="rounded-xl border border-white/10 px-4 py-3">
+            <div class="text-[13px] text-white/60">Aesthetic</div>
+            <div class="mt-1 text-white font-medium">Undetectable</div>
           </div>
         </div>
       </div>
 
-      <!-- Right visual (Bento) -->
+      <!-- Right “bento” con enlaces finales -->
       <div class="lg:col-span-5">
         <div class="grid grid-cols-2 gap-3">
-          <!-- Card 1 -->
-          <a href="/services/botox" class="group col-span-2 sm:col-span-1 rounded-2xl p-4 ring-1 ring-white/10 bg-white/[0.04] backdrop-blur-md hover:bg-white/[0.06] transition">
+          <!-- Neurotoxins -->
+          <a href="/services/botox" class="group col-span-2 sm:col-span-1 rounded-2xl border border-white/10 p-4 hover:bg-white/5 transition">
             <div class="text-xs uppercase tracking-wide text-white/60">Neurotoxins</div>
-            <div class="mt-2 text-white/90 text-sm">Smooth dynamic lines while keeping expression.</div>
-            <div class="mt-4 text-[11px] text-white/50 group-hover:text-white/70 transition">Explore →</div>
+            <p class="mt-2 text-white/90 text-sm">Softens expression lines while preserving movement.</p>
+            <div class="mt-3 text-[11px] text-white/50 group-hover:text-white/70">Learn more →</div>
           </a>
-          <!-- Card 2 -->
-          <a href="/services/juvederm-fillers" class="group col-span-2 sm:col-span-1 rounded-2xl p-4 ring-1 ring-white/10 bg-white/[0.04] backdrop-blur-md hover:bg-white/[0.06] transition">
+
+          <!-- Juvederm Fillers -->
+          <a href="/services/juvederm-fillers" class="group col-span-2 sm:col-span-1 rounded-2xl border border-white/10 p-4 hover:bg-white/5 transition">
             <div class="text-xs uppercase tracking-wide text-white/60">Juvederm Fillers</div>
-            <div class="mt-2 text-white/90 text-sm">Restore volume &amp; contour with restraint.</div>
-            <div class="mt-4 text-[11px] text-white/50 group-hover:text-white/70 transition">Explore →</div>
+            <p class="mt-2 text-white/90 text-sm">Structure & contour with restraint for natural harmony.</p>
+            <div class="mt-3 text-[11px] text-white/50 group-hover:text-white/70">Learn more →</div>
           </a>
-          <!-- Card 3 -->
-          <a href="/services/microneedling" class="group col-span-2 rounded-2xl p-4 ring-1 ring-white/10 bg-white/[0.04] backdrop-blur-md hover:bg-white/[0.06] transition">
+
+          <!-- Microneedling -->
+          <a href="/services/microneedling" class="group col-span-2 rounded-2xl border border-white/10 p-4 hover:bg-white/5 transition">
             <div class="text-xs uppercase tracking-wide text-white/60">Microneedling</div>
-            <div class="mt-2 text-white/90 text-sm">Texture, pores, scars—collagen induction.</div>
-            <div class="mt-4 text-[11px] text-white/50 group-hover:text-white/70 transition">Explore →</div>
+            <p class="mt-2 text-white/90 text-sm">Texture, pores & scars—collagen-first skin remodeling.</p>
+            <div class="mt-3 text-[11px] text-white/50 group-hover:text-white/70">Learn more →</div>
           </a>
-          <!-- Card 4 -->
-          <a href="/services/aerolase" class="group col-span-2 rounded-2xl p-4 ring-1 ring-white/10 bg-white/[0.04] backdrop-blur-md hover:bg-white/[0.06] transition">
+
+          <!-- Aerolase -->
+          <a href="/services/aerolase" class="group col-span-2 rounded-2xl border border-white/10 p-4 hover:bg-white/5 transition">
             <div class="text-xs uppercase tracking-wide text-white/60">Aerolase</div>
-            <div class="mt-2 text-white/90 text-sm">Gentle laser for tone, redness &amp; glow.</div>
-            <div class="mt-4 text-[11px] text-white/50 group-hover:text-white/70 transition">Explore →</div>
+            <p class="mt-2 text-white/90 text-sm">Tone, redness & glow with a gentle, versatile laser.</p>
+            <div class="mt-3 text-[11px] text-white/50 group-hover:text-white/70">Learn more →</div>
           </a>
         </div>
 
@@ -138,7 +132,7 @@ const seo = {
         <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
           <div class="text-white/75">By appointment only</div>
           <div class="sm:text-right">
-            <a href="/services" class="underline underline-offset-4 decoration-white/30 hover:decoration-white/70">Browse services</a>
+            <a href="/contact-us" class="underline underline-offset-4 decoration-white/30 hover:decoration-white/70">Directions & hours</a>
           </div>
         </div>
       </div>
