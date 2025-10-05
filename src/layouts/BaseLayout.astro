@@ -1,15 +1,279 @@
 ---
-import '../styles/globals.css';
-import Header from '@/components/Header.astro';
-import Footer from '@/components/Footer.astro';
-import Seo from '@/components/Seo.astro';
-const { seo = {} } = Astro.props;
+export interface Props {
+  seo?: {
+    title?: string;
+    description?: string;
+    canonical?: string;
+    type?: string;
+    jsonLd?: any[];
+  };
+}
+
+const { seo } = Astro.props;
+const title = seo?.title ?? 'D-Essence Wellness';
+const description = seo?.description ?? 'Modern Aesthetics, Evidence-Based Care';
+const canonical = seo?.canonical ?? '/';
+const type = seo?.type ?? 'website';
+const jsonLd = seo?.jsonLd ?? [];
 ---
-<html lang="en">
-  <Seo {...seo} />
-  <body>
-    <Header />
-    <main><slot /></main>
-    <Footer />
+
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={type} />
+    {jsonLd.length > 0 && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )}
+  </head>
+
+  <body class="min-h-full bg-[radial-gradient(1200px_700px_at_50%_-100px,#0b0b0b,transparent)] text-white antialiased">
+    {/*
+      =========================================================
+      TOGGLE GLOBAL (peer) PARA EL MENÚ MÓVIL
+      Debe vivir ANTES del header para evitar stacking issues.
+      =========================================================
+    */}
+    <input id="nav-toggle" type="checkbox" class="peer sr-only" aria-hidden="true" />
+
+    {/*
+      ===================== HEADER (CSS-only) =====================
+    */}
+    <header class="fixed top-4 left-1/2 -translate-x-1/2 z-[4000] w-full max-w-screen-xl">
+      <!-- Desktop -->
+      <div class="hidden md:flex items-center justify-center">
+        <nav class="relative flex items-center gap-1 rounded-full border border-white/10 bg-black/80 shadow-lg px-3 py-2 leading-none" aria-label="Primary">
+          <!-- Wordmark -->
+          <a href="/" class="flex items-center px-3 h-10 rounded-full hover:bg-white/5 transition" aria-label="Home">
+            <span class="inline-flex items-center h-full">
+              <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px] leading-none">D-Essence</span>
+              <span class="ml-1.5 text-white/70 font-medium tracking-wide text-[12.5px] leading-none">Wellness</span>
+            </span>
+          </a>
+
+          <!-- Categorías (desktop, CSS-only hover/focus) -->
+          <ul class="flex items-center gap-1 h-10">
+            <!-- Injectables -->
+            <li class="relative group">
+              <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none">
+                Injectables
+                <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[520px] rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1 max-h-[70vh] overflow-auto hidden
+                          group-hover:block group-focus-within:block">
+                <ul class="divide-y divide-white/10">
+                  <li><a href="/services/botox" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Botox<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/xeomin" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Xeomin<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/daxxify" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Daxxify<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/botox-for-hyperhidrosis" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Botox for Hyperhidrosis<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/prp-microneedling" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">PRP Microneedling<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/prf-microneedling" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">PRF Microneedling<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/juvederm-fillers" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Dermal Fillers — Juvederm Collection<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/smooth-threads" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Threads — Smooth Threads<span class="opacity-60">→</span></a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Laser Treatments -->
+            <li class="relative group">
+              <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none">
+                Laser Treatments
+                <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[360px] rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1 max-h-[70vh] overflow-auto hidden
+                          group-hover:block group-focus-within:block">
+                <ul class="divide-y divide-white/10">
+                  <li><a href="/services/aerolase" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Aerolase<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/laser-hair-removal" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Laser Hair Removal<span class="opacity-60">→</span></a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Aesthetic Services -->
+            <li class="relative group">
+              <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none">
+                Aesthetic Services
+                <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[420px] rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1 max-h-[70vh] overflow-auto hidden
+                          group-hover:block group-focus-within:block">
+                <ul class="divide-y divide-white/10">
+                  <li><a href="/services/waxing-sugaring" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Waxing &amp; Sugaring<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/teeth-whitening" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Teeth Whitening<span class="opacity-60">→</span></a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Simples -->
+            <li><a href="/about-us" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white">About Us</a></li>
+            <li><a href="/contact-us" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Mobile bar (botón = label del input peer) -->
+      <div class="md:hidden px-4">
+        <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-neutral-900/75 text-white backdrop-blur-lg shadow-lg px-3 py-2">
+          <a href="/" class="py-2" aria-label="Home">
+            <span class="inline-flex items-baseline gap-1.5">
+              <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D-Essence</span>
+              <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
+            </span>
+          </a>
+          <label for="nav-toggle" class="p-2 rounded-lg hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20" aria-controls="mobile-drawer" aria-label="Open menu" role="button" tabindex="0">
+            <!-- icon open/close controlados por peer -->
+            <svg class="w-6 h-6 peer-checked:hidden" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg class="w-6 h-6 hidden peer-checked:block" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    {/*
+      =================== BACKDROP + DRAWER (global) ===================
+      Notar z-index MUY alto para evitar quedar detrás del body.
+    */}
+    <!-- Backdrop oscuro -->
+    <div class="fixed inset-0 z-[10000] bg-black/60 opacity-0 pointer-events-none transition-opacity duration-200
+                peer-checked:opacity-100 peer-checked:pointer-events-auto"></div>
+
+    <!-- Lado izquierdo con blur leve -->
+    <div class="fixed inset-0 right-[8%] z-[10005] bg-black/10 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-200
+                peer-checked:opacity-100 peer-checked:pointer-events-auto"></div>
+
+    <!-- Drawer móvil -->
+    <aside id="mobile-drawer" class="fixed right-0 top-0 z-[10010] h-full w-[92%] max-w-sm bg-neutral-900 text-white border-l border-white/10 shadow-2xl translate-x-full transition-transform duration-200 will-change-transform
+                                   peer-checked:translate-x-0">
+      <div class="p-4 h-full flex flex-col">
+        <div class="text-xs uppercase tracking-wide text-white/50 px-1">Navigation</div>
+
+        <!-- Acordeones nativos -->
+        <div class="mt-2 space-y-3 overflow-auto">
+          <details class="rounded-xl border border-white/10 open:bg-white/5">
+            <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
+              <span class="font-medium">Injectables</span>
+              <svg class="w-5 h-5 transition-transform open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <nav class="border-t border-white/10 py-1">
+              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/botox">Botox</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/xeomin">Xeomin</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/daxxify">Daxxify</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/botox-for-hyperhidrosis">Botox for Hyperhidrosis</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/prp-microneedling">PRP Microneedling</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/prf-microneedling">PRF Microneedling</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/juvederm-fillers">Dermal Fillers — Juvederm Collection</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/smooth-threads">Threads — Smooth Threads</a>
+            </nav>
+          </details>
+
+          <details class="rounded-xl border border-white/10 open:bg-white/5">
+            <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
+              <span class="font-medium">Laser Treatments</span>
+              <svg class="w-5 h-5 transition-transform open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <nav class="border-t border-white/10 py-1">
+              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/aerolase">Aerolase</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/laser-hair-removal">Laser Hair Removal</a>
+            </nav>
+          </details>
+
+          <details class="rounded-xl border border-white/10 open:bg-white/5">
+            <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
+              <span class="font-medium">Aesthetic Services</span>
+              <svg class="w-5 h-5 transition-transform open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <nav class="border-t border-white/10 py-1">
+              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/waxing-sugaring">Waxing &amp; Sugaring</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/teeth-whitening">Teeth Whitening</a>
+            </nav>
+          </details>
+
+          <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5" href="/about-us">About Us</a>
+          <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5" href="/contact-us">Contact Us</a>
+        </div>
+
+        <!-- Logo centrado abajo -->
+        <div class="mt-auto p-4 border-t border-white/10 flex items-center justify-center">
+          <a href="/" class="inline-flex items-baseline gap-1.5" aria-label="Home">
+            <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D-Essence</span>
+            <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    {/*
+      ======================= CONTENIDO DE PÁGINA =======================
+    */}
+    <main>
+      <slot />
+    </main>
+
+    {/*
+      ============================ FOOTER ============================
+    */}
+    <footer class="mt-16 border-t border-white/10 bg-black/40">
+      <div class="container py-12">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <div class="text-white font-semibold tracking-[0.06em]">D-Essence <span class="text-white/70 font-medium">Wellness</span></div>
+            <p class="mt-3 text-sm text-neutral-400 max-w-xs">
+              Subtle, modern aesthetics guided by evidence—New Windsor, NY.
+            </p>
+          </div>
+
+          <div>
+            <h5 class="text-white/90 font-medium">Services</h5>
+            <ul class="mt-3 space-y-2 text-sm text-neutral-300">
+              <li><a class="hover:underline" href="/services/botox">Neurotoxins</a></li>
+              <li><a class="hover:underline" href="/services/juvederm-fillers">Juvederm Fillers</a></li>
+              <li><a class="hover:underline" href="/services/microneedling">Microneedling</a></li>
+              <li><a class="hover:underline" href="/services/aerolase">Aerolase</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="text-white/90 font-medium">Clinic</h5>
+            <ul class="mt-3 space-y-2 text-sm text-neutral-300">
+              <li><a class="hover:underline" href="/about-us">About Us</a></li>
+              <li><a class="hover:underline" href="/contact-us">Contact Us</a></li>
+              <li><a class="hover:underline" href="/gallery">Before &amp; After</a></li>
+              <li><a class="hover:underline" href="/services">All Services</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 class="text-white/90 font-medium">Visit</h5>
+            <p class="mt-3 text-sm text-neutral-300">
+              871 Blooming Grove Turnpike Suite 102<br/>New Windsor, NY 12553
+            </p>
+            <p class="mt-3 text-sm text-neutral-400">By appointment only</p>
+            <div class="mt-4 flex gap-3 text-sm">
+              <a class="btn-wire px-3 py-2" href="https://maps.app.goo.gl/N4y6tDdNHTdkEpJp8" target="_blank" rel="nofollow noopener">Directions</a>
+              <a class="btn-neo px-3 py-2" href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx" target="_blank" rel="noopener">Book</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
+          <div>© {new Date().getFullYear()} D-Essence Wellness. All rights reserved.</div>
+          <div class="flex gap-4">
+            <a href="/privacy" class="hover:underline">Privacy</a>
+            <a href="/terms" class="hover:underline">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
