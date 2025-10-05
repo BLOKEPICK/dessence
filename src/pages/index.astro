@@ -209,573 +209,473 @@ const seo = {
       </div>
     </section>
 
-    <!-- ===== WHAT WE DO (Tabs desktop / Acordeón móvil) ===== -->
-    <section id="what-we-do" class="py-14 sm:py-16">
-      <div class="container">
-        <!-- Header -->
-        <div class="text-center">
-          <div class="text-[11px] uppercase tracking-[0.18em] text-neutral-500">What we do</div>
-          <h2 class="mt-2 text-3xl font-semibold tracking-tight">Evidence-led aesthetics & wellness</h2>
-          <p class="mt-3 text-neutral-600 max-w-2xl mx-auto">Explore our services by category. Natural, conservative, and designed for long-term skin health.</p>
-        </div>
+    <!-- ===== WHAT WE DO (Pro • Vertical tabs desktop / Acordeón móvil) ===== -->
+<section id="what-we-do" class="py-16">
+  <div class="container">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto">
+      <span class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-neutral-500">
+        What we do
+      </span>
+      <h2 class="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight">
+        Aesthetics & Wellness, guided by evidence
+      </h2>
+      <div class="mt-4 h-px w-28 mx-auto bg-gradient-to-r from-transparent via-neutral-900 to-transparent"></div>
+      <p class="mt-4 text-neutral-600">
+        Explore our services by category. Conservative, natural-looking outcomes with long-term skin health in mind.
+      </p>
+    </div>
 
-        <!-- Tabs (desktop) -->
-        <div class="mt-8 hidden md:block" data-tabs>
-          <div class="flex items-center gap-2 overflow-x-auto pb-2" role="tablist" aria-label="Service categories">
-            <button class="tab-btn is-active" role="tab" aria-selected="true" aria-controls="panel-injectables" id="tab-injectables" data-tab="injectables">Injectables</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-laser" id="tab-laser" data-tab="laser">Laser Treatments</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-skincare" id="tab-skincare" data-tab="skincare">Advanced Skin Care</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-wellness" id="tab-wellness" data-tab="wellness">Wellness: Vitamin & IV</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-aesthetic" id="tab-aesthetic" data-tab="aesthetic">Aesthetic Services</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-events" id="tab-events" data-tab="events">Events & Products</button>
-          </div>
+    <!-- Desktop layout: vertical tabs + panel -->
+    <div class="mt-10 hidden md:grid md:grid-cols-12 gap-8" data-wwd>
+      <!-- Vertical tabs -->
+      <nav class="md:col-span-3 sticky top-24 self-start space-y-2" role="tablist" aria-orientation="vertical" aria-label="Service categories">
+        <button class="vtab-btn is-active" role="tab" aria-selected="true" aria-controls="panel-injectables" id="tab-injectables" data-tab="injectables">
+          <span class="icn" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4"><path d="M3 21h18M10 14l7-7a2 2 0 10-3-3l-7 7v3h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Injectables
+        </button>
+        <button class="vtab-btn" role="tab" aria-selected="false" aria-controls="panel-laser" id="tab-laser" data-tab="laser">
+          <span class="icn" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4"><path d="M12 3v18M3 12h18M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </span>
+          Laser Treatments
+        </button>
+        <button class="vtab-btn" role="tab" aria-selected="false" aria-controls="panel-skincare" id="tab-skincare" data-tab="skincare">
+          <span class="icn" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4"><path d="M12 3l3 7H9l3-7zM6 21h12l-3-11H9L6 21z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </span>
+          Advanced Skin Care
+        </button>
+        <button class="vtab-btn" role="tab" aria-selected="false" aria-controls="panel-wellness" id="tab-wellness" data-tab="wellness">
+          <span class="icn" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4"><path d="M7 10h10M6 14h12M9 3h6l1 3H8l1-3zM7 21h10a2 2 0 002-2v-1H5v1a2 2 0 002 2z" stroke="currentColor" stroke-width="1.5"/></svg>
+          </span>
+          Wellness: Vitamin & IV
+        </button>
+        <button class="vtab-btn" role="tab" aria-selected="false" aria-controls="panel-aesthetic" id="tab-aesthetic" data-tab="aesthetic">
+          <span class="icn" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4"><path d="M12 3c4 0 7 3 7 7s-3 7-7 7-7-3-7-7 3-7 7-7zm-2 12l6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </span>
+          Aesthetic Services
+        </button>
+        <button class="vtab-btn" role="tab" aria-selected="false" aria-controls="panel-events" id="tab-events" data-tab="events">
+          <span class="icn" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" class="w-4 h-4"><path d="M8 7V3M16 7V3M4 9h16M5 12h14v8H5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </span>
+          Events & Products
+        </button>
+      </nav>
 
-          <!-- Panels -->
-          <div class="mt-6">
-            <!-- Injectables -->
-            <div id="panel-injectables" role="tabpanel" aria-labelledby="tab-injectables" data-tab-panel="injectables" class="tab-panel">
-              <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <a href="/services/botox" class="svc-card">
-                  <h3 class="svc-title">Neuromodulators</h3>
-                  <p class="svc-desc">Soften expression lines and help prevent new ones.</p>
-                  <p class="svc-inc">Includes: Botox® • Xeomin® • Daxxify®</p>
-                  <div class="svc-meta"><span class="pill">Downtime: Minimal</span><span class="pill">Results: 3–14 days</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-
-                <a href="/services/botox-for-hyperhidrosis" class="svc-card">
-                  <h3 class="svc-title">Hyperhidrosis Treatment</h3>
-                  <p class="svc-desc">Underarm sweating control with targeted dosing.</p>
-                  <p class="svc-inc">Botox® for excessive sweating</p>
-                  <div class="svc-meta"><span class="pill">Downtime: Minimal</span><span class="pill">Relief: Weeks–months</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-
-                <a href="/services/juvederm-fillers" class="svc-card">
-                  <h3 class="svc-title">Dermal Fillers</h3>
-                  <p class="svc-desc">Structure & balance with restraint for harmony.</p>
-                  <p class="svc-inc">JUVÉDERM® Collection</p>
-                  <div class="svc-meta"><span class="pill">Results: Immediate</span><span class="pill">Refine: 2–4 weeks</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-
-                <a href="/services/prp-microneedling" class="svc-card">
-                  <h3 class="svc-title">PRP Microneedling</h3>
-                  <p class="svc-desc">Collagen induction with your platelet-rich plasma.</p>
-                  <p class="svc-inc">Texture • Pores • Scars</p>
-                  <div class="svc-meta"><span class="pill">Series recommended</span><span class="pill">Gradual results</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-
-                <a href="/services/prf-microneedling" class="svc-card">
-                  <h3 class="svc-title">PRF Microneedling</h3>
-                  <p class="svc-desc">Fibrin-based approach for progressive remodeling.</p>
-                  <p class="svc-inc">Skin quality & resilience</p>
-                  <div class="svc-meta"><span class="pill">Series recommended</span><span class="pill">Gradual results</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-
-                <a href="/services/smooth-threads" class="svc-card">
-                  <h3 class="svc-title">Smooth Threads</h3>
-                  <p class="svc-desc">Subtle collagen stimulation for fine areas.</p>
-                  <p class="svc-inc">Texture • Fine lines</p>
-                  <div class="svc-meta"><span class="pill">Downtime: Minimal</span><span class="pill">Collagen support</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
+      <!-- Panels -->
+      <div class="md:col-span-9">
+        <!-- Injectables -->
+        <div id="panel-injectables" role="tabpanel" aria-labelledby="tab-injectables" data-tab-panel="injectables" class="tab-panel">
+          <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-5">
+            <a href="/services/botox" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Neuromodulators</h3>
+                <p class="svc-sub">Botox® • Xeomin® • Daxxify®</p>
               </div>
-            </div>
-
-            <!-- Laser -->
-            <div id="panel-laser" role="tabpanel" aria-labelledby="tab-laser" data-tab-panel="laser" class="tab-panel hidden">
-              <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <a href="/services/aerolase" class="svc-card">
-                  <h3 class="svc-title">Aerolase Neo Elite</h3>
-                  <p class="svc-desc">Tone, redness & pigment with a gentle 650-µs laser.</p>
-                  <p class="svc-inc">Acne • Rosacea • Melasma • Rejuvenation</p>
-                  <div class="svc-meta"><span class="pill">Safe: I–VI</span><span class="pill">Series recommended</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-
-                <a href="/services/laser-hair-removal" class="svc-card">
-                  <h3 class="svc-title">Laser Hair Removal</h3>
-                  <p class="svc-desc">Smooth skin with long-term hair reduction.</p>
-                  <p class="svc-inc">All skin tones (I–VI)</p>
-                  <div class="svc-meta"><span class="pill">Series: Yes</span><span class="pill">Low downtime</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
+              <p class="svc-desc">Soften expression lines and help prevent new ones.</p>
+              <div class="svc-meta">
+                <span class="pill">Downtime: Minimal</span>
+                <span class="pill">Onset: 3–14 days</span>
               </div>
-            </div>
+              <span class="svc-link">Learn more →</span>
+            </a>
 
-            <!-- Advanced Skin Care -->
-            <div id="panel-skincare" role="tabpanel" aria-labelledby="tab-skincare" data-tab-panel="skincare" class="tab-panel hidden">
-              <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <a href="/services" class="svc-card">
-                  <h3 class="svc-title">Specialty Facials</h3>
-                  <p class="svc-desc">Custom protocols for your skin’s unique needs.</p>
-                  <p class="svc-inc">Hydration • Calming • Clarifying</p>
-                  <div class="svc-meta"><span class="pill">No downtime</span><span class="pill">Tailored plan</span></div>
-                  <span class="svc-link">Explore →</span>
-                </a>
-
-                <a href="/services" class="svc-card">
-                  <h3 class="svc-title">Chemical Peels</h3>
-                  <p class="svc-desc">Refine texture & pigment with medical peels.</p>
-                  <p class="svc-inc">Perfect Derma Peel • BioRePeel</p>
-                  <div class="svc-meta"><span class="pill">Downtime: 1–7 days</span><span class="pill">Series optional</span></div>
-                  <span class="svc-link">Explore →</span>
-                </a>
-
-                <a href="/services/microneedling" class="svc-card">
-                  <h3 class="svc-title">Microneedling (SkinPen®)</h3>
-                  <p class="svc-desc">Collagen induction for texture, pores & scars.</p>
-                  <p class="svc-inc">C.I.T. • Proven device</p>
-                  <div class="svc-meta"><span class="pill">Series recommended</span><span class="pill">Gradual results</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-
-                <a href="/services" class="svc-card">
-                  <h3 class="svc-title">Acne Programs</h3>
-                  <p class="svc-desc">Guided protocols to clear & maintain skin.</p>
-                  <p class="svc-inc">Face Reality Boot Camp</p>
-                  <div class="svc-meta"><span class="pill">Clinical coaching</span><span class="pill">Home care plan</span></div>
-                  <span class="svc-link">Explore →</span>
-                </a>
-
-                <a href="/services" class="svc-card">
-                  <h3 class="svc-title">Exfoliation</h3>
-                  <p class="svc-desc">Instant smoothness & glow with precise exfoliation.</p>
-                  <p class="svc-inc">Dermaplaning • Enzymes</p>
-                  <div class="svc-meta"><span class="pill">No downtime</span><span class="pill">Event-ready</span></div>
-                  <span class="svc-link">Explore →</span>
-                </a>
+            <a href="/services/botox-for-hyperhidrosis" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Hyperhidrosis Treatment</h3>
+                <p class="svc-sub">Underarm sweating control</p>
               </div>
-            </div>
-
-            <!-- Wellness -->
-            <div id="panel-wellness" role="tabpanel" aria-labelledby="tab-wellness" data-tab-panel="wellness" class="tab-panel hidden">
-              <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <a href="/services" class="svc-card">
-                  <h3 class="svc-title">Vitamin Injections</h3>
-                  <p class="svc-desc">Targeted boosts for energy, recovery & metabolism.</p>
-                  <p class="svc-inc">B12 • L-Carnitine • Amino • MICC • Lipo Plus • Glutathione • Tri-Immune</p>
-                  <div class="svc-meta"><span class="pill">Quick visit</span><span class="pill">Personalized</span></div>
-                  <span class="svc-link">Explore →</span>
-                </a>
-
-                <a href="/services" class="svc-card">
-                  <h3 class="svc-title">IV Infusions</h3>
-                  <p class="svc-desc">Hydration & wellness drips for immunity and energy.</p>
-                  <p class="svc-inc">Energy • Immunity • Hydration • Wellness</p>
-                  <div class="svc-meta"><span class="pill">45–60 minutes</span><span class="pill">Tailored blends</span></div>
-                  <span class="svc-link">Explore →</span>
-                </a>
+              <p class="svc-desc">Targeted dosing to significantly reduce perspiration.</p>
+              <div class="svc-meta">
+                <span class="pill">Downtime: Minimal</span>
+                <span class="pill">Relief: Weeks–months</span>
               </div>
-            </div>
+              <span class="svc-link">Learn more →</span>
+            </a>
 
-            <!-- Aesthetic -->
-            <div id="panel-aesthetic" role="tabpanel" aria-labelledby="tab-aesthetic" data-tab-panel="aesthetic" class="tab-panel hidden">
-              <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <a href="/services/waxing-sugaring" class="svc-card">
-                  <h3 class="svc-title">Waxing & Sugaring</h3>
-                  <p class="svc-desc">Face, bikini & body hair removal with care.</p>
-                  <p class="svc-inc">Full Face • Brows • Bikini • Body</p>
-                  <div class="svc-meta"><span class="pill">All skin types</span><span class="pill">Gentle prep</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-
-                <a href="/services/teeth-whitening" class="svc-card">
-                  <h3 class="svc-title">Teeth Whitening</h3>
-                  <p class="svc-desc">Brighter smile with professional-grade systems.</p>
-                  <p class="svc-inc">Fast, safe results</p>
-                  <div class="svc-meta"><span class="pill">Event-ready</span><span class="pill">Low sensitivity</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
+            <a href="/services/juvederm-fillers" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Dermal Fillers</h3>
+                <p class="svc-sub">JUVÉDERM® Collection</p>
               </div>
-            </div>
-
-            <!-- Events & Products -->
-            <div id="panel-events" role="tabpanel" aria-labelledby="tab-events" data-tab-panel="events" class="tab-panel hidden">
-              <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <a href="/contact-us" class="svc-card">
-                  <h3 class="svc-title">Botox® Parties</h3>
-                  <p class="svc-desc">Private events with a clinical standard of care.</p>
-                  <p class="svc-inc">Host at our clinic</p>
-                  <div class="svc-meta"><span class="pill">By appointment</span><span class="pill">Group rates</span></div>
-                  <span class="svc-link">Inquire →</span>
-                </a>
-
-                <a href="/contact-us" class="svc-card">
-                  <h3 class="svc-title">Spa Parties</h3>
-                  <p class="svc-desc">Custom facials & add-ons for special occasions.</p>
-                  <p class="svc-inc">Girls / Adults</p>
-                  <div class="svc-meta"><span class="pill">Customizable</span><span class="pill">Concierge</span></div>
-                  <span class="svc-link">Inquire →</span>
-                </a>
-
-                <a href="/contact-us" class="svc-card">
-                  <h3 class="svc-title">Skincare Workshops</h3>
-                  <p class="svc-desc">Education-first sessions to build your regimen.</p>
-                  <p class="svc-inc">Hands-on guidance</p>
-                  <div class="svc-meta"><span class="pill">Small groups</span><span class="pill">By request</span></div>
-                  <span class="svc-link">Inquire →</span>
-                </a>
+              <p class="svc-desc">Structure & balance with restraint for harmony.</p>
+              <div class="svc-meta">
+                <span class="pill">Results: Immediate</span>
+                <span class="pill">Refine: 2–4 weeks</span>
               </div>
+              <span class="svc-link">Learn more →</span>
+            </a>
 
-              <div class="mt-6 rounded-2xl ring-1 ring-neutral-200 bg-white p-5">
-                <div class="text-sm text-neutral-500 uppercase tracking-wide">Professional Skincare</div>
-                <div class="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
-                  <div class="brand-pill">Circadia</div>
-                  <div class="brand-pill">Face Reality</div>
-                  <div class="brand-pill">Hydrinity</div>
-                  <div class="brand-pill">SkinMedica</div>
-                </div>
-                <div class="mt-3 text-sm">
-                  Available in-clinic. <a href="/contact-us" class="underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700">Ask a provider →</a>
-                </div>
+            <a href="/services/prp-microneedling" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">PRP Microneedling</h3>
+                <p class="svc-sub">Texture • Pores • Scars</p>
               </div>
-            </div>
+              <p class="svc-desc">Collagen induction using your platelet-rich plasma.</p>
+              <div class="svc-meta">
+                <span class="pill">Series recommended</span>
+                <span class="pill">Gradual results</span>
+              </div>
+              <span class="svc-link">Learn more →</span>
+            </a>
+
+            <a href="/services/prf-microneedling" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">PRF Microneedling</h3>
+                <p class="svc-sub">Skin quality & resilience</p>
+              </div>
+              <p class="svc-desc">Fibrin-based approach for progressive remodeling.</p>
+              <div class="svc-meta">
+                <span class="pill">Series recommended</span>
+                <span class="pill">Gradual results</span>
+              </div>
+              <span class="svc-link">Learn more →</span>
+            </a>
+
+            <a href="/services/smooth-threads" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Smooth Threads</h3>
+                <p class="svc-sub">Collagen stimulation</p>
+              </div>
+              <p class="svc-desc">Subtle support for texture and fine lines.</p>
+              <div class="svc-meta">
+                <span class="pill">Downtime: Minimal</span>
+                <span class="pill">Collagen support</span>
+              </div>
+              <span class="svc-link">Learn more →</span>
+            </a>
           </div>
         </div>
 
-        <!-- Acordeones (móvil) -->
-        <div class="mt-8 md:hidden space-y-3">
-          <details class="acc">
-            <summary class="acc-sum">Injectables</summary>
-            <div class="acc-panel">
-              <div class="grid grid-cols-1 gap-4">
-                <a href="/services/botox" class="svc-card">
-                  <h3 class="svc-title">Neuromodulators</h3>
-                  <p class="svc-desc">Soften expression lines and help prevent new ones.</p>
-                  <p class="svc-inc">Botox® • Xeomin® • Daxxify®</p>
-                  <div class="svc-meta"><span class="pill">Downtime: Minimal</span><span class="pill">Results: 3–14 days</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-                <a href="/services/botox-for-hyperhidrosis" class="svc-card">
-                  <h3 class="svc-title">Hyperhidrosis Treatment</h3>
-                  <p class="svc-desc">Underarm sweating control with targeted dosing.</p>
-                  <p class="svc-inc">Botox® for excessive sweating</p>
-                  <div class="svc-meta"><span class="pill">Downtime: Minimal</span><span class="pill">Relief: Weeks–months</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-                <a href="/services/juvederm-fillers" class="svc-card">
-                  <h3 class="svc-title">Dermal Fillers</h3>
-                  <p class="svc-desc">Structure & balance with restraint for harmony.</p>
-                  <p class="svc-inc">JUVÉDERM® Collection</p>
-                  <div class="svc-meta"><span class="pill">Results: Immediate</span><span class="pill">Refine: 2–4 weeks</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-                <a href="/services/prp-microneedling" class="svc-card">
-                  <h3 class="svc-title">PRP Microneedling</h3>
-                  <p class="svc-desc">Collagen induction with your platelet-rich plasma.</p>
-                  <p class="svc-inc">Texture • Pores • Scars</p>
-                  <div class="svc-meta"><span class="pill">Series recommended</span><span class="pill">Gradual results</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-                <a href="/services/prf-microneedling" class="svc-card">
-                  <h3 class="svc-title">PRF Microneedling</h3>
-                  <p class="svc-desc">Fibrin-based approach for progressive remodeling.</p>
-                  <p class="svc-inc">Skin quality & resilience</p>
-                  <div class="svc-meta"><span class="pill">Series recommended</span><span class="pill">Gradual results</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-                <a href="/services/smooth-threads" class="svc-card">
-                  <h3 class="svc-title">Smooth Threads</h3>
-                  <p class="svc-desc">Subtle collagen stimulation for fine areas.</p>
-                  <p class="svc-inc">Texture • Fine lines</p>
-                  <div class="svc-meta"><span class="pill">Downtime: Minimal</span><span class="pill">Collagen support</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
+        <!-- Laser -->
+        <div id="panel-laser" role="tabpanel" aria-labelledby="tab-laser" data-tab-panel="laser" class="tab-panel hidden">
+          <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-5">
+            <a href="/services/aerolase" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Aerolase Neo Elite</h3>
+                <p class="svc-sub">Acne • Rosacea • Melasma • Rejuvenation</p>
               </div>
-            </div>
-          </details>
-
-          <details class="acc">
-            <summary class="acc-sum">Laser Treatments</summary>
-            <div class="acc-panel">
-              <div class="grid grid-cols-1 gap-4">
-                <a href="/services/aerolase" class="svc-card">
-                  <h3 class="svc-title">Aerolase Neo Elite</h3>
-                  <p class="svc-desc">Tone, redness & pigment with a gentle 650-µs laser.</p>
-                  <p class="svc-inc">Acne • Rosacea • Melasma • Rejuvenation</p>
-                  <div class="svc-meta"><span class="pill">Safe: I–VI</span><span class="pill">Series recommended</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-                <a href="/services/laser-hair-removal" class="svc-card">
-                  <h3 class="svc-title">Laser Hair Removal</h3>
-                  <p class="svc-desc">Smooth skin with long-term hair reduction.</p>
-                  <p class="svc-inc">All skin tones (I–VI)</p>
-                  <div class="svc-meta"><span class="pill">Series: Yes</span><span class="pill">Low downtime</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
+              <p class="svc-desc">Tone, redness & pigment with a gentle 650-µs laser. Safe for I–VI.</p>
+              <div class="svc-meta">
+                <span class="pill">Safe: I–VI</span>
+                <span class="pill">Series recommended</span>
               </div>
-            </div>
-          </details>
+              <span class="svc-link">Learn more →</span>
+            </a>
 
-          <details class="acc">
-            <summary class="acc-sum">Advanced Skin Care</summary>
-            <div class="acc-panel">
-              <div class="grid grid-cols-1 gap-4">
-                <a href="/services" class="svc-card">
-                  <h3 class="svc-title">Specialty Facials</h3>
-                  <p class="svc-desc">Custom protocols for your skin’s unique needs.</p>
-                  <p class="svc-inc">Hydration • Calming • Clarifying</p>
-                  <div class="svc-meta"><span class="pill">No downtime</span><span class="pill">Tailored plan</span></div>
-                  <span class="svc-link">Explore →</span>
-                </a>
-                <a href="/services" class="svc-card">
-                  <h3 class="svc-title">Chemical Peels</h3>
-                  <p class="svc-desc">Refine texture & pigment with medical peels.</p>
-                  <p class="svc-inc">Perfect Derma Peel • BioRePeel</p>
-                  <div class="svc-meta"><span class="pill">Downtime: 1–7 days</span><span class="pill">Series optional</span></div>
-                  <span class="svc-link">Explore →</span>
-                </a>
-                <a href="/services/microneedling" class="svc-card">
-                  <h3 class="svc-title">Microneedling (SkinPen®)</h3>
-                  <p class="svc-desc">Collagen induction for texture, pores & scars.</p>
-                  <p class="svc-inc">C.I.T. • Proven device</p>
-                  <div class="svc-meta"><span class="pill">Series recommended</span><span class="pill">Gradual results</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-                <a href="/services" class="svc-card">
-                  <h3 class="svc-title">Acne Programs</h3>
-                  <p class="svc-desc">Guided protocols to clear & maintain skin.</p>
-                  <p class="svc-inc">Face Reality Boot Camp</p>
-                  <div class="svc-meta"><span class="pill">Clinical coaching</span><span class="pill">Home care plan</span></div>
-                  <span class="svc-link">Explore →</span>
-                </a>
-                <a href="/services" class="svc-card">
-                  <h3 class="svc-title">Exfoliation</h3>
-                  <p class="svc-desc">Instant smoothness & glow with precise exfoliation.</p>
-                  <p class="svc-inc">Dermaplaning • Enzymes</p>
-                  <div class="svc-meta"><span class="pill">No downtime</span><span class="pill">Event-ready</span></div>
-                  <span class="svc-link">Explore →</span>
-                </a>
+            <a href="/services/laser-hair-removal" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Laser Hair Removal</h3>
+                <p class="svc-sub">All skin tones (I–VI)</p>
               </div>
-            </div>
-          </details>
-
-          <details class="acc">
-            <summary class="acc-sum">Wellness: Vitamin & IV</summary>
-            <div class="acc-panel">
-              <div class="grid grid-cols-1 gap-4">
-                <a href="/services" class="svc-card">
-                  <h3 class="svc-title">Vitamin Injections</h3>
-                  <p class="svc-desc">Targeted boosts for energy, recovery & metabolism.</p>
-                  <p class="svc-inc">B12 • L-Carnitine • Amino • MICC • Lipo Plus • Glutathione • Tri-Immune</p>
-                  <div class="svc-meta"><span class="pill">Quick visit</span><span class="pill">Personalized</span></div>
-                  <span class="svc-link">Explore →</span>
-                </a>
-                <a href="/services" class="svc-card">
-                  <h3 class="svc-title">IV Infusions</h3>
-                  <p class="svc-desc">Hydration & wellness drips for immunity and energy.</p>
-                  <p class="svc-inc">Energy • Immunity • Hydration • Wellness</p>
-                  <div class="svc-meta"><span class="pill">45–60 minutes</span><span class="pill">Tailored blends</span></div>
-                  <span class="svc-link">Explore →</span>
-                </a>
+              <p class="svc-desc">Smooth skin with long-term hair reduction.</p>
+              <div class="svc-meta">
+                <span class="pill">Series: Yes</span>
+                <span class="pill">Low downtime</span>
               </div>
-            </div>
-          </details>
-
-          <details class="acc">
-            <summary class="acc-sum">Aesthetic Services</summary>
-            <div class="acc-panel">
-              <div class="grid grid-cols-1 gap-4">
-                <a href="/services/waxing-sugaring" class="svc-card">
-                  <h3 class="svc-title">Waxing & Sugaring</h3>
-                  <p class="svc-desc">Face, bikini & body hair removal with care.</p>
-                  <p class="svc-inc">Full Face • Brows • Bikini • Body</p>
-                  <div class="svc-meta"><span class="pill">All skin types</span><span class="pill">Gentle prep</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-                <a href="/services/teeth-whitening" class="svc-card">
-                  <h3 class="svc-title">Teeth Whitening</h3>
-                  <p class="svc-desc">Brighter smile with professional-grade systems.</p>
-                  <p class="svc-inc">Fast, safe results</p>
-                  <div class="svc-meta"><span class="pill">Event-ready</span><span class="pill">Low sensitivity</span></div>
-                  <span class="svc-link">Learn more →</span>
-                </a>
-              </div>
-            </div>
-          </details>
-
-          <details class="acc">
-            <summary class="acc-sum">Events & Products</summary>
-            <div class="acc-panel">
-              <div class="grid grid-cols-1 gap-4">
-                <a href="/contact-us" class="svc-card">
-                  <h3 class="svc-title">Botox® Parties</h3>
-                  <p class="svc-desc">Private events with a clinical standard of care.</p>
-                  <p class="svc-inc">Host at our clinic</p>
-                  <div class="svc-meta"><span class="pill">By appointment</span><span class="pill">Group rates</span></div>
-                  <span class="svc-link">Inquire →</span>
-                </a>
-                <a href="/contact-us" class="svc-card">
-                  <h3 class="svc-title">Spa Parties</h3>
-                  <p class="svc-desc">Custom facials & add-ons for special occasions.</p>
-                  <p class="svc-inc">Girls / Adults</p>
-                  <div class="svc-meta"><span class="pill">Customizable</span><span class="pill">Concierge</span></div>
-                  <span class="svc-link">Inquire →</span>
-                </a>
-                <a href="/contact-us" class="svc-card">
-                  <h3 class="svc-title">Skincare Workshops</h3>
-                  <p class="svc-desc">Education-first sessions to build your regimen.</p>
-                  <p class="svc-inc">Hands-on guidance</p>
-                  <div class="svc-meta"><span class="pill">Small groups</span><span class="pill">By request</span></div>
-                  <span class="svc-link">Inquire →</span>
-                </a>
-              </div>
-
-              <div class="mt-6 rounded-2xl ring-1 ring-neutral-200 bg-white p-5">
-                <div class="text-sm text-neutral-500 uppercase tracking-wide">Professional Skincare</div>
-                <div class="mt-2 grid grid-cols-2 gap-3 text-sm">
-                  <div class="brand-pill">Circadia</div>
-                  <div class="brand-pill">Face Reality</div>
-                  <div class="brand-pill">Hydrinity</div>
-                  <div class="brand-pill">SkinMedica</div>
-                </div>
-                <div class="mt-3 text-sm">
-                  Available in-clinic. <a href="/contact-us" class="underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700">Ask a provider →</a>
-                </div>
-              </div>
-            </div>
-          </details>
-        </div>
-      </div>
-
-      <!-- Styles locales para WHAT WE DO -->
-      <style is:inline>
-        .tab-btn{
-          @apply px-3 py-2 rounded-full text-sm bg-white text-neutral-700 ring-1 ring-neutral-200 hover:bg-neutral-50 focus:outline-none;
-        }
-        .tab-btn.is-active{
-          @apply bg-neutral-900 text-white ring-neutral-900;
-        }
-        .tab-panel{}
-        .svc-card{
-          @apply rounded-2xl ring-1 ring-neutral-200 bg-white p-5 hover:bg-neutral-50 transition text-neutral-800;
-        }
-        .svc-title{ @apply text-base font-semibold; }
-        .svc-desc{ @apply mt-1 text-sm text-neutral-600; }
-        .svc-inc{ @apply mt-1 text-xs text-neutral-500; }
-        .svc-meta{ @apply mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-600; }
-        .pill{ @apply inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200; }
-        .svc-link{ @apply mt-3 inline-block text-sm underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700; }
-        .acc{ @apply rounded-xl ring-1 ring-neutral-200 bg-white; }
-        .acc-sum{ @apply list-none cursor-pointer px-4 py-3 font-medium flex items-center justify-between; }
-        .acc-panel{ @apply px-4 pb-4 pt-0; }
-        .brand-pill{ @apply inline-flex items-center justify-center px-3 py-1 rounded-full bg-neutral-100 ring-1 ring-neutral-200; }
-      </style>
-
-      <!-- Script tabs -->
-      <script is:inline>
-        (function(){
-          var root = document.querySelector('[data-tabs]');
-          if(!root) return;
-          var buttons = [].slice.call(root.querySelectorAll('[data-tab]'));
-          var panels  = [].slice.call(document.querySelectorAll('[data-tab-panel]'));
-
-          function activate(name){
-            buttons.forEach(function(btn){
-              var active = btn.getAttribute('data-tab') === name;
-              btn.classList.toggle('is-active', active);
-              btn.setAttribute('aria-selected', String(active));
-              btn.tabIndex = active ? 0 : -1;
-            });
-            panels.forEach(function(p){
-              var show = p.getAttribute('data-tab-panel') === name;
-              p.classList.toggle('hidden', !show);
-            });
-          }
-
-          // Click
-          buttons.forEach(function(btn){
-            btn.addEventListener('click', function(){ activate(btn.getAttribute('data-tab')); });
-            btn.addEventListener('keydown', function(e){
-              var i = buttons.indexOf(btn);
-              if(e.key === 'ArrowRight'){ e.preventDefault(); (buttons[i+1]||buttons[0]).focus(); }
-              if(e.key === 'ArrowLeft'){ e.preventDefault(); (buttons[i-1]||buttons[buttons.length-1]).focus(); }
-            });
-          });
-
-          // Init
-          activate('injectables');
-        })();
-      </script>
-    </section>
-
-    <!-- ===== WHY CHOOSE (blanco) ===== -->
-    <section id="why-choose" class="py-14 sm:py-16">
-      <div class="container text-center">
-        <h2 class="text-3xl font-semibold tracking-tight">Why Patients Choose D-Essence</h2>
-        <p class="mt-3 text-neutral-600 max-w-2xl mx-auto">
-          Modern aesthetics, clinical precision, and a calm, evidence-based approach focused on you.
-        </p>
-
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6 text-left">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-full bg-neutral-100 ring-1 ring-neutral-200 flex items-center justify-center shrink-0 text-neutral-700">
-                <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 3l7 3v5.5c0 4.2-2.9 8-7 9-4.1-1-7-4.8-7-9V6l7-3z"/>
-                  <path d="M9 12l2 2 4-4"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold">Clinical-grade care</h3>
-                <p class="mt-2 text-neutral-600">Medical products, FDA-cleared devices, and protocols grounded in evidence for safe, consistent outcomes.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6 text-left">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-full bg-neutral-100 ring-1 ring-neutral-200 flex items-center justify-center shrink-0 text-neutral-700">
-                <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 3l2.2 4.8L19 10l-4.8 2.2L12 19l-2.2-4.8L5 10l4.8-2.2L12 3z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold">Natural, not overdone</h3>
-                <p class="mt-2 text-neutral-600">Subtle, harmonious improvements so you still look like you—only rested and refreshed.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6 text-left">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-full bg-neutral-100 ring-1 ring-neutral-200 flex items-center justify-center shrink-0 text-neutral-700">
-                <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="2"/><circle cx="15" cy="17" r="2"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold">Personalized plans</h3>
-                <p class="mt-2 text-neutral-600">We tailor your plan to your goals, timeline, and budget—with clear expectations and follow-up.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6 text-left">
-            <div class="flex items-start gap-4">
-              <div class="w-12 h-12 rounded-full bg-neutral-100 ring-1 ring-neutral-200 flex items-center justify-center shrink-0 text-neutral-700">
-                <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 21s-7.5-4.5-9-9c-1.1-3.4 1-6 4-6 2 0 3.2 1.1 5 3 1.8-1.9 3-3 5-3 3 0 5.1 2.6 4 6-1.5 4.5-9 9-9 9z"/>
-                </svg>
-              </div>
-              <div>
-                <h3 class="text-lg font-semibold">Comfort &amp; safety</h3>
-                <p class="mt-2 text-neutral-600">Gentle techniques, thorough consent, and post-care guidance for a smooth experience end-to-end.</p>
-              </div>
-            </div>
+              <span class="svc-link">Learn more →</span>
+            </a>
           </div>
         </div>
 
-        <div class="mt-10 flex justify-center gap-3">
-          <a href="/about-us" class="inline-flex items-center justify-center rounded-full bg-neutral-900 text-white px-5 py-2.5 hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">Meet the Provider</a>
-          <a href="/about-us#approach" class="inline-flex items-center justify-center rounded-full border border-neutral-300 text-neutral-900 px-5 py-2.5 hover:bg-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">Our Approach</a>
+        <!-- Advanced Skin Care -->
+        <div id="panel-skincare" role="tabpanel" aria-labelledby="tab-skincare" data-tab-panel="skincare" class="tab-panel hidden">
+          <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-5">
+            <a href="/services" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Specialty Facials</h3>
+                <p class="svc-sub">Hydration • Calming • Clarifying</p>
+              </div>
+              <p class="svc-desc">Custom protocols for your skin’s unique needs.</p>
+              <div class="svc-meta"><span class="pill">No downtime</span><span class="pill">Tailored plan</span></div>
+              <span class="svc-link">Explore →</span>
+            </a>
+
+            <a href="/services" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Chemical Peels</h3>
+                <p class="svc-sub">Perfect Derma Peel • BioRePeel</p>
+              </div>
+              <p class="svc-desc">Refine texture & pigment with medical peels.</p>
+              <div class="svc-meta"><span class="pill">Downtime: 1–7 days</span><span class="pill">Series optional</span></div>
+              <span class="svc-link">Explore →</span>
+            </a>
+
+            <a href="/services/microneedling" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Microneedling (SkinPen®)</h3>
+                <p class="svc-sub">C.I.T. • Proven device</p>
+              </div>
+              <p class="svc-desc">Collagen induction for texture, pores & scars.</p>
+              <div class="svc-meta"><span class="pill">Series recommended</span><span class="pill">Gradual results</span></div>
+              <span class="svc-link">Learn more →</span>
+            </a>
+
+            <a href="/services" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Acne Programs</h3>
+                <p class="svc-sub">Face Reality Boot Camp</p>
+              </div>
+              <p class="svc-desc">Guided protocols to clear & maintain skin.</p>
+              <div class="svc-meta"><span class="pill">Clinical coaching</span><span class="pill">Home care plan</span></div>
+              <span class="svc-link">Explore →</span>
+            </a>
+
+            <a href="/services" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Exfoliation</h3>
+                <p class="svc-sub">Dermaplaning • Enzymes</p>
+              </div>
+              <p class="svc-desc">Instant smoothness & glow with precise exfoliation.</p>
+              <div class="svc-meta"><span class="pill">No downtime</span><span class="pill">Event-ready</span></div>
+              <span class="svc-link">Explore →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Wellness -->
+        <div id="panel-wellness" role="tabpanel" aria-labelledby="tab-wellness" data-tab-panel="wellness" class="tab-panel hidden">
+          <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-5">
+            <a href="/services" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Vitamin Injections</h3>
+                <p class="svc-sub">B12 • L-Carnitine • Amino • MICC • Lipo Plus • Glutathione • Tri-Immune</p>
+              </div>
+              <p class="svc-desc">Targeted boosts for energy, recovery & metabolism.</p>
+              <div class="svc-meta"><span class="pill">Quick visit</span><span class="pill">Personalized</span></div>
+              <span class="svc-link">Explore →</span>
+            </a>
+
+            <a href="/services" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">IV Infusions</h3>
+                <p class="svc-sub">Energy • Immunity • Hydration • Wellness</p>
+              </div>
+              <p class="svc-desc">Hydration & wellness drips tailored to your goals.</p>
+              <div class="svc-meta"><span class="pill">45–60 minutes</span><span class="pill">Tailored blends</span></div>
+              <span class="svc-link">Explore →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Aesthetic -->
+        <div id="panel-aesthetic" role="tabpanel" aria-labelledby="tab-aesthetic" data-tab-panel="aesthetic" class="tab-panel hidden">
+          <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-5">
+            <a href="/services/waxing-sugaring" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Waxing & Sugaring</h3>
+                <p class="svc-sub">Full Face • Brows • Bikini • Body</p>
+              </div>
+              <p class="svc-desc">Face, bikini & body hair removal with care.</p>
+              <div class="svc-meta"><span class="pill">All skin types</span><span class="pill">Gentle prep</span></div>
+              <span class="svc-link">Learn more →</span>
+            </a>
+
+            <a href="/services/teeth-whitening" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Teeth Whitening</h3>
+                <p class="svc-sub">Fast, safe results</p>
+              </div>
+              <p class="svc-desc">Brighter smile with professional-grade systems.</p>
+              <div class="svc-meta"><span class="pill">Event-ready</span><span class="pill">Low sensitivity</span></div>
+              <span class="svc-link">Learn more →</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Events & Products -->
+        <div id="panel-events" role="tabpanel" aria-labelledby="tab-events" data-tab-panel="events" class="tab-panel hidden">
+          <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-5">
+            <a href="/contact-us" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Botox® Parties</h3>
+                <p class="svc-sub">Host at our clinic</p>
+              </div>
+              <p class="svc-desc">Private events with a clinical standard of care.</p>
+              <div class="svc-meta"><span class="pill">By appointment</span><span class="pill">Group rates</span></div>
+              <span class="svc-link">Inquire →</span>
+            </a>
+
+            <a href="/contact-us" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Spa Parties</h3>
+                <p class="svc-sub">Girls / Adults</p>
+              </div>
+              <p class="svc-desc">Custom facials & add-ons for special occasions.</p>
+              <div class="svc-meta"><span class="pill">Customizable</span><span class="pill">Concierge</span></div>
+              <span class="svc-link">Inquire →</span>
+            </a>
+
+            <a href="/contact-us" class="svc-card group">
+              <div class="svc-head">
+                <h3 class="svc-title">Skincare Workshops</h3>
+                <p class="svc-sub">Hands-on guidance</p>
+              </div>
+              <p class="svc-desc">Education-first sessions to build your regimen.</p>
+              <div class="svc-meta"><span class="pill">Small groups</span><span class="pill">By request</span></div>
+              <span class="svc-link">Inquire →</span>
+            </a>
+          </div>
+
+          <div class="mt-6 rounded-2xl ring-1 ring-neutral-200 bg-white p-6">
+            <div class="text-sm text-neutral-500 uppercase tracking-wide">Professional Skincare</div>
+            <div class="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+              <div class="brand-pill">Circadia</div>
+              <div class="brand-pill">Face Reality</div>
+              <div class="brand-pill">Hydrinity</div>
+              <div class="brand-pill">SkinMedica</div>
+            </div>
+            <div class="mt-3 text-sm">
+              Available in-clinic. <a href="/contact-us" class="underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700">Ask a provider →</a>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- Mobile: acordeones -->
+    <div class="mt-10 md:hidden space-y-3" data-wwd-acc>
+      <!-- Cada bloque replica el contenido de arriba (resumido para móvil) -->
+      <details class="acc" open>
+        <summary class="acc-sum">Injectables</summary>
+        <div class="acc-panel grid grid-cols-1 gap-4">
+          <a href="/services/botox" class="svc-card"><div class="svc-head"><h3 class="svc-title">Neuromodulators</h3><p class="svc-sub">Botox® • Xeomin® • Daxxify®</p></div><p class="svc-desc">Soften expression lines and help prevent new ones.</p><div class="svc-meta"><span class="pill">Downtime: Minimal</span><span class="pill">Onset: 3–14 days</span></div><span class="svc-link">Learn more →</span></a>
+          <a href="/services/botox-for-hyperhidrosis" class="svc-card"><div class="svc-head"><h3 class="svc-title">Hyperhidrosis Treatment</h3><p class="svc-sub">Underarm sweating control</p></div><p class="svc-desc">Targeted dosing to significantly reduce perspiration.</p><div class="svc-meta"><span class="pill">Downtime: Minimal</span><span class="pill">Relief: Weeks–months</span></div><span class="svc-link">Learn more →</span></a>
+          <a href="/services/juvederm-fillers" class="svc-card"><div class="svc-head"><h3 class="svc-title">Dermal Fillers</h3><p class="svc-sub">JUVÉDERM® Collection</p></div><p class="svc-desc">Structure & balance with restraint for harmony.</p><div class="svc-meta"><span class="pill">Results: Immediate</span><span class="pill">Refine: 2–4 weeks</span></div><span class="svc-link">Learn more →</span></a>
+          <a href="/services/prp-microneedling" class="svc-card"><div class="svc-head"><h3 class="svc-title">PRP Microneedling</h3><p class="svc-sub">Texture • Pores • Scars</p></div><p class="svc-desc">Collagen induction using your platelet-rich plasma.</p><div class="svc-meta"><span class="pill">Series recommended</span><span class="pill">Gradual results</span></div><span class="svc-link">Learn more →</span></a>
+          <a href="/services/prf-microneedling" class="svc-card"><div class="svc-head"><h3 class="svc-title">PRF Microneedling</h3><p class="svc-sub">Skin quality & resilience</p></div><p class="svc-desc">Fibrin-based approach for progressive remodeling.</p><div class="svc-meta"><span class="pill">Series recommended</span><span class="pill">Gradual results</span></div><span class="svc-link">Learn more →</span></a>
+          <a href="/services/smooth-threads" class="svc-card"><div class="svc-head"><h3 class="svc-title">Smooth Threads</h3><p class="svc-sub">Collagen stimulation</p></div><p class="svc-desc">Subtle support for texture and fine lines.</p><div class="svc-meta"><span class="pill">Downtime: Minimal</span><span class="pill">Collagen support</span></div><span class="svc-link">Learn more →</span></a>
+        </div>
+      </details>
+
+      <details class="acc"><summary class="acc-sum">Laser Treatments</summary>
+        <div class="acc-panel grid grid-cols-1 gap-4">
+          <a href="/services/aerolase" class="svc-card"><div class="svc-head"><h3 class="svc-title">Aerolase Neo Elite</h3><p class="svc-sub">Acne • Rosacea • Melasma • Rejuvenation</p></div><p class="svc-desc">Tone, redness & pigment with a gentle 650-µs laser. Safe for I–VI.</p><div class="svc-meta"><span class="pill">Safe: I–VI</span><span class="pill">Series recommended</span></div><span class="svc-link">Learn more →</span></a>
+          <a href="/services/laser-hair-removal" class="svc-card"><div class="svc-head"><h3 class="svc-title">Laser Hair Removal</h3><p class="svc-sub">All skin tones (I–VI)</p></div><p class="svc-desc">Smooth skin with long-term hair reduction.</p><div class="svc-meta"><span class="pill">Series: Yes</span><span class="pill">Low downtime</span></div><span class="svc-link">Learn more →</span></a>
+        </div>
+      </details>
+
+      <details class="acc"><summary class="acc-sum">Advanced Skin Care</summary>
+        <div class="acc-panel grid grid-cols-1 gap-4">
+          <a href="/services" class="svc-card"><div class="svc-head"><h3 class="svc-title">Specialty Facials</h3><p class="svc-sub">Hydration • Calming • Clarifying</p></div><p class="svc-desc">Custom protocols for your skin’s unique needs.</p><div class="svc-meta"><span class="pill">No downtime</span><span class="pill">Tailored plan</span></div><span class="svc-link">Explore →</span></a>
+          <a href="/services" class="svc-card"><div class="svc-head"><h3 class="svc-title">Chemical Peels</h3><p class="svc-sub">Perfect Derma Peel • BioRePeel</p></div><p class="svc-desc">Refine texture & pigment with medical peels.</p><div class="svc-meta"><span class="pill">Downtime: 1–7 days</span><span class="pill">Series optional</span></div><span class="svc-link">Explore →</span></a>
+          <a href="/services/microneedling" class="svc-card"><div class="svc-head"><h3 class="svc-title">Microneedling (SkinPen®)</h3><p class="svc-sub">C.I.T. • Proven device</p></div><p class="svc-desc">Collagen induction for texture, pores & scars.</p><div class="svc-meta"><span class="pill">Series recommended</span><span class="pill">Gradual results</span></div><span class="svc-link">Learn more →</span></a>
+          <a href="/services" class="svc-card"><div class="svc-head"><h3 class="svc-title">Acne Programs</h3><p class="svc-sub">Face Reality Boot Camp</p></div><p class="svc-desc">Guided protocols to clear & maintain skin.</p><div class="svc-meta"><span class="pill">Clinical coaching</span><span class="pill">Home care plan</span></div><span class="svc-link">Explore →</span></a>
+          <a href="/services" class="svc-card"><div class="svc-head"><h3 class="svc-title">Exfoliation</h3><p class="svc-sub">Dermaplaning • Enzymes</p></div><p class="svc-desc">Instant smoothness & glow with precise exfoliation.</p><div class="svc-meta"><span class="pill">No downtime</span><span class="pill">Event-ready</span></div><span class="svc-link">Explore →</span></a>
+        </div>
+      </details>
+
+      <details class="acc"><summary class="acc-sum">Wellness: Vitamin & IV</summary>
+        <div class="acc-panel grid grid-cols-1 gap-4">
+          <a href="/services" class="svc-card"><div class="svc-head"><h3 class="svc-title">Vitamin Injections</h3><p class="svc-sub">B12 • L-Carnitine • Amino • MICC • Lipo Plus • Glutathione • Tri-Immune</p></div><p class="svc-desc">Targeted boosts for energy, recovery & metabolism.</p><div class="svc-meta"><span class="pill">Quick visit</span><span class="pill">Personalized</span></div><span class="svc-link">Explore →</span></a>
+          <a href="/services" class="svc-card"><div class="svc-head"><h3 class="svc-title">IV Infusions</h3><p class="svc-sub">Energy • Immunity • Hydration • Wellness</p></div><p class="svc-desc">Hydration & wellness drips tailored to your goals.</p><div class="svc-meta"><span class="pill">45–60 minutes</span><span class="pill">Tailored blends</span></div><span class="svc-link">Explore →</span></a>
+        </div>
+      </details>
+
+      <details class="acc"><summary class="acc-sum">Aesthetic Services</summary>
+        <div class="acc-panel grid grid-cols-1 gap-4">
+          <a href="/services/waxing-sugaring" class="svc-card"><div class="svc-head"><h3 class="svc-title">Waxing & Sugaring</h3><p class="svc-sub">Full Face • Brows • Bikini • Body</p></div><p class="svc-desc">Face, bikini & body hair removal with care.</p><div class="svc-meta"><span class="pill">All skin types</span><span class="pill">Gentle prep</span></div><span class="svc-link">Learn more →</span></a>
+          <a href="/services/teeth-whitening" class="svc-card"><div class="svc-head"><h3 class="svc-title">Teeth Whitening</h3><p class="svc-sub">Fast, safe results</p></div><p class="svc-desc">Brighter smile with professional-grade systems.</p><div class="svc-meta"><span class="pill">Event-ready</span><span class="pill">Low sensitivity</span></div><span class="svc-link">Learn more →</span></a>
+        </div>
+      </details>
+
+      <details class="acc"><summary class="acc-sum">Events & Products</summary>
+        <div class="acc-panel grid grid-cols-1 gap-4">
+          <a href="/contact-us" class="svc-card"><div class="svc-head"><h3 class="svc-title">Botox® Parties</h3><p class="svc-sub">Host at our clinic</p></div><p class="svc-desc">Private events with a clinical standard of care.</p><div class="svc-meta"><span class="pill">By appointment</span><span class="pill">Group rates</span></div><span class="svc-link">Inquire →</span></a>
+          <a href="/contact-us" class="svc-card"><div class="svc-head"><h3 class="svc-title">Spa Parties</h3><p class="svc-sub">Girls / Adults</p></div><p class="svc-desc">Custom facials & add-ons for special occasions.</p><div class="svc-meta"><span class="pill">Customizable</span><span class="pill">Concierge</span></div><span class="svc-link">Inquire →</span></a>
+          <a href="/contact-us" class="svc-card"><div class="svc-head"><h3 class="svc-title">Skincare Workshops</h3><p class="svc-sub">Hands-on guidance</p></div><p class="svc-desc">Education-first sessions to build your regimen.</p><div class="svc-meta"><span class="pill">Small groups</span><span class="pill">By request</span></div><span class="svc-link">Inquire →</span></a>
+        </div>
+        <div class="mt-4 rounded-2xl ring-1 ring-neutral-200 bg-white p-5">
+          <div class="text-sm text-neutral-500 uppercase tracking-wide">Professional Skincare</div>
+          <div class="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+            <div class="brand-pill">Circadia</div>
+            <div class="brand-pill">Face Reality</div>
+            <div class="brand-pill">Hydrinity</div>
+            <div class="brand-pill">SkinMedica</div>
+          </div>
+          <div class="mt-3 text-sm">
+            Available in-clinic. <a href="/contact-us" class="underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700">Ask a provider →</a>
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <!-- Styles locales -->
+  <style is:inline>
+    .vtab-btn{
+      @apply w-full text-left px-3 py-2 rounded-xl bg-white ring-1 ring-neutral-200 text-neutral-700 hover:bg-neutral-50 focus:outline-none flex items-center gap-2;
+    }
+    .vtab-btn.is-active{
+      @apply bg-neutral-900 text-white ring-neutral-900;
+    }
+    .vtab-btn .icn{ @apply inline-flex items-center justify-center; }
+
+    .tab-panel{}
+    .svc-card{
+      @apply rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-sm hover:shadow-md hover:-translate-y-0.5 focus:outline-none;
+    }
+    .svc-head{ @apply flex items-baseline justify-between gap-2; }
+    .svc-title{ @apply text-base font-semibold text-neutral-900; }
+    .svc-sub{ @apply text-xs text-neutral-500; }
+    .svc-desc{ @apply mt-2 text-sm text-neutral-700; }
+    .svc-meta{ @apply mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-600; }
+    .pill{ @apply inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200; }
+    .svc-link{ @apply mt-3 inline-block text-sm underline underline-offset-4 decoration-neutral-300 group-hover:decoration-neutral-700; }
+
+    .acc{ @apply rounded-xl ring-1 ring-neutral-200 bg-white; }
+    .acc-sum{ @apply list-none cursor-pointer px-4 py-3 font-medium flex items-center justify-between; }
+    .acc-panel{ @apply px-4 pb-4 pt-0; }
+
+    .brand-pill{ @apply inline-flex items-center justify-center px-3 py-1 rounded-full bg-neutral-100 ring-1 ring-neutral-200; }
+  </style>
+
+  <!-- Script tabs (aislado a esta sección) -->
+  <script is:inline>
+    (function(){
+      var root = document.currentScript && document.currentScript.parentElement;
+      if(!root) root = document.querySelector('#what-we-do');
+      if(!root) return;
+
+      var tabsRoot = root.querySelector('[data-wwd]');
+      if(!tabsRoot) return;
+
+      var buttons = [].slice.call(tabsRoot.querySelectorAll('[data-tab]'));
+      var panels  = [].slice.call(tabsRoot.querySelectorAll('[data-tab-panel]'));
+
+      function activate(name){
+        buttons.forEach(function(btn){
+          var on = btn.getAttribute('data-tab') === name;
+          btn.classList.toggle('is-active', on);
+          btn.setAttribute('aria-selected', String(on));
+          btn.tabIndex = on ? 0 : -1;
+        });
+        panels.forEach(function(p){
+          var show = p.getAttribute('data-tab-panel') === name;
+          p.classList.toggle('hidden', !show);
+        });
+      }
+
+      buttons.forEach(function(btn){
+        btn.addEventListener('click', function(){ activate(btn.getAttribute('data-tab')); });
+        btn.addEventListener('keydown', function(e){
+          var i = buttons.indexOf(btn);
+          if(e.key === 'ArrowDown'){ e.preventDefault(); (buttons[i+1]||buttons[0]).focus(); }
+          if(e.key === 'ArrowUp'){ e.preventDefault(); (buttons[i-1]||buttons[buttons.length-1]).focus(); }
+        });
+      });
+
+      activate('injectables');
+    })();
+  </script>
+</section>
+
 
     <!-- ===== REVIEWS (blanco) ===== -->
     <section id="testimonials" class="py-14 sm:py-16">
