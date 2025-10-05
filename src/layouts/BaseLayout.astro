@@ -87,7 +87,7 @@ const jsonLd = seo?.jsonLd ?? [];
                           transition duration-150
                           group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
                           focus-within:opacity-100 focus-within:translate-y-0 focus-within:pointer-events-auto
-                          before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
+                          before:content-[''] before:absolute before:-top-6 before:left-0 before:right-0 before:h-6"
                    role="menu" tabindex="-1" data-menu-panel="injectables">
                 <ul class="divide-y divide-white/10">
                   <li><a href="/services/botox" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Botox<span class="opacity-60">→</span></a></li>
@@ -127,7 +127,7 @@ const jsonLd = seo?.jsonLd ?? [];
                           transition duration-150
                           group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
                           focus-within:opacity-100 focus-within:translate-y-0 focus-within:pointer-events-auto
-                          before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
+                          before:content-[''] before:absolute before:-top-6 before:left-0 before:right-0 before:h-6"
                    role="menu" tabindex="-1" data-menu-panel="laser">
                 <ul class="divide-y divide-white/10">
                   <li><a href="/services/aerolase" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Aerolase<span class="opacity-60">→</span></a></li>
@@ -161,7 +161,7 @@ const jsonLd = seo?.jsonLd ?? [];
                           transition duration-150
                           group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
                           focus-within:opacity-100 focus-within:translate-y-0 focus-within:pointer-events-auto
-                          before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
+                          before:content-[''] before:absolute before:-top-6 before:left-0 before:right-0 before:h-6"
                    role="menu" tabindex="-1" data-menu-panel="aesthetics">
                 <ul class="divide-y divide-white/10">
                   <li><a href="/services/waxing-sugaring" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Waxing &amp; Sugaring<span class="opacity-60">→</span></a></li>
@@ -301,102 +301,126 @@ const jsonLd = seo?.jsonLd ?? [];
       </div>
     </footer>
 
-    <!-- ===== ACCESSIBILITY SCRIPTS (no frameworks) ===== -->
+    <!-- ===== ACCESSIBILITY + HOVER INTENT SCRIPTS ===== -->
     <script is:inline>
-      // ---------- Desktop submenu A11y ----------
+      // ---------- Desktop submenu A11y + Hover Intent ----------
       (function () {
         var triggers = document.querySelectorAll('[data-menu-trigger]');
         var openKeyPanel = null;
+        var OPEN_DELAY = 120;   // ms: abre suave al pasar el mouse
+        var CLOSE_DELAY = 200;  // ms: tiempo para cruzar al panel sin cerrar
 
-        function setExpanded(btn, expanded) {
-          btn.setAttribute('aria-expanded', String(expanded));
-        }
         function panelFor(btn) {
           var id = btn.getAttribute('data-menu-trigger');
           return document.querySelector('[data-menu-panel="' + id + '"]');
         }
-        function showPanel(btn) {
-          var panel = panelFor(btn);
-          if (!panel) return;
-          // Make visible without relying on hover
+        function setExpanded(btn, expanded) {
+          btn.setAttribute('aria-expanded', String(expanded));
+        }
+        function forceOpen(panel, btn) {
           panel.classList.remove('opacity-0','translate-y-1','pointer-events-none');
           panel.classList.add('opacity-100','translate-y-0','pointer-events-auto');
-          setExpanded(btn, true);
-          openKeyPanel = panel;
+          if (btn) setExpanded(btn, true);
         }
-        function hidePanel(btn) {
-          var panel = panelFor(btn);
-          if (!panel) return;
-          // Revert to initial hidden state (hover still works)
+        function forceClose(panel, btn) {
           panel.classList.add('opacity-0','translate-y-1','pointer-events-none');
           panel.classList.remove('opacity-100','translate-y-0','pointer-events-auto');
-          setExpanded(btn, false);
-          if (openKeyPanel === panel) openKeyPanel = null;
+          if (btn) setExpanded(btn, false);
+        }
+        function ensureTimers(el) {
+          if (!el._intentTimers) el._intentTimers = { openTimer: null, closeTimer: null };
+          return el._intentTimers;
         }
 
         triggers.forEach(function (btn) {
-          // Keyboard interactions
+          var panel = panelFor(btn);
+          if (!panel) return;
+          var timers = ensureTimers(panel);
+          var root = btn.closest('li') || btn.parentElement;
+
+          function openWithIntent() {
+            // Cierra otros paneles antes de abrir éste
+            triggers.forEach(function (b) {
+              if (b === btn) return;
+              var p = panelFor(b);
+              if (!p) return;
+              var t = ensureTimers(p);
+              clearTimeout(t.openTimer);
+              clearTimeout(t.closeTimer);
+              forceClose(p, b);
+            });
+            forceOpen(panel, btn);
+          }
+
+          function queueOpen() {
+            clearTimeout(timers.closeTimer);
+            clearTimeout(timers.openTimer);
+            timers.openTimer = setTimeout(openWithIntent, OPEN_DELAY);
+          }
+
+          function queueClose() {
+            clearTimeout(timers.openTimer);
+            clearTimeout(timers.closeTimer);
+            timers.closeTimer = setTimeout(function () {
+              var stillHover = btn.matches(':hover') || panel.matches(':hover') || (root && root.matches(':hover'));
+              if (!stillHover) forceClose(panel, btn);
+            }, CLOSE_DELAY);
+          }
+
+          // Hover del botón y del panel
+          btn.addEventListener('mouseenter', queueOpen);
+          btn.addEventListener('mouseleave', queueClose);
+          panel.addEventListener('mouseenter', function () { clearTimeout(timers.closeTimer); });
+          panel.addEventListener('mouseleave', queueClose);
+
+          // --------- Teclado ---------
           btn.addEventListener('keydown', function (e) {
             var key = e.key;
             if (key === 'Enter' || key === ' ') {
               e.preventDefault();
               var expanded = btn.getAttribute('aria-expanded') === 'true';
               if (expanded) {
-                hidePanel(btn);
+                forceClose(panel, btn);
               } else {
-                // close others
-                triggers.forEach(function (b) { if (b !== btn) hidePanel(b); });
-                showPanel(btn);
-                // focus first item
-                var p = panelFor(btn);
-                var firstItem = p && p.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
+                triggers.forEach(function (b) { if (b !== btn) { var p = panelFor(b); p && forceClose(p, b); }});
+                forceOpen(panel, btn);
+                var firstItem = panel.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
                 if (firstItem) firstItem.focus();
+                openKeyPanel = panel;
               }
             } else if (key === 'Escape') {
-              hidePanel(btn);
+              forceClose(panel, btn);
             } else if (key === 'ArrowDown') {
               e.preventDefault();
-              showPanel(btn);
-              var p2 = panelFor(btn);
-              var first = p2 && p2.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
+              forceOpen(panel, btn);
+              var first = panel.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
               if (first) first.focus();
+              openKeyPanel = panel;
             }
           });
 
-          // Close when leaving panel with keyboard focus
-          var p = panelFor(btn);
-          if (p) {
-            p.addEventListener('keydown', function (e) {
-              if (e.key === 'Escape') {
-                hidePanel(btn);
-                btn.focus();
-              }
-            });
-            p.addEventListener('focusout', function () {
-              setTimeout(function () {
-                var active = document.activeElement;
-                if (!p.contains(active) && active !== btn) hidePanel(btn);
-              }, 0);
-            });
-            // If panel was opened by keyboard and user moves mouse away from both, close
-            p.addEventListener('mouseleave', function () {
-              if (btn.getAttribute('aria-expanded') === 'true') {
-                var hovered = btn.matches(':hover') || p.matches(':hover');
-                if (!hovered) hidePanel(btn);
-              }
-            });
-          }
+          panel.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+              forceClose(panel, btn);
+              btn.focus();
+            }
+          });
+
+          panel.addEventListener('focusout', function () {
+            setTimeout(function () {
+              var active = document.activeElement;
+              if (!panel.contains(active) && active !== btn) forceClose(panel, btn);
+            }, 0);
+          });
         });
 
-        // Global Escape closes any open keyboard panel
+        // Escape global cierra panel abierto por teclado
         document.addEventListener('keydown', function (e) {
           if (e.key === 'Escape' && openKeyPanel) {
             var id = openKeyPanel.getAttribute('data-menu-panel');
             var btn = document.querySelector('[data-menu-trigger="' + id + '"]');
-            openKeyPanel.classList.add('opacity-0','translate-y-1','pointer-events-none');
-            openKeyPanel.classList.remove('opacity-100','translate-y-0','pointer-events-auto');
+            forceClose(openKeyPanel, btn);
             openKeyPanel = null;
-            if (btn) btn.setAttribute('aria-expanded', 'false');
             if (btn) btn.focus();
           }
         });
@@ -423,13 +447,8 @@ const jsonLd = seo?.jsonLd ?? [];
         function lockScroll(lock) {
           var html = document.documentElement;
           var body = document.body;
-          if (lock) {
-            html.classList.add('overflow-hidden');
-            body.classList.add('overflow-hidden');
-          } else {
-            html.classList.remove('overflow-hidden');
-            body.classList.remove('overflow-hidden');
-          }
+          if (lock) { html.classList.add('overflow-hidden'); body.classList.add('overflow-hidden'); }
+          else { html.classList.remove('overflow-hidden'); body.classList.remove('overflow-hidden'); }
         }
 
         function openDrawer() {
@@ -446,12 +465,8 @@ const jsonLd = seo?.jsonLd ?? [];
           }
 
           function onKeydown(e) {
-            if (e.key === 'Escape') {
-              checkbox.checked = false;
-              closeDrawer();
-            } else {
-              trap(e);
-            }
+            if (e.key === 'Escape') { checkbox.checked = false; closeDrawer(); }
+            else { trap(e); }
           }
 
           drawer._onKeydown = onKeydown;
