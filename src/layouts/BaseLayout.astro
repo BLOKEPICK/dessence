@@ -195,13 +195,10 @@ const jsonLd = seo?.jsonLd ?? [];
     </header>
 
     <!-- Overlays for mobile -->
-    <!-- Capa oscura global (click = cerrar) -->
     <div class="fixed inset-0 z-[10000] bg-black/60 opacity-0 pointer-events-none transition-opacity duration-200 peer-checked:opacity-100 peer-checked:pointer-events-auto"></div>
-    <!-- Capa borrosa que deja visible solo una franja a la izquierda (8%) -->
     <div class="fixed inset-0 right-[8%] z-[10005] bg-black/10 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-200 peer-checked:opacity-100 peer-checked:pointer-events-auto"></div>
 
     <!-- ===== MOBILE DRAWER ===== -->
-    <!-- Mantengo 92% de ancho para que a la izquierda quede la franja borrosa -->
     <aside id="mobile-drawer"
       class="fixed right-0 top-0 z-[10010] h-dvh w-[92%] max-w-none bg-neutral-900 text-white border-l border-white/10 shadow-2xl translate-x-full transition-transform duration-200 will-change-transform peer-checked:translate-x-0"
       aria-modal="true" role="dialog">
@@ -219,7 +216,7 @@ const jsonLd = seo?.jsonLd ?? [];
         <!-- Navegación -->
         <nav class="flex-1 overflow-auto py-2">
           <div class="px-2 space-y-2">
-            <!-- Sección: Injectables -->
+            <!-- Injectables -->
             <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/[0.08] open:border-white/20 transition-colors">
               <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
                 <span class="font-medium">Injectables</span>
@@ -246,7 +243,7 @@ const jsonLd = seo?.jsonLd ?? [];
               </div>
             </details>
 
-            <!-- Sección: Laser -->
+            <!-- Laser -->
             <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/[0.08] open:border-white/20 transition-colors">
               <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
                 <span class="font-medium">Laser Treatments</span>
@@ -261,7 +258,7 @@ const jsonLd = seo?.jsonLd ?? [];
               </div>
             </details>
 
-            <!-- Sección: Aesthetic -->
+            <!-- Aesthetic -->
             <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/[0.08] open:border-white/20 transition-colors">
               <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
                 <span class="font-medium">Aesthetic Services</span>
@@ -281,12 +278,13 @@ const jsonLd = seo?.jsonLd ?? [];
             <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5 focus:bg-white/10" href="/contact-us">Contact Us</a>
           </div>
 
-          <!-- Separador degradado + logo -->
-          <div class="mt-6 px-4">
-            <div class="h-px w-full bg-gradient-to-r from-white/40 via-white/20 to-transparent"></div>
-            <a href="/" class="mt-4 inline-flex items-baseline gap-1.5" aria-label="Home">
-              <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D-Essence</span>
-              <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
+          <!-- Separador degradado + logo (AJUSTADO) -->
+          <div class="mt-12 px-6">
+            <!-- Blanco fuerte en el centro y desvanecido hacia los lados -->
+            <div class="h-[2px] w-full bg-gradient-to-r from-transparent via-white to-transparent"></div>
+            <a href="/" class="mt-6 w-full flex items-baseline justify-center gap-2 text-center" aria-label="Home">
+              <span class="text-white/95 font-semibold tracking-[0.06em] text-[18px] leading-none">D-Essence</span>
+              <span class="text-white/70 font-medium tracking-wide text-[14px] leading-none">Wellness</span>
             </a>
           </div>
         </nav>
@@ -487,7 +485,7 @@ const jsonLd = seo?.jsonLd ?? [];
             else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
           }
 
-          function onKeydown(e) {
+        function onKeydown(e) {
             if (e.key === 'Escape') { checkbox.checked = false; closeDrawer(); }
             else { trap(e); }
           }
