@@ -65,289 +65,347 @@ const jsonLd = {
   </Fragment>
 
   <!-- ===================== HEADER (MENU) ===================== -->
-  <header class="fixed top-4 left-1/2 -translate-x-1/2 z-[1000] w-full max-w-screen-xl pointer-events-none">
-    <!-- Desktop -->
-    <div class="hidden md:flex items-center justify-center">
-      <nav id="main-nav" class="relative flex items-center gap-1 rounded-full border border-white/10 bg-black/80 shadow-lg px-3 py-2 pointer-events-auto leading-none" aria-label="Primary">
-        <!-- Wordmark -->
-        <a href="/" class="flex items-center px-3 h-10 rounded-full hover:bg-white/5 transition" aria-label="Home">
-          <span class="inline-flex items-center h-full">
-            <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px] leading-none">D-Essence</span>
-            <span class="ml-1.5 text-white/70 font-medium tracking-wide text-[12.5px] leading-none">Wellness</span>
-          </span>
-        </a>
+<header class="fixed top-4 left-1/2 -translate-x-1/2 z-[1000] w-full max-w-screen-xl pointer-events-none">
+  <!-- Desktop -->
+  <div class="hidden md:flex items-center justify-center">
+    <nav id="main-nav" class="relative flex items-center gap-1 rounded-full border border-white/10 bg-black/80 shadow-lg px-3 py-2 pointer-events-auto leading-none" aria-label="Primary">
+      <!-- Wordmark -->
+      <a href="/" class="flex items-center px-3 h-10 rounded-full hover:bg-white/5 transition" aria-label="Home">
+        <span class="inline-flex items-center h-full">
+          <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px] leading-none">D-Essence</span>
+          <span class="ml-1.5 text-white/70 font-medium tracking-wide text-[12.5px] leading-none">Wellness</span>
+        </span>
+      </a>
 
-        <!-- Categorías -->
-        <ul class="flex items-center gap-1 h-10">
-          <!-- Injectables -->
-          <li class="relative" data-nav-item>
-            <button class="relative px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white
-                           after:content-[''] after:absolute after:inset-x-0 after:top-full after:h-2 after:pointer-events-auto"
-                    data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-injectables">
-              Injectables
-              <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
-              </svg>
-            </button>
-            <div id="panel-injectables" class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[520px] rounded-2xl border border-white/10 bg-neutral-950 z-50 shadow-2xl shadow-black/40 p-1 max-h-[70vh] overflow-auto overscroll-contain hidden" data-nav-panel>
-              <ul class="divide-y divide-white/10">
-                <li><a href="/services/botox" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Botox<span class="opacity-60">→</span></a></li>
-                <li><a href="/services/xeomin" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Xeomin<span class="opacity-60">→</span></a></li>
-                <li><a href="/services/daxxify" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Daxxify<span class="opacity-60">→</span></a></li>
-                <li><a href="/services/botox-for-hyperhidrosis" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Botox for Hyperhidrosis<span class="opacity-60">→</span></a></li>
-                <li><a href="/services/prp-microneedling" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">PRP Microneedling<span class="opacity-60">→</span></a></li>
-                <li><a href="/services/prf-microneedling" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">PRF Microneedling<span class="opacity-60">→</span></a></li>
-                <li><a href="/services/juvederm-fillers" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Dermal Fillers — Juvederm Collection<span class="opacity-60">→</span></a></li>
-                <li><a href="/services/smooth-threads" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Threads — Smooth Threads<span class="opacity-60">→</span></a></li>
-              </ul>
-            </div>
-          </li>
+      <!-- Categorías -->
+      <ul class="flex items-center gap-1 h-10">
+        <!-- Injectables -->
+        <li class="relative" data-nav-item>
+          <button class="relative px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white
+                         after:content-[''] after:absolute after:inset-x-0 after:top-full after:h-2 after:pointer-events-auto"
+                  data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-injectables">
+            Injectables
+            <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div id="panel-injectables" class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[520px] rounded-2xl border border-white/10 bg-neutral-950 z-[1050] shadow-2xl shadow-black/40 p-1 max-h-[70vh] overflow-auto overscroll-contain hidden" data-nav-panel>
+            <ul class="divide-y divide-white/10">
+              <li><a href="/services/botox" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Botox<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/xeomin" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Xeomin<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/daxxify" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Daxxify<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/botox-for-hyperhidrosis" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Botox for Hyperhidrosis<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/prp-microneedling" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">PRP Microneedling<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/prf-microneedling" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">PRF Microneedling<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/juvederm-fillers" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Dermal Fillers — Juvederm Collection<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/smooth-threads" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Threads — Smooth Threads<span class="opacity-60">→</span></a></li>
+            </ul>
+          </div>
+        </li>
 
-          <!-- Laser Treatments -->
-          <li class="relative" data-nav-item>
-            <button class="relative px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white
-                           after:content-[''] after:absolute after:inset-x-0 after:top-full after:h-2 after:pointer-events-auto"
-                    data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-laser">
-              Laser Treatments
-              <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
-              </svg>
-            </button>
-            <div id="panel-laser" class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[360px] rounded-2xl border border-white/10 bg-neutral-950 z-50 shadow-2xl shadow-black/40 p-1 max-h-[70vh] overflow-auto overscroll-contain hidden" data-nav-panel>
-              <ul class="divide-y divide-white/10">
-                <li><a href="/services/aerolase" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Aerolase<span class="opacity-60">→</span></a></li>
-                <li><a href="/services/laser-hair-removal" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Laser Hair Removal<span class="opacity-60">→</span></a></li>
-              </ul>
-            </div>
-          </li>
+        <!-- Laser Treatments -->
+        <li class="relative" data-nav-item>
+          <button class="relative px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white
+                         after:content-[''] after:absolute after:inset-x-0 after:top-full after:h-2 after:pointer-events-auto"
+                  data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-laser">
+            Laser Treatments
+            <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div id="panel-laser" class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[360px] rounded-2xl border border-white/10 bg-neutral-950 z-[1050] shadow-2xl shadow-black/40 p-1 max-h-[70vh] overflow-auto overscroll-contain hidden" data-nav-panel>
+            <ul class="divide-y divide-white/10">
+              <li><a href="/services/aerolase" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Aerolase<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/laser-hair-removal" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Laser Hair Removal<span class="opacity-60">→</span></a></li>
+            </ul>
+          </div>
+        </li>
 
-          <!-- Aesthetic Services -->
-          <li class="relative" data-nav-item>
-            <button class="relative px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white
-                           after:content-[''] after:absolute after:inset-x-0 after:top-full after:h-2 after:pointer-events-auto"
-                    data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-aesthetic">
-              Aesthetic Services
-              <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
-              </svg>
-            </button>
-            <div id="panel-aesthetic" class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[420px] rounded-2xl border border-white/10 bg-neutral-950 z-50 shadow-2xl shadow-black/40 p-1 max-h-[70vh] overflow-auto overscroll-contain hidden" data-nav-panel>
-              <ul class="divide-y divide-white/10">
-                <li><a href="/services/waxing-sugaring" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Waxing &amp; Sugaring<span class="opacity-60">→</span></a></li>
-                <li><a href="/services/teeth-whitening" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Teeth Whitening<span class="opacity-60">→</span></a></li>
-              </ul>
-            </div>
-          </li>
+        <!-- Aesthetic Services -->
+        <li class="relative" data-nav-item>
+          <button class="relative px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white
+                         after:content-[''] after:absolute after:inset-x-0 after:top-full after:h-2 after:pointer-events-auto"
+                  data-nav-trigger aria-haspopup="true" aria-expanded="false" aria-controls="panel-aesthetic">
+            Aesthetic Services
+            <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div id="panel-aesthetic" class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[420px] rounded-2xl border border-white/10 bg-neutral-950 z-[1050] shadow-2xl shadow-black/40 p-1 max-h-[70vh] overflow-auto overscroll-contain hidden" data-nav-panel>
+            <ul class="divide-y divide-white/10">
+              <li><a href="/services/waxing-sugaring" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Waxing &amp; Sugaring<span class="opacity-60">→</span></a></li>
+              <li><a href="/services/teeth-whitening" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 hover:text-white">Teeth Whitening<span class="opacity-60">→</span></a></li>
+            </ul>
+          </div>
+        </li>
 
-          <!-- About / Contact -->
-          <li class="relative"><a href="/about-us" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white">About Us</a></li>
-          <li class="relative"><a href="/contact-us" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white">Contact Us</a></li>
-        </ul>
-      </nav>
+        <!-- About / Contact -->
+        <li class="relative"><a href="/about-us" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white">About Us</a></li>
+        <li class="relative"><a href="/contact-us" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Mobile -->
+  <div class="md:hidden pointer-events-auto px-4">
+    <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-neutral-900/75 text-white backdrop-blur-lg shadow-lg px-3 py-2">
+      <a href="/" class="py-2" aria-label="Home">
+        <span class="inline-flex items-baseline gap-1.5">
+          <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D-Essence</span>
+          <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
+        </span>
+      </a>
+      <button id="mobile-toggle" class="p-2 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
+        <svg id="icon-open" class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg id="icon-close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
 
-    <!-- Mobile -->
-    <div class="md:hidden pointer-events-auto px-4">
-      <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-neutral-900/75 text-white backdrop-blur-lg shadow-lg px-3 py-2">
-        <a href="/" class="py-2" aria-label="Home">
-          <span class="inline-flex items-baseline gap-1.5">
+    <!-- Drawer móvil -->
+    <div id="mobile-drawer" class="fixed inset-0 hidden z-[2000] pointer-events-auto" aria-hidden="true">
+      <!-- Left blur -->
+      <div id="mobile-left" class="absolute inset-0 right-[8%] bg-black/10 backdrop-blur-[2px]"></div>
+      <!-- Backdrop -->
+      <div id="mobile-backdrop" class="absolute inset-0 opacity-0 bg-black/60 transition-opacity duration-200"></div>
+
+      <!-- Panel -->
+      <aside id="mobile-panel" class="absolute right-0 top-0 h-full w-[92%] max-w-sm bg-neutral-900 text-white border-l border-white/10 shadow-2xl translate-x-full transition-transform duration-200 will-change-transform flex flex-col">
+        <div class="p-4 flex-1 overflow-auto">
+          <div class="text-xs uppercase tracking-wide text-white/50 px-1">Navigation</div>
+
+          <!-- Injectables -->
+          <div class="mt-2 border border-white/10 rounded-xl overflow-hidden">
+            <button class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-white/5" data-acc-btn aria-expanded="false" aria-controls="acc-injectables">
+              <span class="font-medium">Injectables</span>
+              <svg class="w-5 h-5 rotate-0 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </button>
+            <div id="acc-injectables" class="hidden border-t border-white/10">
+              <nav class="py-1">
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/botox" data-close-drawer>Botox</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/xeomin" data-close-drawer>Xeomin</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/daxxify" data-close-drawer>Daxxify</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/botox-for-hyperhidrosis" data-close-drawer>Botox for Hyperhidrosis</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/prp-microneedling" data-close-drawer>PRP Microneedling</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/prf-microneedling" data-close-drawer>PRF Microneedling</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/juvederm-fillers" data-close-drawer>Dermal Fillers — Juvederm Collection</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/smooth-threads" data-close-drawer>Threads — Smooth Threads</a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Laser -->
+          <div class="mt-3 border border-white/10 rounded-xl overflow-hidden">
+            <button class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-white/5" data-acc-btn aria-expanded="false" aria-controls="acc-laser">
+              <span class="font-medium">Laser Treatments</span>
+              <svg class="w-5 h-5 rotate-0 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </button>
+            <div id="acc-laser" class="hidden border-t border-white/10">
+              <nav class="py-1">
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/aerolase" data-close-drawer>Aerolase</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/laser-hair-removal" data-close-drawer>Laser Hair Removal</a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Aesthetic -->
+          <div class="mt-3 border border-white/10 rounded-xl overflow-hidden">
+            <button class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-white/5" data-acc-btn aria-expanded="false" aria-controls="acc-aesthetic">
+              <span class="font-medium">Aesthetic Services</span>
+              <svg class="w-5 h-5 rotate-0 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </button>
+            <div id="acc-aesthetic" class="hidden border-t border-white/10">
+              <nav class="py-1">
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/waxing-sugaring" data-close-drawer>Waxing &amp; Sugaring</a>
+                <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/teeth-whitening" data-close-drawer>Teeth Whitening</a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Links simples -->
+          <div class="mt-6 space-y-2">
+            <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5" href="/about-us" data-close-drawer>About Us</a>
+            <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5" href="/contact-us" data-close-drawer>Contact Us</a>
+          </div>
+        </div>
+
+        <!-- Logo centrado abajo -->
+        <div class="p-4 border-t border-white/10 flex items-center justify-center">
+          <a href="/" class="inline-flex items-baseline gap-1.5" aria-label="Home" data-close-drawer>
             <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D-Essence</span>
             <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
-          </span>
-        </a>
-        <button id="mobile-toggle" class="p-2 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
-          <svg id="icon-open" class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <svg id="icon-close" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </button>
-      </div>
-
-      <!-- Drawer móvil -->
-      <div id="mobile-drawer" class="fixed inset-0 hidden z-[9999] pointer-events-auto" aria-hidden="true">
-        <!-- Left blur -->
-        <div id="mobile-left" class="absolute inset-0 right-[8%] bg-black/10 backdrop-blur-[2px]"></div>
-        <!-- Backdrop -->
-        <div id="mobile-backdrop" class="absolute inset-0 opacity-0 bg-black/60 transition-opacity duration-200"></div>
-
-        <!-- Panel -->
-        <aside id="mobile-panel" class="absolute right-0 top-0 h-full w-[92%] max-w-sm bg-neutral-900 text-white border-l border-white/10 shadow-2xl translate-x-full transition-transform duration-200 will-change-transform flex flex-col">
-          <div class="p-4 flex-1 overflow-auto">
-            <div class="text-xs uppercase tracking-wide text-white/50 px-1">Navigation</div>
-
-            <!-- Injectables -->
-            <div class="mt-2 border border-white/10 rounded-xl overflow-hidden">
-              <button class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-white/5" data-acc-btn aria-expanded="false" aria-controls="acc-injectables">
-                <span class="font-medium">Injectables</span>
-                <svg class="w-5 h-5 rotate-0 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-              </button>
-              <div id="acc-injectables" class="hidden border-t border-white/10">
-                <nav class="py-1">
-                  <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/botox">Botox</a>
-                  <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/xeomin">Xeomin</a>
-                  <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/daxxify">Daxxify</a>
-                  <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/botox-for-hyperhidrosis">Botox for Hyperhidrosis</a>
-                  <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/prp-microneedling">PRP Microneedling</a>
-                  <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/prf-microneedling">PRF Microneedling</a>
-                  <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/juvederm-fillers">Dermal Fillers — Juvederm Collection</a>
-                  <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/smooth-threads">Threads — Smooth Threads</a>
-                </nav>
-              </div>
-            </div>
-
-            <!-- Laser -->
-            <div class="mt-3 border border-white/10 rounded-xl overflow-hidden">
-              <button class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-white/5" data-acc-btn aria-expanded="false" aria-controls="acc-laser">
-                <span class="font-medium">Laser Treatments</span>
-                <svg class="w-5 h-5 rotate-0 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-              </button>
-              <div id="acc-laser" class="hidden border-t border-white/10">
-                <nav class="py-1">
-                  <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/aerolase">Aerolase</a>
-                  <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/laser-hair-removal">Laser Hair Removal</a>
-                </nav>
-              </div>
-            </div>
-
-            <!-- Aesthetic -->
-            <div class="mt-3 border border-white/10 rounded-xl overflow-hidden">
-              <button class="w-full flex items-center justify-between px-4 py-3 text-left hover:bg-white/5" data-acc-btn aria-expanded="false" aria-controls="acc-aesthetic">
-                <span class="font-medium">Aesthetic Services</span>
-                <svg class="w-5 h-5 rotate-0 transition-transform" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-              </button>
-              <div id="acc-aesthetic" class="hidden border-t border-white/10">
-                <nav class="py-1">
-                  <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/waxing-sugaring">Waxing &amp; Sugaring</a>
-                  <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/teeth-whitening">Teeth Whitening</a>
-                </nav>
-              </div>
-            </div>
-
-            <!-- Links simples -->
-            <div class="mt-6 space-y-2">
-              <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5" href="/about-us">About Us</a>
-              <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5" href="/contact-us">Contact Us</a>
-            </div>
-          </div>
-
-          <!-- Logo centrado abajo -->
-          <div class="p-4 border-t border-white/10 flex items-center justify-center">
-            <a href="/" class="inline-flex items-baseline gap-1.5" aria-label="Home">
-              <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D-Essence</span>
-              <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
-            </a>
-          </div>
-        </aside>
-      </div>
+          </a>
+        </div>
+      </aside>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- Header Scripts -->
-  <script is:inline>
-    (function(){
-      // Portal drawer fuera del header
-      const drawer = document.getElementById('mobile-drawer');
-      if (drawer && drawer.parentElement && drawer.parentElement.tagName.toLowerCase() === 'header') {
-        document.body.appendChild(drawer);
-      }
-      const toggle   = document.getElementById('mobile-toggle');
-      const panel    = document.getElementById('mobile-panel');
-      const backdrop = document.getElementById('mobile-backdrop');
-      const iconOpen = document.getElementById('icon-open');
-      const iconClose= document.getElementById('icon-close');
+<!-- ======= HEADER SCRIPTS (robustos) ======= -->
+<script is:inline>
+(function(){
+  const init = () => {
+    const header   = document.querySelector('header');
+    const nav      = document.getElementById('main-nav');
+    const items    = nav ? [...nav.querySelectorAll('[data-nav-item]')] : [];
+    const panelsOf = () => nav ? [...nav.querySelectorAll('[data-nav-panel]')] : [];
 
-      let locked=false, scrollY=0, touchHandler=null;
-      function lockScroll(){
-        if(locked) return;
-        scrollY = window.scrollY || window.pageYOffset;
-        document.body.style.position='fixed';
-        document.body.style.top = `-${scrollY}px`;
-        document.body.style.left='0'; document.body.style.right='0'; document.body.style.width='100%';
-        document.documentElement.classList.add('overflow-hidden');
-        touchHandler = (e)=>{ if(panel && !panel.contains(e.target)) e.preventDefault(); };
-        document.addEventListener('touchmove', touchHandler, { passive:false });
-        locked=true;
-      }
-      function unlockScroll(){
-        if(!locked) return;
-        const y = -parseInt(document.body.style.top || '0', 10);
-        document.body.style.position=''; document.body.style.top=''; document.body.style.left=''; document.body.style.right=''; document.body.style.width='';
-        document.documentElement.classList.remove('overflow-hidden');
-        document.removeEventListener('touchmove', touchHandler||(()=>{}));
-        window.scrollTo(0, y);
-        locked=false;
-      }
-      function openDrawer(){
-        drawer.classList.remove('hidden');
-        requestAnimationFrame(()=>{ backdrop.classList.remove('opacity-0'); panel.classList.remove('translate-x-full'); });
-        toggle.setAttribute('aria-expanded','true');
-        iconOpen.classList.add('hidden'); iconClose.classList.remove('hidden');
-        lockScroll();
-        panel.querySelector('[data-acc-btn]')?.focus();
-      }
-      function closeDrawer(){
-        backdrop.classList.add('opacity-0');
-        panel.classList.add('translate-x-full');
-        toggle.setAttribute('aria-expanded','false');
-        iconClose.classList.add('hidden'); iconOpen.classList.remove('hidden');
-        setTimeout(()=>{ drawer.classList.add('hidden'); unlockScroll(); toggle.focus(); }, 220);
-      }
-      if(toggle && drawer && panel && backdrop){
-        toggle.addEventListener('click', ()=>{ drawer.classList.contains('hidden') ? openDrawer() : closeDrawer(); });
-        drawer.addEventListener('click', (e)=>{ if(!panel.contains(e.target)) closeDrawer(); });
-        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && !drawer.classList.contains('hidden')) closeDrawer(); });
-      }
+    // ===== Desktop hover =====
+    if (nav && items.length) {
+      const HOVER_DELAY = 200;
+      let t = null;
+      const openOnly = (item) => {
+        panelsOf().forEach(p => p.classList.add('hidden'));
+        items.forEach(i => i.querySelector('[data-nav-trigger]')?.setAttribute('aria-expanded','false'));
+        const p = item.querySelector('[data-nav-panel]');
+        const b = item.querySelector('[data-nav-trigger]');
+        if (p && b) {
+          p.classList.remove('hidden');
+          b.setAttribute('aria-expanded','true');
+          // constrain
+          p.style.transform = 'translateX(-50%)';
+          const rect = p.getBoundingClientRect();
+          const vw = window.innerWidth;
+          const PAD = 8;
+          let dx = 0;
+          if (rect.left < PAD) dx = PAD - rect.left;
+          else if (rect.right > vw - PAD) dx = (vw - PAD) - rect.right;
+          if (dx !== 0) p.style.transform = `translateX(calc(-50% + ${dx}px))`;
+        }
+      };
+      const closeAll = () => {
+        panelsOf().forEach(p => p.classList.add('hidden'));
+        items.forEach(i => i.querySelector('[data-nav-trigger]')?.setAttribute('aria-expanded','false'));
+      };
 
-      // Acordeones móviles
-      const accBtns = [...document.querySelectorAll('[data-acc-btn]')];
-      accBtns.forEach(btn=>{
-        const id = btn.getAttribute('aria-controls');
-        const p  = document.getElementById(id);
-        const ch = btn.querySelector('svg');
-        if(!p) return;
-        btn.addEventListener('click', ()=>{
-          const expanded = btn.getAttribute('aria-expanded')==='true';
-          accBtns.forEach(b=>{
-            const _id=b.getAttribute('aria-controls'); const _p=document.getElementById(_id); const _c=b.querySelector('svg');
-            if(_p && b!==btn){ b.setAttribute('aria-expanded','false'); _p.classList.add('hidden'); _c?.classList.remove('rotate-180'); }
-          });
-          btn.setAttribute('aria-expanded', (!expanded).toString());
-          p.classList.toggle('hidden', expanded);
-          ch?.classList.toggle('rotate-180', !expanded);
+      items.forEach(item => {
+        const btn = item.querySelector('[data-nav-trigger]');
+        const panel = item.querySelector('[data-nav-panel]');
+        if (!btn || !panel) return;
+
+        item.addEventListener('mouseenter', () => { if(t) clearTimeout(t); openOnly(item); });
+        item.addEventListener('mouseleave', () => { t = setTimeout(closeAll, HOVER_DELAY); });
+
+        btn.addEventListener('focus', () => openOnly(item));
+        btn.addEventListener('blur', () => { t = setTimeout(closeAll, HOVER_DELAY); });
+
+        panel.addEventListener('mouseenter', () => { if(t) clearTimeout(t); });
+        panel.addEventListener('mouseleave', () => { t = setTimeout(closeAll, HOVER_DELAY); });
+
+        window.addEventListener('resize', () => { if(!panel.classList.contains('hidden')) { /* recalcular en resize */ openOnly(item); } });
+      });
+
+      document.addEventListener('click', e => { if (!nav.contains(e.target)) closeAll(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAll(); });
+    }
+
+    // ===== Mobile drawer =====
+    const drawer   = document.getElementById('mobile-drawer');
+    const toggle   = document.getElementById('mobile-toggle');
+    const panel    = document.getElementById('mobile-panel');
+    const backdrop = document.getElementById('mobile-backdrop');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose= document.getElementById('icon-close');
+
+    if (drawer && header && drawer.parentElement === header) {
+      document.body.appendChild(drawer); // portal
+    }
+
+    let locked = false, scrollY = 0, touchHandler = null;
+    const lockScroll = () => {
+      if (locked) return;
+      scrollY = window.scrollY || window.pageYOffset;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+      document.body.style.width = '100%';
+      document.documentElement.classList.add('overflow-hidden');
+      touchHandler = (e)=>{ if(panel && !panel.contains(e.target)) e.preventDefault(); };
+      document.addEventListener('touchmove', touchHandler, { passive:false });
+      locked = true;
+    };
+    const unlockScroll = () => {
+      if (!locked) return;
+      const y = -parseInt(document.body.style.top || '0', 10);
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      document.body.style.width = '';
+      document.documentElement.classList.remove('overflow-hidden');
+      document.removeEventListener('touchmove', touchHandler || (()=>{}));
+      window.scrollTo(0, y);
+      locked = false;
+    };
+
+    const openDrawer = () => {
+      if(!drawer || !panel || !backdrop || !toggle) return;
+      drawer.classList.remove('hidden');
+      requestAnimationFrame(()=>{
+        backdrop.classList.remove('opacity-0');
+        panel.classList.remove('translate-x-full');
+      });
+      toggle.setAttribute('aria-expanded','true');
+      iconOpen?.classList.add('hidden'); iconClose?.classList.remove('hidden');
+      lockScroll();
+      panel.querySelector('[data-acc-btn]')?.focus();
+    };
+    const closeDrawer = () => {
+      if(!drawer || !panel || !backdrop || !toggle) return;
+      backdrop.classList.add('opacity-0');
+      panel.classList.add('translate-x-full');
+      toggle.setAttribute('aria-expanded','false');
+      iconClose?.classList.add('hidden'); iconOpen?.classList.remove('hidden');
+      setTimeout(()=>{ drawer.classList.add('hidden'); unlockScroll(); toggle.focus(); }, 220);
+    };
+
+    if (toggle && drawer && panel && backdrop) {
+      toggle.addEventListener('click', () => {
+        drawer.classList.contains('hidden') ? openDrawer() : closeDrawer();
+      });
+      // Cerrar tocando fuera del panel
+      drawer.addEventListener('click', (e) => { if (!panel.contains(e.target)) closeDrawer(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !drawer.classList.contains('hidden')) closeDrawer(); });
+      // Cerrar al navegar en móvil
+      drawer.querySelectorAll('a[data-close-drawer]').forEach(a=>{
+        a.addEventListener('click', () => { closeDrawer(); });
+      });
+    }
+
+    // Acordeones móvil
+    const accBtns = [...document.querySelectorAll('[data-acc-btn]')];
+    accBtns.forEach(btn=>{
+      const id = btn.getAttribute('aria-controls');
+      const p  = id ? document.getElementById(id) : null;
+      const ch = btn.querySelector('svg');
+      if (!p) return;
+      btn.addEventListener('click', ()=>{
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        accBtns.forEach(b=>{
+          const _id = b.getAttribute('aria-controls');
+          const _p  = _id ? document.getElementById(_id) : null;
+          const _c  = b.querySelector('svg');
+          if (_p && b !== btn) { b.setAttribute('aria-expanded','false'); _p.classList.add('hidden'); _c?.classList.remove('rotate-180'); }
         });
+        btn.setAttribute('aria-expanded', (!expanded).toString());
+        p.classList.toggle('hidden', expanded);
+        ch?.classList.toggle('rotate-180', !expanded);
       });
+    });
+  };
 
-      // Desktop hover nav
-      const HOVER_DELAY=220;
-      const nav=document.getElementById('main-nav'); if(!nav) return;
-      const items=[...nav.querySelectorAll('[data-nav-item]')];
-      const panels=()=>[...nav.querySelectorAll('[data-nav-panel]')];
-      let t=null;
-      function openOnly(item){
-        panels().forEach(p=>p.classList.add('hidden'));
-        items.forEach(i=>i.querySelector('[data-nav-trigger]')?.setAttribute('aria-expanded','false'));
-        const p=item.querySelector('[data-nav-panel]'); const b=item.querySelector('[data-nav-trigger]');
-        if(p && b){ p.classList.remove('hidden'); b.setAttribute('aria-expanded','true'); constrainPanel(p); }
-      }
-      function closeAll(){ panels().forEach(p=>p.classList.add('hidden')); items.forEach(i=>i.querySelector('[data-nav-trigger]')?.setAttribute('aria-expanded','false')); }
-      function constrainPanel(panel){
-        panel.style.transform='translateX(-50%)';
-        const rect=panel.getBoundingClientRect(); const vw=window.innerWidth; const PAD=8; let dx=0;
-        if(rect.left<PAD) dx=PAD-rect.left; else if(rect.right>vw-PAD) dx=(vw-PAD)-rect.right;
-        if(dx!==0) panel.style.transform=`translateX(calc(-50% + ${dx}px))`;
-      }
-      items.forEach(item=>{
-        const btn=item.querySelector('[data-nav-trigger]'); const panel=item.querySelector('[data-nav-panel]'); if(!btn||!panel) return;
-        item.addEventListener('mouseenter', ()=>{ if(t) clearTimeout(t); openOnly(item); });
-        item.addEventListener('mouseleave', ()=>{ t=setTimeout(closeAll, HOVER_DELAY); });
-        btn.addEventListener('focus', ()=>openOnly(item));
-        btn.addEventListener('blur', ()=>{ t=setTimeout(closeAll, HOVER_DELAY); });
-        panel.addEventListener('mouseenter', ()=>{ if(t) clearTimeout(t); });
-        panel.addEventListener('mouseleave', ()=>{ t=setTimeout(closeAll, HOVER_DELAY); });
-        window.addEventListener('resize', ()=>{ if(!panel.classList.contains('hidden')) constrainPanel(panel); });
-      });
-      document.addEventListener('click', e=>{ if(!nav.contains(e.target)) closeAll(); });
-      document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeAll(); });
-    })();
-  </script>
+  // Init en escenarios Astro/MPA
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init, { once: true });
+  } else {
+    init();
+  }
+  // Por si usas View Transitions / client router de Astro
+  document.addEventListener('astro:page-load', init);
+  document.addEventListener('astro:after-swap', init);
+})();
+</script>
+
 
   <!-- ===================== HERO ===================== -->
   <section class="hero-split overflow-x-hidden">
