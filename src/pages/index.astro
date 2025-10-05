@@ -210,7 +210,7 @@ const seo = {
     </section>
 
     <!-- ===== WHAT WE DO (Pro • Category groups) ===== -->
-<section id="what-we-do" class="py-20">
+<section id="what-we-do" class="py-20 bg-white text-neutral-900">
   <div class="container">
     <div class="grid md:grid-cols-12 gap-10">
       <!-- Left rail (sticky header) -->
@@ -233,262 +233,385 @@ const seo = {
       <div class="md:col-span-8 space-y-8">
 
         <!-- Injectables -->
-        <section class="group-card">
-          <header class="group-head">
+        <section class="rounded-3xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
+          <header class="flex items-center justify-between px-5 py-4 border-b border-neutral-200">
             <div class="flex items-center gap-3">
-              <span class="icn">
-                <!-- syringe-ish -->
-                <svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M10 14l7-7a2 2 0 10-3-3l-7 7v3h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700">
+                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none">
+                  <path d="M3 21h18M10 14l7-7a2 2 0 10-3-3l-7 7v3h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </span>
               <div>
-                <h3 class="group-title">Injectables</h3>
-                <p class="group-sub">Fine lines, structure & skin quality</p>
+                <h3 class="text-xl font-semibold text-neutral-900 leading-tight">Injectables</h3>
+                <p class="text-sm text-neutral-500">Fine lines, structure &amp; skin quality</p>
               </div>
             </div>
-            <a href="/services" class="group-link">View all →</a>
+            <a href="/services" class="text-sm underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700">View all →</a>
           </header>
 
-          <div class="group-body">
-            <a href="/services/botox" class="item-card">
-              <div class="item-top">
+          <div class="grid sm:grid-cols-2 gap-4 p-5">
+            <a href="/services/botox" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
                 <div>
-                  <div class="item-title">Neuromodulators</div>
-                  <div class="item-sub">Botox® • Xeomin® • Daxxify®</div>
+                  <div class="font-medium text-neutral-900">Neuromodulators</div>
+                  <div class="text-xs text-neutral-500">Botox® • Xeomin® • Daxxify®</div>
                 </div>
-                <svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </div>
-              <p class="item-desc">Soften expression lines and help prevent new ones.</p>
-              <div class="item-meta"><span class="pill">Downtime: Minimal</span><span class="pill">Onset: 3–14 days</span></div>
+              <p class="mt-1.5 text-sm text-neutral-700">Soften expression lines and help prevent new ones.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Downtime: Minimal</span>
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Onset: 3–14 days</span>
+              </div>
             </a>
 
-            <a href="/services/botox-for-hyperhidrosis" class="item-card">
-              <div class="item-top">
+            <a href="/services/botox-for-hyperhidrosis" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
                 <div>
-                  <div class="item-title">Hyperhidrosis Treatment</div>
-                  <div class="item-sub">Underarm sweating control</div>
+                  <div class="font-medium text-neutral-900">Hyperhidrosis Treatment</div>
+                  <div class="text-xs text-neutral-500">Underarm sweating control</div>
                 </div>
-                <svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </div>
-              <p class="item-desc">Targeted dosing to significantly reduce perspiration.</p>
-              <div class="item-meta"><span class="pill">Downtime: Minimal</span><span class="pill">Relief: Weeks–months</span></div>
+              <p class="mt-1.5 text-sm text-neutral-700">Targeted dosing to significantly reduce perspiration.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Downtime: Minimal</span>
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Relief: Weeks–months</span>
+              </div>
             </a>
 
-            <a href="/services/juvederm-fillers" class="item-card">
-              <div class="item-top">
+            <a href="/services/juvederm-fillers" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
                 <div>
-                  <div class="item-title">Dermal Fillers</div>
-                  <div class="item-sub">JUVÉDERM® Collection</div>
+                  <div class="font-medium text-neutral-900">Dermal Fillers</div>
+                  <div class="text-xs text-neutral-500">JUVÉDERM® Collection</div>
                 </div>
-                <svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </div>
-              <p class="item-desc">Structure & balance with restraint for harmony.</p>
-              <div class="item-meta"><span class="pill">Results: Immediate</span><span class="pill">Refine: 2–4 weeks</span></div>
+              <p class="mt-1.5 text-sm text-neutral-700">Structure &amp; balance with restraint for harmony.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Results: Immediate</span>
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Refine: 2–4 weeks</span>
+              </div>
             </a>
 
-            <a href="/services/prp-microneedling" class="item-card">
-              <div class="item-top">
+            <a href="/services/prp-microneedling" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
                 <div>
-                  <div class="item-title">PRP Microneedling</div>
-                  <div class="item-sub">Texture • Pores • Scars</div>
+                  <div class="font-medium text-neutral-900">PRP Microneedling</div>
+                  <div class="text-xs text-neutral-500">Texture • Pores • Scars</div>
                 </div>
-                <svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </div>
-              <p class="item-desc">Collagen induction using your platelet-rich plasma.</p>
-              <div class="item-meta"><span class="pill">Series recommended</span><span class="pill">Gradual results</span></div>
+              <p class="mt-1.5 text-sm text-neutral-700">Collagen induction using your platelet-rich plasma.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Series recommended</span>
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Gradual results</span>
+              </div>
             </a>
 
-            <a href="/services/prf-microneedling" class="item-card">
-              <div class="item-top">
+            <a href="/services/prf-microneedling" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
                 <div>
-                  <div class="item-title">PRF Microneedling</div>
-                  <div class="item-sub">Skin quality & resilience</div>
+                  <div class="font-medium text-neutral-900">PRF Microneedling</div>
+                  <div class="text-xs text-neutral-500">Skin quality &amp; resilience</div>
                 </div>
-                <svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </div>
-              <p class="item-desc">Fibrin-based approach for progressive remodeling.</p>
-              <div class="item-meta"><span class="pill">Series recommended</span><span class="pill">Gradual results</span></div>
+              <p class="mt-1.5 text-sm text-neutral-700">Fibrin-based approach for progressive remodeling.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text:[11px] text-neutral-700">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Series recommended</span>
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Gradual results</span>
+              </div>
             </a>
 
-            <a href="/services/smooth-threads" class="item-card">
-              <div class="item-top">
+            <a href="/services/smooth-threads" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
                 <div>
-                  <div class="item-title">Smooth Threads</div>
-                  <div class="item-sub">Collagen stimulation</div>
+                  <div class="font-medium text-neutral-900">Smooth Threads</div>
+                  <div class="text-xs text-neutral-500">Collagen stimulation</div>
                 </div>
-                <svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </div>
-              <p class="item-desc">Subtle support for texture and fine lines.</p>
-              <div class="item-meta"><span class="pill">Downtime: Minimal</span><span class="pill">Collagen support</span></div>
+              <p class="mt-1.5 text-sm text-neutral-700">Subtle support for texture and fine lines.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Downtime: Minimal</span>
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Collagen support</span>
+              </div>
             </a>
           </div>
         </section>
 
         <!-- Laser -->
-        <section class="group-card">
-          <header class="group-head">
+        <section class="rounded-3xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
+          <header class="flex items-center justify-between px-5 py-4 border-b border-neutral-200">
             <div class="flex items-center gap-3">
-              <span class="icn">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700">
+                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none">
+                  <path d="M12 3v18M3 12h18M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
               </span>
               <div>
-                <h3 class="group-title">Laser Treatments</h3>
-                <p class="group-sub">Tone • Redness • Pigment • Hair</p>
+                <h3 class="text-xl font-semibold text-neutral-900 leading-tight">Laser Treatments</h3>
+                <p class="text-sm text-neutral-500">Tone • Redness • Pigment • Hair</p>
               </div>
             </div>
-            <a href="/services" class="group-link">View all →</a>
+            <a href="/services" class="text-sm underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700">View all →</a>
           </header>
 
-          <div class="group-body">
-            <a href="/services/aerolase" class="item-card">
-              <div class="item-top">
+          <div class="grid sm:grid-cols-2 gap-4 p-5">
+            <a href="/services/aerolase" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
                 <div>
-                  <div class="item-title">Aerolase Neo Elite</div>
-                  <div class="item-sub">Acne • Rosacea • Melasma • Rejuvenation</div>
+                  <div class="font-medium text-neutral-900">Aerolase Neo Elite</div>
+                  <div class="text-xs text-neutral-500">Acne • Rosacea • Melasma • Rejuvenation</div>
                 </div>
-                <svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </div>
-              <p class="item-desc">Gentle 650-µs laser for tone, redness & pigment. Safe for I–VI.</p>
-              <div class="item-meta"><span class="pill">Safe: I–VI</span><span class="pill">Series recommended</span></div>
+              <p class="mt-1.5 text-sm text-neutral-700">Gentle 650-µs laser for tone, redness &amp; pigment. Safe for I–VI.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Safe: I–VI</span>
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Series recommended</span>
+              </div>
             </a>
 
-            <a href="/services/laser-hair-removal" class="item-card">
-              <div class="item-top">
+            <a href="/services/laser-hair-removal" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
                 <div>
-                  <div class="item-title">Laser Hair Removal</div>
-                  <div class="item-sub">All skin tones (I–VI)</div>
+                  <div class="font-medium text-neutral-900">Laser Hair Removal</div>
+                  <div class="text-xs text-neutral-500">All skin tones (I–VI)</div>
                 </div>
-                <svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               </div>
-              <p class="item-desc">Smooth skin with long-term hair reduction.</p>
-              <div class="item-meta"><span class="pill">Series: Yes</span><span class="pill">Low downtime</span></div>
+              <p class="mt-1.5 text-sm text-neutral-700">Smooth skin with long-term hair reduction.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Series: Yes</span>
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Low downtime</span>
+              </div>
             </a>
           </div>
         </section>
 
         <!-- Advanced Skin Care -->
-        <section class="group-card">
-          <header class="group-head">
+        <section class="rounded-3xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
+          <header class="flex items-center justify-between px-5 py-4 border-b border-neutral-200">
             <div class="flex items-center gap-3">
-              <span class="icn">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l3 7H9l3-7zM6 21h12l-3-11H9L6 21z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700">
+                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none">
+                  <path d="M12 3l3 7H9l3-7zM6 21h12l-3-11H9L6 21z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
               </span>
               <div>
-                <h3 class="group-title">Advanced Skin Care</h3>
-                <p class="group-sub">Protocol-driven treatments</p>
+                <h3 class="text-xl font-semibold text-neutral-900 leading-tight">Advanced Skin Care</h3>
+                <p class="text-sm text-neutral-500">Protocol-driven treatments</p>
               </div>
             </div>
-            <a href="/services" class="group-link">Explore →</a>
+            <a href="/services" class="text-sm underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700">Explore →</a>
           </header>
 
-          <div class="group-body">
-            <a href="/services" class="item-card">
-              <div class="item-top"><div><div class="item-title">Specialty Facials</div><div class="item-sub">Hydration • Calming • Clarifying</div></div><svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <p class="item-desc">Custom protocols for your skin’s unique needs.</p>
-              <div class="item-meta"><span class="pill">No downtime</span><span class="pill">Tailored plan</span></div>
+          <div class="grid sm:grid-cols-2 gap-4 p-5">
+            <a href="/services" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <div>
+                  <div class="font-medium text-neutral-900">Specialty Facials</div>
+                  <div class="text-xs text-neutral-500">Hydration • Calming • Clarifying</div>
+                </div>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="mt-1.5 text-sm text-neutral-700">Custom protocols for your skin’s unique needs.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700"><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">No downtime</span><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Tailored plan</span></div>
             </a>
 
-            <a href="/services" class="item-card">
-              <div class="item-top"><div><div class="item-title">Chemical Peels</div><div class="item-sub">Perfect Derma Peel • BioRePeel</div></div><svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <p class="item-desc">Refine texture & pigment with medical peels.</p>
-              <div class="item-meta"><span class="pill">Downtime: 1–7 days</span><span class="pill">Series optional</span></div>
+            <a href="/services" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <div>
+                  <div class="font-medium text-neutral-900">Chemical Peels</div>
+                  <div class="text-xs text-neutral-500">Perfect Derma Peel • BioRePeel</div>
+                </div>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="mt-1.5 text-sm text-neutral-700">Refine texture &amp; pigment with medical peels.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700"><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Downtime: 1–7 days</span><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Series optional</span></div>
             </a>
 
-            <a href="/services/microneedling" class="item-card">
-              <div class="item-top"><div><div class="item-title">Microneedling (SkinPen®)</div><div class="item-sub">C.I.T. • Proven device</div></div><svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <p class="item-desc">Collagen induction for texture, pores & scars.</p>
-              <div class="item-meta"><span class="pill">Series recommended</span><span class="pill">Gradual results</span></div>
+            <a href="/services/microneedling" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <div>
+                  <div class="font-medium text-neutral-900">Microneedling (SkinPen®)</div>
+                  <div class="text-xs text-neutral-500">C.I.T. • Proven device</div>
+                </div>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="mt-1.5 text-sm text-neutral-700">Collagen induction for texture, pores &amp; scars.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700"><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Series recommended</span><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Gradual results</span></div>
             </a>
 
-            <a href="/services" class="item-card">
-              <div class="item-top"><div><div class="item-title">Acne Programs</div><div class="item-sub">Face Reality Boot Camp</div></div><svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <p class="item-desc">Guided protocols to clear & maintain skin.</p>
-              <div class="item-meta"><span class="pill">Clinical coaching</span><span class="pill">Home care plan</span></div>
+            <a href="/services" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <div>
+                  <div class="font-medium text-neutral-900">Acne Programs</div>
+                  <div class="text-xs text-neutral-500">Face Reality Boot Camp</div>
+                </div>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="mt-1.5 text-sm text-neutral-700">Guided protocols to clear &amp; maintain skin.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700"><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Clinical coaching</span><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Home care plan</span></div>
             </a>
 
-            <a href="/services" class="item-card">
-              <div class="item-top"><div><div class="item-title">Exfoliation</div><div class="item-sub">Dermaplaning • Enzymes</div></div><svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <p class="item-desc">Instant smoothness & glow with precise exfoliation.</p>
-              <div class="item-meta"><span class="pill">No downtime</span><span class="pill">Event-ready</span></div>
+            <a href="/services" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <div>
+                  <div class="font-medium text-neutral-900">Exfoliation</div>
+                  <div class="text-xs text-neutral-500">Dermaplaning • Enzymes</div>
+                </div>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="mt-1.5 text-sm text-neutral-700">Instant smoothness &amp; glow with precise exfoliation.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700"><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">No downtime</span><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Event-ready</span></div>
             </a>
           </div>
         </section>
 
         <!-- Wellness -->
-        <section class="group-card">
-          <header class="group-head">
+        <section class="rounded-3xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
+          <header class="flex items-center justify-between px-5 py-4 border-b border-neutral-200">
             <div class="flex items-center gap-3">
-              <span class="icn">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M9 3h6l1 3H8l1-3zM7 21h10a2 2 0 002-2v-1H5v1a2 2 0 002 2zM7 10h10M6 14h12" stroke="currentColor" stroke-width="1.5"/></svg>
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700">
+                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none">
+                  <path d="M9 3h6l1 3H8l1-3zM7 21h10a2 2 0 002-2v-1H5v1a2 2 0 002 2zM7 10h10M6 14h12" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
               </span>
               <div>
-                <h3 class="group-title">Wellness: Vitamin & IV</h3>
-                <p class="group-sub">Targeted boosts for health & performance</p>
+                <h3 class="text-xl font-semibold text-neutral-900 leading-tight">Wellness: Vitamin &amp; IV</h3>
+                <p class="text-sm text-neutral-500">Targeted boosts for health &amp; performance</p>
               </div>
             </div>
-            <a href="/services" class="group-link">Explore →</a>
+            <a href="/services" class="text-sm underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700">Explore →</a>
           </header>
 
-          <div class="group-body">
-            <a href="/services" class="item-card">
-              <div class="item-top"><div><div class="item-title">Vitamin Injections</div><div class="item-sub">B12 • L-Carnitine • Amino • MICC • Lipo Plus • Glutathione • Tri-Immune</div></div><svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <p class="item-desc">Energy, recovery & metabolism support.</p>
-              <div class="item-meta"><span class="pill">Quick visit</span><span class="pill">Personalized</span></div>
+          <div class="grid sm:grid-cols-2 gap-4 p-5">
+            <a href="/services" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <div>
+                  <div class="font-medium text-neutral-900">Vitamin Injections</div>
+                  <div class="text-xs text-neutral-500">B12 • L-Carnitine • Amino • MICC • Lipo Plus • Glutathione • Tri-Immune</div>
+                </div>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="mt-1.5 text-sm text-neutral-700">Energy, recovery &amp; metabolism support.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700"><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Quick visit</span><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Personalized</span></div>
             </a>
 
-            <a href="/services" class="item-card">
-              <div class="item-top"><div><div class="item-title">IV Infusions</div><div class="item-sub">Energy • Immunity • Hydration • Wellness</div></div><svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <p class="item-desc">Hydration & wellness drips tailored to your goals.</p>
-              <div class="item-meta"><span class="pill">45–60 minutes</span><span class="pill">Tailored blends</span></div>
+            <a href="/services" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <div>
+                  <div class="font-medium text-neutral-900">IV Infusions</div>
+                  <div class="text-xs text-neutral-500">Energy • Immunity • Hydration • Wellness</div>
+                </div>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="mt-1.5 text-sm text-neutral-700">Hydration &amp; wellness drips tailored to your goals.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700"><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">45–60 minutes</span><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Tailored blends</span></div>
             </a>
           </div>
         </section>
 
-        <!-- Aesthetic + Events/Products -->
-        <section class="group-card">
-          <header class="group-head">
+        <!-- Aesthetic Services + Events/Products -->
+        <section class="rounded-3xl border border-neutral-200 bg-white shadow-sm overflow-hidden">
+          <header class="flex items-center justify-between px-5 py-4 border-b border-neutral-200">
             <div class="flex items-center gap-3">
-              <span class="icn">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M12 3c4 0 7 3 7 7s-3 7-7 7-7-3-7-7 3-7 7-7zm-2 12l6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700">
+                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none">
+                  <path d="M12 3c4 0 7 3 7 7s-3 7-7 7-7-3-7-7 3-7 7-7zm-2 12l6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
               </span>
               <div>
-                <h3 class="group-title">Aesthetic Services</h3>
-                <p class="group-sub">Detailing & finishing touches</p>
+                <h3 class="text-xl font-semibold text-neutral-900 leading-tight">Aesthetic Services</h3>
+                <p class="text-sm text-neutral-500">Detailing &amp; finishing touches</p>
               </div>
             </div>
-            <a href="/services" class="group-link">Explore →</a>
+            <a href="/services" class="text-sm underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700">Explore →</a>
           </header>
 
-          <div class="group-body">
-            <a href="/services/waxing-sugaring" class="item-card">
-              <div class="item-top"><div><div class="item-title">Waxing & Sugaring</div><div class="item-sub">Full Face • Brows • Bikini • Body</div></div><svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <p class="item-desc">Face, bikini & body hair removal with care.</p>
-              <div class="item-meta"><span class="pill">All skin types</span><span class="pill">Gentle prep</span></div>
+          <div class="grid sm:grid-cols-2 gap-4 p-5">
+            <a href="/services/waxing-sugaring" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <div>
+                  <div class="font-medium text-neutral-900">Waxing &amp; Sugaring</div>
+                  <div class="text-xs text-neutral-500">Full Face • Brows • Bikini • Body</div>
+                </div>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="mt-1.5 text-sm text-neutral-700">Face, bikini &amp; body hair removal with care.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700"><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">All skin types</span><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Gentle prep</span></div>
             </a>
 
-            <a href="/services/teeth-whitening" class="item-card">
-              <div class="item-top"><div><div class="item-title">Teeth Whitening</div><div class="item-sub">Fast, safe results</div></div><svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <p class="item-desc">Brighter smile with professional-grade systems.</p>
-              <div class="item-meta"><span class="pill">Event-ready</span><span class="pill">Low sensitivity</span></div>
+            <a href="/services/teeth-whitening" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-[0_1px_0_rgba(0,0,0,0.04)] hover:shadow-md hover:-translate-y-0.5 focus:outline-none">
+              <div class="flex items-start justify-between gap-3 mb-1">
+                <div>
+                  <div class="font-medium text-neutral-900">Teeth Whitening</div>
+                  <div class="text-xs text-neutral-500">Fast, safe results</div>
+                </div>
+                <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="mt-1.5 text-sm text-neutral-700">Brighter smile with professional-grade systems.</p>
+              <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-700"><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Event-ready</span><span class="inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200">Low sensitivity</span></div>
             </a>
           </div>
 
-          <div class="mt-5 rounded-2xl ring-1 ring-neutral-200 bg-white p-5">
-            <div class="text-sm text-neutral-500 uppercase tracking-wide">Events & Specialty</div>
-            <div class="mt-3 grid sm:grid-cols-3 gap-3">
-              <a href="/contact-us" class="mini item-card !p-4"><div class="item-top !mb-1"><div class="item-title">Botox® Parties</div><svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="item-desc">Private events with a clinical standard of care.</p></a>
-              <a href="/contact-us" class="mini item-card !p-4"><div class="item-top !mb-1"><div class="item-title">Spa Parties</div><svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="item-desc">Custom facials & add-ons for occasions.</p></a>
-              <a href="/contact-us" class="mini item-card !p-4"><div class="item-top !mb-1"><div class="item-title">Skincare Workshops</div><svg viewBox="0 0 24 24" class="item-arrow"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="item-desc">Education-first sessions to build your regimen.</p></a>
-            </div>
-
-            <div class="mt-5 text-sm text-neutral-600">
-              <div class="text-xs uppercase tracking-wide text-neutral-500">Professional Skincare</div>
-              <div class="mt-2 flex flex-wrap gap-2">
-                <span class="brand-pill">Circadia</span>
-                <span class="brand-pill">Face Reality</span>
-                <span class="brand-pill">Hydrinity</span>
-                <span class="brand-pill">SkinMedica</span>
+          <div class="px-5 pb-5">
+            <div class="rounded-2xl ring-1 ring-neutral-200 bg-white p-5">
+              <div class="text-sm text-neutral-500 uppercase tracking-wide">Events &amp; Specialty</div>
+              <div class="mt-3 grid sm:grid-cols-3 gap-3">
+                <a href="/contact-us" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-4 transition hover:shadow-md hover:-translate-y-0.5">
+                  <div class="flex items-start justify-between gap-3 mb-1">
+                    <div class="font-medium text-neutral-900">Botox® Parties</div>
+                    <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <p class="text-sm text-neutral-700">Private events with a clinical standard of care.</p>
+                </a>
+                <a href="/contact-us" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-4 transition hover:shadow-md hover:-translate-y-0.5">
+                  <div class="flex items-start justify-between gap-3 mb-1">
+                    <div class="font-medium text-neutral-900">Spa Parties</div>
+                    <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <p class="text-sm text-neutral-700">Custom facials &amp; add-ons for occasions.</p>
+                </a>
+                <a href="/contact-us" class="group block rounded-2xl ring-1 ring-neutral-200 bg-white p-4 transition hover:shadow-md hover:-translate-y-0.5">
+                  <div class="flex items-start justify-between gap-3 mb-1">
+                    <div class="font-medium text-neutral-900">Skincare Workshops</div>
+                    <svg viewBox="0 0 24 24" class="w-4 h-4 shrink-0 text-neutral-400 group-hover:text-neutral-700" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <p class="text-sm text-neutral-700">Education-first sessions to build your regimen.</p>
+                </a>
               </div>
-              <div class="mt-2">Available in-clinic. <a href="/contact-us" class="underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700">Ask a provider →</a></div>
+
+              <div class="mt-5">
+                <div class="text-xs uppercase tracking-wide text-neutral-500">Professional Skincare</div>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <span class="inline-flex items-center px-3 py-1 rounded-full bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700">Circadia</span>
+                  <span class="inline-flex items-center px-3 py-1 rounded-full bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700">Face Reality</span>
+                  <span class="inline-flex items-center px-3 py-1 rounded-full bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700">Hydrinity</span>
+                  <span class="inline-flex items-center px-3 py-1 rounded-full bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700">SkinMedica</span>
+                </div>
+                <div class="mt-2 text-sm text-neutral-600">Available in-clinic. <a href="/contact-us" class="underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700">Ask a provider →</a></div>
+              </div>
             </div>
           </div>
         </section>
@@ -496,28 +619,8 @@ const seo = {
       </div>
     </div>
   </div>
-
-  <!-- Local styles -->
-  <style is:inline>
-    .group-card{ @apply rounded-3xl border border-neutral-200 bg-white shadow-sm overflow-hidden; }
-    .group-head{ @apply flex items-center justify-between px-5 py-4 border-b border-neutral-200; }
-    .group-title{ @apply text-xl font-semibold text-neutral-900 leading-tight; }
-    .group-sub{ @apply text-sm text-neutral-500; }
-    .group-link{ @apply text-sm underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700; }
-    .group-body{ @apply grid sm:grid-cols-2 gap-4 p-5; }
-    .icn{ @apply inline-flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700; }
-    .item-card{ @apply rounded-2xl ring-1 ring-neutral-200 bg-white p-5 transition shadow-xs hover:shadow-md hover:-translate-y-0.5 focus:outline-none; }
-    .item-top{ @apply flex items-start justify-between gap-3 mb-1; }
-    .item-title{ @apply font-medium text-neutral-900; }
-    .item-sub{ @apply text-xs text-neutral-500; }
-    .item-desc{ @apply mt-1.5 text-sm text-neutral-700; }
-    .item-meta{ @apply mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-600; }
-    .item-arrow{ @apply h-4 w-4 shrink-0 text-neutral-400 group-hover:text-neutral-700; }
-    .pill{ @apply inline-flex items-center px-2 py-0.5 rounded-full bg-neutral-100 ring-1 ring-neutral-200; }
-    .brand-pill{ @apply inline-flex items-center justify-center px-3 py-1 rounded-full bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700; }
-    .mini{ @apply ring-1 ring-neutral-200 bg-white; }
-  </style>
 </section>
+
 
 
 
