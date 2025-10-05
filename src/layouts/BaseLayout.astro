@@ -80,12 +80,15 @@ const jsonLd = seo?.jsonLd ?? [];
               </button>
 
               <div id="menu-injectables"
-                   class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[520px] rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1 max-h-[70vh] overflow-auto
-                          hidden group-hover:block group-focus-within:block"
-                   role="menu"
-                   tabindex="-1"
-                   data-menu-panel="injectables"
-              >
+                   class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[90vw] sm:w-[520px]
+                          rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1
+                          max-h-[70vh] overflow-auto
+                          opacity-0 translate-y-1 pointer-events-none
+                          transition duration-150
+                          group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                          focus-within:opacity-100 focus-within:translate-y-0 focus-within:pointer-events-auto
+                          before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
+                   role="menu" tabindex="-1" data-menu-panel="injectables">
                 <ul class="divide-y divide-white/10">
                   <li><a href="/services/botox" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Botox<span class="opacity-60">→</span></a></li>
                   <li><a href="/services/xeomin" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Xeomin<span class="opacity-60">→</span></a></li>
@@ -117,12 +120,15 @@ const jsonLd = seo?.jsonLd ?? [];
               </button>
 
               <div id="menu-laser"
-                   class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[360px] rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1 max-h-[70vh] overflow-auto
-                          hidden group-hover:block group-focus-within:block"
-                   role="menu"
-                   tabindex="-1"
-                   data-menu-panel="laser"
-              >
+                   class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[90vw] sm:w-[360px]
+                          rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1
+                          max-h-[70vh] overflow-auto
+                          opacity-0 translate-y-1 pointer-events-none
+                          transition duration-150
+                          group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                          focus-within:opacity-100 focus-within:translate-y-0 focus-within:pointer-events-auto
+                          before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
+                   role="menu" tabindex="-1" data-menu-panel="laser">
                 <ul class="divide-y divide-white/10">
                   <li><a href="/services/aerolase" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Aerolase<span class="opacity-60">→</span></a></li>
                   <li><a href="/services/laser-hair-removal" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Laser Hair Removal<span class="opacity-60">→</span></a></li>
@@ -148,12 +154,15 @@ const jsonLd = seo?.jsonLd ?? [];
               </button>
 
               <div id="menu-aesthetics"
-                   class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[420px] rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1 max-h-[70vh] overflow-auto
-                          hidden group-hover:block group-focus-within:block"
-                   role="menu"
-                   tabindex="-1"
-                   data-menu-panel="aesthetics"
-              >
+                   class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[90vw] sm:w-[420px]
+                          rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1
+                          max-h-[70vh] overflow-auto
+                          opacity-0 translate-y-1 pointer-events-none
+                          transition duration-150
+                          group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                          focus-within:opacity-100 focus-within:translate-y-0 focus-within:pointer-events-auto
+                          before:content-[''] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
+                   role="menu" tabindex="-1" data-menu-panel="aesthetics">
                 <ul class="divide-y divide-white/10">
                   <li><a href="/services/waxing-sugaring" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Waxing &amp; Sugaring<span class="opacity-60">→</span></a></li>
                   <li><a href="/services/teeth-whitening" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Teeth Whitening<span class="opacity-60">→</span></a></li>
@@ -296,128 +305,124 @@ const jsonLd = seo?.jsonLd ?? [];
     <script is:inline>
       // ---------- Desktop submenu A11y ----------
       (function () {
-        const triggers = document.querySelectorAll('[data-menu-trigger]');
-        let openKeyPanel = null;
+        var triggers = document.querySelectorAll('[data-menu-trigger]');
+        var openKeyPanel = null;
 
         function setExpanded(btn, expanded) {
           btn.setAttribute('aria-expanded', String(expanded));
         }
+        function panelFor(btn) {
+          var id = btn.getAttribute('data-menu-trigger');
+          return document.querySelector('[data-menu-panel="' + id + '"]');
+        }
         function showPanel(btn) {
-          const id = btn.getAttribute('data-menu-trigger');
-          const panel = document.querySelector('[data-menu-panel="' + id + '"]');
+          var panel = panelFor(btn);
           if (!panel) return;
-          panel.classList.remove('hidden');
+          // Make visible without relying on hover
+          panel.classList.remove('opacity-0','translate-y-1','pointer-events-none');
+          panel.classList.add('opacity-100','translate-y-0','pointer-events-auto');
           setExpanded(btn, true);
           openKeyPanel = panel;
         }
         function hidePanel(btn) {
-          const id = btn.getAttribute('data-menu-trigger');
-          const panel = document.querySelector('[data-menu-panel="' + id + '"]');
+          var panel = panelFor(btn);
           if (!panel) return;
-          panel.classList.add('hidden');
+          // Revert to initial hidden state (hover still works)
+          panel.classList.add('opacity-0','translate-y-1','pointer-events-none');
+          panel.classList.remove('opacity-100','translate-y-0','pointer-events-auto');
           setExpanded(btn, false);
           if (openKeyPanel === panel) openKeyPanel = null;
         }
 
-        triggers.forEach((btn) => {
-          // Hover already handled by CSS; we only manage keyboard & ARIA.
-          btn.addEventListener('keydown', (e) => {
-            const key = e.key;
+        triggers.forEach(function (btn) {
+          // Keyboard interactions
+          btn.addEventListener('keydown', function (e) {
+            var key = e.key;
             if (key === 'Enter' || key === ' ') {
               e.preventDefault();
-              const expanded = btn.getAttribute('aria-expanded') === 'true';
+              var expanded = btn.getAttribute('aria-expanded') === 'true';
               if (expanded) {
                 hidePanel(btn);
               } else {
                 // close others
-                triggers.forEach((b) => b !== btn && hidePanel(b));
+                triggers.forEach(function (b) { if (b !== btn) hidePanel(b); });
                 showPanel(btn);
                 // focus first item
-                const id = btn.getAttribute('data-menu-trigger');
-                const panel = document.querySelector('[data-menu-panel="' + id + '"]');
-                const firstItem = panel?.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
-                firstItem && (firstItem as HTMLElement).focus();
+                var p = panelFor(btn);
+                var firstItem = p && p.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
+                if (firstItem) firstItem.focus();
               }
             } else if (key === 'Escape') {
               hidePanel(btn);
             } else if (key === 'ArrowDown') {
               e.preventDefault();
               showPanel(btn);
-              const id = btn.getAttribute('data-menu-trigger');
-              const panel = document.querySelector('[data-menu-panel="' + id + '"]');
-              const firstItem = panel?.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
-              firstItem && (firstItem as HTMLElement).focus();
+              var p2 = panelFor(btn);
+              var first = p2 && p2.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
+              if (first) first.focus();
             }
           });
 
-          // Close when leaving panel with keyboard
-          const id = btn.getAttribute('data-menu-trigger');
-          const panel = document.querySelector('[data-menu-panel="' + id + '"]');
-          if (panel) {
-            panel.addEventListener('keydown', (e) => {
+          // Close when leaving panel with keyboard focus
+          var p = panelFor(btn);
+          if (p) {
+            p.addEventListener('keydown', function (e) {
               if (e.key === 'Escape') {
                 hidePanel(btn);
                 btn.focus();
               }
             });
-            panel.addEventListener('focusout', (e) => {
-              // if focus moves outside both button and panel, close
-              setTimeout(() => {
-                const active = document.activeElement;
-                if (!panel.contains(active) && active !== btn) {
-                  hidePanel(btn);
-                }
+            p.addEventListener('focusout', function () {
+              setTimeout(function () {
+                var active = document.activeElement;
+                if (!p.contains(active) && active !== btn) hidePanel(btn);
               }, 0);
             });
-            // Also close on mouseleave for key-opened panels
-            panel.addEventListener('mouseleave', () => {
+            // If panel was opened by keyboard and user moves mouse away from both, close
+            p.addEventListener('mouseleave', function () {
               if (btn.getAttribute('aria-expanded') === 'true') {
-                // only hide if it was opened via keyboard and not hovered
-                const mql = window.matchMedia('(hover: hover)');
-                if (mql.matches) {
-                  // allow CSS hover to keep it open when hovering; if not hovering, close
-                  const hovered = (btn as HTMLElement).matches(':hover') || panel.matches(':hover');
-                  if (!hovered) hidePanel(btn);
-                }
+                var hovered = btn.matches(':hover') || p.matches(':hover');
+                if (!hovered) hidePanel(btn);
               }
             });
           }
         });
 
         // Global Escape closes any open keyboard panel
-        document.addEventListener('keydown', (e) => {
+        document.addEventListener('keydown', function (e) {
           if (e.key === 'Escape' && openKeyPanel) {
-            const id = openKeyPanel.getAttribute('data-menu-panel');
-            const btn = document.querySelector('[data-menu-trigger="' + id + '"]') as HTMLElement | null;
-            openKeyPanel.classList.add('hidden');
+            var id = openKeyPanel.getAttribute('data-menu-panel');
+            var btn = document.querySelector('[data-menu-trigger="' + id + '"]');
+            openKeyPanel.classList.add('opacity-0','translate-y-1','pointer-events-none');
+            openKeyPanel.classList.remove('opacity-100','translate-y-0','pointer-events-auto');
             openKeyPanel = null;
-            btn?.setAttribute('aria-expanded', 'false');
-            btn?.focus();
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+            if (btn) btn.focus();
           }
         });
       })();
 
       // ---------- Mobile drawer (focus trap + esc + scroll lock) ----------
       (function () {
-        const checkbox = document.getElementById('nav-toggle') as HTMLInputElement | null;
-        const drawer = document.getElementById('mobile-drawer') as HTMLElement | null;
-        const overlays = Array.from(document.querySelectorAll('.peer ~ div')).filter(el => el instanceof HTMLElement) as HTMLElement[];
+        var checkbox = document.getElementById('nav-toggle');
+        var drawer = document.getElementById('mobile-drawer');
+        var overlays = Array.prototype.slice.call(document.querySelectorAll('.peer ~ div'));
 
         if (!checkbox || !drawer) return;
 
-        function getFocusable(container: HTMLElement): HTMLElement[] {
-          const selectors = [
+        function getFocusable(container) {
+          var selectors = [
             'a[href]', 'button:not([disabled])', 'summary', 'input:not([disabled])',
             'select:not([disabled])', 'textarea:not([disabled])',
             '[tabindex]:not([tabindex="-1"])'
           ].join(',');
-          return Array.from(container.querySelectorAll<HTMLElement>(selectors))
-            .filter(el => !el.hasAttribute('inert') && !el.closest('[hidden]'));
+          return Array.prototype.slice.call(container.querySelectorAll(selectors))
+            .filter(function (el) { return !el.hasAttribute('inert') && !el.closest('[hidden]'); });
         }
 
-        function lockScroll(lock: boolean) {
-          const html = document.documentElement;
-          const body = document.body;
+        function lockScroll(lock) {
+          var html = document.documentElement;
+          var body = document.body;
           if (lock) {
             html.classList.add('overflow-hidden');
             body.classList.add('overflow-hidden');
@@ -429,18 +434,18 @@ const jsonLd = seo?.jsonLd ?? [];
 
         function openDrawer() {
           lockScroll(true);
-          const focusables = getFocusable(drawer);
-          const first = focusables[0];
-          const last = focusables[focusables.length - 1];
+          var focusables = getFocusable(drawer);
+          var first = focusables[0];
+          var last = focusables[focusables.length - 1];
 
-          function trap(e: KeyboardEvent) {
+          function trap(e) {
             if (e.key !== 'Tab') return;
             if (focusables.length === 0) return;
             if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
             else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
           }
 
-          function onKeydown(e: KeyboardEvent) {
+          function onKeydown(e) {
             if (e.key === 'Escape') {
               checkbox.checked = false;
               closeDrawer();
@@ -449,28 +454,27 @@ const jsonLd = seo?.jsonLd ?? [];
             }
           }
 
-          (drawer as any)._onKeydown = onKeydown;
+          drawer._onKeydown = onKeydown;
           document.addEventListener('keydown', onKeydown);
-          // Focus first interactive element
-          setTimeout(() => { first?.focus(); }, 0);
+          setTimeout(function () { if (first) first.focus(); }, 0);
         }
 
         function closeDrawer() {
           lockScroll(false);
-          const onKeydown = (drawer as any)._onKeydown as (e: KeyboardEvent) => void;
+          var onKeydown = drawer._onKeydown;
           if (onKeydown) {
             document.removeEventListener('keydown', onKeydown);
-            (drawer as any)._onKeydown = null;
+            drawer._onKeydown = null;
           }
         }
 
-        checkbox.addEventListener('change', () => {
+        checkbox.addEventListener('change', function () {
           if (checkbox.checked) openDrawer(); else closeDrawer();
         });
 
         // Close when clicking overlays
-        overlays.forEach((ov) => {
-          ov.addEventListener('click', () => {
+        overlays.forEach(function (ov) {
+          ov.addEventListener('click', function () {
             checkbox.checked = false;
             closeDrawer();
           });
