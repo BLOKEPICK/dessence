@@ -1,0 +1,22 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+const seo = { title: 'Services | D‑Essence Wellness', description: 'Explore our treatments.' };
+---
+<BaseLayout seo={seo}>
+  <section class="section">
+    <div class="container">
+      <h1 class="text-3xl font-semibold tracking-tight">Services</h1>
+      <p class="mt-3 text-neutral-400">Browse a few highlighted treatments. More coming soon.</p>
+      <div class="mt-8 grid sm:grid-cols-2 gap-4">
+        <a href="/services/aerolase" class="card p-5 ring-1 ring-white/10 hover:bg-white/5 transition">
+          <h2 class="font-medium">Aerolase</h2>
+          <p class="text-sm text-neutral-400 mt-1">Gentle laser for tone, redness & glow.</p>
+        </a>
+        <a href="/services/microneedling" class="card p-5 ring-1 ring-white/10 hover:bg-white/5 transition">
+          <h2 class="font-medium">Microneedling</h2>
+          <p class="text-sm text-neutral-400 mt-1">Collagen induction for texture & scars.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

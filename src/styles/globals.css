@@ -2,39 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ---------- Base tokens & helpers ---------- */
-:root {
-  --ring: 1px solid rgba(255,255,255,0.08);
-}
-
+/* Base palette and helpers */
 html, body { height: 100%; }
 body { @apply bg-neutral-950 text-white antialiased; }
-
-/* Container helper */
-.container {
-  @apply mx-auto max-w-7xl px-4;
-}
-
-/* Sections */
+.container { @apply mx-auto max-w-7xl px-4; }
 .section { @apply py-16; }
 .section-dark { @apply bg-neutral-950/50; }
 .section-muted { @apply bg-neutral-900/30; }
 
-/* Buttons (wire/neo/outline/link) */
-.btn { @apply inline-flex items-center gap-2 rounded-full px-4 py-2 font-medium transition; }
-.btn-wire { @apply btn border border-white/15 bg-white/0 text-white hover:bg-white/5; }
-.btn-neo  { @apply btn bg-white text-neutral-900 hover:bg-neutral-200; }
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 font-medium transition; }
+.btn-wire { @apply btn border border-white/15 bg-transparent text-white hover:bg-white/5; }
+.btn-neo { @apply btn bg-white text-neutral-900 hover:bg-neutral-200; }
 .btn-outline { @apply btn border border-white/20 text-white hover:bg-white/5; }
 .btn-link { @apply underline underline-offset-4 decoration-white/30 hover:decoration-white; }
 
-/* Cards */
 .card { @apply rounded-2xl bg-white/5; }
 .lift { @apply transition shadow-sm hover:shadow-xl; }
 
-/* Muted text */
 .muted { @apply text-neutral-300; }
 
-/* Hero utility */
-.hero-split { /* background handled by layout */ }
-.hero-bento .tile { @apply rounded-2xl border border-white/10 p-4; }
 .sep-x { @apply h-px bg-gradient-to-r from-transparent via-white/20 to-transparent; }
+.hero-bento .tile { @apply rounded-2xl border border-white/10 p-4; }

@@ -10,13 +10,12 @@ export interface Props {
 }
 import "@/styles/globals.css";
 const { seo } = Astro.props;
-const title = seo?.title ?? 'D-Essence Wellness';
-const description = seo?.description ?? 'Modern Aesthetics, Evidence-Based Care';
+const title = seo?.title ?? 'D‑Essence Wellness';
+const description = seo?.description ?? 'Modern Aesthetics, Evidence‑Based Care';
 const canonical = seo?.canonical ?? '/';
 const type = seo?.type ?? 'website';
 const jsonLd = seo?.jsonLd ?? [];
 ---
-
 <html lang="en" class="h-full">
   <head>
     <meta charset="utf-8" />
@@ -31,23 +30,23 @@ const jsonLd = seo?.jsonLd ?? [];
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     )}
   </head>
-
-  <body class="min-h-full bg-[radial-gradient(1200px_700px_at_50%_-100px,#0b0b0b,transparent)] text-white">
-    <!-- Peer toggle BEFORE header to avoid stacking issues -->
+  <body class="min-h-full bg-[radial-gradient(1200px_700px_at_50%_-100px,#0b0b0b,transparent)]">
+    <!-- Peer toggle BEFORE header -->
     <input id="nav-toggle" type="checkbox" class="peer sr-only" aria-hidden="true" />
 
-    <header class="fixed top-4 left-1/2 -translate-x-1/2 z-[4000] w-full max-w-screen-xl">
-      <!-- Desktop Nav -->
-      <div class="hidden md:flex items-center justify-center">
+    <header class="fixed top-4 left-1/2 -translate-x-1/2 z-[4000] w-full max-w-screen-xl pointer-events-none">
+      <!-- Desktop -->
+      <div class="hidden md:flex items-center justify-center pointer-events-auto">
         <nav class="relative flex items-center gap-1 rounded-full border border-white/10 bg-black/80 shadow-lg px-3 py-2 leading-none" aria-label="Primary">
           <a href="/" class="flex items-center px-3 h-10 rounded-full hover:bg-white/5 transition" aria-label="Home">
             <span class="inline-flex items-center h-full">
-              <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px] leading-none">D-Essence</span>
+              <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px] leading-none">D‑Essence</span>
               <span class="ml-1.5 text-white/70 font-medium tracking-wide text-[12.5px] leading-none">Wellness</span>
             </span>
           </a>
 
           <ul class="flex items-center gap-1 h-10">
+            <!-- Injectables -->
             <li class="relative group">
               <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none">
                 Injectables
@@ -69,6 +68,7 @@ const jsonLd = seo?.jsonLd ?? [];
               </div>
             </li>
 
+            <!-- Laser -->
             <li class="relative group">
               <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none">
                 Laser Treatments
@@ -84,6 +84,7 @@ const jsonLd = seo?.jsonLd ?? [];
               </div>
             </li>
 
+            <!-- Aesthetic Services -->
             <li class="relative group">
               <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none">
                 Aesthetic Services
@@ -106,11 +107,11 @@ const jsonLd = seo?.jsonLd ?? [];
       </div>
 
       <!-- Mobile top bar -->
-      <div class="md:hidden px-4">
+      <div class="md:hidden px-4 pointer-events-auto">
         <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-neutral-900/75 text-white backdrop-blur-lg shadow-lg px-3 py-2">
           <a href="/" class="py-2" aria-label="Home">
             <span class="inline-flex items-baseline gap-1.5">
-              <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D-Essence</span>
+              <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D‑Essence</span>
               <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
             </span>
           </a>
@@ -122,10 +123,11 @@ const jsonLd = seo?.jsonLd ?? [];
       </div>
     </header>
 
-    <!-- Backdrop & drawer (global) -->
+    <!-- Backdrop & blurred left strip -->
     <div class="fixed inset-0 z-[10000] bg-black/60 opacity-0 pointer-events-none transition-opacity duration-200 peer-checked:opacity-100 peer-checked:pointer-events-auto"></div>
     <div class="fixed inset-0 right-[8%] z-[10005] bg-black/10 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-200 peer-checked:opacity-100 peer-checked:pointer-events-auto"></div>
 
+    <!-- Drawer -->
     <aside id="mobile-drawer" class="fixed right-0 top-0 z-[10010] h-full w-[92%] max-w-sm bg-neutral-900 text-white border-l border-white/10 shadow-2xl translate-x-full transition-transform duration-200 will-change-transform peer-checked:translate-x-0">
       <div class="p-4 h-full flex flex-col">
         <div class="text-xs uppercase tracking-wide text-white/50 px-1">Navigation</div>
@@ -175,25 +177,21 @@ const jsonLd = seo?.jsonLd ?? [];
 
         <div class="mt-auto p-4 border-t border-white/10 flex items-center justify-center">
           <a href="/" class="inline-flex items-baseline gap-1.5" aria-label="Home">
-            <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D-Essence</span>
+            <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D‑Essence</span>
             <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
           </a>
         </div>
       </div>
     </aside>
 
-    <main>
-      <slot />
-    </main>
+    <main><slot /></main>
 
     <footer class="mt-16 border-t border-white/10 bg-black/40">
       <div class="container py-12">
         <div class="grid md:grid-cols-4 gap-8">
           <div>
-            <div class="text-white font-semibold tracking-[0.06em]">D-Essence <span class="text-white/70 font-medium">Wellness</span></div>
-            <p class="mt-3 text-sm text-neutral-400 max-w-xs">
-              Subtle, modern aesthetics guided by evidence—New Windsor, NY.
-            </p>
+            <div class="text-white font-semibold tracking-[0.06em]">D‑Essence <span class="text-white/70 font-medium">Wellness</span></div>
+            <p class="mt-3 text-sm text-neutral-400 max-w-xs">Subtle, modern aesthetics guided by evidence—New Windsor, NY.</p>
           </div>
           <div>
             <h5 class="text-white/90 font-medium">Services</h5>
@@ -215,18 +213,12 @@ const jsonLd = seo?.jsonLd ?? [];
           </div>
           <div>
             <h5 class="text-white/90 font-medium">Visit</h5>
-            <p class="mt-3 text-sm text-neutral-300">
-              871 Blooming Grove Turnpike Suite 102<br/>New Windsor, NY 12553
-            </p>
+            <p class="mt-3 text-sm text-neutral-300">871 Blooming Grove Turnpike Suite 102<br/>New Windsor, NY 12553</p>
             <p class="mt-3 text-sm text-neutral-400">By appointment only</p>
-            <div class="mt-4 flex gap-3 text-sm">
-              <a class="btn-wire px-3 py-2" href="https://maps.app.goo.gl/N4y6tDdNHTdkEpJp8" target="_blank" rel="nofollow noopener">Directions</a>
-              <a class="btn-neo px-3 py-2" href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx" target="_blank" rel="noopener">Book</a>
-            </div>
           </div>
         </div>
         <div class="mt-10 border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
-          <div>© {new Date().getFullYear()} D-Essence Wellness. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} D‑Essence Wellness. All rights reserved.</div>
           <div class="flex gap-4">
             <a href="/privacy" class="hover:underline">Privacy</a>
             <a href="/terms" class="hover:underline">Terms</a>
