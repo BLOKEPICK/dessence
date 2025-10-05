@@ -16,6 +16,7 @@ const canonical = seo?.canonical ?? '/';
 const type = seo?.type ?? 'website';
 const jsonLd = seo?.jsonLd ?? [];
 ---
+
 <html lang="en" class="h-full">
   <head>
     <meta charset="utf-8" />
@@ -26,75 +27,148 @@ const jsonLd = seo?.jsonLd ?? [];
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={type} />
+
+    <!-- Pro typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root { --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
+      html, body { font-family: var(--font-sans); }
+    </style>
+
     {jsonLd.length > 0 && (
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     )}
   </head>
+
   <body class="min-h-full bg-[radial-gradient(1200px_700px_at_50%_-100px,#0b0b0b,transparent)]">
+    <!-- Mobile nav controller -->
     <input id="nav-toggle" type="checkbox" class="peer sr-only" aria-hidden="true" />
+
+    <!-- ===== HEADER ===== -->
     <header class="fixed top-4 left-1/2 -translate-x-1/2 z-[4000] w-full max-w-screen-xl pointer-events-none">
+      <!-- Desktop -->
       <div class="hidden md:flex items-center justify-center pointer-events-auto">
-        <nav class="relative flex items-center gap-1 rounded-full border border-white/10 bg-black/80 shadow-lg px-3 py-2 leading-none" aria-label="Primary">
-          <a href="/" class="flex items-center px-3 h-10 rounded-full hover:bg-white/5 transition" aria-label="Home">
+        <nav class="relative flex items-center gap-1 rounded-full border border-white/10 bg-black/80 shadow-lg px-3 py-2 leading-none"
+             aria-label="Primary" role="menubar">
+          <!-- Logo -->
+          <a href="/" class="flex items-center px-3 h-10 rounded-full hover:bg-white/5 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20" aria-label="Home">
             <span class="inline-flex items-center h-full">
               <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px] leading-none">D-Essence</span>
               <span class="ml-1.5 text-white/70 font-medium tracking-wide text-[12.5px] leading-none">Wellness</span>
             </span>
           </a>
+
+          <!-- Menu -->
           <ul class="flex items-center gap-1 h-10">
-            <li class="relative group">
-              <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none">
+            <!-- Injectables -->
+            <li class="relative group" role="none">
+              <button
+                class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
+                type="button"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="menu-injectables"
+                data-menu-trigger="injectables"
+              >
                 Injectables
                 <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
                 </svg>
               </button>
-              <div class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[520px] rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1 max-h-[70vh] overflow-auto hidden group-hover:block group-focus-within:block">
+
+              <div id="menu-injectables"
+                   class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[520px] rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1 max-h-[70vh] overflow-auto
+                          hidden group-hover:block group-focus-within:block"
+                   role="menu"
+                   tabindex="-1"
+                   data-menu-panel="injectables"
+              >
                 <ul class="divide-y divide-white/10">
-                  <li><a href="/services/botox" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Botox<span class="opacity-60">→</span></a></li>
-                  <li><a href="/services/xeomin" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Xeomin<span class="opacity-60">→</span></a></li>
-                  <li><a href="/services/daxxify" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Daxxify<span class="opacity-60">→</span></a></li>
-                  <li><a href="/services/botox-for-hyperhidrosis" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Botox for Hyperhidrosis<span class="opacity-60">→</span></a></li>
-                  <li><a href="/services/prp-microneedling" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">PRP Microneedling<span class="opacity-60">→</span></a></li>
-                  <li><a href="/services/prf-microneedling" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">PRF Microneedling<span class="opacity-60">→</span></a></li>
-                  <li><a href="/services/juvederm-fillers" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Dermal Fillers — Juvederm Collection<span class="opacity-60">→</span></a></li>
-                  <li><a href="/services/smooth-threads" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Threads — Smooth Threads<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/botox" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Botox<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/xeomin" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Xeomin<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/daxxify" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Daxxify<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/botox-for-hyperhidrosis" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Botox for Hyperhidrosis<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/prp-microneedling" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">PRP Microneedling<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/prf-microneedling" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">PRF Microneedling<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/juvederm-fillers" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Dermal Fillers — Juvederm Collection<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/smooth-threads" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Threads — Smooth Threads<span class="opacity-60">→</span></a></li>
                 </ul>
               </div>
             </li>
-            <li class="relative group">
-              <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none">
+
+            <!-- Laser -->
+            <li class="relative group" role="none">
+              <button
+                class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
+                type="button"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="menu-laser"
+                data-menu-trigger="laser"
+              >
                 Laser Treatments
                 <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
                 </svg>
               </button>
-              <div class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[360px] rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1 max-h-[70vh] overflow-auto hidden group-hover:block group-focus-within:block">
+
+              <div id="menu-laser"
+                   class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[360px] rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1 max-h-[70vh] overflow-auto
+                          hidden group-hover:block group-focus-within:block"
+                   role="menu"
+                   tabindex="-1"
+                   data-menu-panel="laser"
+              >
                 <ul class="divide-y divide-white/10">
-                  <li><a href="/services/aerolase" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Aerolase<span class="opacity-60">→</span></a></li>
-                  <li><a href="/services/laser-hair-removal" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Laser Hair Removal<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/aerolase" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Aerolase<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/laser-hair-removal" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Laser Hair Removal<span class="opacity-60">→</span></a></li>
                 </ul>
               </div>
             </li>
-            <li class="relative group">
-              <button class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none">
+
+            <!-- Aesthetic Services -->
+            <li class="relative group" role="none">
+              <button
+                class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
+                type="button"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="menu-aesthetics"
+                data-menu-trigger="aesthetics"
+              >
                 Aesthetic Services
                 <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
                 </svg>
               </button>
-              <div class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[420px] rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1 max-h-[70vh] overflow-auto hidden group-hover:block group-focus-within:block">
+
+              <div id="menu-aesthetics"
+                   class="absolute left-1/2 -translate-x-1/2 mt-2 w-[90vw] sm:w-[420px] rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1 max-h-[70vh] overflow-auto
+                          hidden group-hover:block group-focus-within:block"
+                   role="menu"
+                   tabindex="-1"
+                   data-menu-panel="aesthetics"
+              >
                 <ul class="divide-y divide-white/10">
-                  <li><a href="/services/waxing-sugaring" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Waxing &amp; Sugaring<span class="opacity-60">→</span></a></li>
-                  <li><a href="/services/teeth-whitening" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90">Teeth Whitening<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/waxing-sugaring" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Waxing &amp; Sugaring<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/teeth-whitening" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Teeth Whitening<span class="opacity-60">→</span></a></li>
                 </ul>
               </div>
             </li>
-            <li><a href="/about-us" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white">About Us</a></li>
-            <li><a href="/contact-us" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white">Contact Us</a></li>
+
+            <!-- Single links -->
+            <li role="none"><a href="/about-us" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20" role="menuitem">About Us</a></li>
+            <li role="none"><a href="/contact-us" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20" role="menuitem">Contact Us</a></li>
           </ul>
         </nav>
       </div>
+
+      <!-- Mobile bar -->
       <div class="md:hidden px-4 pointer-events-auto">
         <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-neutral-900/75 text-white backdrop-blur-lg shadow-lg px-3 py-2">
           <a href="/" class="py-2" aria-label="Home">
@@ -111,63 +185,72 @@ const jsonLd = seo?.jsonLd ?? [];
       </div>
     </header>
 
+    <!-- Overlays for mobile -->
     <div class="fixed inset-0 z-[10000] bg-black/60 opacity-0 pointer-events-none transition-opacity duration-200 peer-checked:opacity-100 peer-checked:pointer-events-auto"></div>
     <div class="fixed inset-0 right-[8%] z-[10005] bg-black/10 backdrop-blur-[2px] opacity-0 pointer-events-none transition-opacity duration-200 peer-checked:opacity-100 peer-checked:pointer-events-auto"></div>
 
-    <aside id="mobile-drawer" class="fixed right-0 top-0 z-[10010] h-full w-[92%] max-w-sm bg-neutral-900 text-white border-l border-white/10 shadow-2xl translate-x-full transition-transform duration-200 will-change-transform peer-checked:translate-x-0">
+    <!-- ===== MOBILE DRAWER ===== -->
+    <aside id="mobile-drawer" class="fixed right-0 top-0 z-[10010] h-full w-[92%] max-w-sm bg-neutral-900 text-white border-l border-white/10 shadow-2xl translate-x-full transition-transform duration-200 will-change-transform peer-checked:translate-x-0" aria-modal="true" role="dialog">
       <div class="p-4 h-full flex flex-col">
         <div class="text-xs uppercase tracking-wide text-white/50 px-1">Navigation</div>
-        <div class="mt-2 space-y-3 overflow-auto">
+        <div class="mt-2 space-y-3 overflow-auto" data-drawer-focus-scope>
           <details class="rounded-xl border border-white/10 open:bg-white/5">
             <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
               <span class="font-medium">Injectables</span>
               <svg class="w-5 h-5 transition-transform open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
             </summary>
             <nav class="border-t border-white/10 py-1">
-              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/botox">Botox</a>
-              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/xeomin">Xeomin</a>
-              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/daxxify">Daxxify</a>
-              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/botox-for-hyperhidrosis">Botox for Hyperhidrosis</a>
-              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/prp-microneedling">PRP Microneedling</a>
-              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/prf-microneedling">PRF Microneedling</a>
-              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/juvederm-fillers">Dermal Fillers — Juvederm Collection</a>
-              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/smooth-threads">Threads — Smooth Threads</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5 focus:bg-white/10" href="/services/botox">Botox</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5 focus:bg-white/10" href="/services/xeomin">Xeomin</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5 focus:bg-white/10" href="/services/daxxify">Daxxify</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5 focus:bg-white/10" href="/services/botox-for-hyperhidrosis">Botox for Hyperhidrosis</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5 focus:bg-white/10" href="/services/prp-microneedling">PRP Microneedling</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5 focus:bg-white/10" href="/services/prf-microneedling">PRF Microneedling</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5 focus:bg-white/10" href="/services/juvederm-fillers">Dermal Fillers — Juvederm Collection</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5 focus:bg-white/10" href="/services/smooth-threads">Threads — Smooth Threads</a>
             </nav>
           </details>
+
           <details class="rounded-xl border border-white/10 open:bg-white/5">
             <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
               <span class="font-medium">Laser Treatments</span>
               <svg class="w-5 h-5 transition-transform open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
             </summary>
             <nav class="border-t border-white/10 py-1">
-              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/aerolase">Aerolase</a>
-              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/laser-hair-removal">Laser Hair Removal</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5 focus:bg-white/10" href="/services/aerolase">Aerolase</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5 focus:bg-white/10" href="/services/laser-hair-removal">Laser Hair Removal</a>
             </nav>
           </details>
+
           <details class="rounded-xl border border-white/10 open:bg-white/5">
             <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
               <span class="font-medium">Aesthetic Services</span>
               <svg class="w-5 h-5 transition-transform open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
             </summary>
             <nav class="border-t border-white/10 py-1">
-              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/waxing-sugaring">Waxing &amp; Sugaring</a>
-              <a class="block px-4 py-2.5 hover:bg-white/5" href="/services/teeth-whitening">Teeth Whitening</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5 focus:bg-white/10" href="/services/waxing-sugaring">Waxing &amp; Sugaring</a>
+              <a class="block px-4 py-2.5 hover:bg-white/5 focus:bg-white/10" href="/services/teeth-whitening">Teeth Whitening</a>
             </nav>
           </details>
-          <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5" href="/about-us">About Us</a>
-          <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5" href="/contact-us">Contact Us</a>
+
+          <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5 focus:bg-white/10" href="/about-us">About Us</a>
+          <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5 focus:bg-white/10" href="/contact-us">Contact Us</a>
         </div>
-        <div class="mt-auto p-4 border-t border-white/10 flex items-center justify-center">
+
+        <div class="mt-auto p-4 border-t border-white/10 flex items-center justify-between">
           <a href="/" class="inline-flex items-baseline gap-1.5" aria-label="Home">
             <span class="text-white/95 font-semibold tracking-[0.06em] text-[14px]">D-Essence</span>
             <span class="text-white/70 font-medium tracking-wide text-[12.5px]">Wellness</span>
           </a>
+          <label for="nav-toggle" class="px-3 py-2 rounded-lg hover:bg-white/10 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20">Close</label>
         </div>
       </div>
     </aside>
 
+    <!-- ===== MAIN SLOT ===== -->
     <main><slot /></main>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="mt-16 border-t border-white/10 bg-black/40">
       <div class="container py-12">
         <div class="grid md:grid-cols-4 gap-8">
@@ -208,5 +291,191 @@ const jsonLd = seo?.jsonLd ?? [];
         </div>
       </div>
     </footer>
+
+    <!-- ===== ACCESSIBILITY SCRIPTS (no frameworks) ===== -->
+    <script is:inline>
+      // ---------- Desktop submenu A11y ----------
+      (function () {
+        const triggers = document.querySelectorAll('[data-menu-trigger]');
+        let openKeyPanel = null;
+
+        function setExpanded(btn, expanded) {
+          btn.setAttribute('aria-expanded', String(expanded));
+        }
+        function showPanel(btn) {
+          const id = btn.getAttribute('data-menu-trigger');
+          const panel = document.querySelector('[data-menu-panel="' + id + '"]');
+          if (!panel) return;
+          panel.classList.remove('hidden');
+          setExpanded(btn, true);
+          openKeyPanel = panel;
+        }
+        function hidePanel(btn) {
+          const id = btn.getAttribute('data-menu-trigger');
+          const panel = document.querySelector('[data-menu-panel="' + id + '"]');
+          if (!panel) return;
+          panel.classList.add('hidden');
+          setExpanded(btn, false);
+          if (openKeyPanel === panel) openKeyPanel = null;
+        }
+
+        triggers.forEach((btn) => {
+          // Hover already handled by CSS; we only manage keyboard & ARIA.
+          btn.addEventListener('keydown', (e) => {
+            const key = e.key;
+            if (key === 'Enter' || key === ' ') {
+              e.preventDefault();
+              const expanded = btn.getAttribute('aria-expanded') === 'true';
+              if (expanded) {
+                hidePanel(btn);
+              } else {
+                // close others
+                triggers.forEach((b) => b !== btn && hidePanel(b));
+                showPanel(btn);
+                // focus first item
+                const id = btn.getAttribute('data-menu-trigger');
+                const panel = document.querySelector('[data-menu-panel="' + id + '"]');
+                const firstItem = panel?.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
+                firstItem && (firstItem as HTMLElement).focus();
+              }
+            } else if (key === 'Escape') {
+              hidePanel(btn);
+            } else if (key === 'ArrowDown') {
+              e.preventDefault();
+              showPanel(btn);
+              const id = btn.getAttribute('data-menu-trigger');
+              const panel = document.querySelector('[data-menu-panel="' + id + '"]');
+              const firstItem = panel?.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
+              firstItem && (firstItem as HTMLElement).focus();
+            }
+          });
+
+          // Close when leaving panel with keyboard
+          const id = btn.getAttribute('data-menu-trigger');
+          const panel = document.querySelector('[data-menu-panel="' + id + '"]');
+          if (panel) {
+            panel.addEventListener('keydown', (e) => {
+              if (e.key === 'Escape') {
+                hidePanel(btn);
+                btn.focus();
+              }
+            });
+            panel.addEventListener('focusout', (e) => {
+              // if focus moves outside both button and panel, close
+              setTimeout(() => {
+                const active = document.activeElement;
+                if (!panel.contains(active) && active !== btn) {
+                  hidePanel(btn);
+                }
+              }, 0);
+            });
+            // Also close on mouseleave for key-opened panels
+            panel.addEventListener('mouseleave', () => {
+              if (btn.getAttribute('aria-expanded') === 'true') {
+                // only hide if it was opened via keyboard and not hovered
+                const mql = window.matchMedia('(hover: hover)');
+                if (mql.matches) {
+                  // allow CSS hover to keep it open when hovering; if not hovering, close
+                  const hovered = (btn as HTMLElement).matches(':hover') || panel.matches(':hover');
+                  if (!hovered) hidePanel(btn);
+                }
+              }
+            });
+          }
+        });
+
+        // Global Escape closes any open keyboard panel
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && openKeyPanel) {
+            const id = openKeyPanel.getAttribute('data-menu-panel');
+            const btn = document.querySelector('[data-menu-trigger="' + id + '"]') as HTMLElement | null;
+            openKeyPanel.classList.add('hidden');
+            openKeyPanel = null;
+            btn?.setAttribute('aria-expanded', 'false');
+            btn?.focus();
+          }
+        });
+      })();
+
+      // ---------- Mobile drawer (focus trap + esc + scroll lock) ----------
+      (function () {
+        const checkbox = document.getElementById('nav-toggle') as HTMLInputElement | null;
+        const drawer = document.getElementById('mobile-drawer') as HTMLElement | null;
+        const overlays = Array.from(document.querySelectorAll('.peer ~ div')).filter(el => el instanceof HTMLElement) as HTMLElement[];
+
+        if (!checkbox || !drawer) return;
+
+        function getFocusable(container: HTMLElement): HTMLElement[] {
+          const selectors = [
+            'a[href]', 'button:not([disabled])', 'summary', 'input:not([disabled])',
+            'select:not([disabled])', 'textarea:not([disabled])',
+            '[tabindex]:not([tabindex="-1"])'
+          ].join(',');
+          return Array.from(container.querySelectorAll<HTMLElement>(selectors))
+            .filter(el => !el.hasAttribute('inert') && !el.closest('[hidden]'));
+        }
+
+        function lockScroll(lock: boolean) {
+          const html = document.documentElement;
+          const body = document.body;
+          if (lock) {
+            html.classList.add('overflow-hidden');
+            body.classList.add('overflow-hidden');
+          } else {
+            html.classList.remove('overflow-hidden');
+            body.classList.remove('overflow-hidden');
+          }
+        }
+
+        function openDrawer() {
+          lockScroll(true);
+          const focusables = getFocusable(drawer);
+          const first = focusables[0];
+          const last = focusables[focusables.length - 1];
+
+          function trap(e: KeyboardEvent) {
+            if (e.key !== 'Tab') return;
+            if (focusables.length === 0) return;
+            if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+            else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+          }
+
+          function onKeydown(e: KeyboardEvent) {
+            if (e.key === 'Escape') {
+              checkbox.checked = false;
+              closeDrawer();
+            } else {
+              trap(e);
+            }
+          }
+
+          (drawer as any)._onKeydown = onKeydown;
+          document.addEventListener('keydown', onKeydown);
+          // Focus first interactive element
+          setTimeout(() => { first?.focus(); }, 0);
+        }
+
+        function closeDrawer() {
+          lockScroll(false);
+          const onKeydown = (drawer as any)._onKeydown as (e: KeyboardEvent) => void;
+          if (onKeydown) {
+            document.removeEventListener('keydown', onKeydown);
+            (drawer as any)._onKeydown = null;
+          }
+        }
+
+        checkbox.addEventListener('change', () => {
+          if (checkbox.checked) openDrawer(); else closeDrawer();
+        });
+
+        // Close when clicking overlays
+        overlays.forEach((ov) => {
+          ov.addEventListener('click', () => {
+            checkbox.checked = false;
+            closeDrawer();
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
