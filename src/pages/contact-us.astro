@@ -152,13 +152,24 @@ const seo = {
   function show(el){ el && el.classList.remove('hidden'); }
   function hide(el){ el && el.classList.add('hidden'); }
 
-  // iOS zoom reset: fuerza scale=1 y restaura
+  // iOS zoom reset: fuerza zoom-OUT a scale=1 y restaura el viewport original
   function resetMobileZoom() {
     var vp = document.querySelector('meta[name="viewport"]');
     if (!vp) return;
     var original = vp.getAttribute('content') || 'width=device-width, initial-scale=1';
-    vp.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
-    setTimeout(function(){ vp.setAttribute('content', original); }, 250);
+
+    // Fuerza escala exacta 1 (incluye minimum y maximum para asegurar el "zoom out")
+    vp.setAttribute(
+      'content',
+      'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'
+    );
+
+    // Da tiempo a Safari/iOS para aplicar el cambio y luego restaura
+    setTimeout(function () {
+      vp.setAttribute('content', original);
+      // Nudge para evitar que quede un reflow con zoom raro
+      window.scrollTo(window.pageXOffset || 0, window.pageYOffset || 0);
+    }, 250);
   }
 
   // Crea el panel de éxito (una sola vez)
@@ -228,7 +239,7 @@ const seo = {
         successView.classList.remove('hidden');
       }
 
-      // Quita foco del input activo, scroll suave al mensaje y resetea zoom móvil
+      // Quita foco del input activo, scroll suave al mensaje y resetea zoom móvil (zoom OUT)
       if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
       successView.scrollIntoView({ behavior: 'smooth', block: 'start' });
       resetMobileZoom();
@@ -243,6 +254,5 @@ const seo = {
   }, { passive: false });
 })();
 </script>
-
 
 </BaseLayout>
