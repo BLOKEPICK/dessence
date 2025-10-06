@@ -1,9 +1,11 @@
 import { defineConfig } from 'astro/config';
+import { fileURLToPath } from 'node:url';
 
 export default defineConfig({
   output: 'static',
-  trailingSlash: 'always', // genera /about-us/index.html, /our-approach/index.html, etc.
+  build: { format: 'file' },
+  trailingSlash: 'always',
   alias: {
-    '@': '/src',
+    '@': fileURLToPath(new URL('./src', import.meta.url)),
   },
 });
