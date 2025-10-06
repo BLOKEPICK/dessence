@@ -27,17 +27,21 @@ const seo = {
 ---
 
 <BaseLayout seo={seo}>
-  <section class="bg-white text-neutral-900">
-    <div class="container pt-24 pb-12 max-w-4xl text-center">
+  <!-- ===== HERO (dark) ===== -->
+  <section class="bg-neutral-950 text-white">
+    <div class="container pt-28 pb-12 max-w-4xl text-center">
       <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight">About D-Essence Wellness</h1>
-      <p class="mt-4 text-neutral-600">
+      <p class="mt-4 text-white/80">
         Subtle, modern aesthetics delivered with a clinical standard of care. We believe outcomes should be
         personalized, conservative, and long-lasting—so you look like you, rested and confident.
       </p>
     </div>
+  </section>
 
+  <!-- ===== CONTENT (white) ===== -->
+  <div class="bg-white text-neutral-900">
     <!-- Mission & Values -->
-    <div class="container pb-10">
+    <div class="container pb-10 pt-8">
       <div class="grid lg:grid-cols-2 gap-8 items-start">
         <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
           <h2 class="text-xl font-semibold">Our mission</h2>
@@ -97,7 +101,7 @@ const seo = {
           <div>
             <div class="text-neutral-500">Policies</div>
             <ul class="mt-1 space-y-0.5">
-              <li><a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="/terms">Terms & Conditions</a></li>
+              <li><a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="/terms">Terms &amp; Conditions</a></li>
               <li><a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="/privacy">Privacy Policy</a></li>
               <li><a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="/hipaa">HIPAA</a></li>
               <li><a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="/booking-policy">Booking Policy</a></li>
@@ -127,8 +131,8 @@ const seo = {
           <div class="mt-2 text-sm underline decoration-neutral-300">Explore →</div>
         </a>
         <a href="/services" class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
-          <div class="font-medium">Wellness & IV</div>
-          <p class="mt-1 text-sm text-neutral-600">Vitamin shots & tailored infusions.</p>
+          <div class="font-medium">Wellness &amp; IV</div>
+          <p class="mt-1 text-sm text-neutral-600">Vitamin shots &amp; tailored infusions.</p>
           <div class="mt-2 text-sm underline decoration-neutral-300">Explore →</div>
         </a>
       </div>
@@ -137,5 +141,5 @@ const seo = {
         See client feedback on <a class="underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700" href="https://maps.app.goo.gl/N4y6tDdNHTdkEpJp8" target="_blank" rel="noopener">Google Reviews</a>.
       </div>
     </div>
-  </section>
+  </div>
 </BaseLayout>
