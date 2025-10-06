@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const seo = {
+  title: 'Contact Us | D-Essence Wellness',
+  description:
+    'Questions or bookings? Send us a note—our team will reply within one business day.',
+  canonical: '/contact-us',
+  type: 'website',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      name: 'Contact D-Essence Wellness',
+      url: 'https://dessencewellness.com/contact-us'
+    }
+  ]
+};
+---
+
+<BaseLayout seo={seo}>
+  <!-- ===== HERO (dark) ===== -->
+  <section class="bg-neutral-950 text-white">
+    <div class="container pt-28 pb-10 max-w-3xl text-center">
+      <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight">Contact Us</h1>
+      <p class="mt-4 text-white/80">
+        We’d love to help. Send us a message and we’ll get back to you within one business day.
+      </p>
+      <div class="mt-4 text-sm text-white/60">
+        871 Blooming Grove Turnpike Suite 102, New Windsor, NY 12553
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTENT (white) ===== -->
+  <section class="bg-white text-neutral-900">
+    <div class="container py-12 sm:py-14">
+      <!-- Success banner (appears after redirect) -->
+      <div id="success-banner" class="hidden mb-6 rounded-xl bg-emerald-50 ring-1 ring-emerald-200 p-4 text-emerald-900" role="status" aria-live="polite">
+        <div class="font-medium">Message sent!</div>
+        <p class="text-sm mt-1">Thanks for reaching out—our team will reply shortly.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8">
+        <!-- Intro copy -->
+        <div class="lg:col-span-4">
+          <h2 class="text-xl font-semibold">Start the conversation</h2>
+          <p class="mt-3 text-neutral-600">
+            Share a bit about your goals or questions. If you prefer, you can also call or send us a DM—whatever is easiest.
+          </p>
+
+          <div class="mt-5 space-y-2 text-sm text-neutral-700">
+            <div>
+              <span class="text-neutral-500">Email:</span>
+              <a class="ml-1 underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700" href="mailto:Georgevaldezr@gmail.com">Georgevaldezr@gmail.com</a>
+            </div>
+            <div>
+              <span class="text-neutral-500">Instagram:</span>
+              <a class="ml-1 underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700" href="https://www.instagram.com/d_essencewellness/" target="_blank" rel="noopener">@d_essencewellness</a>
+            </div>
+          </div>
+
+          <div class="mt-6 text-xs text-neutral-500">
+            By submitting this form, you agree to our
+            <a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="/terms-and-conditions/">Terms</a>
+            and
+            <a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="/privacy-policy/">Privacy Policy</a>.
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="lg:col-span-8">
+          <form
+            action="https://formsubmit.co/Georgevaldezr@gmail.com"
+            method="POST"
+            accept-charset="UTF-8"
+            class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6 sm:p-7"
+          >
+            <!-- FormSubmit settings -->
+            <input type="hidden" name="_subject" value="New website inquiry — D-Essence Wellness" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://dessencewellness.com/contact-us/?sent=1" />
+            <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="firstName" class="block text-sm font-medium text-neutral-800">First name<span class="text-red-500">*</span></label>
+                <input id="firstName" name="First Name" required
+                  class="mt-1 w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-neutral-500 focus:ring-2 focus:ring-neutral-200"
+                  autocomplete="given-name" />
+              </div>
+
+              <div>
+                <label for="lastName" class="block text-sm font-medium text-neutral-800">Last name<span class="text-red-500">*</span></label>
+                <input id="lastName" name="Last Name" required
+                  class="mt-1 w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-neutral-500 focus:ring-2 focus:ring-neutral-200"
+                  autocomplete="family-name" />
+              </div>
+            </div>
+
+            <div class="mt-4 grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="email" class="block text-sm font-medium text-neutral-800">Email<span class="text-red-500">*</span></label>
+                <input id="email" name="Email" type="email" required
+                  class="mt-1 w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-neutral-500 focus:ring-2 focus:ring-neutral-200"
+                  autocomplete="email" />
+                <!-- Ensures replies go to the sender -->
+                <input type="hidden" name="_replyto" value="" id="replyto-hidden" />
+              </div>
+
+              <div>
+                <label for="phone" class="block text-sm font-medium text-neutral-800">Phone (optional)</label>
+                <input id="phone" name="Phone" type="tel" inputmode="tel"
+                  class="mt-1 w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-neutral-500 focus:ring-2 focus:ring-neutral-200"
+                  autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <label for="subject" class="block text-sm font-medium text-neutral-800">Subject<span class="text-red-500">*</span></label>
+              <input id="subject" name="Subject" required
+                class="mt-1 w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-neutral-500 focus:ring-2 focus:ring-neutral-200" />
+            </div>
+
+            <div class="mt-4">
+              <label for="message" class="block text-sm font-medium text-neutral-800">Message<span class="text-red-500">*</span></label>
+              <textarea id="message" name="Message" required minlength="10" rows="6"
+                class="mt-1 w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-neutral-500 focus:ring-2 focus:ring-neutral-200"
+                placeholder="Tell us a bit about your goals, areas of concern, or preferred timing."></textarea>
+            </div>
+
+            <div class="mt-6">
+              <button type="submit"
+                class="inline-flex items-center justify-center rounded-full bg-neutral-900 text-white px-5 py-2.5 text-sm hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Small helper script -->
+  <script is:inline>
+    (function () {
+      // Show success banner when redirected with ?sent=1
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('sent') === '1') {
+        var box = document.getElementById('success-banner');
+        if (box) {
+          box.classList.remove('hidden');
+          // Clean URL
+          window.history.replaceState({}, '', window.location.pathname);
+        }
+      }
+      // Keep _replyto in sync with email entered
+      var email = document.getElementById('email');
+      var hidden = document.getElementById('replyto-hidden');
+      if (email && hidden) {
+        email.addEventListener('input', function(){ hidden.value = email.value; });
+      }
+    })();
+  </script>
+</BaseLayout>
