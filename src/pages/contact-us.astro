@@ -135,76 +135,114 @@ const seo = {
 
   <!-- AJAX submit + mobile zoom reset -->
   <script is:inline>
-  (function () {
-    var form = document.getElementById('contact-form');
-    var btn  = document.getElementById('submit-btn');
-    var success = document.getElementById('success-banner');
-    var errorB  = document.getElementById('error-banner');
-    var email   = document.getElementById('email');
-    var replyto = document.getElementById('replyto-hidden');
+(function () {
+  var form    = document.getElementById('contact-form');
+  var btn     = document.getElementById('submit-btn');
+  var errorB  = document.getElementById('error-banner');
+  var email   = document.getElementById('email');
+  var replyto = document.getElementById('replyto-hidden');
 
-    // Mantén _replyto sincronizado
-    if (email && replyto) {
-      email.addEventListener('input', function(){ replyto.value = email.value; });
+  if (!form || !btn) return;
+
+  // Mantén _replyto sincronizado para mejores respuestas del proveedor
+  if (email && replyto) {
+    email.addEventListener('input', function(){ replyto.value = email.value; });
+  }
+
+  function show(el){ el && el.classList.remove('hidden'); }
+  function hide(el){ el && el.classList.add('hidden'); }
+
+  // iOS zoom reset: fuerza scale=1 y restaura
+  function resetMobileZoom() {
+    var vp = document.querySelector('meta[name="viewport"]');
+    if (!vp) return;
+    var original = vp.getAttribute('content') || 'width=device-width, initial-scale=1';
+    vp.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
+    setTimeout(function(){ vp.setAttribute('content', original); }, 250);
+  }
+
+  // Crea el panel de éxito (una sola vez)
+  function buildSuccessView() {
+    var el = document.createElement('div');
+    el.id = 'success-view';
+    el.className = 'rounded-2xl ring-1 ring-emerald-200 bg-emerald-50 p-6 text-center';
+    el.setAttribute('role', 'status');
+    el.setAttribute('aria-live', 'polite');
+    el.innerHTML = `
+      <div class="mx-auto w-12 h-12 rounded-full bg-emerald-100 ring-1 ring-emerald-200 flex items-center justify-center">
+        <svg class="w-7 h-7 text-emerald-700" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3 class="mt-3 text-xl font-semibold text-emerald-900">Your message has been sent</h3>
+      <p class="mt-2 text-emerald-800">Thank you for reaching out. We’ll get back to you shortly. For urgent matters, call <a class="underline decoration-emerald-300 hover:decoration-emerald-600" href="tel:17163038963">(716) 303-8963</a>.</p>
+      <div class="mt-6">
+        <a href="/" class="inline-flex items-center rounded-full bg-neutral-900 text-white px-5 py-2.5 hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">Return to Home</a>
+      </div>
+    `;
+    return el;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    hide(errorB);
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
     }
 
-    function show(el){ el && el.classList.remove('hidden'); }
-    function hide(el){ el && el.classList.add('hidden'); }
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
 
-    // iOS zoom reset hack: forzar scale=1 y restaurar
-    function resetMobileZoom() {
-      var vp = document.querySelector('meta[name="viewport"]');
-      if (!vp) return;
-      var original = vp.getAttribute('content') || 'width=device-width, initial-scale=1';
-      vp.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
-      setTimeout(function(){ vp.setAttribute('content', original); }, 250);
-    }
+    var fd = new FormData(form);
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      hide(success); hide(errorB);
+    // Endpoint AJAX de FormSubmit (devuelve JSON y NO redirige)
+    fetch('https://formsubmit.co/ajax/Georgevaldezr@gmail.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: fd
+    })
+    .then(function (res) {
+      return res.json().catch(function(){ return {}; }).then(function(data){ return { ok: res.ok, data: data }; });
+    })
+    .then(function (resp) {
+      if (!resp.ok) throw new Error('Network');
 
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
+      // Limpia y oculta el bloque del formulario (la tarjeta completa si existe)
+      form.reset();
+      var formCard = form.closest('.rounded-2xl') || form;
+      formCard.setAttribute('inert','');
+      formCard.classList.add('hidden');
+
+      // Elimina banners de éxito antiguos si existen
+      var oldSuccess = document.getElementById('success-banner');
+      if (oldSuccess) oldSuccess.remove();
+
+      // Inserta/visualiza el panel de éxito
+      var successView = document.getElementById('success-view');
+      if (!successView) {
+        successView = buildSuccessView();
+        formCard.parentNode.insertBefore(successView, formCard.nextSibling);
+      } else {
+        successView.classList.remove('hidden');
       }
 
-      btn.disabled = true;
-      btn.textContent = 'Sending...';
-
-      var fd = new FormData(form);
-
-      // ✅ Usa el endpoint AJAX (devuelve JSON y NO redirige)
-      fetch('https://formsubmit.co/ajax/Georgevaldezr@gmail.com', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: fd
-      })
-      .then(function (res) {
-        // Asegura parseo robusto de JSON
-        return res.json().catch(function(){ return {}; }).then(function(data){ return { ok: res.ok, data: data }; });
-      })
-      .then(function (resp) {
-        if (!resp.ok) throw new Error('Network');
-
-        // Si todo OK: limpia, muestra banner y resetea zoom móvil
-        form.reset();
-        hide(errorB);
-        show(success);
-        (document.activeElement && document.activeElement.blur && document.activeElement.blur());
-        success.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        resetMobileZoom();
-      })
-      .catch(function () {
-        hide(success);
-        show(errorB);
-      })
-      .finally(function () {
-        btn.disabled = false;
-        btn.textContent = 'Send Message';
-      });
-    }, { passive: false });
-  })();
+      // Quita foco del input activo, scroll suave al mensaje y resetea zoom móvil
+      if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
+      successView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      resetMobileZoom();
+    })
+    .catch(function () {
+      show(errorB);
+    })
+    .finally(function () {
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+    });
+  }, { passive: false });
+})();
 </script>
+
 
 </BaseLayout>
