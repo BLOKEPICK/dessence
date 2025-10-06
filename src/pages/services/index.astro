@@ -48,7 +48,7 @@ const seo = {
     </div>
 
     <!-- Category quick-nav -->
-    <div class="container pb-6">
+    <div class="container pb-6" id="quick-nav">
       <div class="flex flex-wrap justify-center gap-2">
         <a href="#injectables" class="px-3 py-1.5 rounded-full bg-white ring-1 ring-neutral-200 text-sm hover:shadow">Injectables</a>
         <a href="#laser" class="px-3 py-1.5 rounded-full bg-white ring-1 ring-neutral-200 text-sm hover:shadow">Laser</a>
@@ -172,7 +172,6 @@ const seo = {
       </div>
 
       <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <!-- Usa estas rutas si existen; de lo contrario apunta a /contact-us -->
         <a href="/services/prp-microneedling/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
           <div class="flex items-center justify-between">
             <h3 class="font-medium">SkinPen® Microneedling</h3>
@@ -217,7 +216,7 @@ const seo = {
           <p class="mt-2 text-sm text-neutral-600">B12, MICC, L-Carnitine, Glutathione, Tri-Immune, more.</p>
         </a>
 
-        <a href="/contact-us/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+      <a href="/contact-us/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
           <div class="flex items-center justify-between">
             <h3 class="font-medium">IV Infusions</h3>
             <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
@@ -263,4 +262,55 @@ const seo = {
       </div>
     </div>
   </section>
+
+  <!-- Smooth, eased in-page scroll just for the quick-nav -->
+  <script is:inline>
+    (function () {
+      var nav = document.getElementById('quick-nav');
+      if (!nav) return;
+
+      function easeInOutQuad(t){ return t<0.5 ? 2*t*t : -1+(4-2*t)*t; }
+
+      function getOffset() {
+        // Compensa el header fijo para que el título no quede tapado.
+        var header = document.querySelector('header');
+        var base = header ? header.getBoundingClientRect().height : 64;
+        return base + 24; // un poco de aire extra
+      }
+
+      function smoothScrollTo(targetY, duration) {
+        var startY = window.pageYOffset || document.documentElement.scrollTop;
+        var startTime = performance.now();
+        var D = Math.max(250, Math.min(duration, 2000)); // clamp 250–2000ms
+
+        function step(now) {
+          var t = Math.min(1, (now - startTime) / D);
+          var eased = easeInOutQuad(t);
+          window.scrollTo(0, Math.round(startY + (targetY - startY) * eased));
+          if (t < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      nav.addEventListener('click', function (e) {
+        var a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        var id = a.getAttribute('href').slice(1);
+        var el = document.getElementById(id);
+        if (!el) return;
+
+        e.preventDefault();
+
+        var offset = getOffset();
+        var rect = el.getBoundingClientRect();
+        var targetY = (window.pageYOffset || document.documentElement.scrollTop) + rect.top - offset;
+
+        smoothScrollTo(targetY, 750); // ~0.75s, suave sin ser lento
+
+        // Accesibilidad: focus en el destino (sin cambiar el estilo de foco permanente)
+        el.setAttribute('tabindex','-1');
+        setTimeout(function(){ el.focus({ preventScroll: true }); el.removeAttribute('tabindex'); }, 800);
+      }, { passive: false });
+    })();
+  </script>
 </BaseLayout>
