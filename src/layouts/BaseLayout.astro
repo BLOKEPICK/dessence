@@ -113,7 +113,7 @@ const jsonLd = seo?.jsonLd ?? [];
                 aria-controls="menu-laser"
                 data-menu-trigger="laser"
               >
-                Laser Treatments
+                Laser
                 <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
                 </svg>
@@ -132,6 +132,76 @@ const jsonLd = seo?.jsonLd ?? [];
                 <ul class="divide-y divide-white/10">
                   <li><a href="/services/aerolase" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Aerolase<span class="opacity-60">→</span></a></li>
                   <li><a href="/services/laser-hair-removal" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Laser Hair Removal<span class="opacity-60">→</span></a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Advanced Skin Care -->
+            <li class="relative group" role="none">
+              <button
+                class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
+                type="button"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="menu-skin"
+                data-menu-trigger="skin"
+              >
+                Advanced Skin Care
+                <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
+                </svg>
+              </button>
+
+              <div id="menu-skin"
+                   class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[90vw] sm:w-[520px]
+                          rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1
+                          max-h-[70vh] overflow-auto
+                          opacity-0 translate-y-1 pointer-events-none
+                          transition duration-150
+                          group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                          focus-within:opacity-100 focus-within:translate-y-0 focus-within:pointer-events-auto
+                          before:content-[''] before:absolute before:-top-6 before:left-0 before:right-0 before:h-6"
+                   role="menu" tabindex="-1" data-menu-panel="skin">
+                <ul class="divide-y divide-white/10">
+                  <li><a href="/services/microneedling" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">SkinPen® Microneedling<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/chemical-peels" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Chemical Peels<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/facials" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Specialty Facials<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/acne-programs" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Acne Programs (Face Reality)<span class="opacity-60">→</span></a></li>
+                </ul>
+              </div>
+            </li>
+
+            <!-- Wellness & IV -->
+            <li class="relative group" role="none">
+              <button
+                class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
+                type="button"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="menu-wellness"
+                data-menu-trigger="wellness"
+              >
+                Wellness &amp; IV
+                <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
+                </svg>
+              </button>
+
+              <div id="menu-wellness"
+                   class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[90vw] sm:w-[420px]
+                          rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1
+                          max-h-[70vh] overflow-auto
+                          opacity-0 translate-y-1 pointer-events-none
+                          transition duration-150
+                          group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto
+                          focus-within:opacity-100 focus-within:translate-y-0 focus-within:pointer-events-auto
+                          before:content-[''] before:absolute before:-top-6 before:left-0 before:right-0 before:h-6"
+                   role="menu" tabindex="-1" data-menu-panel="wellness">
+                <ul class="divide-y divide-white/10">
+                  <li><a href="/services/wellness" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Vitamin Injections<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/iv-therapy" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">IV Therapy<span class="opacity-60">→</span></a></li>
                 </ul>
               </div>
             </li>
@@ -246,7 +316,7 @@ const jsonLd = seo?.jsonLd ?? [];
             <!-- Laser -->
             <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/[0.08] open:border-white/20 transition-colors">
               <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
-                <span class="font-medium">Laser Treatments</span>
+                <span class="font-medium">Laser</span>
                 <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
               </summary>
               <div class="px-2 pb-2">
@@ -254,6 +324,40 @@ const jsonLd = seo?.jsonLd ?? [];
                   <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/aerolase">Aerolase</a>
                   <div class="h-px bg-white/10"></div>
                   <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/laser-hair-removal">Laser Hair Removal</a>
+                </div>
+              </div>
+            </details>
+
+            <!-- Advanced Skin Care -->
+            <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/[0.08] open:border-white/20 transition-colors">
+              <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
+                <span class="font-medium">Advanced Skin Care</span>
+                <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+              </summary>
+              <div class="px-2 pb-2">
+                <div class="mx-2 rounded-lg bg-white/5 ring-1 ring-white/10">
+                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/microneedling">SkinPen® Microneedling</a>
+                  <div class="h-px bg-white/10"></div>
+                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/chemical-peels">Chemical Peels</a>
+                  <div class="h-px bg-white/10"></div>
+                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/facials">Specialty Facials</a>
+                  <div class="h-px bg-white/10"></div>
+                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/acne-programs">Acne Programs (Face Reality)</a>
+                </div>
+              </div>
+            </details>
+
+            <!-- Wellness & IV -->
+            <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/[0.08] open:border-white/20 transition-colors">
+              <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
+                <span class="font-medium">Wellness &amp; IV</span>
+                <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+              </summary>
+              <div class="px-2 pb-2">
+                <div class="mx-2 rounded-lg bg-white/5 ring-1 ring-white/10">
+                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/wellness">Vitamin Injections</a>
+                  <div class="h-px bg-white/10"></div>
+                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/iv-therapy">IV Therapy</a>
                 </div>
               </div>
             </details>
@@ -280,7 +384,6 @@ const jsonLd = seo?.jsonLd ?? [];
 
           <!-- Separador degradado + logo (AJUSTADO) -->
           <div class="mt-12 px-6">
-            <!-- Blanco fuerte en el centro y desvanecido hacia los lados -->
             <div class="h-[2px] w-full bg-gradient-to-r from-transparent via-white to-transparent"></div>
             <a href="/" class="mt-6 w-full flex items-baseline justify-center gap-2 text-center" aria-label="Home">
               <span class="text-white/95 font-semibold tracking-[0.06em] text-[18px] leading-none">D-Essence</span>
@@ -384,14 +487,15 @@ const jsonLd = seo?.jsonLd ?? [];
               </ul>
             </div>
 
-            <!-- Services -->
+            <!-- Services (Top 4 + all) -->
             <div>
               <h5 class="text-white/90 font-medium">Services</h5>
               <ul class="mt-3 space-y-2 text-sm text-neutral-300">
-                <li><a class="hover:underline" href="/services/aerolase">Aerolase</a></li>
                 <li><a class="hover:underline" href="/services/botox">Botox</a></li>
                 <li><a class="hover:underline" href="/services/juvederm-fillers">Juvederm Fillers</a></li>
                 <li><a class="hover:underline" href="/services/microneedling">Microneedling</a></li>
+                <li><a class="hover:underline" href="/services/aerolase">Aerolase</a></li>
+                <li><a class="hover:underline" href="/services">All Services →</a></li>
               </ul>
             </div>
 
@@ -531,7 +635,6 @@ const jsonLd = seo?.jsonLd ?? [];
         }
 
         function lockScroll() {
-          // Bloqueo robusto (incluye iOS)
           scrollY = window.scrollY || document.documentElement.scrollTop;
           document.body.style.position = 'fixed';
           document.body.style.top = (-scrollY) + 'px';
