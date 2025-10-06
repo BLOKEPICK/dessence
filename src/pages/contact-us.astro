@@ -135,67 +135,76 @@ const seo = {
 
   <!-- AJAX submit + mobile zoom reset -->
   <script is:inline>
-    (function () {
-      var form = document.getElementById('contact-form');
-      var btn  = document.getElementById('submit-btn');
-      var success = document.getElementById('success-banner');
-      var errorB  = document.getElementById('error-banner');
-      var email   = document.getElementById('email');
-      var replyto = document.getElementById('replyto-hidden');
+  (function () {
+    var form = document.getElementById('contact-form');
+    var btn  = document.getElementById('submit-btn');
+    var success = document.getElementById('success-banner');
+    var errorB  = document.getElementById('error-banner');
+    var email   = document.getElementById('email');
+    var replyto = document.getElementById('replyto-hidden');
 
-      // Mantén _replyto sincronizado
-      if (email && replyto) {
-        email.addEventListener('input', function(){ replyto.value = email.value; });
+    // Mantén _replyto sincronizado
+    if (email && replyto) {
+      email.addEventListener('input', function(){ replyto.value = email.value; });
+    }
+
+    function show(el){ el && el.classList.remove('hidden'); }
+    function hide(el){ el && el.classList.add('hidden'); }
+
+    // iOS zoom reset hack: forzar scale=1 y restaurar
+    function resetMobileZoom() {
+      var vp = document.querySelector('meta[name="viewport"]');
+      if (!vp) return;
+      var original = vp.getAttribute('content') || 'width=device-width, initial-scale=1';
+      vp.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
+      setTimeout(function(){ vp.setAttribute('content', original); }, 250);
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      hide(success); hide(errorB);
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
       }
 
-      function show(el){ el && el.classList.remove('hidden'); }
-      function hide(el){ el && el.classList.add('hidden'); }
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
 
-      // iOS zoom reset hack: forzar scale=1 y restaurar
-      function resetMobileZoom() {
-        var vp = document.querySelector('meta[name="viewport"]');
-        if (!vp) return;
-        var original = vp.getAttribute('content') || 'width=device-width, initial-scale=1';
-        vp.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
-        setTimeout(function(){ vp.setAttribute('content', original); }, 250);
-      }
+      var fd = new FormData(form);
 
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        hide(success); hide(errorB);
+      // ✅ Usa el endpoint AJAX (devuelve JSON y NO redirige)
+      fetch('https://formsubmit.co/ajax/Georgevaldezr@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: fd
+      })
+      .then(function (res) {
+        // Asegura parseo robusto de JSON
+        return res.json().catch(function(){ return {}; }).then(function(data){ return { ok: res.ok, data: data }; });
+      })
+      .then(function (resp) {
+        if (!resp.ok) throw new Error('Network');
 
-        if (!form.checkValidity()) {
-          form.reportValidity();
-          return;
-        }
+        // Si todo OK: limpia, muestra banner y resetea zoom móvil
+        form.reset();
+        hide(errorB);
+        show(success);
+        (document.activeElement && document.activeElement.blur && document.activeElement.blur());
+        success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        resetMobileZoom();
+      })
+      .catch(function () {
+        hide(success);
+        show(errorB);
+      })
+      .finally(function () {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+      });
+    }, { passive: false });
+  })();
+</script>
 
-        btn.disabled = true;
-        btn.textContent = 'Sending...';
-
-        var fd = new FormData(form);
-        // Envío AJAX a FormSubmit (sin redirección)
-        fetch('https://formsubmit.co/Georgevaldezr@gmail.com', {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: fd
-        })
-        .then(function(res){ if (!res.ok) throw new Error('Network'); return res.json(); })
-        .then(function() {
-          form.reset();
-          show(success);
-          // Quitar focos, llevar al banner y restablecer zoom móvil
-          (document.activeElement && document.activeElement.blur && document.activeElement.blur());
-          success.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          resetMobileZoom();
-        })
-        .catch(function() {
-          show(errorB);
-        })
-        .finally(function() {
-          btn.disabled = false;
-          btn.textContent = 'Send Message';
-        });
-      }, { passive: false });
-    })();
-  </script>
 </BaseLayout>
