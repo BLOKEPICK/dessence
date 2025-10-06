@@ -4,24 +4,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const seo = {
   title: 'Meet the Provider | D-Essence Wellness',
   description:
-    'Meet Yanixza Morales, Board Certified-Family Nurse Practitioner. Her philosophy blends precision, safety, and natural outcomes.',
+    'Get to know Yanixza Morales, Board Certified-Family Nurse Practitioner. Credentials, focus areas, and a philosophy centered on natural, safe outcomes.',
   canonical: '/meet-the-provider',
   type: 'profile',
   jsonLd: [
     {
       '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: '/' },
-        { '@type': 'ListItem', position: 2, name: 'Meet the Provider', item: '/meet-the-provider' }
-      ]
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      name: 'Yanixza Morales',
-      jobTitle: 'Family Nurse Practitioner',
-      worksFor: { '@type': 'MedicalBusiness', name: 'D-Essence Wellness' }
+      '@type': 'ProfilePage',
+      name: 'Meet the Provider',
+      url: 'https://dessencewellness.com/meet-the-provider',
+      mainEntity: {
+        '@type': 'Person',
+        name: 'Yanixza Morales',
+        jobTitle: 'Family Nurse Practitioner',
+        description:
+          'Board Certified-Family Nurse Practitioner providing modern, evidence-based aesthetic care.',
+        image: 'https://dessencewellness.com/Yani.webp',
+        worksFor: {
+          '@type': 'HealthAndBeautyBusiness',
+          name: 'D-Essence Wellness'
+        }
+      }
     }
   ]
 };
@@ -29,61 +32,83 @@ const seo = {
 
 <BaseLayout seo={seo}>
   <section class="bg-white text-neutral-900">
-    <div class="container py-14 sm:py-16">
-      <div class="max-w-3xl">
-        <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight">Meet the Provider</h1>
-        <p class="mt-3 text-neutral-600">
-          Thoughtful, evidence-guided aesthetics led by a Board Certified-Family Nurse Practitioner.
-        </p>
-      </div>
+    <div class="container pt-24 pb-12">
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        <!-- Text -->
+        <div class="lg:col-span-7">
+          <span class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-neutral-500">
+            Meet the Provider
+          </span>
+          <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">
+            Yanixza Morales, Board Certified-Family Nurse Practitioner
+          </h1>
+          <p class="mt-4 text-neutral-600 max-w-xl">
+            I approach aesthetics with medical rigor and a conservative philosophy. My goal is to protect skin health,
+            maintain harmony, and help you feel confident without looking “done.”
+          </p>
 
-      <div class="mt-8 grid md:grid-cols-12 gap-8 md:gap-10 items-start">
-        <div class="md:col-span-5">
-          <div class="relative rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-neutral-100 shadow-sm">
-            <div class="aspect-[3/4]">
-              <img src="/Yani.webp" alt="Yanixza Morales, FNP at D-Essence Wellness" loading="lazy" class="w-full h-full object-cover" />
+          <!-- Credentials -->
+          <div class="mt-6 grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium">Credentials</div>
+              <ul class="mt-2 space-y-1 text-sm text-neutral-700">
+                <li>Board Certified – Family Nurse Practitioner</li>
+                <li>Advanced injectables & cannula training</li>
+                <li>Laser safety & device certifications</li>
+                <li>Clinical protocols & complications management</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium">Areas of focus</div>
+              <ul class="mt-2 space-y-1 text-sm text-neutral-700">
+                <li>Natural neurotoxin dosing</li>
+                <li>Midface structure with Juvederm®</li>
+                <li>SkinPen® microneedling + PRP/PRF</li>
+                <li>Aerolase® for tone and redness</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h2 class="text-lg font-semibold">Philosophy of care</h2>
+            <p class="mt-2 text-neutral-600">
+              Less, but better. I combine detailed assessment, conservative increments, and follow-up to build results
+              that wear beautifully over time. Comfort and safety are non-negotiable.
+            </p>
+          </div>
+
+          <div class="mt-6 grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium">Continuing education</div>
+              <ul class="mt-2 space-y-1 text-sm text-neutral-700">
+                <li>Facial anatomy intensives</li>
+                <li>Advanced toxin & filler techniques</li>
+                <li>Laser & energy-based device workshops</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium">Outside the clinic</div>
+              <p class="mt-2 text-sm text-neutral-700">
+                A believer in calm spaces, skincare rituals, and evidence over hype. I love helping patients feel at
+                ease and informed throughout their journey.
+              </p>
             </div>
           </div>
         </div>
 
-        <div class="md:col-span-7">
-          <h2 class="text-2xl font-semibold tracking-tight">Yanixza Morales, Board Certified-Family Nurse Practitioner</h2>
-          <p class="mt-3 text-neutral-700">
-            Yanixza focuses on subtle, natural outcomes through a calm, clinical process that prioritizes your
-            goals and long-term skin health. Expect conservative dosing, precise technique, and clear aftercare.
-          </p>
-
-          <ul class="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-3 text-sm text-neutral-700">
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Injectables (Botox®, Xeomin®, Daxxify®)</li>
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Juvederm® fillers & facial balance</li>
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Microneedling with PRP/PRF</li>
-            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Aerolase® laser & Smooth Threads</li>
-          </ul>
-
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx" target="_blank" rel="noopener"
-               class="inline-flex items-center justify-center rounded-full bg-neutral-900 text-white px-5 py-2.5 hover:bg-neutral-800">
-              Book Consultation
-            </a>
-            <a href="/contact-us" class="inline-flex items-center justify-center rounded-full border border-neutral-300 text-neutral-900 px-5 py-2.5 hover:bg-neutral-50">
-              Contact Us
-            </a>
+        <!-- Portrait -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-sm rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-neutral-100 shadow-sm">
+            <div class="absolute top-3 left-3 z-10">
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/90 ring-1 ring-neutral-200 text-[11px] text-neutral-700 backdrop-blur">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Board Certified-FNP
+              </span>
+            </div>
+            <div class="aspect-[3/4] w-full">
+              <img src="/Yani.webp" alt="Yanixza Morales, FNP at D-Essence Wellness" loading="lazy" class="w-full h-full object-cover" />
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div class="mt-12 grid md:grid-cols-3 gap-4">
-        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
-          <h3 class="font-medium text-neutral-900">Natural > Noticeable</h3>
-          <p class="mt-2 text-sm text-neutral-600">Harmony and balance—never overfilled, never obvious.</p>
-        </div>
-        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
-          <h3 class="font-medium text-neutral-900">Safety by Design</h3>
-          <p class="mt-2 text-sm text-neutral-600">Medical-grade products, sterile technique, candid eligibility.</p>
-        </div>
-        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
-          <h3 class="font-medium text-neutral-900">Clarity & Care</h3>
-          <p class="mt-2 text-sm text-neutral-600">Plain-spoken guidance, realistic expectations, timely follow-up.</p>
         </div>
       </div>
     </div>
