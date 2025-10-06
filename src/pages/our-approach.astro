@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const seo = {
+  title: 'Our Approach | D-Essence Wellness',
+  description:
+    'A clear, conservative, evidence-guided process—consultation, plan, treatment, and follow-up—designed for natural, safe, and consistent results.',
+  canonical: '/about/our-approach',
+  type: 'website',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: '/' },
+        { '@type': 'ListItem', position: 2, name: 'About Us', item: '/about-us' },
+        { '@type': 'ListItem', position: 3, name: 'Our Approach', item: '/about/our-approach' }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout seo={seo}>
+  <!-- HERO (blanco) -->
+  <section class="bg-white text-neutral-900">
+    <div class="container py-14 sm:py-16">
+      <div class="max-w-3xl">
+        <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight">Our Approach</h1>
+        <p class="mt-3 text-neutral-600">
+          A simple, transparent process built around safety, subtlety, and your long-term skin health.
+        </p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="mt-8 grid lg:grid-cols-5 gap-4">
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <div class="text-xs uppercase tracking-wide text-neutral-500">Step 1</div>
+          <h2 class="mt-1 font-medium">Consultation</h2>
+          <p class="mt-2 text-sm text-neutral-600">We listen to your goals, history, and timeline. Photos as needed.</p>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <div class="text-xs uppercase tracking-wide text-neutral-500">Step 2</div>
+          <h2 class="mt-1 font-medium">Assessment & Plan</h2>
+          <p class="mt-2 text-sm text-neutral-600">Face mapping, candidacy, and a phased, budget-aware plan.</p>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <div class="text-xs uppercase tracking-wide text-neutral-500">Step 3</div>
+          <h2 class="mt-1 font-medium">Treatment Day</h2>
+          <p class="mt-2 text-sm text-neutral-600">Conservative dosing, sterile technique, and comfort measures.</p>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <div class="text-xs uppercase tracking-wide text-neutral-500">Step 4</div>
+          <h2 class="mt-1 font-medium">Aftercare</h2>
+          <p class="mt-2 text-sm text-neutral-600">Clear instructions and check-ins to support healing and results.</p>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <div class="text-xs uppercase tracking-wide text-neutral-500">Step 5</div>
+          <h2 class="mt-1 font-medium">Maintenance</h2>
+          <p class="mt-2 text-sm text-neutral-600">Skin health guidance and timing for future visits when helpful.</p>
+        </div>
+      </div>
+
+      <!-- Standards -->
+      <div class="mt-12 grid md:grid-cols-2 gap-4">
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <h3 class="font-medium text-neutral-900">Safety & Standards</h3>
+          <ul class="mt-3 space-y-2 text-sm text-neutral-700">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Medical-grade products & FDA-cleared devices
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Sterile technique & documented consent
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Conservative dosing & candid eligibility
+            </li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <h3 class="font-medium text-neutral-900">Ethics & Boundaries</h3>
+          <ul class="mt-3 space-y-2 text-sm text-neutral-700">
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              We decline when a request risks safety or natural harmony
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              We set realistic expectations—no pressure, ever
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Your privacy and dignity come first
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FAQs -->
+      <div class="mt-12">
+        <h3 class="text-xl font-semibold tracking-tight">FAQs</h3>
+        <div class="mt-4 space-y-3">
+          <details class="rounded-xl border border-neutral-200 bg-white p-4">
+            <summary class="list-none cursor-pointer font-medium">Will I look “overdone”?</summary>
+            <p class="mt-2 text-sm text-neutral-600">Our philosophy is subtle and conservative. We prioritize balance and skin health over extremes.</p>
+          </details>
+          <details class="rounded-xl border border-neutral-200 bg-white p-4">
+            <summary class="list-none cursor-pointer font-medium">Who performs the treatments?</summary>
+            <p class="mt-2 text-sm text-neutral-600">Treatments are provider-led with protocols that emphasize safety, comfort, and clarity at every step.</p>
+          </details>
+          <details class="rounded-xl border border-neutral-200 bg-white p-4">
+            <summary class="list-none cursor-pointer font-medium">Is there downtime?</summary>
+            <p class="mt-2 text-sm text-neutral-600">Downtime varies by service. We review expectations and aftercare in detail during your visit.</p>
+          </details>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center rounded-full bg-neutral-900 text-white px-5 py-2.5 hover:bg-neutral-800">
+          Book Consultation
+        </a>
+        <a href="/services" class="inline-flex items-center justify-center rounded-full border border-neutral-300 text-neutral-900 px-5 py-2.5 hover:bg-neutral-50">
+          Explore Services
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

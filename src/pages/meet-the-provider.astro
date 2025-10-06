@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const seo = {
+  title: 'Meet the Provider | D-Essence Wellness',
+  description:
+    'Meet Yanixza Morales, Board Certified-Family Nurse Practitioner. Learn about her philosophy, expertise, and the patient-first standards that guide every treatment.',
+  canonical: '/about/meet-the-provider',
+  type: 'profile',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: '/' },
+        { '@type': 'ListItem', position: 2, name: 'About Us', item: '/about-us' },
+        { '@type': 'ListItem', position: 3, name: 'Meet the Provider', item: '/about/meet-the-provider' }
+      ]
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Yanixza Morales',
+      jobTitle: 'Family Nurse Practitioner',
+      worksFor: { '@type': 'MedicalBusiness', name: 'D-Essence Wellness' }
+    }
+  ]
+};
+---
+
+<BaseLayout seo={seo}>
+  <!-- HERO (blanco) -->
+  <section class="bg-white text-neutral-900">
+    <div class="container py-14 sm:py-16">
+      <div class="max-w-3xl">
+        <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight">Meet the Provider</h1>
+        <p class="mt-3 text-neutral-600">
+          Thoughtful, evidence-guided aesthetics led by a Board Certified-Family Nurse Practitioner.
+        </p>
+      </div>
+
+      <!-- Bio split -->
+      <div class="mt-8 grid md:grid-cols-12 gap-8 md:gap-10 items-start">
+        <div class="md:col-span-5">
+          <div class="relative rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-neutral-100 shadow-sm">
+            <div class="aspect-[3/4]">
+              <img src="/Yani.webp" alt="Yanixza Morales, FNP at D-Essence Wellness" loading="lazy" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-7">
+          <h2 class="text-2xl font-semibold tracking-tight">Yanixza Morales, Board Certified-Family Nurse Practitioner</h2>
+          <p class="mt-3 text-neutral-700">
+            Yanixza delivers subtle, natural outcomes through a calm, clinical process that puts your goals,
+            safety, and long-term skin health first. Her approach favors conservative dosing, precise technique,
+            and clear guidance—so results look like <em>you</em>, just rested and confident.
+          </p>
+
+          <ul class="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-3 text-sm text-neutral-700">
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Board Certified – Family Nurse Practitioner</li>
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Specializes in injectables, microneedling & laser</li>
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Evidence-based protocols & informed consent</li>
+            <li class="flex items-start gap-2"><svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Follow-up & aftercare built into your plan</li>
+          </ul>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx" target="_blank" rel="noopener"
+               class="inline-flex items-center justify-center rounded-full bg-neutral-900 text-white px-5 py-2.5 hover:bg-neutral-800">
+              Book Consultation
+            </a>
+            <a href="/contact-us" class="inline-flex items-center justify-center rounded-full border border-neutral-300 text-neutral-900 px-5 py-2.5 hover:bg-neutral-50">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Philosophy -->
+      <div class="mt-12 grid md:grid-cols-3 gap-4">
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <h3 class="font-medium text-neutral-900">Natural > Noticeable</h3>
+          <p class="mt-2 text-sm text-neutral-600">Harmony and balance first—never overfilled, never obvious.</p>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <h3 class="font-medium text-neutral-900">Safety by Design</h3>
+          <p class="mt-2 text-sm text-neutral-600">Medical-grade products, sterile technique, and candid eligibility.</p>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <h3 class="font-medium text-neutral-900">Clarity & Care</h3>
+          <p class="mt-2 text-sm text-neutral-600">Plain-spoken guidance, realistic expectations, and post-care check-ins.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
