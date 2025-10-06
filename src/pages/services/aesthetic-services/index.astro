@@ -1,0 +1,299 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const seo = {
+  title: 'Aesthetic Services | D-Essence Wellness',
+  description:
+    'Waxing & Sugaring (Face • Brows • Bikini • Body), Professional Teeth Whitening, and private Events & Workshops. Modern finishes with clinical standards.',
+  canonical: '/services/aesthetic-services/',
+  type: 'website',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'HealthAndBeautyBusiness',
+      name: 'D-Essence Wellness',
+      url: 'https://dessencewellness.com/services/aesthetic-services/',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '871 Blooming Grove Turnpike Suite 102',
+        addressLocality: 'New Windsor',
+        addressRegion: 'NY',
+        postalCode: '12553',
+        addressCountry: 'US'
+      },
+      makesOffer: [
+        { '@type': 'Service', name: 'Waxing' },
+        { '@type': 'Service', name: 'Sugaring' },
+        { '@type': 'Service', name: 'Teeth Whitening' },
+        { '@type': 'Service', name: 'Botox Parties' },
+        { '@type': 'Service', name: 'Spa Parties' },
+        { '@type': 'Service', name: 'Skincare Workshops' }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout seo={seo}>
+  <!-- ===== HERO (light) ===== -->
+  <section class="bg-neutral-50 border-b border-neutral-200">
+    <div class="container py-14 sm:py-16">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-neutral-500">
+          <span>Services</span><span class="opacity-40">•</span><span>Aesthetic Services</span>
+        </div>
+        <h1 class="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight text-neutral-900">
+          Aesthetic Services
+        </h1>
+        <p class="mt-4 text-neutral-700">
+          Polished finishes and memorable experiences—delivered with a gentle, professional touch.
+          Explore waxing &amp; sugaring, pro teeth whitening, and private events or workshops.
+        </p>
+      </div>
+
+      <!-- Quick-nav -->
+      <div class="mt-6">
+        <nav aria-label="Category quick-nav"
+             class="flex gap-2 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none]"
+             style="scrollbar-width:none">
+          {[
+            { id: 'waxing-sugaring', label: 'Waxing & Sugaring' },
+            { id: 'teeth-whitening', label: 'Teeth Whitening' },
+            { id: 'events', label: 'Events & Workshops' },
+          ].map(link => (
+            <a href={`#${link.id}`}
+               class="inline-flex items-center rounded-full border border-neutral-300 bg-white px-3 py-1.5 text-sm text-neutral-800 hover:bg-neutral-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WAXING & SUGARING ===== -->
+  <section id="waxing-sugaring" class="py-12 sm:py-14">
+    <div class="container">
+      <div class="grid md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-5">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Waxing &amp; Sugaring</h2>
+          <p class="mt-3 text-neutral-700">
+            Efficient hair removal for smooth, refined skin. Options for sensitive skin and
+            multiple areas—from face and brows to bikini and body.
+          </p>
+          <p class="mt-2 text-neutral-600 text-sm">
+            Consultation helps determine the right technique and cadence for your skin and goals.
+          </p>
+        </div>
+
+        <div class="md:col-span-7">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <a href="/services/waxing-sugaring" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md hover:-translate-y-0.5 transition">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200">
+                  <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none">
+                    <path d="M12 3c4 0 7 3 7 7s-3 7-7 7-7-3-7-7 3-7 7-7zm-2 12l6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="font-medium text-neutral-900">Face &amp; Brows</h3>
+                  <p class="mt-1 text-sm text-neutral-600">Full face, brows, lip, chin, sideburns</p>
+                </div>
+              </div>
+              <div class="mt-3 text-sm underline underline-offset-4 decoration-neutral-300 text-neutral-800 group-hover:decoration-neutral-700">View options →</div>
+            </a>
+
+            <a href="/services/waxing-sugaring" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md hover:-translate-y-0.5 transition">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200">
+                  <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none">
+                    <path d="M5 7h14M6 12h12M7 17h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="font-medium text-neutral-900">Body</h3>
+                  <p class="mt-1 text-sm text-neutral-600">Arms, underarms, legs—customized plans</p>
+                </div>
+              </div>
+              <div class="mt-3 text-sm underline underline-offset-4 decoration-neutral-300 text-neutral-800 group-hover:decoration-neutral-700">View options →</div>
+            </a>
+
+            <a href="/services/waxing-sugaring" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md hover:-translate-y-0.5 transition sm:col-span-2">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200">
+                  <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none">
+                    <path d="M9 7h6l1 3H8l1-3zM7 21h10a2 2 0 002-2v-1H5v1a2 2 0 002 2z" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="font-medium text-neutral-900">Bikini / Brazilian</h3>
+                  <p class="mt-1 text-sm text-neutral-600">Discreet, efficient, and comfort-focused</p>
+                </div>
+              </div>
+              <div class="mt-3 text-sm underline underline-offset-4 decoration-neutral-300 text-neutral-800 group-hover:decoration-neutral-700">View options →</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEETH WHITENING ===== -->
+  <section id="teeth-whitening" class="py-12 sm:py-14">
+    <div class="container">
+      <div class="grid md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-5">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Teeth Whitening</h2>
+          <p class="mt-3 text-neutral-700">
+            Brighter smile, minimal sensitivity. A professional-grade approach to lift surface stains
+            and even tone for a confident, polished finish.
+          </p>
+          <p class="mt-2 text-neutral-600 text-sm">
+            Includes shade assessment and aftercare guidance to help you maintain results.
+          </p>
+        </div>
+
+        <div class="md:col-span-7">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <a href="/services/teeth-whitening" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md hover:-translate-y-0.5 transition sm:col-span-2">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200">
+                  <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none">
+                    <path d="M12 3c4 0 6 3 6 7s-2 7-6 7-6-3-6-7 2-7 6-7zm0 10l2 2M12 13l-2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="font-medium text-neutral-900">Professional Whitening</h3>
+                  <p class="mt-1 text-sm text-neutral-600">Fast, noticeable brightening</p>
+                </div>
+              </div>
+              <div class="mt-3 text-sm underline underline-offset-4 decoration-neutral-300 text-neutral-800 group-hover:decoration-neutral-700">Learn more →</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EVENTS & WORKSHOPS ===== -->
+  <section id="events" class="py-12 sm:py-14">
+    <div class="container">
+      <div class="grid md:grid-cols-12 gap-8 items-start">
+        <div class="md:col-span-5">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Events &amp; Workshops</h2>
+          <p class="mt-3 text-neutral-700">
+            Host a private aesthetic experience—perfect for celebrations or team wellness.
+            We tailor the format to your group’s goals and timing.
+          </p>
+          <p class="mt-2 text-neutral-600 text-sm">
+            Availability is limited; advance scheduling recommended.
+          </p>
+        </div>
+
+        <div class="md:col-span-7">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <a href="/contact-us" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md hover:-translate-y-0.5 transition">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200">
+                  <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none">
+                    <path d="M8 7h8l1 3H7l1-3zM6 21h12a2 2 0 002-2v-1H4v1a2 2 0 002 2z" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="font-medium text-neutral-900">Spa Parties</h3>
+                  <p class="mt-1 text-sm text-neutral-600">Girls’ night or special occasions</p>
+                </div>
+              </div>
+              <div class="mt-3 text-sm underline underline-offset-4 decoration-neutral-300 text-neutral-800 group-hover:decoration-neutral-700">Inquire →</div>
+            </a>
+
+            <a href="/contact-us" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md hover:-translate-y-0.5 transition">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200">
+                  <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none">
+                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="font-medium text-neutral-900">Botox Parties</h3>
+                  <p class="mt-1 text-sm text-neutral-600">Private group appointments</p>
+                </div>
+              </div>
+              <div class="mt-3 text-sm underline underline-offset-4 decoration-neutral-300 text-neutral-800 group-hover:decoration-neutral-700">Inquire →</div>
+            </a>
+
+            <a href="/contact-us" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md hover:-translate-y-0.5 transition sm:col-span-2">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200">
+                  <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none">
+                    <path d="M7 9h10M7 13h10M7 17h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <div>
+                  <h3 class="font-medium text-neutral-900">Skincare Workshops</h3>
+                  <p class="mt-1 text-sm text-neutral-600">Education + routine building</p>
+                </div>
+              </div>
+              <div class="mt-3 text-sm underline underline-offset-4 decoration-neutral-300 text-neutral-800 group-hover:decoration-neutral-700">Inquire →</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Short FAQ ===== -->
+  <section class="py-12 sm:py-14 border-t border-neutral-200">
+    <div class="container">
+      <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">FAQ</h2>
+      <div class="mt-6 grid gap-4">
+        <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+          <summary class="list-none cursor-pointer flex items-center justify-between">
+            <span class="font-medium text-neutral-900">Is sugaring gentler than waxing?</span>
+            <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+          </summary>
+          <p class="mt-3 text-neutral-700 text-sm">
+            Many find sugaring more comfortable on sensitive areas. We’ll recommend the best method based on your skin and hair type.
+          </p>
+        </details>
+
+        <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+          <summary class="list-none cursor-pointer flex items-center justify-between">
+            <span class="font-medium text-neutral-900">How long does whitening last?</span>
+            <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+          </summary>
+          <p class="mt-3 text-neutral-700 text-sm">
+            With good habits, results can last months. We’ll share maintenance tips and touch-up cadence tailored to you.
+          </p>
+        </details>
+
+        <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+          <summary class="list-none cursor-pointer flex items-center justify-between">
+            <span class="font-medium text-neutral-900">How do we book a private event?</span>
+            <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+          </summary>
+          <p class="mt-3 text-neutral-700 text-sm">
+            Send a note via our <a class="underline underline-offset-2" href="/contact-us">contact form</a>
+            with your preferred date, group size, and interests—we’ll coordinate details and options.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local smooth scroll for this page -->
+  <script is:inline>
+    (function () {
+      var links = document.querySelectorAll('a[href^="#"]');
+      links.forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          var id = a.getAttribute('href').slice(1);
+          var el = document.getElementById(id);
+          if (!el) return;
+          e.preventDefault();
+          window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 24, behavior: 'smooth' });
+        });
+      });
+    })();
+  </script>
+</BaseLayout>
