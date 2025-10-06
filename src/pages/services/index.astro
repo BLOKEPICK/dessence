@@ -1,20 +1,264 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const seo = { title: 'Services | D-Essence Wellness', description: 'Explore our treatments.' };
+
+const seo = {
+  title: 'Services | D-Essence Wellness',
+  description:
+    'Explore our treatments—Injectables, Laser, Advanced Skin Care, Wellness & IV, and Aesthetic Services—designed for natural, undetectable results.',
+  canonical: '/services/',
+  type: 'website',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Services | D-Essence Wellness',
+      url: 'https://dessencewellness.com/services/'
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Featured Treatments',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Botox', url: 'https://dessencewellness.com/services/botox/' },
+        { '@type': 'ListItem', position: 2, name: 'Xeomin', url: 'https://dessencewellness.com/services/xeomin/' },
+        { '@type': 'ListItem', position: 3, name: 'Daxxify', url: 'https://dessencewellness.com/services/daxxify/' },
+        { '@type': 'ListItem', position: 4, name: 'Botox for Hyperhidrosis', url: 'https://dessencewellness.com/services/botox-for-hyperhidrosis/' },
+        { '@type': 'ListItem', position: 5, name: 'PRP Microneedling', url: 'https://dessencewellness.com/services/prp-microneedling/' },
+        { '@type': 'ListItem', position: 6, name: 'PRF Microneedling', url: 'https://dessencewellness.com/services/prf-microneedling/' },
+        { '@type': 'ListItem', position: 7, name: 'Juvederm Fillers', url: 'https://dessencewellness.com/services/juvederm-fillers/' },
+        { '@type': 'ListItem', position: 8, name: 'Smooth Threads', url: 'https://dessencewellness.com/services/smooth-threads/' },
+        { '@type': 'ListItem', position: 9, name: 'Aerolase', url: 'https://dessencewellness.com/services/aerolase/' },
+        { '@type': 'ListItem', position: 10, name: 'Laser Hair Removal', url: 'https://dessencewellness.com/services/laser-hair-removal/' },
+        { '@type': 'ListItem', position: 11, name: 'Waxing & Sugaring', url: 'https://dessencewellness.com/services/waxing-sugaring/' },
+        { '@type': 'ListItem', position: 12, name: 'Teeth Whitening', url: 'https://dessencewellness.com/services/teeth-whitening/' }
+      ]
+    }
+  ]
+};
 ---
+
 <BaseLayout seo={seo}>
-  <section class="section">
-    <div class="container">
-      <h1 class="text-3xl font-semibold tracking-tight">Services</h1>
-      <p class="mt-3 text-neutral-400">Browse a few highlighted treatments. More coming soon.</p>
-      <div class="mt-8 grid sm:grid-cols-2 gap-4">
-        <a href="/services/aerolase" class="card p-5 ring-1 ring-white/10 hover:bg-white/5 transition">
-          <h2 class="font-medium">Aerolase</h2>
-          <p class="text-sm text-neutral-400 mt-1">Gentle laser for tone, redness & glow.</p>
+  <section class="bg-white text-neutral-900">
+    <!-- Header -->
+    <div class="container pt-24 pb-8 text-center max-w-3xl">
+      <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight">Services</h1>
+      <p class="mt-4 text-neutral-600">
+        Treatments designed for balance, longevity, and undetectable results—delivered with clinical precision.
+      </p>
+    </div>
+
+    <!-- Category quick-nav -->
+    <div class="container pb-6">
+      <div class="flex flex-wrap justify-center gap-2">
+        <a href="#injectables" class="px-3 py-1.5 rounded-full bg-white ring-1 ring-neutral-200 text-sm hover:shadow">Injectables</a>
+        <a href="#laser" class="px-3 py-1.5 rounded-full bg-white ring-1 ring-neutral-200 text-sm hover:shadow">Laser</a>
+        <a href="#skin" class="px-3 py-1.5 rounded-full bg-white ring-1 ring-neutral-200 text-sm hover:shadow">Advanced Skin Care</a>
+        <a href="#wellness" class="px-3 py-1.5 rounded-full bg-white ring-1 ring-neutral-200 text-sm hover:shadow">Wellness & IV</a>
+        <a href="#aesthetic" class="px-3 py-1.5 rounded-full bg-white ring-1 ring-neutral-200 text-sm hover:shadow">Aesthetic Services</a>
+      </div>
+    </div>
+
+    <!-- Injectables -->
+    <div id="injectables" class="container py-8">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-semibold tracking-tight">Injectables</h2>
+          <p class="mt-1 text-neutral-600">Subtle refinement using neuromodulators, fillers, and collagen stimulation.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/services/botox/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Botox®</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Soften lines while preserving expression.</p>
         </a>
-        <a href="/services/microneedling" class="card p-5 ring-1 ring-white/10 hover:bg-white/5 transition">
-          <h2 class="font-medium">Microneedling</h2>
-          <p class="text-sm text-neutral-400 mt-1">Collagen induction for texture & scars.</p>
+
+        <a href="/services/xeomin/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Xeomin®</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Purified neuromodulator for a smooth, natural look.</p>
+        </a>
+
+        <a href="/services/daxxify/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Daxxify®</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Innovative peptide-powered toxin option.</p>
+        </a>
+
+        <a href="/services/botox-for-hyperhidrosis/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Botox® for Hyperhidrosis</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Underarm sweating control for comfort & confidence.</p>
+        </a>
+
+        <a href="/services/juvederm-fillers/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Juvederm® Fillers</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Structure, balance, and refined contour.</p>
+        </a>
+
+        <a href="/services/smooth-threads/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Smooth Threads</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Collagen stimulation for subtle tightening.</p>
+        </a>
+
+        <a href="/services/prp-microneedling/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">PRP Microneedling</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Texture, scars & glow with platelet-rich plasma.</p>
+        </a>
+
+        <a href="/services/prf-microneedling/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">PRF Microneedling</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Fibrin matrix support for rejuvenation.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Laser -->
+    <div id="laser" class="container py-8">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-semibold tracking-tight">Laser</h2>
+          <p class="mt-1 text-neutral-600">Gentle technology for tone, redness, pigment, and hair removal.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/services/aerolase/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Aerolase® Neo Elite</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Acne, rosacea, redness, melasma & collagen support.</p>
+        </a>
+
+        <a href="/services/laser-hair-removal/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Laser Hair Removal</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Safe and effective across Fitzpatrick I–VI.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Advanced Skin Care -->
+    <div id="skin" class="container py-8">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-semibold tracking-tight">Advanced Skin Care</h2>
+          <p class="mt-1 text-neutral-600">Clinical treatments that improve texture, tone, and clarity.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Usa estas rutas si existen; de lo contrario apunta a /contact-us -->
+        <a href="/services/prp-microneedling/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">SkinPen® Microneedling</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Collagen induction for texture, scars & pores.</p>
+        </a>
+
+        <a href="/contact-us/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Chemical Peels</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Perfect Derma Peel • BioRePeel (consult for fit).</p>
+        </a>
+
+        <a href="/contact-us/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Specialty Facials & Acne Programs</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Face Reality Boot Camp, dermaplaning & more.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Wellness & IV -->
+    <div id="wellness" class="container py-8">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-semibold tracking-tight">Wellness & IV</h2>
+          <p class="mt-1 text-neutral-600">Targeted vitamin injections and tailored infusions.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/contact-us/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Vitamin Injections</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">B12, MICC, L-Carnitine, Glutathione, Tri-Immune, more.</p>
+        </a>
+
+        <a href="/contact-us/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">IV Infusions</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Energy • Immunity • Hydration • Wellness.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Aesthetic Services -->
+    <div id="aesthetic" class="container py-8 pb-16">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-semibold tracking-tight">Aesthetic Services</h2>
+          <p class="mt-1 text-neutral-600">Finishing touches that enhance your routine.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <a href="/services/waxing-sugaring/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Waxing & Sugaring</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Full face, brows, bikini & body.</p>
+        </a>
+
+        <a href="/services/teeth-whitening/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Teeth Whitening</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Brighter smile with minimal sensitivity.</p>
+        </a>
+
+        <a href="/contact-us/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Events & Workshops</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+          <p class="mt-2 text-sm text-neutral-600">Botox parties, spa events, skincare education.</p>
         </a>
       </div>
     </div>
