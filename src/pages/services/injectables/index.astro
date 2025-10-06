@@ -1,21 +1,22 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+// src/pages/services/injectables/index.astro
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const services = [
-  { name: 'Botox', url: '/services/botox', blurb: 'Suaviza líneas de expresión con un acabado natural.' },
-  { name: 'Xeomin', url: '/services/xeomin', blurb: 'Neuromodulador puro, ideal para un look fresco.' },
-  { name: 'Daxxify', url: '/services/daxxify', blurb: 'Duración prolongada para control de líneas dinámicas.' },
-  { name: 'Botox for Hyperhidrosis', url: '/services/botox-for-hyperhidrosis', blurb: 'Control de sudoración axilar con precisión clínica.' },
-  { name: 'Juvederm Fillers', url: '/services/juvederm-fillers', blurb: 'Volumen y contorno con armonía facial.' },
-  { name: 'PRP Microneedling', url: '/services/prp-microneedling', blurb: 'Estimula colágeno con tu propio plasma.' },
-  { name: 'PRF Microneedling', url: '/services/prf-microneedling', blurb: 'Regeneración avanzada con fibrina rica en plaquetas.' },
-  { name: 'Smooth Threads', url: '/services/smooth-threads', blurb: 'Estimulación de colágeno para firmeza sutil.' },
+  { name: 'Botox®', url: '/services/botox', blurb: 'Softens expression lines with a natural, balanced finish.' },
+  { name: 'Xeomin®', url: '/services/xeomin', blurb: 'A purified neuromodulator for a fresh, precise look.' },
+  { name: 'Daxxify®', url: '/services/daxxify', blurb: 'Longer-lasting modulation of dynamic lines.' },
+  { name: 'Botox® for Hyperhidrosis', url: '/services/botox-for-hyperhidrosis', blurb: 'Underarm sweating control with clinical precision.' },
+  { name: 'Juvederm® Fillers', url: '/services/juvederm-fillers', blurb: 'Volume and contour with harmonious facial balance.' },
+  { name: 'PRP Microneedling', url: '/services/prp-microneedling', blurb: 'Collagen induction using your own plasma.' },
+  { name: 'PRF Microneedling', url: '/services/prf-microneedling', blurb: 'Advanced regeneration with platelet-rich fibrin.' },
+  { name: 'Smooth Threads', url: '/services/smooth-threads', blurb: 'Collagen stimulation for subtle firmness.' },
 ];
 
 const seo = {
   title: 'Injectables | D-Essence Wellness',
   description:
-    'Neuromoduladores, rellenos Juvederm, PRP/PRF y Smooth Threads con enfoque conservador y resultados naturales. New Windsor, NY.',
+    'Neuromodulators, Juvederm fillers, PRP/PRF microneedling, and Smooth Threads—conservative dosing, natural results. New Windsor, NY.',
   canonical: '/services/injectables/',
   type: 'website',
   jsonLd: [
@@ -33,6 +34,7 @@ const seo = {
   ]
 };
 ---
+
 
 <BaseLayout seo={seo}>
   <!-- ===== HERO (oscuro corto) ===== -->
