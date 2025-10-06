@@ -35,10 +35,14 @@ const seo = {
   <!-- ===== CONTENT (white) ===== -->
   <section class="bg-white text-neutral-900">
     <div class="container py-12 sm:py-14">
-      <!-- Success banner (appears after redirect) -->
+      <!-- Banners -->
       <div id="success-banner" class="hidden mb-6 rounded-xl bg-emerald-50 ring-1 ring-emerald-200 p-4 text-emerald-900" role="status" aria-live="polite">
         <div class="font-medium">Message sent!</div>
         <p class="text-sm mt-1">Thanks for reaching out—our team will reply shortly.</p>
+      </div>
+      <div id="error-banner" class="hidden mb-6 rounded-xl bg-red-50 ring-1 ring-red-200 p-4 text-red-900" role="alert">
+        <div class="font-medium">Something went wrong.</div>
+        <p class="text-sm mt-1">Please try again, or call us at <a href="tel:+17163038963" class="underline"> (716) 303-8963</a>.</p>
       </div>
 
       <div class="grid lg:grid-cols-12 gap-8">
@@ -46,41 +50,29 @@ const seo = {
         <div class="lg:col-span-4">
           <h2 class="text-xl font-semibold">Start the conversation</h2>
           <p class="mt-3 text-neutral-600">
-            Share a bit about your goals or questions. If you prefer, you can also call or send us a DM—whatever is easiest.
+            Share a bit about your goals or questions. If you prefer, call us—we’re happy to help.
           </p>
 
           <div class="mt-5 space-y-2 text-sm text-neutral-700">
             <div>
-              <span class="text-neutral-500">Email:</span>
-              <a class="ml-1 underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700" href="mailto:Georgevaldezr@gmail.com">Georgevaldezr@gmail.com</a>
+              <span class="text-neutral-500">Phone:</span>
+              <a class="ml-1 underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700" href="tel:+17163038963">(716) 303-8963</a>
             </div>
-            <div>
-              <span class="text-neutral-500">Instagram:</span>
-              <a class="ml-1 underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700" href="https://www.instagram.com/d_essencewellness/" target="_blank" rel="noopener">@d_essencewellness</a>
-            </div>
-          </div>
-
-          <div class="mt-6 text-xs text-neutral-500">
-            By submitting this form, you agree to our
-            <a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="/terms-and-conditions/">Terms</a>
-            and
-            <a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="/privacy-policy/">Privacy Policy</a>.
           </div>
         </div>
 
         <!-- Form -->
         <div class="lg:col-span-8">
-          <form
-            action="https://formsubmit.co/Georgevaldezr@gmail.com"
+          <form id="contact-form"
             method="POST"
             accept-charset="UTF-8"
             class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6 sm:p-7"
+            novalidate
           >
-            <!-- FormSubmit settings -->
+            <!-- FormSubmit settings (se envían por AJAX, sin redirección) -->
             <input type="hidden" name="_subject" value="New website inquiry — D-Essence Wellness" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="https://dessencewellness.com/contact-us/?sent=1" />
             <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
 
             <div class="grid sm:grid-cols-2 gap-4">
@@ -105,7 +97,6 @@ const seo = {
                 <input id="email" name="Email" type="email" required
                   class="mt-1 w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-neutral-500 focus:ring-2 focus:ring-neutral-200"
                   autocomplete="email" />
-                <!-- Ensures replies go to the sender -->
                 <input type="hidden" name="_replyto" value="" id="replyto-hidden" />
               </div>
 
@@ -131,7 +122,7 @@ const seo = {
             </div>
 
             <div class="mt-6">
-              <button type="submit"
+              <button id="submit-btn" type="submit"
                 class="inline-flex items-center justify-center rounded-full bg-neutral-900 text-white px-5 py-2.5 text-sm hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">
                 Send Message
               </button>
@@ -142,25 +133,69 @@ const seo = {
     </div>
   </section>
 
-  <!-- Small helper script -->
+  <!-- AJAX submit + mobile zoom reset -->
   <script is:inline>
     (function () {
-      // Show success banner when redirected with ?sent=1
-      var params = new URLSearchParams(window.location.search);
-      if (params.get('sent') === '1') {
-        var box = document.getElementById('success-banner');
-        if (box) {
-          box.classList.remove('hidden');
-          // Clean URL
-          window.history.replaceState({}, '', window.location.pathname);
+      var form = document.getElementById('contact-form');
+      var btn  = document.getElementById('submit-btn');
+      var success = document.getElementById('success-banner');
+      var errorB  = document.getElementById('error-banner');
+      var email   = document.getElementById('email');
+      var replyto = document.getElementById('replyto-hidden');
+
+      // Mantén _replyto sincronizado
+      if (email && replyto) {
+        email.addEventListener('input', function(){ replyto.value = email.value; });
+      }
+
+      function show(el){ el && el.classList.remove('hidden'); }
+      function hide(el){ el && el.classList.add('hidden'); }
+
+      // iOS zoom reset hack: forzar scale=1 y restaurar
+      function resetMobileZoom() {
+        var vp = document.querySelector('meta[name="viewport"]');
+        if (!vp) return;
+        var original = vp.getAttribute('content') || 'width=device-width, initial-scale=1';
+        vp.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
+        setTimeout(function(){ vp.setAttribute('content', original); }, 250);
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        hide(success); hide(errorB);
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
         }
-      }
-      // Keep _replyto in sync with email entered
-      var email = document.getElementById('email');
-      var hidden = document.getElementById('replyto-hidden');
-      if (email && hidden) {
-        email.addEventListener('input', function(){ hidden.value = email.value; });
-      }
+
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+
+        var fd = new FormData(form);
+        // Envío AJAX a FormSubmit (sin redirección)
+        fetch('https://formsubmit.co/Georgevaldezr@gmail.com', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: fd
+        })
+        .then(function(res){ if (!res.ok) throw new Error('Network'); return res.json(); })
+        .then(function() {
+          form.reset();
+          show(success);
+          // Quitar focos, llevar al banner y restablecer zoom móvil
+          (document.activeElement && document.activeElement.blur && document.activeElement.blur());
+          success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          resetMobileZoom();
+        })
+        .catch(function() {
+          show(errorB);
+        })
+        .finally(function() {
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+        });
+      }, { passive: false });
     })();
   </script>
 </BaseLayout>
