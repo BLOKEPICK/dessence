@@ -1,0 +1,343 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const seo = {
+  title: 'Xeomin (incobotulinumtoxinA) | D-Essence Wellness',
+  description:
+    'A purified (“naked”) neuromodulator to soften dynamic lines with a natural look. Subtle results begin in ~2–5 days, with peak effect by weeks 2–4 and typical duration ~3–4 months.',
+  canonical: '/services/xeomin/',
+  type: 'website',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'MedicalProcedure',
+      name: 'Xeomin (incobotulinumtoxinA) — Cosmetic',
+      alternateName: 'Xeomin',
+      procedureType: 'Non-surgical aesthetic treatment',
+      bodyLocation: 'Glabella, forehead, periocular (crow’s feet)',
+      howPerformed: 'Microinjections into specific facial muscles',
+      preparation: 'Avoid blood-thinning supplements/medications when medically appropriate; arrive with clean skin.',
+      followup: 'Optional review around 10–14 days.',
+      availableService: {
+        '@type': 'Service',
+        serviceType: 'Cosmetic neuromodulator treatment (incobotulinumtoxinA)',
+        provider: {
+          '@type': 'HealthAndBeautyBusiness',
+          name: 'D-Essence Wellness',
+          telephone: '+1-716-303-8963',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '871 Blooming Grove Turnpike Suite 102',
+            addressLocality: 'New Windsor',
+            addressRegion: 'NY',
+            postalCode: '12553',
+            addressCountry: 'US'
+          }
+        }
+      }
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
+        { '@type': 'ListItem', position: 2, name: 'Xeomin', item: 'https://dessencewellness.com/services/xeomin/' }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout seo={seo}>
+  <!-- ===== HERO (dark) ===== -->
+  <section class="bg-neutral-950 text-white">
+    <div class="container pt-28 pb-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/70">
+          <span>Injectables</span><span class="opacity-40">•</span><span>New Windsor, NY</span>
+        </div>
+        <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Xeomin</h1>
+        <p class="mt-4 text-white/80">
+          IncobotulinumtoxinA—often called a “purified” or “naked” neuromodulator—for softening dynamic lines
+          while keeping natural expression.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTENT (white) ===== -->
+  <section class="bg-white text-neutral-900">
+    <div class="container py-12 sm:py-14">
+      <!-- Overview + Side card -->
+      <div class="grid lg:grid-cols-12 gap-8 items-start" id="overview">
+        <div class="lg:col-span-7">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Overview</h2>
+          <p class="mt-3 text-neutral-700">
+            Xeomin (incobotulinumtoxinA) is a neuromodulator used to temporarily relax specific muscles that create
+            <em>dynamic</em> facial lines. Cosmetic treatment commonly targets the frown lines (glabella), crow’s feet,
+            and horizontal forehead lines. Subtle results begin around <strong>2–5 days</strong>, with a more complete
+            effect by <strong>weeks 2–4</strong>, and typical duration of about <strong>3–4 months</strong>
+            (varies by area, dose, and individual).
+          </p>
+        </div>
+
+        <aside class="lg:col-span-5">
+          <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-5">
+            <div class="text-sm font-medium">Good to know</div>
+            <ul class="mt-2 grid gap-2 text-sm text-neutral-700">
+              {[
+                'In-office treatment; often 10–20 minutes depending on areas',
+                'Minimal downtime; most routines resume the same day',
+                'Optional review and fine-tune around days 10–14',
+                'Temporary effect—customizable over time'
+              ].map(item => (
+                <li class="inline-flex items-start gap-2">
+                  <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <a href="/contact-us/" class="inline-flex items-center rounded-full border border-neutral-300 px-4 py-2 text-sm hover:bg-neutral-50">Ask a question</a>
+              <a href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx" target="_blank" rel="noopener"
+                 class="inline-flex items-center rounded-full bg-neutral-900 text-white px-4 py-2 text-sm hover:bg-neutral-800">Book appointment</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Why Xeomin / Candidates / Benefits -->
+      <div class="mt-12 grid lg:grid-cols-12 gap-8">
+        <section id="why-xeomin" class="lg:col-span-7 rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
+          <h3 class="text-xl font-semibold">Why Xeomin</h3>
+          <p class="mt-2 text-neutral-700">
+            Xeomin is formulated without accessory complexing proteins—often referred to as a “purified” or “naked”
+            toxin. This streamlined formulation is designed for consistent performance and may be considered by some
+            patients who prefer a minimal-protein option. Functionally, its onset and duration are <em>similar to
+            other</em> botulinum toxin type A products.
+          </p>
+          <div class="mt-4 rounded-xl bg-neutral-50 ring-1 ring-neutral-200 p-4 text-sm text-neutral-700">
+            <strong>Regulatory note:</strong> Xeomin is FDA-approved for glabellar lines. Providers may also treat
+            additional dynamic areas based on clinical judgment and individual assessment.
+          </div>
+        </section>
+
+        <section id="candidates" class="lg:col-span-5 rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
+          <h3 class="text-xl font-semibold">Who it’s for</h3>
+          <ul class="mt-2 grid gap-2 text-sm text-neutral-700">
+            {[
+              'Soften frown, crow’s feet, and forehead lines',
+              'Prevent dynamic lines from etching in at rest',
+              'Seek a subtle, temporary refresh with minimal downtime'
+            ].map(item => (
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="mt-3 text-sm text-neutral-600">
+            Not recommended during pregnancy or breastfeeding, with certain neuromuscular disorders, active infection
+            at the site, or other contraindications determined by your provider.
+          </div>
+        </section>
+
+        <section id="benefits" class="lg:col-span-12 rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6">
+          <h3 class="text-xl font-semibold">Benefits</h3>
+          <div class="mt-3 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm text-neutral-700">
+            {[
+              'Natural-looking softening of dynamic lines',
+              'Purified formulation without accessory proteins',
+              'Onset in ~2–5 days; peak by weeks 2–4',
+              'Typically lasts ~3–4 months (varies by individual)'
+            ].map(item => (
+              <div class="rounded-xl bg-white ring-1 ring-neutral-200 p-4">
+                <div class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-neutral-100 ring-1 ring-neutral-200 mb-2">
+                  <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                </div>
+                {item}
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <!-- What to expect -->
+      <section id="expect" class="mt-12 rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
+        <h3 class="text-xl font-semibold">What to expect</h3>
+        <div class="mt-4 grid md:grid-cols-3 gap-6 text-sm">
+          <div>
+            <div class="font-medium">Consultation</div>
+            <ul class="mt-2 space-y-1 text-neutral-700">
+              <li>Dynamic assessment and medical history</li>
+              <li>Personalized plan by areas and units</li>
+              <li>Cleanse, map, and tiny injections</li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-medium">During treatment</div>
+            <ul class="mt-2 space-y-1 text-neutral-700">
+              <li>Fine-needle injections to target muscles</li>
+              <li>~5–20 minutes depending on areas</li>
+              <li>Mild, brief pinches are common</li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-medium">Timeline</div>
+            <ul class="mt-2 space-y-1 text-neutral-700">
+              <li>Days 2–5: early change</li>
+              <li>Weeks 2–4: peak effect</li>
+              <li>~3–4 months: typical duration</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Aftercare -->
+      <section id="aftercare" class="mt-12 rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
+        <h3 class="text-xl font-semibold">Aftercare</h3>
+        <div class="mt-3 grid md:grid-cols-2 gap-6 text-sm text-neutral-700">
+          <div>
+            <div class="font-medium">First hours</div>
+            <ul class="mt-2 space-y-1">
+              <li>Stay upright for ~3–4 hours</li>
+              <li>Avoid rubbing/massage on treated areas for 24h</li>
+              <li>Gentle facial movements may be advised by your provider</li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-medium">First 1–2 days</div>
+            <ul class="mt-2 space-y-1">
+              <li>Use cool compresses briefly if needed</li>
+              <li>Skip vigorous exercise for ~24h</li>
+              <li>Avoid excessive heat (saunas/hot yoga) 24–48h</li>
+              <li>Hold heavy makeup/active products on treated areas ~24h</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-3 text-xs text-neutral-500">
+          Coordinate any peels, facials, or facial massage for a later date per provider guidance.
+        </div>
+      </section>
+
+      <!-- Safety -->
+      <section id="safety" class="mt-12 rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6">
+        <h3 class="text-xl font-semibold">Safety & possible effects</h3>
+        <div class="mt-3 grid md:grid-cols-2 gap-6 text-sm text-neutral-700">
+          <div>
+            <div class="font-medium">Common & temporary</div>
+            <ul class="mt-2 space-y-1">
+              <li>Injection-site tenderness, small bruise, light redness/swelling</li>
+              <li>Headache; less commonly dry mouth or dry eyes</li>
+              <li>Rare: temporary eyelid/brow ptosis or localized weakness if product diffuses</li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-medium">Serious but rare</div>
+            <ul class="mt-2 space-y-1">
+              <li>Spread of effect causing weakness away from the injection site</li>
+              <li>Allergic reactions: rash, itching, swelling, dizziness, trouble breathing</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-4 text-xs text-neutral-500">
+          Educational content only; not medical advice. Your provider will evaluate candidacy and dosing. Seek urgent care for
+          severe symptoms such as trouble swallowing/breathing or generalized weakness.
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="mt-12">
+        <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">FAQ</h2>
+        <div class="mt-6 grid gap-4">
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">When will I see results and how long do they last?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Early changes start in about 2–5 days, with peak effect by weeks 2–4. Typical duration is ~3–4 months,
+              varying by area, dose, and individual.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">Will I look “frozen”?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Our approach relaxes movement without erasing expression. We tailor dose and placement to your features and goals.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">How is it different from Botox®?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Xeomin contains botulinum toxin type A without accessory complexing proteins (a “purified” formulation).
+              Onset and duration are generally similar; your provider can recommend the best option for you.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">Can I combine it with other treatments?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Yes—often paired with fillers, gentle lasers, or medical-grade skincare. We’ll sequence treatments to minimize
+              irritation and optimize results.
+            </p>
+          </details>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Smooth offset scroll for quick-nav -->
+  <script is:inline>
+    (function () {
+      var nav = document.getElementById('quick-nav');
+      if (!nav) return;
+
+      function easeInOutQuad(t){ return t<0.5 ? 2*t*t : -1+(4-2*t)*t; }
+      function getOffset() {
+        var header = document.querySelector('header');
+        var base = header ? header.getBoundingClientRect().height : 64;
+        return base + 24;
+      }
+      function smoothScrollTo(targetY, duration) {
+        var startY = window.pageYOffset || document.documentElement.scrollTop;
+        var startTime = performance.now();
+        var D = Math.max(300, Math.min(duration, 900));
+        function step(now) {
+          var t = Math.min(1, (now - startTime) / D);
+          var eased = easeInOutQuad(t);
+          window.scrollTo(0, Math.round(startY + (targetY - startY) * eased));
+          if (t < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      nav.addEventListener('click', function (e) {
+        var a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        var id = a.getAttribute('href').slice(1);
+        var el = document.getElementById(id);
+        if (!el) return;
+
+        e.preventDefault();
+        var offset = getOffset();
+        var rect = el.getBoundingClientRect();
+        var targetY = (window.pageYOffset || document.documentElement.scrollTop) + rect.top - offset;
+        smoothScrollTo(targetY, 700);
+
+        el.setAttribute('tabindex','-1');
+        setTimeout(function(){ el.focus({ preventScroll: true }); el.removeAttribute('tabindex'); }, 750);
+      }, { passive: false });
+    })();
+  </script>
+</BaseLayout>
