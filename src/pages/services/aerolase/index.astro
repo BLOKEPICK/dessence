@@ -1,0 +1,291 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const seo = {
+  title: 'Aerolase Laser Treatments | D-Essence Wellness',
+  description:
+    'Aerolase (650-microsecond technology) for acne, rosacea, redness, pigmentation, melasma (selected cases), vessels, and gentle rejuvenation—safe across skin tones I–VI.',
+  canonical: '/services/aerolase/',
+  type: 'website',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Aerolase Laser Treatments',
+      serviceType: 'Aesthetic Laser',
+      areaServed: 'New Windsor, New York',
+      provider: {
+        '@type': 'MedicalBusiness',
+        name: 'D-Essence Wellness',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '871 Blooming Grove Turnpike Suite 102',
+          addressLocality: 'New Windsor',
+          addressRegion: 'NY',
+          postalCode: '12553',
+          addressCountry: 'US'
+        }
+      },
+      url: 'https://dessencewellness.com/services/aerolase/'
+    }
+  ]
+};
+---
+
+<BaseLayout seo={seo}>
+  <!-- ===== HERO (dark) ===== -->
+  <section class="bg-neutral-950 text-white">
+    <div class="container pt-28 pb-10 max-w-3xl">
+      <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/60">
+        <span>Services</span><span class="opacity-40">•</span><span>Laser</span>
+      </div>
+      <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Aerolase Laser Treatments</h1>
+      <p class="mt-4 text-white/80">
+        Short-pulse energy designed for precision and comfort. Aerolase helps address acne, redness, pigmentation,
+        vessels and overall skin quality—while remaining gentle on the epidermis and suitable for a wide range of skin tones.
+      </p>
+
+      <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Targets</div>
+          <div class="mt-0.5 font-medium">Acne, pigment, redness</div>
+        </div>
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Skin tones</div>
+          <div class="mt-0.5 font-medium">I–VI (with parameters)</div>
+        </div>
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Session length</div>
+          <div class="mt-0.5 font-medium">~15–45 min</div>
+        </div>
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Downtime</div>
+          <div class="mt-0.5 font-medium">Minimal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTENT (white) ===== -->
+  <section class="bg-white text-neutral-900">
+    <div class="container py-12 sm:py-14">
+      <!-- Overview -->
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Overview</h2>
+          <p class="mt-3 text-neutral-700">
+            Aerolase delivers very short pulses (e.g., 650 microseconds) that heat targets while allowing the epidermis to
+            cool between pulses. The result: effective energy where it’s needed, with reduced risk of overheating
+            surrounding skin—especially helpful across diverse skin tones.
+          </p>
+          <p class="mt-3 text-neutral-700">
+            We use conservative settings tailored to your skin type and goals. Treatments can address multiple concerns in
+            the same visit—such as pigment plus redness—while maintaining comfort and minimal downtime.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
+            <h3 class="text-lg font-medium">Indications</h3>
+            <ul class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-neutral-700">
+              {[
+                'Acne and post-acne marks',
+                'Redness and rosacea',
+                'Hyperpigmentation',
+                'Melasma (selected cases)',
+                'Diffuse vessels',
+                'Texture and enlarged pores',
+                'Gentle rejuvenation',
+                'Collagen support'
+              ].map(item => (
+                <li class="inline-flex items-start gap-2">
+                  <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p class="mt-3 text-xs text-neutral-500">
+              Final candidacy depends on in-clinic assessment, history, and current skin routine.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Benefits -->
+      <div class="mt-12 grid md:grid-cols-3 gap-4">
+        {[
+          {
+            title: 'Versatile by design',
+            text: 'One platform to address pigment, vessels, acne, redness, and overall tone and texture.'
+          },
+          {
+            title: 'Comfortable with minimal downtime',
+            text: 'Short pulses allow epidermal cooling between shots, improving comfort and reducing interruption.'
+          },
+          {
+            title: 'Safe across skin tones',
+            text: 'Parameter control helps treat a broad range of Fitzpatrick skin types (I–VI).'
+          }
+        ].map(card => (
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <div class="text-sm font-medium text-neutral-900">{card.title}</div>
+            <p class="mt-2 text-sm text-neutral-700">{card.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- What to expect -->
+      <div class="mt-12 grid lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-5">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">What to expect</h2>
+          <p class="mt-3 text-neutral-700">
+            We begin with a skin assessment and parameter planning. After cleansing, we deliver controlled pulses
+            across mapped zones. Most patients describe warmth or brief snaps; the session length depends on the area and indication.
+          </p>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium text-neutral-900">During the session</div>
+              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
+                <li>Cleanse, protect eyes, parameter check</li>
+                <li>Targeted passes over concern areas</li>
+                <li>Typical time: ~15–45 minutes</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium text-neutral-900">Results timeline</div>
+              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
+                <li>Immediate: transient pinkness or warmth</li>
+                <li>Weeks 1–4: progressive improvements</li>
+                <li>Series: often 3–6 sessions, then maintenance</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5 sm:col-span-2">
+              <div class="text-sm font-medium text-neutral-900">Series & cadence</div>
+              <p class="mt-2 text-sm text-neutral-700">
+                Protocols vary by condition, but many plans include a short series spaced a few weeks apart to build
+                momentum, followed by periodic maintenance once goals are reached.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aftercare -->
+      <div class="mt-12">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Aftercare</h2>
+        <div class="mt-4 grid md:grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <ul class="text-sm text-neutral-700 space-y-2">
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Use broad-spectrum SPF; limit intense sun exposure for several days.
+              </li>
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Avoid harsh actives (strong acids, retinoids, scrubs) for 24–48 hours.
+              </li>
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Keep skin hydrated with gentle, non-comedogenic products.
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <ul class="text-sm text-neutral-700 space-y-2">
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Skip hot saunas/steam and vigorous workouts for 24 hours.
+              </li>
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Avoid heavy makeup the day of treatment if skin is reactive.
+              </li>
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Follow any product guidance your clinician provides.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Safety & risks -->
+      <div class="mt-12">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Safety & risks</h2>
+        <div class="mt-4 grid md:grid-cols-2 gap-4 text-sm text-neutral-700">
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <div class="font-medium text-neutral-900">Common, temporary effects</div>
+            <ul class="mt-2 space-y-1.5">
+              <li>Mild redness or warmth</li>
+              <li>Transient puffiness in sensitive areas</li>
+              <li>Temporary pigment shift in rare cases</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <div class="font-medium text-neutral-900">Less common considerations</div>
+            <ul class="mt-2 space-y-1.5">
+              <li>Hot-spot burns if parameters are incorrect</li>
+              <li>Prolonged sensitivity in reactive skin</li>
+              <li>Hyper/hypopigmentation if aftercare is not followed</li>
+            </ul>
+          </div>
+        </div>
+        <p class="mt-4 text-xs text-neutral-500">
+          Educational information only; not medical advice. We adjust parameters and candidacy after an in-clinic review.
+        </p>
+      </div>
+
+      <!-- FAQ -->
+      <div class="mt-12">
+        <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">FAQ</h2>
+        <div class="mt-6 grid gap-4">
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">How many sessions will I need?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Many plans include 3–6 sessions spaced a few weeks apart, then periodic maintenance once goals are reached.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">Is it painful?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Most describe warmth or brief “snaps.” We can adjust parameters and pacing to keep you comfortable.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">When will I see results?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Some improvements are noticeable within a few sessions; collagen-related changes develop progressively over weeks.
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-12">
+        <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6 flex items-center justify-between gap-4">
+          <div class="text-sm text-neutral-700">
+            Ready to plan an Aerolase series tailored to your skin?
+          </div>
+          <a href="/contact-us/" class="inline-flex items-center rounded-full bg-neutral-900 text-white px-5 py-2.5 text-sm hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
