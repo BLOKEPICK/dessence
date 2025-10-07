@@ -1,18 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+export const prerender = true;
+
 const seo = {
-  title: 'Terms & Conditions | D-Essence Wellness',
+  title: 'Booking Policy | D-Essence Wellness',
   description:
-    'Read the terms and conditions for using the D-Essence Wellness website and submitting the contact form.',
-  canonical: '/terms-and-conditions',
+    'Read our booking, cancellation, deposits, payments, pricing, refunds, and referral credits policy before scheduling.',
+  canonical: 'https://d-essencewellness.com/booking-policy',
   type: 'website',
   jsonLd: [
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: 'Terms & Conditions',
-      url: 'https://dessencewellness.com/terms-and-conditions'
+      name: 'Booking Policy',
+      url: 'https://d-essencewellness.com/booking-policy',
+      dateModified: '2024-06-09'
     }
   ]
 };
@@ -23,11 +26,11 @@ const seo = {
   <section class="bg-neutral-950 text-white">
     <div class="container pt-28 pb-10 max-w-3xl">
       <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/60">
-        <span>Legal</span><span class="opacity-40">•</span><span>Terms & Conditions</span>
+        <span>Legal</span><span class="opacity-40">•</span><span>Booking Policy</span>
       </div>
-      <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Terms & Conditions</h1>
+      <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Booking Policy</h1>
       <p class="mt-4 text-white/80">
-        By submitting the contact form, you agree to these Terms of Use and the conditions described below.
+        Please review our policies on appointments, consultations, cancellations, deposits, payments, pricing, refunds, and referrals.
       </p>
     </div>
   </section>
@@ -35,90 +38,91 @@ const seo = {
   <!-- ===== CONTENT (white) ===== -->
   <section class="bg-white text-neutral-900">
     <div class="container py-12 sm:py-14 max-w-3xl">
-      <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-5 text-sm text-neutral-700">
-        By submitting the contact form, you agree to the following Terms of Use:
+
+      <!-- Appointment Policy -->
+      <h2 class="text-xl font-semibold">Appointment Policy</h2>
+      <div class="mt-3 rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-5 text-sm text-neutral-700">
+        <p>
+          To ensure that you get an appointment for the date and time you desire, we suggest booking all appointments a few weeks in advance.
+          Our website displays the most up-to-date availability. Please note that we require a credit card to reserve your appointment.
+        </p>
       </div>
 
-      <ol class="mt-8 list-decimal pl-6 space-y-6 text-neutral-800">
-        <li>
-          <h2 class="text-lg font-semibold">Communications and Security</h2>
-          <p class="mt-2 text-neutral-700">
-            Communications through our website or via email are not encrypted and are not necessarily secure.
-            The use of the internet or email for communication with D-Essence Wellness or any of its employees is
-            for your convenience only, and by using them, you assume the risk of unauthorized use.
-            D-Essence Wellness will not be responsible for any harm or damages that you or any person may incur
-            due to any unauthorized access, use, or disclosure of your personal information that arises from your
-            communication through these means.
-          </p>
-        </li>
+      <!-- Consultations Policy -->
+      <h2 class="mt-10 text-xl font-semibold">Consultations Policy</h2>
+      <p class="mt-2 text-neutral-700">
+        We provide consultations and in-depth skin analysis with one of our expert providers. We believe an informed client with realistic
+        expectations will be most satisfied with our treatments and results. Our consultations include education about your unique skin type,
+        a comprehensive discussion about all options available to you (both immediate and long term), and a clear plan of action based on your
+        individual goals.
+      </p>
 
-        <li>
-          <h2 class="text-lg font-semibold">Assumption of Risk and Limitation of Liability</h2>
-          <p class="mt-2 text-neutral-700">
-            By submitting a form, you agree to hold D-Essence Wellness, its doctors, nurses, employees, and
-            affiliates harmless from any hacking, cyber-attacks, or any other unauthorized use of your personal
-            information by outside parties. We strive to protect your personal information but cannot guarantee
-            complete security.
-          </p>
-        </li>
+      <!-- Cancellation Policy -->
+      <h2 class="mt-10 text-xl font-semibold">Cancellation Policy</h2>
+      <p class="mt-2 text-neutral-700">
+        As a courtesy to our providers, for non-group appointments, please provide a minimum of twenty-four (24) hours notice should you need
+        to cancel or reschedule an appointment. You will be charged <strong>$100</strong> if an appointment is canceled or rescheduled less than
+        twenty-four (24) hours in advance or if there is a no-show.
+      </p>
+      <p class="mt-3 text-neutral-700">
+        For group appointments, there is a seventy two (72) hour cancellation policy, and the credit card on file will be charged
+        <strong>$200</strong> if canceled less than seventy two (72) hours in advance.
+      </p>
+      <p class="mt-3 text-neutral-700">
+        If you arrive more than ten (10) minutes late for your appointment, you may be required to reschedule to avoid disrupting other
+        clients’ appointments.
+      </p>
 
-        <li>
-          <h2 class="text-lg font-semibold">Consent to Receive Communications</h2>
-          <p class="mt-2 text-neutral-700">
-            By entering your phone number, you consent to receive text messages from D-Essence Wellness regarding
-            appointments, promotions, and other relevant information. Message and data rates may apply depending on
-            your mobile carrier. You may opt out at any time by replying STOP to any message you receive from us.
-          </p>
-        </li>
+      <!-- Deposits -->
+      <h2 class="mt-10 text-xl font-semibold">Deposits</h2>
+      <div class="mt-3 rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-5 text-sm text-neutral-700 space-y-2">
+        <p>At D-Essence Wellness, we strive to provide personalized, high-quality care to all of our clients. To ensure a smooth scheduling process and respect everyone’s time, we have implemented the following deposit policy:</p>
+        <ol class="list-decimal pl-5 space-y-2">
+          <li>
+            A deposit of <strong>$100.00</strong> is required to secure your appointment. The deposit amount will be applied towards your total cost at the time of your appointment.
+          </li>
+          <li>
+            <strong>Refunds:</strong> Deposits are refundable only if the appointment is canceled or rescheduled with at least 24 hours’ notice.
+            <br/>• If D-Essence Wellness must cancel your appointment, your deposit will be fully refunded or applied to a rescheduled date.
+          </li>
+        </ol>
+      </div>
 
-        <li>
-          <h2 class="text-lg font-semibold">Medical Information Disclaimer</h2>
-          <p class="mt-2 text-neutral-700">
-            The information provided on our website and through our communications is for informational purposes only
-            and does not constitute medical advice. For any medical concerns, please consult with a licensed healthcare
-            provider.
-          </p>
-        </li>
+      <!-- Payment Options -->
+      <h2 class="mt-10 text-xl font-semibold">Payment Options</h2>
+      <p class="mt-2 text-neutral-700">
+        Deposits can be paid via credit card, debit card, or electronic payment at the time of booking.
+      </p>
 
-        <li>
-          <h2 class="text-lg font-semibold">Intellectual Property</h2>
-          <p class="mt-2 text-neutral-700">
-            All content, trademarks, logos, and other intellectual property displayed on the D-Essence Wellness website
-            are the property of D-Essence Wellness unless otherwise stated. Unauthorized use of any content from our site
-            is strictly prohibited.
-          </p>
-        </li>
+      <!-- Pricing & Prepayments Policy -->
+      <h2 class="mt-10 text-xl font-semibold">Pricing &amp; Prepayments Policy</h2>
+      <p class="mt-2 text-neutral-700">
+        Pricing for products and services is subject to change any time. Once prepaid, you have up to one (1) year to redeem the purchased service(s).
+      </p>
+      <p class="mt-3 text-neutral-700">
+        If there are any payment issues with a client’s credit or debit card or CareCredit—chargebacks, fraud issues, etc.—we cannot accept credit or debit cards or CareCredit from the client and require payment in cash.
+      </p>
 
-        <li>
-          <h2 class="text-lg font-semibold">Modifications to Terms</h2>
-          <p class="mt-2 text-neutral-700">
-            D-Essence Wellness reserves the right to modify these terms and conditions at any time. Any changes will be
-            effective immediately upon posting to the website. Your continued use of our services and website constitutes
-            your acceptance of the revised terms.
-          </p>
-        </li>
+      <!-- Returns & Refunds Policy -->
+      <h2 class="mt-10 text-xl font-semibold">Returns &amp; Refunds Policy</h2>
+      <p class="mt-2 text-neutral-700">
+        If you would like to return your purchased skincare product, return the item in its original packaging unopened within thirty (30) days of purchase.
+        We do not accept returns on opened or used products. We do not accept returns or exchanges on gift cards.
+      </p>
+      <p class="mt-3 text-neutral-700">
+        Prepayments are refundable within ten (10) days of purchase. Services received cannot be refunded.
+      </p>
 
-        <li>
-          <h2 class="text-lg font-semibold">Governing Law</h2>
-          <p class="mt-2 text-neutral-700">
-            These terms and conditions are governed by and construed in accordance with the laws of the jurisdiction
-            in which D-Essence Wellness operates, without regard to its conflict of law principles.
-          </p>
-        </li>
+      <!-- Referral Credits -->
+      <h2 class="mt-10 text-xl font-semibold">How Referral Credits Work</h2>
+      <ul class="mt-2 list-disc pl-5 space-y-1 text-neutral-700">
+        <li>Referral credits are applied to your account and can be used toward services or product purchases.</li>
+        <li>Referral credits are awarded after the referred friend completes their first month of membership.</li>
+        <li>Unlimited referrals—spread the glow and keep earning!</li>
+      </ul>
 
-        <li>
-          <h2 class="text-lg font-semibold">Contact Information</h2>
-          <p class="mt-2 text-neutral-700">
-            For any questions or concerns about these terms and conditions, please contact us at
-            <a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="mailto:dessenceaesthetics@gmail.com">dessenceaesthetics@gmail.com</a>
-            or <a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="tel:+18452826437">(845) 282-6437</a>.
-          </p>
-        </li>
-      </ol>
-
-      <div class="mt-8 rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-5 text-sm text-neutral-700">
-        By using our website and submitting your personal information, you acknowledge that you have read, understood,
-        and agree to be bound by these terms and conditions.
+      <div class="mt-10 rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-5 text-sm text-neutral-700">
+        End of Booking Policy
       </div>
     </div>
   </section>

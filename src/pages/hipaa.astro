@@ -1,159 +1,272 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+export const prerender = true;
+
 const seo = {
-  title: 'Our Approach | D-Essence Wellness',
+  title: 'HIPAA Privacy Policy | D-Essence Wellness',
   description:
-    'How we work: principles, step-by-step process, safety standards, and FAQs. Evidence-based care for natural, durable outcomes.',
-  canonical: '/our-approach',
+    'Notice of Privacy Practices (HIPAA). Learn how your protected health information may be used and disclosed, and how you can access it.',
+  canonical: 'https://d-essencewellness.com/hipaa',
   type: 'website',
   jsonLd: [
     {
       '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: 'Our Approach',
-      url: 'https://dessencewellness.com/our-approach'
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'ItemList',
-      name: 'Care Process',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Consult & Assessment' },
-        { '@type': 'ListItem', position: 2, name: 'Personalized Plan' },
-        { '@type': 'ListItem', position: 3, name: 'Treatment Day' },
-        { '@type': 'ListItem', position: 4, name: 'Aftercare' },
-        { '@type': 'ListItem', position: 5, name: 'Follow-up & Refinement' }
-      ]
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'Do you aim for natural results?', acceptedAnswer: { '@type': 'Answer', text: 'Yes—conservative dosing and restraint for balance and longevity.' } },
-        { '@type': 'Question', name: 'Are devices FDA-cleared?', acceptedAnswer: { '@type': 'Answer', text: 'We use FDA-cleared devices and medical-grade products as standard.' } },
-        { '@type': 'Question', name: 'How do you handle downtime?', acceptedAnswer: { '@type': 'Answer', text: 'We set expectations up-front and provide clear aftercare and check-ins.' } },
-        { '@type': 'Question', name: 'Can I start small?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely—building outcomes over time is central to our philosophy.' } },
-        { '@type': 'Question', name: 'Who performs treatments?', acceptedAnswer: { '@type': 'Answer', text: 'A Board Certified-Family Nurse Practitioner provides your care.' } }
-      ]
+      '@type': 'PrivacyPolicy',
+      name: 'HIPAA Privacy Policy (Notice of Privacy Practices)',
+      url: 'https://d-essencewellness.com/hipaa',
+      dateModified: '2024-06-09'
     }
   ]
 };
 ---
 
 <BaseLayout seo={seo}>
-  <section class="bg-white text-neutral-900">
-    <div class="container pt-24 pb-10 text-center max-w-3xl">
-      <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight">Our Approach</h1>
-      <p class="mt-4 text-neutral-600">
-        Methodical, conservative, and evidence-based. We design plans that protect skin health and deliver
-        undetectable, long-lasting results.
+  <!-- ===== HERO (dark) ===== -->
+  <section class="bg-neutral-950 text-white">
+    <div class="container pt-28 pb-10 max-w-3xl">
+      <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/60">
+        <span>Legal</span><span class="opacity-40">•</span><span>HIPAA Privacy Policy</span>
+      </div>
+      <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">HIPAA Privacy Policy</h1>
+      <p class="mt-3 text-white/80">Effective June 9, 2024</p>
+      <p class="mt-4 text-white/80">
+        THIS NOTICE DESCRIBES HOW MEDICAL INFORMATION ABOUT YOU MAY BE USED AND DISCLOSED AND HOW YOU CAN GET ACCESS
+        TO THIS INFORMATION. PLEASE REVIEW IT CAREFULLY.
       </p>
     </div>
+  </section>
 
-    <!-- Principles -->
-    <div class="container pb-12">
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
-          <div class="text-sm font-medium">Conservative by design</div>
-          <p class="mt-2 text-sm text-neutral-600">Build outcomes gradually. Prioritize harmony over volume.</p>
-        </div>
-        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
-          <div class="text-sm font-medium">Skin-health first</div>
-          <p class="mt-2 text-sm text-neutral-600">Strengthen texture, tone, and barrier for results that last.</p>
-        </div>
-        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
-          <div class="text-sm font-medium">Evidence over hype</div>
-          <p class="mt-2 text-sm text-neutral-600">Medical-grade products, FDA-cleared devices, and clear protocols.</p>
-        </div>
+  <!-- ===== CONTENT (white) ===== -->
+  <section class="bg-white text-neutral-900">
+    <div class="container py-12 sm:py-14 max-w-3xl">
+      <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-5 text-sm text-neutral-700">
+        <h2 class="text-base font-medium">Who Will Follow This Notice?</h2>
+        <p class="mt-2">
+          This notice describes the practices of D-Essence Wellness and the practices that will be followed by all workforce
+          members who handle your medical information.
+        </p>
+
+        <h2 class="mt-6 text-base font-medium">Our Pledge Regarding Your Protected Health Information</h2>
+        <p class="mt-2">
+          D-Essence Wellness understands that medical information about you and your health is personal. We are committed to
+          protecting medical information about you. We maintain our records and conduct our treatment environment with the goal
+          of providing the highest level of protection for your medical information while still providing you with the highest
+          level of medical care. This notice applies to all the records of your medical care that are received or created by
+          D-Essence Wellness.
+        </p>
+        <p class="mt-2">
+          Your other medical treatment providers (e.g., doctors, hospitals, home health agencies, etc.) may have different
+          policies or notices regarding the use and disclosure of your medical information.
+        </p>
+        <p class="mt-2">
+          This notice will tell you about the ways in which D-Essence Wellness may use and disclose medical information about
+          you. Your medical information, also referred to as “protected health information,” is information about you, including
+          demographic information, that may identify you and that relates to your past, present, or future physical or mental
+          health information and related health care services.
+        </p>
+        <p class="mt-2">
+          In this notice, we also describe your rights and certain obligations D-Essence Wellness has regarding the use and
+          disclosure of your protected health information. We are required by law to:
+        </p>
+        <ul class="mt-3 list-disc pl-5 space-y-1">
+          <li>Make sure that medical and other information that identifies you (protected health information) is kept private.</li>
+          <li>Give you this notice of our legal duties and privacy practices with respect to protected health information about you.</li>
+          <li>Follow the terms of the notice that is currently in effect.</li>
+        </ul>
       </div>
-    </div>
 
-    <!-- Process -->
-    <div class="container pb-12">
-      <h2 class="text-xl font-semibold">The process</h2>
-      <div class="mt-4 grid lg:grid-cols-5 sm:grid-cols-3 grid-cols-1 gap-4">
-        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-          <div class="text-sm font-medium">1) Consult & Assessment</div>
-          <p class="mt-1 text-sm text-neutral-600">Goals, history, facial analysis, and timelines.</p>
-        </div>
-        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-          <div class="text-sm font-medium">2) Personalized Plan</div>
-          <p class="mt-1 text-sm text-neutral-600">Skin-first strategy, options, and expected outcomes.</p>
-        </div>
-        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-          <div class="text-sm font-medium">3) Treatment Day</div>
-          <p class="mt-1 text-sm text-neutral-600">Gentle techniques and comfort-driven care.</p>
-        </div>
-        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-          <div class="text-sm font-medium">4) Aftercare</div>
-          <p class="mt-1 text-sm text-neutral-600">Clear guidance and product support for recovery.</p>
-        </div>
-        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-          <div class="text-sm font-medium">5) Follow-up & Refinement</div>
-          <p class="mt-1 text-sm text-neutral-600">Check-ins to fine-tune and plan maintenance.</p>
-        </div>
-      </div>
-    </div>
+      <!-- Uses and Disclosures for TPO -->
+      <h2 class="mt-10 text-xl font-semibold">Uses and Disclosures for Treatment, Payment, and Health Care Operations</h2>
+      <p class="mt-2 text-neutral-700">
+        By becoming a patient at D-Essence Wellness, you are giving consent for D-Essence Wellness to use your protected health
+        information for certain activities, including treatment, payment, and other health care operations (“TPO”).
+      </p>
+      <p class="mt-3 text-neutral-700">
+        <strong>Treatment:</strong> We may use and disclose protected health information about you so that D-Essence Wellness and its
+        medical professionals can treat you. For example, we may use your past medical information to diagnose your present
+        condition, or we may provide information regarding your medical condition to another doctor to whom we refer you for
+        additional care.
+      </p>
+      <p class="mt-3 text-neutral-700">
+        <strong>Payment:</strong> We may use and disclose protected health information about you so that we may be paid for the medical
+        treatment we provide to you. For example, we will submit protected health information about you to your insurance company
+        to receive payment for services we have provided to you.
+      </p>
+      <p class="mt-3 text-neutral-700">
+        <strong>Health Care Operations:</strong> We may use and disclose protected health information about you for D-Essence Wellness’
+        health care operations—those other tasks that we need to perform to make sure that you are provided the highest quality
+        of medical care. For example, we may use your protected health information to evaluate how we can better meet your needs,
+        or provide protected health information about you to an auditor who reviews our books so that we can keep our license to
+        provide medical services.
+      </p>
 
-    <!-- Safety & Standards -->
-    <div class="container pb-12">
-      <h2 class="text-xl font-semibold">Safety & standards</h2>
-      <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-          <div class="text-sm font-medium">FDA-cleared devices</div>
-          <p class="mt-1 text-sm text-neutral-600">Aerolase®, SkinPen®, and vetted technologies.</p>
-        </div>
-        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-          <div class="text-sm font-medium">Medical-grade products</div>
-          <p class="mt-1 text-sm text-neutral-600">Skincare lines with data, not hype.</p>
-        </div>
-        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-          <div class="text-sm font-medium">Informed consent</div>
-          <p class="mt-1 text-sm text-neutral-600">Transparent risks, benefits, and alternatives.</p>
-        </div>
-        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-          <div class="text-sm font-medium">Complication protocols</div>
-          <p class="mt-1 text-sm text-neutral-600">Preparedness, escalation, and follow-through.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Expectations -->
-    <div class="container pb-12">
-      <h2 class="text-xl font-semibold">What to expect</h2>
-      <ul class="mt-3 grid sm:grid-cols-2 gap-3 text-sm text-neutral-700">
-        <li>Natural, undetectable results that respect facial balance.</li>
-        <li>Plans that evolve with your goals and skin over time.</li>
-        <li>Clear timelines for collagen-based treatments and lasers.</li>
-        <li>Follow-up to assess comfort, healing, and refinement.</li>
+      <!-- Other Uses and Disclosures -->
+      <h2 class="mt-10 text-xl font-semibold">Other Uses and Disclosures of Your Protected Health Information</h2>
+      <p class="mt-2 text-neutral-700">
+        The following uses of your protected health information may be made without any additional authorization from you.
+        (Not every use or disclosure is listed, but all uses and disclosures made by D-Essence Wellness are only those permitted
+        under the law).
+      </p>
+      <ul class="mt-3 list-disc pl-5 space-y-2 text-neutral-700">
+        <li><strong>Licensure Proceedings:</strong> Licensure proceedings by the American Board of Plastic Surgery.</li>
+        <li><strong>Appointment Reminders:</strong> We may use and disclose your medical information to contact you as a reminder
+          that you have an appointment at the office. If you request that such communications be made confidentially, please
+          contact our office in writing at 871 Blooming Grove Turnpike Suite 102, New Windsor, New York 12553. We will
+          accommodate all reasonable requests.
+        </li>
+        <li><strong>Involvement in Your Healthcare:</strong> We may disclose to a member of your family, a relative, a close friend,
+          or any other person you identify, your protected health information that directly relates to that person’s involvement
+          in your medical care. If you are unable to agree or object, we may disclose such information as necessary if we
+          determine that it is in your best interests based on our professional judgment. We may also use or disclose protected
+          health information to notify or assist in notifying a family member, personal representative, or any other person
+          responsible for your care of your location, general condition, or death. We may also use or disclose your protected
+          health information to an authorized public or private entity to assist in disaster relief efforts.
+        </li>
+        <li><strong>Emergency Situations:</strong> We may use or disclose your protected health information in an emergency treatment
+          situation. If this happens, your physician will attempt to obtain your acknowledgment of this Notice as soon as
+          reasonably practicable after the delivery of treatment.
+        </li>
+        <li><strong>Health-Related Benefits or Services:</strong> From time to time, D-Essence Wellness may use and disclose protected
+          health information to tell you about certain health-related benefits or services that may be of interest to you.
+        </li>
+        <li><strong>Required by Law:</strong> We will use or disclose protected health information about you when required to do so by
+          federal, state, or local law, limited to the relevant requirements of the law. You will be notified if the law requires
+          us to do so. We must make disclosures to you and, when required, to the Secretary of the Department of Health and Human
+          Services to investigate or determine our compliance with the law.
+        </li>
+        <li><strong>Communicable Diseases:</strong> We may disclose your protected health information, if authorized by law, to a person
+          who may have been exposed to a communicable disease or may otherwise be at risk of contracting or spreading the disease
+          or condition.
+        </li>
+        <li><strong>Health Oversight Activities:</strong> We may disclose protected health information to a health oversight agency for
+          activities authorized by law, including audits, investigations, and inspections.
+        </li>
+        <li><strong>Abuse or Neglect:</strong> We may disclose your protected health information to a public health authority authorized
+          by law to receive reports of child abuse or neglect, or if we believe you have been a victim of abuse, neglect, or
+          domestic violence, consistent with law.
+        </li>
+        <li><strong>Food and Drug Administration:</strong> We may disclose your protected health information to a person or company
+          required by the FDA to report adverse events, product defects or problems, biologic product deviations, track products,
+          enable product recalls, make repairs or replacements, or conduct post-market surveillance.
+        </li>
+        <li><strong>Lawsuits and Disputes:</strong> We may disclose protected health information about you in response to a court or
+          administrative order, or in response to a subpoena or discovery request when permitted by law.
+        </li>
+        <li><strong>Law Enforcement:</strong> We may release protected health information if asked to do so by a law enforcement official
+          in response to a court order, subpoena, warrant, summons, or similar process.
+        </li>
+        <li><strong>Other Related Disclosures:</strong> Including disclosures relating to Armed Forces personnel, to national security
+          and intelligence agencies, as well as to authorized federal officials for the protection of the President of the United
+          States or other authorized persons or foreign heads of state.
+        </li>
+        <li><strong>Coroners, Funeral Directors, and Organ Donation:</strong> We may disclose protected health information about you to
+          a coroner or medical examiner, to funeral directors as needed to carry out their duties, and for certain organ donations
+          to which you may have agreed.
+        </li>
+        <li><strong>Research:</strong> We may disclose your protected health information to researchers when their research has been
+          approved and protocols established to ensure the privacy of your information. We may also disclose a limited set of your
+          information, as allowed under the law, for research purposes.
+        </li>
+        <li><strong>Criminal Activity:</strong> We may disclose your protected health information, consistent with federal and state
+          laws, if we believe it is necessary to prevent or lessen a serious or imminent threat to health or safety, or to help
+          law enforcement identify or apprehend an individual.
+        </li>
+        <li><strong>Workers’ Compensation:</strong> We may release protected health information about you for Workers’ Compensation or
+          similar programs that provide benefits for work-related injuries or illnesses.
+        </li>
       </ul>
-    </div>
 
-    <!-- FAQ -->
-    <div class="container pb-16">
-      <h2 class="text-xl font-semibold">FAQ</h2>
-      <div class="mt-4 space-y-3">
-        <details class="rounded-xl bg-white ring-1 ring-neutral-200 p-4">
-          <summary class="cursor-pointer font-medium">Do you aim for natural results?</summary>
-          <p class="mt-2 text-sm text-neutral-700">Yes—conservative increments and restraint are core to our method.</p>
-        </details>
-        <details class="rounded-xl bg-white ring-1 ring-neutral-200 p-4">
-          <summary class="cursor-pointer font-medium">Are devices FDA-cleared?</summary>
-          <p class="mt-2 text-sm text-neutral-700">We use FDA-cleared devices and medical-grade products as standard.</p>
-        </details>
-        <details class="rounded-xl bg-white ring-1 ring-neutral-200 p-4">
-          <summary class="cursor-pointer font-medium">How do you handle downtime?</summary>
-          <p class="mt-2 text-sm text-neutral-700">We set expectations up-front and support you with clear aftercare.</p>
-        </details>
-        <details class="rounded-xl bg-white ring-1 ring-neutral-200 p-4">
-          <summary class="cursor-pointer font-medium">Can I start small?</summary>
-          <p class="mt-2 text-sm text-neutral-700">Absolutely. We prefer building outcomes over time for durability.</p>
-        </details>
-        <details class="rounded-xl bg-white ring-1 ring-neutral-200 p-4">
-          <summary class="cursor-pointer font-medium">Who performs treatments?</summary>
-          <p class="mt-2 text-sm text-neutral-700">A Board Certified-Family Nurse Practitioner provides your care.</p>
-        </details>
+      <!-- Your Rights -->
+      <h2 class="mt-10 text-xl font-semibold">Your Rights Regarding Protected Health Information About You</h2>
+      <p class="mt-2 text-neutral-700">
+        <strong>Right to Inspect and Copy:</strong> You have the right to inspect and copy protected health information that may be used
+        to make decisions about your medical care (usually medical and billing records). Requests must be submitted in writing.
+        We may charge a reasonable fee for copying, mailing, or supplies. Limited denials may apply; you may request a review of
+        any denial.
+      </p>
+      <p class="mt-3 text-neutral-700">
+        <strong>Right to Request Restrictions:</strong> You may request that we restrict the use and disclosure of your protected health
+        information for treatment, payment, and healthcare operations. We are not required to agree, but if we do, we will comply
+        unless needed for emergency treatment.
+      </p>
+      <p class="mt-2 text-neutral-700">
+        To request restrictions, write to: 871 Blooming Grove Turnpike Suite 102, New Windsor, New York 12553. Include:
+      </p>
+      <ul class="mt-3 list-disc pl-5 space-y-1 text-neutral-700">
+        <li>What information you want to limit.</li>
+        <li>Whether you want to limit our use, disclosure, or both.</li>
+        <li>To whom you want the limits to apply.</li>
+      </ul>
+
+      <p class="mt-3 text-neutral-700">
+        <strong>Right to Confidential Communications:</strong> You may request to receive communications (such as appointment confirmations)
+        by alternative means or at alternative locations (e.g., only at work or by mail). Make your request in writing to the
+        address above. We will accommodate all reasonable requests; specify how or where you wish to be contacted.
+      </p>
+
+      <p class="mt-3 text-neutral-700">
+        <strong>Right to Amend:</strong> If you feel the protected health information we have is incorrect or incomplete, you may request
+        an amendment. Only the health care entity that created your information is responsible for amending it. For procedures,
+        contact the address above.
+      </p>
+
+      <p class="mt-3 text-neutral-700">
+        <strong>Right to an Accounting of Disclosures:</strong> You may request an accounting of disclosures of your protected health
+        information for purposes other than treatment, payment, or healthcare operations by D-Essence Wellness or contractors
+        acting on our behalf. Submit a written request to the address above. State a time period (no longer than six (6) years
+        prior to your request and not before August 1, 2005) and your preferred format (paper or electronic). Photocopying charges
+        may apply.
+      </p>
+
+      <p class="mt-3 text-neutral-700">
+        <strong>Right to a Paper Copy of This Notice:</strong> You may obtain a paper copy at any time. You can also access this Notice
+        on our website: <span class="underline">www.d-essencewellness.com</span>. To obtain a paper copy, contact (845) 282-6437.
+      </p>
+
+      <p class="mt-3 text-neutral-700">
+        To learn more about these procedures, or to make any of these requests, contact our Office Manager at (845) 282-6437.
+      </p>
+
+      <!-- Changes to This Notice -->
+      <h2 class="mt-10 text-xl font-semibold">Changes to This Notice</h2>
+      <p class="mt-2 text-neutral-700">
+        D-Essence Wellness reserves the right to change this notice. We may make the revised or changed Notice effective for
+        protected health information we already have about you, as well as any information we create or receive in the future.
+        We will post a copy of the current Notice on D-Essence Wellness&apos; website: www.d-essencewellness.com. The Notice will
+        contain, in the top right-hand corner, the effective date.
+      </p>
+
+      <!-- Complaints -->
+      <h2 class="mt-10 text-xl font-semibold">Complaints</h2>
+      <p class="mt-2 text-neutral-700">
+        If you believe your privacy rights have been violated and/or that D-Essence Wellness has not followed this policy, you
+        may file a complaint with the Office Manager or with the Secretary of the Department of Health and Human Services.
+      </p>
+      <p class="mt-3 text-neutral-700">
+        To file a complaint with D-Essence Wellness, contact our Office Manager at 871 Blooming Grove Turnpike Suite 102,
+        New Windsor, New York 12553. All complaints must be submitted in writing. You will not be penalized for filing a complaint.
+      </p>
+
+      <!-- Other Uses of PHI -->
+      <h2 class="mt-10 text-xl font-semibold">Other Uses of Protected Health Information</h2>
+      <p class="mt-2 text-neutral-700">
+        Other uses and disclosures of your protected health information not covered by this notice or the laws that apply to
+        D-Essence Wellness will be made only with your written permission (“authorization”). If you provide us permission to use or
+        disclose protected health information about you, you may revoke that permission, in writing, at any time. If you revoke
+        your permission, we will no longer use or disclose protected health information about you for the reasons covered by your
+        authorization. You understand that we are unable to take back any disclosures we have already made with your permission,
+        and that we are required to retain our records of the medical treatment or other services that we have provided to you.
+      </p>
+
+      <!-- Contact -->
+      <h2 class="mt-10 text-xl font-semibold">Questions?</h2>
+      <p class="mt-2 text-neutral-700">
+        If you have any questions regarding this notice, please contact the Office Manager at D-Essence Wellness.
+      </p>
+
+      <div class="mt-10 rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-5 text-sm text-neutral-700">
+        End of HIPAA Privacy Policy
       </div>
     </div>
   </section>
