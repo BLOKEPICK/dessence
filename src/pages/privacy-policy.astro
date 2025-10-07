@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const seo = {
+  title: 'Privacy Policy | D-Essence Wellness',
+  description:
+    'Learn how D-Essence Wellness collects, uses, protects, and shares your information. Read our Privacy Policy.',
+  canonical: '/privacy',
+  type: 'website',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'PrivacyPolicy',
+      name: 'Privacy Policy',
+      url: 'https://dessencewellness.com/privacy-policy',
+      dateModified: '2024-06-09'
+    }
+  ]
+};
+---
+
+<BaseLayout seo={seo}>
+  <!-- ===== HERO (dark) ===== -->
+  <section class="bg-neutral-950 text-white">
+    <div class="container pt-28 pb-10 max-w-3xl">
+      <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/60">
+        <span>Legal</span><span class="opacity-40">•</span><span>Privacy Policy</span>
+      </div>
+      <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Privacy Policy</h1>
+      <p class="mt-3 text-white/80">Revised as of June 9, 2024</p>
+      <p class="mt-4 text-white/80">
+        This Privacy Policy explains what information we collect, how we use it, and the choices you have.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CONTENT (white) ===== -->
+  <section class="bg-white text-neutral-900">
+    <div class="container py-12 sm:py-14 max-w-3xl">
+      <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-5 text-sm text-neutral-700">
+        D-Essence Wellness (“we” or “us”), located at 871 Blooming Grove Turnpike Suite 102, New Windsor, New York 12553,
+        is committed to protecting the privacy and security of your personal information. This privacy policy discloses
+        the privacy practices used in conjunction with our website and will notify you of:
+        <ul class="mt-3 list-disc pl-5 space-y-1">
+          <li>What personally identifiable information is collected, how it is used, and with whom it may be shared</li>
+          <li>What choices are available to you regarding the use of your data</li>
+          <li>The security procedures in place to protect your information</li>
+          <li>How you can manage your preferences and correct inaccuracies</li>
+          <li>Other information regarding your data that may be useful to you</li>
+        </ul>
+      </div>
+
+      <!-- Information We Collect -->
+      <h2 class="mt-10 text-xl font-semibold">Information We Collect</h2>
+      <h3 class="mt-4 text-base font-medium">Personal Information &amp; Usage Data</h3>
+      <p class="mt-2 text-neutral-700">
+        We may collect, store, and use the following kinds of data:
+      </p>
+      <ul class="mt-3 list-disc pl-5 space-y-2 text-neutral-700">
+        <li>
+          Information about your computer and about your visits to and use of this website (including your IP address,
+          geographical location, browser type and version, operating system, referral source, length of visit, page views,
+          and website navigation).
+        </li>
+        <li>
+          Information relating to any transactions carried out between you and us on or in relation to this website,
+          including information relating to any purchases you make of our goods or services.
+        </li>
+        <li>
+          Information that you provide to us for the purpose of registering with us, including your name, address,
+          telephone number, email address, etc.
+        </li>
+        <li>
+          Information that you provide to us for the purpose of subscribing to our website services, email notifications,
+          and/or newsletters.
+        </li>
+        <li>Any other information that you choose to provide to us.</li>
+      </ul>
+
+      <!-- Cookies -->
+      <h3 class="mt-6 text-base font-medium">Cookies</h3>
+      <p class="mt-2 text-neutral-700">
+        We use “cookies” on this site. A cookie is a piece of data stored on a site visitor’s device to help us improve
+        access to our site and identify repeat visitors. Cookies can enable us to track and target user interests to
+        enhance the experience on our site. Some business partners may also use cookies (for example, advertisers).
+        However, we have no access to or control over these cookies. We do not honor the Do Not Track (DNT) browser
+        preference at this time.
+      </p>
+
+      <!-- How We Use the Information -->
+      <h2 class="mt-10 text-xl font-semibold">How We Use the Information We Collect</h2>
+      <p class="mt-2 text-neutral-700">
+        We use your information to monitor and improve our services. For example, we use Google Analytics to help analyze
+        how our users utilize this website. Google Analytics uses cookies to collect information such as how often users
+        visit the site, what pages they visit, and what other sites they used prior to coming here. Google Analytics
+        collects only the IP address assigned to you on the date you visit, rather than your name or other personally
+        identifying information. We do not combine information generated via Google Analytics with your personal
+        information. Google’s ability to use and share information about your visits is restricted by the Google Analytics
+        Terms of Use and the Google Privacy Policy.
+      </p>
+      <p class="mt-3 text-neutral-700">
+        We use your personal information to respond to your inquiries—typically to inform you about products and services
+        we offer. We may share your personal information with third-party providers outside of our organization, if
+        necessary, to fulfill your request (e.g., to ship an order) or to help manage our website.
+      </p>
+      <p class="mt-3 text-neutral-700">
+        Unless you opt out, we may contact you via email in the future to tell you about specials or new products or
+        services. We may share aggregated (non-identifiable) demographic information with partners and advertisers. We may
+        use outside companies to ship orders and to process payments; these companies do not retain or use personal
+        information for secondary purposes beyond fulfilling your order. We may partner with other parties to provide
+        specific services and will share only the information necessary for them to provide those services.
+      </p>
+
+      <!-- Security -->
+      <h2 class="mt-10 text-xl font-semibold">How We Protect the Information We Collect</h2>
+      <h3 class="mt-4 text-base font-medium">Security</h3>
+      <p class="mt-2 text-neutral-700">
+        We employ reasonable technical and organizational safeguards designed to protect your information from
+        unauthorized access, loss, misuse, or alteration. We store personal information on secure (password- and
+        firewall-protected) servers, and only employees who need the information to perform a specific job (e.g., billing
+        or customer service) are granted access. The computers/servers in which we store personal information are kept in
+        a secure environment.
+      </p>
+
+      <!-- Compliance with Law -->
+      <h3 class="mt-6 text-base font-medium">Compliance with Laws and Law Enforcement</h3>
+      <p class="mt-2 text-neutral-700">
+        We may disclose personal information, usage data, and other information if reasonably necessary to: (a) satisfy
+        any applicable law, regulation, legal process, or governmental request; (b) enforce a contract, including
+        investigation of potential violations; (c) detect, prevent, or address fraud, security, or technical issues; or
+        (d) protect against harm to the rights, property, or safety of our website, its users, or the public.
+      </p>
+
+      <!-- Location / Storage -->
+      <h3 class="mt-6 text-base font-medium">Your Information May Be Maintained Within the United States</h3>
+      <p class="mt-2 text-neutral-700">
+        We process and store information in the United States. By using the website, you agree that the collection, use,
+        transfer, and disclosure of your information and communications will be governed by U.S. law. All data we collect
+        is stored on servers in the United States. When we transfer data out of the European Economic Area or Switzerland,
+        we use appropriate legal mechanisms (e.g., standard contractual clauses, binding corporate rules, or other lawful
+        bases).
+      </p>
+
+      <!-- Misc -->
+      <h2 class="mt-10 text-xl font-semibold">Miscellaneous</h2>
+      <h3 class="mt-4 text-base font-medium">Links</h3>
+      <p class="mt-2 text-neutral-700">
+        This website contains links to other sites. We are not responsible for the content or privacy practices of such
+        sites. We encourage users to read the privacy statements of any site that collects personally identifiable
+        information.
+      </p>
+
+      <h3 class="mt-6 text-base font-medium">Surveys &amp; Contests</h3>
+      <p class="mt-2 text-neutral-700">
+        Participation in surveys or contests is voluntary. Information requested may include contact details and
+        demographic information. Contact information is used to notify winners and award prizes; survey information is
+        used to monitor or improve the site.
+      </p>
+
+      <h3 class="mt-6 text-base font-medium">Updates</h3>
+      <p class="mt-2 text-neutral-700">
+        Our privacy policy may change from time to time. Changes become effective upon posting on this page (see the
+        revision date above). Use of information we collect now is subject to the policy in effect at the time such
+        information is collected. By continuing to use the website and our services, you agree to be bound by the revised
+        policy.
+      </p>
+
+      <h3 class="mt-6 text-base font-medium">Accuracy</h3>
+      <p class="mt-2 text-neutral-700">
+        You can review, correct, update, or change personal information we have on file. Upon request, we will:
+        (1) correct, update, or change your personal information; (2) stop sending you marketing messages; and/or
+        (3) disable your account. Please email your request using the address below. Do not email sensitive information.
+      </p>
+
+      <h3 class="mt-6 text-base font-medium">Retention</h3>
+      <p class="mt-2 text-neutral-700">
+        We retain information only for so long as it continues to help us monitor or improve the services. When personal
+        information or usage data is no longer needed, it will be deleted or anonymized.
+      </p>
+
+      <h3 class="mt-6 text-base font-medium">Compliance with GDPR</h3>
+      <p class="mt-2 text-neutral-700">
+        To the extent required by law, we comply with the EU General Data Protection Regulation (GDPR). Your rights may
+        include: right of erasure, rectification, to be informed, access, restriction of processing, data portability,
+        objection, not to be subject to automated decision making, and the right to complain to a supervisory authority.
+        If you believe we are not in compliance, please email your concerns using the contact details below.
+      </p>
+
+      <!-- Contact -->
+      <h2 class="mt-10 text-xl font-semibold">Contact Information</h2>
+      <p class="mt-2 text-neutral-700">
+        If you have questions or concerns regarding this privacy policy, please email
+        <a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="mailto:dessenceaesthetics@gmail.com">dessenceaesthetics@gmail.com</a>.
+        You may also write to or call:
+      </p>
+      <address class="mt-3 not-italic text-neutral-700">
+        D-Essence Wellness<br/>
+        871 Blooming Grove Turnpike Suite 102<br/>
+        New Windsor, New York 12553<br/>
+        <a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="tel:+18452826437">(845) 282-6437</a>
+      </address>
+
+      <div class="mt-10 rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-5 text-sm text-neutral-700">
+        End of Privacy Policy
+      </div>
+    </div>
+  </section>
+</BaseLayout>
