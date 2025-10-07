@@ -1,0 +1,339 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const seo = {
+  title: 'Therapeutic Massage | D-Essence Wellness',
+  description:
+    'Tailored bodywork blending Deep Tissue, Swedish, and Eastern techniques. Head-to-Toe (60 min), Neck/Shoulders & Back (30 min), and Hips/Hamstrings & Back (30 min). New Windsor, NY.',
+  canonical: '/services/therapeutic-massage/',
+  type: 'website',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Therapeutic Massage',
+      serviceType: 'Massage & Bodywork',
+      areaServed: { '@type': 'Place', name: 'New Windsor, NY' },
+      provider: {
+        '@type': 'HealthAndBeautyBusiness',
+        name: 'D-Essence Wellness',
+        telephone: '+1-716-303-8963',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '871 Blooming Grove Turnpike Suite 102',
+          addressLocality: 'New Windsor',
+          addressRegion: 'NY',
+          postalCode: '12553',
+          addressCountry: 'US'
+        }
+      },
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Therapeutic Massage Sessions',
+        itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Head-to-Toe — 60 minutes' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Neck/Shoulders & Back — 30 minutes' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hips/Hamstrings & Back — 30 minutes' } }
+        ]
+      }
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
+        { '@type': 'ListItem', position: 2, name: 'Therapeutic Massage', item: 'https://dessencewellness.com/services/therapeutic-massage/' }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout seo={seo}>
+  <!-- ===== HERO (dark) ===== -->
+  <section class="bg-neutral-950 text-white">
+    <div class="container pt-28 pb-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/70">
+          <span>Massage &amp; Bodywork</span><span class="opacity-40">•</span><span>New Windsor, NY</span>
+        </div>
+        <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Therapeutic Massage</h1>
+        <p class="mt-4 text-white/80">
+          A tailored blend of Deep Tissue, Swedish, and Eastern techniques to release tension, improve mobility,
+          and restore balance—adjusted to your goals and comfort.
+        </p>
+
+        <!-- Quick-nav -->
+        <div class="mt-6" id="quick-nav">
+          <nav aria-label="Quick navigation"
+               class="flex flex-wrap gap-2">
+            {[
+              { id: 'head-to-toe', label: 'Head-to-Toe (60 min)' },
+              { id: 'neck-shoulders-back', label: 'Neck/Shoulders & Back (30 min)' },
+              { id: 'hips-hamstrings-back', label: 'Hips/Hamstrings & Back (30 min)' },
+              { id: 'faq', label: 'FAQ' }
+            ].map(link => (
+              <a href={'#' + link.id}
+                 class="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-sm text-white hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20">
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTENT (white) ===== -->
+  <section class="bg-white text-neutral-900">
+    <div class="container py-12 sm:py-14">
+      <!-- Overview -->
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Overview</h2>
+          <p class="mt-3 text-neutral-700">
+            Each session blends techniques to your body’s needs—firm, targeted work where you need it,
+            and flowing relaxation where you want to unwind. Pressure and pace are adjusted in-session.
+          </p>
+
+          <div class="mt-6 grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium">Benefits</div>
+              <ul class="mt-2 grid gap-2 text-sm text-neutral-700">
+                {[
+                  'Relieves muscle tension & trigger points',
+                  'Improves circulation & lymphatic flow',
+                  'Enhances flexibility & range of motion',
+                  'Supports posture & recovery',
+                  'Promotes deep relaxation & stress relief'
+                ].map(item => (
+                  <li class="inline-flex items-start gap-2">
+                    <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium">Techniques Used</div>
+              <p class="mt-2 text-sm text-neutral-700">
+                Deep Tissue · Swedish · Eastern bodywork elements (e.g., acupressure-inspired point work,
+                gentle stretching, and rhythmic compressions).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-5">
+            <div class="text-sm font-medium">What to Expect</div>
+            <ul class="mt-2 grid gap-2 text-sm text-neutral-700">
+              {[
+                'Brief discussion of goals and areas of concern',
+                'Customized pressure—light to deep as preferred',
+                'Targeted work + full-body flow for balance',
+                'Professional draping; communication encouraged',
+                'Post-session guidance for at-home care'
+              ].map(item => (
+                <li class="inline-flex items-start gap-2">
+                  <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-4 text-xs text-neutral-500">
+              Not a substitute for medical care. Please notify us of pregnancy, recent injuries, or health conditions.
+            </div>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+              <a href="/contact-us/" class="inline-flex items-center rounded-full border border-neutral-300 px-4 py-2 text-sm hover:bg-neutral-50">Ask a question</a>
+              <a href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx" target="_blank" rel="noopener"
+                 class="inline-flex items-center rounded-full bg-neutral-900 text-white px-4 py-2 text-sm hover:bg-neutral-800">Book appointment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Variants -->
+      <div class="mt-12 grid md:grid-cols-2 gap-6">
+        <!-- Head-to-Toe -->
+        <section id="head-to-toe" class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-lg font-semibold">Head-to-Toe — 60 minutes</h3>
+              <p class="mt-1 text-neutral-700">
+                Full-body deep relaxation with focused time on 1–2 areas of concern. Ideal for overall reset with targeted relief.
+              </p>
+            </div>
+          </div>
+          <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-neutral-700">
+            {[
+              'Balanced full-body flow + targeted work',
+              'Ideal cadence: every 2–4 weeks',
+              'Good for stress, posture, and recovery'
+            ].map(item => (
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <!-- Neck/Shoulders & Back -->
+        <section id="neck-shoulders-back" class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-lg font-semibold">Neck/Shoulders &amp; Back — 30 minutes</h3>
+              <p class="mt-1 text-neutral-700">
+                Focused relief for the shoulder girdle and adjacent areas—great for desk tension and upper-back tightness.
+              </p>
+            </div>
+          </div>
+          <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-neutral-700">
+            {[
+              'Targeted pressure for common trigger points',
+              'Ideal as a standalone or add-on',
+              'Helpful for headaches & tech-neck'
+            ].map(item => (
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <!-- Hips/Hamstrings & Back -->
+        <section id="hips-hamstrings-back" class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <h3 class="text-lg font-semibold">Hips/Hamstrings &amp; Back — 30 minutes</h3>
+              <p class="mt-1 text-neutral-700">
+                Concentrated work for the hip girdle and posterior chain—supports mobility and relieves lower-back tightness.
+              </p>
+            </div>
+          </div>
+          <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-neutral-700">
+            {[
+              'Glutes, hips, hamstrings focus',
+              'Assisted stretching as appropriate',
+              'Pairs well with training & recovery'
+            ].map(item => (
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <!-- Aftercare -->
+        <section class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6">
+          <h3 class="text-lg font-semibold">Aftercare</h3>
+          <ul class="mt-3 grid sm:grid-cols-2 gap-2 text-sm text-neutral-700">
+            {[
+              'Hydrate well the rest of the day',
+              'Gentle movement & light stretching',
+              'Avoid very hot baths/saunas for 24 hours',
+              'Allow muscles to recover before intense workouts'
+            ].map(item => (
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="mt-4 text-xs text-neutral-500">
+            If you experience unusual soreness or have concerns, please contact us.
+          </div>
+        </section>
+      </div>
+
+      <!-- FAQ -->
+      <section id="faq" class="mt-12">
+        <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">FAQ</h2>
+        <div class="mt-6 grid gap-4">
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">How firm is the pressure?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              We adjust continuously—light, moderate, or deep—based on your preference and feedback. Communication is encouraged.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">What should I wear?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              You’ll be professionally draped at all times. Come as you are; we’ll guide you on comfort and positioning.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">Who is a good candidate?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Most adults seeking relaxation or targeted relief. Please inform us of pregnancy, injuries, or medical conditions so we can adapt your session safely.
+            </p>
+          </details>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Smooth offset scroll for quick-nav -->
+  <script is:inline>
+    (function () {
+      var nav = document.getElementById('quick-nav');
+      if (!nav) return;
+
+      function easeInOutQuad(t){ return t<0.5 ? 2*t*t : -1+(4-2*t)*t; }
+
+      function getOffset() {
+        var header = document.querySelector('header');
+        var base = header ? header.getBoundingClientRect().height : 64;
+        return base + 24;
+      }
+
+      function smoothScrollTo(targetY, duration) {
+        var startY = window.pageYOffset || document.documentElement.scrollTop;
+        var startTime = performance.now();
+        var D = Math.max(300, Math.min(duration, 900));
+
+        function step(now) {
+          var t = Math.min(1, (now - startTime) / D);
+          var eased = easeInOutQuad(t);
+          window.scrollTo(0, Math.round(startY + (targetY - startY) * eased));
+          if (t < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+
+      nav.addEventListener('click', function (e) {
+        var a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        var id = a.getAttribute('href').slice(1);
+        var el = document.getElementById(id);
+        if (!el) return;
+
+        e.preventDefault();
+        var offset = getOffset();
+        var rect = el.getBoundingClientRect();
+        var targetY = (window.pageYOffset || document.documentElement.scrollTop) + rect.top - offset;
+        smoothScrollTo(targetY, 700);
+
+        el.setAttribute('tabindex','-1');
+        setTimeout(function(){ el.focus({ preventScroll: true }); el.removeAttribute('tabindex'); }, 750);
+      }, { passive: false });
+    })();
+  </script>
+</BaseLayout>
