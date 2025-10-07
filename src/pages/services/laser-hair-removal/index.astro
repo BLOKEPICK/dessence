@@ -1,0 +1,302 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const seo = {
+  title: 'Laser Hair Removal | D-Essence Wellness',
+  description:
+    'Long-term hair reduction with modern, skin-tone–aware settings. Fewer ingrowns and smoother skin with a short series of sessions.',
+  canonical: '/services/laser-hair-removal/',
+  type: 'website',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Laser Hair Removal',
+      serviceType: 'Aesthetic Laser',
+      areaServed: 'New Windsor, New York',
+      provider: {
+        '@type': 'MedicalBusiness',
+        name: 'D-Essence Wellness',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '871 Blooming Grove Turnpike Suite 102',
+          addressLocality: 'New Windsor',
+          addressRegion: 'NY',
+          postalCode: '12553',
+          addressCountry: 'US'
+        }
+      },
+      url: 'https://dessencewellness.com/services/laser-hair-removal/'
+    }
+  ]
+};
+---
+
+<BaseLayout seo={seo}>
+  <!-- ===== HERO (dark) ===== -->
+  <section class="bg-neutral-950 text-white">
+    <div class="container pt-28 pb-10 max-w-3xl">
+      <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/60">
+        <span>Services</span><span class="opacity-40">•</span><span>Laser</span>
+      </div>
+      <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Laser Hair Removal</h1>
+      <p class="mt-4 text-white/80">
+        Concentrated light targets the hair follicle to reduce regrowth over time. We tune energy and cadence to your
+        skin tone and hair characteristics for a comfortable, efficient series.
+      </p>
+
+      <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Skin tones</div>
+          <div class="mt-0.5 font-medium">I–VI (with parameters)</div>
+        </div>
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Typical series</div>
+          <div class="mt-0.5 font-medium">~6–8 sessions</div>
+        </div>
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Session length</div>
+          <div class="mt-0.5 font-medium">~10–45 min</div>
+        </div>
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Downtime</div>
+          <div class="mt-0.5 font-medium">Minimal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTENT (white) ===== -->
+  <section class="bg-white text-neutral-900">
+    <div class="container py-12 sm:py-14">
+      <!-- Overview -->
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Overview</h2>
+          <p class="mt-3 text-neutral-700">
+            Laser hair removal uses selective photothermolysis: light is absorbed by the pigment in the hair shaft and
+            converted to heat, which disables the follicle while sparing surrounding skin. It is not “permanent” for all
+            follicles, but it delivers significant, long-lasting reduction compared with shaving or waxing.
+          </p>
+          <p class="mt-3 text-neutral-700">
+            Best results come from a short series of sessions timed to hair-growth cycles. Each visit is brief, requires
+            no anesthesia, and most people resume normal activity right away.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
+            <h3 class="text-lg font-medium">Common areas</h3>
+            <ul class="mt-3 grid grid-cols-2 gap-2 text-sm text-neutral-700">
+              {[
+                'Upper lip & chin',
+                'Jawline & cheeks',
+                'Underarms',
+                'Bikini/Brazilian',
+                'Legs',
+                'Arms',
+                'Back',
+                'Chest/Abdomen'
+              ].map(item => (
+                <li class="inline-flex items-start gap-2">
+                  <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p class="mt-3 text-xs text-neutral-500">
+              Final candidacy and parameters are set after an in-clinic assessment.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Benefits -->
+      <div class="mt-12 grid md:grid-cols-3 gap-4">
+        {[
+          {
+            title: 'Durable reduction',
+            text: 'Noticeably less regrowth and slower, finer hair over time compared with waxing or shaving.'
+          },
+          {
+            title: 'Fewer ingrowns',
+            text: 'Helps reduce razor bumps, folliculitis, and irritation linked to repeated shaving.'
+          },
+          {
+            title: 'Precision & efficiency',
+            text: 'Targets follicles while sparing skin; small areas take minutes, larger areas are still efficient.'
+          }
+        ].map(card => (
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <div class="text-sm font-medium text-neutral-900">{card.title}</div>
+            <p class="mt-2 text-sm text-neutral-700">{card.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- What to expect -->
+      <div class="mt-12 grid lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-5">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">What to expect</h2>
+          <p class="mt-3 text-neutral-700">
+            We’ll confirm your skin tone, hair color, and area specifics, then select settings for comfort and efficacy.
+            Protective eyewear is worn throughout; cooling strategies help keep the skin at ease.
+          </p>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium text-neutral-900">Before your visit</div>
+              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
+                <li>Shave the area 24–48 hours prior (no waxing/tweezing for 4–6 weeks).</li>
+                <li>Limit sun exposure; avoid self-tanners on the area.</li>
+                <li>Share any photosensitizing meds or active skin treatments.</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium text-neutral-900">During treatment</div>
+              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
+                <li>Protective goggles for you and your clinician.</li>
+                <li>Brief pulses feel like a warm snap; cooling is used as needed.</li>
+                <li>Typical time: minutes for small areas; longer for large zones.</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5 sm:col-span-2">
+              <div class="text-sm font-medium text-neutral-900">After & timeline</div>
+              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
+                <li>Temporary pinkness or perifollicular “bumps” can occur and settle quickly.</li>
+                <li>Shedding happens gradually over days; avoid pulling or scrubbing.</li>
+                <li>Series: most plans include ~6–8 sessions spaced several weeks apart.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aftercare -->
+      <div class="mt-12">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Aftercare</h2>
+        <div class="mt-4 grid md:grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <ul class="text-sm text-neutral-700 space-y-2">
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Use broad-spectrum SPF; limit intense sun on treated areas.
+              </li>
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Avoid harsh actives (strong acids/retinoids) for 24–48 hours.
+              </li>
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Cool compresses can ease warmth or puffiness.
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <ul class="text-sm text-neutral-700 space-y-2">
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Skip hot tubs/steam rooms and intense workouts for 24 hours.
+              </li>
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Do not pluck or wax between sessions; shaving is fine.
+              </li>
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Moisturize with gentle, non-comedogenic products.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Safety & risks -->
+      <div class="mt-12">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Safety & risks</h2>
+        <div class="mt-4 grid md:grid-cols-2 gap-4 text-sm text-neutral-700">
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <div class="font-medium text-neutral-900">Common, temporary effects</div>
+            <ul class="mt-2 space-y-1.5">
+              <li>Mild redness and perifollicular swelling</li>
+              <li>Warmth or tingling</li>
+              <li>Short-lived pigment shift in sun-exposed skin</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <div class="font-medium text-neutral-900">Less common considerations</div>
+            <ul class="mt-2 space-y-1.5">
+              <li>Superficial burns or blisters if parameters are inappropriate</li>
+              <li>Paradoxical hair activation (rare)</li>
+              <li>Scarring or persistent pigment change (rare)</li>
+            </ul>
+          </div>
+        </div>
+        <p class="mt-4 text-xs text-neutral-500">
+          Educational information only; not medical advice. We’ll confirm candidacy and settings after an in-clinic review.
+        </p>
+      </div>
+
+      <!-- FAQ -->
+      <div class="mt-12">
+        <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">FAQ</h2>
+        <div class="mt-6 grid gap-4">
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">How many sessions will I need?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Most areas respond well with ~6–8 sessions spaced several weeks apart. The exact number varies by area, hair growth, and goals.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">Is it permanent?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Results are long-lasting reduction rather than absolute permanence. Occasional maintenance may be helpful.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">Does it hurt?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Most describe a quick, warm snap. We use cooling and pacing to keep you comfortable.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">Can all skin types be treated?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Yes—with appropriate parameters and device choice. We tailor settings to your tone, hair, and area.
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-12">
+        <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6 flex items-center justify-between gap-4">
+          <div class="text-sm text-neutral-700">
+            Ready to plan your series for smoother, lower-maintenance skin?
+          </div>
+          <a href="/contact-us/" class="inline-flex items-center rounded-full bg-neutral-900 text-white px-5 py-2.5 text-sm hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
