@@ -63,27 +63,7 @@ const seo = {
           keeping expression, not the wrinkles.
         </p>
 
-        <!-- Quick-nav -->
-        <div class="mt-6" id="quick-nav">
-          <nav aria-label="Quick navigation" class="flex flex-wrap gap-2">
-            {[
-              { id: 'overview', label: 'Overview' },
-              { id: 'how-it-works', label: 'How it works' },
-              { id: 'candidates', label: 'Who it’s for' },
-              { id: 'benefits', label: 'Benefits' },
-              { id: 'expect', label: 'What to expect' },
-              { id: 'pre-visit', label: 'Pre-visit tips' },
-              { id: 'aftercare', label: 'Aftercare' },
-              { id: 'safety', label: 'Safety & side effects' },
-              { id: 'faq', label: 'FAQ' }
-            ].map(link => (
-              <a href={'#' + link.id}
-                 class="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-sm text-white hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20">
-                {link.label}
-              </a>
-            ))}
-          </nav>
-        </div>
+      
       </div>
     </div>
   </section>
