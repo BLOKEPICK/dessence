@@ -2,19 +2,19 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const seo = {
-  title: 'Acne Program | D-Essence Wellness',
+  title: 'IV Therapy | D-Essence Wellness',
   description:
-    'A structured, customized plan that blends medical-grade skincare, in-office treatments, and coaching to clear acne, prevent scars, and maintain healthy skin.',
-  canonical: '/services/acne-program/',
+    'Personalized IV drips delivering vitamins, minerals, electrolytes, and fluids for rapid hydration and targeted support—administered by trained professionals.',
+  canonical: '/services/iv-therapy/',
   type: 'website',
   jsonLd: [
     {
       '@context': 'https://schema.org',
       '@type': 'Service',
-      name: 'Acne Program',
-      serviceType: 'Dermatologic care',
+      name: 'IV Therapy',
+      serviceType: 'Wellness & IV',
       areaServed: 'New Windsor, New York',
-      url: 'https://dessencewellness.com/services/acne-program/',
+      url: 'https://dessencewellness.com/services/iv-therapy/',
       provider: {
         '@type': 'MedicalBusiness',
         name: 'D-Essence Wellness',
@@ -37,30 +37,30 @@ const seo = {
   <section class="bg-neutral-950 text-white">
     <div class="container pt-28 pb-10 max-w-3xl">
       <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/60">
-        <span>Services</span><span class="opacity-40">•</span><span>Advanced Skin Care</span>
+        <span>Services</span><span class="opacity-40">•</span><span>Wellness & IV</span>
       </div>
-      <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Acne Program</h1>
+      <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">IV Therapy</h1>
       <p class="mt-4 text-white/80">
-        A structured, stepwise plan that combines targeted topicals, in-office procedures, lifestyle guidance,
-        and regular check-ins to calm active breakouts, minimize post-inflammatory marks, and help prevent scars.
+        Customized intravenous infusions to support hydration and targeted nutrients. Evidence for many wellness
+        uses can be limited in healthy individuals—your provider will personalize recommendations.
       </p>
 
       <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
         <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Approach</div>
-          <div class="mt-0.5 font-medium">Personalized, multi-modal</div>
+          <div class="text-white/70">Delivery</div>
+          <div class="mt-0.5 font-medium">Intravenous drip</div>
         </div>
         <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Ideal for</div>
-          <div class="mt-0.5 font-medium">Persistent or recurrent acne</div>
-        </div>
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Timeline</div>
-          <div class="mt-0.5 font-medium">4–8 wks to first changes</div>
+          <div class="text-white/70">Session time</div>
+          <div class="mt-0.5 font-medium">20–60+ minutes</div>
         </div>
         <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
           <div class="text-white/70">Downtime</div>
-          <div class="mt-0.5 font-medium">Minimal (varies by step)</div>
+          <div class="mt-0.5 font-medium">None to minimal</div>
+        </div>
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Best for</div>
+          <div class="mt-0.5 font-medium">Hydration & support</div>
         </div>
       </div>
     </div>
@@ -75,122 +75,33 @@ const seo = {
         <div class="lg:col-span-7">
           <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Overview</h2>
           <p class="mt-3 text-neutral-700">
-            Acne is multifactorial, so single products rarely solve it long-term. Our Acne Program builds a
-            comprehensive plan—combining home care, in-office treatments, and education—to reduce active lesions,
-            calm inflammation, protect the skin barrier, and lower the risk of scarring and discoloration.
+            IV therapy delivers fluids, vitamins, minerals, and electrolytes directly into the bloodstream, bypassing
+            digestion for rapid availability. It is commonly used for hydration support, travel recovery, and targeted
+            nutrient delivery. For generally healthy people, evidence for some wellness claims is mixed; our approach
+            prioritizes safety, medical review, and realistic expectations.
           </p>
-          <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-sm text-neutral-700">
-            {[
-              'Reduce inflammatory and non-inflammatory lesions',
-              'Lower redness and post-breakout marks',
-              'Protect against future breakouts',
-              'Improve texture, tone, and confidence'
-            ].map(item => (
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
         </div>
-
         <div class="lg:col-span-5">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
-            <h3 class="text-lg font-medium">Key benefits</h3>
-            <ul class="mt-3 grid grid-cols-2 gap-2 text-sm text-neutral-700">
+          <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6">
+            <h3 class="text-lg font-medium">Potential benefits</h3>
+            <ul class="mt-3 grid grid-cols-1 gap-2 text-sm text-neutral-700">
               {[
-                'Consistent, sustained results',
-                'Lower relapse risk',
-                'Scar prevention focus',
-                'Adapted to your skin type',
-                'Progress photos and check-ins',
-                'Education and routine coaching'
+                'Rapid hydration and electrolyte replenishment',
+                'Direct delivery for those with absorption challenges',
+                'Customizable blends tailored to goals',
+                'Low downtime and clinic-based monitoring'
               ].map(item => (
                 <li class="inline-flex items-start gap-2">
-                  <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
             <p class="mt-3 text-xs text-neutral-500">
-              Plans are individualized; medical therapies are used when appropriate and prescribed by your provider.
+              Not a substitute for balanced nutrition or medical care. Your provider will advise whether IV is appropriate.
             </p>
           </div>
         </div>
-      </div>
-
-      <!-- Program components -->
-      <div class="mt-12">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">What the program can include</h2>
-        <div class="mt-4 grid md:grid-cols-3 gap-4">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="font-medium text-neutral-900">Targeted topicals</div>
-            <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-              <li>Retinoids, benzoyl peroxide, salicylic or azelaic acid</li>
-              <li>Antibiotic or antibacterial combinations when indicated</li>
-              <li>Barrier-safe routines to balance efficacy and tolerance</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="font-medium text-neutral-900">Oral/systemic options</div>
-            <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-              <li>Short-course oral antibiotics for inflammatory flares</li>
-              <li>Hormonal strategies (for appropriate candidates)</li>
-              <li>Isotretinoin for severe or refractory cases (strict oversight)</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="font-medium text-neutral-900">In-office procedures</div>
-            <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-              <li>Chemical peels calibrated for acne-prone skin</li>
-              <li>LED/light-based therapies; extractions when appropriate</li>
-              <li>Texture work (e.g., SkinPen or microneedling) once acne is controlled</li>
-            </ul>
-          </div>
-        </div>
-        <p class="mt-3 text-xs text-neutral-500">
-          Specific therapies depend on severity, skin tone, and medical history. Your provider will tailor a safe sequence and schedule.
-        </p>
-      </div>
-
-      <!-- Timeline / phases -->
-      <div class="mt-12">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Phases and timeline</h2>
-        <div class="mt-4 grid md:grid-cols-4 gap-4">
-          {[
-            {
-              title: 'Launch',
-              time: 'Weeks 4–8',
-              items: ['Introduce topicals', 'Reduce inflammation', 'Build tolerance']
-            },
-            {
-              title: 'Build',
-              time: 'Months 3–6',
-              items: ['Layer therapies as needed', 'Add in-office support', 'Refine dosing']
-            },
-            {
-              title: 'Consolidate',
-              time: 'Months 6–12',
-              items: ['Stabilize clear skin', 'Address marks/texture', 'Document progress']
-            },
-            {
-              title: 'Maintain',
-              time: 'Ongoing',
-              items: ['Maintenance routine', 'Periodic touch-ups', 'Relapse prevention']
-            }
-          ].map(card => (
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm text-neutral-500">{card.time}</div>
-              <div class="mt-0.5 font-medium text-neutral-900">{card.title}</div>
-              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-                {card.items.map(i => <li>{i}</li>)}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <p class="mt-3 text-xs text-neutral-500">
-          Many topicals take 4–8 weeks to show visible change; substantial improvement can take several months.
-        </p>
       </div>
 
       <!-- What to expect -->
@@ -198,66 +109,79 @@ const seo = {
         <div class="lg:col-span-5">
           <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">What to expect</h2>
           <p class="mt-3 text-neutral-700">
-            Your plan starts with a consultation, photos, and a barrier-friendly routine. We meet at set intervals
-            to fine-tune products, consider procedures, and track outcomes. Clear communication keeps your skin on course.
+            We begin with a health review (medical history, medications, allergies) and, when appropriate, labs to
+            guide formulation. You’ll receive a tailored blend and monitored infusion in a comfortable setting.
           </p>
         </div>
         <div class="lg:col-span-7">
           <div class="grid sm:grid-cols-2 gap-4">
             <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">Check-ins</div>
+              <div class="text-sm font-medium text-neutral-900">During your visit</div>
               <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-                <li>Progress photos and tolerance review</li>
-                <li>Adjust strength, frequency, or add-ons</li>
-                <li>Education on triggers and routine habits</li>
+                <li>IV catheter placed using aseptic technique</li>
+                <li>Drip over 20–60+ minutes depending on volume</li>
+                <li>Warmth or mild tingling can occur and is usually brief</li>
               </ul>
             </div>
             <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">Results cadence</div>
+              <div class="text-sm font-medium text-neutral-900">Immediate feel</div>
               <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-                <li>Weeks 4–8: first visible changes</li>
-                <li>Months 3–6: fewer flares; marks start to fade</li>
-                <li>Months 6–12: texture and tone refine</li>
+                <li>Most resume normal activity right away</li>
+                <li>Many report feeling refreshed and hydrated</li>
+                <li>Effects vary with baseline status and formula</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Care tips -->
+      <!-- Popular drips (examples) -->
       <div class="mt-12">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Care tips during the program</h2>
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Popular drip examples</h2>
+        <div class="mt-4 grid md:grid-cols-3 gap-4">
+          {[
+            {
+              name: 'Hydration',
+              items: ['Electrolytes + fluids', 'Replenishes after travel or exertion', 'Gentle, foundational support']
+            },
+            {
+              name: 'Immune support',
+              items: ['Vitamin C + zinc (as appropriate)', 'Antioxidant-focused', 'Used seasonally or during recovery']
+            },
+            {
+              name: 'Beauty/Glow',
+              items: ['Hydration + skin-supportive nutrients', 'Pairs with healthy skin habits', 'May be cycled in series']
+            }
+          ].map(card => (
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="font-medium text-neutral-900">{card.name}</div>
+              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
+                {card.items.map(i => <li>{i}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <p class="mt-3 text-xs text-neutral-500">
+          Formulas are customized and may be adjusted based on health status, labs, and tolerance.
+        </p>
+      </div>
+
+      <!-- Aftercare -->
+      <div class="mt-12">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Aftercare</h2>
         <div class="mt-4 grid md:grid-cols-2 gap-4">
           <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
             <ul class="text-sm text-neutral-700 space-y-2">
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Daily broad-spectrum SPF; avoid picking and harsh scrubs.
-              </li>
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Use non-comedogenic moisturizer to protect barrier.
-              </li>
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Keep routines consistent; report irritation early.
-              </li>
+              <li>Stay hydrated orally for the rest of the day.</li>
+              <li>Take it easy if you feel lightheaded or fatigued.</li>
+              <li>Avoid intense heat (sauna/steam) immediately after.</li>
             </ul>
           </div>
           <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
             <ul class="text-sm text-neutral-700 space-y-2">
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Space actives as directed; don’t stack too many at once.
-              </li>
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Follow timing around peels/laser per provider guidance.
-              </li>
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Lifestyle: clean pillowcases, mindful makeup, gentle cleansing.
-              </li>
+              <li>Monitor the IV site; report persistent redness, warmth, or swelling.</li>
+              <li>Avoid duplicating high-dose vitamins without guidance.</li>
+              <li>Follow your personalized schedule for future sessions.</li>
             </ul>
           </div>
         </div>
@@ -265,24 +189,33 @@ const seo = {
 
       <!-- Safety -->
       <div class="mt-12">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Safety & precautions</h2>
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Safety & risks</h2>
         <div class="mt-4 grid md:grid-cols-2 gap-4 text-sm text-neutral-700">
           <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="font-medium text-neutral-900">General</div>
+            <div class="font-medium text-neutral-900">Common, mild effects</div>
             <ul class="mt-2 space-y-1.5">
-              <li>Some oral therapies require medical supervision and labs.</li>
-              <li>Avoid combining multiple strong actives without guidance.</li>
-              <li>Pregnancy: certain products/medications are not advised.</li>
+              <li>Tenderness or bruise at the IV site</li>
+              <li>Temporary warmth or metallic taste (formula dependent)</li>
+              <li>Mild fatigue if dehydrated prior to infusion</li>
             </ul>
           </div>
           <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="font-medium text-neutral-900">Skin tone & sensitivity</div>
+            <div class="font-medium text-neutral-900">Less common, more serious</div>
             <ul class="mt-2 space-y-1.5">
-              <li>We tailor peels and light therapies to minimize PIH risk.</li>
-              <li>Disclose all allergies and photosensitizing medications.</li>
-              <li>Report persistent redness or pain promptly for adjustments.</li>
+              <li>Infection or phlebitis at the IV site</li>
+              <li>Electrolyte imbalance or fluid overload in at-risk patients</li>
+              <li>Allergic reactions or vitamin/mineral toxicity at high doses</li>
             </ul>
           </div>
+        </div>
+        <div class="mt-4 rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-5 text-sm text-neutral-700">
+          <div class="font-medium text-neutral-900">Important precautions</div>
+          <ul class="mt-2 list-disc list-inside space-y-1.5">
+            <li>Disclose heart, kidney, or liver conditions before treatment.</li>
+            <li>Discuss pregnancy or lactation with your provider.</li>
+            <li>Report all medications and supplements.</li>
+            <li>Infusions should be clinically justified—avoid frequent drips without monitoring.</li>
+          </ul>
         </div>
       </div>
 
@@ -292,41 +225,44 @@ const seo = {
         <div class="mt-6 grid gap-4">
           <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
             <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">How soon will I see results?</span>
+              <span class="font-medium text-neutral-900">How often can I do IV therapy?</span>
               <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
             </summary>
             <p class="mt-3 text-neutral-700 text-sm">
-              First changes often appear by weeks 4–8, with substantial gains over several months as inflammation settles and marks fade.
+              Frequency depends on goals, health status, and labs. We avoid indiscriminate, frequent drips without
+              medical oversight.
             </p>
           </details>
 
           <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
             <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">Do I have to do in-office treatments?</span>
+              <span class="font-medium text-neutral-900">Will I feel instantly revitalized?</span>
               <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
             </summary>
             <p class="mt-3 text-neutral-700 text-sm">
-              Not required for every case, but procedures like calibrated peels, LED, or extractions can accelerate results and improve texture.
+              Many report feeling refreshed, especially if dehydrated; effects vary and can be modest in those without
+              deficiencies.
             </p>
           </details>
 
           <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
             <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">Is the program suitable for severe acne?</span>
+              <span class="font-medium text-neutral-900">Is IV better than oral vitamins?</span>
               <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
             </summary>
             <p class="mt-3 text-neutral-700 text-sm">
-              Yes. For severe or scarring acne, systemic options and closer follow-up may be included, with strict safety monitoring.
+              Not universally. IV can help when absorption is compromised or deficiency is documented; otherwise, oral
+              options are often sufficient and lower risk.
             </p>
           </details>
 
           <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
             <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">Are results permanent?</span>
+              <span class="font-medium text-neutral-900">How much does it cost?</span>
               <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
             </summary>
             <p class="mt-3 text-neutral-700 text-sm">
-              Acne can be chronic. The goal is sustained control and fewer relapses. Maintenance routines help preserve results.
+              Pricing depends on formula, volume, and clinical time. We’ll provide transparent options during consult.
             </p>
           </details>
         </div>
@@ -336,7 +272,7 @@ const seo = {
       <div class="mt-12">
         <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6 flex items-center justify-between gap-4">
           <div class="text-sm text-neutral-700">
-            Ready to start a clear-skin plan tailored to you?
+            Ready to personalize an IV plan that fits your goals and health history?
           </div>
           <a href="/contact-us/" class="inline-flex items-center rounded-full bg-neutral-900 text-white px-5 py-2.5 text-sm hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">
             Contact Us
