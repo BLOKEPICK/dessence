@@ -133,126 +133,128 @@ const seo = {
     </div>
   </section>
 
-  <!-- AJAX submit + mobile zoom reset -->
+  <!-- Evitar zoom-in en iOS al enfocar campos -->
+  <style is:inline>
+    @media (max-width: 768px) {
+      #contact-form input,
+      #contact-form select,
+      #contact-form textarea {
+        font-size: 16px !important;
+      }
+    }
+    html { -webkit-text-size-adjust: 100%; }
+  </style>
+
+  <!-- AJAX submit sin scroll + reset de zoom móvil -->
   <script is:inline>
-(function () {
-  var form    = document.getElementById('contact-form');
-  var btn     = document.getElementById('submit-btn');
-  var errorB  = document.getElementById('error-banner');
-  var email   = document.getElementById('email');
-  var replyto = document.getElementById('replyto-hidden');
+  (function () {
+    var form    = document.getElementById('contact-form');
+    var btn     = document.getElementById('submit-btn');
+    var errorB  = document.getElementById('error-banner');
+    var email   = document.getElementById('email');
+    var replyto = document.getElementById('replyto-hidden');
 
-  if (!form || !btn) return;
+    if (!form || !btn) return;
 
-  // Mantén _replyto sincronizado para mejores respuestas del proveedor
-  if (email && replyto) {
-    email.addEventListener('input', function(){ replyto.value = email.value; });
-  }
-
-  function show(el){ el && el.classList.remove('hidden'); }
-  function hide(el){ el && el.classList.add('hidden'); }
-
-  // iOS zoom reset: fuerza zoom-OUT a scale=1 y restaura el viewport original
-  function resetMobileZoom() {
-    var vp = document.querySelector('meta[name="viewport"]');
-    if (!vp) return;
-    var original = vp.getAttribute('content') || 'width=device-width, initial-scale=1';
-
-    // Fuerza escala exacta 1 (incluye minimum y maximum para asegurar el "zoom out")
-    vp.setAttribute(
-      'content',
-      'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no'
-    );
-
-    // Da tiempo a Safari/iOS para aplicar el cambio y luego restaura
-    setTimeout(function () {
-      vp.setAttribute('content', original);
-      // Nudge para evitar que quede un reflow con zoom raro
-      window.scrollTo(window.pageXOffset || 0, window.pageYOffset || 0);
-    }, 250);
-  }
-
-  // Crea el panel de éxito (una sola vez)
-  function buildSuccessView() {
-    var el = document.createElement('div');
-    el.id = 'success-view';
-    el.className = 'rounded-2xl ring-1 ring-emerald-200 bg-emerald-50 p-6 text-center';
-    el.setAttribute('role', 'status');
-    el.setAttribute('aria-live', 'polite');
-    el.innerHTML = `
-      <div class="mx-auto w-12 h-12 rounded-full bg-emerald-100 ring-1 ring-emerald-200 flex items-center justify-center">
-        <svg class="w-7 h-7 text-emerald-700" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <h3 class="mt-3 text-xl font-semibold text-emerald-900">Your message has been sent</h3>
-      <p class="mt-2 text-emerald-800">Thank you for reaching out. We’ll get back to you shortly. For urgent matters, call <a class="underline decoration-emerald-300 hover:decoration-emerald-600" href="tel:17163038963">(716) 303-8963</a>.</p>
-      <div class="mt-6">
-        <a href="/" class="inline-flex items-center rounded-full bg-neutral-900 text-white px-5 py-2.5 hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">Return to Home</a>
-      </div>
-    `;
-    return el;
-  }
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    hide(errorB);
-
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
+    // Mantén _replyto sincronizado
+    if (email && replyto) {
+      email.addEventListener('input', function(){ replyto.value = email.value; });
     }
 
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
+    function show(el){ el && el.classList.remove('hidden'); }
+    function hide(el){ el && el.classList.add('hidden'); }
 
-    var fd = new FormData(form);
+    // Forzar “zoom out” a escala 1 en iOS y restaurar viewport
+    function resetMobileZoom() {
+      var vp = document.querySelector('meta[name="viewport"]');
+      if (!vp) return;
+      var original = vp.getAttribute('content') || 'width=device-width, initial-scale=1';
+      vp.setAttribute('content','width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no');
+      setTimeout(function () {
+        vp.setAttribute('content', original);
+        // Reajuste de scroll para evitar micro saltos
+        window.scrollTo(window.pageXOffset || 0, window.pageYOffset || 0);
+      }, 250);
+    }
 
-    // Endpoint AJAX de FormSubmit (devuelve JSON y NO redirige)
-    fetch('https://formsubmit.co/ajax/Georgevaldezr@gmail.com', {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: fd
-    })
-    .then(function (res) {
-      return res.json().catch(function(){ return {}; }).then(function(data){ return { ok: res.ok, data: data }; });
-    })
-    .then(function (resp) {
-      if (!resp.ok) throw new Error('Network');
+    function buildSuccessView() {
+      var el = document.createElement('div');
+      el.id = 'success-view';
+      el.className = 'rounded-2xl ring-1 ring-emerald-200 bg-emerald-50 p-6 text-center';
+      el.setAttribute('role', 'status');
+      el.setAttribute('aria-live', 'polite');
+      el.innerHTML = `
+        <div class="mx-auto w-12 h-12 rounded-full bg-emerald-100 ring-1 ring-emerald-200 flex items-center justify-center">
+          <svg class="w-7 h-7 text-emerald-700" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="mt-3 text-xl font-semibold text-emerald-900">Your message has been sent</h3>
+        <p class="mt-2 text-emerald-800">Thank you for reaching out. We’ll get back to you shortly. For urgent matters, call <a class="underline decoration-emerald-300 hover:decoration-emerald-600" href="tel:17163038963">(716) 303-8963</a>.</p>
+        <div class="mt-6">
+          <a href="/" class="inline-flex items-center rounded-full bg-neutral-900 text-white px-5 py-2.5 hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">Return to Home</a>
+        </div>
+      `;
+      return el;
+    }
 
-      // Limpia y oculta el bloque del formulario (la tarjeta completa si existe)
-      form.reset();
-      var formCard = form.closest('.rounded-2xl') || form;
-      formCard.setAttribute('inert','');
-      formCard.classList.add('hidden');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      hide(errorB);
 
-      // Elimina banners de éxito antiguos si existen
-      var oldSuccess = document.getElementById('success-banner');
-      if (oldSuccess) oldSuccess.remove();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
 
-      // Inserta/visualiza el panel de éxito
-      var successView = document.getElementById('success-view');
-      if (!successView) {
-        successView = buildSuccessView();
-        formCard.parentNode.insertBefore(successView, formCard.nextSibling);
-      } else {
-        successView.classList.remove('hidden');
-      }
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
 
-      // Quita foco del input activo, scroll suave al mensaje y resetea zoom móvil (zoom OUT)
+      // Guarda posición actual para NO mover la pantalla
+      var restoreY = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Quitar foco para cerrar teclado sin “zoom”
       if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
-      successView.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      resetMobileZoom();
-    })
-    .catch(function () {
-      show(errorB);
-    })
-    .finally(function () {
-      btn.disabled = false;
-      btn.textContent = 'Send Message';
-    });
-  }, { passive: false });
-})();
-</script>
 
+      var fd = new FormData(form);
+
+      fetch('https://formsubmit.co/ajax/Georgevaldezr@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: fd
+      })
+      .then(function (res) {
+        return res.json().catch(function(){ return {}; }).then(function(data){ return { ok: res.ok, data: data }; });
+      })
+      .then(function (resp) {
+        if (!resp.ok) throw new Error('Network');
+
+        form.reset();
+
+        // Congelar altura del contenedor para evitar “jump”
+        var formCard = form.closest('.rounded-2xl') || form;
+        var h = formCard.getBoundingClientRect().height;
+        var placeholder = document.createElement('div');
+        placeholder.style.height = h + 'px';
+        formCard.parentNode.insertBefore(placeholder, formCard);
+
+        // Ocultar form y colocar la vista de éxito en el MISMO lugar
+        formCard.setAttribute('inert','');
+        formCard.classList.add('hidden');
+
+        var successView = document.getElementById('success-view');
+        if (!successView) successView = buildSuccessView();
+        placeholder.replaceWith(successView);
+
+        // Restaurar exactamente la posición y normalizar zoom móvil
+        window.scrollTo(0, restoreY);
+        resetMobileZoom();
+      })
+      .catch(function () {
+        show(errorB);
+      })
+      .finally(function () {
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+      });
+    }, { passive: false });
+  })();
+  </script>
 </BaseLayout>
