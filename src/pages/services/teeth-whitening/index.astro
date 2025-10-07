@@ -1,0 +1,277 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const seo = {
+  title: 'Teeth Whitening | D-Essence Wellness',
+  description:
+    'Professional teeth whitening to brighten your smile. Learn how it works, benefits, what to expect, aftercare, and safety.',
+  canonical: '/services/teeth-whitening/',
+  type: 'website',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Teeth Whitening',
+      serviceType: 'Cosmetic Treatment',
+      areaServed: 'New Windsor, New York',
+      url: 'https://dessencewellness.com/services/teeth-whitening/',
+      provider: {
+        '@type': 'MedicalBusiness',
+        name: 'D-Essence Wellness',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '871 Blooming Grove Turnpike Suite 102',
+          addressLocality: 'New Windsor',
+          addressRegion: 'NY',
+          postalCode: '12553',
+          addressCountry: 'US'
+        }
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout seo={seo}>
+  <!-- ===== HERO (dark) ===== -->
+  <section class="bg-neutral-950 text-white">
+    <div class="container pt-28 pb-10 max-w-3xl">
+      <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/60">
+        <span>Services</span><span class="opacity-40">•</span><span>Advanced Skin Care</span>
+      </div>
+      <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Teeth Whitening</h1>
+      <p class="mt-4 text-white/80">
+        Brighten and refresh your smile with professional whitening. We use evidence-based protocols to safely
+        reduce surface and internal discoloration for a noticeably whiter appearance.
+      </p>
+
+      <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Good for</div>
+          <div class="mt-0.5 font-medium">Stains & discoloration</div>
+        </div>
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Session time</div>
+          <div class="mt-0.5 font-medium">45–90 minutes</div>
+        </div>
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Downtime</div>
+          <div class="mt-0.5 font-medium">Minimal</div>
+        </div>
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Longevity</div>
+          <div class="mt-0.5 font-medium">Months to years*</div>
+        </div>
+      </div>
+      <div class="mt-2 text-xs text-white/60">
+        *Results vary with habits (coffee, tea, wine, tobacco) and oral care.
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTENT (white) ===== -->
+  <section class="bg-white text-neutral-900">
+    <div class="container py-12 sm:py-14">
+
+      <!-- Overview -->
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Overview</h2>
+          <p class="mt-3 text-neutral-700">
+            Teeth whitening lightens the shade of natural teeth by breaking down stain molecules within enamel and
+            dentin using peroxide-based gels (hydrogen peroxide or carbamide peroxide). It is effective for many
+            extrinsic stains (coffee, tea, wine, tobacco) and some intrinsic discolorations.
+          </p>
+          <p class="mt-3 text-neutral-700">
+            Whitening does not change the color of existing dental work (crowns, veneers, fillings), so shade
+            differences may appear between natural teeth and restorations. Touch-ups help maintain results over time.
+          </p>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6">
+            <h3 class="text-lg font-medium">Who it’s for</h3>
+            <ul class="mt-3 grid grid-cols-1 gap-2 text-sm text-neutral-700">
+              {[
+                'Adults seeking a brighter smile for events or everyday confidence',
+                'Clients with yellow or brown staining from foods, drinks, or tobacco',
+                'Those who prefer supervised, predictable results vs. over-the-counter kits'
+              ].map(item => (
+                <li class="inline-flex items-start gap-2">
+                  <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Benefits -->
+      <div class="mt-12">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Benefits</h2>
+        <div class="mt-4 grid md:grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <ul class="text-sm text-neutral-700 space-y-2">
+              <li>Noticeably whiter teeth and a brighter smile.</li>
+              <li>Faster, more controlled results with in-office care.</li>
+              <li>Custom options: in-office, take-home trays, or a combined plan.</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <ul class="text-sm text-neutral-700 space-y-2">
+              <li>Adaptable to different levels and types of discoloration.</li>
+              <li>Confidence boost from a cleaner, more luminous look.</li>
+              <li>Education and maintenance strategies to preserve results.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Methods / What to expect -->
+      <div class="mt-12 grid lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-5">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Methods & what to expect</h2>
+          <p class="mt-3 text-neutral-700">
+            We begin with a brief oral health screen and shade assessment. Based on your goals and sensitivity,
+            we’ll recommend in-office whitening, custom take-home trays, or a blended approach for best longevity.
+          </p>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium text-neutral-900">In-office whitening</div>
+              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
+                <li>Higher-strength gels for quicker, more dramatic change.</li>
+                <li>Gum barriers protect soft tissues during treatment.</li>
+                <li>Session time ~45–90 minutes; immediate shade lift.</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium text-neutral-900">Custom take-home trays</div>
+              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
+                <li>Lab-made trays fit your teeth for even gel contact.</li>
+                <li>Controlled use over days to weeks; flexible schedule.</li>
+                <li>Great for maintenance after in-office results.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aftercare -->
+      <div class="mt-12">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Aftercare</h2>
+        <div class="mt-4 grid md:grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <ul class="text-sm text-neutral-700 space-y-2">
+              <li>Avoid dark foods/drinks for 24–48 hours (coffee, red wine, berries, sauces).</li>
+              <li>Skip tobacco products during the early rehydration period.</li>
+              <li>Use sensitive-teeth toothpaste if needed; brush gently.</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <ul class="text-sm text-neutral-700 space-y-2">
+              <li>Limit abrasive products immediately after whitening.</li>
+              <li>Schedule touch-ups or tray use as advised.</li>
+              <li>Maintain excellent oral hygiene to prolong your results.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Safety -->
+      <div class="mt-12">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Safety & important notes</h2>
+        <div class="mt-4 grid md:grid-cols-3 gap-4 text-sm text-neutral-700">
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <div class="font-medium text-neutral-900">Common, expected</div>
+            <ul class="mt-2 space-y-1.5">
+              <li>Temporary tooth sensitivity to cold/heat</li>
+              <li>Mild gum irritation if gel contacts tissue</li>
+              <li>Occasional uneven shade with deep stains</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <div class="font-medium text-neutral-900">Limitations & risks</div>
+            <ul class="mt-2 space-y-1.5">
+              <li>Does not change color of crowns, veneers, or fillings</li>
+              <li>Overuse can harm enamel—avoid excessive repetition</li>
+              <li>Not ideal with active decay, gum disease, or severe sensitivity</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <div class="font-medium text-neutral-900">Who should avoid</div>
+            <ul class="mt-2 space-y-1.5">
+              <li>Active dental issues (untreated cavities, infections)</li>
+              <li>Pregnancy or breastfeeding (precautionary)</li>
+              <li>Minors with developing dentition</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="mt-12">
+        <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">FAQ</h2>
+        <div class="mt-6 grid gap-4">
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">How long do results last?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              With good habits and periodic maintenance, results may last many months to years. Stain-heavy diets,
+              tobacco, and limited oral care will shorten longevity.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">Will it make my crowns or fillings whiter?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              No—dental restorations do not whiten, which can create shade differences. We’ll discuss options if
+              visible restorations are present.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">Is sensitivity guaranteed?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Not always. If you’re prone to sensitivity, we’ll tailor formulas and timing, and recommend desensitizing
+              products before/after treatment.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">In-office vs. take-home—what’s better?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              In-office whitening is quickest and most controlled; custom trays are flexible and ideal for maintenance.
+              Many clients choose a combination for best durability.
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-12">
+        <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6 flex items-center justify-between gap-4">
+          <div class="text-sm text-neutral-700">
+            Ready to brighten your smile? We’ll build a whitening plan that matches your teeth, goals, and sensitivity.
+          </div>
+          <a href="/contact-us/" class="inline-flex items-center rounded-full bg-neutral-900 text-white px-5 py-2.5 text-sm hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>

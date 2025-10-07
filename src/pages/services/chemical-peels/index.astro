@@ -1,0 +1,371 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const seo = {
+  title: 'Chemical Peels | D-Essence Wellness',
+  description:
+    'Professional chemical peels—superficial to deep—for smoother texture, brighter tone, and refined lines. Tailored strengths, clear aftercare, minimal downtime options.',
+  canonical: '/services/chemical-peels/',
+  type: 'website',
+  jsonLd: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Chemical Peels',
+      serviceType: 'Chemical Peel',
+      areaServed: 'New Windsor, New York',
+      provider: {
+        '@type': 'MedicalBusiness',
+        name: 'D-Essence Wellness',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '871 Blooming Grove Turnpike Suite 102',
+          addressLocality: 'New Windsor',
+          addressRegion: 'NY',
+          postalCode: '12553',
+          addressCountry: 'US'
+        }
+      },
+      url: 'https://dessencewellness.com/services/chemical-peels/'
+    }
+  ]
+};
+---
+
+<BaseLayout seo={seo}>
+  <!-- ===== HERO (dark) ===== -->
+  <section class="bg-neutral-950 text-white">
+    <div class="container pt-28 pb-10 max-w-3xl">
+      <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/60">
+        <span>Services</span><span class="opacity-40">•</span><span>Advanced Skin Care</span>
+      </div>
+      <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Chemical Peels</h1>
+      <p class="mt-4 text-white/80">
+        A controlled, clinical exfoliation that renews the surface and sparks healthy repair—revealing a smoother,
+        brighter, more even complexion. Depth and agent are selected to your skin, goals, and downtime.
+      </p>
+
+      <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Helps with</div>
+          <div class="mt-0.5 font-medium">Tone • Texture • Lines</div>
+        </div>
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Types</div>
+          <div class="mt-0.5 font-medium">Light • Medium • Deep</div>
+        </div>
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Session time</div>
+          <div class="mt-0.5 font-medium">~20–45 min</div>
+        </div>
+        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
+          <div class="text-white/70">Downtime</div>
+          <div class="mt-0.5 font-medium">Low–High (by depth)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTENT (white) ===== -->
+  <section class="bg-white text-neutral-900">
+    <div class="container py-12 sm:py-14">
+      <!-- Overview -->
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Overview</h2>
+          <p class="mt-3 text-neutral-700">
+            A chemical peel applies a calibrated solution to gently dissolve targeted layers of skin. This controlled
+            process sheds dull surface cells, stimulates renewal, and supports collagen remodeling—improving texture,
+            tone, and the look of fine lines, discoloration, and shallow acne scars.
+          </p>
+          <p class="mt-3 text-neutral-700">
+            We offer light, medium, and select deep-strength protocols. Your provider will match the agent and depth to
+            your skin type, history, and goals, balancing results with recovery time.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
+            <h3 class="text-lg font-medium">Common benefits</h3>
+            <ul class="mt-3 grid grid-cols-2 gap-2 text-sm text-neutral-700">
+              {[
+                'Smoother texture',
+                'Brighter, more even tone',
+                'Softens fine lines',
+                'Fades sun spots',
+                'Helps melasma (selected cases)',
+                'Refines shallow acne scars'
+              ].map(item => (
+                <li class="inline-flex items-start gap-2">
+                  <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p class="mt-3 text-xs text-neutral-500">
+              Outcomes depend on peel depth, skin type, and adherence to aftercare and sun protection.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Types / Depth table -->
+      <div class="mt-12">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Peel types & depth</h2>
+        <div class="mt-4 overflow-hidden rounded-2xl ring-1 ring-neutral-200">
+          <div class="hidden md:grid grid-cols-12 bg-neutral-50 text-sm font-medium text-neutral-700">
+            <div class="col-span-3 py-3 px-4">Type</div>
+            <div class="col-span-3 py-3 px-4">Depth / Targets</div>
+            <div class="col-span-4 py-3 px-4">Common agents</div>
+            <div class="col-span-2 py-3 px-4">Downtime</div>
+          </div>
+
+          <!-- Light -->
+          <div class="grid grid-cols-1 md:grid-cols-12 border-t border-neutral-200">
+            <div class="md:col-span-3 p-4">
+              <div class="text-neutral-900 font-medium">Light (Superficial)</div>
+              <div class="text-sm text-neutral-600">Surface refresh & maintenance</div>
+            </div>
+            <div class="md:col-span-3 p-4 text-sm text-neutral-700">
+              Epidermis only; helps glow, mild tone/texture, early lines.
+            </div>
+            <div class="md:col-span-4 p-4 text-sm text-neutral-700">
+              AHA (glycolic, lactic), mandelic, salicylic blends, gentle low-pH systems.
+            </div>
+            <div class="md:col-span-2 p-4 text-sm text-neutral-700">
+              Low (flaking is subtle)
+            </div>
+          </div>
+
+          <!-- Medium -->
+          <div class="grid grid-cols-1 md:grid-cols-12 border-t border-neutral-200">
+            <div class="md:col-span-3 p-4">
+              <div class="text-neutral-900 font-medium">Medium</div>
+              <div class="text-sm text-neutral-600">More pronounced resurfacing</div>
+            </div>
+            <div class="md:col-span-3 p-4 text-sm text-neutral-700">
+              Epidermis + upper dermis; targets moderate lines, dyschromia, shallow scars.
+            </div>
+            <div class="md:col-span-4 p-4 text-sm text-neutral-700">
+              TCA (tailored %), combo formulas (e.g., TCA + supportive agents).
+            </div>
+            <div class="md:col-span-2 p-4 text-sm text-neutral-700">
+              Moderate (visible peel)
+            </div>
+          </div>
+
+          <!-- Deep -->
+          <div class="grid grid-cols-1 md:grid-cols-12 border-t border-neutral-200">
+            <div class="md:col-span-3 p-4">
+              <div class="text-neutral-900 font-medium">Deep</div>
+              <div class="text-sm text-neutral-600">Advanced rejuvenation</div>
+            </div>
+            <div class="md:col-span-3 p-4 text-sm text-neutral-700">
+              Into the reticular dermis; addresses deeper wrinkles and severe sun damage.
+            </div>
+            <div class="md:col-span-4 p-4 text-sm text-neutral-700">
+              Phenol-based systems or advanced multi-agent protocols (select cases).
+            </div>
+            <div class="md:col-span-2 p-4 text-sm text-neutral-700">
+              High (longer recovery)
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 text-xs text-neutral-500">
+          Depth selection considers skin tone, history of pigment change, and lifestyle. Deeper peels require stricter protocols.
+        </p>
+      </div>
+
+      <!-- What to expect -->
+      <div class="mt-12 grid lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-5">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">What to expect</h2>
+          <p class="mt-3 text-neutral-700">
+            Every peel begins with consultation and skin prep guidance. We’ll align on goals, timeline, and recovery
+            before selecting your formula and strength.
+          </p>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium text-neutral-900">Before your visit</div>
+              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
+                <li>Share medical history, photosensitivity, and recent treatments.</li>
+                <li>Protect from sun; pause strong actives per guidance.</li>
+                <li>Arrive with clean skin (no heavy makeup).</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium text-neutral-900">During treatment</div>
+              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
+                <li>Solution applied in passes; “tingle/heat” is common.</li>
+                <li>Agent may be neutralized or left to self-terminate per protocol.</li>
+                <li>Session time ~20–45 minutes.</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5 sm:col-span-2">
+              <div class="text-sm font-medium text-neutral-900">Recovery timeline</div>
+              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
+                <li>Light peels: pinkness and micro-flaking for a few days.</li>
+                <li>Medium: visible peeling over several days as new skin emerges.</li>
+                <li>Deep: more downtime and strict aftercare; results unfold over weeks.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aftercare -->
+      <div class="mt-12">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Aftercare</h2>
+        <div class="mt-4 grid md:grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <ul class="text-sm text-neutral-700 space-y-2">
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Do not pick, rub, or prematurely peel flaking skin.
+              </li>
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Use gentle cleanser and soothing, fragrance-free moisturizer.
+              </li>
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Broad-spectrum SPF daily; minimize direct sun.
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <ul class="text-sm text-neutral-700 space-y-2">
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Avoid strenuous heat/exercise, steam, and saunas early on.
+              </li>
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Pause strong acids/retinoids until cleared by your provider.
+              </li>
+              <li class="inline-flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Follow any prescribed topicals (e.g., antiviral) if indicated.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Safety -->
+      <div class="mt-12">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Safety & considerations</h2>
+        <div class="mt-4 grid md:grid-cols-2 gap-4 text-sm text-neutral-700">
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <div class="font-medium text-neutral-900">Common, temporary effects</div>
+            <ul class="mt-2 space-y-1.5">
+              <li>Redness, warmth, tightness</li>
+              <li>Flaking or visible peel (by depth)</li>
+              <li>Sun sensitivity—SPF is mandatory</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <div class="font-medium text-neutral-900">Less common risks</div>
+            <ul class="mt-2 space-y-1.5">
+              <li>Temporary pigment shift (more caution for deeper tones)</li>
+              <li>Infection or delayed healing if aftercare lapses</li>
+              <li>Scarring with excessive depth or poor technique (rare)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-4 text-xs text-neutral-500">
+          Not medical advice. Your plan is personalized to skin tone, history, and lifestyle to minimize risk.
+        </div>
+      </div>
+
+      <!-- Contraindications -->
+      <div class="mt-12 grid md:grid-cols-2 gap-4">
+        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+          <h3 class="text-sm font-medium text-neutral-900">Who may need to wait or avoid</h3>
+          <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
+            <li>Active infection, open wounds, or inflamed acne in the area</li>
+            <li>Recent isotretinoin use (timing per provider)</li>
+            <li>History of abnormal scarring or keloids</li>
+            <li>Photosensitizing medications</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+          <h3 class="text-sm font-medium text-neutral-900">Additional precautions</h3>
+          <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
+            <li>Pregnancy or nursing (case-by-case)</li>
+            <li>History of cold sores—consider antiviral prophylaxis</li>
+            <li>Deeper skin tones require conservative protocols</li>
+            <li>Strict SPF and sun avoidance are essential</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="mt-12">
+        <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">FAQ</h2>
+        <div class="mt-6 grid gap-4">
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">How many sessions will I need?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              It depends on depth and goals. Some see significant improvement with a single medium peel, while others
+              prefer a series of light peels for ongoing maintenance.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">When will I see results?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Light peels show glow within days; medium and deeper peels reveal smoother, clearer skin as flaking resolves
+              and new skin surfaces over days to weeks.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">Is it painful?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Most feel tingling or warmth during application. Medium or deeper peels can use topical anesthesia and
+              careful monitoring for comfort.
+            </p>
+          </details>
+
+          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
+            <summary class="list-none cursor-pointer flex items-center justify-between">
+              <span class="font-medium text-neutral-900">Can I combine peels with other treatments?</span>
+              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
+            </summary>
+            <p class="mt-3 text-neutral-700 text-sm">
+              Yes—many pair peels with microneedling, light lasers, or skincare. We’ll coordinate timing to protect the
+              barrier and maximize results.
+            </p>
+          </details>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-12">
+        <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6 flex items-center justify-between gap-4">
+          <div class="text-sm text-neutral-700">
+            Ready to plan a peel that fits your skin and schedule?
+          </div>
+          <a href="/contact-us/" class="inline-flex items-center rounded-full bg-neutral-900 text-white px-5 py-2.5 text-sm hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
