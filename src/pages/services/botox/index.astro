@@ -61,53 +61,77 @@ const seo = {
           <span>New Windsor, NY</span>
         </div>
         <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Botox</h1>
-        <!-- (Sin descripción en el hero) -->
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTENT (minimal, centered) ===== -->
+  <!-- ===== CONTENT INTRO (white, minimal, centered) ===== -->
   <section class="bg-white text-neutral-900">
     <div class="container py-12 sm:py-16">
       <div class="mx-auto max-w-prose text-center">
-        <!-- Descripción un poco más amplia -->
         <p class="text-neutral-700">
           Botox is a refined approach to softening expression lines—targeting frown lines, crow’s feet, and forehead lines.
           Precise, customizable dosing helps maintain natural expression while smoothing dynamic wrinkles with minimal downtime.
         </p>
       </div>
+    </div>
+  </section>
 
-      <!-- Imagen grande con diseño decorativo a los lados -->
-      <div class="relative mx-auto mt-10 flex justify-center">
-        <!-- Acento izquierdo -->
-        <div class="pointer-events-none absolute inset-y-4 -left-10 w-20 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-md hidden sm:block"></div>
-        <!-- Acento derecho -->
-        <div class="pointer-events-none absolute inset-y-4 -right-10 w-20 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-md hidden sm:block"></div>
+  <!-- ===== BEFORE & AFTER (dark, image left, text right) ===== -->
+  <section class="relative bg-neutral-950 text-white">
+    <div class="container py-12 sm:py-16">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- Imagen izquierda -->
+        <figure class="relative order-2 md:order-1">
+          <!-- Acentos laterales sutiles -->
+          <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-white/10 to-transparent blur-lg hidden sm:block"></div>
+          <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-white/10 to-transparent blur-lg hidden sm:block"></div>
 
-        <figure class="relative">
           <img
             src="/Botox-bottle.webp"
-            alt="Botox vial"
+            alt="Botox before and after (example)"
             loading="eager"
-            class="mx-auto h-auto w-64 sm:w-80 md:w-[30rem] rounded-2xl ring-1 ring-neutral-200 shadow-xl"
+            class="mx-auto h-auto w-64 sm:w-80 md:w-[30rem] rounded-2xl ring-1 ring-white/15 shadow-2xl"
             width="960"
             height="1280"
           />
+          <!-- Etiqueta superpuesta opcional -->
+          <figcaption class="mt-3 text-center text-xs text-white/60">Before & After — illustrative example</figcaption>
         </figure>
-      </div>
 
-      <!-- CTA -->
-      <div class="mx-auto max-w-prose text-center">
-        <div class="mt-10">
-          <a
-            href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-300"
-          >
-            Book Appointment
-          </a>
+        <!-- Texto derecha -->
+        <div class="order-1 md:order-2">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Before &amp; After</h2>
+          <p class="mt-3 text-white/80">
+            Explore subtle yet meaningful improvements in dynamic lines with dosing tailored to your features.
+            Results typically begin in 3–5 days, with full effect around 10–14 days.
+          </p>
+
+          <div class="mt-8">
+            <a
+              href="/gallery"  <!-- cambia a /gallery#botox si tienes ancla por tratamiento -->
+              class="inline-flex items-center rounded-full border border-white/30 px-6 py-3 text-sm font-medium hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-white/30"
+            >
+              View Gallery
+            </a>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL (white) ===== -->
+  <section class="bg-white text-neutral-900">
+    <div class="container py-12 sm:py-16">
+      <div class="mx-auto max-w-prose text-center">
+        <a
+          href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-300"
+        >
+          Book Appointment
+        </a>
       </div>
     </div>
   </section>
