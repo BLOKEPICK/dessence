@@ -50,29 +50,18 @@ const seo = {
 ---
 
 <BaseLayout seo={seo}>
-  <!-- ===== HERO (dark, original height, image right) ===== -->
+  <!-- ===== HERO (dark, original height, one-line meta) ===== -->
   <section class="bg-neutral-950 text-white">
     <div class="container pt-28 pb-10">
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <!-- Texto del hero (centrado, sin descripción) -->
-        <div class="text-center">
-          <div class="text-[11px] uppercase tracking-[0.18em] text-white/70">Injectables</div>
-          <div class="my-3 text-white/70">•</div>
-          <div class="text-[11px] uppercase tracking-[0.18em] text-white/70">New Windsor, NY</div>
-          <h1 class="mt-4 text-4xl sm:text-5xl font-semibold tracking-tight">Botox</h1>
+      <div class="max-w-3xl mx-auto text-center">
+        <!-- Una sola línea -->
+        <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/70">
+          <span>Injectables</span>
+          <span class="opacity-60">•</span>
+          <span>New Windsor, NY</span>
         </div>
-
-        <!-- Imagen a la derecha -->
-        <div class="flex justify-center md:justify-end">
-          <img
-            src="/Botox-bottle.webp"
-            alt="Botox vial"
-            loading="eager"
-            class="w-40 sm:w-48 h-auto rounded-xl ring-1 ring-white/20"
-            width="384"
-            height="512"
-          />
-        </div>
+        <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Botox</h1>
+        <!-- (Sin descripción en el hero) -->
       </div>
     </div>
   </section>
@@ -81,13 +70,34 @@ const seo = {
   <section class="bg-white text-neutral-900">
     <div class="container py-12 sm:py-16">
       <div class="mx-auto max-w-prose text-center">
-        <!-- Pequeña descripción -->
+        <!-- Descripción un poco más amplia -->
         <p class="text-neutral-700">
-          A refined approach to softening expression lines. Botox temporarily relaxes targeted facial muscles to smooth
-          frown lines, crow’s feet, and forehead lines—delivering subtle, natural-looking results with minimal downtime.
+          Botox is a refined approach to softening expression lines—targeting frown lines, crow’s feet, and forehead lines.
+          Precise, customizable dosing helps maintain natural expression while smoothing dynamic wrinkles with minimal downtime.
         </p>
+      </div>
 
-        <!-- CTA -->
+      <!-- Imagen grande con diseño decorativo a los lados -->
+      <div class="relative mx-auto mt-10 flex justify-center">
+        <!-- Acento izquierdo -->
+        <div class="pointer-events-none absolute inset-y-4 -left-10 w-20 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-md hidden sm:block"></div>
+        <!-- Acento derecho -->
+        <div class="pointer-events-none absolute inset-y-4 -right-10 w-20 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-md hidden sm:block"></div>
+
+        <figure class="relative">
+          <img
+            src="/Botox-bottle.webp"
+            alt="Botox vial"
+            loading="eager"
+            class="mx-auto h-auto w-64 sm:w-80 md:w-[30rem] rounded-2xl ring-1 ring-neutral-200 shadow-xl"
+            width="960"
+            height="1280"
+          />
+        </figure>
+      </div>
+
+      <!-- CTA -->
+      <div class="mx-auto max-w-prose text-center">
         <div class="mt-10">
           <a
             href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
