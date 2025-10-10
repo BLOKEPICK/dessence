@@ -50,19 +50,34 @@ const seo = {
 ---
 
 <BaseLayout seo={seo}>
-  <!-- ===== HERO (dark, centered) ===== -->
+  <!-- ===== HERO (dark, original height, image right) ===== -->
   <section class="bg-neutral-950 text-white">
-    <div class="container min-h-[60vh] flex items-center justify-center py-24">
-      <div class="text-center">
-        <div class="text-[11px] uppercase tracking-[0.18em] text-white/70">Injectables</div>
-        <div class="my-3 text-white/70">•</div>
-        <div class="text-[11px] uppercase tracking-[0.18em] text-white/70">New Windsor, NY</div>
-        <h1 class="mt-4 text-4xl sm:text-5xl font-semibold tracking-tight">Botox</h1>
+    <div class="container pt-28 pb-10">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- Texto del hero (centrado, sin descripción) -->
+        <div class="text-center">
+          <div class="text-[11px] uppercase tracking-[0.18em] text-white/70">Injectables</div>
+          <div class="my-3 text-white/70">•</div>
+          <div class="text-[11px] uppercase tracking-[0.18em] text-white/70">New Windsor, NY</div>
+          <h1 class="mt-4 text-4xl sm:text-5xl font-semibold tracking-tight">Botox</h1>
+        </div>
+
+        <!-- Imagen a la derecha -->
+        <div class="flex justify-center md:justify-end">
+          <img
+            src="/Botox-bottle.webp"
+            alt="Botox vial"
+            loading="eager"
+            class="w-40 sm:w-48 h-auto rounded-xl ring-1 ring-white/20"
+            width="384"
+            height="512"
+          />
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTENT (minimal, centered column) ===== -->
+  <!-- ===== CONTENT (minimal, centered) ===== -->
   <section class="bg-white text-neutral-900">
     <div class="container py-12 sm:py-16">
       <div class="mx-auto max-w-prose text-center">
@@ -71,16 +86,6 @@ const seo = {
           A refined approach to softening expression lines. Botox temporarily relaxes targeted facial muscles to smooth
           frown lines, crow’s feet, and forehead lines—delivering subtle, natural-looking results with minimal downtime.
         </p>
-
-        <!-- Imagen (Opción B) -->
-        <img
-          src="/Botox-bottle.webp"
-          alt="Botox vial"
-          loading="eager"
-          class="mx-auto mt-8 w-40 sm:w-48 h-auto rounded-xl ring-1 ring-neutral-200"
-          width="384"
-          height="512"
-        />
 
         <!-- CTA -->
         <div class="mt-10">
