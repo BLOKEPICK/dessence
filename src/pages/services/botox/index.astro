@@ -80,67 +80,73 @@ const seo = {
   </section>
 
   <!-- ===== MAIN (2 cols) ===== -->
-  <section class="relative bg-white text-neutral-900">
-    <div class="container py-14 sm:py-18">
-      <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
-        <!-- Imagen izquierda (zoom click) -->
-        <figure class="relative">
-          <!-- Acentos suaves -->
-          <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
-          <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
+<section class="relative bg-white text-neutral-900">
+  <div class="container py-14 sm:py-[4.5rem]">
+    <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
+      <!-- Imagen izquierda (zoom click) -->
+      <figure class="relative">
+        <!-- Acentos suaves -->
+        <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
+        <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
 
-          <picture>
-            <source srcset="/IMG_0800.avif" type="image/avif" />
-            <source srcset="/IMG_0800.webp" type="image/webp" />
-            <img
-              id="ba-open"
-              src="/IMG_0800.webp"
-              alt="Neurotoxins example"
-              fetchpriority="high"
-              decoding="async"
-              sizes="(min-width: 1024px) 480px, (min-width: 640px) 60vw, 92vw"
-              class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-neutral-200 shadow-2xl bg-neutral-100"
-              width="960"
-              height="1280"
-            />
-          </picture>
+        <picture>
+          <!-- Solo deja esta línea si REALMENTE tienes el AVIF en /public -->
+          <!-- <source srcset="/IMG_0800.avif" type="image/avif" /> -->
+          <source srcset="/IMG_0800.webp" type="image/webp" />
+          <img
+            id="ba-open"
+            src="/IMG_0800.webp"
+            alt="Neurotoxins"
+            fetchpriority="high"
+            decoding="async"
+            sizes="(min-width: 1024px) 480px, (min-width: 640px) 60vw, 92vw"
+            class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-neutral-200 shadow-2xl bg-neutral-100"
+            width="960"
+            height="1280"
+            onerror="this.onerror=null; this.src='/placeholder-service.jpg';"
+          />
+        </picture>
 
-          <!-- Badge opcional y sutil -->
-          <span class="absolute top-3 left-3 text-[11px] rounded-full bg-black/70 text-white px-2 py-1 ring-1 ring-white/10">
-            Medical-grade • RN-Led
-          </span>
-        </figure>
+        <!-- Badge opcional y sutil -->
+        <span class="absolute top-3 left-3 text-[11px] rounded-full bg-black/70 text-white px-2 py-1 ring-1 ring-white/10">
+          Medical-grade • RN-Led
+        </span>
+      </figure>
 
-        <!-- Columna derecha: texto + CTA -->
-        <div>
-          <p class="text-neutral-700/90">
-            Refresh your look with precision and elegance. These advanced treatments gently relax facial muscles to
-            smooth lines, soften expression, and reveal a naturally youthful, radiant appearance.
-          </p>
+      <!-- Columna derecha: texto + CTA -->
+      <div>
+        <p class="text-neutral-700/90">
+          Refresh your look with precision and elegance. These advanced treatments gently relax facial muscles to
+          smooth lines, soften expression, and reveal a naturally youthful, radiant appearance.
+        </p>
 
-          <!-- Bullets micro, sin títulos -->
-          <ul class="mt-5 space-y-2 text-sm text-neutral-700/90">
-            <li>• Softens frown lines, forehead, crow’s feet</li>
-            <li>• Natural look; keeps your expressions</li>
-            <li>• Quick visit; minimal downtime</li>
-          </ul>
+        <!-- Bullets micro, sin títulos -->
+        <ul class="mt-5 space-y-2 text-sm text-neutral-700/90">
+          <li>• Softens frown lines, forehead, crow’s feet</li>
+          <li>• Natural look; keeps your expressions</li>
+          <li>• Quick visit; minimal downtime</li>
+        </ul>
 
-          <div class="mt-8 flex items-center gap-4">
-            <a
-              href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
-              target="_blank"
-              rel="noopener"
-              class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-900/90 focus:outline-none focus:ring-2 focus:ring-neutral-300"
-              aria-label="Book a Botox appointment"
-            >
-              Book Appointment
-            </a>
+        <div class="mt-8 flex items-center gap-4">
+          <a
+            href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-900/90 focus:outline-none focus:ring-2 focus:ring-neutral-300"
+            aria-label="Book a Botox appointment"
+          >
+            Book Appointment
+          </a>
 
-            <!-- Link secundario opcional -->
-            <a href="/contact-us" class="text-sm text-neutral-600 hover:text-neutral-900 underline-offset-4 hover:underline">
-              Questions before booking?
-            </a>
-          </div>
+          <a href="/contact-us" class="text-sm text-neutral-600 hover:text-neutral-900 underline-offset-4 hover:underline">
+            Questions before booking?
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
           <!-- Disclaimer minimal -->
           <p class="mt-10 text-xs text-neutral-500">
