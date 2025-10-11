@@ -78,45 +78,42 @@ const seo = {
     </div>
   </section>
 
-  <!-- ===== BEFORE & AFTER (dark, image left, text right) ===== -->
-  <section class="relative bg-neutral-950 text-white">
+  <!-- ===== BEFORE & AFTER (light, no dark background; black text) ===== -->
+  <section class="relative bg-white text-neutral-900">
     <div class="container py-12 sm:py-16">
       <!-- Igual en móvil y desktop: dos columnas siempre -->
       <div class="mx-auto max-w-6xl grid grid-cols-2 gap-6 items-center">
         <!-- Imagen izquierda (con zoom on click) -->
         <figure class="relative">
-          <!-- Acentos laterales sutiles -->
-          <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-white/10 to-transparent blur-lg"></div>
-          <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-white/10 to-transparent blur-lg"></div>
+          <!-- Acentos laterales sutiles en claro -->
+          <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
+          <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
 
           <img
             id="ba-open"
             src="/IMG_0800.webp"
             alt="Botox before and after"
             loading="eager"
-            class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-white/15 shadow-2xl"
+            class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-neutral-200 shadow-2xl"
             width="960"
             height="1280"
           />
         </figure>
 
-        <!-- Texto derecha -->
+        <!-- Texto derecha (negro) -->
         <div>
           <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Before &amp; After</h2>
-          <p class="mt-3 text-white/80">
+          <p class="mt-3 text-neutral-700">
             Explore subtle yet meaningful improvements in dynamic lines with dosing tailored to your features.
             Results typically begin in 3–5 days, with full effect around 10–14 days.
           </p>
 
           <div class="mt-8">
-            <!-- Comentario movido fuera del atributo para no romper el botón -->
-            <!-- Cambia a /gallery#botox si tienes ancla por tratamiento -->
             <a
               href="/gallery"
-              class="inline-flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-medium hover:bg-white hover:text-neutral-900 focus:outline-none focus:ring-2 focus:ring-white/30"
+              class="inline-flex items-center gap-2 rounded-full border border-neutral-300 px-6 py-3 text-sm font-medium hover:bg-neutral-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-neutral-300"
               aria-label="View Botox gallery"
             >
-              <!-- ícono simple -->
               <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M4 7h16v10H4z" stroke="currentColor" stroke-width="1.6" />
                 <path d="M8.5 12.5l2.5 3 3.5-4 4 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
