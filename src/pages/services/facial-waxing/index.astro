@@ -2,20 +2,19 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const seo = {
-  title: 'Teen Acne Facial | D-Essence Wellness',
+  title: 'Facial Waxing | D-Essence Wellness',
   description:
-    'A customized Teen Acne Facial guided by Face Reality® principles to clear congestion, calm inflammation, and build healthy skincare habits. Includes deep cleansing, gentle exfoliation, extractions, calming mask, and LED or high-frequency as needed.',
-  canonical: '/services/teen-acne-facial/',
+    'Precision waxing for brows, upper lip, chin, and sideburns. Gentle, high-quality wax removes hair from the root for smooth, defined results with minimal irritation.',
+  canonical: '/services/facial-waxing/',
   type: 'website',
   jsonLd: [
     {
       '@context': 'https://schema.org',
       '@type': 'Service',
-      name: 'Teen Acne Facial',
-      serviceType: 'Facial Treatment',
+      name: 'Facial Waxing',
+      serviceType: 'Aesthetic Hair Removal',
       description:
-        'A teen-focused facial using clinical-grade products and Face Reality®-inspired protocols to support clearer, balanced skin with education on healthy routines.',
-      audience: { '@type': 'PeopleAudience', suggestedAge: '12-19' },
+        'Targeted waxing for small facial areas—eyebrows, upper lip, chin, sideburns—using gentle, high-quality wax to minimize irritation and reveal smooth, polished skin.',
       areaServed: 'Hudson Valley, NY',
       provider: {
         '@type': 'HealthAndBeautyBusiness',
@@ -30,14 +29,14 @@ const seo = {
           addressCountry: 'US'
         }
       },
-      url: 'https://dessencewellness.com/services/teen-acne-facial/'
+      url: 'https://dessencewellness.com/services/facial-waxing/'
     },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'Teen Acne Facial', item: 'https://dessencewellness.com/services/teen-acne-facial/' }
+        { '@type': 'ListItem', position: 2, name: 'Facial Waxing', item: 'https://dessencewellness.com/services/facial-waxing/' }
       ]
     }
   ]
@@ -64,10 +63,7 @@ const seo = {
           <span>New Windsor, NY</span>
         </div>
 
-        <h1 class="mt-2 text-3xl sm:text-5xl font-semibold tracking-tight">
-          Teen Acne Facial <span class="block text-base sm:text-lg font-normal text-white/70">(Guided by Face Reality® Principles)</span>
-        </h1>
-
+        <h1 class="mt-2 text-3xl sm:text-5xl font-semibold tracking-tight">Facial Waxing</h1>
         <div class="mt-4 h-px w-28 mx-auto bg-gradient-to-r from-transparent via-white to-transparent"></div>
       </div>
     </div>
@@ -88,7 +84,7 @@ const seo = {
             <img
               id="ba-open"
               src="/IMG_0800.webp"
-              alt="Teen Acne Facial treatment"
+              alt="Facial waxing service"
               fetchpriority="high"
               decoding="async"
               sizes="(min-width: 1024px) 480px, (min-width: 640px) 60vw, 92vw"
@@ -103,42 +99,13 @@ const seo = {
         <!-- Copy + CTAs -->
         <div>
           <p class="text-neutral-700/90">
-            At D-Essence Wellness, our Teen Acne Facial is designed specifically for youthful, breakout-prone skin.
-            Using clinical-grade products from Face Reality® and Circadia®, this treatment focuses on clearing
-            congestion, calming inflammation, and building healthy skincare habits early.
+            Maintain smooth, polished skin with precise waxing for small facial areas. Ideal for eyebrows, upper lip,
+            chin, and sideburns, this quick treatment removes unwanted hair from the root for a clean, defined look.
           </p>
-
           <p class="mt-3 text-neutral-700/90">
-            Each facial is customized based on your teen’s skin type and sensitivity. The treatment may include:
+            We use gentle, high-quality wax to minimize irritation and leave your skin soft and refreshed.
           </p>
-
-          <ul class="mt-4 space-y-2 text-sm text-neutral-800">
-            <li class="flex items-start gap-2">
-              <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              Deep pore cleansing and gentle enzyme exfoliation
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              Professional extractions to unclog pores
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              Calming antibacterial mask and LED or high-frequency therapy (as needed)
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              Soothing hydration and SPF protection
-            </li>
-          </ul>
-
-          <p class="mt-4 text-neutral-700/90">
-            We also educate teens on lifestyle and skincare choices that impact acne—helping them take charge of their skin with confidence.
-          </p>
-
-          <div class="mt-4 grid gap-2 text-sm text-neutral-700">
-            <div><span class="font-medium text-neutral-900">Recommended cadence:</span> every 2–3 weeks for clearer, balanced skin.</div>
-            <div><span class="font-medium text-neutral-900">Home-care:</span> guidance available using Face Reality® products.</div>
-          </div>
+          <p class="mt-3 text-neutral-800 font-medium">Defined. Smooth. Confidently you.</p>
 
           <div class="mt-8 flex items-center gap-4">
             <a
@@ -146,7 +113,7 @@ const seo = {
               target="_blank"
               rel="noopener"
               class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-900/90 focus:outline-none focus:ring-2 focus:ring-neutral-300"
-              aria-label="Book a Teen Acne Facial"
+              aria-label="Book a Facial Waxing appointment"
             >
               Book Appointment
             </a>
@@ -178,7 +145,7 @@ const seo = {
           <source srcset="/IMG_0800.webp" type="image/webp" />
           <img
             src="/IMG_0800.webp"
-            alt="Zoomed illustrative image for Teen Acne Facial"
+            alt="Zoomed illustrative image for facial waxing"
             class="max-h-[90vh] max-w-[92vw] rounded-2xl ring-1 ring-white/20 shadow-2xl"
           />
         </picture>

@@ -2,49 +2,39 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const seo = {
-  title: 'JUVÉDERM® Collection of Fillers | D-Essence Wellness',
+  title: 'Dermal Fillers | D-Essence Wellness',
   description:
-    'Enhance your natural beauty with the JUVÉDERM® Collection of hyaluronic acid fillers—designed to restore youthful volume, smooth fine lines, and refine facial contours.',
+    'Restore volume, smooth fine lines, and enhance facial contours with hyaluronic acid dermal fillers. Natural-looking results with little to no downtime.',
   canonical: '/services/juvederm-fillers/',
   type: 'website',
   jsonLd: [
     {
       '@context': 'https://schema.org',
-      '@type': 'MedicalProcedure',
-      name: 'JUVÉDERM® Collection of Fillers',
-      alternateName: 'Dermal Fillers (HA)',
-      procedureType: 'Non-surgical aesthetic treatment',
-      bodyLocation: 'Lips, cheeks, chin, jawline, nasolabial/marionette',
-      howPerformed: 'Microinjections of hyaluronic acid gel at precise tissue planes',
-      preparation:
-        'Avoid blood-thinning supplements/medications when medically appropriate; arrive with clean skin.',
-      followup: 'Review as needed; maintenance varies by area and product.',
-      estimatedCost: 'Varies by area and syringes',
+      '@type': 'Service',
+      name: 'Dermal Fillers',
+      serviceType: 'Hyaluronic Acid Fillers',
       areaServed: 'Hudson Valley, NY',
-      availableService: {
-        '@type': 'Service',
-        serviceType: 'Hyaluronic acid dermal filler',
-        provider: {
-          '@type': 'HealthAndBeautyBusiness',
-          name: 'D-Essence Wellness',
-          telephone: '+1-716-303-8963',
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '871 Blooming Grove Turnpike Suite 102',
-            addressLocality: 'New Windsor',
-            addressRegion: 'NY',
-            postalCode: '12553',
-            addressCountry: 'US'
-          }
+      provider: {
+        '@type': 'HealthAndBeautyBusiness',
+        name: 'D-Essence Wellness',
+        telephone: '+1-716-303-8963',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '871 Blooming Grove Turnpike Suite 102',
+          addressLocality: 'New Windsor',
+          addressRegion: 'NY',
+          postalCode: '12553',
+          addressCountry: 'US'
         }
-      }
+      },
+      url: 'https://dessencewellness.com/services/juvederm-fillers/'
     },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'JUVÉDERM® Collection of Fillers', item: 'https://dessencewellness.com/services/juvederm-fillers/' }
+        { '@type': 'ListItem', position: 2, name: 'Dermal Fillers', item: 'https://dessencewellness.com/services/juvederm-fillers/' }
       ]
     }
   ]
@@ -52,7 +42,7 @@ const seo = {
 ---
 
 <BaseLayout seo={seo}>
-  <!-- Preload imagen principal -->
+  <!-- Preload shared placeholder image -->
   <link
     rel="preload"
     as="image"
@@ -71,8 +61,8 @@ const seo = {
           <span>New Windsor, NY</span>
         </div>
 
-        <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">JUVÉDERM® Collection of Fillers</h1>
-        <div class="mt-2 text-sm sm:text-base text-white/70">(Dermal Fillers)</div>
+        <h1 class="mt-2 text-3xl sm:text-5xl font-semibold tracking-tight">Dermal Fillers</h1>
+        <div class="mt-2 text-sm sm:text-base text-white/70">(Hyaluronic Acid Fillers)</div>
 
         <div class="mt-4 h-px w-28 mx-auto bg-gradient-to-r from-transparent via-white to-transparent"></div>
       </div>
@@ -83,7 +73,7 @@ const seo = {
   <section class="relative bg-white text-neutral-900">
     <div class="container py-14 sm:py-[4.5rem]">
       <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
-        <!-- Imagen izquierda (zoom click) -->
+        <!-- Image (placeholder; replace later) -->
         <figure class="relative">
           <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
           <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
@@ -94,7 +84,7 @@ const seo = {
             <img
               id="ba-open"
               src="/IMG_0800.webp"
-              alt="JUVÉDERM® dermal fillers"
+              alt="Dermal fillers treatment"
               fetchpriority="high"
               decoding="async"
               sizes="(min-width: 1024px) 480px, (min-width: 640px) 60vw, 92vw"
@@ -106,11 +96,17 @@ const seo = {
           </picture>
         </figure>
 
-        <!-- Columna derecha: texto + CTA -->
+        <!-- Copy + CTAs -->
         <div>
-          <p class="text-neutral-700/90 whitespace-pre-line">
-Enhance your natural beauty with the JUVÉDERM® Collection of hyaluronic acid fillers—designed to restore youthful volume, smooth fine lines, and refine facial contours. Whether you’re looking to define the lips, lift the cheeks, or sculpt the jawline, each JUVÉDERM® formula is tailored for precise, natural-looking results that complement your features. Experience rejuvenation that looks refreshed, never overdone.
+          <p class="text-neutral-700/90">
+            Dermal fillers restore lost volume, smooth fine lines, and enhance facial contours for a refreshed, youthful look.
+            Using hyaluronic acid–based injectables, this quick treatment delivers natural results with little to no downtime.
           </p>
+          <p class="mt-3 text-neutral-700/90">
+            <span class="font-medium">Common areas:</span> lips, cheeks, chin, jawline, and smile lines.
+            Results are visible immediately and can last 6–12 months depending on the product and area treated.
+          </p>
+          <p class="mt-3 text-neutral-800/90 italic">Subtle. Beautiful. Confidently you.</p>
 
           <div class="mt-8 flex items-center gap-4">
             <a
@@ -118,7 +114,7 @@ Enhance your natural beauty with the JUVÉDERM® Collection of hyaluronic acid f
               target="_blank"
               rel="noopener"
               class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-900/90 focus:outline-none focus:ring-2 focus:ring-neutral-300"
-              aria-label="Book a dermal fillers appointment"
+              aria-label="Book a Dermal Fillers appointment"
             >
               Book Appointment
             </a>
@@ -131,7 +127,7 @@ Enhance your natural beauty with the JUVÉDERM® Collection of hyaluronic acid f
       </div>
     </div>
 
-    <!-- Lightbox / Zoom accesible -->
+    <!-- Lightbox / Zoom -->
     <div
       id="ba-lightbox"
       class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-150"
@@ -150,7 +146,7 @@ Enhance your natural beauty with the JUVÉDERM® Collection of hyaluronic acid f
           <source srcset="/IMG_0800.webp" type="image/webp" />
           <img
             src="/IMG_0800.webp"
-            alt="Zoomed JUVÉDERM® fillers image"
+            alt="Zoomed dermal fillers illustrative image"
             class="max-h-[90vh] max-w-[92vw] rounded-2xl ring-1 ring-white/20 shadow-2xl"
           />
         </picture>
@@ -167,7 +163,7 @@ Enhance your natural beauty with the JUVÉDERM® Collection of hyaluronic acid f
     </div>
   </section>
 
-  <!-- ===== Script del lightbox con foco/ESC ===== -->
+  <!-- Lightbox script -->
   <script is:inline>
     (() => {
       const openEl = document.getElementById('ba-open');
