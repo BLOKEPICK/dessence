@@ -2,287 +2,224 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const seo = {
-  title: 'Dermal Fillers — Juvederm Collection | D-Essence Wellness',
+  title: 'JUVÉDERM® Collection of Fillers | D-Essence Wellness',
   description:
-    'Structure-first, natural refinement with Juvederm hyaluronic acid fillers for lips, cheeks, and contour—conservative technique, clinical standards.',
+    'Enhance your natural beauty with the JUVÉDERM® Collection of hyaluronic acid fillers—designed to restore youthful volume, smooth fine lines, and refine facial contours.',
   canonical: '/services/juvederm-fillers/',
   type: 'website',
   jsonLd: [
     {
       '@context': 'https://schema.org',
-      '@type': 'Service',
-      name: 'Dermal Fillers — Juvederm Collection',
-      serviceType: 'Injectable Filler',
-      areaServed: 'New Windsor, New York',
-      provider: {
-        '@type': 'MedicalBusiness',
-        name: 'D-Essence Wellness',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: '871 Blooming Grove Turnpike Suite 102',
-          addressLocality: 'New Windsor',
-          addressRegion: 'NY',
-          postalCode: '12553',
-          addressCountry: 'US'
+      '@type': 'MedicalProcedure',
+      name: 'JUVÉDERM® Collection of Fillers',
+      alternateName: 'Dermal Fillers (HA)',
+      procedureType: 'Non-surgical aesthetic treatment',
+      bodyLocation: 'Lips, cheeks, chin, jawline, nasolabial/marionette',
+      howPerformed: 'Microinjections of hyaluronic acid gel at precise tissue planes',
+      preparation:
+        'Avoid blood-thinning supplements/medications when medically appropriate; arrive with clean skin.',
+      followup: 'Review as needed; maintenance varies by area and product.',
+      estimatedCost: 'Varies by area and syringes',
+      areaServed: 'Hudson Valley, NY',
+      availableService: {
+        '@type': 'Service',
+        serviceType: 'Hyaluronic acid dermal filler',
+        provider: {
+          '@type': 'HealthAndBeautyBusiness',
+          name: 'D-Essence Wellness',
+          telephone: '+1-716-303-8963',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '871 Blooming Grove Turnpike Suite 102',
+            addressLocality: 'New Windsor',
+            addressRegion: 'NY',
+            postalCode: '12553',
+            addressCountry: 'US'
+          }
         }
-      },
-      url: 'https://dessencewellness.com/services/juvederm-fillers/'
+      }
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
+        { '@type': 'ListItem', position: 2, name: 'JUVÉDERM® Collection of Fillers', item: 'https://dessencewellness.com/services/juvederm-fillers/' }
+      ]
     }
   ]
 };
 ---
 
 <BaseLayout seo={seo}>
+  <!-- Preload imagen principal -->
+  <link
+    rel="preload"
+    as="image"
+    href="/IMG_0800.webp"
+    imagesrcset="/IMG_0800.webp 1x, /IMG_0800.webp 2x"
+    imagesizes="(min-width: 1024px) 480px, 64vw"
+  />
+
   <!-- ===== HERO (dark) ===== -->
   <section class="bg-neutral-950 text-white">
-    <div class="container pt-28 pb-10 max-w-3xl">
-      <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/60">
-        <span>Services</span><span class="opacity-40">•</span><span>Injectables</span>
-      </div>
-      <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Dermal Fillers — Juvederm Collection</h1>
+    <div class="container pt-28 pb-12">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/70">
+          <span>Injectables</span>
+          <span class="opacity-60">•</span>
+          <span>New Windsor, NY</span>
+        </div>
 
-      <p class="mt-4 text-white/80 whitespace-pre-line">
+        <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">JUVÉDERM® Collection of Fillers</h1>
+        <div class="mt-2 text-sm sm:text-base text-white/70">(Dermal Fillers)</div>
+
+        <div class="mt-4 h-px w-28 mx-auto bg-gradient-to-r from-transparent via-white to-transparent"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN (2 cols) ===== -->
+  <section class="relative bg-white text-neutral-900">
+    <div class="container py-14 sm:py-[4.5rem]">
+      <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
+        <!-- Imagen izquierda (zoom click) -->
+        <figure class="relative">
+          <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
+          <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
+
+          <picture>
+            <!-- <source srcset="/IMG_0800.avif" type="image/avif" /> -->
+            <source srcset="/IMG_0800.webp" type="image/webp" />
+            <img
+              id="ba-open"
+              src="/IMG_0800.webp"
+              alt="JUVÉDERM® dermal fillers"
+              fetchpriority="high"
+              decoding="async"
+              sizes="(min-width: 1024px) 480px, (min-width: 640px) 60vw, 92vw"
+              class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-neutral-200 shadow-2xl bg-neutral-100"
+              width="960"
+              height="1280"
+              onerror="this.onerror=null; this.src='/placeholder-service.jpg';"
+            />
+          </picture>
+        </figure>
+
+        <!-- Columna derecha: texto + CTA -->
+        <div>
+          <p class="text-neutral-700/90 whitespace-pre-line">
 JUVÉDERM® Collection of Fillers
 
 Enhance your natural beauty with the JUVÉDERM® Collection of hyaluronic acid fillers—designed to restore youthful volume, smooth fine lines, and refine facial contours. Whether you’re looking to define the lips, lift the cheeks, or sculpt the jawline, each JUVÉDERM® formula is tailored for precise, natural-looking results that complement your features. Experience rejuvenation that looks refreshed, never overdone.
-      </p>
+          </p>
 
-      <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Targets</div>
-          <div class="mt-0.5 font-medium">Lips, cheeks, jawline</div>
+          <div class="mt-8 flex items-center gap-4">
+            <a
+              href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-900/90 focus:outline-none focus:ring-2 focus:ring-neutral-300"
+              aria-label="Book a dermal fillers appointment"
+            >
+              Book Appointment
+            </a>
+
+            <a href="/contact-us" class="text-sm text-neutral-600 hover:text-neutral-900 underline-offset-4 hover:underline">
+              Questions before booking?
+            </a>
+          </div>
         </div>
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Material</div>
-          <div class="mt-0.5 font-medium">Hyaluronic acid (HA)</div>
-        </div>
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Session length</div>
-          <div class="mt-0.5 font-medium">~30–60 min</div>
-        </div>
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Downtime</div>
-          <div class="mt-0.5 font-medium">Minimal–Moderate</div>
-        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox / Zoom accesible -->
+    <div
+      id="ba-lightbox"
+      class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-150"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lb-title"
+      aria-describedby="lb-desc"
+    >
+      <div class="absolute inset-0 bg-black/80"></div>
+      <div class="relative h-full w-full flex items-center justify-center p-4">
+        <h2 id="lb-title" class="sr-only">Zoomed image</h2>
+        <p id="lb-desc" class="sr-only">Press Escape or the close button to exit.</p>
+
+        <picture>
+          <!-- <source srcset="/IMG_0800.avif" type="image/avif" /> -->
+          <source srcset="/IMG_0800.webp" type="image/webp" />
+          <img
+            src="/IMG_0800.webp"
+            alt="Zoomed JUVÉDERM® fillers image"
+            class="max-h-[90vh] max-w-[92vw] rounded-2xl ring-1 ring-white/20 shadow-2xl"
+          />
+        </picture>
+
+        <button
+          id="ba-close"
+          class="absolute top-4 right-4 inline-flex items-center justify-center rounded-full bg-white/90 text-neutral-900 h-10 w-10 hover:bg-white focus:outline-none focus:ring-2 focus:ring-white/50"
+          aria-label="Close image"
+          title="Close"
+        >
+          ✕
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTENT (white) ===== -->
-  <section class="bg-white text-neutral-900">
-    <div class="container py-12 sm:py-14">
-      <!-- Overview -->
-      <div class="grid lg:grid-cols-12 gap-8 items-start">
-        <div class="lg:col-span-7">
-          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Overview</h2>
-          <p class="mt-3 text-neutral-700">
-            Hyaluronic acid (HA) fillers can restore support and refine contour with a harmony-first approach. We prioritize
-            structure before volume to maintain balance and natural proportions so results blend seamlessly with your features.
-          </p>
-          <p class="mt-3 text-neutral-700">
-            Product selection (rheology/firmness) is tailored per area—cheeks, lips, chin, and jawline—while respecting
-            tissue quality and your goals.
-          </p>
-        </div>
+  <!-- ===== Script del lightbox con foco/ESC ===== -->
+  <script is:inline>
+    (() => {
+      const openEl = document.getElementById('ba-open');
+      const lightbox = document.getElementById('ba-lightbox');
+      const closeEl = document.getElementById('ba-close');
 
-        <div class="lg:col-span-5">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
-            <h3 class="text-lg font-medium">Indications</h3>
-            <ul class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-neutral-700">
-              {[
-                'Midface support (cheeks) & lift',
-                'Lip definition & hydration',
-                'Nasolabial / marionette softening',
-                'Chin projection & jawline contour',
-                'Temple support (select cases)'
-              ].map(item => (
-                <li class="inline-flex items-start gap-2">
-                  <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none">
-                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                  </svg>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p class="mt-3 text-xs text-neutral-500">
-              Final candidacy, product choice, and sequencing are determined in-clinic after assessment.
-            </p>
-          </div>
-        </div>
-      </div>
+      if (!openEl || !lightbox || !closeEl) return;
 
-      <!-- Benefits -->
-      <div class="mt-12 grid md:grid-cols-3 gap-4">
-        {[
-          {
-            title: 'Natural, refined finish',
-            text: 'Enhances harmony—never overdone—by prioritizing structure and balance.'
-          },
-          {
-            title: 'Tailored selection',
-            text: 'Product and placement matched to tissue needs and personal goals.'
-          },
-          {
-            title: 'Layered for precision',
-            text: 'Staged treatments allow fine control and safer adjustments over time.'
-          }
-        ].map(card => (
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="text-sm font-medium text-neutral-900">{card.title}</div>
-            <p class="mt-2 text-sm text-neutral-700">{card.text}</p>
-          </div>
-        ))}
-      </div>
+      let lastFocused = null;
 
-      <!-- What to expect -->
-      <div class="mt-12 grid lg:grid-cols-12 gap-8 items-start">
-        <div class="lg:col-span-5">
-          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">What to expect</h2>
-          <p class="mt-3 text-neutral-700">
-            We start with facial mapping, discuss priorities, and select the appropriate Juvederm products for each area.
-            Treatment focuses on precision and restraint for results that wear beautifully over time.
-          </p>
-        </div>
-        <div class="lg:col-span-7">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">During the session</div>
-              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-                <li>Assessment, markings & photos as needed</li>
-                <li>Needle and/or cannula placement per area</li>
-                <li>Typical time ~30–60 minutes</li>
-              </ul>
-            </div>
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">Results timeline</div>
-              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-                <li>Immediate contour changes</li>
-                <li>Settling over ~3–14 days</li>
-                <li>Longevity ~6–12+ months (area-dependent)</li>
-              </ul>
-            </div>
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5 sm:col-span-2">
-              <div class="text-sm font-medium text-neutral-900">Series & cadence</div>
-              <p class="mt-2 text-sm text-neutral-700">
-                Plans may be staged for safety and finesse. Maintenance timing varies by area, metabolism, and product.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      function show() {
+        lastFocused = document.activeElement;
+        lightbox.classList.remove('hidden');
+        requestAnimationFrame(() => {
+          lightbox.classList.remove('opacity-0');
+          lightbox.classList.add('opacity-100');
+        });
 
-      <!-- Aftercare -->
-      <div class="mt-12">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Aftercare</h2>
-        <div class="mt-4 grid md:grid-cols-2 gap-4">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <ul class="text-sm text-neutral-700 space-y-2">
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Expect mild swelling or tenderness for a few days
-              </li>
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Use brief, clean cold compresses if advised
-              </li>
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Sleep slightly elevated the first night
-              </li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <ul class="text-sm text-neutral-700 space-y-2">
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Avoid intense heat/exercise for 24–48 hours
-              </li>
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Limit alcohol the day of treatment
-              </li>
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Follow product-specific guidance from your clinician
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        document.body.style.overflow = 'hidden';
+        document.addEventListener('keydown', onKey);
+        setTimeout(() => closeEl.focus(), 0);
+      }
 
-      <!-- Safety & risks -->
-      <div class="mt-12">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Safety & risks</h2>
-        <div class="mt-4 grid md:grid-cols-2 gap-4 text-sm text-neutral-700">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="font-medium text-neutral-900">Common, temporary effects</div>
-            <ul class="mt-2 space-y-1.5">
-              <li>Swelling or bruising</li>
-              <li>Tenderness to touch</li>
-              <li>Asymmetry while settling</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="font-medium text-neutral-900">Less common considerations</div>
-            <ul class="mt-2 space-y-1.5">
-              <li>Nodules or lumps</li>
-              <li>Vascular events (rare; emergency protocol in place)</li>
-              <li>Allergic reactions (rare)</li>
-            </ul>
-          </div>
-        </div>
-        <p class="mt-4 text-xs text-neutral-500">
-          Educational information only; not medical advice. We review individualized risks, benefits, and alternatives in clinic before treatment.
-        </p>
-      </div>
+      function hide() {
+        lightbox.classList.add('opacity-0');
+        lightbox.classList.remove('opacity-100');
+        setTimeout(() => {
+          lightbox.classList.add('hidden');
+        }, 150);
 
-      <!-- FAQ -->
-      <div class="mt-12">
-        <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">FAQ</h2>
-        <div class="mt-6 grid gap-4">
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">Will it look obvious?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              Our philosophy is conservative and structure-first. We enhance proportions so results blend naturally with your features.
-            </p>
-          </details>
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', onKey);
+        if (lastFocused && typeof lastFocused.focus === 'function') {
+          lastFocused.focus();
+        }
+      }
 
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">How long does it last?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              Typically ~6–12+ months depending on area, product, and personal metabolism.
-            </p>
-          </details>
+      function onKey(e) {
+        if (e.key === 'Escape') hide();
+        if (e.key === 'Tab') {
+          e.preventDefault();
+          closeEl.focus();
+        }
+      }
 
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">Can fillers be dissolved?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              Yes—hyaluronic acid fillers can be dissolved with hyaluronidase if needed after evaluation.
-            </p>
-          </details>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="mt-12">
-        <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6 flex items-center justify-between gap-4">
-          <div class="text-sm text-neutral-700">
-            Ready for a balanced filler plan that preserves your natural character?
-          </div>
-          <a href="/contact-us/" class="inline-flex items-center rounded-full bg-neutral-900 text-white px-5 py-2.5 text-sm hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">
-            Contact Us
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+      openEl.addEventListener('click', show);
+      closeEl.addEventListener('click', hide);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) hide();
+      });
+    })();
+  </script>
 </BaseLayout>
