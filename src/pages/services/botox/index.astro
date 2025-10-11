@@ -19,6 +19,7 @@ const seo = {
       preparation: 'Avoid blood-thinning supplements/medications when medically appropriate; arrive with clean skin.',
       followup: 'Review at 10–14 days if needed.',
       estimatedCost: 'Varies by area and units',
+      areaServed: 'Hudson Valley, NY',
       availableService: {
         '@type': 'Service',
         serviceType: 'Cosmetic neurotoxin treatment (onabotulinumtoxinA)',
@@ -50,80 +51,134 @@ const seo = {
 ---
 
 <BaseLayout seo={seo}>
-  <!-- ===== HERO (dark, original height) ===== -->
+  <!-- Preload (opcional, seguro) para mejorar LCP de la imagen principal -->
+  <link rel="preload" as="image" href="/IMG_0800.avif" imagesrcset="/IMG_0800.avif 1x, /IMG_0800.avif 2x" imagesizes="(min-width: 1024px) 480px, 64vw" />
+
+  <!-- ===== HERO (dark) ===== -->
   <section class="bg-neutral-950 text-white">
-    <div class="container pt-28 pb-10">
+    <div class="container pt-28 pb-12">
       <div class="max-w-3xl mx-auto text-center">
-        <!-- Meta en una sola línea -->
         <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/70">
           <span>Injectables</span>
           <span class="opacity-60">•</span>
           <span>New Windsor, NY</span>
         </div>
 
-        <!-- Título y subtítulo solicitados -->
         <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Neurotoxins</h1>
-        <div class="mt-2 text-sm sm:text-base text-white/80">(Botox • Xeomin • Daxxify)</div>
+        <div class="mt-2 text-sm sm:text-base text-white/70">(Botox • Xeomin • Daxxify)</div>
+
+        <!-- Chips at-a-glance -->
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-2 text-[12px] text-white/80">
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1">3–5 days to see results</span>
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1">Full effect: 10–14 days</span>
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1">Lasts ~3–4 months</span>
+        </div>
+
+        <div class="mt-4 h-px w-28 mx-auto bg-gradient-to-r from-transparent via-white to-transparent"></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== BLOQUE PRINCIPAL (dos columnas SIEMPRE) ===== -->
+  <!-- ===== MAIN (2 cols) ===== -->
   <section class="relative bg-white text-neutral-900">
-    <div class="container py-12 sm:py-16">
-      <div class="mx-auto max-w-6xl grid grid-cols-2 gap-6 items-center">
-        <!-- Imagen izquierda (zoom al click) -->
+    <div class="container py-14 sm:py-18">
+      <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
+        <!-- Imagen izquierda (zoom click) -->
         <figure class="relative">
-          <!-- Acentos laterales claros -->
+          <!-- Acentos suaves -->
           <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
           <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
 
-          <img
-            id="ba-open"
-            src="/IMG_0800.webp"
-            alt="Neurotoxins example"
-            loading="eager"
-            class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-neutral-200 shadow-2xl"
-            width="960"
-            height="1280"
-          />
+          <picture>
+            <source srcset="/IMG_0800.avif" type="image/avif" />
+            <source srcset="/IMG_0800.webp" type="image/webp" />
+            <img
+              id="ba-open"
+              src="/IMG_0800.webp"
+              alt="Neurotoxins example"
+              fetchpriority="high"
+              decoding="async"
+              sizes="(min-width: 1024px) 480px, (min-width: 640px) 60vw, 92vw"
+              class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-neutral-200 shadow-2xl bg-neutral-100"
+              width="960"
+              height="1280"
+            />
+          </picture>
+
+          <!-- Badge opcional y sutil -->
+          <span class="absolute top-3 left-3 text-[11px] rounded-full bg-black/70 text-white px-2 py-1 ring-1 ring-white/10">
+            Medical-grade • RN-Led
+          </span>
         </figure>
 
-        <!-- Columna derecha: SOLO descripción + botón (sin título) -->
+        <!-- Columna derecha: texto + CTA -->
         <div>
-          <p class="text-neutral-700">
-            Refresh your look with precision and elegance. These advanced treatments gently relax facial muscles to smooth lines,
-            soften expression, and reveal a naturally youthful, radiant appearance.
+          <p class="text-neutral-700/90">
+            Refresh your look with precision and elegance. These advanced treatments gently relax facial muscles to
+            smooth lines, soften expression, and reveal a naturally youthful, radiant appearance.
           </p>
 
-          <div class="mt-8">
+          <!-- Bullets micro, sin títulos -->
+          <ul class="mt-5 space-y-2 text-sm text-neutral-700/90">
+            <li>• Softens frown lines, forehead, crow’s feet</li>
+            <li>• Natural look; keeps your expressions</li>
+            <li>• Quick visit; minimal downtime</li>
+          </ul>
+
+          <div class="mt-8 flex items-center gap-4">
             <a
               href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
               target="_blank"
               rel="noopener"
-              class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-300"
-              aria-label="Book an appointment"
+              class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-900/90 focus:outline-none focus:ring-2 focus:ring-neutral-300"
+              aria-label="Book a Botox appointment"
             >
               Book Appointment
             </a>
+
+            <!-- Link secundario opcional -->
+            <a href="/contact-us" class="text-sm text-neutral-600 hover:text-neutral-900 underline-offset-4 hover:underline">
+              Questions before booking?
+            </a>
           </div>
+
+          <!-- Disclaimer minimal -->
+          <p class="mt-10 text-xs text-neutral-500">
+            *Informational only. Personalized dosing and safety are reviewed during your consult.
+          </p>
         </div>
       </div>
     </div>
 
-    <!-- Lightbox / Zoom -->
-    <div id="ba-lightbox" class="fixed inset-0 z-50 hidden">
+    <!-- Lightbox / Zoom accesible -->
+    <div
+      id="ba-lightbox"
+      class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-150"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lb-title"
+      aria-describedby="lb-desc"
+    >
       <div class="absolute inset-0 bg-black/80"></div>
       <div class="relative h-full w-full flex items-center justify-center p-4">
-        <img
-          src="/IMG_0800.webp"
-          alt="Zoomed neurotoxins image"
-          class="max-h-[90vh] max-w-[92vw] rounded-2xl ring-1 ring-white/20 shadow-2xl"
-        />
+        <h2 id="lb-title" class="sr-only">Zoomed image</h2>
+        <p id="lb-desc" class="sr-only">Press Escape or the close button to exit.</p>
+
+        <picture>
+          <source srcset="/IMG_0800.avif" type="image/avif" />
+          <source srcset="/IMG_0800.webp" type="image/webp" />
+          <img
+            src="/IMG_0800.webp"
+            alt="Zoomed neurotoxins image"
+            class="max-h-[90vh] max-w-[92vw] rounded-2xl ring-1 ring-white/20 shadow-2xl"
+          />
+        </picture>
+
         <button
           id="ba-close"
           class="absolute top-4 right-4 inline-flex items-center justify-center rounded-full bg-white/90 text-neutral-900 h-10 w-10 hover:bg-white focus:outline-none focus:ring-2 focus:ring-white/50"
           aria-label="Close image"
+          title="Close"
         >
           ✕
         </button>
@@ -131,7 +186,7 @@ const seo = {
     </div>
   </section>
 
-  <!-- ===== Script del lightbox ===== -->
+  <!-- ===== Script del lightbox con foco/ESC ===== -->
   <script is:inline>
     (() => {
       const openEl = document.getElementById('ba-open');
@@ -140,21 +195,50 @@ const seo = {
 
       if (!openEl || !lightbox || !closeEl) return;
 
+      let lastFocused = null;
+
       function show() {
+        lastFocused = document.activeElement;
         lightbox.classList.remove('hidden');
+        requestAnimationFrame(() => {
+          lightbox.classList.remove('opacity-0');
+          lightbox.classList.add('opacity-100');
+        });
+
         document.body.style.overflow = 'hidden';
-        window.addEventListener('keydown', onKey);
+        document.addEventListener('keydown', onKey);
+        // focus trap: enviar foco al botón de cerrar
+        setTimeout(() => closeEl.focus(), 0);
       }
+
       function hide() {
-        lightbox.classList.add('hidden');
+        lightbox.classList.add('opacity-0');
+        lightbox.classList.remove('opacity-100');
+        setTimeout(() => {
+          lightbox.classList.add('hidden');
+        }, 150);
+
         document.body.style.overflow = '';
-        window.removeEventListener('keydown', onKey);
+        document.removeEventListener('keydown', onKey);
+        if (lastFocused && typeof lastFocused.focus === 'function') {
+          lastFocused.focus();
+        }
       }
-      function onKey(e) { if (e.key === 'Escape') hide(); }
+
+      function onKey(e) {
+        if (e.key === 'Escape') hide();
+        if (e.key === 'Tab') {
+          // simple focus trap: solo botón cerrar
+          e.preventDefault();
+          closeEl.focus();
+        }
+      }
 
       openEl.addEventListener('click', show);
       closeEl.addEventListener('click', hide);
-      lightbox.addEventListener('click', (e) => { if (e.target === lightbox) hide(); });
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) hide();
+      });
     })();
   </script>
 </BaseLayout>
