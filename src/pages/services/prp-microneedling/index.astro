@@ -2,280 +2,230 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const seo = {
-  title: 'PRP Microneedling | D-Essence Wellness',
+  title: 'Platelet-Rich Plasma (PRP) Therapy | D-Essence Wellness',
   description:
-    'Microneedling combined with platelet-rich plasma (PRP) to support collagen, refine texture, soften acne scars, and enhance tone with minimal downtime.',
-  canonical: '/services/prp-microneedling/',
+    'PRP therapy uses your own growth factors to stimulate collagen, rejuvenate skin, and support hair growth—promoting natural renewal with minimal downtime.',
+  canonical: '/services/prp-therapy/',
   type: 'website',
   jsonLd: [
     {
       '@context': 'https://schema.org',
-      '@type': 'Service',
-      name: 'PRP Microneedling',
-      serviceType: 'Microneedling with Platelet-Rich Plasma',
-      areaServed: 'New Windsor, New York',
-      provider: {
-        '@type': 'MedicalBusiness',
-        name: 'D-Essence Wellness',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: '871 Blooming Grove Turnpike Suite 102',
-          addressLocality: 'New Windsor',
-          addressRegion: 'NY',
-          postalCode: '12553',
-          addressCountry: 'US'
+      '@type': 'MedicalProcedure',
+      name: 'Platelet-Rich Plasma (PRP) Therapy',
+      alternateName: 'PRP Treatment',
+      procedureType: 'Regenerative/Aesthetic treatment',
+      bodyLocation: 'Face, scalp, neck, décolletage (varies by plan)',
+      howPerformed:
+        'A small blood draw is spun in a centrifuge to isolate platelet-rich plasma. PRP is then applied/injected to targeted areas to deliver growth factors.',
+      preparation:
+        'Arrive well-hydrated; avoid blood-thinning supplements/medications when medically appropriate; come with clean skin/scalp.',
+      followup: 'Series recommended depending on goals; reassess at follow-ups for maintenance cadence.',
+      estimatedCost: 'Varies by area and number of sessions',
+      areaServed: 'Hudson Valley, NY',
+      availableService: {
+        '@type': 'Service',
+        serviceType: 'Platelet-Rich Plasma (PRP) Therapy',
+        provider: {
+          '@type': 'HealthAndBeautyBusiness',
+          name: 'D-Essence Wellness',
+          telephone: '+1-716-303-8963',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '871 Blooming Grove Turnpike Suite 102',
+            addressLocality: 'New Windsor',
+            addressRegion: 'NY',
+            postalCode: '12553',
+            addressCountry: 'US'
+          }
         }
-      },
-      url: 'https://dessencewellness.com/services/prp-microneedling/'
+      }
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
+        { '@type': 'ListItem', position: 2, name: 'PRP Therapy', item: 'https://dessencewellness.com/services/prp-therapy/' }
+      ]
     }
   ]
 };
 ---
 
 <BaseLayout seo={seo}>
+  <!-- Preload image -->
+  <link
+    rel="preload"
+    as="image"
+    href="/IMG_0800.webp"
+    imagesrcset="/IMG_0800.webp 1x, /IMG_0800.webp 2x"
+    imagesizes="(min-width: 1024px) 480px, 64vw"
+  />
+
   <!-- ===== HERO (dark) ===== -->
   <section class="bg-neutral-950 text-white">
-    <div class="container pt-28 pb-10 max-w-3xl">
-      <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/60">
-        <span>Services</span><span class="opacity-40">•</span><span>Advanced Skin Care</span>
-      </div>
-      <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">PRP Microneedling</h1>
-      <p class="mt-4 text-white/80">
-        Collagen induction with your own platelet-rich plasma to refine texture, soften scars and fine lines,
-        and boost luminosity—while keeping downtime minimal.
-      </p>
-      <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Series</div>
-          <div class="mt-0.5 font-medium">3–6 sessions</div>
+    <div class="container pt-28 pb-12">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/70">
+          <span>Injectables</span>
+          <span class="opacity-60">•</span>
+          <span>New Windsor, NY</span>
         </div>
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Spacing</div>
-          <div class="mt-0.5 font-medium">Every 4–6 weeks</div>
-        </div>
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Areas</div>
-          <div class="mt-0.5 font-medium">Face, neck, chest, hands</div>
-        </div>
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Downtime</div>
-          <div class="mt-0.5 font-medium">1–3 days redness</div>
-        </div>
+
+        <h1 class="mt-2 text-3xl sm:text-5xl font-semibold tracking-tight">Platelet-Rich Plasma (PRP) Therapy</h1>
+
+        <div class="mt-4 h-px w-28 mx-auto bg-gradient-to-r from-transparent via-white to-transparent"></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTENT (white) ===== -->
-  <section class="bg-white text-neutral-900">
-    <div class="container py-12 sm:py-14">
+  <!-- ===== MAIN (2 cols) ===== -->
+  <section class="relative bg-white text-neutral-900">
+    <div class="container py-14 sm:py-[4.5rem]">
+      <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
+        <!-- Image -->
+        <figure class="relative">
+          <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
+          <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
 
-      <!-- Overview -->
-      <div class="grid lg:grid-cols-12 gap-8 items-start">
-        <div class="lg:col-span-7">
-          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Overview</h2>
-          <p class="mt-3 text-neutral-700">
-            Microneedling uses fine, controlled microchannels to prompt the skin’s repair response and support
-            new collagen. When paired with platelet-rich plasma prepared from your own blood, high-value growth
-            factors are delivered to freshly created channels to amplify rejuvenation, help speed recovery,
-            and enhance overall results.
+          <picture>
+            <!-- <source srcset="/IMG_0800.avif" type="image/avif" /> -->
+            <source srcset="/IMG_0800.webp" type="image/webp" />
+            <img
+              id="ba-open"
+              src="/IMG_0800.webp"
+              alt="Platelet-Rich Plasma (PRP) therapy"
+              fetchpriority="high"
+              decoding="async"
+              sizes="(min-width: 1024px) 480px, (min-width: 640px) 60vw, 92vw"
+              class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-neutral-200 shadow-2xl bg-neutral-100"
+              width="960"
+              height="1280"
+              onerror="this.onerror=null; this.src='/placeholder-service.jpg';"
+            />
+          </picture>
+        </figure>
+
+        <!-- Copy + CTAs -->
+        <div>
+          <p class="text-neutral-700/90">
+            Platelet-Rich Plasma (PRP) therapy uses your body’s own growth factors to stimulate collagen, restore
+            volume, and rejuvenate skin naturally. PRP can also be used to improve hair growth and enhance overall skin health.
           </p>
-          <p class="mt-3 text-neutral-700">
-            Common goals include improving texture and tone, softening acne or surgical scars, reducing the
-            look of enlarged pores, and restoring a more even, luminous complexion. It can be performed on the
-            face and on areas like the neck, chest, and hands.
+          <p class="mt-3 text-neutral-700/90">
+            This regenerative treatment promotes healing from within for a smoother, firmer, more youthful appearance —
+            with minimal downtime.
           </p>
-        </div>
-        <div class="lg:col-span-5">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
-            <h3 class="text-lg font-medium">Key benefits</h3>
-            <ul class="mt-3 space-y-2 text-sm text-neutral-700">
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Refines texture and softens fine lines
-              </li>
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Improves the look of acne and surgical scars
-              </li>
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Promotes more even tone and radiance
-              </li>
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Helps reduce the look of enlarged pores
-              </li>
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                PRP may support faster recovery vs. microneedling alone
-              </li>
-            </ul>
-            <p class="mt-3 text-xs text-neutral-500">
-              Individual outcomes vary; some indications may respond better than others.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- What to expect -->
-      <div class="mt-12 grid lg:grid-cols-12 gap-8 items-start">
-        <div class="lg:col-span-5">
-          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">What to expect</h2>
-          <p class="mt-3 text-neutral-700">
-            Your visit includes a full skin assessment and review of medical history. A small blood draw
-            prepares PRP via centrifugation. Numbing cream is applied for comfort before the device makes
-            precise, depth-controlled passes. PRP is layered over (and may be lightly infused into) the
-            microchannels to optimize delivery of growth factors.
+          <p class="mt-3 italic text-neutral-700/90">
+            Natural renewal. Radiant results.
           </p>
-        </div>
-        <div class="lg:col-span-7">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">The session</div>
-              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-                <li>Topical numbing for comfort</li>
-                <li>Microneedling with adjusted depth by area</li>
-                <li>Immediate PRP application to treated skin</li>
-                <li>Typical time: ~30–60 minutes depending on areas</li>
-              </ul>
-            </div>
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">Timeline</div>
-              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-                <li>Day 0: redness/tightness is common</li>
-                <li>Days 1–3: mild swelling or flaking may occur</li>
-                <li>Weeks 2–4: visible gains in tone/texture</li>
-                <li>Ongoing: collagen remodeling over weeks</li>
-              </ul>
-            </div>
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5 sm:col-span-2">
-              <div class="text-sm font-medium text-neutral-900">Series planning</div>
-              <div class="mt-2 text-sm text-neutral-700">
-                Most plans include 3–6 sessions spaced every 4–6 weeks, with maintenance as needed. We’ll
-                outline realistic goals and a routine that supports skin health between visits.
-              </div>
-            </div>
+
+          <div class="mt-8 flex items-center gap-4">
+            <a
+              href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-900/90 focus:outline-none focus:ring-2 focus:ring-neutral-300"
+              aria-label="Book a PRP therapy appointment"
+            >
+              Book Appointment
+            </a>
+
+            <a href="/contact-us" class="text-sm text-neutral-600 hover:text-neutral-900 underline-offset-4 hover:underline">
+              Questions before booking?
+            </a>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Aftercare -->
-      <div class="mt-12">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Aftercare</h2>
-        <div class="mt-4 grid md:grid-cols-2 gap-4">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <ul class="text-sm text-neutral-700 space-y-2">
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Avoid rubbing or scrubbing for 24–48 hours; use gentle cleanser and soothing hydrators.
-              </li>
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Skip heavy makeup the first day; resume light, non-irritating products as advised.
-              </li>
-              <li class="inline-flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                Avoid intense exercise, steam, or sauna for 48 hours.
-              </li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="text-sm text-neutral-700">
-              Daily SPF, smart hydration, and a simplified routine help the skin recover smoothly.
-              Expect mild redness or tightness that settles within a few days. Contact the clinic if you notice
-              unusual pain, spreading redness, fever, or other unexpected symptoms.
-            </div>
-          </div>
-        </div>
+    <!-- Lightbox / Zoom -->
+    <div
+      id="ba-lightbox"
+      class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-150"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lb-title"
+      aria-describedby="lb-desc"
+    >
+      <div class="absolute inset-0 bg-black/80"></div>
+      <div class="relative h-full w-full flex items-center justify-center p-4">
+        <h2 id="lb-title" class="sr-only">Zoomed image</h2>
+        <p id="lb-desc" class="sr-only">Press Escape or the close button to exit.</p>
+
+        <picture>
+          <!-- <source srcset="/IMG_0800.avif" type="image/avif" /> -->
+          <source srcset="/IMG_0800.webp" type="image/webp" />
+          <img
+            src="/IMG_0800.webp"
+            alt="Zoomed PRP therapy image"
+            class="max-h-[90vh] max-w-[92vw] rounded-2xl ring-1 ring-white/20 shadow-2xl"
+          />
+        </picture>
+
+        <button
+          id="ba-close"
+          class="absolute top-4 right-4 inline-flex items-center justify-center rounded-full bg-white/90 text-neutral-900 h-10 w-10 hover:bg-white focus:outline-none focus:ring-2 focus:ring-white/50"
+          aria-label="Close image"
+          title="Close"
+        >
+          ✕
+        </button>
       </div>
-
-      <!-- Safety & Risks -->
-      <div class="mt-12">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Safety & risks</h2>
-        <div class="mt-4 grid md:grid-cols-2 gap-4 text-sm text-neutral-700">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="font-medium text-neutral-900">Common, temporary effects</div>
-            <ul class="mt-2 space-y-1.5">
-              <li>Redness, mild swelling, tightness</li>
-              <li>Small bruises or pinpoint bleeding</li>
-              <li>Light flaking as skin renews</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="font-medium text-neutral-900">Precautions & contraindications</div>
-            <ul class="mt-2 space-y-1.5">
-              <li>Active infection, inflamed acne, eczema flare, or open wounds</li>
-              <li>Recent strong retinoids or aggressive procedures—timing matters</li>
-              <li>Bleeding/platelet disorders or anticoagulants—requires evaluation</li>
-              <li>History of poor healing or keloids—use caution</li>
-              <li>Pregnancy or breastfeeding—typically deferred</li>
-            </ul>
-          </div>
-        </div>
-        <p class="mt-4 text-xs text-neutral-500">
-          Educational information only; not medical advice. Candidacy, technique, and intervals are determined by your clinician.
-        </p>
-      </div>
-
-      <!-- FAQ -->
-      <div class="mt-12">
-        <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">FAQ</h2>
-        <div class="mt-6 grid gap-4">
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">How many sessions will I need?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              Most plans include 3–6 sessions every 4–6 weeks. Maintenance varies by goals, area, and response.
-            </p>
-          </details>
-
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">When will I see results?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              Early improvements often appear by weeks 2–4, with continued collagen remodeling over subsequent weeks.
-            </p>
-          </details>
-
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">Is it painful?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              Topical numbing is used to keep you comfortable. Mild redness/tightness is expected for a day or two.
-            </p>
-          </details>
-
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">Is PRP always better than microneedling alone?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              Evidence supports PRP as a helpful adjunct for many patients; results can vary by concern and skin type.
-              We’ll discuss where PRP adds the most value for you.
-            </p>
-          </details>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="mt-12">
-        <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6 flex items-center justify-between gap-4">
-          <div class="text-sm text-neutral-700">
-            Ready to explore a plan for texture, tone, or scars? We’ll tailor a conservative series and home routine.
-          </div>
-          <a href="/contact-us/" class="inline-flex items-center rounded-full bg-neutral-900 text-white px-5 py-2.5 text-sm hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">
-            Contact Us
-          </a>
-        </div>
-      </div>
-
     </div>
   </section>
+
+  <!-- Lightbox script -->
+  <script is:inline>
+    (() => {
+      const openEl = document.getElementById('ba-open');
+      const lightbox = document.getElementById('ba-lightbox');
+      const closeEl = document.getElementById('ba-close');
+
+      if (!openEl || !lightbox || !closeEl) return;
+
+      let lastFocused = null;
+
+      function show() {
+        lastFocused = document.activeElement;
+        lightbox.classList.remove('hidden');
+        requestAnimationFrame(() => {
+          lightbox.classList.remove('opacity-0');
+          lightbox.classList.add('opacity-100');
+        });
+
+        document.body.style.overflow = 'hidden';
+        document.addEventListener('keydown', onKey);
+        setTimeout(() => closeEl.focus(), 0);
+      }
+
+      function hide() {
+        lightbox.classList.add('opacity-0');
+        lightbox.classList.remove('opacity-100');
+        setTimeout(() => {
+          lightbox.classList.add('hidden');
+        }, 150);
+
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', onKey);
+        if (lastFocused && typeof lastFocused.focus === 'function') {
+          lastFocused.focus();
+        }
+      }
+
+      function onKey(e) {
+        if (e.key === 'Escape') hide();
+        if (e.key === 'Tab') {
+          e.preventDefault();
+          closeEl.focus();
+        }
+      }
+
+      openEl.addEventListener('click', show);
+      closeEl.addEventListener('click', hide);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) hide();
+      });
+    })();
+  </script>
 </BaseLayout>
