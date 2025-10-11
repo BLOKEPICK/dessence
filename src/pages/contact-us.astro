@@ -2,169 +2,290 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const seo = {
-  title: 'Meet the Provider | D-Essence Wellness',
+  title: 'Contact Us | D-Essence Wellness',
   description:
-    'Get to know Yanixza Morales, Board Certified-Family Nurse Practitioner. Credentials, focus areas, and a philosophy centered on natural, safe outcomes.',
-  canonical: '/meet-the-provider',
-  type: 'profile',
+    'Questions or bookings? Send us a note—our team will reply within one business day.',
+  canonical: '/contact-us',
+  type: 'website',
   jsonLd: [
     {
       '@context': 'https://schema.org',
-      '@type': 'ProfilePage',
-      name: 'Meet the Provider',
-      url: 'https://dessencewellness.com/meet-the-provider',
-      mainEntity: {
-        '@type': 'Person',
-        name: 'Yanixza Morales',
-        jobTitle: 'Family Nurse Practitioner',
-        description:
-          'Board Certified-Family Nurse Practitioner providing modern, evidence-based aesthetic care.',
-        image: 'https://dessencewellness.com/Yani.webp',
-        worksFor: {
-          '@type': 'HealthAndBeautyBusiness',
-          name: 'D-Essence Wellness'
-        }
-      }
+      '@type': 'ContactPage',
+      name: 'Contact D-Essence Wellness',
+      url: 'https://dessencewellness.com/contact-us'
     }
   ]
 };
 ---
 
 <BaseLayout seo={seo}>
-  <section class="bg-white text-neutral-900">
-    <div class="container pt-24 pb-12">
-      <div class="grid lg:grid-cols-12 gap-10 items-start">
-        <!-- Text -->
-        <div class="lg:col-span-7">
-          <span class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-neutral-500">
-            Meet the Provider
-          </span>
-          <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">
-            Yanixza Morales, Board Certified-Family Nurse Practitioner
-          </h1>
-          <p class="mt-4 text-neutral-600 max-w-xl">
-            I approach aesthetics with medical rigor and a conservative philosophy. My goal is to protect skin health,
-            maintain harmony, and help you feel confident without looking “done.”
-          </p>
-
-          <!-- Credentials -->
-          <div class="mt-6 grid sm:grid-cols-2 gap-4">
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium">Credentials</div>
-              <ul class="mt-2 space-y-1 text-sm text-neutral-700">
-                <li>Board Certified – Family Nurse Practitioner</li>
-                <li>Advanced injectables &amp; cannula training</li>
-                <li>Laser safety &amp; device certifications</li>
-                <li>Clinical protocols &amp; complications management</li>
-              </ul>
-            </div>
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium">Areas of focus</div>
-              <ul class="mt-2 space-y-1 text-sm text-neutral-700">
-                <li>Natural neurotoxin dosing</li>
-                <li>Midface structure with Juvederm®</li>
-                <li>SkinPen® microneedling + PRP/PRF</li>
-                <li>Aerolase® for tone and redness</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="mt-6">
-            <h2 class="text-lg font-semibold">Philosophy of care</h2>
-            <p class="mt-2 text-neutral-600">
-              Less, but better. I combine detailed assessment, conservative increments, and follow-up to build results
-              that wear beautifully over time. Comfort and safety are non-negotiable.
-            </p>
-          </div>
-
-          <div class="mt-6 grid sm:grid-cols-2 gap-4">
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium">Continuing education</div>
-              <ul class="mt-2 space-y-1 text-sm text-neutral-700">
-                <li>Facial anatomy intensives</li>
-                <li>Advanced toxin &amp; filler techniques</li>
-                <li>Laser &amp; energy-based device workshops</li>
-              </ul>
-            </div>
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium">Outside the clinic</div>
-              <p class="mt-2 text-sm text-neutral-700">
-                A believer in calm spaces, skincare rituals, and evidence over hype. I love helping patients feel at
-                ease and informed throughout their journey.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Portrait -->
-        <div class="lg:col-span-5">
-          <div class="relative mx-auto max-w-sm rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-neutral-100 shadow-sm">
-            <div class="absolute top-3 left-3 z-10">
-              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/90 ring-1 ring-neutral-200 text-[11px] text-neutral-700 backdrop-blur">
-                <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                Board Certified-FNP
-              </span>
-            </div>
-            <div class="aspect-[3/4] w-full">
-              <img src="/Yani.webp" alt="Yanixza Morales, FNP at D-Essence Wellness" loading="lazy" class="w-full h-full object-cover" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Divider -->
-    <div class="container">
-      <div class="h-px w-full bg-gradient-to-r from-transparent via-neutral-200 to-transparent"></div>
-    </div>
-
-    <!-- ===== Our Team (2 boxes) ===== -->
-    <div class="container py-10">
-      <div class="flex items-end justify-between gap-4">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Our Team</h2>
-        <!-- opcional: link a una página de equipo -->
-        <!-- <a href="/team" class="text-sm text-neutral-600 hover:text-neutral-900 underline underline-offset-4">Meet all →</a> -->
-      </div>
-
-      <div class="mt-6 grid gap-6 sm:grid-cols-2">
-        <!-- Sonja Maria -->
-        <article class="group rounded-2xl bg-white ring-1 ring-neutral-200 overflow-hidden hover:shadow-md transition">
-          <div class="aspect-[4/3] bg-neutral-100">
-            <img
-              src="/team-sonja.webp"
-              alt="Sonja Maria at D-Essence Wellness"
-              loading="lazy"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="p-5">
-            <h3 class="text-lg font-medium tracking-tight">Sonja Maria</h3>
-            <!-- rol opcional, déjalo vacío si aún no está definido -->
-            <!-- <p class="mt-1 text-sm text-neutral-600">Licensed Aesthetician</p> -->
-          </div>
-        </article>
-
-        <!-- Karina -->
-        <article class="group rounded-2xl bg-white ring-1 ring-neutral-200 overflow-hidden hover:shadow-md transition">
-          <div class="aspect-[4/3] bg-neutral-100">
-            <img
-              src="/team-karina.webp"
-              alt="Karina at D-Essence Wellness"
-              loading="lazy"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="p-5">
-            <h3 class="text-lg font-medium tracking-tight">Karina</h3>
-            <!-- <p class="mt-1 text-sm text-neutral-600">Patient Coordinator</p> -->
-          </div>
-        </article>
-      </div>
-
-      <!-- Nota de imágenes -->
-      <p class="mt-3 text-xs text-neutral-500">
-        *Upload team images as <code>.webp</code> to <code>/public</code>: <code>/team-sonja.webp</code> and <code>/team-karina.webp</code>.
+  <!-- ===== HERO (dark) ===== -->
+  <section class="bg-neutral-950 text-white">
+    <div class="container pt-28 pb-10 max-w-3xl text-center">
+      <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight">Contact Us</h1>
+      <p class="mt-4 text-white/80">
+        We’d love to help. Send us a message and we’ll get back to you within one business day.
       </p>
+      <div class="mt-4 text-sm text-white/60">
+        871 Blooming Grove Turnpike Suite 102, New Windsor, NY 12553
+      </div>
     </div>
   </section>
+
+  <!-- ===== CONTENT (white) ===== -->
+  <section class="bg-white text-neutral-900">
+    <div class="container py-12 sm:py-14">
+      <!-- Banners -->
+      <div id="success-banner" class="hidden mb-6 rounded-xl bg-emerald-50 ring-1 ring-emerald-200 p-4 text-emerald-900" role="status" aria-live="polite">
+        <div class="font-medium">Message sent!</div>
+        <p class="text-sm mt-1">Thanks for reaching out—our team will reply shortly.</p>
+      </div>
+      <div id="error-banner" class="hidden mb-6 rounded-xl bg-red-50 ring-1 ring-red-200 p-4 text-red-900" role="alert">
+        <div class="font-medium">Something went wrong.</div>
+        <p class="text-sm mt-1">Please try again, or call us at <a href="tel:+17163038963" class="underline"> (716) 303-8963</a>.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8">
+        <!-- Intro copy -->
+        <div class="lg:col-span-4">
+          <h2 class="text-xl font-semibold">Start the conversation</h2>
+          <p class="mt-3 text-neutral-600">
+            Share a bit about your goals or questions. If you prefer, call us—we’re happy to help.
+          </p>
+
+          <div class="mt-5 space-y-2 text-sm text-neutral-700">
+            <div>
+              <span class="text-neutral-500">Phone:</span>
+              <a class="ml-1 underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700" href="tel:+17163038963">(716) 303-8963</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="lg:col-span-8">
+          <form id="contact-form"
+            method="POST"
+            accept-charset="UTF-8"
+            class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6 sm:p-7"
+            novalidate
+          >
+            <!-- FormSubmit settings (se envían por AJAX, sin redirección) -->
+            <input type="hidden" name="_subject" value="New website inquiry — D-Essence Wellness" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="firstName" class="block text-sm font-medium text-neutral-800">First name<span class="text-red-500">*</span></label>
+                <input id="firstName" name="First Name" required
+                  class="mt-1 w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-neutral-500 focus:ring-2 focus:ring-neutral-200"
+                  autocomplete="given-name" />
+              </div>
+
+              <div>
+                <label for="lastName" class="block text-sm font-medium text-neutral-800">Last name<span class="text-red-500">*</span></label>
+                <input id="lastName" name="Last Name" required
+                  class="mt-1 w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-neutral-500 focus:ring-2 focus:ring-neutral-200"
+                  autocomplete="family-name" />
+              </div>
+            </div>
+
+            <div class="mt-4 grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="email" class="block text-sm font-medium text-neutral-800">Email<span class="text-red-500">*</span></label>
+                <input id="email" name="Email" type="email" required
+                  class="mt-1 w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-neutral-500 focus:ring-2 focus:ring-neutral-200"
+                  autocomplete="email" />
+                <input type="hidden" name="_replyto" value="" id="replyto-hidden" />
+              </div>
+
+              <div>
+                <label for="phone" class="block text-sm font-medium text-neutral-800">
+  Phone <span class="text-red-600">*</span>
+</label>
+<input
+  id="phone"
+  name="Phone"
+  type="tel"
+  inputmode="tel"
+  required
+  class="mt-1 w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-neutral-500 focus:ring-2 focus:ring-neutral-200"
+  autocomplete="tel"
+/>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <label for="subject" class="block text-sm font-medium text-neutral-800">Subject<span class="text-red-500">*</span></label>
+              <input id="subject" name="Subject" required
+                class="mt-1 w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-neutral-500 focus:ring-2 focus:ring-neutral-200" />
+            </div>
+
+            <div class="mt-4">
+              <label for="message" class="block text-sm font-medium text-neutral-800">Message<span class="text-red-500">*</span></label>
+              <textarea id="message" name="Message" required minlength="10" rows="6"
+                class="mt-1 w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 text-sm outline-none focus:border-neutral-500 focus:ring-2 focus:ring-neutral-200"
+                placeholder="Tell us a bit about your goals, areas of concern, or preferred timing."></textarea>
+            </div>
+
+            <div class="mt-6">
+              <button id="submit-btn" type="submit"
+                class="inline-flex items-center justify-center rounded-full bg-neutral-900 text-white px-5 py-2.5 text-sm hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Evitar zoom-in en iOS al enfocar campos -->
+  <style is:inline>
+    @media (max-width: 768px) {
+      #contact-form input,
+      #contact-form select,
+      #contact-form textarea {
+        font-size: 16px !important;
+      }
+    }
+    html { -webkit-text-size-adjust: 100%; }
+  </style>
+
+  <!-- AJAX submit sin scroll + reset de zoom móvil -->
+  <script is:inline>
+(function () {
+  var form    = document.getElementById('contact-form');
+  var btn     = document.getElementById('submit-btn');
+  var errorB  = document.getElementById('error-banner');
+  var email   = document.getElementById('email');
+  var replyto = document.getElementById('replyto-hidden');
+
+  if (!form || !btn) return;
+
+  // Mantén _replyto sincronizado
+  if (email && replyto) {
+    email.addEventListener('input', function(){ replyto.value = email.value; });
+  }
+
+  function show(el){ el && el.classList.remove('hidden'); }
+  function hide(el){ el && el.classList.add('hidden'); }
+
+  // Forzar “zoom out” a escala 1 en iOS y restaurar viewport
+  function resetMobileZoom() {
+    var vp = document.querySelector('meta[name="viewport"]');
+    if (!vp) return;
+    var original = vp.getAttribute('content') || 'width=device-width, initial-scale=1';
+    vp.setAttribute('content','width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no');
+    setTimeout(function () {
+      vp.setAttribute('content', original);
+      // Reajuste sutil para evitar micro saltos
+      window.scrollTo(window.pageXOffset || 0, window.pageYOffset || 0);
+    }, 200);
+  }
+
+  function buildSuccessView() {
+    var el = document.createElement('div');
+    el.id = 'success-view';
+    el.className = 'rounded-2xl ring-1 ring-emerald-200 bg-emerald-50 p-6 text-center';
+    el.setAttribute('role', 'status');
+    el.setAttribute('aria-live', 'polite');
+    el.innerHTML = `
+      <div class="mx-auto w-12 h-12 rounded-full bg-emerald-100 ring-1 ring-emerald-200 flex items-center justify-center">
+        <svg class="w-7 h-7 text-emerald-700" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3 class="mt-3 text-xl font-semibold text-emerald-900">Your message has been sent</h3>
+      <p class="mt-2 text-emerald-800">Thank you for reaching out. We’ll get back to you shortly. For urgent matters, call <a class="underline decoration-emerald-300 hover:decoration-emerald-600" href="tel:17163038963">(716) 303-8963</a>.</p>
+      <div class="mt-6">
+        <a href="/" class="inline-flex items-center rounded-full bg-neutral-900 text-white px-5 py-2.5 hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">Return to Home</a>
+      </div>
+    `;
+    return el;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    hide(errorB);
+
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    // Guarda posición actual (desktop queda inmóvil)
+    var restoreY = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Quitar foco para cerrar teclado sin “zoom”
+    if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
+
+    var fd = new FormData(form);
+
+    fetch('https://formsubmit.co/ajax/Georgevaldezr@gmail.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: fd
+    })
+    .then(function (res) {
+      return res.json().catch(function(){ return {}; }).then(function(data){ return { ok: res.ok, data: data }; });
+    })
+    .then(function (resp) {
+      if (!resp.ok) throw new Error('Network');
+
+      form.reset();
+
+      // Congela altura del contenedor para evitar “jump”
+      var formCard = form.closest('.rounded-2xl') || form;
+      var h = formCard.getBoundingClientRect().height;
+      var placeholder = document.createElement('div');
+      placeholder.style.height = h + 'px';
+      formCard.parentNode.insertBefore(placeholder, formCard);
+
+      // Oculta form y coloca la vista de éxito en el MISMO lugar
+      formCard.setAttribute('inert','');
+      formCard.classList.add('hidden');
+
+      var successView = document.getElementById('success-view');
+      if (!successView) successView = buildSuccessView();
+      placeholder.replaceWith(successView);
+
+      // Normaliza zoom móvil primero
+      resetMobileZoom();
+
+      // En móvil: centra verticalmente el mensaje en la pantalla
+      var isMobile = window.matchMedia('(max-width: 768px)').matches;
+      if (isMobile) {
+        // Espera un tick de layout antes de calcular
+        setTimeout(function () {
+          var rect = successView.getBoundingClientRect();
+          var docY = window.pageYOffset || document.documentElement.scrollTop;
+          var vh   = window.innerHeight || document.documentElement.clientHeight;
+          var targetY = docY + rect.top - Math.max(0, (vh - rect.height) / 2);
+
+          // Limita dentro del documento
+          targetY = Math.max(0, Math.min(
+            targetY,
+            (document.documentElement.scrollHeight - vh)
+          ));
+
+          window.scrollTo({ top: targetY, left: 0, behavior: 'auto' });
+        }, 60);
+      } else {
+        // Desktop: permanece en la misma posición
+        window.scrollTo(0, restoreY);
+      }
+    })
+    .catch(function () {
+      show(errorB);
+    })
+    .finally(function () {
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+    });
+  }, { passive: false });
+})();
+</script>
+
 </BaseLayout>

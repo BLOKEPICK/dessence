@@ -2,144 +2,169 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const seo = {
-  title: 'About Us | D-Essence Wellness',
+  title: 'Meet the Provider | D-Essence Wellness',
   description:
-    'Modern aesthetics with clinical precision. Learn about our mission, values, and the standards that guide care at D-Essence Wellness in New Windsor, NY.',
-  canonical: '/about-us',
-  type: 'website',
+    'Get to know Yanixza Morales, Board Certified-Family Nurse Practitioner. Credentials, focus areas, and a philosophy centered on natural, safe outcomes.',
+  canonical: '/meet-the-provider',
+  type: 'profile',
   jsonLd: [
     {
       '@context': 'https://schema.org',
-      '@type': 'AboutPage',
-      name: 'About D-Essence Wellness',
-      url: 'https://dessencewellness.com/about-us'
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://dessencewellness.com/' },
-        { '@type': 'ListItem', position: 2, name: 'About Us', item: 'https://dessencewellness.com/about-us' }
-      ]
+      '@type': 'ProfilePage',
+      name: 'Meet the Provider',
+      url: 'https://dessencewellness.com/meet-the-provider',
+      mainEntity: {
+        '@type': 'Person',
+        name: 'Yanixza Morales',
+        jobTitle: 'Family Nurse Practitioner',
+        description:
+          'Board Certified-Family Nurse Practitioner providing modern, evidence-based aesthetic care.',
+        image: 'https://dessencewellness.com/Yani.webp',
+        worksFor: {
+          '@type': 'HealthAndBeautyBusiness',
+          name: 'D-Essence Wellness'
+        }
+      }
     }
   ]
 };
 ---
 
 <BaseLayout seo={seo}>
-  <!-- ===== HERO (dark) ===== -->
-  <section class="bg-neutral-950 text-white">
-    <div class="container pt-28 pb-12 max-w-4xl text-center">
-      <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight">About D-Essence Wellness</h1>
-      <p class="mt-4 text-white/80">
-        Subtle, modern aesthetics delivered with a clinical standard of care. We believe outcomes should be
-        personalized, conservative, and long-lasting—so you look like you, rested and confident.
+  <section class="bg-white text-neutral-900">
+    <div class="container pt-24 pb-12">
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        <!-- Text -->
+        <div class="lg:col-span-7">
+          <span class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-neutral-500">
+            Meet the Provider
+          </span>
+          <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">
+            Yanixza Morales, Board Certified-Family Nurse Practitioner
+          </h1>
+          <p class="mt-4 text-neutral-600 max-w-xl">
+            I approach aesthetics with medical rigor and a conservative philosophy. My goal is to protect skin health,
+            maintain harmony, and help you feel confident without looking “done.”
+          </p>
+
+          <!-- Credentials -->
+          <div class="mt-6 grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium">Credentials</div>
+              <ul class="mt-2 space-y-1 text-sm text-neutral-700">
+                <li>Board Certified – Family Nurse Practitioner</li>
+                <li>Advanced injectables &amp; cannula training</li>
+                <li>Laser safety &amp; device certifications</li>
+                <li>Clinical protocols &amp; complications management</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium">Areas of focus</div>
+              <ul class="mt-2 space-y-1 text-sm text-neutral-700">
+                <li>Natural neurotoxin dosing</li>
+                <li>Midface structure with Juvederm®</li>
+                <li>SkinPen® microneedling + PRP/PRF</li>
+                <li>Aerolase® for tone and redness</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h2 class="text-lg font-semibold">Philosophy of care</h2>
+            <p class="mt-2 text-neutral-600">
+              Less, but better. I combine detailed assessment, conservative increments, and follow-up to build results
+              that wear beautifully over time. Comfort and safety are non-negotiable.
+            </p>
+          </div>
+
+          <div class="mt-6 grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium">Continuing education</div>
+              <ul class="mt-2 space-y-1 text-sm text-neutral-700">
+                <li>Facial anatomy intensives</li>
+                <li>Advanced toxin &amp; filler techniques</li>
+                <li>Laser &amp; energy-based device workshops</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+              <div class="text-sm font-medium">Outside the clinic</div>
+              <p class="mt-2 text-sm text-neutral-700">
+                A believer in calm spaces, skincare rituals, and evidence over hype. I love helping patients feel at
+                ease and informed throughout their journey.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portrait -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-sm rounded-2xl overflow-hidden ring-1 ring-neutral-200 bg-neutral-100 shadow-sm">
+            <div class="absolute top-3 left-3 z-10">
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/90 ring-1 ring-neutral-200 text-[11px] text-neutral-700 backdrop-blur">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Board Certified-FNP
+              </span>
+            </div>
+            <div class="aspect-[3/4] w-full">
+              <img src="/Yani.webp" alt="Yanixza Morales, FNP at D-Essence Wellness" loading="lazy" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="container">
+      <div class="h-px w-full bg-gradient-to-r from-transparent via-neutral-200 to-transparent"></div>
+    </div>
+
+    <!-- ===== Our Team (2 boxes) ===== -->
+    <div class="container py-10">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Our Team</h2>
+        <!-- opcional: link a una página de equipo -->
+        <!-- <a href="/team" class="text-sm text-neutral-600 hover:text-neutral-900 underline underline-offset-4">Meet all →</a> -->
+      </div>
+
+      <div class="mt-6 grid gap-6 sm:grid-cols-2">
+        <!-- Sonja Maria -->
+        <article class="group rounded-2xl bg-white ring-1 ring-neutral-200 overflow-hidden hover:shadow-md transition">
+          <div class="aspect-[4/3] bg-neutral-100">
+            <img
+              src="/team-sonja.webp"
+              alt="Sonja Maria at D-Essence Wellness"
+              loading="lazy"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-medium tracking-tight">Sonja Maria</h3>
+            <!-- rol opcional, déjalo vacío si aún no está definido -->
+            <!-- <p class="mt-1 text-sm text-neutral-600">Licensed Aesthetician</p> -->
+          </div>
+        </article>
+
+        <!-- Karina -->
+        <article class="group rounded-2xl bg-white ring-1 ring-neutral-200 overflow-hidden hover:shadow-md transition">
+          <div class="aspect-[4/3] bg-neutral-100">
+            <img
+              src="/team-karina.webp"
+              alt="Karina at D-Essence Wellness"
+              loading="lazy"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-medium tracking-tight">Karina</h3>
+            <!-- <p class="mt-1 text-sm text-neutral-600">Patient Coordinator</p> -->
+          </div>
+        </article>
+      </div>
+
+      <!-- Nota de imágenes -->
+      <p class="mt-3 text-xs text-neutral-500">
+        *Upload team images as <code>.webp</code> to <code>/public</code>: <code>/team-sonja.webp</code> and <code>/team-karina.webp</code>.
       </p>
     </div>
   </section>
-
-  <!-- ===== CONTENT (white) ===== -->
-  <div class="bg-white text-neutral-900">
-    <!-- Mission & Values -->
-    <div class="container pb-10 pt-8">
-      <div class="grid lg:grid-cols-2 gap-8 items-start">
-        <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
-          <h2 class="text-xl font-semibold">Our mission</h2>
-          <p class="mt-3 text-neutral-600">
-            To elevate natural beauty through evidence-based treatments and thoughtful guidance—prioritizing skin
-            health, safety, and outcomes that age gracefully.
-          </p>
-        </div>
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="text-sm font-medium">Evidence-based</div>
-            <p class="mt-1 text-sm text-neutral-600">Clinical protocols, FDA-cleared devices, and medical-grade products.</p>
-          </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="text-sm font-medium">Conservative by design</div>
-            <p class="mt-1 text-sm text-neutral-600">Subtle dosing and restraint for undetectable, balanced results.</p>
-          </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="text-sm font-medium">Skin-health first</div>
-            <p class="mt-1 text-sm text-neutral-600">Plans that strengthen skin over time—texture, tone, and integrity.</p>
-          </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="text-sm font-medium">Transparent care</div>
-            <p class="mt-1 text-sm text-neutral-600">Clear expectations, aftercare, and follow-up at every step.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Clinic at a glance -->
-    <div class="container pb-12">
-      <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-6">
-        <h2 class="text-xl font-semibold">Clinic at a glance</h2>
-        <div class="mt-4 grid md:grid-cols-4 gap-6 text-sm">
-          <div>
-            <div class="text-neutral-500">Address</div>
-            <a class="mt-1 block underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700"
-               href="https://maps.app.goo.gl/N4y6tDdNHTdkEpJp8" target="_blank" rel="noopener">
-              871 Blooming Grove Turnpike Suite 102, New Windsor, NY 12553
-            </a>
-          </div>
-          <div>
-            <div class="text-neutral-500">Hours</div>
-            <ul class="mt-1 space-y-0.5">
-              <li>Mon–Thu: 10 AM–7 PM</li>
-              <li>Fri–Sat: 9 AM–6 PM</li>
-              <li>Sun: Closed</li>
-            </ul>
-          </div>
-          <div>
-            <div class="text-neutral-500">Payments</div>
-            <ul class="mt-1 space-y-0.5">
-              <li><a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="https://pay.withcherry.com/dessencewellness?utm_source=practice&utm_medium=website&m=18897" target="_blank" rel="noopener">Cherry Payments</a></li>
-              <li><a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="https://www.salonvision.com/dessencewellness/GiftCertificatePop.aspx" target="_blank" rel="noopener">Gift Certificates</a></li>
-            </ul>
-          </div>
-          <div>
-            <div class="text-neutral-500">Policies</div>
-            <ul class="mt-1 space-y-0.5">
-              <li><a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="/terms">Terms &amp; Conditions</a></li>
-              <li><a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="/privacy">Privacy Policy</a></li>
-              <li><a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="/hipaa">HIPAA</a></li>
-              <li><a class="underline decoration-neutral-300 hover:decoration-neutral-700" href="/booking-policy">Booking Policy</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- What we do (micro) -->
-    <div class="container pb-16">
-      <h2 class="text-xl font-semibold">What we do</h2>
-      <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <a href="/services/botox" class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
-          <div class="font-medium">Injectables</div>
-          <p class="mt-1 text-sm text-neutral-600">Botox®, Juvederm® Fillers, PRP/PRF, Threads.</p>
-          <div class="mt-2 text-sm underline decoration-neutral-300">Explore →</div>
-        </a>
-        <a href="/services/aerolase" class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
-          <div class="font-medium">Laser</div>
-          <p class="mt-1 text-sm text-neutral-600">Aerolase Neo Elite • Laser Hair Removal.</p>
-          <div class="mt-2 text-sm underline decoration-neutral-300">Explore →</div>
-        </a>
-        <a href="/services/microneedling" class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
-          <div class="font-medium">Advanced Skin Care</div>
-          <p class="mt-1 text-sm text-neutral-600">SkinPen®, peels, facials, acne programs.</p>
-          <div class="mt-2 text-sm underline decoration-neutral-300">Explore →</div>
-        </a>
-        <a href="/services" class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
-          <div class="font-medium">Wellness &amp; IV</div>
-          <p class="mt-1 text-sm text-neutral-600">Vitamin shots &amp; tailored infusions.</p>
-          <div class="mt-2 text-sm underline decoration-neutral-300">Explore →</div>
-        </a>
-      </div>
-
-      <div class="mt-6 text-sm text-neutral-600">
-        See client feedback on <a class="underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700" href="https://maps.app.goo.gl/N4y6tDdNHTdkEpJp8" target="_blank" rel="noopener">Google Reviews</a>.
-      </div>
-    </div>
-  </div>
 </BaseLayout>
