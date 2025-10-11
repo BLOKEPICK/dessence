@@ -4,7 +4,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 const seo = {
   title: 'Botox | D-Essence Wellness',
   description:
-    'Subtle, natural-looking softening of frown lines, crow’s feet, and forehead lines using onabotulinumtoxinA. Results in ~3–5 days, full effect at 10–14 days, lasting ~3–4 months.',
+    'Subtle, natural-looking softening of frown lines, crow’s feet, and forehead lines using onabotulinumtoxinA.',
   canonical: '/services/botox/',
   type: 'website',
   jsonLd: [
@@ -51,8 +51,14 @@ const seo = {
 ---
 
 <BaseLayout seo={seo}>
-  <!-- Preload (opcional, seguro) para mejorar LCP de la imagen principal -->
-  <link rel="preload" as="image" href="/IMG_0800.avif" imagesrcset="/IMG_0800.avif 1x, /IMG_0800.avif 2x" imagesizes="(min-width: 1024px) 480px, 64vw" />
+  <!-- Preload imagen principal (WEBP para asegurar que existe) -->
+  <link
+    rel="preload"
+    as="image"
+    href="/IMG_0800.webp"
+    imagesrcset="/IMG_0800.webp 1x, /IMG_0800.webp 2x"
+    imagesizes="(min-width: 1024px) 480px, 64vw"
+  />
 
   <!-- ===== HERO (dark) ===== -->
   <section class="bg-neutral-950 text-white">
@@ -67,12 +73,7 @@ const seo = {
         <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Neurotoxins</h1>
         <div class="mt-2 text-sm sm:text-base text-white/70">(Botox • Xeomin • Daxxify)</div>
 
-        <!-- Chips at-a-glance -->
-        <div class="mt-4 flex flex-wrap items-center justify-center gap-2 text-[12px] text-white/80">
-          <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1">3–5 days to see results</span>
-          <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1">Full effect: 10–14 days</span>
-          <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1">Lasts ~3–4 months</span>
-        </div>
+        <!-- (Chips eliminadas a solicitud) -->
 
         <div class="mt-4 h-px w-28 mx-auto bg-gradient-to-r from-transparent via-white to-transparent"></div>
       </div>
@@ -80,78 +81,63 @@ const seo = {
   </section>
 
   <!-- ===== MAIN (2 cols) ===== -->
-<section class="relative bg-white text-neutral-900">
-  <div class="container py-14 sm:py-[4.5rem]">
-    <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
-      <!-- Imagen izquierda (zoom click) -->
-      <figure class="relative">
-        <!-- Acentos suaves -->
-        <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
-        <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
+  <section class="relative bg-white text-neutral-900">
+    <div class="container py-14 sm:py-[4.5rem]">
+      <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
+        <!-- Imagen izquierda (zoom click) -->
+        <figure class="relative">
+          <!-- Acentos suaves -->
+          <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
+          <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
 
-        <picture>
-          <!-- Solo deja esta línea si REALMENTE tienes el AVIF en /public -->
-          <!-- <source srcset="/IMG_0800.avif" type="image/avif" /> -->
-          <source srcset="/IMG_0800.webp" type="image/webp" />
-          <img
-            id="ba-open"
-            src="/IMG_0800.webp"
-            alt="Neurotoxins"
-            fetchpriority="high"
-            decoding="async"
-            sizes="(min-width: 1024px) 480px, (min-width: 640px) 60vw, 92vw"
-            class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-neutral-200 shadow-2xl bg-neutral-100"
-            width="960"
-            height="1280"
-            onerror="this.onerror=null; this.src='/placeholder-service.jpg';"
-          />
-        </picture>
+          <picture>
+            <!-- Deja esta línea solo si también subes el AVIF -->
+            <!-- <source srcset="/IMG_0800.avif" type="image/avif" /> -->
+            <source srcset="/IMG_0800.webp" type="image/webp" />
+            <img
+              id="ba-open"
+              src="/IMG_0800.webp"
+              alt="Neurotoxins"
+              fetchpriority="high"
+              decoding="async"
+              sizes="(min-width: 1024px) 480px, (min-width: 640px) 60vw, 92vw"
+              class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-neutral-200 shadow-2xl bg-neutral-100"
+              width="960"
+              height="1280"
+              onerror="this.onerror=null; this.src='/placeholder-service.jpg';"
+            />
+          </picture>
 
-        <!-- Badge opcional y sutil -->
-        <span class="absolute top-3 left-3 text-[11px] rounded-full bg-black/70 text-white px-2 py-1 ring-1 ring-white/10">
-          Medical-grade • RN-Led
-        </span>
-      </figure>
+          <!-- Badge opcional y sutil -->
+          <span class="absolute top-3 left-3 text-[11px] rounded-full bg-black/70 text-white px-2 py-1 ring-1 ring-white/10">
+            Medical-grade • RN-Led
+          </span>
+        </figure>
 
-      <!-- Columna derecha: texto + CTA -->
-      <div>
-        <p class="text-neutral-700/90">
-          Refresh your look with precision and elegance. These advanced treatments gently relax facial muscles to
-          smooth lines, soften expression, and reveal a naturally youthful, radiant appearance.
-        </p>
-
-        <!-- Bullets micro, sin títulos -->
-        <ul class="mt-5 space-y-2 text-sm text-neutral-700/90">
-          <li>• Softens frown lines, forehead, crow’s feet</li>
-          <li>• Natural look; keeps your expressions</li>
-          <li>• Quick visit; minimal downtime</li>
-        </ul>
-
-        <div class="mt-8 flex items-center gap-4">
-          <a
-            href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-900/90 focus:outline-none focus:ring-2 focus:ring-neutral-300"
-            aria-label="Book a Botox appointment"
-          >
-            Book Appointment
-          </a>
-
-          <a href="/contact-us" class="text-sm text-neutral-600 hover:text-neutral-900 underline-offset-4 hover:underline">
-            Questions before booking?
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-          <!-- Disclaimer minimal -->
-          <p class="mt-10 text-xs text-neutral-500">
-            *Informational only. Personalized dosing and safety are reviewed during your consult.
+        <!-- Columna derecha: texto + CTA -->
+        <div>
+          <p class="text-neutral-700/90">
+            Refresh your look with precision and elegance. These advanced treatments gently relax facial muscles to
+            smooth lines, soften expression, and reveal a naturally youthful, radiant appearance.
           </p>
+
+          <!-- (Bullets eliminados a solicitud) -->
+
+          <div class="mt-8 flex items-center gap-4">
+            <a
+              href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-900/90 focus:outline-none focus:ring-2 focus:ring-neutral-300"
+              aria-label="Book a Botox appointment"
+            >
+              Book Appointment
+            </a>
+
+            <a href="/contact-us" class="text-sm text-neutral-600 hover:text-neutral-900 underline-offset-4 hover:underline">
+              Questions before booking?
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -171,7 +157,7 @@ const seo = {
         <p id="lb-desc" class="sr-only">Press Escape or the close button to exit.</p>
 
         <picture>
-          <source srcset="/IMG_0800.avif" type="image/avif" />
+          <!-- <source srcset="/IMG_0800.avif" type="image/avif" /> -->
           <source srcset="/IMG_0800.webp" type="image/webp" />
           <img
             src="/IMG_0800.webp"
@@ -213,7 +199,6 @@ const seo = {
 
         document.body.style.overflow = 'hidden';
         document.addEventListener('keydown', onKey);
-        // focus trap: enviar foco al botón de cerrar
         setTimeout(() => closeEl.focus(), 0);
       }
 
@@ -234,7 +219,6 @@ const seo = {
       function onKey(e) {
         if (e.key === 'Escape') hide();
         if (e.key === 'Tab') {
-          // simple focus trap: solo botón cerrar
           e.preventDefault();
           closeEl.focus();
         }
