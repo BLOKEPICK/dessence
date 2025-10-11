@@ -30,12 +30,6 @@ const jsonLd = seo?.jsonLd ?? [];
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
-    <!-- Si más adelante agregas SVG/PNG, puedes sumar:
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    -->
 
     <!-- Pro typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -108,10 +102,17 @@ const jsonLd = seo?.jsonLd ?? [];
               </div>
             </li>
 
-            <!-- Laser (sin cambios) -->
+            <!-- Laser (single link) -->
             <li role="none">
               <a href="/services/aerolase" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20" role="menuitem">
                 Laser
+              </a>
+            </li>
+
+            <!-- Therapeutic Massage (nuevo single link, fuera del submenu) -->
+            <li role="none">
+              <a href="/services/therapeutic-massage" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20" role="menuitem">
+                Therapeutic Massage
               </a>
             </li>
 
@@ -145,15 +146,15 @@ const jsonLd = seo?.jsonLd ?? [];
                 <ul class="divide-y divide-white/10">
                   <li><a href="/services/skinpen-microneedling" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Skin Pen Microneedle<span class="opacity-60">→</span></a></li>
                   <li><a href="/services/smooth-threads" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Smooth Threads<span class="opacity-60">→</span></a></li>
-                  <li><a href="/services/chemical-peels" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Chemical Peels<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/waxing-sugaring#sugaring" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Sugaring<span class="opacity-60">→</span></a></li>
                   <li><a href="/services/specialty-facials" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Signature Facials<span class="opacity-60">→</span></a></li>
-                  <li><a href="/services/waxing-sugaring" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Wax &amp; Sugaring<span class="opacity-60">→</span></a></li>
-                  <li><a href="/services/acne-programs" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">ACNE Boot Camp<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/waxing-sugaring" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Facial Waxing<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/acne-programs" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Teen Acne Facial<span class="opacity-60">→</span></a></li>
                 </ul>
               </div>
             </li>
 
-            <!-- Wellness & IV (sin cambios) -->
+            <!-- Wellness (renombrado, sin Therapeutic Massage en submenu) -->
             <li class="relative group" role="none">
               <button
                 class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
@@ -164,7 +165,7 @@ const jsonLd = seo?.jsonLd ?? [];
                 aria-controls="menu-wellness"
                 data-menu-trigger="wellness"
               >
-                Wellness &amp; IV
+                Wellness
                 <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
                 </svg>
@@ -183,12 +184,11 @@ const jsonLd = seo?.jsonLd ?? [];
                 <ul class="divide-y divide-white/10">
                   <li><a href="/services/vitamin-injections" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Vitamin Injections<span class="opacity-60">→</span></a></li>
                   <li><a href="/services/iv-therapy" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">IV Therapy<span class="opacity-60">→</span></a></li>
-                  <li><a href="/services/therapeutic-massage" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Therapeutic Massage<span class="opacity-60">→</span></a></li>
                 </ul>
               </div>
             </li>
 
-            <!-- Aesthetic Services (sin cambios) -->
+            <!-- Chemical Peel (renombrado desde Aesthetic Services) -->
             <li class="relative group" role="none">
               <button
                 class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
@@ -199,7 +199,7 @@ const jsonLd = seo?.jsonLd ?? [];
                 aria-controls="menu-aesthetics"
                 data-menu-trigger="aesthetics"
               >
-                Aesthetic Services
+                Chemical Peel
                 <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
                 </svg>
@@ -216,8 +216,8 @@ const jsonLd = seo?.jsonLd ?? [];
                           before:content-[''] before:absolute before:-top-6 before:left-0 before:right-0 before:h-6"
                    role="menu" tabindex="-1" data-menu-panel="aesthetics">
                 <ul class="divide-y divide-white/10">
-                  <li><a href="/services/waxing-sugaring" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Waxing &amp; Sugaring<span class="opacity-60">→</span></a></li>
-                  <li><a href="/services/teeth-whitening" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Teeth Whitening<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/biorepeel" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">BioRePeel<span class="opacity-60">→</span></a></li>
+                  <li><a href="/services/the-perfect-derma-peel" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">The Perfect Derma Peel<span class="opacity-60">→</span></a></li>
                 </ul>
               </div>
             </li>
@@ -289,20 +289,11 @@ const jsonLd = seo?.jsonLd ?? [];
               </div>
             </details>
 
-            <!-- Laser (móvil, sin cambios) -->
-            <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/[0.08] open:border-white/20 transition-colors">
-              <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
-                <span class="font-medium">Laser</span>
-                <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-              </summary>
-              <div class="px-2 pb-2">
-                <div class="mx-2 rounded-lg bg-white/5 ring-1 ring-white/10">
-                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/aerolase">Aerolase</a>
-                  <div class="h-px bg-white/10"></div>
-                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/laser-hair-removal">Laser Hair Removal</a>
-                </div>
-              </div>
-            </details>
+            <!-- Laser (móvil, single link) -->
+            <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5 focus:bg-white/10" href="/services/aerolase">Laser</a>
+
+            <!-- Therapeutic Massage (móvil, single link) -->
+            <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5 focus:bg-white/10" href="/services/therapeutic-massage">Therapeutic Massage</a>
 
             <!-- Skin Goals (móvil) -->
             <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/[0.08] open:border-white/20 transition-colors">
@@ -316,21 +307,21 @@ const jsonLd = seo?.jsonLd ?? [];
                   <div class="h-px bg-white/10"></div>
                   <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/smooth-threads">Smooth Threads</a>
                   <div class="h-px bg-white/10"></div>
-                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/chemical-peels">Chemical Peels</a>
+                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/waxing-sugaring#sugaring">Sugaring</a>
                   <div class="h-px bg-white/10"></div>
                   <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/specialty-facials">Signature Facials</a>
                   <div class="h-px bg-white/10"></div>
-                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/waxing-sugaring">Wax &amp; Sugaring</a>
+                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/waxing-sugaring">Facial Waxing</a>
                   <div class="h-px bg-white/10"></div>
-                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/acne-programs">ACNE Boot Camp</a>
+                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/acne-programs">Teen Acne Facial</a>
                 </div>
               </div>
             </details>
 
-            <!-- Wellness & IV (móvil, sin cambios) -->
+            <!-- Wellness (móvil, renombrado, sin Therapeutic Massage) -->
             <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/[0.08] open:border-white/20 transition-colors">
               <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
-                <span class="font-medium">Wellness &amp; IV</span>
+                <span class="font-medium">Wellness</span>
                 <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
               </summary>
               <div class="px-2 pb-2">
@@ -338,23 +329,21 @@ const jsonLd = seo?.jsonLd ?? [];
                   <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/vitamin-injections">Vitamin Injections</a>
                   <div class="h-px bg-white/10"></div>
                   <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/iv-therapy">IV Therapy</a>
-                  <div class="h-px bg-white/10"></div>
-                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/therapeutic-massage">Therapeutic Massage</a>
                 </div>
               </div>
             </details>
 
-            <!-- Aesthetic Services (móvil, sin cambios) -->
+            <!-- Chemical Peel (móvil, nuevo nombre + submenu) -->
             <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/[0.08] open:border-white/20 transition-colors">
               <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
-                <span class="font-medium">Aesthetic Services</span>
+                <span class="font-medium">Chemical Peel</span>
                 <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
               </summary>
               <div class="px-2 pb-2">
                 <div class="mx-2 rounded-lg bg-white/5 ring-1 ring-white/10">
-                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/waxing-sugaring">Waxing &amp; Sugaring</a>
+                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/biorepeel">BioRePeel</a>
                   <div class="h-px bg-white/10"></div>
-                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/teeth-whitening">Teeth Whitening</a>
+                  <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/the-perfect-derma-peel">The Perfect Derma Peel</a>
                 </div>
               </div>
             </details>
