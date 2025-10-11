@@ -53,9 +53,9 @@ const seo = {
               <div class="text-sm font-medium">Credentials</div>
               <ul class="mt-2 space-y-1 text-sm text-neutral-700">
                 <li>Board Certified – Family Nurse Practitioner</li>
-                <li>Advanced injectables & cannula training</li>
-                <li>Laser safety & device certifications</li>
-                <li>Clinical protocols & complications management</li>
+                <li>Advanced injectables &amp; cannula training</li>
+                <li>Laser safety &amp; device certifications</li>
+                <li>Clinical protocols &amp; complications management</li>
               </ul>
             </div>
             <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
@@ -82,8 +82,8 @@ const seo = {
               <div class="text-sm font-medium">Continuing education</div>
               <ul class="mt-2 space-y-1 text-sm text-neutral-700">
                 <li>Facial anatomy intensives</li>
-                <li>Advanced toxin & filler techniques</li>
-                <li>Laser & energy-based device workshops</li>
+                <li>Advanced toxin &amp; filler techniques</li>
+                <li>Laser &amp; energy-based device workshops</li>
               </ul>
             </div>
             <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
@@ -111,6 +111,60 @@ const seo = {
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="container">
+      <div class="h-px w-full bg-gradient-to-r from-transparent via-neutral-200 to-transparent"></div>
+    </div>
+
+    <!-- ===== Our Team (2 boxes) ===== -->
+    <div class="container py-10">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Our Team</h2>
+        <!-- opcional: link a una página de equipo -->
+        <!-- <a href="/team" class="text-sm text-neutral-600 hover:text-neutral-900 underline underline-offset-4">Meet all →</a> -->
+      </div>
+
+      <div class="mt-6 grid gap-6 sm:grid-cols-2">
+        <!-- Sonja Maria -->
+        <article class="group rounded-2xl bg-white ring-1 ring-neutral-200 overflow-hidden hover:shadow-md transition">
+          <div class="aspect-[4/3] bg-neutral-100">
+            <img
+              src="/team-sonja.webp"
+              alt="Sonja Maria at D-Essence Wellness"
+              loading="lazy"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-medium tracking-tight">Sonja Maria</h3>
+            <!-- rol opcional, déjalo vacío si aún no está definido -->
+            <!-- <p class="mt-1 text-sm text-neutral-600">Licensed Aesthetician</p> -->
+          </div>
+        </article>
+
+        <!-- Karina -->
+        <article class="group rounded-2xl bg-white ring-1 ring-neutral-200 overflow-hidden hover:shadow-md transition">
+          <div class="aspect-[4/3] bg-neutral-100">
+            <img
+              src="/team-karina.webp"
+              alt="Karina at D-Essence Wellness"
+              loading="lazy"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-5">
+            <h3 class="text-lg font-medium tracking-tight">Karina</h3>
+            <!-- <p class="mt-1 text-sm text-neutral-600">Patient Coordinator</p> -->
+          </div>
+        </article>
+      </div>
+
+      <!-- Nota de imágenes -->
+      <p class="mt-3 text-xs text-neutral-500">
+        *Upload team images as <code>.webp</code> to <code>/public</code>: <code>/team-sonja.webp</code> and <code>/team-karina.webp</code>.
+      </p>
     </div>
   </section>
 </BaseLayout>
