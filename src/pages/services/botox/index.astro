@@ -54,45 +54,32 @@ const seo = {
   <section class="bg-neutral-950 text-white">
     <div class="container pt-28 pb-10">
       <div class="max-w-3xl mx-auto text-center">
-        <!-- Una sola línea -->
         <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/70">
           <span>Injectables</span>
           <span class="opacity-60">•</span>
           <span>New Windsor, NY</span>
         </div>
         <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Botox</h1>
-        <!-- (Sin descripción en el hero) -->
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTENT INTRO (white, minimal, centered) ===== -->
-  <section class="bg-white text-neutral-900">
-    <div class="container py-12 sm:py-16">
-      <div class="mx-auto max-w-prose text-center">
-        <p class="text-neutral-700">
-          Botox is a refined approach to softening expression lines—targeting frown lines, crow’s feet, and forehead lines.
-          Precise, customizable dosing helps maintain natural expression while smoothing dynamic wrinkles with minimal downtime.
-        </p>
-      </div>
-    </div>
-  </section>
+  <!-- (Removed the intro description section as requested) -->
 
-  <!-- ===== BEFORE & AFTER (light, no dark background; black text) ===== -->
+  <!-- ===== BEFORE & AFTER (light, two columns always; black text) ===== -->
   <section class="relative bg-white text-neutral-900">
     <div class="container py-12 sm:py-16">
-      <!-- Igual en móvil y desktop: dos columnas siempre -->
       <div class="mx-auto max-w-6xl grid grid-cols-2 gap-6 items-center">
         <!-- Imagen izquierda (con zoom on click) -->
         <figure class="relative">
-          <!-- Acentos laterales sutiles en claro -->
+          <!-- Acentos laterales claros -->
           <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
           <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
 
           <img
             id="ba-open"
             src="/IMG_0800.webp"
-            alt="Botox before and after"
+            alt="Botox image"
             loading="eager"
             class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-neutral-200 shadow-2xl"
             width="960"
@@ -100,12 +87,11 @@ const seo = {
           />
         </figure>
 
-        <!-- Texto derecha (negro) -->
+        <!-- Texto derecha (sin título, con tu descripción) -->
         <div>
-          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Before &amp; After</h2>
-          <p class="mt-3 text-neutral-700">
-            Explore subtle yet meaningful improvements in dynamic lines with dosing tailored to your features.
-            Results typically begin in 3–5 days, with full effect around 10–14 days.
+          <p class="text-neutral-700">
+            Botox is a refined approach to softening expression lines—targeting frown lines, crow’s feet, and forehead lines.
+            Precise, customizable dosing helps maintain natural expression while smoothing dynamic wrinkles with minimal downtime.
           </p>
 
           <div class="mt-8">
