@@ -1,276 +1,93 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-
-const seo = {
-  title: 'D-Essence Wellness | Modern Aesthetics, Evidence-Based Care',
-  description:
-    'Natural refinement with medical rigor. Neurotoxins, Juvederm fillers, microneedling, Aerolase, and more—delivered with clinical-grade standards in New Windsor, NY.',
-  canonical: '/',
-  type: 'website',
-  jsonLd: [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'HealthAndBeautyBusiness',
-      name: 'D-Essence Wellness',
-      telephone: '+1-716-303-8963',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '871 Blooming Grove Turnpike Suite 102',
-        addressLocality: 'New Windsor',
-        addressRegion: 'NY',
-        postalCode: '12553',
-        addressCountry: 'US'
-      },
-      openingHoursSpecification: [
-        { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday'], opens: '10:00', closes: '19:00' },
-        { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Friday','Saturday'], opens: '09:00', closes: '18:00' }
-      ],
-      potentialAction: {
-        '@type': 'ReserveAction',
-        target: { '@type': 'EntryPoint', urlTemplate: 'https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx', inLanguage: 'en' },
-        result: { '@type': 'Reservation', name: 'Consultation Request' }
-      }
-    }
-  ]
-};
+/**
+ * src/pages/index.astro
+ * Under Construction — solo botón de appointment + redes (IG / FB)
+ * Usa Tailwind desde globals.css y no depende de BaseLayout.
+ */
+import "../styles/globals.css";
 ---
 
-<BaseLayout seo={seo}>
-  <!-- ======= PROVIDER FOCUS (al tope) ======= -->
-  <section id="meet-provider" class="bg-neutral-950 text-white">
-    <div class="container pt-28 pb-16">
-      <div class="grid lg:grid-cols-12 gap-10 items-center">
-        <!-- Texto -->
-        <div class="lg:col-span-7">
-          <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/70">
-            <span>Provider-led care</span>
-            <span class="opacity-40">•</span>
-            <span>Board-Certified</span>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>D-Essence Wellness — Under Construction</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="color-scheme" content="light" />
+  </head>
+
+  <body class="min-h-dvh bg-white text-neutral-900">
+    <main class="min-h-dvh flex items-center justify-center p-6">
+      <div class="w-full max-w-md">
+        <!-- Tarjeta centrada -->
+        <section
+          class="rounded-3xl border border-neutral-200 bg-white shadow-xl p-7 sm:p-8 text-center"
+          aria-label="Site under construction"
+        >
+          <!-- Título pequeño -->
+          <div class="text-[11px] uppercase tracking-[0.18em] text-neutral-500">
+            Under Construction
           </div>
-          <h2 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">
-            Care led by a Board-Certified Family Nurse Practitioner
-          </h2>
-          <p class="mt-4 text-white/80 max-w-xl">
-            At D-Essence, every plan starts with your goals—and ends with natural, undetectable results.
-            We pair medical-grade products with conservative dosing and clear follow-up for outcomes that look like you.
+
+          <!-- Texto -->
+          <h1 class="mt-2 text-2xl font-semibold tracking-tight">
+            We’ll be live soon
+          </h1>
+          <p class="mt-2 text-sm text-neutral-600">
+            You can still book your appointment and follow us for updates.
           </p>
 
-          <!-- Bullets -->
-          <ul class="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-3 text-sm text-white/85">
-            <li class="flex items-start gap-2">
-              <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              <span>Neurotoxins (Botox® / Xeomin® / Daxxify®)</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              <span>Juvederm® Fillers &amp; contour</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              <span>Microneedling with PRP/PRF</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="w-4 h-4 mt-[2px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              <span>Aerolase® laser &amp; Smooth Threads</span>
-            </li>
-          </ul>
-
-          <!-- CTAs (solo Book Consultation) -->
-          <div class="mt-6 flex flex-wrap gap-3">
+          <!-- Botón: Appointment -->
+          <div class="mt-5">
             <a
               href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
-              target="_blank" rel="noopener noreferrer"
-              class="inline-flex items-center justify-center rounded-full bg-white text-black px-5 py-2.5 text-[13px] sm:text-base sm:h-11 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20">
-              Book Consultation
+              target="_blank"
+              rel="noopener"
+              class="inline-flex w-full items-center justify-center rounded-full border border-neutral-900 bg-neutral-900 px-5 py-3 text-sm font-medium text-white hover:bg-neutral-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400"
+            >
+              Book Appointment
             </a>
           </div>
-        </div>
 
-        <!-- Foto (badge debajo) -->
-<div class="lg:col-span-5">
-  <figure class="relative mx-auto max-w-sm md:max-w-none">
-    <div class="rounded-2xl overflow-hidden ring-1 ring-white/10 bg-white/5 shadow-sm">
-      <div class="aspect-[3/4] w-full">
-        <img
-          src="/Cover.webp"
-          alt="Yanixza Morales, Board Certified-Family Nurse Practitioner at D-Essence Wellness"
-          loading="lazy"
-          class="w-full h-full object-cover" />
-      </div>
-    </div>
-
-    <!-- Etiqueta movida debajo de la imagen -->
-    <figcaption class="mt-3 flex justify-start">
-      <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/90 ring-1 ring-neutral-200 text-[11px] text-neutral-700 backdrop-blur">
-        <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-        Yanixza Morales, Board Certified-Family Nurse Practitioner
-      </span>
-    </figcaption>
-  </figure>
-</div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ZONA BLANCA ===== -->
-  <div class="bg-white text-neutral-900">
-
-    <!-- ===== WHY CHOOSE (contenido actualizado) ===== -->
-    <section id="why-choose" class="py-14 sm:py-16">
-      <div class="container">
-        <div class="max-w-3xl mx-auto text-center">
-          <span class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-neutral-500">
-            Our principles
-          </span>
-          <h2 class="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight">Why patients choose D-Essence Wellness</h2>
-          <div class="mt-4 h-px w-24 mx-auto bg-gradient-to-r from-transparent via-neutral-900 to-transparent"></div>
-          <p class="mt-4 text-neutral-600">
-            Patients choose D-Essence Wellness for our commitment to safety, evidence-based treatments, and meticulous attention to detail that delivers trusted, natural results.
-          </p>
-        </div>
-
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Clinical Excellence -->
-          <div class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-6 hover:shadow-sm transition">
-            <div class="flex items-start gap-4">
-              <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700">
-                <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 3l7 3v5.5c0 4.2-2.9 8-7 9-4.1-1-7-4.8-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/>
-                </svg>
-              </span>
-              <div>
-                <h3 class="font-semibold tracking-tight">Clinical Excellence</h3>
-                <p class="mt-2 text-sm text-neutral-600">Evidence-based treatments and FDA-cleared technology.</p>
-                <ul class="mt-3 space-y-1.5 text-sm text-neutral-700">
-                  <li class="flex gap-2"><svg class="h-4 w-4 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Medical-grade products and precise protocols</li>
-                  <li class="flex gap-2"><svg class="h-4 w-4 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Informed care, safety, and follow-up at every visit</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Natural, Refined Results -->
-          <div class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-6 hover:shadow-sm transition">
-            <div class="flex items-start gap-4">
-              <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700">
-                <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 3l2.2 4.8L19 10l-4.8 2.2L12 19l-2.2-4.8L5 10l4.8-2.2L12 3z"/>
-                </svg>
-              </span>
-              <div>
-                <h3 class="font-semibold tracking-tight">Natural, Refined Results</h3>
-                <p class="mt-2 text-sm text-neutral-600">We enhance your features — never overdo them.</p>
-                <ul class="mt-3 space-y-1.5 text-sm text-neutral-700">
-                  <li class="flex gap-2"><svg class="h-4 w-4 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Conservative techniques for harmony and balance</li>
-                  <li class="flex gap-2"><svg class="h-4 w-4 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Skin health and confidence come first</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Personalized & Transparent -->
-          <div class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-6 hover:shadow-sm transition">
-            <div class="flex items-start gap-4">
-              <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700">
-                <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="2"/><circle cx="15" cy="17" r="2"/>
-                </svg>
-              </span>
-              <div>
-                <h3 class="font-semibold tracking-tight">Personalized &amp; Transparent</h3>
-                <p class="mt-2 text-sm text-neutral-600">Your goals, your comfort, your results.</p>
-                <ul class="mt-3 space-y-1.5 text-sm text-neutral-700">
-                  <li class="flex gap-2"><svg class="h-4 w-4 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>We listen carefully and tailor every treatment</li>
-                  <li class="flex gap-2"><svg class="h-4 w-4 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Clear expectations and honest recommendations</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Safety & Comfort -->
-          <div class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-6 hover:shadow-sm transition">
-            <div class="flex items-start gap-4">
-              <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-100 ring-1 ring-neutral-200 text-neutral-700">
-                <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M12 21s-7.5-4.5-9-9c-1.1-3.4 1-6 4-6 2 0 3.2 1.1 5 3 1.8-1.9 3-3 5-3 3 0 5.1 2.6 4 6-1.5 4.5-9 9-9 9z"/>
-                </svg>
-              </span>
-              <div>
-                <h3 class="font-semibold tracking-tight">Safety &amp; Comfort</h3>
-                <p class="mt-2 text-sm text-neutral-600">Professional care in a welcoming environment.</p>
-                <ul class="mt-3 space-y-1.5 text-sm text-neutral-700">
-                  <li class="flex gap-2"><svg class="h-4 w-4 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Gentle, thorough techniques for all skin tones</li>
-                  <li class="flex gap-2"><svg class="h-4 w-4 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Emergency readiness and post-care support</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Trust bar -->
-        <div class="mt-8 flex flex-wrap items-center justify-center gap-2">
-          <span class="text-xs rounded-full bg-white ring-1 ring-neutral-200 px-3 py-1 text-neutral-700">HIPAA-aligned privacy</span>
-          <span class="text-xs rounded-full bg-white ring-1 ring-neutral-200 px-3 py-1 text-neutral-700">FDA-cleared devices</span>
-          <span class="text-xs rounded-full bg-white ring-1 ring-neutral-200 px-3 py-1 text-neutral-700">All skin tones (I–VI)</span>
-          <span class="text-xs rounded-full bg-white ring-1 ring-neutral-200 px-3 py-1 text-neutral-700">Post-care follow-up</span>
-        </div>
-
-        <!-- CTAs (quitado "Our Approach") -->
-        <div class="mt-10 flex justify-center gap-3">
-          <a href="/meet-the-provider" class="inline-flex items-center justify-center rounded-full bg-neutral-900 text-white px-5 py-2.5 hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">Meet the Provider</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== REVIEWS ===== -->
-    <section id="testimonials" class="py-14 sm:py-16">
-      <div class="container grid md:grid-cols-2 gap-10 items-start">
-        <div class="space-y-5">
-          <h2 class="text-3xl font-semibold tracking-tight">What clients say</h2>
-          <p class="text-neutral-600">
-            Thoughtful care, natural outcomes, and clear guidance at every step. Our clients appreciate the precision and comfort of their experience.
-          </p>
-          <div class="flex items-center gap-3">
-            <div class="inline-flex items-center gap-2 rounded-full ring-1 ring-neutral-200 px-3 py-1.5 bg-white">
-              <svg aria-hidden="true" viewBox="0 0 48 48" class="w-4 h-4">
-                <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.8 32.6 29.4 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.7 6.1 29.7 4 24 4 16.1 4 9.3 8.6 6.3 14.7z"/>
-                <path fill="#FF3D00" d="M6.3 14.7l6.6 4.9C14.5 16.6 18.9 12 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.7 6.1 29.7 4 24 4 16.1 4 9.3 8.6 6.3 14.7z"/>
-                <path fill="#4CAF50" d="M24 44c5.3 0 10.2-2 13.8-5.2l-6.4-5.4C29.3 34.5 26.8 36 24 36c-5.3 0-9.7-3.4-11.3-8.1l-6.5 5C9.2 39.6 16 44 24 44z"/>
-                <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-1.3 3.7-4.7 6-8.3 6-2.3 0-4.4-.8-6-2.1l-6.5 5C17.4 40.6 20.5 42 24 42c10 0 19-7.3 19-20 0-1.3-.1-2.7-.4-3.5z"/>
+          <!-- Redes: Instagram / Facebook -->
+          <div class="mt-5 flex items-center justify-center gap-3">
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/d_essencewellness/"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-200 bg-white text-neutral-700 hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300"
+            >
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6ZM18 6.7a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/>
               </svg>
-              <span class="text-xs uppercase tracking-wide text-neutral-700">Google reviews</span>
-            </div>
-            <a href="https://maps.app.goo.gl/N4y6tDdNHTdkEpJp8" target="_blank" rel="nofollow noopener" class="text-sm underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-700">View on Google</a>
+            </a>
+
+            <!-- Facebook -->
+            <a
+              href="https://www.facebook.com/profile.php?id=100093851335127"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-200 bg-white text-neutral-700 hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300"
+            >
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                <path d="M13.5 22v-8h2.6l.4-3h-3v-1.9c0-.9.3-1.5 1.6-1.5h1.5V4.1c-.8-.1-1.7-.1-2.5-.1-2.4 0-4 .9-4 3.7V11H7v3h2.1v8h4.4Z"/>
+              </svg>
+            </a>
           </div>
-          <p class="text-xs text-neutral-500">Reviews shown here are from Google. <a href="https://maps.app.goo.gl/N4y6tDdNHTdkEpJp8" target="_blank" rel="nofollow noopener" class="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-700">View on Google</a>.</p>
-        </div>
+        </section>
 
-        <div class="grid gap-4">
-          <figure class="rounded-2xl p-6 ring-1 ring-neutral-200 bg-white">
-            <div class="flex items-center gap-2 text-amber-500" aria-hidden="true"><span>★★★★★</span></div>
-            <blockquote class="mt-3 text-sm leading-relaxed text-neutral-800">“Natural results—I still look like me, just brighter. She explained every step and made me feel at ease.”</blockquote>
-            <figcaption class="mt-3 text-xs text-neutral-500">— M.R. • <a href="https://maps.app.goo.gl/N4y6tDdNHTdkEpJp8" target="_blank" rel="nofollow noopener" class="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-700">View on Google</a></figcaption>
-          </figure>
-
-          <figure class="rounded-2xl p-6 ring-1 ring-neutral-200 bg-white">
-            <div class="flex items-center gap-2 text-amber-500" aria-hidden="true"><span>★★★★★</span></div>
-            <blockquote class="mt-3 text-sm leading-relaxed text-neutral-800">“So professional and gentle. I appreciated the clear plan and realistic expectations.”</blockquote>
-            <figcaption class="mt-3 text-xs text-neutral-500">— A.L. • <a href="https://maps.app.goo.gl/N4y6tDdNHTdkEpJp8" target="_blank" rel="nofollow noopener" class="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-700">View on Google</a></figcaption>
-          </figure>
-
-          <figure class="rounded-2xl p-6 ring-1 ring-neutral-200 bg-white">
-            <div class="flex items-center gap-2 text-amber-500" aria-hidden="true"><span>★★★★★</span></div>
-            <blockquote class="mt-3 text-sm leading-relaxed text-neutral-800">“Beautiful, subtle outcome and a really calm, caring environment. Highly recommend.”</blockquote>
-            <figcaption class="mt-3 text-xs text-neutral-500">— J.S. • <a href="https://maps.app.goo.gl/N4y6tDdNHTdkEpJp8" target="_blank" rel="nofollow noopener" class="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-700">View on Google</a></figcaption>
-          </figure>
-        </div>
+        <!-- Nota legal sutil (opcional, se puede borrar si no la quieres) -->
+        <p class="mt-4 text-center text-xs text-neutral-500">
+          © {new Date().getFullYear()} D-Essence Wellness. All rights reserved.
+        </p>
       </div>
-    </section>
-
-    <!-- Faja blanca para cubrir el gap antes del footer -->
-    <section aria-hidden="true" class="bg-white h-16 -mb-16"></section>
-  </div>
-</BaseLayout>
+    </main>
+  </body>
+</html>
