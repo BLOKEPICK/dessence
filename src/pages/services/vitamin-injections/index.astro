@@ -4,7 +4,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 const seo = {
   title: 'Vitamin Injections | D-Essence Wellness',
   description:
-    'Targeted B12, B complex, vitamin C, and custom nutrient shots to support energy, immune health, and overall wellness—administered by trained professionals.',
+    'Customized vitamin injections to boost energy, strengthen immunity, and support overall wellness. Options include Glutathione, MIC + B12, Lipo-Stat, Tri-Immune Boost, Riposte Plus, B12 Boost, and Vita Complex.',
   canonical: '/services/vitamin-injections/',
   type: 'website',
   jsonLd: [
@@ -12,12 +12,14 @@ const seo = {
       '@context': 'https://schema.org',
       '@type': 'Service',
       name: 'Vitamin Injections',
-      serviceType: 'Wellness & IV',
-      areaServed: 'New Windsor, New York',
-      url: 'https://dessencewellness.com/services/vitamin-injections/',
+      serviceType: 'Wellness Injection Therapy',
+      description:
+        'Targeted intramuscular vitamin injections for energy, immunity, recovery, and skin clarity.',
+      areaServed: 'Hudson Valley, NY',
       provider: {
-        '@type': 'MedicalBusiness',
+        '@type': 'HealthAndBeautyBusiness',
         name: 'D-Essence Wellness',
+        telephone: '+1-716-303-8963',
         address: {
           '@type': 'PostalAddress',
           streetAddress: '871 Blooming Grove Turnpike Suite 102',
@@ -26,259 +28,236 @@ const seo = {
           postalCode: '12553',
           addressCountry: 'US'
         }
-      }
+      },
+      url: 'https://dessencewellness.com/services/vitamin-injections/'
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
+        { '@type': 'ListItem', position: 2, name: 'Vitamin Injections', item: 'https://dessencewellness.com/services/vitamin-injections/' }
+      ]
     }
   ]
 };
 ---
 
 <BaseLayout seo={seo}>
+  <!-- Preload shared image (placeholder; replace later) -->
+  <link
+    rel="preload"
+    as="image"
+    href="/IMG_0800.webp"
+    imagesrcset="/IMG_0800.webp 1x, /IMG_0800.webp 2x"
+    imagesizes="(min-width: 1024px) 480px, 64vw"
+  />
+
   <!-- ===== HERO (dark) ===== -->
   <section class="bg-neutral-950 text-white">
-    <div class="container pt-28 pb-10 max-w-3xl">
-      <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/60">
-        <span>Services</span><span class="opacity-40">•</span><span>Wellness & IV</span>
-      </div>
-      <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Vitamin Injections</h1>
-      <p class="mt-4 text-white/80">
-        Quick, targeted nutrient shots—such as B12, B complex, vitamin C, and custom blends—designed to support energy,
-        wellness, and skin health. These therapies complement a balanced diet and medical care when needed.
-      </p>
+    <div class="container pt-28 pb-12">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/70">
+          <span>Wellness</span>
+          <span class="opacity-60">•</span>
+          <span>New Windsor, NY</span>
+        </div>
 
-      <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Delivery</div>
-          <div class="mt-0.5 font-medium">IM / subcutaneous</div>
-        </div>
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Session time</div>
-          <div class="mt-0.5 font-medium">Minutes</div>
-        </div>
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Downtime</div>
-          <div class="mt-0.5 font-medium">None</div>
-        </div>
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Best for</div>
-          <div class="mt-0.5 font-medium">Targeted support</div>
-        </div>
+        <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Vitamin Injections</h1>
+        <div class="mt-4 h-px w-28 mx-auto bg-gradient-to-r from-transparent via-white to-transparent"></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTENT (white) ===== -->
-  <section class="bg-white text-neutral-900">
-    <div class="container py-12 sm:py-14">
+  <!-- ===== MAIN (2 cols) ===== -->
+  <section class="relative bg-white text-neutral-900">
+    <div class="container py-14 sm:py-[4.5rem]">
+      <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
+        <!-- Image (placeholder; replace later) -->
+        <figure class="relative">
+          <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
+          <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
 
-      <!-- Overview -->
-      <div class="grid lg:grid-cols-12 gap-8 items-start">
-        <div class="lg:col-span-7">
-          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Overview</h2>
-          <p class="mt-3 text-neutral-700">
-            Vitamin injections deliver select nutrients directly into muscle (or subcutaneously) to bypass digestion
-            and raise blood levels more rapidly than typical oral supplements. Common options include B12, B complex,
-            vitamin C, and custom “boost” blends. These are supportive therapies—not a replacement for a healthy diet
-            or medical treatment when a true deficiency or condition exists.
+          <picture>
+            <!-- <source srcset="/IMG_0800.avif" type="image/avif" /> -->
+            <source srcset="/IMG_0800.webp" type="image/webp" />
+            <img
+              id="ba-open"
+              src="/IMG_0800.webp"
+              alt="Vitamin injections at D-Essence Wellness"
+              fetchpriority="high"
+              decoding="async"
+              sizes="(min-width: 1024px) 480px, (min-width: 640px) 60vw, 92vw"
+              class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-neutral-200 shadow-2xl bg-neutral-100"
+              width="960"
+              height="1280"
+              onerror="this.onerror=null; this.src='/placeholder-service.jpg';"
+            />
+          </picture>
+        </figure>
+
+        <!-- Copy + CTAs -->
+        <div>
+          <p class="text-neutral-700/90">
+            Boost your energy, strengthen your immune system, and support overall wellness with customized vitamin injections.
+            Each formulation is designed to deliver essential nutrients directly into the muscle for faster absorption and lasting results.
           </p>
-        </div>
-        <div class="lg:col-span-5">
-          <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6">
-            <h3 class="text-lg font-medium">Potential benefits</h3>
-            <ul class="mt-3 grid grid-cols-1 gap-2 text-sm text-neutral-700">
+
+          <!-- Available injections -->
+          <div class="mt-6 rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+            <h2 class="text-lg font-medium">Available Injections</h2>
+            <ul class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-neutral-800">
               {[
-                'Higher bioavailability than oral forms in some cases',
-                'Energy support and fatigue reduction when deficiency is present (e.g., B12)',
-                'Immune and antioxidant support (e.g., vitamin C)',
-                'Skin-supportive blends for glow and complexion',
-                'Personalized formulations under clinical oversight'
-              ].map(item => (
+                ['Glutathione', 'A potent antioxidant that helps brighten skin, detoxify the body, and protect against cellular damage.'],
+                ['MIC + B12', 'Supports metabolism, energy, and focus while aiding fat conversion.'],
+                ['Lipo-Stat', 'Targeted blend to enhance fat metabolism, boost energy, and promote liver health.'],
+                ['Tri-Immune Boost', 'Vitamin C, zinc, and glutathione to strengthen defense and support healing.'],
+                ['Riposte Plus', 'Formulated to improve recovery, reduce inflammation, and support immunity under stress.'],
+                ['B12 Boost', 'Improves stamina, focus, and mood; supports healthy red blood cell production.'],
+                ['Vita Complex', 'Comprehensive B-vitamin mix for energy, metabolism, and healthy cell function.']
+              ].map(([name, desc]) => (
                 <li class="inline-flex items-start gap-2">
-                  <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                  <span>{item}</span>
+                  <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  <span><span class="font-medium">{name}</span> — {desc}</span>
                 </li>
               ))}
             </ul>
-            <p class="mt-3 text-xs text-neutral-500">
-              Note: In individuals with normal vitamin levels, benefits may be modest or not clinically significant.
-              Your provider will help determine appropriate options.
-            </p>
           </div>
-        </div>
-      </div>
 
-      <!-- What to expect -->
-      <div class="mt-12 grid lg:grid-cols-12 gap-8 items-start">
-        <div class="lg:col-span-5">
-          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">What to expect</h2>
-          <p class="mt-3 text-neutral-700">
-            We begin with a brief intake to review health history, medications, and goals. When indicated, lab work
-            (such as B12 levels) may be recommended to confirm deficiency before starting a series.
-          </p>
-        </div>
-        <div class="lg:col-span-7">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">During your visit</div>
-              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-                <li>Clean, aseptic technique at the injection site</li>
-                <li>IM or subcutaneous injection; mild pressure or brief sting</li>
-                <li>Appointment time is typically just a few minutes</li>
-              </ul>
-            </div>
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">Immediate feel</div>
-              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-                <li>Most return to normal activity right away</li>
-                <li>Some notice a same-day or next-day lift—especially with deficiency</li>
-                <li>Effects vary if baseline levels are already normal</li>
-              </ul>
+          <!-- Benefits -->
+          <div class="mt-6 grid sm:grid-cols-2 gap-4">
+            {[
+              ['Boosts energy & metabolism', 'Feel more focused and energized throughout your day.'],
+              ['Strengthens immune defense', 'Backed by nutrients that support your natural defenses.'],
+              ['Supports recovery & balance', 'Helpful during stress, training, or busy seasons.'],
+              ['Promotes skin clarity & detox', 'Antioxidant support for glow and cellular protection.']
+            ].map(([title, text]) => (
+              <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
+                <div class="text-sm font-medium text-neutral-900">{title}</div>
+                <p class="mt-2 text-sm text-neutral-700">{text}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Details -->
+          <div class="mt-6 grid gap-3 text-sm text-neutral-800">
+            <div><span class="font-medium text-neutral-900">Treatment time:</span> Quick and convenient — usually under 10 minutes.</div>
+            <div>
+              <span class="font-medium text-neutral-900">Safety:</span> All injections are administered by licensed medical professionals using sterile technique and
+              premium ingredients from trusted compounding pharmacies. Each treatment is customized to your wellness goals.
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Popular options -->
-      <div class="mt-12">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Popular options</h2>
-        <div class="mt-4 grid md:grid-cols-3 gap-4">
-          {[
-            {
-              name: 'B12',
-              items: ['Energy support when deficient', 'Nervous system and red blood cell support', 'Often part of weekly or monthly plans']
-            },
-            {
-              name: 'B complex',
-              items: ['Blend of key B vitamins', 'Supports metabolism and cellular energy', 'Pairs well with lifestyle changes']
-            },
-            {
-              name: 'Vitamin C',
-              items: ['Antioxidant and immune support', 'Skin-brightening synergy in some plans', 'Typically used in cycles']
-            }
-          ].map(card => (
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="font-medium text-neutral-900">{card.name}</div>
-              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-                {card.items.map(i => <li>{i}</li>)}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <p class="mt-3 text-xs text-neutral-500">
-          Custom “boost” blends can be created based on goals and medical suitability.
-        </p>
-      </div>
+          <div class="mt-8 flex items-center gap-4">
+            <a
+              href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-900/90 focus:outline-none focus:ring-2 focus:ring-neutral-300"
+              aria-label="Book a Vitamin Injections appointment"
+            >
+              Book Appointment
+            </a>
 
-      <!-- Aftercare -->
-      <div class="mt-12">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Aftercare</h2>
-        <div class="mt-4 grid md:grid-cols-2 gap-4">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <ul class="text-sm text-neutral-700 space-y-2">
-              <li>Keep the site clean; avoid vigorous rubbing or massage.</li>
-              <li>Use a cool compress for local redness or tenderness if needed.</li>
-              <li>Stay hydrated and maintain balanced nutrition.</li>
-            </ul>
+            <a href="/contact-us" class="text-sm text-neutral-600 hover:text-neutral-900 underline-offset-4 hover:underline">
+              Questions before booking?
+            </a>
           </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <ul class="text-sm text-neutral-700 space-y-2">
-              <li>Report warmth, significant redness, drainage, or persistent pain.</li>
-              <li>Avoid strenuous upper-body exercise for a few hours if sore.</li>
-              <li>Follow repeat-visit timing as advised by your provider.</li>
-            </ul>
-          </div>
+
+          <p class="mt-6 text-sm text-neutral-500">Targeted nourishment. Real energy. Inner balance.</p>
         </div>
       </div>
+    </div>
 
-      <!-- Safety -->
-      <div class="mt-12">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Safety & precautions</h2>
-        <div class="mt-4 grid md:grid-cols-2 gap-4 text-sm text-neutral-700">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="font-medium text-neutral-900">Common, mild effects</div>
-            <ul class="mt-2 space-y-1.5">
-              <li>Temporary site soreness, redness, or small bruise</li>
-              <li>Occasional itching or warmth at the site</li>
-              <li>GI upset or loose stools (rare with certain vitamins)</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="font-medium text-neutral-900">Less common, more serious</div>
-            <ul class="mt-2 space-y-1.5">
-              <li>Allergic reaction—seek urgent care for swelling or breathing issues</li>
-              <li>Infection at the injection site (very uncommon with sterile technique)</li>
-              <li>Vitamin-specific risks at high doses or with kidney/liver disease</li>
-            </ul>
-          </div>
-        </div>
-        <div class="mt-4 rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-5 text-sm text-neutral-700">
-          <div class="font-medium text-neutral-900">Important precautions</div>
-          <ul class="mt-2 list-disc list-inside space-y-1.5">
-            <li>Not advised with known hypersensitivity to components.</li>
-            <li>Discuss kidney/liver conditions, pregnancy, or lactation with your provider.</li>
-            <li>Review all medications and supplements for potential interactions.</li>
-            <li>Clinical assessment is recommended to confirm deficiency and proper dosing.</li>
-          </ul>
-        </div>
+    <!-- Lightbox / Zoom -->
+    <div
+      id="ba-lightbox"
+      class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-150"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lb-title"
+      aria-describedby="lb-desc"
+    >
+      <div class="absolute inset-0 bg-black/80"></div>
+      <div class="relative h-full w-full flex items-center justify-center p-4">
+        <h2 id="lb-title" class="sr-only">Zoomed image</h2>
+        <p id="lb-desc" class="sr-only">Press Escape or the close button to exit.</p>
+
+        <picture>
+          <!-- <source srcset="/IMG_0800.avif" type="image/avif" /> -->
+          <source srcset="/IMG_0800.webp" type="image/webp" />
+          <img
+            src="/IMG_0800.webp"
+            alt="Zoomed illustrative image for Vitamin Injections"
+            class="max-h-[90vh] max-w-[92vw] rounded-2xl ring-1 ring-white/20 shadow-2xl"
+          />
+        </picture>
+
+        <button
+          id="ba-close"
+          class="absolute top-4 right-4 inline-flex items-center justify-center rounded-full bg-white/90 text-neutral-900 h-10 w-10 hover:bg-white focus:outline-none focus:ring-2 focus:ring-white/50"
+          aria-label="Close image"
+          title="Close"
+        >
+          ✕
+        </button>
       </div>
-
-      <!-- FAQ -->
-      <div class="mt-12">
-        <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">FAQ</h2>
-        <div class="mt-6 grid gap-4">
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">How often should I get shots?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              Frequency varies by formula, baseline levels, and goals. Plans may be weekly, biweekly, or monthly—set by your provider.
-            </p>
-          </details>
-
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">Will I feel an instant energy boost?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              If you’re deficient, you may notice improvement within hours to a day. If levels are normal, effects may be subtle or not noticeable.
-            </p>
-          </details>
-
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">Are shots better than oral supplements?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              In malabsorption or documented deficiency, injections can be preferable. Otherwise, differences versus oral forms may be limited.
-            </p>
-          </details>
-
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">Do vitamin shots help with weight loss?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              They are not a stand-alone weight loss therapy. Addressing deficiency can support energy, but results depend on overall lifestyle and medical factors.
-            </p>
-          </details>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="mt-12">
-        <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6 flex items-center justify-between gap-4">
-          <div class="text-sm text-neutral-700">
-            Interested in a personalized vitamin shot plan?
-          </div>
-          <a href="/contact-us/" class="inline-flex items-center rounded-full bg-neutral-900 text-white px-5 py-2.5 text-sm hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">
-            Contact Us
-          </a>
-        </div>
-      </div>
-
     </div>
   </section>
+
+  <!-- Lightbox script -->
+  <script is:inline>
+    (() => {
+      const openEl = document.getElementById('ba-open');
+      const lightbox = document.getElementById('ba-lightbox');
+      const closeEl = document.getElementById('ba-close');
+
+      if (!openEl || !lightbox || !closeEl) return;
+
+      let lastFocused = null;
+
+      function show() {
+        lastFocused = document.activeElement;
+        lightbox.classList.remove('hidden');
+        requestAnimationFrame(() => {
+          lightbox.classList.remove('opacity-0');
+          lightbox.classList.add('opacity-100');
+        });
+
+        document.body.style.overflow = 'hidden';
+        document.addEventListener('keydown', onKey);
+        setTimeout(() => closeEl.focus(), 0);
+      }
+
+      function hide() {
+        lightbox.classList.add('opacity-0');
+        lightbox.classList.remove('opacity-100');
+        setTimeout(() => {
+          lightbox.classList.add('hidden');
+        }, 150);
+
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', onKey);
+        if (lastFocused && typeof lastFocused.focus === 'function') {
+          lastFocused.focus();
+        }
+      }
+
+      function onKey(e) {
+        if (e.key === 'Escape') hide();
+        if (e.key === 'Tab') {
+          e.preventDefault();
+          closeEl.focus();
+        }
+      }
+
+      openEl.addEventListener('click', show);
+      closeEl.addEventListener('click', hide);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) hide();
+      });
+    })();
+  </script>
 </BaseLayout>
