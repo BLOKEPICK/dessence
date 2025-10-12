@@ -5,14 +5,14 @@ const seo = {
   title: 'Signature Facials | D-Essence Wellness',
   description:
     'Customized facials using Circadia®, Face Reality®, and SkinMedica® for balanced, hydrated, radiant skin: Seasonal Enzyme, Classic, Hydrospa, Dermaplane, Oxygen, Teen, and Firming Peptide.',
-  canonical: '/services/specialty-facials/',
+  canonical: '/services/signature-facials/',
   type: 'website',
   jsonLd: [
     {
       '@context': 'https://schema.org',
       '@type': 'Service',
       name: 'Signature Facials',
-      serviceType: 'Facial Treatment',
+      serviceType: 'Signature Facials',
       description:
         'Customized facials using Circadia®, Face Reality®, and SkinMedica® to cleanse, exfoliate, hydrate, and brighten for healthy, radiant skin.',
       areaServed: 'Hudson Valley, NY',
@@ -29,14 +29,14 @@ const seo = {
           addressCountry: 'US'
         }
       },
-      url: 'https://dessencewellness.com/services/specialty-facials/'
+      url: 'https://dessencewellness.com/services/signature-facials/'
     },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
-        { '@type': 'ListItem', position: 2, name: 'Signature Facials', item: 'https://dessencewellness.com/services/specialty-facials/' }
+        { '@type': 'ListItem', position: 2, name: 'Signature Facials', item: 'https://dessencewellness.com/services/services/signature-facials/' }
       ]
     }
   ]
@@ -48,8 +48,8 @@ const seo = {
   <link
     rel="preload"
     as="image"
-    href="/IMG_0800.webp"
-    imagesrcset="/IMG_0800.webp 1x, /IMG_0800.webp 2x"
+    href="/Signature_Facials.webp"
+    imagesrcset="/Signature_Facials.webp 1x, /Signature_Facials.webp 2x"
     imagesizes="(min-width: 1024px) 480px, 64vw"
   />
 
@@ -84,7 +84,7 @@ const seo = {
             <img
               id="ba-open"
               src="/Signature_Facials.webp"
-              alt="Signature facial treatments at D-Essence Wellness"
+              alt="Signature Signature Facials at D-Essence Wellness"
               fetchpriority="high"
               decoding="async"
               sizes="(min-width: 1024px) 480px, (min-width: 640px) 60vw, 92vw"
@@ -96,7 +96,7 @@ const seo = {
           </picture>
         </figure>
 
-        <!-- Copy + CTAs -->
+        <!-- Copy + CTA (sin cuadros) -->
         <div>
           <p class="text-neutral-700/90">
             At D-Essence Wellness, every facial is customized to your skin’s needs using advanced formulations from
@@ -104,52 +104,19 @@ const seo = {
             <span class="font-medium">SkinMedica®</span> to deliver balanced, hydrated, and radiant results.
           </p>
 
-          <!-- Menu of Facials -->
-          <div class="mt-6 grid gap-4">
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">Circadia Seasonal Enzyme Facial</div>
-              <p class="mt-1 text-sm text-neutral-700">Gentle enzyme exfoliation with seasonal blends like Pumpkin, Cranberry, or Cocoa to brighten and refresh.</p>
-            </div>
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">Classic Facial</div>
-              <p class="mt-1 text-sm text-neutral-700">Deep cleanse, exfoliation, and hydration—ideal for all skin types.</p>
-            </div>
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">Hydrospa Facial</div>
-              <p class="mt-1 text-sm text-neutral-700">Deeply cleanses, exfoliates, and hydrates using hydro-technology for a fresh, healthy glow.</p>
-            </div>
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">Dermaplane Facial</div>
-              <p class="mt-1 text-sm text-neutral-700">Gently removes dead skin and peach fuzz to reveal a smoother surface and enhance product absorption.</p>
-            </div>
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">Oxygen Facial</div>
-              <p class="mt-1 text-sm text-neutral-700">Infuses oxygen and essential nutrients for instant brightness, hydration, and bounce.</p>
-            </div>
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">Teen Facial (Face Reality®)</div>
-              <p class="mt-1 text-sm text-neutral-700">Clears, calms, and educates acne-prone teen skin for long-term clarity and confidence.</p>
-            </div>
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">Firming Peptide Facial (Circadia®)</div>
-              <p class="mt-1 text-sm text-neutral-700">Peptide-powered technology visibly firms, smooths, and revitalizes tired or aging skin.</p>
-            </div>
+          <!-- Facials as paragraphs with bold subheads -->
+          <div class="mt-6 space-y-4 text-sm sm:text-base text-neutral-700">
+            <p><span class="font-medium text-neutral-900">Circadia Seasonal Enzyme Facial.</span> Gentle enzyme exfoliation with seasonal blends like Pumpkin, Cranberry, or Cocoa to brighten and refresh.</p>
+            <p><span class="font-medium text-neutral-900">Classic Facial.</span> Deep cleanse, exfoliation, and hydration—ideal for all skin types.</p>
+            <p><span class="font-medium text-neutral-900">Hydrospa Facial.</span> Deeply cleanses, exfoliates, and hydrates using hydro-technology for a fresh, healthy glow.</p>
+            <p><span class="font-medium text-neutral-900">Dermaplane Facial.</span> Gently removes dead skin and peach fuzz to reveal a smoother surface and enhance product absorption.</p>
+            <p><span class="font-medium text-neutral-900">Oxygen Facial.</span> Infuses oxygen and essential nutrients for instant brightness, hydration, and bounce.</p>
+            <p><span class="font-medium text-neutral-900">Teen Facial (Face Reality®).</span> Clears, calms, and educates acne-prone teen skin for long-term clarity and confidence.</p>
+            <p><span class="font-medium text-neutral-900">Firming Peptide Facial (Circadia®).</span> Peptide-powered technology visibly firms, smooths, and revitalizes tired or aging skin.</p>
           </div>
 
-          <!-- Quick facts -->
-          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-            <div class="rounded-xl bg-white ring-1 ring-neutral-200 p-4">
-              <div class="text-neutral-600">Session length</div>
-              <div class="mt-0.5 font-medium">~45–75 minutes</div>
-            </div>
-            <div class="rounded-xl bg-white ring-1 ring-neutral-200 p-4">
-              <div class="text-neutral-600">Skin types</div>
-              <div class="mt-0.5 font-medium">All; tailored to sensitivity & goals</div>
-            </div>
-          </div>
-
-          <!-- CTAs -->
-          <div class="mt-8 flex items-center gap-4">
+          <!-- CTA (solo botón) -->
+          <div class="mt-8">
             <a
               href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
               target="_blank"
@@ -158,10 +125,6 @@ const seo = {
               aria-label="Book a Signature Facial"
             >
               Book Appointment
-            </a>
-
-            <a href="/contact-us" class="text-sm text-neutral-600 hover:text-neutral-900 underline-offset-4 hover:underline">
-              Questions before booking?
             </a>
           </div>
         </div>
@@ -183,11 +146,11 @@ const seo = {
         <p id="lb-desc" class="sr-only">Press Escape or the close button to exit.</p>
 
         <picture>
-          <!-- <source srcset="/IMG_0800.avif" type="image/avif" /> -->
-          <source srcset="/IMG_0800.webp" type="image/webp" />
+          <!-- <source srcset="/Signature_Facials.avif" type="image/avif" /> -->
+          <source srcset="/Signature_Facials.webp" type="image/webp" />
           <img
-            src="/IMG_0800.webp"
-            alt="Zoomed image for signature facial treatments"
+            src="/Signature_Facials.webp"
+            alt="Zoomed image for signature Signature Facials"
             class="max-h-[90vh] max-w-[92vw] rounded-2xl ring-1 ring-white/20 shadow-2xl"
           />
         </picture>
