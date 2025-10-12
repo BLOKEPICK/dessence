@@ -83,7 +83,7 @@ const jsonLd = seo?.jsonLd ?? [];
               </button>
 
               <div id="menu-injectables"
-                   class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[90vw] sm:w-[520px]
+                   class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w=[90vw] sm:w-[520px]
                           rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1
                           max-h-[70vh] overflow-auto
                           opacity-0 translate-y-1 pointer-events-none
@@ -264,7 +264,7 @@ const jsonLd = seo?.jsonLd ?? [];
         <nav class="flex-1 overflow-auto py-2">
           <div class="px-2 space-y-2">
             <!-- Cosmetic Injectables (móvil) -->
-            <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/[0.08] open:border-white/20 transition-colors">
+            <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/5 open:border-white/20 transition-colors">
               <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
                 <span class="font-medium">Cosmetic Injectables</span>
                 <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
@@ -285,10 +285,10 @@ const jsonLd = seo?.jsonLd ?? [];
             </details>
 
             <!-- Laser (móvil, single link) -->
-            <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5 focus:bg-white/10" href="/services/aerolase">Laser</a>
+            <a class="block px-4 py-3 rounded-xl border border-white/10 bg-white/5 hover:bg-white/5 focus:bg-white/10" href="/services/aerolase">Laser</a>
 
             <!-- Skin Goals (móvil) -->
-            <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/[0.08] open:border-white/20 transition-colors">
+            <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/5 open:border-white/20 transition-colors">
               <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
                 <span class="font-medium">Skin Goals</span>
                 <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
@@ -311,7 +311,7 @@ const jsonLd = seo?.jsonLd ?? [];
             </details>
 
             <!-- Wellness (móvil) -->
-            <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/[0.08] open:border-white/20 transition-colors">
+            <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/5 open:border-white/20 transition-colors">
               <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
                 <span class="font-medium">Wellness</span>
                 <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor">
@@ -331,7 +331,7 @@ const jsonLd = seo?.jsonLd ?? [];
             </details>
 
             <!-- Chemical Peel (móvil, nuevo nombre + submenu) -->
-            <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/[0.08] open:border-white/20 transition-colors">
+            <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/5 open:border-white/20 transition-colors">
               <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
                 <span class="font-medium">Chemical Peel</span>
                 <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
@@ -346,8 +346,8 @@ const jsonLd = seo?.jsonLd ?? [];
             </details>
 
             <!-- Enlaces simples -->
-            <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5 focus:bg-white/10" href="/about-us">About Us</a>
-            <a class="block px-4 py-3 rounded-xl border border-white/10 hover:bg-white/5 focus:bg-white/10" href="/contact-us">Contact Us</a>
+            <a class="block px-4 py-3 rounded-xl border border-white/10 bg-white/5 hover:bg-white/5 focus:bg-white/10" href="/about-us">About Us</a>
+            <a class="block px-4 py-3 rounded-xl border border-white/10 bg-white/5 hover:bg-white/5 focus:bg-white/10" href="/contact-us">Contact Us</a>
           </div>
 
           <!-- Separador degradado + logo -->
@@ -365,7 +365,7 @@ const jsonLd = seo?.jsonLd ?? [];
     <!-- ===== MAIN SLOT ===== -->
     <main><slot /></main>
 
-        <!-- ===== FOOTER (sin CTA superior y sin línea encima) ===== -->
+    <!-- ===== FOOTER (sin CTA superior y sin línea encima) ===== -->
     <footer class="mt-24 bg-black/50">
       <div class="container mx-auto px-4">
         <!-- Middle: brand + columns -->
@@ -468,7 +468,6 @@ const jsonLd = seo?.jsonLd ?? [];
         </div>
       </div>
     </footer>
-
 
     <!-- ===== SCRIPTS ===== -->
     <script is:inline>
