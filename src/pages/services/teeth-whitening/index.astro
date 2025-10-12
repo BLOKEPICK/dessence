@@ -4,7 +4,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 const seo = {
   title: 'Teeth Whitening | D-Essence Wellness',
   description:
-    'Professional teeth whitening to brighten your smile. Learn how it works, benefits, what to expect, aftercare, and safety.',
+    'In-office teeth whitening with professional-grade gel and LED activation to lift stains from coffee, tea, wine, and daily habits. Gentle, fast, and designed to minimize sensitivity.',
   canonical: '/services/teeth-whitening/',
   type: 'website',
   jsonLd: [
@@ -12,12 +12,14 @@ const seo = {
       '@context': 'https://schema.org',
       '@type': 'Service',
       name: 'Teeth Whitening',
-      serviceType: 'Cosmetic Treatment',
-      areaServed: 'New Windsor, New York',
-      url: 'https://dessencewellness.com/services/teeth-whitening/',
+      serviceType: 'Teeth Whitening',
+      description:
+        'In-office teeth whitening using professional-grade gel activated by LED light to safely and effectively brighten your smile.',
+      areaServed: 'Hudson Valley, NY',
       provider: {
-        '@type': 'MedicalBusiness',
+        '@type': 'HealthAndBeautyBusiness',
         name: 'D-Essence Wellness',
+        telephone: '+1-716-303-8963',
         address: {
           '@type': 'PostalAddress',
           streetAddress: '871 Blooming Grove Turnpike Suite 102',
@@ -26,252 +28,201 @@ const seo = {
           postalCode: '12553',
           addressCountry: 'US'
         }
-      }
+      },
+      url: 'https://dessencewellness.com/services/teeth-whitening/'
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Services', item: 'https://dessencewellness.com/services/' },
+        { '@type': 'ListItem', position: 2, name: 'Teeth Whitening', item: 'https://dessencewellness.com/services/teeth-whitening/' }
+      ]
     }
   ]
 };
 ---
 
 <BaseLayout seo={seo}>
+  <!-- Preload image -->
+  <link
+    rel="preload"
+    as="image"
+    href="/Teeth_Whitening.webp"
+    imagesrcset="/Teeth_Whitening.webp 1x, /Teeth_Whitening.webp 2x"
+    imagesizes="(min-width: 1024px) 480px, 64vw"
+  />
+
   <!-- ===== HERO (dark) ===== -->
   <section class="bg-neutral-950 text-white">
-    <div class="container pt-28 pb-10 max-w-3xl">
-      <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/60">
-        <span>Services</span><span class="opacity-40">•</span><span>Advanced Skin Care</span>
-      </div>
-      <h1 class="mt-2 text-4xl sm:text-5xl font-semibold tracking-tight">Teeth Whitening</h1>
-      <p class="mt-4 text-white/80">
-        Brighten and refresh your smile with professional whitening. We use evidence-based protocols to safely
-        reduce surface and internal discoloration for a noticeably whiter appearance.
-      </p>
+    <div class="container pt-28 pb-12">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-white/70">
+          <span>Aesthetic Care</span>
+          <span class="opacity-60">•</span>
+          <span>New Windsor, NY</span>
+        </div>
 
-      <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Good for</div>
-          <div class="mt-0.5 font-medium">Stains & discoloration</div>
-        </div>
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Session time</div>
-          <div class="mt-0.5 font-medium">45–90 minutes</div>
-        </div>
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Downtime</div>
-          <div class="mt-0.5 font-medium">Minimal</div>
-        </div>
-        <div class="rounded-xl bg-white/5 ring-1 ring-white/10 p-3">
-          <div class="text-white/70">Longevity</div>
-          <div class="mt-0.5 font-medium">Months to years*</div>
-        </div>
-      </div>
-      <div class="mt-2 text-xs text-white/60">
-        *Results vary with habits (coffee, tea, wine, tobacco) and oral care.
+        <h1 class="mt-2 class:text-4xl sm:text-5xl font-semibold tracking-tight">Teeth Whitening</h1>
+        <div class="mt-4 h-px w-28 mx-auto bg-gradient-to-r from-transparent via-white to-transparent"></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTENT (white) ===== -->
-  <section class="bg-white text-neutral-900">
-    <div class="container py-12 sm:py-14">
+  <!-- ===== MAIN (2 cols) ===== -->
+  <section class="relative bg-white text-neutral-900">
+    <div class="container py-14 sm:py-[4.5rem]">
+      <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
+        <!-- Image -->
+        <figure class="relative">
+          <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
+          <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
 
-      <!-- Overview -->
-      <div class="grid lg:grid-cols-12 gap-8 items-start">
-        <div class="lg:col-span-7">
-          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Overview</h2>
-          <p class="mt-3 text-neutral-700">
-            Teeth whitening lightens the shade of natural teeth by breaking down stain molecules within enamel and
-            dentin using peroxide-based gels (hydrogen peroxide or carbamide peroxide). It is effective for many
-            extrinsic stains (coffee, tea, wine, tobacco) and some intrinsic discolorations.
+          <picture>
+            <!-- <source srcset="/Teeth_Whitening.avif" type="image/avif" /> -->
+            <source srcset="/Teeth_Whitening.webp" type="image/webp" />
+            <img
+              id="ba-open"
+              src="/Teeth_Whitening.webp"
+              alt="In-office teeth whitening at D-Essence Wellness"
+              fetchpriority="high"
+              decoding="async"
+              sizes="(min-width: 1024px) 480px, (min-width: 640px) 60vw, 92vw"
+              class="cursor-zoom-in mx-auto w-full max-w-[12rem] sm:max-w-[16rem] md:max-w-[22rem] lg:max-w-[26rem] h-auto rounded-2xl ring-1 ring-neutral-200 shadow-2xl bg-neutral-100"
+              width="960"
+              height="1280"
+              onerror="this.onerror=null; this.src='/placeholder-service.jpg';"
+            />
+          </picture>
+        </figure>
+
+        <!-- Copy + CTA -->
+        <div>
+          <p class="text-neutral-700/90">
+            Brighten your smile safely and effectively with our <span class="font-medium">In-Office Teeth Whitening</span> treatment.
+            Using a professional-grade whitening gel activated by LED light technology, this treatment helps lift surface stains and
+            discoloration caused by coffee, tea, wine, and everyday habits.
           </p>
-          <p class="mt-3 text-neutral-700">
-            Whitening does not change the color of existing dental work (crowns, veneers, fillings), so shade
-            differences may appear between natural teeth and restorations. Touch-ups help maintain results over time.
+
+          <p class="mt-3 text-neutral-700/90">
+            In just one visit, you’ll notice your teeth appear visibly whiter and more radiant. The process is gentle, fast, and
+            designed to minimize sensitivity while protecting your enamel.
           </p>
-        </div>
-        <div class="lg:col-span-5">
-          <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6">
-            <h3 class="text-lg font-medium">Who it’s for</h3>
-            <ul class="mt-3 grid grid-cols-1 gap-2 text-sm text-neutral-700">
-              {[
-                'Adults seeking a brighter smile for events or everyday confidence',
-                'Clients with yellow or brown staining from foods, drinks, or tobacco',
-                'Those who prefer supervised, predictable results vs. over-the-counter kits'
-              ].map(item => (
-                <li class="inline-flex items-start gap-2">
-                  <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
 
-      <!-- Benefits -->
-      <div class="mt-12">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Benefits</h2>
-        <div class="mt-4 grid md:grid-cols-2 gap-4">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <ul class="text-sm text-neutral-700 space-y-2">
-              <li>Noticeably whiter teeth and a brighter smile.</li>
-              <li>Faster, more controlled results with in-office care.</li>
-              <li>Custom options: in-office, take-home trays, or a combined plan.</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <ul class="text-sm text-neutral-700 space-y-2">
-              <li>Adaptable to different levels and types of discoloration.</li>
-              <li>Confidence boost from a cleaner, more luminous look.</li>
-              <li>Education and maintenance strategies to preserve results.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Methods / What to expect -->
-      <div class="mt-12 grid lg:grid-cols-12 gap-8 items-start">
-        <div class="lg:col-span-5">
-          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Methods & what to expect</h2>
-          <p class="mt-3 text-neutral-700">
-            We begin with a brief oral health screen and shade assessment. Based on your goals and sensitivity,
-            we’ll recommend in-office whitening, custom take-home trays, or a blended approach for best longevity.
+          <p class="mt-3 text-neutral-700/90">
+            While results are immediate, they are not permanent—as daily foods, drinks, and lifestyle habits can gradually cause
+            new stains to appear. With good oral hygiene and periodic touch-ups, you can maintain your brighter smile for months.
           </p>
-        </div>
-        <div class="lg:col-span-7">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">In-office whitening</div>
-              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-                <li>Higher-strength gels for quicker, more dramatic change.</li>
-                <li>Gum barriers protect soft tissues during treatment.</li>
-                <li>Session time ~45–90 minutes; immediate shade lift.</li>
-              </ul>
-            </div>
-            <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-              <div class="text-sm font-medium text-neutral-900">Custom take-home trays</div>
-              <ul class="mt-2 text-sm text-neutral-700 space-y-1.5">
-                <li>Lab-made trays fit your teeth for even gel contact.</li>
-                <li>Controlled use over days to weeks; flexible schedule.</li>
-                <li>Great for maintenance after in-office results.</li>
-              </ul>
-            </div>
+
+          <!-- Details (bold subtopics, no cards) -->
+          <div class="mt-6 grid gap-3 text-sm text-neutral-800">
+            <div><span class="font-medium text-neutral-900">Treatment time:</span> approximately 45–60 minutes.</div>
+            <div><span class="font-medium text-neutral-900">Recommended:</span> every 6–12 months for lasting results.</div>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-8 flex items-center gap-4">
+            <a
+              href="https://na02.patientnow.com/a/dessencewellness/OnlineBooking.aspx"
+              target="_blank"
+              rel="noopener"
+              class="inline-flex items-center rounded-full bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-800 active:bg-neutral-900/90 focus:outline-none focus:ring-2 focus:ring-neutral-300"
+              aria-label="Book a Teeth Whitening appointment"
+            >
+              Book Appointment
+            </a>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Aftercare -->
-      <div class="mt-12">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Aftercare</h2>
-        <div class="mt-4 grid md:grid-cols-2 gap-4">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <ul class="text-sm text-neutral-700 space-y-2">
-              <li>Avoid dark foods/drinks for 24–48 hours (coffee, red wine, berries, sauces).</li>
-              <li>Skip tobacco products during the early rehydration period.</li>
-              <li>Use sensitive-teeth toothpaste if needed; brush gently.</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <ul class="text-sm text-neutral-700 space-y-2">
-              <li>Limit abrasive products immediately after whitening.</li>
-              <li>Schedule touch-ups or tray use as advised.</li>
-              <li>Maintain excellent oral hygiene to prolong your results.</li>
-            </ul>
-          </div>
-        </div>
+    <!-- Lightbox / Zoom -->
+    <div
+      id="ba-lightbox"
+      class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-150"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lb-title"
+      aria-describedby="lb-desc"
+    >
+      <div class="absolute inset-0 bg-black/80"></div>
+      <div class="relative h-full w-full flex items-center justify-center p-4">
+        <h2 id="lb-title" class="sr-only">Zoomed image</h2>
+        <p id="lb-desc" class="sr-only">Press Escape or the close button to exit.</p>
+
+        <picture>
+          <!-- <source srcset="/Teeth_Whitening.avif" type="image/avif" /> -->
+          <source srcset="/Teeth_Whitening.webp" type="image/webp" />
+          <img
+            src="/Teeth_Whitening.webp"
+            alt="Zoomed illustrative image for Teeth Whitening"
+            class="max-h-[90vh] max-w-[92vw] rounded-2xl ring-1 ring-white/20 shadow-2xl"
+          />
+        </picture>
+
+        <button
+          id="ba-close"
+          class="absolute top-4 right-4 inline-flex items-center justify-center rounded-full bg-white/90 text-neutral-900 h-10 w-10 hover:bg-white focus:outline-none focus:ring-2 focus:ring-white/50"
+          aria-label="Close image"
+          title="Close"
+        >
+          ✕
+        </button>
       </div>
-
-      <!-- Safety -->
-      <div class="mt-12">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Safety & important notes</h2>
-        <div class="mt-4 grid md:grid-cols-3 gap-4 text-sm text-neutral-700">
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="font-medium text-neutral-900">Common, expected</div>
-            <ul class="mt-2 space-y-1.5">
-              <li>Temporary tooth sensitivity to cold/heat</li>
-              <li>Mild gum irritation if gel contacts tissue</li>
-              <li>Occasional uneven shade with deep stains</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="font-medium text-neutral-900">Limitations & risks</div>
-            <ul class="mt-2 space-y-1.5">
-              <li>Does not change color of crowns, veneers, or fillings</li>
-              <li>Overuse can harm enamel—avoid excessive repetition</li>
-              <li>Not ideal with active decay, gum disease, or severe sensitivity</li>
-            </ul>
-          </div>
-          <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <div class="font-medium text-neutral-900">Who should avoid</div>
-            <ul class="mt-2 space-y-1.5">
-              <li>Active dental issues (untreated cavities, infections)</li>
-              <li>Pregnancy or breastfeeding (precautionary)</li>
-              <li>Minors with developing dentition</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ -->
-      <div class="mt-12">
-        <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">FAQ</h2>
-        <div class="mt-6 grid gap-4">
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">How long do results last?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              With good habits and periodic maintenance, results may last many months to years. Stain-heavy diets,
-              tobacco, and limited oral care will shorten longevity.
-            </p>
-          </details>
-
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">Will it make my crowns or fillings whiter?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              No—dental restorations do not whiten, which can create shade differences. We’ll discuss options if
-              visible restorations are present.
-            </p>
-          </details>
-
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">Is sensitivity guaranteed?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              Not always. If you’re prone to sensitivity, we’ll tailor formulas and timing, and recommend desensitizing
-              products before/after treatment.
-            </p>
-          </details>
-
-          <details class="group rounded-xl bg-white ring-1 ring-neutral-200 p-5">
-            <summary class="list-none cursor-pointer flex items-center justify-between">
-              <span class="font-medium text-neutral-900">In-office vs. take-home—what’s better?</span>
-              <svg class="w-5 h-5 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z"/></svg>
-            </summary>
-            <p class="mt-3 text-neutral-700 text-sm">
-              In-office whitening is quickest and most controlled; custom trays are flexible and ideal for maintenance.
-              Many clients choose a combination for best durability.
-            </p>
-          </details>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <div class="mt-12">
-        <div class="rounded-2xl bg-neutral-50 ring-1 ring-neutral-200 p-6 flex items-center justify-between gap-4">
-          <div class="text-sm text-neutral-700">
-            Ready to brighten your smile? We’ll build a whitening plan that matches your teeth, goals, and sensitivity.
-          </div>
-          <a href="/contact-us/" class="inline-flex items-center rounded-full bg-neutral-900 text-white px-5 py-2.5 text-sm hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-300">
-            Contact Us
-          </a>
-        </div>
-      </div>
-
     </div>
   </section>
+
+  <!-- Lightbox script -->
+  <script is:inline>
+    (() => {
+      const openEl = document.getElementById('ba-open');
+      const lightbox = document.getElementById('ba-lightbox');
+      const closeEl = document.getElementById('ba-close');
+
+      if (!openEl || !lightbox || !closeEl) return;
+
+      let lastFocused = null;
+
+      function show() {
+        lastFocused = document.activeElement;
+        lightbox.classList.remove('hidden');
+        requestAnimationFrame(() => {
+          lightbox.classList.remove('opacity-0');
+          lightbox.classList.add('opacity-100');
+        });
+
+        document.body.style.overflow = 'hidden';
+        document.addEventListener('keydown', onKey);
+        setTimeout(() => closeEl.focus(), 0);
+      }
+
+      function hide() {
+        lightbox.classList.add('opacity-0');
+        lightbox.classList.remove('opacity-100');
+        setTimeout(() => {
+          lightbox.classList.add('hidden');
+        }, 150);
+
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', onKey);
+        if (lastFocused && typeof lastFocused.focus === 'function') {
+          lastFocused.focus();
+        }
+      }
+
+      function onKey(e) {
+        if (e.key === 'Escape') hide();
+        if (e.key === 'Tab') {
+          e.preventDefault();
+          closeEl.focus();
+        }
+      }
+
+      openEl.addEventListener('click', show);
+      closeEl.addEventListener('click', hide);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) hide();
+      });
+    })();
+  </script>
 </BaseLayout>
