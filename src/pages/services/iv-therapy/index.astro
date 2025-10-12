@@ -104,46 +104,29 @@ const seo = {
             and lasting wellness benefits.
           </p>
 
-          <!-- Popular Options -->
-          <div class="mt-6 rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <h2 class="text-lg font-medium">Popular Options</h2>
-            <ul class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-neutral-800">
-              {[
-                ['Super Immune Boost (Myers Cocktail)', 'Restorative blend to strengthen immunity and replenish nutrients—with double vitamin C for extra protection.'],
-                ['Restoration Drip', 'Rehydrates and revitalizes after travel, stress, or overexertion to help restore balance and energy.'],
-                ['Amino & Multivitamin Infusion', 'Comprehensive amino acids + vitamins to support muscle recovery, hydration, and overall vitality.'],
-                ['Wellness Recharge', 'Balanced electrolytes, antioxidants, and nutrients to refresh and maintain daily wellness.']
-              ].map(([name, desc]) => (
-                <li class="inline-flex items-start gap-2">
-                  <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none">
-                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                  <span><span class="font-medium">{name}</span> — {desc}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <!-- Popular Options (sin cuadros; lista simple con bold) -->
+          <p class="mt-6 text-neutral-900 font-medium">Popular Options</p>
+          <ul class="mt-2 list-disc pl-5 text-sm text-neutral-800 space-y-2">
+            <li><span class="font-medium">Super Immune Boost (Myers Cocktail):</span> restorative blend that strengthens immunity and replenishes nutrients—with double vitamin C for extra protection.</li>
+            <li><span class="font-medium">Restoration Drip:</span> rehydrates and revitalizes after travel, stress, or overexertion to help restore balance and energy.</li>
+            <li><span class="font-medium">Amino &amp; Multivitamin Infusion:</span> comprehensive amino acids + vitamins to support muscle recovery, hydration, and overall vitality.</li>
+            <li><span class="font-medium">Wellness Recharge:</span> balanced electrolytes, antioxidants, and nutrients to refresh and maintain daily wellness.</li>
+          </ul>
 
-          <!-- Benefits -->
-          <div class="mt-6 grid sm:grid-cols-2 gap-4">
-            {[
-              ['Boosts hydration & energy', 'Rapid repletion for clarity and stamina.'],
-              ['Strengthens immune function', 'Targeted nutrients to support defense.'],
-              ['Promotes recovery & balance', 'Helpful post-travel, training, or illness.'],
-              ['Supports skin & overall wellness', 'Hydration and antioxidants for a healthy glow.']
-            ].map(([title, text]) => (
-              <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-                <div class="text-sm font-medium text-neutral-900">{title}</div>
-                <p class="mt-2 text-sm text-neutral-700">{text}</p>
-              </div>
-            ))}
-          </div>
+          <!-- Benefits (sin tarjetas; lista simple) -->
+          <p class="mt-6 text-neutral-900 font-medium">Benefits</p>
+          <ul class="mt-2 list-disc pl-5 text-sm text-neutral-800 space-y-2">
+            <li>Boosts hydration and energy for clarity and stamina.</li>
+            <li>Strengthens immune function with targeted nutrients.</li>
+            <li>Promotes recovery and balance post-travel, training, or illness.</li>
+            <li>Supports skin health and overall wellness.</li>
+          </ul>
 
-          <!-- Details -->
+          <!-- Details (párrafos con subtemas en bold) -->
           <div class="mt-6 grid gap-3 text-sm text-neutral-800">
             <div><span class="font-medium text-neutral-900">Treatment time:</span> 30–45 minutes.</div>
             <div>
-              <span class="font-medium text-neutral-900">Safety:</span> All infusions are performed by licensed medical professionals
+              <span class="font-medium text-neutral-900">Safety:</span> all infusions are performed by licensed medical professionals
               in a sterile environment using high-quality ingredients from trusted pharmacies. Each formula is customized to your needs for
               safe, effective, lasting results.
             </div>
@@ -159,13 +142,7 @@ const seo = {
             >
               Book Appointment
             </a>
-
-            <a href="/contact-us" class="text-sm text-neutral-600 hover:text-neutral-900 underline-offset-4 hover:underline">
-              Questions before booking?
-            </a>
           </div>
-
-          <p class="mt-6 text-sm text-neutral-500">Hydrate. Restore. Thrive.</p>
         </div>
       </div>
     </div>

@@ -103,50 +103,33 @@ const seo = {
             Each formulation is designed to deliver essential nutrients directly into the muscle for faster absorption and lasting results.
           </p>
 
-          <!-- Available injections -->
-          <div class="mt-6 rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-            <h2 class="text-lg font-medium">Available Injections</h2>
-            <ul class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-neutral-800">
-              {[
-                ['Glutathione', 'A potent antioxidant that helps brighten skin, detoxify the body, and protect against cellular damage.'],
-                ['MIC + B12', 'Supports metabolism, energy, and focus while aiding fat conversion.'],
-                ['Lipo-Stat', 'Targeted blend to enhance fat metabolism, boost energy, and promote liver health.'],
-                ['Tri-Immune Boost', 'Vitamin C, zinc, and glutathione to strengthen defense and support healing.'],
-                ['Riposte Plus', 'Formulated to improve recovery, reduce inflammation, and support immunity under stress.'],
-                ['B12 Boost', 'Improves stamina, focus, and mood; supports healthy red blood cell production.'],
-                ['Vita Complex', 'Comprehensive B-vitamin mix for energy, metabolism, and healthy cell function.']
-              ].map(([name, desc]) => (
-                <li class="inline-flex items-start gap-2">
-                  <svg class="w-4 h-4 mt-0.5" viewBox="0 0 24 24" fill="none">
-                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                  <span><span class="font-medium">{name}</span> — {desc}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <!-- Available injections (sin cuadros; lista simple con bold) -->
+          <p class="mt-6 text-neutral-900 font-medium">Available Injections</p>
+          <ul class="mt-2 list-disc pl-5 text-sm text-neutral-800 space-y-2">
+            <li><span class="font-medium">Glutathione:</span> potent antioxidant that supports detoxification and brighter-looking skin.</li>
+            <li><span class="font-medium">MIC + B12:</span> aids fat metabolism while supporting energy and focus.</li>
+            <li><span class="font-medium">Lipo-Stat:</span> targeted blend to enhance fat metabolism, energy, and liver support.</li>
+            <li><span class="font-medium">Tri-Immune Boost:</span> Vitamin C, zinc, and glutathione to reinforce immune defense and recovery.</li>
+            <li><span class="font-medium">Riposte Plus:</span> formulated to improve recovery, reduce inflammation, and support immunity under stress.</li>
+            <li><span class="font-medium">B12 Boost:</span> supports stamina, focus, mood, and healthy red blood cell production.</li>
+            <li><span class="font-medium">Vita Complex:</span> comprehensive B-vitamin mix for energy, metabolism, and cellular health.</li>
+          </ul>
 
-          <!-- Benefits -->
-          <div class="mt-6 grid sm:grid-cols-2 gap-4">
-            {[
-              ['Boosts energy & metabolism', 'Feel more focused and energized throughout your day.'],
-              ['Strengthens immune defense', 'Backed by nutrients that support your natural defenses.'],
-              ['Supports recovery & balance', 'Helpful during stress, training, or busy seasons.'],
-              ['Promotes skin clarity & detox', 'Antioxidant support for glow and cellular protection.']
-            ].map(([title, text]) => (
-              <div class="rounded-2xl bg-white ring-1 ring-neutral-200 p-5">
-                <div class="text-sm font-medium text-neutral-900">{title}</div>
-                <p class="mt-2 text-sm text-neutral-700">{text}</p>
-              </div>
-            ))}
-          </div>
+          <!-- Benefits (sin tarjetas; lista simple) -->
+          <p class="mt-6 text-neutral-900 font-medium">Benefits</p>
+          <ul class="mt-2 list-disc pl-5 text-sm text-neutral-800 space-y-2">
+            <li>Boosts energy and metabolism for improved daily focus.</li>
+            <li>Strengthens immune defense with evidence-guided nutrients.</li>
+            <li>Supports recovery and balance during stress or training.</li>
+            <li>Promotes skin clarity with antioxidant support.</li>
+          </ul>
 
-          <!-- Details -->
+          <!-- Details (párrafos con subtemas en bold) -->
           <div class="mt-6 grid gap-3 text-sm text-neutral-800">
-            <div><span class="font-medium text-neutral-900">Treatment time:</span> Quick and convenient — usually under 10 minutes.</div>
+            <div><span class="font-medium text-neutral-900">Treatment time:</span> quick and convenient—usually under 10 minutes.</div>
             <div>
-              <span class="font-medium text-neutral-900">Safety:</span> All injections are administered by licensed medical professionals using sterile technique and
-              premium ingredients from trusted compounding pharmacies. Each treatment is customized to your wellness goals.
+              <span class="font-medium text-neutral-900">Safety:</span> administered by licensed medical professionals using sterile technique
+              and premium ingredients from trusted compounding pharmacies. Each treatment is customized to your wellness goals.
             </div>
           </div>
 
@@ -160,13 +143,7 @@ const seo = {
             >
               Book Appointment
             </a>
-
-            <a href="/contact-us" class="text-sm text-neutral-600 hover:text-neutral-900 underline-offset-4 hover:underline">
-              Questions before booking?
-            </a>
           </div>
-
-          <p class="mt-6 text-sm text-neutral-500">Targeted nourishment. Real energy. Inner balance.</p>
         </div>
       </div>
     </div>
