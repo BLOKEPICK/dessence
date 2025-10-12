@@ -109,13 +109,6 @@ const jsonLd = seo?.jsonLd ?? [];
               </a>
             </li>
 
-            <!-- Therapeutic Massage (nuevo single link, fuera del submenu) -->
-            <li role="none">
-              <a href="/services/therapeutic-massage" class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20" role="menuitem">
-                Therapeutic Massage
-              </a>
-            </li>
-
             <!-- Skin Goals -->
             <li class="relative group" role="none">
               <button
@@ -153,23 +146,6 @@ const jsonLd = seo?.jsonLd ?? [];
                 </ul>
               </div>
             </li>
-
-            <!-- Wellness (renombrado, sin Therapeutic Massage en submenu) -->
-            <li class="relative group" role="none">
-              <button
-                class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
-                type="button"
-                role="menuitem"
-                aria-haspopup="true"
-                aria-expanded="false"
-                aria-controls="menu-wellness"
-                data-menu-trigger="wellness"
-              >
-                Wellness
-                <svg class="ml-1 w-4 h-4 opacity-70" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M5.8 7.3a1 1 0 011.4 0L10 10.1l2.8-2.8a1 1 0 111.4 1.4l-3.5 3.5a1 1 0 01-1.4 0L5.8 8.7a1 1 0 010-1.4z" clip-rule="evenodd" />
-                </svg>
-              </button>
 
               <div id="menu-wellness"
                    class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[90vw] sm:w-[420px]
