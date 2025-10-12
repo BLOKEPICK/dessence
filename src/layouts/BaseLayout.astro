@@ -366,108 +366,119 @@ const jsonLd = seo?.jsonLd ?? [];
     <main><slot /></main>
 
     <!-- ===== FOOTER (sin CTA superior y sin línea encima) ===== -->
-    <footer class="mt-24 bg-black/50">
-      <div class="container mx-auto px-4">
-        <!-- Middle: brand + columns -->
-        <section class="py-10">
-          <div class="grid gap-10 md:grid-cols-4">
-            <!-- Brand & socials -->
-            <div>
-              <div class="text-white font-semibold tracking-[0.06em] text-lg">
-                D-Essence <span class="text-white/70 font-medium">Wellness</span>
-              </div>
-              <p class="mt-3 text-sm text-neutral-400 max-w-xs">
-                Evidence-based care to enhance your natural confidence.
-              </p>
+<footer class="mt-24 bg-black/50">
+  <div class="container mx-auto px-4">
+    <!-- Middle: brand + columns -->
+    <section class="py-10">
+      <div class="grid gap-10 md:grid-cols-4">
+        <!-- Brand & socials -->
+        <div>
+          <!-- Logo (reemplazo del texto D-Essence Wellness) -->
+          <a href="/" class="inline-block" aria-label="D-Essence Wellness">
+            <img
+              src="/LOGO.webp"
+              alt="D-Essence Wellness"
+              class="h-10 w-auto select-none pointer-events-none"
+              width="180"
+              height="40"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
 
-              <!-- Address (smart maps link) -->
-              <div class="mt-4 text-sm text-neutral-300">
-                <a
-                  id="map-link"
-                  class="hover:underline"
-                  href="https://www.google.com/maps/search/?api=1&query=871%20Blooming%20Grove%20Turnpike%20suite%20102%2C%20New%20Windsor%2C%20NY%2012553"
-                  target="_blank" rel="noopener"
-                >
-                  871 Blooming Grove Turnpike suite 102, New Windsor, NY 12553
-                </a>
-              </div>
+          <p class="mt-3 text-sm text-neutral-400 max-w-xs">
+            Evidence-based care to enhance your natural confidence.
+          </p>
 
-              <!-- Hours -->
-              <div class="mt-4 text-sm text-neutral-300">
-                <div class="font-medium text-white/90">Hours</div>
-                <ul class="mt-2 space-y-1">
-                  <li>Monday: 10 AM–7 PM</li>
-                  <li>Tuesday: 10 AM–7 PM</li>
-                  <li>Wednesday: 10 AM–7 PM</li>
-                  <li>Thursday: 10 AM–7 PM</li>
-                  <li>Friday: 9 AM–6 PM</li>
-                  <li>Saturday: 9 AM–6 PM</li>
-                  <li>Sunday: Closed</li>
-                </ul>
-              </div>
-
-              <!-- Socials -->
-              <div class="mt-5 flex items-center gap-3">
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/d_essencewellness/" aria-label="Instagram" target="_blank" rel="noopener"
-                   class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition">
-                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
-                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6ZM18 6.7a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/>
-                  </svg>
-                </a>
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/profile.php?id=100093851335127" aria-label="Facebook" target="_blank" rel="noopener"
-                   class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition">
-                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
-                    <path d="M13.5 22v-8h2.6l.4-3h-3v-1.9c0-.9.3-1.5 1.6-1.5h1.5V4.1c-.8-.1-1.7-.1-2.5-.1-2.4 0-4 .9-4 3.7V11H7v3h2.1v8h4.4Z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Company -->
-            <div>
-              <h5 class="text-white/90 font-medium">Company</h5>
-              <ul class="mt-3 space-y-2 text-sm text-neutral-300">
-                <li><a class="hover:underline" href="/about-us">About</a></li>
-                <li><a class="hover:underline" href="/contact-us">Contact</a></li>
-                <li><a class="hover:underline" href="https://pay.withcherry.com/dessencewellness?utm_source=practice&utm_medium=website&m=18897" target="_blank" rel="noopener">Cherry Payments</a></li>
-                <li><a class="hover:underline" href="https://www.salonvision.com/dessencewellness/GiftCertificatePop.aspx" target="_blank" rel="noopener">Gift Certificates</a></li>
-              </ul>
-            </div>
-
-            <!-- Services (Top 4 + all) -->
-            <div>
-              <h5 class="text-white/90 font-medium">Services</h5>
-              <ul class="mt-3 space-y-2 text-sm text-neutral-300">
-                <li><a class="hover:underline" href="/services/botox">Neurotoxins</a></li>
-                <li><a class="hover:underline" href="/services/lip-filler">Lip Filler</a></li>
-                <li><a class="hover:underline" href="/services/skinpen-microneedling">SkinPen Microneedling</a></li>
-                <li><a class="hover:underline" href="/services/aerolase">Aerolase</a></li>
-              </ul>
-            </div>
-
-            <!-- Resources / Policies -->
-            <div>
-              <h5 class="text-white/90 font-medium">Resources</h5>
-              <ul class="mt-3 space-y-2 text-sm text-neutral-300">
-                <li><a class="hover:underline" href="/terms-and-conditions">Terms &amp; Conditions</a></li>
-                <li><a class="hover:underline" href="/privacy-policy">Privacy Policy</a></li>
-                <li><a class="hover:underline" href="/hipaa">HIPAA</a></li>
-                <li><a class="hover:underline" href="/booking-policy">Booking Policy</a></li>
-              </ul>
-            </div>
+          <!-- Address (smart maps link) -->
+          <div class="mt-4 text-sm text-neutral-300">
+            <a
+              id="map-link"
+              class="hover:underline"
+              href="https://www.google.com/maps/search/?api=1&query=871%20Blooming%20Grove%20Turnpike%20suite%20102%2C%20New%20Windsor%2C%20NY%2012553"
+              target="_blank" rel="noopener"
+            >
+              871 Blooming Grove Turnpike suite 102, New Windsor, NY 12553
+            </a>
           </div>
-        </section>
 
-        <!-- Bottom line (se mantiene) -->
-        <div class="border-t border-white/10 py-6">
-          <div class="text-center text-xs text-neutral-500">
-            © 2025 D-Essence Wellness. All rights reserved.
+          <!-- Hours -->
+          <div class="mt-4 text-sm text-neutral-300">
+            <div class="font-medium text-white/90">Hours</div>
+            <ul class="mt-2 space-y-1">
+              <li>Monday: 10 AM–7 PM</li>
+              <li>Tuesday: 10 AM–7 PM</li>
+              <li>Wednesday: 10 AM–7 PM</li>
+              <li>Thursday: 10 AM–7 PM</li>
+              <li>Friday: 9 AM–6 PM</li>
+              <li>Saturday: 9 AM–6 PM</li>
+              <li>Sunday: Closed</li>
+            </ul>
+          </div>
+
+          <!-- Socials -->
+          <div class="mt-5 flex items-center gap-3">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/d_essencewellness/" aria-label="Instagram" target="_blank" rel="noopener"
+               class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6ZM18 6.7a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=100093851335127" aria-label="Facebook" target="_blank" rel="noopener"
+               class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                <path d="M13.5 22v-8h2.6l.4-3h-3v-1.9c0-.9.3-1.5 1.6-1.5h1.5V4.1c-.8-.1-1.7-.1-2.5-.1-2.4 0-4 .9-4 3.7V11H7v3h2.1v8h4.4Z"/>
+              </svg>
+            </a>
           </div>
         </div>
+
+        <!-- Company -->
+        <div>
+          <h5 class="text-white/90 font-medium">Company</h5>
+          <ul class="mt-3 space-y-2 text-sm text-neutral-300">
+            <li><a class="hover:underline" href="/about-us">About</a></li>
+            <li><a class="hover:underline" href="/contact-us">Contact</a></li>
+            <li><a class="hover:underline" href="https://pay.withcherry.com/dessencewellness?utm_source=practice&utm_medium=website&m=18897" target="_blank" rel="noopener">Cherry Payments</a></li>
+            <li><a class="hover:underline" href="https://www.salonvision.com/dessencewellness/GiftCertificatePop.aspx" target="_blank" rel="noopener">Gift Certificates</a></li>
+          </ul>
+        </div>
+
+        <!-- Services (Top 4 + all) -->
+        <div>
+          <h5 class="text-white/90 font-medium">Services</h5>
+          <ul class="mt-3 space-y-2 text-sm text-neutral-300">
+            <li><a class="hover:underline" href="/services/botox">Neurotoxins</a></li>
+            <li><a class="hover:underline" href="/services/lip-filler">Lip Filler</a></li>
+            <li><a class="hover:underline" href="/services/skinpen-microneedling">SkinPen Microneedling</a></li>
+            <li><a class="hover:underline" href="/services/aerolase">Aerolase</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources / Policies -->
+        <div>
+          <h5 class="text-white/90 font-medium">Resources</h5>
+          <ul class="mt-3 space-y-2 text-sm text-neutral-300">
+            <li><a class="hover:underline" href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+            <li><a class="hover:underline" href="/privacy-policy">Privacy Policy</a></li>
+            <li><a class="hover:underline" href="/hipaa">HIPAA</a></li>
+            <li><a class="hover:underline" href="/booking-policy">Booking Policy</a></li>
+          </ul>
+        </div>
       </div>
-    </footer>
+    </section>
+
+    <!-- Bottom line (se mantiene) -->
+    <div class="border-t border-white/10 py-6">
+      <div class="text-center text-xs text-neutral-500">
+        © 2025 D-Essence Wellness. All rights reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
 
     <!-- ===== SCRIPTS ===== -->
     <script is:inline>
