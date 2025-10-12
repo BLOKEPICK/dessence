@@ -85,7 +85,7 @@ const seo = {
     <div class="container py-14 sm:py-[4.5rem]">
       <div class="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 items-center">
         <!-- Image -->
-        <figure class="relative">
+        <figure class="relative order-1 md:order-none">
           <div class="pointer-events-none absolute -left-6 inset-y-6 w-16 rounded-full bg-gradient-to-r from-neutral-200 to-transparent blur-lg"></div>
           <div class="pointer-events-none absolute -right-6 inset-y-6 w-16 rounded-full bg-gradient-to-l from-neutral-200 to-transparent blur-lg"></div>
 
@@ -107,16 +107,14 @@ const seo = {
           </picture>
         </figure>
 
-        <!-- Copy + CTAs -->
-<div>
-  <p class="text-neutral-700/90">
-    Refine your natural beauty with soft, balanced enhancement. Our lip filler treatments use advanced hyaluronic acid formulas to restore youthful volume, smooth fine lines, and enhance lip shape for a supple, elegant finish.
-  </p>
-  <p class="mt-3 text-neutral-700/90">
-    Each treatment is thoughtfully customized to your features and aesthetic goals, ensuring natural harmony and precision. Results are visible immediately and continue to refine as the lips settle, revealing a smooth, hydrated, and beautifully defined look.
-  </p>
-</div>
-
+        <!-- Copy + CTA in the SAME column -->
+        <div>
+          <p class="text-neutral-700/90">
+            Refine your natural beauty with soft, balanced enhancement. Our lip filler treatments use advanced hyaluronic acid formulas to restore youthful volume, smooth fine lines, and enhance lip shape for a supple, elegant finish.
+          </p>
+          <p class="mt-3 text-neutral-700/90">
+            Each treatment is thoughtfully customized to your features and aesthetic goals, ensuring natural harmony and precision. Results are visible immediately and continue to refine as the lips settle, revealing a smooth, hydrated, and beautifully defined look.
+          </p>
 
           <div class="mt-8 flex items-center gap-4">
             <a
@@ -130,6 +128,7 @@ const seo = {
             </a>
           </div>
         </div>
+        <!-- /Copy + CTA -->
       </div>
     </div>
 
