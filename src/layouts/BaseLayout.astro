@@ -9,6 +9,8 @@ export interface Props {
   };
 }
 import "../styles/globals.css";
+import TextUsWidget from "@/components/TextUsWidget"; // ← ADD (widget)
+
 const { seo } = Astro.props;
 const title = seo?.title ?? 'D-Essence Wellness';
 const description = seo?.description ?? 'Modern Aesthetics, Evidence-Based Care';
@@ -677,5 +679,8 @@ const jsonLd = seo?.jsonLd ?? [];
         el.setAttribute('href', isIOS ? appleHref : googleHref);
       })();
     </script>
+
+    <!-- Text Us widget (isla) -->
+    <TextUsWidget client:load />
   </body>
 </html>
