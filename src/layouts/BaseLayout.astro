@@ -482,7 +482,7 @@ const jsonLd = seo?.jsonLd ?? [];
     <!-- ===== TEXT US (INLINE, SIN REACT) ===== -->
     <div id="textus-root" class="fixed bottom-4 right-4 z-[60]">
       <!-- Teaser (aparece 1 vez cada 7 días por ~8s) -->
-      <div id="textus-teaser" class="hidden absolute bottom-16 right-0 max-w-[270px] translate-y-1">
+      <div id="textus-teaser" class="hidden absolute bottom-16 right-0 max-w-[90vw] sm:max-w-[460px] translate-y-1">
         <div class="relative rounded-2xl bg-neutral-950 text-white px-3 py-3 text-sm shadow-xl ring-1 ring-white/10">
           <div class="flex items-start gap-2">
             <img
@@ -547,13 +547,13 @@ const jsonLd = seo?.jsonLd ?? [];
             <input type="hidden" name="_replyto" value="" id="textus-replyto" />
 
             <label class="block">
-              <span class="block text-xs font-medium text-white/80">Name</span>
-              <input name="Name" class="mt-1 block w-full border-0 border-b border-white/20 bg-transparent px-0 py-2 text-sm text-white placeholder:text-neutral-400 outline-none focus:border-white/40" autocomplete="off" />
+              <span class="block text-xs font-medium text-white/80">Name<span class="text-red-500">*</span></span>
+              <input name="Name" required autocomplete="name" class="mt-1 block w-full border-0 border-b border-white/20 bg-transparent px-0 py-2 text-sm text-white placeholder:text-neutral-400 outline-none focus:border-white/40" />
             </label>
 
             <label class="block mt-3">
-              <span class="block text-xs font-medium text-white/80">Email (optional — for confirmation)</span>
-              <input id="textus-email" name="Email" type="email" class="mt-1 block w-full border-0 border-b border-white/20 bg-transparent px-0 py-2 text-sm text-white placeholder:text-neutral-400 outline-none focus:border-white/40" autocomplete="email" />
+              <span class="block text-xs font-medium text-white/80">Email<span class="text-red-500">*</span></span>
+              <input id="textus-email" name="Email" type="email" required autocomplete="email" class="mt-1 block w-full border-0 border-b border-white/20 bg-transparent px-0 py-2 text-sm text-white placeholder:text-neutral-400 outline-none focus:border-white/40" />
             </label>
 
             <label class="block mt-3">
@@ -677,12 +677,16 @@ const jsonLd = seo?.jsonLd ?? [];
         });
 
         document.addEventListener('keydown', function (e) {
-          if (e.key === 'Escape' && openKeyPanel) {
-            var id = openKeyPanel.getAttribute('data-menu-panel');
-            var btn = document.querySelector('[data-menu-trigger="' + id + '"]');
-            forceClose(openKeyPanel, btn);
-            openKeyPanel = null;
-            if (btn) btn.focus();
+          if (e.key === 'Escape') {
+            var openPanels = document.querySelectorAll('[data-menu-panel]');
+            openPanels.forEach(function (p) {
+              var id = p.getAttribute('data-menu-panel');
+              var b = document.querySelector('[data-menu-trigger="' + id + '"]');
+              if (b) {
+                p.classList.add('opacity-0','translate-y-1','pointer-events-none');
+                b.setAttribute('aria-expanded','false');
+              }
+            });
           }
         });
       })();
