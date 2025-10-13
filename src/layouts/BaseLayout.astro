@@ -9,7 +9,6 @@ export interface Props {
   };
 }
 import "../styles/globals.css";
-import TextUsWidget from "@/components/TextUsWidget";
 const { seo } = Astro.props;
 const title = seo?.title ?? 'D-Essence Wellness';
 const description = seo?.description ?? 'Modern Aesthetics, Evidence-Based Care';
@@ -84,7 +83,7 @@ const jsonLd = seo?.jsonLd ?? [];
               </button>
 
               <div id="menu-injectables"
-                   class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w=[90vw] sm:w=[520px]
+                   class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w=[90vw] sm:w-[520px]
                           rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1
                           max-h-[70vh] overflow-auto
                           opacity-0 translate-y-1 pointer-events-none
@@ -178,12 +177,13 @@ const jsonLd = seo?.jsonLd ?? [];
                 <ul class="divide-y divide-white/10">
                   <li><a href="/services/vitamin-injections" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Vitamin Injections<span class="opacity-60">→</span></a></li>
                   <li><a href="/services/iv-therapy" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">IV Therapy<span class="opacity-60">→</span></a></li>
+                  <!-- Added Teeth Whitening -->
                   <li><a href="/services/teeth-whitening" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Teeth Whitening<span class="opacity-60">→</span></a></li>
                 </ul>
               </div>
             </li>
 
-            <!-- Chemical Peel -->
+            <!-- Chemical Peel (renombrado desde Aesthetic Services) -->
             <li class="relative group" role="none">
               <button
                 class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
@@ -324,12 +324,13 @@ const jsonLd = seo?.jsonLd ?? [];
                   <div class="h-px bg-white/10"></div>
                   <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/iv-therapy">IV Therapy</a>
                   <div class="h-px bg-white/10"></div>
+                  <!-- Added Teeth Whitening -->
                   <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/teeth-whitening">Teeth Whitening</a>
                 </div>
               </div>
             </details>
 
-            <!-- Chemical Peel (móvil) -->
+            <!-- Chemical Peel (móvil, nuevo nombre + submenu) -->
             <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/5 open:border-white/20 transition-colors">
               <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
                 <span class="font-medium">Chemical Peel</span>
@@ -364,156 +365,548 @@ const jsonLd = seo?.jsonLd ?? [];
     <!-- ===== MAIN SLOT ===== -->
     <main><slot /></main>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="mt-24 bg-black/50">
-      <div class="container mx-auto px-4">
-        <!-- Middle: brand + columns -->
-        <section class="py-10">
-          <div class="grid gap-10 md:grid-cols-4">
-            <!-- Brand & socials -->
-            <div>
-              <a href="/" class="inline-block" aria-label="D-Essence Wellness">
-                <img src="/LOGO_W.webp" alt="D-Essence Wellness" class="h-10 w-auto select-none pointer-events-none" width="180" height="40" loading="lazy" decoding="async" />
-              </a>
-              <p class="mt-3 text-sm text-neutral-400 max-w-xs">Evidence-based care to enhance your natural confidence.</p>
+    <!-- ===== FOOTER (sin CTA superior y sin línea encima) ===== -->
+<footer class="mt-24 bg-black/50">
+  <div class="container mx-auto px-4">
+    <!-- Middle: brand + columns -->
+    <section class="py-10">
+      <div class="grid gap-10 md:grid-cols-4">
+        <!-- Brand & socials -->
+        <div>
+          <!-- Logo (reemplazo del texto D-Essence Wellness) -->
+          <a href="/" class="inline-block" aria-label="D-Essence Wellness">
+            <img
+              src="/LOGO_W.webp"
+              alt="D-Essence Wellness"
+              class="h-10 w-auto select-none pointer-events-none"
+              width="180"
+              height="40"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
 
-              <div class="mt-4 text-sm text-neutral-300">
-                <a id="map-link" class="hover:underline" href="https://www.google.com/maps/search/?api=1&query=871%20Blooming%20Grove%20Turnpike%20suite%20102%2C%20New%20Windsor%2C%20NY%2012553" target="_blank" rel="noopener">
-                  871 Blooming Grove Turnpike suite 102, New Windsor, NY 12553
-                </a>
-              </div>
+          <p class="mt-3 text-sm text-neutral-400 max-w-xs">
+            Evidence-based care to enhance your natural confidence.
+          </p>
 
-              <div class="mt-4 text-sm text-neutral-300">
-                <div class="font-medium text-white/90">Hours</div>
-                <ul class="mt-2 space-y-1">
-                  <li>Monday: 10 AM–7 PM</li>
-                  <li>Tuesday: 10 AM–7 PM</li>
-                  <li>Wednesday: 10 AM–7 PM</li>
-                  <li>Thursday: 10 AM–7 PM</li>
-                  <li>Friday: 9 AM–6 PM</li>
-                  <li>Saturday: 9 AM–6 PM</li>
-                  <li>Sunday: Closed</li>
-                </ul>
-              </div>
-
-              <div class="mt-5 flex items-center gap-3">
-                <a href="https://www.instagram.com/d_essencewellness/" aria-label="Instagram" target="_blank" rel="noopener"
-                   class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition">
-                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
-                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6ZM18 6.7a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/>
-                  </svg>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=100093851335127" aria-label="Facebook" target="_blank" rel="noopener"
-                   class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition">
-                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
-                    <path d="M13.5 22v-8h2.6l.4-3h-3v-1.9c0-.9.3-1.5 1.6-1.5h1.5V4.1c-.8-.1-1.7-.1-2.5-.1-2.4 0-4 .9-4 3.7V11H7v3h2.1v8h4.4Z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- Company -->
-            <div>
-              <h5 class="text-white/90 font-medium">Company</h5>
-              <ul class="mt-3 space-y-2 text-sm text-neutral-300">
-                <li><a class="hover:underline" href="/about-us">About</a></li>
-                <li><a class="hover:underline" href="/contact-us">Contact</a></li>
-                <li><a class="hover:underline" href="https://pay.withcherry.com/dessencewellness?utm_source=practice&utm_medium=website&m=18897" target="_blank" rel="noopener">Cherry Payments</a></li>
-                <li><a class="hover:underline" href="https://www.salonvision.com/dessencewellness/GiftCertificatePop.aspx" target="_blank" rel="noopener">Gift Certificates</a></li>
-              </ul>
-            </div>
-
-            <!-- Services -->
-            <div>
-              <h5 class="text-white/90 font-medium">Services</h5>
-              <ul class="mt-3 space-y-2 text-sm text-neutral-300">
-                <li><a class="hover:underline" href="/services/botox">Neurotoxins</a></li>
-                <li><a class="hover:underline" href="/services/lip-filler">Lip Filler</a></li>
-                <li><a class="hover:underline" href="/services/skinpen-microneedling">SkinPen Microneedling</a></li>
-                <li><a class="hover:underline" href="/services/aerolase">Aerolase</a></li>
-              </ul>
-            </div>
-
-            <!-- Resources -->
-            <div>
-              <h5 class="text-white/90 font-medium">Resources</h5>
-              <ul class="mt-3 space-y-2 text-sm text-neutral-300">
-                <li><a class="hover:underline" href="/terms-and-conditions">Terms &amp; Conditions</a></li>
-                <li><a class="hover:underline" href="/privacy-policy">Privacy Policy</a></li>
-                <li><a class="hover:underline" href="/hipaa">HIPAA</a></li>
-                <li><a class="hover:underline" href="/booking-policy">Booking Policy</a></li>
-              </ul>
-            </div>
+          <!-- Address (smart maps link) -->
+          <div class="mt-4 text-sm text-neutral-300">
+            <a
+              id="map-link"
+              class="hover:underline"
+              href="https://www.google.com/maps/search/?api=1&query=871%20Blooming%20Grove%20Turnpike%20suite%20102%2C%20New%20Windsor%2C%20NY%2012553"
+              target="_blank" rel="noopener"
+            >
+              871 Blooming Grove Turnpike suite 102, New Windsor, NY 12553
+            </a>
           </div>
-        </section>
 
-        <div class="border-t border-white/10 py-6">
-          <div class="text-center text-xs text-neutral-500">
-            © 2025 D-Essence Wellness. All rights reserved.
+          <!-- Hours -->
+          <div class="mt-4 text-sm text-neutral-300">
+            <div class="font-medium text-white/90">Hours</div>
+            <ul class="mt-2 space-y-1">
+              <li>Monday: 10 AM–7 PM</li>
+              <li>Tuesday: 10 AM–7 PM</li>
+              <li>Wednesday: 10 AM–7 PM</li>
+              <li>Thursday: 10 AM–7 PM</li>
+              <li>Friday: 9 AM–6 PM</li>
+              <li>Saturday: 9 AM–6 PM</li>
+              <li>Sunday: Closed</li>
+            </ul>
+          </div>
+
+          <!-- Socials -->
+          <div class="mt-5 flex items-center gap-3">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/d_essencewellness/" aria-label="Instagram" target="_blank" rel="noopener"
+               class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6ZM18 6.7a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=100093851335127" aria-label="Facebook" target="_blank" rel="noopener"
+               class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                <path d="M13.5 22v-8h2.6l.4-3h-3v-1.9c0-.9.3-1.5 1.6-1.5h1.5V4.1c-.8-.1-1.7-.1-2.5-.1-2.4 0-4 .9-4 3.7V11H7v3h2.1v8h4.4Z"/>
+              </svg>
+            </a>
           </div>
         </div>
-      </div>
-    </footer>
 
-    <!-- ===== WIDGET FLOTANTE ===== -->
-    <TextUsWidget client:load />
+        <!-- Company -->
+        <div>
+          <h5 class="text-white/90 font-medium">Company</h5>
+          <ul class="mt-3 space-y-2 text-sm text-neutral-300">
+            <li><a class="hover:underline" href="/about-us">About</a></li>
+            <li><a class="hover:underline" href="/contact-us">Contact</a></li>
+            <li><a class="hover:underline" href="https://pay.withcherry.com/dessencewellness?utm_source=practice&utm_medium=website&m=18897" target="_blank" rel="noopener">Cherry Payments</a></li>
+            <li><a class="hover:underline" href="https://www.salonvision.com/dessencewellness/GiftCertificatePop.aspx" target="_blank" rel="noopener">Gift Certificates</a></li>
+          </ul>
+        </div>
+
+        <!-- Services (Top 4 + all) -->
+        <div>
+          <h5 class="text-white/90 font-medium">Services</h5>
+          <ul class="mt-3 space-y-2 text-sm text-neutral-300">
+            <li><a class="hover:underline" href="/services/botox">Neurotoxins</a></li>
+            <li><a class="hover:underline" href="/services/lip-filler">Lip Filler</a></li>
+            <li><a class="hover:underline" href="/services/skinpen-microneedling">SkinPen Microneedling</a></li>
+            <li><a class="hover:underline" href="/services/aerolase">Aerolase</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources / Policies -->
+        <div>
+          <h5 class="text-white/90 font-medium">Resources</h5>
+          <ul class="mt-3 space-y-2 text-sm text-neutral-300">
+            <li><a class="hover:underline" href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+            <li><a class="hover:underline" href="/privacy-policy">Privacy Policy</a></li>
+            <li><a class="hover:underline" href="/hipaa">HIPAA</a></li>
+            <li><a class="hover:underline" href="/booking-policy">Booking Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom line (se mantiene) -->
+    <div class="border-t border-white/10 py-6">
+      <div class="text-center text-xs text-neutral-500">
+        © 2025 D-Essence Wellness. All rights reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- ===== TEXT US (INLINE, SIN REACT) ===== -->
+    <div id="textus-root" class="fixed bottom-4 right-4 z-[60]">
+      <!-- Teaser (aparece 1 vez cada 7 días por ~8s) -->
+      <div id="textus-teaser" class="hidden absolute bottom-16 right-0 max-w-[270px] translate-y-1">
+        <div class="relative rounded-2xl bg-neutral-950 text-white px-3 py-3 text-sm shadow-xl ring-1 ring-white/10">
+          <div class="flex items-start gap-2">
+            <img
+              src="/Cover.webp"
+              alt=""
+              class="h-7 w-7 rounded-full object-cover ring-1 ring-white/10"
+              loading="lazy" decoding="async" width="28" height="28"
+            />
+            <p class="leading-snug">
+              Hi there, have a question? <span class="font-medium">Text us here.</span>
+            </p>
+          </div>
+          <div class="absolute -bottom-1 right-6 h-3 w-3 rotate-45 bg-neutral-950 ring-1 ring-white/10" aria-hidden></div>
+          <button id="textus-teaser-close"
+            aria-label="Dismiss"
+            class="absolute right-1.5 top-1.5 rounded-full p-1 text-white/50 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6.225 4.811l12.964 12.964-1.414 1.414L4.811 6.225l1.414-1.414z" />
+              <path d="M19.189 6.225L6.225 19.189l-1.414-1.414L17.775 4.811l1.414 1.414z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Botón flotante (abrir) -->
+      <button id="textus-open"
+        aria-haspopup="dialog" aria-expanded="false" aria-controls="textus-panel"
+        class="group flex items-center gap-2 rounded-full bg-black px-5 py-3 text-white shadow-lg shadow-black/30 ring-1 ring-white/10 transition hover:bg-black/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M2 5a3 3 0 013-3h14a3 3 0 013 3v10a3 3 0 01-3 3H8.414l-3.707 3.707A1 1 0 013 21v-3.586A3 3 0 012 14V5z" />
+        </svg>
+        <span class="font-medium">Text us</span>
+      </button>
+
+      <!-- Panel -->
+      <div id="textus-panel" role="dialog" aria-modal="true" aria-label="Send us a message"
+        class="hidden fixed bottom-20 right-4 w-[340px] max-w-[90vw] overflow-hidden rounded-2xl border border-white/10 bg-neutral-950 text-white shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-neutral-950/95">
+        <div class="flex items-center gap-2 px-4 py-3 border-b border-white/10">
+          <svg class="h-5 w-5 text-white/90" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M2 5a3 3 0 013-3h14a3 3 0 013 3v10a3 3 0 01-3 3H8.414l-3.707 3.707A1 1 0 013 21v-3.586A3 3 0 012 14V5z" />
+          </svg>
+          <p class="text-sm font-semibold">Send us a message</p>
+          <button id="textus-close"
+            aria-label="Close"
+            class="ml-auto inline-flex h-8 w-8 items-center justify-center rounded-lg text-white/70 hover:text-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+
+        <div class="p-4">
+          <p class="mb-3 rounded-2xl bg-white/5 ring-1 ring-white/10 px-3 py-2 text-sm text-white/90">
+            Enter your info and we’ll email our team. We reply quickly during business hours.
+          </p>
+
+          <form id="textus-form" class="rounded-2xl" novalidate>
+            <!-- FormSubmit hidden settings -->
+            <input type="hidden" name="_subject" value="New website text lead — D-Essence Wellness" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="Page URL" value="" id="textus-pageurl" />
+            <input type="hidden" name="_replyto" value="" id="textus-replyto" />
+
+            <label class="block">
+              <span class="block text-xs font-medium text-white/80">Name</span>
+              <input name="Name" class="mt-1 block w-full border-0 border-b border-white/20 bg-transparent px-0 py-2 text-sm text-white placeholder:text-neutral-400 outline-none focus:border-white/40" autocomplete="off" />
+            </label>
+
+            <label class="block mt-3">
+              <span class="block text-xs font-medium text-white/80">Email (optional — for confirmation)</span>
+              <input id="textus-email" name="Email" type="email" class="mt-1 block w-full border-0 border-b border-white/20 bg-transparent px-0 py-2 text-sm text-white placeholder:text-neutral-400 outline-none focus:border-white/40" autocomplete="email" />
+            </label>
+
+            <label class="block mt-3">
+              <span class="block text-xs font-medium text-white/80">Mobile Phone<span class="text-red-500">*</span></span>
+              <input id="textus-phone" name="Phone" type="tel" inputmode="tel" required class="mt-1 block w-full border-0 border-b border-white/20 bg-transparent px-0 py-2 text-sm text-white placeholder:text-neutral-400 outline-none focus:border-white/40" autocomplete="tel" />
+            </label>
+
+            <label class="block mt-3">
+              <span class="block text-xs font-medium text-white/80">Message<span class="text-red-500">*</span></span>
+              <textarea id="textus-message" name="Message" rows="3" required class="mt-1 block w-full resize-y border-0 border-b border-white/20 bg-transparent px-0 py-2 text-sm text-white placeholder:text-neutral-400 outline-none focus:border-white/40"></textarea>
+            </label>
+
+            <p class="mt-3 text-[11px] leading-snug text-neutral-400">
+              By submitting, you authorize D-Essence Wellness to contact you. Message/data rates may apply.
+              Consent isn’t a condition of purchase. <a class="underline" href="/terms-and-conditions">See terms</a>.
+            </p>
+
+            <div class="mt-4">
+              <button id="textus-submit" type="submit"
+                class="inline-flex items-center justify-center rounded-lg bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-black/90 disabled:opacity-60">
+                Send
+              </button>
+            </div>
+
+            <p id="textus-ok"  class="hidden mt-3 text-xs text-emerald-400"></p>
+            <p id="textus-err" class="hidden mt-3 text-xs text-red-400"></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Botón cerrar flotante (cuando panel abierto) -->
+      <button id="textus-fab-close" aria-label="Close"
+        class="hidden fixed bottom-4 right-4 grid h-12 w-12 place-items-center rounded-full bg-white/10 text-white shadow-xl ring-1 ring-white/10 transition hover:bg-white/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M6.225 4.811l12.964 12.964-1.414 1.414L4.811 6.225l1.414-1.414z" />
+          <path d="M19.189 6.225L6.225 19.189l-1.414-1.414L17.775 4.811l1.414 1.414z" />
+        </svg>
+      </button>
+    </div>
 
     <!-- ===== SCRIPTS ===== -->
     <script is:inline>
-      // Desktop submenu A11y + Hover Intent
+      // ---------- Desktop submenu A11y + Hover Intent ----------
       (function () {
         var triggers = document.querySelectorAll('[data-menu-trigger]');
         var openKeyPanel = null;
         var OPEN_DELAY = 120;
         var CLOSE_DELAY = 200;
-        function panelFor(btn){ var id=btn.getAttribute('data-menu-trigger'); return document.querySelector('[data-menu-panel="'+id+'"]'); }
-        function setExpanded(btn,ex){ btn.setAttribute('aria-expanded', String(ex)); }
-        function forceOpen(p,btn){ p.classList.remove('opacity-0','translate-y-1','pointer-events-none'); p.classList.add('opacity-100','translate-y-0','pointer-events-auto'); if(btn) setExpanded(btn,true); }
-        function forceClose(p,btn){ p.classList.add('opacity-0','translate-y-1','pointer-events-none'); p.classList.remove('opacity-100','translate-y-0','pointer-events-auto'); if(btn) setExpanded(btn,false); }
-        function ensureTimers(el){ if(!el._intentTimers) el._intentTimers={openTimer:null,closeTimer:null}; return el._intentTimers; }
-        triggers.forEach(function(btn){
-          var panel=panelFor(btn); if(!panel) return;
-          var timers=ensureTimers(panel);
-          var root=btn.closest('li')||btn.parentElement;
-          function openWithIntent(){ triggers.forEach(function(b){ if(b!==btn){ var p=panelFor(b); p&&forceClose(p,b); }}); forceOpen(panel,btn);}
-          function queueOpen(){ clearTimeout(timers.closeTimer); clearTimeout(timers.openTimer); timers.openTimer=setTimeout(openWithIntent,OPEN_DELAY); }
-          function queueClose(){ clearTimeout(timers.openTimer); clearTimeout(timers.closeTimer); timers.closeTimer=setTimeout(function(){ var still=btn.matches(':hover')||panel.matches(':hover')||(root&&root.matches(':hover')); if(!still) forceClose(panel,btn); },CLOSE_DELAY); }
+
+        function panelFor(btn) { var id = btn.getAttribute('data-menu-trigger'); return document.querySelector('[data-menu-panel="' + id + '"]'); }
+        function setExpanded(btn, expanded) { btn.setAttribute('aria-expanded', String(expanded)); }
+        function forceOpen(panel, btn) {
+          panel.classList.remove('opacity-0','translate-y-1','pointer-events-none');
+          panel.classList.add('opacity-100','translate-y-0','pointer-events-auto');
+          if (btn) setExpanded(btn, true);
+        }
+        function forceClose(panel, btn) {
+          panel.classList.add('opacity-0','translate-y-1','pointer-events-none');
+          panel.classList.remove('opacity-100','translate-y-0','pointer-events-auto');
+          if (btn) setExpanded(btn, false);
+        }
+        function ensureTimers(el) { if (!el._intentTimers) el._intentTimers = { openTimer: null, closeTimer: null }; return el._intentTimers; }
+
+        triggers.forEach(function (btn) {
+          var panel = panelFor(btn); if (!panel) return;
+          var timers = ensureTimers(panel);
+          var root = btn.closest('li') || btn.parentElement;
+
+          function openWithIntent() {
+            triggers.forEach(function (b) { if (b !== btn) { var p = panelFor(b); p && forceClose(p, b); }});
+            forceOpen(panel, btn);
+          }
+          function queueOpen() { clearTimeout(timers.closeTimer); clearTimeout(timers.openTimer); timers.openTimer = setTimeout(openWithIntent, OPEN_DELAY); }
+          function queueClose() {
+            clearTimeout(timers.openTimer); clearTimeout(timers.closeTimer);
+            timers.closeTimer = setTimeout(function () {
+              var stillHover = btn.matches(':hover') || panel.matches(':hover') || (root && root.matches(':hover'));
+              if (!stillHover) forceClose(panel, btn);
+            }, CLOSE_DELAY);
+          }
+
           btn.addEventListener('mouseenter', queueOpen);
           btn.addEventListener('mouseleave', queueClose);
-          panel.addEventListener('mouseenter', function(){ clearTimeout(timers.closeTimer); });
+          panel.addEventListener('mouseenter', function () { clearTimeout(timers.closeTimer); });
           panel.addEventListener('mouseleave', queueClose);
-          btn.addEventListener('keydown', function(e){
-            var k=e.key;
-            if(k==='Enter'||k===' '){ e.preventDefault(); var ex=btn.getAttribute('aria-expanded')==='true'; if(ex){ forceClose(panel,btn); } else { triggers.forEach(function(b){ if(b!==btn){ var p=panelFor(b); p&&forceClose(p,b); }}); forceOpen(panel,btn); var first=panel.querySelector('a,button,[tabindex]:not([tabindex="-1"])'); if(first) first.focus(); openKeyPanel=panel; } }
-            else if(k==='Escape'){ forceClose(panel,btn); }
-            else if(k==='ArrowDown'){ e.preventDefault(); forceOpen(panel,btn); var first2=panel.querySelector('a,button,[tabindex]:not([tabindex="-1"])'); if(first2) first2.focus(); openKeyPanel=panel; }
+
+          btn.addEventListener('keydown', function (e) {
+            var key = e.key;
+            if (key === 'Enter' || key === ' ') {
+              e.preventDefault();
+              var expanded = btn.getAttribute('aria-expanded') === 'true';
+              if (expanded) { forceClose(panel, btn); }
+              else {
+                triggers.forEach(function (b) { if (b !== btn) { var p = panelFor(b); p && forceClose(p, b); }});
+                forceOpen(panel, btn);
+                var firstItem = panel.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
+                if (firstItem) firstItem.focus();
+                openKeyPanel = panel;
+              }
+            } else if (key === 'Escape') {
+              forceClose(panel, btn);
+            } else if (key === 'ArrowDown') {
+              e.preventDefault();
+              forceOpen(panel, btn);
+              var first = panel.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
+              if (first) first.focus();
+              openKeyPanel = panel;
+            }
           });
-          panel.addEventListener('keydown', function(e){ if(e.key==='Escape'){ forceClose(panel,btn); btn.focus(); } });
-          panel.addEventListener('focusout', function(){ setTimeout(function(){ var a=document.activeElement; if(!panel.contains(a)&&a!==btn) forceClose(panel,btn); },0); });
+
+          panel.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') { forceClose(panel, btn); btn.focus(); }
+          });
+
+          panel.addEventListener('focusout', function () {
+            setTimeout(function () {
+              var active = document.activeElement;
+              if (!panel.contains(active) && active !== btn) forceClose(panel, btn);
+            }, 0);
+          });
         });
-        document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&openKeyPanel){ var id=openKeyPanel.getAttribute('data-menu-panel'); var btn=document.querySelector('[data-menu-trigger="'+id+'"]'); forceClose(openKeyPanel,btn); openKeyPanel=null; if(btn) btn.focus(); } });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && openKeyPanel) {
+            var id = openKeyPanel.getAttribute('data-menu-panel');
+            var btn = document.querySelector('[data-menu-trigger="' + id + '"]');
+            forceClose(openKeyPanel, btn);
+            openKeyPanel = null;
+            if (btn) btn.focus();
+          }
+        });
       })();
 
-      // Mobile drawer (scroll lock real + focus trap + overlays)
+      // ---------- Mobile drawer (scroll lock real + focus trap + overlays) ----------
       (function () {
-        var checkbox=document.getElementById('nav-toggle');
-        var drawer=document.getElementById('mobile-drawer');
-        var overlays=Array.prototype.slice.call(document.querySelectorAll('.peer ~ div'));
-        var closeBtn=drawer&&drawer.querySelector('[data-close-drawer]');
-        if(!checkbox||!drawer) return;
-        var scrollY=0;
-        function getFocusable(c){ var s=['a[href]','button:not([disabled])','summary','input:not([disabled])','select:not([disabled])','textarea:not([disabled])','[tabindex]:not([tabindex="-1"])'].join(','); return Array.prototype.slice.call(c.querySelectorAll(s)).filter(function(el){ return !el.hasAttribute('inert') && !el.closest('[hidden]'); }); }
-        function lockScroll(){ scrollY=window.scrollY||document.documentElement.scrollTop; document.body.style.position='fixed'; document.body.style.top=(-scrollY)+'px'; document.body.style.left='0'; document.body.style.right='0'; document.body.style.width='100%'; document.documentElement.classList.add('overscroll-none'); document.body.classList.add('overscroll-none'); }
-        function unlockScroll(){ document.body.style.position=''; document.body.style.top=''; document.body.style.left=''; document.body.style.right=''; document.body.style.width=''; document.documentElement.classList.remove('overscroll-none'); document.body.classList.remove('overscroll-none'); window.scrollTo(0, scrollY); }
-        function openDrawer(){ lockScroll(); var f=getFocusable(drawer); var first=f[0]; var last=f[f.length-1]; function trap(e){ if(e.key!=='Tab') return; if(!first||!last) return; if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); } else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); } } function onKeydown(e){ if(e.key==='Escape'){ checkbox.checked=false; closeDrawer(); } else { trap(e); } } drawer._onKeydown=onKeydown; document.addEventListener('keydown', onKeydown); setTimeout(function(){ (first||closeBtn)?.focus(); },0); }
-        function closeDrawer(){ unlockScroll(); var onKeydown=drawer._onKeydown; if(onKeydown){ document.removeEventListener('keydown', onKeydown); drawer._onKeydown=null; } }
-        checkbox.addEventListener('change', function(){ if(checkbox.checked) openDrawer(); else closeDrawer(); });
-        if(closeBtn) closeBtn.addEventListener('click', function(){ checkbox.checked=false; closeDrawer(); });
-        overlays.forEach(function(ov){ ov.addEventListener('click', function(){ checkbox.checked=false; closeDrawer(); }); });
+        var checkbox = document.getElementById('nav-toggle');
+        var drawer = document.getElementById('mobile-drawer');
+        var overlays = Array.prototype.slice.call(document.querySelectorAll('.peer ~ div'));
+        var closeBtn = drawer && drawer.querySelector('[data-close-drawer]');
+        if (!checkbox || !drawer) return;
+
+        var scrollY = 0;
+
+        function getFocusable(container) {
+          var selectors = [
+            'a[href]', 'button:not([disabled])', 'summary', 'input:not([disabled])',
+            'select:not([disabled])', 'textarea:not([disabled])',
+            '[tabindex]:not([tabindex="-1"])'
+          ].join(',');
+          return Array.prototype.slice.call(container.querySelectorAll(selectors))
+            .filter(function (el) { return !el.hasAttribute('inert') && !el.closest('[hidden]'); });
+        }
+
+        function lockScroll() {
+          scrollY = window.scrollY || document.documentElement.scrollTop;
+          document.body.style.position = 'fixed';
+          document.body.style.top = (-scrollY) + 'px';
+          document.body.style.left = '0';
+          document.body.style.right = '0';
+          document.body.style.width = '100%';
+          document.documentElement.classList.add('overscroll-none');
+          document.body.classList.add('overscroll-none');
+        }
+
+        function unlockScroll() {
+          document.body.style.position = '';
+          document.body.style.top = '';
+          document.body.style.left = '';
+          document.body.style.right = '';
+          document.body.style.width = '';
+          document.documentElement.classList.remove('overscroll-none');
+          document.body.classList.remove('overscroll-none');
+          window.scrollTo(0, scrollY);
+        }
+
+        function openDrawer() {
+          lockScroll();
+          var focusables = getFocusable(drawer);
+          var first = focusables[0];
+          var last  = focusables[focusables.length - 1];
+
+          function trap(e) {
+            if (e.key !== 'Tab') return;
+            if (!first || !last) return;
+            if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+            else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+          }
+
+          function onKeydown(e) {
+            if (e.key === 'Escape') { checkbox.checked = false; closeDrawer(); }
+            else { trap(e); }
+          }
+
+          drawer._onKeydown = onKeydown;
+          document.addEventListener('keydown', onKeydown);
+          setTimeout(function () { (first || closeBtn)?.focus(); }, 0);
+        }
+
+        function closeDrawer() {
+          unlockScroll();
+          var onKeydown = drawer._onKeydown;
+          if (onKeydown) {
+            document.removeEventListener('keydown', onKeydown);
+            drawer._onKeydown = null;
+          }
+        }
+
+        checkbox.addEventListener('change', function () {
+          if (checkbox.checked) openDrawer(); else closeDrawer();
+        });
+
+        // Close controls
+        if (closeBtn) closeBtn.addEventListener('click', function () {
+          checkbox.checked = false; closeDrawer();
+        });
+        overlays.forEach(function (ov) {
+          ov.addEventListener('click', function () {
+            checkbox.checked = false; closeDrawer();
+          });
+        });
       })();
     </script>
 
-    <!-- Smart Maps link -->
+    <!-- Text Us logic -->
+    <script is:inline>
+      (function () {
+        var root   = document.getElementById('textus-root');
+        if (!root) return;
+
+        var teaser = document.getElementById('textus-teaser');
+        var teaserClose = document.getElementById('textus-teaser-close');
+        var openBtn = document.getElementById('textus-open');
+        var panel   = document.getElementById('textus-panel');
+        var closeBtn = document.getElementById('textus-close');
+        var fabClose = document.getElementById('textus-fab-close');
+
+        var form   = document.getElementById('textus-form');
+        var submit = document.getElementById('textus-submit');
+        var okMsg  = document.getElementById('textus-ok');
+        var errMsg = document.getElementById('textus-err');
+
+        var email  = document.getElementById('textus-email');
+        var replyto= document.getElementById('textus-replyto');
+        var pageurl= document.getElementById('textus-pageurl');
+
+        var ENDPOINT = 'https://formsubmit.co/ajax/Georgevaldezr@gmail.com';
+
+        // Page URL
+        if (pageurl) pageurl.value = window.location.href;
+
+        // Teaser show (cada 7 días)
+        try {
+          var ts = localStorage.getItem('textus_teaser_dismissed_at');
+          var week = 7 * 24 * 60 * 60 * 1000;
+          var shouldShow = !ts || (Date.now() - Number(ts) > week);
+          if (shouldShow && teaser) {
+            teaser.classList.remove('hidden');
+            setTimeout(function(){ teaser.classList.add('hidden'); }, 8000);
+          }
+        } catch (_) {}
+
+        function dismissTeaser() {
+          try { localStorage.setItem('textus_teaser_dismissed_at', String(Date.now())); } catch (_){}
+          if (teaser) teaser.classList.add('hidden');
+        }
+        if (teaserClose) teaserClose.addEventListener('click', dismissTeaser);
+
+        function openPanel() {
+          if (panel) panel.classList.remove('hidden');
+          if (openBtn) openBtn.classList.add('hidden');
+          if (fabClose) fabClose.classList.remove('hidden');
+          dismissTeaser();
+          if (openBtn) openBtn.setAttribute('aria-expanded', 'true');
+        }
+
+        function closePanel() {
+          if (panel) panel.classList.add('hidden');
+          if (openBtn) openBtn.classList.remove('hidden');
+          if (fabClose) fabClose.classList.add('hidden');
+          if (openBtn) openBtn.setAttribute('aria-expanded', 'false');
+        }
+
+        if (openBtn)  openBtn.addEventListener('click', openPanel);
+        if (closeBtn) closeBtn.addEventListener('click', closePanel);
+        if (fabClose) fabClose.addEventListener('click', closePanel);
+
+        // Cerrar por click fuera
+        document.addEventListener('mousedown', function (e) {
+          if (!panel || panel.classList.contains('hidden')) return;
+          if (!panel.contains(e.target) && !openBtn.contains(e.target)) closePanel();
+        });
+
+        // Cerrar por ESC
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') closePanel();
+        });
+
+        // _replyto sync con Email
+        if (email && replyto) {
+          email.addEventListener('input', function(){ replyto.value = email.value; });
+        }
+
+        // Envío AJAX
+        if (form && submit) {
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            if (okMsg) okMsg.classList.add('hidden');
+            if (errMsg) errMsg.classList.add('hidden');
+            submit.disabled = true;
+            submit.textContent = 'Sending…';
+
+            // Validaciones mínimas
+            var phoneEl = document.getElementById('textus-phone');
+            var msgEl   = document.getElementById('textus-message');
+
+            var phone = phoneEl ? String(phoneEl.value || '') : '';
+            var digits = phone.replace(/[^0-9]/g, '');
+            if (!digits || digits.length < 10) {
+              if (errMsg) { errMsg.textContent = 'Please provide a valid mobile phone.'; errMsg.classList.remove('hidden'); }
+              submit.disabled = false; submit.textContent = 'Send';
+              return;
+            }
+            var msg = msgEl ? String(msgEl.value || '').trim() : '';
+            if (msg.length < 10) {
+              if (errMsg) { errMsg.textContent = 'Message must be at least 10 characters.'; errMsg.classList.remove('hidden'); }
+              submit.disabled = false; submit.textContent = 'Send';
+              return;
+            }
+
+            var fd = new FormData(form);
+            fetch(ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json' }, body: fd })
+              .then(function (res) {
+                return res.json().catch(function(){ return {}; }).then(function(data){ return { ok: res.ok, data: data }; });
+              })
+              .then(function (resp) {
+                if (!resp.ok) throw new Error(resp.data?.message || 'Request failed');
+                form.reset();
+                if (okMsg) { okMsg.textContent = 'Thanks! We received your message.'; okMsg.classList.remove('hidden'); }
+                setTimeout(closePanel, 1100);
+              })
+              .catch(function (err) {
+                if (errMsg) { errMsg.textContent = (err && err.message) ? err.message : 'Something went wrong.'; errMsg.classList.remove('hidden'); }
+              })
+              .finally(function () {
+                submit.disabled = false;
+                submit.textContent = 'Send';
+              });
+          }, { passive: false });
+        }
+      })();
+    </script>
+
+    <!-- Smart Maps link (Apple Maps en iOS, Google Maps en otros) -->
     <script is:inline>
       (function () {
         var el = document.getElementById('map-link');
