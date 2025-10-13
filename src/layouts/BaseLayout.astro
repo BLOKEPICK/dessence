@@ -9,6 +9,7 @@ export interface Props {
   };
 }
 import "../styles/globals.css";
+import TextUsWidget from "@/components/TextUsWidget";
 const { seo } = Astro.props;
 const title = seo?.title ?? 'D-Essence Wellness';
 const description = seo?.description ?? 'Modern Aesthetics, Evidence-Based Care';
@@ -83,7 +84,7 @@ const jsonLd = seo?.jsonLd ?? [];
               </button>
 
               <div id="menu-injectables"
-                   class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w=[90vw] sm:w-[520px]
+                   class="absolute left-1/2 -translate-x-1/2 top-full mt-2 w=[90vw] sm:w=[520px]
                           rounded-2xl border border-white/10 bg-neutral-950 z-[4050] shadow-2xl p-1
                           max-h-[70vh] overflow-auto
                           opacity-0 translate-y-1 pointer-events-none
@@ -177,13 +178,12 @@ const jsonLd = seo?.jsonLd ?? [];
                 <ul class="divide-y divide-white/10">
                   <li><a href="/services/vitamin-injections" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Vitamin Injections<span class="opacity-60">→</span></a></li>
                   <li><a href="/services/iv-therapy" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">IV Therapy<span class="opacity-60">→</span></a></li>
-                  <!-- Added Teeth Whitening -->
                   <li><a href="/services/teeth-whitening" class="flex items-center justify-between px-4 py-2.5 hover:bg-white/5 text-white/90 focus:outline-none focus:bg-white/10" role="menuitem" tabindex="-1">Teeth Whitening<span class="opacity-60">→</span></a></li>
                 </ul>
               </div>
             </li>
 
-            <!-- Chemical Peel (renombrado desde Aesthetic Services) -->
+            <!-- Chemical Peel -->
             <li class="relative group" role="none">
               <button
                 class="px-3 h-10 inline-flex items-center rounded-full hover:bg-white/5 transition text-white/90 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
@@ -324,13 +324,12 @@ const jsonLd = seo?.jsonLd ?? [];
                   <div class="h-px bg-white/10"></div>
                   <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/iv-therapy">IV Therapy</a>
                   <div class="h-px bg-white/10"></div>
-                  <!-- Added Teeth Whitening -->
                   <a class="block px-4 py-3 hover:bg-white/10 focus:bg-white/10" href="/services/teeth-whitening">Teeth Whitening</a>
                 </div>
               </div>
             </details>
 
-            <!-- Chemical Peel (móvil, nuevo nombre + submenu) -->
+            <!-- Chemical Peel (móvil) -->
             <details class="group rounded-xl border border-white/10 bg-white/5 open:bg-white/5 open:border-white/20 transition-colors">
               <summary class="list-none cursor-pointer flex items-center justify-between px-4 py-3">
                 <span class="font-medium">Chemical Peel</span>
@@ -365,305 +364,156 @@ const jsonLd = seo?.jsonLd ?? [];
     <!-- ===== MAIN SLOT ===== -->
     <main><slot /></main>
 
-    <!-- ===== FOOTER (sin CTA superior y sin línea encima) ===== -->
-<footer class="mt-24 bg-black/50">
-  <div class="container mx-auto px-4">
-    <!-- Middle: brand + columns -->
-    <section class="py-10">
-      <div class="grid gap-10 md:grid-cols-4">
-        <!-- Brand & socials -->
-        <div>
-          <!-- Logo (reemplazo del texto D-Essence Wellness) -->
-          <a href="/" class="inline-block" aria-label="D-Essence Wellness">
-            <img
-              src="/LOGO_W.webp"
-              alt="D-Essence Wellness"
-              class="h-10 w-auto select-none pointer-events-none"
-              width="180"
-              height="40"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
+    <!-- ===== FOOTER ===== -->
+    <footer class="mt-24 bg-black/50">
+      <div class="container mx-auto px-4">
+        <!-- Middle: brand + columns -->
+        <section class="py-10">
+          <div class="grid gap-10 md:grid-cols-4">
+            <!-- Brand & socials -->
+            <div>
+              <a href="/" class="inline-block" aria-label="D-Essence Wellness">
+                <img src="/LOGO_W.webp" alt="D-Essence Wellness" class="h-10 w-auto select-none pointer-events-none" width="180" height="40" loading="lazy" decoding="async" />
+              </a>
+              <p class="mt-3 text-sm text-neutral-400 max-w-xs">Evidence-based care to enhance your natural confidence.</p>
 
-          <p class="mt-3 text-sm text-neutral-400 max-w-xs">
-            Evidence-based care to enhance your natural confidence.
-          </p>
+              <div class="mt-4 text-sm text-neutral-300">
+                <a id="map-link" class="hover:underline" href="https://www.google.com/maps/search/?api=1&query=871%20Blooming%20Grove%20Turnpike%20suite%20102%2C%20New%20Windsor%2C%20NY%2012553" target="_blank" rel="noopener">
+                  871 Blooming Grove Turnpike suite 102, New Windsor, NY 12553
+                </a>
+              </div>
 
-          <!-- Address (smart maps link) -->
-          <div class="mt-4 text-sm text-neutral-300">
-            <a
-              id="map-link"
-              class="hover:underline"
-              href="https://www.google.com/maps/search/?api=1&query=871%20Blooming%20Grove%20Turnpike%20suite%20102%2C%20New%20Windsor%2C%20NY%2012553"
-              target="_blank" rel="noopener"
-            >
-              871 Blooming Grove Turnpike suite 102, New Windsor, NY 12553
-            </a>
+              <div class="mt-4 text-sm text-neutral-300">
+                <div class="font-medium text-white/90">Hours</div>
+                <ul class="mt-2 space-y-1">
+                  <li>Monday: 10 AM–7 PM</li>
+                  <li>Tuesday: 10 AM–7 PM</li>
+                  <li>Wednesday: 10 AM–7 PM</li>
+                  <li>Thursday: 10 AM–7 PM</li>
+                  <li>Friday: 9 AM–6 PM</li>
+                  <li>Saturday: 9 AM–6 PM</li>
+                  <li>Sunday: Closed</li>
+                </ul>
+              </div>
+
+              <div class="mt-5 flex items-center gap-3">
+                <a href="https://www.instagram.com/d_essencewellness/" aria-label="Instagram" target="_blank" rel="noopener"
+                   class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition">
+                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6ZM18 6.7a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/>
+                  </svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100093851335127" aria-label="Facebook" target="_blank" rel="noopener"
+                   class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition">
+                  <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+                    <path d="M13.5 22v-8h2.6l.4-3h-3v-1.9c0-.9.3-1.5 1.6-1.5h1.5V4.1c-.8-.1-1.7-.1-2.5-.1-2.4 0-4 .9-4 3.7V11H7v3h2.1v8h4.4Z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Company -->
+            <div>
+              <h5 class="text-white/90 font-medium">Company</h5>
+              <ul class="mt-3 space-y-2 text-sm text-neutral-300">
+                <li><a class="hover:underline" href="/about-us">About</a></li>
+                <li><a class="hover:underline" href="/contact-us">Contact</a></li>
+                <li><a class="hover:underline" href="https://pay.withcherry.com/dessencewellness?utm_source=practice&utm_medium=website&m=18897" target="_blank" rel="noopener">Cherry Payments</a></li>
+                <li><a class="hover:underline" href="https://www.salonvision.com/dessencewellness/GiftCertificatePop.aspx" target="_blank" rel="noopener">Gift Certificates</a></li>
+              </ul>
+            </div>
+
+            <!-- Services -->
+            <div>
+              <h5 class="text-white/90 font-medium">Services</h5>
+              <ul class="mt-3 space-y-2 text-sm text-neutral-300">
+                <li><a class="hover:underline" href="/services/botox">Neurotoxins</a></li>
+                <li><a class="hover:underline" href="/services/lip-filler">Lip Filler</a></li>
+                <li><a class="hover:underline" href="/services/skinpen-microneedling">SkinPen Microneedling</a></li>
+                <li><a class="hover:underline" href="/services/aerolase">Aerolase</a></li>
+              </ul>
+            </div>
+
+            <!-- Resources -->
+            <div>
+              <h5 class="text-white/90 font-medium">Resources</h5>
+              <ul class="mt-3 space-y-2 text-sm text-neutral-300">
+                <li><a class="hover:underline" href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+                <li><a class="hover:underline" href="/privacy-policy">Privacy Policy</a></li>
+                <li><a class="hover:underline" href="/hipaa">HIPAA</a></li>
+                <li><a class="hover:underline" href="/booking-policy">Booking Policy</a></li>
+              </ul>
+            </div>
           </div>
+        </section>
 
-          <!-- Hours -->
-          <div class="mt-4 text-sm text-neutral-300">
-            <div class="font-medium text-white/90">Hours</div>
-            <ul class="mt-2 space-y-1">
-              <li>Monday: 10 AM–7 PM</li>
-              <li>Tuesday: 10 AM–7 PM</li>
-              <li>Wednesday: 10 AM–7 PM</li>
-              <li>Thursday: 10 AM–7 PM</li>
-              <li>Friday: 9 AM–6 PM</li>
-              <li>Saturday: 9 AM–6 PM</li>
-              <li>Sunday: Closed</li>
-            </ul>
+        <div class="border-t border-white/10 py-6">
+          <div class="text-center text-xs text-neutral-500">
+            © 2025 D-Essence Wellness. All rights reserved.
           </div>
-
-          <!-- Socials -->
-          <div class="mt-5 flex items-center gap-3">
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/d_essencewellness/" aria-label="Instagram" target="_blank" rel="noopener"
-               class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition">
-              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
-                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6ZM18 6.7a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/>
-              </svg>
-            </a>
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/profile.php?id=100093851335127" aria-label="Facebook" target="_blank" rel="noopener"
-               class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/10 text-white/80 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/20 transition">
-              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
-                <path d="M13.5 22v-8h2.6l.4-3h-3v-1.9c0-.9.3-1.5 1.6-1.5h1.5V4.1c-.8-.1-1.7-.1-2.5-.1-2.4 0-4 .9-4 3.7V11H7v3h2.1v8h4.4Z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Company -->
-        <div>
-          <h5 class="text-white/90 font-medium">Company</h5>
-          <ul class="mt-3 space-y-2 text-sm text-neutral-300">
-            <li><a class="hover:underline" href="/about-us">About</a></li>
-            <li><a class="hover:underline" href="/contact-us">Contact</a></li>
-            <li><a class="hover:underline" href="https://pay.withcherry.com/dessencewellness?utm_source=practice&utm_medium=website&m=18897" target="_blank" rel="noopener">Cherry Payments</a></li>
-            <li><a class="hover:underline" href="https://www.salonvision.com/dessencewellness/GiftCertificatePop.aspx" target="_blank" rel="noopener">Gift Certificates</a></li>
-          </ul>
-        </div>
-
-        <!-- Services (Top 4 + all) -->
-        <div>
-          <h5 class="text-white/90 font-medium">Services</h5>
-          <ul class="mt-3 space-y-2 text-sm text-neutral-300">
-            <li><a class="hover:underline" href="/services/botox">Neurotoxins</a></li>
-            <li><a class="hover:underline" href="/services/lip-filler">Lip Filler</a></li>
-            <li><a class="hover:underline" href="/services/skinpen-microneedling">SkinPen Microneedling</a></li>
-            <li><a class="hover:underline" href="/services/aerolase">Aerolase</a></li>
-          </ul>
-        </div>
-
-        <!-- Resources / Policies -->
-        <div>
-          <h5 class="text-white/90 font-medium">Resources</h5>
-          <ul class="mt-3 space-y-2 text-sm text-neutral-300">
-            <li><a class="hover:underline" href="/terms-and-conditions">Terms &amp; Conditions</a></li>
-            <li><a class="hover:underline" href="/privacy-policy">Privacy Policy</a></li>
-            <li><a class="hover:underline" href="/hipaa">HIPAA</a></li>
-            <li><a class="hover:underline" href="/booking-policy">Booking Policy</a></li>
-          </ul>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <!-- Bottom line (se mantiene) -->
-    <div class="border-t border-white/10 py-6">
-      <div class="text-center text-xs text-neutral-500">
-        © 2025 D-Essence Wellness. All rights reserved.
-      </div>
-    </div>
-  </div>
-</footer>
-
+    <!-- ===== WIDGET FLOTANTE ===== -->
+    <TextUsWidget client:load />
 
     <!-- ===== SCRIPTS ===== -->
     <script is:inline>
-      // ---------- Desktop submenu A11y + Hover Intent ----------
+      // Desktop submenu A11y + Hover Intent
       (function () {
         var triggers = document.querySelectorAll('[data-menu-trigger]');
         var openKeyPanel = null;
         var OPEN_DELAY = 120;
         var CLOSE_DELAY = 200;
-
-        function panelFor(btn) { var id = btn.getAttribute('data-menu-trigger'); return document.querySelector('[data-menu-panel="' + id + '"]'); }
-        function setExpanded(btn, expanded) { btn.setAttribute('aria-expanded', String(expanded)); }
-        function forceOpen(panel, btn) {
-          panel.classList.remove('opacity-0','translate-y-1','pointer-events-none');
-          panel.classList.add('opacity-100','translate-y-0','pointer-events-auto');
-          if (btn) setExpanded(btn, true);
-        }
-        function forceClose(panel, btn) {
-          panel.classList.add('opacity-0','translate-y-1','pointer-events-none');
-          panel.classList.remove('opacity-100','translate-y-0','pointer-events-auto');
-          if (btn) setExpanded(btn, false);
-        }
-        function ensureTimers(el) { if (!el._intentTimers) el._intentTimers = { openTimer: null, closeTimer: null }; return el._intentTimers; }
-
-        triggers.forEach(function (btn) {
-          var panel = panelFor(btn); if (!panel) return;
-          var timers = ensureTimers(panel);
-          var root = btn.closest('li') || btn.parentElement;
-
-          function openWithIntent() {
-            triggers.forEach(function (b) { if (b !== btn) { var p = panelFor(b); p && forceClose(p, b); }});
-            forceOpen(panel, btn);
-          }
-          function queueOpen() { clearTimeout(timers.closeTimer); clearTimeout(timers.openTimer); timers.openTimer = setTimeout(openWithIntent, OPEN_DELAY); }
-          function queueClose() {
-            clearTimeout(timers.openTimer); clearTimeout(timers.closeTimer);
-            timers.closeTimer = setTimeout(function () {
-              var stillHover = btn.matches(':hover') || panel.matches(':hover') || (root && root.matches(':hover'));
-              if (!stillHover) forceClose(panel, btn);
-            }, CLOSE_DELAY);
-          }
-
+        function panelFor(btn){ var id=btn.getAttribute('data-menu-trigger'); return document.querySelector('[data-menu-panel="'+id+'"]'); }
+        function setExpanded(btn,ex){ btn.setAttribute('aria-expanded', String(ex)); }
+        function forceOpen(p,btn){ p.classList.remove('opacity-0','translate-y-1','pointer-events-none'); p.classList.add('opacity-100','translate-y-0','pointer-events-auto'); if(btn) setExpanded(btn,true); }
+        function forceClose(p,btn){ p.classList.add('opacity-0','translate-y-1','pointer-events-none'); p.classList.remove('opacity-100','translate-y-0','pointer-events-auto'); if(btn) setExpanded(btn,false); }
+        function ensureTimers(el){ if(!el._intentTimers) el._intentTimers={openTimer:null,closeTimer:null}; return el._intentTimers; }
+        triggers.forEach(function(btn){
+          var panel=panelFor(btn); if(!panel) return;
+          var timers=ensureTimers(panel);
+          var root=btn.closest('li')||btn.parentElement;
+          function openWithIntent(){ triggers.forEach(function(b){ if(b!==btn){ var p=panelFor(b); p&&forceClose(p,b); }}); forceOpen(panel,btn);}
+          function queueOpen(){ clearTimeout(timers.closeTimer); clearTimeout(timers.openTimer); timers.openTimer=setTimeout(openWithIntent,OPEN_DELAY); }
+          function queueClose(){ clearTimeout(timers.openTimer); clearTimeout(timers.closeTimer); timers.closeTimer=setTimeout(function(){ var still=btn.matches(':hover')||panel.matches(':hover')||(root&&root.matches(':hover')); if(!still) forceClose(panel,btn); },CLOSE_DELAY); }
           btn.addEventListener('mouseenter', queueOpen);
           btn.addEventListener('mouseleave', queueClose);
-          panel.addEventListener('mouseenter', function () { clearTimeout(timers.closeTimer); });
+          panel.addEventListener('mouseenter', function(){ clearTimeout(timers.closeTimer); });
           panel.addEventListener('mouseleave', queueClose);
-
-          btn.addEventListener('keydown', function (e) {
-            var key = e.key;
-            if (key === 'Enter' || key === ' ') {
-              e.preventDefault();
-              var expanded = btn.getAttribute('aria-expanded') === 'true';
-              if (expanded) { forceClose(panel, btn); }
-              else {
-                triggers.forEach(function (b) { if (b !== btn) { var p = panelFor(b); p && forceClose(p, b); }});
-                forceOpen(panel, btn);
-                var firstItem = panel.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
-                if (firstItem) firstItem.focus();
-                openKeyPanel = panel;
-              }
-            } else if (key === 'Escape') {
-              forceClose(panel, btn);
-            } else if (key === 'ArrowDown') {
-              e.preventDefault();
-              forceOpen(panel, btn);
-              var first = panel.querySelector('a, button, [tabindex]:not([tabindex="-1"])');
-              if (first) first.focus();
-              openKeyPanel = panel;
-            }
+          btn.addEventListener('keydown', function(e){
+            var k=e.key;
+            if(k==='Enter'||k===' '){ e.preventDefault(); var ex=btn.getAttribute('aria-expanded')==='true'; if(ex){ forceClose(panel,btn); } else { triggers.forEach(function(b){ if(b!==btn){ var p=panelFor(b); p&&forceClose(p,b); }}); forceOpen(panel,btn); var first=panel.querySelector('a,button,[tabindex]:not([tabindex="-1"])'); if(first) first.focus(); openKeyPanel=panel; } }
+            else if(k==='Escape'){ forceClose(panel,btn); }
+            else if(k==='ArrowDown'){ e.preventDefault(); forceOpen(panel,btn); var first2=panel.querySelector('a,button,[tabindex]:not([tabindex="-1"])'); if(first2) first2.focus(); openKeyPanel=panel; }
           });
-
-          panel.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') { forceClose(panel, btn); btn.focus(); }
-          });
-
-          panel.addEventListener('focusout', function () {
-            setTimeout(function () {
-              var active = document.activeElement;
-              if (!panel.contains(active) && active !== btn) forceClose(panel, btn);
-            }, 0);
-          });
+          panel.addEventListener('keydown', function(e){ if(e.key==='Escape'){ forceClose(panel,btn); btn.focus(); } });
+          panel.addEventListener('focusout', function(){ setTimeout(function(){ var a=document.activeElement; if(!panel.contains(a)&&a!==btn) forceClose(panel,btn); },0); });
         });
-
-        document.addEventListener('keydown', function (e) {
-          if (e.key === 'Escape' && openKeyPanel) {
-            var id = openKeyPanel.getAttribute('data-menu-panel');
-            var btn = document.querySelector('[data-menu-trigger="' + id + '"]');
-            forceClose(openKeyPanel, btn);
-            openKeyPanel = null;
-            if (btn) btn.focus();
-          }
-        });
+        document.addEventListener('keydown', function(e){ if(e.key==='Escape'&&openKeyPanel){ var id=openKeyPanel.getAttribute('data-menu-panel'); var btn=document.querySelector('[data-menu-trigger="'+id+'"]'); forceClose(openKeyPanel,btn); openKeyPanel=null; if(btn) btn.focus(); } });
       })();
 
-      // ---------- Mobile drawer (scroll lock real + focus trap + overlays) ----------
+      // Mobile drawer (scroll lock real + focus trap + overlays)
       (function () {
-        var checkbox = document.getElementById('nav-toggle');
-        var drawer = document.getElementById('mobile-drawer');
-        var overlays = Array.prototype.slice.call(document.querySelectorAll('.peer ~ div'));
-        var closeBtn = drawer && drawer.querySelector('[data-close-drawer]');
-        if (!checkbox || !drawer) return;
-
-        var scrollY = 0;
-
-        function getFocusable(container) {
-          var selectors = [
-            'a[href]', 'button:not([disabled])', 'summary', 'input:not([disabled])',
-            'select:not([disabled])', 'textarea:not([disabled])',
-            '[tabindex]:not([tabindex="-1"])'
-          ].join(',');
-          return Array.prototype.slice.call(container.querySelectorAll(selectors))
-            .filter(function (el) { return !el.hasAttribute('inert') && !el.closest('[hidden]'); });
-        }
-
-        function lockScroll() {
-          scrollY = window.scrollY || document.documentElement.scrollTop;
-          document.body.style.position = 'fixed';
-          document.body.style.top = (-scrollY) + 'px';
-          document.body.style.left = '0';
-          document.body.style.right = '0';
-          document.body.style.width = '100%';
-          document.documentElement.classList.add('overscroll-none');
-          document.body.classList.add('overscroll-none');
-        }
-
-        function unlockScroll() {
-          document.body.style.position = '';
-          document.body.style.top = '';
-          document.body.style.left = '';
-          document.body.style.right = '';
-          document.body.style.width = '';
-          document.documentElement.classList.remove('overscroll-none');
-          document.body.classList.remove('overscroll-none');
-          window.scrollTo(0, scrollY);
-        }
-
-        function openDrawer() {
-          lockScroll();
-          var focusables = getFocusable(drawer);
-          var first = focusables[0];
-          var last  = focusables[focusables.length - 1];
-
-          function trap(e) {
-            if (e.key !== 'Tab') return;
-            if (!first || !last) return;
-            if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-            else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-          }
-
-          function onKeydown(e) {
-            if (e.key === 'Escape') { checkbox.checked = false; closeDrawer(); }
-            else { trap(e); }
-          }
-
-          drawer._onKeydown = onKeydown;
-          document.addEventListener('keydown', onKeydown);
-          setTimeout(function () { (first || closeBtn)?.focus(); }, 0);
-        }
-
-        function closeDrawer() {
-          unlockScroll();
-          var onKeydown = drawer._onKeydown;
-          if (onKeydown) {
-            document.removeEventListener('keydown', onKeydown);
-            drawer._onKeydown = null;
-          }
-        }
-
-        checkbox.addEventListener('change', function () {
-          if (checkbox.checked) openDrawer(); else closeDrawer();
-        });
-
-        // Close controls
-        if (closeBtn) closeBtn.addEventListener('click', function () {
-          checkbox.checked = false; closeDrawer();
-        });
-        overlays.forEach(function (ov) {
-          ov.addEventListener('click', function () {
-            checkbox.checked = false; closeDrawer();
-          });
-        });
+        var checkbox=document.getElementById('nav-toggle');
+        var drawer=document.getElementById('mobile-drawer');
+        var overlays=Array.prototype.slice.call(document.querySelectorAll('.peer ~ div'));
+        var closeBtn=drawer&&drawer.querySelector('[data-close-drawer]');
+        if(!checkbox||!drawer) return;
+        var scrollY=0;
+        function getFocusable(c){ var s=['a[href]','button:not([disabled])','summary','input:not([disabled])','select:not([disabled])','textarea:not([disabled])','[tabindex]:not([tabindex="-1"])'].join(','); return Array.prototype.slice.call(c.querySelectorAll(s)).filter(function(el){ return !el.hasAttribute('inert') && !el.closest('[hidden]'); }); }
+        function lockScroll(){ scrollY=window.scrollY||document.documentElement.scrollTop; document.body.style.position='fixed'; document.body.style.top=(-scrollY)+'px'; document.body.style.left='0'; document.body.style.right='0'; document.body.style.width='100%'; document.documentElement.classList.add('overscroll-none'); document.body.classList.add('overscroll-none'); }
+        function unlockScroll(){ document.body.style.position=''; document.body.style.top=''; document.body.style.left=''; document.body.style.right=''; document.body.style.width=''; document.documentElement.classList.remove('overscroll-none'); document.body.classList.remove('overscroll-none'); window.scrollTo(0, scrollY); }
+        function openDrawer(){ lockScroll(); var f=getFocusable(drawer); var first=f[0]; var last=f[f.length-1]; function trap(e){ if(e.key!=='Tab') return; if(!first||!last) return; if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); } else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); } } function onKeydown(e){ if(e.key==='Escape'){ checkbox.checked=false; closeDrawer(); } else { trap(e); } } drawer._onKeydown=onKeydown; document.addEventListener('keydown', onKeydown); setTimeout(function(){ (first||closeBtn)?.focus(); },0); }
+        function closeDrawer(){ unlockScroll(); var onKeydown=drawer._onKeydown; if(onKeydown){ document.removeEventListener('keydown', onKeydown); drawer._onKeydown=null; } }
+        checkbox.addEventListener('change', function(){ if(checkbox.checked) openDrawer(); else closeDrawer(); });
+        if(closeBtn) closeBtn.addEventListener('click', function(){ checkbox.checked=false; closeDrawer(); });
+        overlays.forEach(function(ov){ ov.addEventListener('click', function(){ checkbox.checked=false; closeDrawer(); }); });
       })();
     </script>
 
-    <!-- Smart Maps link (Apple Maps en iOS, Google Maps en otros) -->
+    <!-- Smart Maps link -->
     <script is:inline>
       (function () {
         var el = document.getElementById('map-link');
