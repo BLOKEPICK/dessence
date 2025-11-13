@@ -1,10 +1,11 @@
 ---
-// /src/pages/services/index.astro
+import { redirect } from 'astro:redirect';
 
-import { redirect } from 'astro:middleware';
+// Muy importante:
+export const prerender = false;
 
-export async function onRequest() {
-  // Redirección permanente 301 al inicio
+// GET handler — esto sí funciona dentro de una página
+export function GET() {
   return redirect('/', 301);
 }
 ---
