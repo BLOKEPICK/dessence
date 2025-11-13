@@ -1,11 +1,215 @@
 ---
-import { redirect } from 'astro:redirect';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
-// Muy importante:
-export const prerender = false;
-
-// GET handler — esto sí funciona dentro de una página
-export function GET() {
-  return redirect('/', 301);
-}
+const seo = {
+  title: 'Services | D-Essence Wellness',
+  description: 'Explore all treatments offered at D-Essence Wellness.',
+  canonical: '/services/',
+  type: 'website',
+};
 ---
+
+<BaseLayout seo={seo}>
+
+  <!-- HERO -->
+  <section class="bg-neutral-950 text-white">
+    <div class="container pt-28 pb-12 sm:pb-14 text-center max-w-3xl">
+      <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight">Services</h1>
+      <p class="mt-4 text-white/80">
+        Explore our full menu of treatments and wellness services.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <div class="bg-white text-neutral-900">
+
+
+    <!-- COSMETIC INJECTABLES -->
+    <div class="container py-12">
+      <h2 class="text-2xl font-semibold tracking-tight">Cosmetic Injectables</h2>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <a href="/services/neurotoxins/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Neurotoxins</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+        <a href="/services/dermal-fillers/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Dermal Fillers</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+        <a href="/services/prp-therapy/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">PRP Therapy</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+        <a href="/services/lip-fillers/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Lip Fillers</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+        <a href="/services/underarm-hyperhidrosis/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Underarm Hyperhidrosis</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- LASER -->
+    <div class="container py-12 border-t border-neutral-200">
+      <h2 class="text-2xl font-semibold tracking-tight">Laser</h2>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <a href="/services/laser/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Laser</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- SKIN GOALS -->
+    <div class="container py-12 border-t border-neutral-200">
+      <h2 class="text-2xl font-semibold tracking-tight">Skin Goals</h2>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <a href="/services/skin-pen-microneedle/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Skin Pen Microneedle</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+        <a href="/services/smooth-threads/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Smooth Threads</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+        <a href="/services/sugaring/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Sugaring</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+        <a href="/services/signature-facials/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Signature Facials</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+        <a href="/services/facial-waxing/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Facial Waxing</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+        <a href="/services/teen-acne-facial/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Teen Acne Facial</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- THERAPEUTIC MASSAGE -->
+    <div class="container py-12 border-t border-neutral-200">
+      <h2 class="text-2xl font-semibold tracking-tight">Therapeutic Massage</h2>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <a href="/services/therapeutic-massage/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Therapeutic Massage</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- WELLNESS -->
+    <div class="container py-12 border-t border-neutral-200">
+      <h2 class="text-2xl font-semibold tracking-tight">Wellness</h2>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <a href="/services/vitamin-injections/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Vitamin Injections</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+        <a href="/services/iv-therapy/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">IV Therapy</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+        <a href="/services/teeth-whitening/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">Teeth Whitening</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- CHEMICAL PEEL -->
+    <div class="container py-12 border-t border-neutral-200 pb-16">
+      <h2 class="text-2xl font-semibold tracking-tight">Chemical Peel</h2>
+
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <a href="/services/bio-repeel/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">BioRePeel</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+        <a href="/services/the-perfect-derma-peel/" class="group rounded-2xl bg-white ring-1 ring-neutral-200 p-5 hover:shadow-md transition">
+          <div class="flex items-center justify-between">
+            <h3 class="font-medium">The Perfect Derma Peel</h3>
+            <span class="text-neutral-400 group-hover:text-neutral-700">→</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+</BaseLayout>
